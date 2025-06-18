@@ -16,42 +16,42 @@
 /// Size: 0x01 (1 bytes)
 enum class EIK_Type_Plugin : uint8_t
 {
-	EIK_Type_Plugin__ENUM_Two_Bone_Ik                                                = 0,
-	EIK_Type_Plugin__ENUM_Single_Bone_Ik                                             = 1
+	ENUM_Two_Bone_Ik                                                                 = 0,
+	ENUM_Single_Bone_Ik                                                              = 1
 };
 
 /// Enum /Script/DragonIKPlugin.ERefPosePluginEnum
 /// Size: 0x01 (1 bytes)
 enum class ERefPosePluginEnum : uint8_t
 {
-	ERefPosePluginEnum__VE_Animated                                                  = 0,
-	ERefPosePluginEnum__VE_Rest                                                      = 1
+	VE_Animated                                                                      = 0,
+	VE_Rest                                                                          = 1
 };
 
 /// Enum /Script/DragonIKPlugin.EInterpoRotation_Type_Plugin
 /// Size: 0x01 (1 bytes)
 enum class EInterpoRotation_Type_Plugin : uint8_t
 {
-	EInterpoRotation_Type_Plugin__ENUM_DivisiveRot_Interp                            = 0,
-	EInterpoRotation_Type_Plugin__ENUM_LegacyRot_Interp                              = 1
+	ENUM_DivisiveRot_Interp                                                          = 0,
+	ENUM_LegacyRot_Interp                                                            = 1
 };
 
 /// Enum /Script/DragonIKPlugin.EInterpoLocation_Type_Plugin
 /// Size: 0x01 (1 bytes)
 enum class EInterpoLocation_Type_Plugin : uint8_t
 {
-	EInterpoLocation_Type_Plugin__ENUM_DivisiveLoc_Interp                            = 0,
-	EInterpoLocation_Type_Plugin__ENUM_LegacyLoc_Interp                              = 1
+	ENUM_DivisiveLoc_Interp                                                          = 0,
+	ENUM_LegacyLoc_Interp                                                            = 1
 };
 
 /// Enum /Script/DragonIKPlugin.EIKTrace_Type_Plugin
 /// Size: 0x01 (1 bytes)
 enum class EIKTrace_Type_Plugin : uint8_t
 {
-	EIKTrace_Type_Plugin__ENUM_LineTrace_Type                                        = 0,
-	EIKTrace_Type_Plugin__ENUM_SphereTrace_Type                                      = 1,
-	EIKTrace_Type_Plugin__ENUM_BoxTrace_Type                                         = 2,
-	EIKTrace_Type_Plugin__ENUM_CapsuleTrace_Type                                     = 3
+	ENUM_LineTrace_Type                                                              = 0,
+	ENUM_SphereTrace_Type                                                            = 1,
+	ENUM_BoxTrace_Type                                                               = 2,
+	ENUM_CapsuleTrace_Type                                                           = 3
 };
 
 /// Class /Script/DragonIKPlugin.DragonIK_Library

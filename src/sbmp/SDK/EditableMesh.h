@@ -18,58 +18,58 @@
 /// Size: 0x01 (1 bytes)
 enum class ETriangleTessellationMode : uint8_t
 {
-	ETriangleTessellationMode__ThreeTriangles                                        = 0,
-	ETriangleTessellationMode__FourTriangles                                         = 1
+	ThreeTriangles                                                                   = 0,
+	FourTriangles                                                                    = 1
 };
 
 /// Enum /Script/EditableMesh.EInsetPolygonsMode
 /// Size: 0x01 (1 bytes)
 enum class EInsetPolygonsMode : uint8_t
 {
-	EInsetPolygonsMode__All                                                          = 0,
-	EInsetPolygonsMode__CenterPolygonOnly                                            = 1,
-	EInsetPolygonsMode__SidePolygonsOnly                                             = 2
+	All                                                                              = 0,
+	CenterPolygonOnly                                                                = 1,
+	SidePolygonsOnly                                                                 = 2
 };
 
 /// Enum /Script/EditableMesh.EPolygonEdgeHardness
 /// Size: 0x01 (1 bytes)
 enum class EPolygonEdgeHardness : uint8_t
 {
-	EPolygonEdgeHardness__NewEdgesSoft                                               = 0,
-	EPolygonEdgeHardness__NewEdgesHard                                               = 1,
-	EPolygonEdgeHardness__AllEdgesSoft                                               = 2,
-	EPolygonEdgeHardness__AllEdgesHard                                               = 3
+	NewEdgesSoft                                                                     = 0,
+	NewEdgesHard                                                                     = 1,
+	AllEdgesSoft                                                                     = 2,
+	AllEdgesHard                                                                     = 3
 };
 
 /// Enum /Script/EditableMesh.EMeshElementAttributeType
 /// Size: 0x01 (1 bytes)
 enum class EMeshElementAttributeType : uint8_t
 {
-	EMeshElementAttributeType__None                                                  = 0,
-	EMeshElementAttributeType__FVector4                                              = 1,
-	EMeshElementAttributeType__FVector                                               = 2,
-	EMeshElementAttributeType__FVector2D                                             = 3,
-	EMeshElementAttributeType__Float                                                 = 4,
-	EMeshElementAttributeType__Int                                                   = 5,
-	EMeshElementAttributeType__Bool                                                  = 6,
-	EMeshElementAttributeType__FName                                                 = 7
+	None                                                                             = 0,
+	FVector4                                                                         = 1,
+	FVector                                                                          = 2,
+	FVector2D                                                                        = 3,
+	Float                                                                            = 4,
+	Int                                                                              = 5,
+	Bool                                                                             = 6,
+	FName                                                                            = 7
 };
 
 /// Enum /Script/EditableMesh.EMeshTopologyChange
 /// Size: 0x01 (1 bytes)
 enum class EMeshTopologyChange : uint8_t
 {
-	EMeshTopologyChange__NoTopologyChange                                            = 0,
-	EMeshTopologyChange__TopologyChange                                              = 1
+	NoTopologyChange                                                                 = 0,
+	TopologyChange                                                                   = 1
 };
 
 /// Enum /Script/EditableMesh.EMeshModificationType
 /// Size: 0x01 (1 bytes)
 enum class EMeshModificationType : uint8_t
 {
-	EMeshModificationType__FirstInterim                                              = 0,
-	EMeshModificationType__Interim                                                   = 1,
-	EMeshModificationType__Final                                                     = 2
+	FirstInterim                                                                     = 0,
+	Interim                                                                          = 1,
+	Final                                                                            = 2
 };
 
 /// Class /Script/EditableMesh.EditableMeshAdapter

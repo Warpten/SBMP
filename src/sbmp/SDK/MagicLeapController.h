@@ -17,142 +17,142 @@
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapTouchpadGestureDirection : uint8_t
 {
-	EMagicLeapTouchpadGestureDirection__None                                         = 0,
-	EMagicLeapTouchpadGestureDirection__Up                                           = 1,
-	EMagicLeapTouchpadGestureDirection__Down                                         = 2,
-	EMagicLeapTouchpadGestureDirection__Left                                         = 3,
-	EMagicLeapTouchpadGestureDirection__Right                                        = 4,
-	EMagicLeapTouchpadGestureDirection__In                                           = 5,
-	EMagicLeapTouchpadGestureDirection__Out                                          = 6,
-	EMagicLeapTouchpadGestureDirection__Clockwise                                    = 7,
-	EMagicLeapTouchpadGestureDirection__CounterClockwise                             = 8
+	None                                                                             = 0,
+	Up                                                                               = 1,
+	Down                                                                             = 2,
+	Left                                                                             = 3,
+	Right                                                                            = 4,
+	In                                                                               = 5,
+	Out                                                                              = 6,
+	Clockwise                                                                        = 7,
+	CounterClockwise                                                                 = 8
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapTouchpadGestureType
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapTouchpadGestureType : uint8_t
 {
-	EMagicLeapTouchpadGestureType__None                                              = 0,
-	EMagicLeapTouchpadGestureType__Tap                                               = 1,
-	EMagicLeapTouchpadGestureType__ForceTapDown                                      = 2,
-	EMagicLeapTouchpadGestureType__ForceTapUp                                        = 3,
-	EMagicLeapTouchpadGestureType__ForceDwell                                        = 4,
-	EMagicLeapTouchpadGestureType__SecondForceDown                                   = 5,
-	EMagicLeapTouchpadGestureType__LongHold                                          = 6,
-	EMagicLeapTouchpadGestureType__RadialScroll                                      = 7,
-	EMagicLeapTouchpadGestureType__Swipe                                             = 8,
-	EMagicLeapTouchpadGestureType__Scroll                                            = 9,
-	EMagicLeapTouchpadGestureType__Pinch                                             = 10
+	None                                                                             = 0,
+	Tap                                                                              = 1,
+	ForceTapDown                                                                     = 2,
+	ForceTapUp                                                                       = 3,
+	ForceDwell                                                                       = 4,
+	SecondForceDown                                                                  = 5,
+	LongHold                                                                         = 6,
+	RadialScroll                                                                     = 7,
+	Swipe                                                                            = 8,
+	Scroll                                                                           = 9,
+	Pinch                                                                            = 10
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapControllerTrackingMode
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapControllerTrackingMode : uint8_t
 {
-	EMagicLeapControllerTrackingMode__InputService                                   = 0,
-	EMagicLeapControllerTrackingMode__CoordinateFrameUID                             = 1
+	InputService                                                                     = 0,
+	CoordinateFrameUID                                                               = 1
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapControllerHapticIntensity
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapControllerHapticIntensity : uint8_t
 {
-	EMagicLeapControllerHapticIntensity__Low                                         = 0,
-	EMagicLeapControllerHapticIntensity__Medium                                      = 1,
-	EMagicLeapControllerHapticIntensity__High                                        = 2
+	Low                                                                              = 0,
+	Medium                                                                           = 1,
+	High                                                                             = 2
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapControllerHapticPattern
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapControllerHapticPattern : uint8_t
 {
-	EMagicLeapControllerHapticPattern__None                                          = 0,
-	EMagicLeapControllerHapticPattern__Click                                         = 1,
-	EMagicLeapControllerHapticPattern__Bump                                          = 2,
-	EMagicLeapControllerHapticPattern__DoubleClick                                   = 3,
-	EMagicLeapControllerHapticPattern__Buzz                                          = 4,
-	EMagicLeapControllerHapticPattern__Tick                                          = 5,
-	EMagicLeapControllerHapticPattern__ForceDown                                     = 6,
-	EMagicLeapControllerHapticPattern__ForceUp                                       = 7,
-	EMagicLeapControllerHapticPattern__ForceDwell                                    = 8,
-	EMagicLeapControllerHapticPattern__SecondForceDown                               = 9
+	None                                                                             = 0,
+	Click                                                                            = 1,
+	Bump                                                                             = 2,
+	DoubleClick                                                                      = 3,
+	Buzz                                                                             = 4,
+	Tick                                                                             = 5,
+	ForceDown                                                                        = 6,
+	ForceUp                                                                          = 7,
+	ForceDwell                                                                       = 8,
+	SecondForceDown                                                                  = 9
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapControllerLEDSpeed
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapControllerLEDSpeed : uint8_t
 {
-	EMagicLeapControllerLEDSpeed__Slow                                               = 0,
-	EMagicLeapControllerLEDSpeed__Medium                                             = 1,
-	EMagicLeapControllerLEDSpeed__Fast                                               = 2
+	Slow                                                                             = 0,
+	Medium                                                                           = 1,
+	Fast                                                                             = 2
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapControllerLEDColor
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapControllerLEDColor : uint8_t
 {
-	EMagicLeapControllerLEDColor__BrightMissionRed                                   = 0,
-	EMagicLeapControllerLEDColor__PastelMissionRed                                   = 1,
-	EMagicLeapControllerLEDColor__BrightFloridaOrange                                = 2,
-	EMagicLeapControllerLEDColor__PastelFloridaOrange                                = 3,
-	EMagicLeapControllerLEDColor__BrightLunaYellow                                   = 4,
-	EMagicLeapControllerLEDColor__PastelLunaYellow                                   = 5,
-	EMagicLeapControllerLEDColor__BrightNebulaPink                                   = 6,
-	EMagicLeapControllerLEDColor__PastelNebulaPink                                   = 7,
-	EMagicLeapControllerLEDColor__BrightCosmicPurple                                 = 8,
-	EMagicLeapControllerLEDColor__PastelCosmicPurple                                 = 9,
-	EMagicLeapControllerLEDColor__BrightMysticBlue                                   = 10,
-	EMagicLeapControllerLEDColor__PastelMysticBlue                                   = 11,
-	EMagicLeapControllerLEDColor__BrightCelestialBlue                                = 12,
-	EMagicLeapControllerLEDColor__PastelCelestialBlue                                = 13,
-	EMagicLeapControllerLEDColor__BrightShaggleGreen                                 = 14,
-	EMagicLeapControllerLEDColor__PastelShaggleGreen                                 = 15
+	BrightMissionRed                                                                 = 0,
+	PastelMissionRed                                                                 = 1,
+	BrightFloridaOrange                                                              = 2,
+	PastelFloridaOrange                                                              = 3,
+	BrightLunaYellow                                                                 = 4,
+	PastelLunaYellow                                                                 = 5,
+	BrightNebulaPink                                                                 = 6,
+	PastelNebulaPink                                                                 = 7,
+	BrightCosmicPurple                                                               = 8,
+	PastelCosmicPurple                                                               = 9,
+	BrightMysticBlue                                                                 = 10,
+	PastelMysticBlue                                                                 = 11,
+	BrightCelestialBlue                                                              = 12,
+	PastelCelestialBlue                                                              = 13,
+	BrightShaggleGreen                                                               = 14,
+	PastelShaggleGreen                                                               = 15
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapControllerLEDEffect
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapControllerLEDEffect : uint8_t
 {
-	EMagicLeapControllerLEDEffect__RotateCW                                          = 0,
-	EMagicLeapControllerLEDEffect__RotateCCW                                         = 1,
-	EMagicLeapControllerLEDEffect__Pulse                                             = 2,
-	EMagicLeapControllerLEDEffect__PaintCW                                           = 3,
-	EMagicLeapControllerLEDEffect__PaintCCW                                          = 4,
-	EMagicLeapControllerLEDEffect__Blink                                             = 5
+	RotateCW                                                                         = 0,
+	RotateCCW                                                                        = 1,
+	Pulse                                                                            = 2,
+	PaintCW                                                                          = 3,
+	PaintCCW                                                                         = 4,
+	Blink                                                                            = 5
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapControllerLEDPattern
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapControllerLEDPattern : uint8_t
 {
-	EMagicLeapControllerLEDPattern__None                                             = 0,
-	EMagicLeapControllerLEDPattern__Clock01                                          = 1,
-	EMagicLeapControllerLEDPattern__Clock02                                          = 2,
-	EMagicLeapControllerLEDPattern__Clock03                                          = 3,
-	EMagicLeapControllerLEDPattern__Clock04                                          = 4,
-	EMagicLeapControllerLEDPattern__Clock05                                          = 5,
-	EMagicLeapControllerLEDPattern__Clock06                                          = 6,
-	EMagicLeapControllerLEDPattern__Clock07                                          = 7,
-	EMagicLeapControllerLEDPattern__Clock08                                          = 8,
-	EMagicLeapControllerLEDPattern__Clock09                                          = 9,
-	EMagicLeapControllerLEDPattern__Clock10                                          = 10,
-	EMagicLeapControllerLEDPattern__Clock11                                          = 11,
-	EMagicLeapControllerLEDPattern__Clock12                                          = 12,
-	EMagicLeapControllerLEDPattern__Clock01_07                                       = 13,
-	EMagicLeapControllerLEDPattern__Clock02_08                                       = 14,
-	EMagicLeapControllerLEDPattern__Clock03_09                                       = 15,
-	EMagicLeapControllerLEDPattern__Clock0417                                        = 16,
-	EMagicLeapControllerLEDPattern__Clock0518                                        = 17,
-	EMagicLeapControllerLEDPattern__Clock0619                                        = 18
+	None                                                                             = 0,
+	Clock01                                                                          = 1,
+	Clock02                                                                          = 2,
+	Clock03                                                                          = 3,
+	Clock04                                                                          = 4,
+	Clock05                                                                          = 5,
+	Clock06                                                                          = 6,
+	Clock07                                                                          = 7,
+	Clock08                                                                          = 8,
+	Clock09                                                                          = 9,
+	Clock10                                                                          = 10,
+	Clock11                                                                          = 11,
+	Clock12                                                                          = 12,
+	Clock01_07                                                                       = 13,
+	Clock02_08                                                                       = 14,
+	Clock03_09                                                                       = 15,
+	Clock0417                                                                        = 16,
+	Clock0518                                                                        = 17,
+	Clock0619                                                                        = 18
 };
 
 /// Enum /Script/MagicLeapController.EMagicLeapControllerType
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapControllerType : uint8_t
 {
-	EMagicLeapControllerType__None                                                   = 0,
-	EMagicLeapControllerType__Device                                                 = 1,
-	EMagicLeapControllerType__MobileApp                                              = 2
+	None                                                                             = 0,
+	Device                                                                           = 1,
+	MobileApp                                                                        = 2
 };
 
 /// Class /Script/MagicLeapController.MagicLeapControllerFunctionLibrary

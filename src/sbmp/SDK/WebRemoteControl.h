@@ -16,22 +16,22 @@
 /// Size: 0x01 (1 bytes)
 enum class ERemoteControlEvent : uint8_t
 {
-	ERemoteControlEvent__PreObjectPropertyChanged                                    = 0,
-	ERemoteControlEvent__ObjectPropertyChanged                                       = 1,
-	ERemoteControlEvent__EventCount                                                  = 2
+	PreObjectPropertyChanged                                                         = 0,
+	ObjectPropertyChanged                                                            = 1,
+	EventCount                                                                       = 2
 };
 
 /// Enum /Script/WebRemoteControl.ERemoteControlHttpVerbs
 /// Size: 0x02 (2 bytes)
 enum class ERemoteControlHttpVerbs : uint16_t
 {
-	ERemoteControlHttpVerbs__None                                                    = 0,
-	ERemoteControlHttpVerbs__Get                                                     = 1,
-	ERemoteControlHttpVerbs__Post                                                    = 2,
-	ERemoteControlHttpVerbs__Put                                                     = 4,
-	ERemoteControlHttpVerbs__Patch                                                   = 8,
-	ERemoteControlHttpVerbs__Delete                                                  = 16,
-	ERemoteControlHttpVerbs__Options                                                 = 32
+	None                                                                             = 0,
+	Get                                                                              = 1,
+	Post                                                                             = 2,
+	Put                                                                              = 4,
+	Patch                                                                            = 8,
+	Delete                                                                           = 16,
+	Options                                                                          = 32
 };
 
 /// Class /Script/WebRemoteControl.WebRemoteControlSettings

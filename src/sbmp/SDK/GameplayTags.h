@@ -17,51 +17,51 @@
 /// Size: 0x01 (1 bytes)
 enum class EGameplayTagQueryExprType : uint8_t
 {
-	EGameplayTagQueryExprType__Undefined                                             = 0,
-	EGameplayTagQueryExprType__AnyTagsMatch                                          = 1,
-	EGameplayTagQueryExprType__AllTagsMatch                                          = 2,
-	EGameplayTagQueryExprType__NoTagsMatch                                           = 3,
-	EGameplayTagQueryExprType__AnyExprMatch                                          = 4,
-	EGameplayTagQueryExprType__AllExprMatch                                          = 5,
-	EGameplayTagQueryExprType__NoExprMatch                                           = 6
+	Undefined                                                                        = 0,
+	AnyTagsMatch                                                                     = 1,
+	AllTagsMatch                                                                     = 2,
+	NoTagsMatch                                                                      = 3,
+	AnyExprMatch                                                                     = 4,
+	AllExprMatch                                                                     = 5,
+	NoExprMatch                                                                      = 6
 };
 
 /// Enum /Script/GameplayTags.EGameplayContainerMatchType
 /// Size: 0x01 (1 bytes)
 enum class EGameplayContainerMatchType : uint8_t
 {
-	EGameplayContainerMatchType__Any                                                 = 0,
-	EGameplayContainerMatchType__All                                                 = 1
+	Any                                                                              = 0,
+	All                                                                              = 1
 };
 
 /// Enum /Script/GameplayTags.EGameplayTagMatchType
 /// Size: 0x01 (1 bytes)
 enum class EGameplayTagMatchType : uint8_t
 {
-	EGameplayTagMatchType__Explicit                                                  = 0,
-	EGameplayTagMatchType__IncludeParentTags                                         = 1
+	Explicit                                                                         = 0,
+	IncludeParentTags                                                                = 1
 };
 
 /// Enum /Script/GameplayTags.EGameplayTagSelectionType
 /// Size: 0x01 (1 bytes)
 enum class EGameplayTagSelectionType : uint8_t
 {
-	EGameplayTagSelectionType__None                                                  = 0,
-	EGameplayTagSelectionType__NonRestrictedOnly                                     = 1,
-	EGameplayTagSelectionType__RestrictedOnly                                        = 2,
-	EGameplayTagSelectionType__All                                                   = 3
+	None                                                                             = 0,
+	NonRestrictedOnly                                                                = 1,
+	RestrictedOnly                                                                   = 2,
+	All                                                                              = 3
 };
 
 /// Enum /Script/GameplayTags.EGameplayTagSourceType
 /// Size: 0x01 (1 bytes)
 enum class EGameplayTagSourceType : uint8_t
 {
-	EGameplayTagSourceType__Native                                                   = 0,
-	EGameplayTagSourceType__DefaultTagList                                           = 1,
-	EGameplayTagSourceType__TagList                                                  = 2,
-	EGameplayTagSourceType__RestrictedTagList                                        = 3,
-	EGameplayTagSourceType__DataTable                                                = 4,
-	EGameplayTagSourceType__Invalid                                                  = 5
+	Native                                                                           = 0,
+	DefaultTagList                                                                   = 1,
+	TagList                                                                          = 2,
+	RestrictedTagList                                                                = 3,
+	DataTable                                                                        = 4,
+	Invalid                                                                          = 5
 };
 
 /// Class /Script/GameplayTags.BlueprintGameplayTagLibrary

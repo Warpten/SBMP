@@ -14,9 +14,9 @@
 /// Size: 0x01 (1 bytes)
 enum class EStreamlineSettingOverride : uint8_t
 {
-	EStreamlineSettingOverride__Enabled                                              = 0,
-	EStreamlineSettingOverride__Disabled                                             = 1,
-	EStreamlineSettingOverride__UseProjectSettings                                   = 2
+	Enabled                                                                          = 0,
+	Disabled                                                                         = 1,
+	UseProjectSettings                                                               = 2
 };
 
 /// Class /Script/StreamlineRHI.StreamlineOverrideSettings

@@ -17,9 +17,9 @@
 /// Size: 0x01 (1 bytes)
 enum class EPBIKLimitType : uint8_t
 {
-	EPBIKLimitType__Free                                                             = 0,
-	EPBIKLimitType__Limited                                                          = 1,
-	EPBIKLimitType__Locked                                                           = 2
+	Free                                                                             = 0,
+	Limited                                                                          = 1,
+	Locked                                                                           = 2
 };
 
 /// Struct /Script/PBIK.PBIKBoneSetting

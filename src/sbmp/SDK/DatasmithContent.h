@@ -18,116 +18,116 @@
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithAreaLightActorType : uint8_t
 {
-	EDatasmithAreaLightActorType__Point                                              = 0,
-	EDatasmithAreaLightActorType__Spot                                               = 1,
-	EDatasmithAreaLightActorType__Rect                                               = 2
+	Point                                                                            = 0,
+	Spot                                                                             = 1,
+	Rect                                                                             = 2
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithAreaLightActorShape
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithAreaLightActorShape : uint8_t
 {
-	EDatasmithAreaLightActorShape__Rectangle                                         = 0,
-	EDatasmithAreaLightActorShape__Disc                                              = 1,
-	EDatasmithAreaLightActorShape__Sphere                                            = 2,
-	EDatasmithAreaLightActorShape__Cylinder                                          = 3,
-	EDatasmithAreaLightActorShape__None                                              = 4
+	Rectangle                                                                        = 0,
+	Disc                                                                             = 1,
+	Sphere                                                                           = 2,
+	Cylinder                                                                         = 3,
+	None                                                                             = 4
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithCADRetessellationRule
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithCADRetessellationRule : uint8_t
 {
-	EDatasmithCADRetessellationRule__All                                             = 0,
-	EDatasmithCADRetessellationRule__SkipDeletedSurfaces                             = 1
+	All                                                                              = 0,
+	SkipDeletedSurfaces                                                              = 1
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithCADStitchingTechnique
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithCADStitchingTechnique : uint8_t
 {
-	EDatasmithCADStitchingTechnique__StitchingNone                                   = 0,
-	EDatasmithCADStitchingTechnique__StitchingHeal                                   = 1,
-	EDatasmithCADStitchingTechnique__StitchingSew                                    = 2
+	StitchingNone                                                                    = 0,
+	StitchingHeal                                                                    = 1,
+	StitchingSew                                                                     = 2
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithImportHierarchy
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithImportHierarchy : uint8_t
 {
-	EDatasmithImportHierarchy__UseMultipleActors                                     = 0,
-	EDatasmithImportHierarchy__UseSingleActor                                        = 1,
-	EDatasmithImportHierarchy__UseOneBlueprint                                       = 2
+	UseMultipleActors                                                                = 0,
+	UseSingleActor                                                                   = 1,
+	UseOneBlueprint                                                                  = 2
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithImportScene
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithImportScene : uint8_t
 {
-	EDatasmithImportScene__NewLevel                                                  = 0,
-	EDatasmithImportScene__CurrentLevel                                              = 1,
-	EDatasmithImportScene__AssetsOnly                                                = 2
+	NewLevel                                                                         = 0,
+	CurrentLevel                                                                     = 1,
+	AssetsOnly                                                                       = 2
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithImportLightmapMax
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithImportLightmapMax : uint8_t
 {
-	EDatasmithImportLightmapMax__LIGHTMAP                                            = 0,
-	EDatasmithImportLightmapMax__LIGHTMAP2                                           = 1,
-	EDatasmithImportLightmapMax__LIGHTMAP3                                           = 2,
-	EDatasmithImportLightmapMax__LIGHTMAP4                                           = 3,
-	EDatasmithImportLightmapMax__LIGHTMAP5                                           = 4,
-	EDatasmithImportLightmapMax__LIGHTMAP6                                           = 5,
-	EDatasmithImportLightmapMax__LIGHTMAP7                                           = 6
+	LIGHTMAP                                                                         = 0,
+	LIGHTMAP2                                                                        = 1,
+	LIGHTMAP3                                                                        = 2,
+	LIGHTMAP4                                                                        = 3,
+	LIGHTMAP5                                                                        = 4,
+	LIGHTMAP6                                                                        = 5,
+	LIGHTMAP7                                                                        = 6
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithImportLightmapMin
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithImportLightmapMin : uint8_t
 {
-	EDatasmithImportLightmapMin__LIGHTMAP                                            = 0,
-	EDatasmithImportLightmapMin__LIGHTMAP2                                           = 1,
-	EDatasmithImportLightmapMin__LIGHTMAP3                                           = 2,
-	EDatasmithImportLightmapMin__LIGHTMAP4                                           = 3,
-	EDatasmithImportLightmapMin__LIGHTMAP5                                           = 4,
-	EDatasmithImportLightmapMin__LIGHTMAP6                                           = 5
+	LIGHTMAP                                                                         = 0,
+	LIGHTMAP2                                                                        = 1,
+	LIGHTMAP3                                                                        = 2,
+	LIGHTMAP4                                                                        = 3,
+	LIGHTMAP5                                                                        = 4,
+	LIGHTMAP6                                                                        = 5
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithImportMaterialQuality
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithImportMaterialQuality : uint8_t
 {
-	EDatasmithImportMaterialQuality__UseNoFresnelCurves                              = 0,
-	EDatasmithImportMaterialQuality__UseSimplifierFresnelCurves                      = 1,
-	EDatasmithImportMaterialQuality__UseRealFresnelCurves                            = 2
+	UseNoFresnelCurves                                                               = 0,
+	UseSimplifierFresnelCurves                                                       = 1,
+	UseRealFresnelCurves                                                             = 2
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithImportActorPolicy
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithImportActorPolicy : uint8_t
 {
-	EDatasmithImportActorPolicy__Update                                              = 0,
-	EDatasmithImportActorPolicy__Full                                                = 1,
-	EDatasmithImportActorPolicy__Ignore                                              = 2
+	Update                                                                           = 0,
+	Full                                                                             = 1,
+	Ignore                                                                           = 2
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithImportAssetConflictPolicy
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithImportAssetConflictPolicy : uint8_t
 {
-	EDatasmithImportAssetConflictPolicy__Replace                                     = 0,
-	EDatasmithImportAssetConflictPolicy__Update                                      = 1,
-	EDatasmithImportAssetConflictPolicy__Use                                         = 2,
-	EDatasmithImportAssetConflictPolicy__Ignore                                      = 3
+	Replace                                                                          = 0,
+	Update                                                                           = 1,
+	Use                                                                              = 2,
+	Ignore                                                                           = 3
 };
 
 /// Enum /Script/DatasmithContent.EDatasmithImportSearchPackagePolicy
 /// Size: 0x01 (1 bytes)
 enum class EDatasmithImportSearchPackagePolicy : uint8_t
 {
-	EDatasmithImportSearchPackagePolicy__Current                                     = 0,
-	EDatasmithImportSearchPackagePolicy__All                                         = 1
+	Current                                                                          = 0,
+	All                                                                              = 1
 };
 
 /// Class /Script/DatasmithContent.DatasmithObjectTemplate

@@ -15,9 +15,9 @@
 /// Size: 0x01 (1 bytes)
 enum class FNiagaraCompileEventSeverity : uint8_t
 {
-	FNiagaraCompileEventSeverity__Log                                                = 0,
-	FNiagaraCompileEventSeverity__Warning                                            = 1,
-	FNiagaraCompileEventSeverity__Error                                              = 2
+	Log                                                                              = 0,
+	Warning                                                                          = 1,
+	Error                                                                            = 2
 };
 
 /// Class /Script/NiagaraShader.NiagaraScriptBase

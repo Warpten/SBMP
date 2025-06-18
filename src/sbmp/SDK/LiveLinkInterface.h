@@ -15,17 +15,17 @@
 /// Size: 0x01 (1 bytes)
 enum class ELiveLinkCameraProjectionMode : uint8_t
 {
-	ELiveLinkCameraProjectionMode__Perspective                                       = 0,
-	ELiveLinkCameraProjectionMode__Orthographic                                      = 1
+	Perspective                                                                      = 0,
+	Orthographic                                                                     = 1
 };
 
 /// Enum /Script/LiveLinkInterface.ELiveLinkSourceMode
 /// Size: 0x01 (1 bytes)
 enum class ELiveLinkSourceMode : uint8_t
 {
-	ELiveLinkSourceMode__Latest                                                      = 0,
-	ELiveLinkSourceMode__EngineTime                                                  = 1,
-	ELiveLinkSourceMode__Timecode                                                    = 2
+	Latest                                                                           = 0,
+	EngineTime                                                                       = 1,
+	Timecode                                                                         = 2
 };
 
 /// Class /Script/LiveLinkInterface.LiveLinkFrameInterpolationProcessor

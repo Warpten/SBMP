@@ -15,18 +15,18 @@
 /// Size: 0x01 (1 bytes)
 enum class ETransformConstraintType : uint8_t
 {
-	ETransformConstraintType__Translation                                            = 0,
-	ETransformConstraintType__Rotation                                               = 1,
-	ETransformConstraintType__Scale                                                  = 2,
-	ETransformConstraintType__Parent                                                 = 3
+	Translation                                                                      = 0,
+	Rotation                                                                         = 1,
+	Scale                                                                            = 2,
+	Parent                                                                           = 3
 };
 
 /// Enum /Script/AnimationCore.EConstraintType
 /// Size: 0x01 (1 bytes)
 enum class EConstraintType : uint8_t
 {
-	EConstraintType__Transform                                                       = 0,
-	EConstraintType__Aim                                                             = 1
+	Transform                                                                        = 0,
+	Aim                                                                              = 1
 };
 
 /// Class /Script/AnimationCore.AnimationDataSourceRegistry

@@ -20,377 +20,377 @@
 /// Size: 0x01 (1 bytes)
 enum class ESynth1PatchDestination : uint8_t
 {
-	ESynth1PatchDestination__Osc1Gain                                                = 0,
-	ESynth1PatchDestination__Osc1Frequency                                           = 1,
-	ESynth1PatchDestination__Osc1Pulsewidth                                          = 2,
-	ESynth1PatchDestination__Osc2Gain                                                = 3,
-	ESynth1PatchDestination__Osc2Frequency                                           = 4,
-	ESynth1PatchDestination__Osc2Pulsewidth                                          = 5,
-	ESynth1PatchDestination__FilterFrequency                                         = 6,
-	ESynth1PatchDestination__FilterQ                                                 = 7,
-	ESynth1PatchDestination__Gain                                                    = 8,
-	ESynth1PatchDestination__Pan                                                     = 9,
-	ESynth1PatchDestination__LFO1Frequency                                           = 10,
-	ESynth1PatchDestination__LFO1Gain                                                = 11,
-	ESynth1PatchDestination__LFO2Frequency                                           = 12,
-	ESynth1PatchDestination__LFO2Gain                                                = 13,
-	ESynth1PatchDestination__Count                                                   = 14
+	Osc1Gain                                                                         = 0,
+	Osc1Frequency                                                                    = 1,
+	Osc1Pulsewidth                                                                   = 2,
+	Osc2Gain                                                                         = 3,
+	Osc2Frequency                                                                    = 4,
+	Osc2Pulsewidth                                                                   = 5,
+	FilterFrequency                                                                  = 6,
+	FilterQ                                                                          = 7,
+	Gain                                                                             = 8,
+	Pan                                                                              = 9,
+	LFO1Frequency                                                                    = 10,
+	LFO1Gain                                                                         = 11,
+	LFO2Frequency                                                                    = 12,
+	LFO2Gain                                                                         = 13,
+	Count                                                                            = 14
 };
 
 /// Enum /Script/Synthesis.ESynth1PatchSource
 /// Size: 0x01 (1 bytes)
 enum class ESynth1PatchSource : uint8_t
 {
-	ESynth1PatchSource__LFO1                                                         = 0,
-	ESynth1PatchSource__LFO2                                                         = 1,
-	ESynth1PatchSource__Envelope                                                     = 2,
-	ESynth1PatchSource__BiasEnvelope                                                 = 3,
-	ESynth1PatchSource__Count                                                        = 4
+	LFO1                                                                             = 0,
+	LFO2                                                                             = 1,
+	Envelope                                                                         = 2,
+	BiasEnvelope                                                                     = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/Synthesis.ESynthStereoDelayMode
 /// Size: 0x01 (1 bytes)
 enum class ESynthStereoDelayMode : uint8_t
 {
-	ESynthStereoDelayMode__Normal                                                    = 0,
-	ESynthStereoDelayMode__Cross                                                     = 1,
-	ESynthStereoDelayMode__PingPong                                                  = 2,
-	ESynthStereoDelayMode__Count                                                     = 3
+	Normal                                                                           = 0,
+	Cross                                                                            = 1,
+	PingPong                                                                         = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.ESynthFilterAlgorithm
 /// Size: 0x01 (1 bytes)
 enum class ESynthFilterAlgorithm : uint8_t
 {
-	ESynthFilterAlgorithm__OnePole                                                   = 0,
-	ESynthFilterAlgorithm__StateVariable                                             = 1,
-	ESynthFilterAlgorithm__Ladder                                                    = 2,
-	ESynthFilterAlgorithm__Count                                                     = 3
+	OnePole                                                                          = 0,
+	StateVariable                                                                    = 1,
+	Ladder                                                                           = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.ESynthFilterType
 /// Size: 0x01 (1 bytes)
 enum class ESynthFilterType : uint8_t
 {
-	ESynthFilterType__LowPass                                                        = 0,
-	ESynthFilterType__HighPass                                                       = 1,
-	ESynthFilterType__BandPass                                                       = 2,
-	ESynthFilterType__BandStop                                                       = 3,
-	ESynthFilterType__Count                                                          = 4
+	LowPass                                                                          = 0,
+	HighPass                                                                         = 1,
+	BandPass                                                                         = 2,
+	BandStop                                                                         = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/Synthesis.ESynthModEnvBiasPatch
 /// Size: 0x01 (1 bytes)
 enum class ESynthModEnvBiasPatch : uint8_t
 {
-	ESynthModEnvBiasPatch__PatchToNone                                               = 0,
-	ESynthModEnvBiasPatch__PatchToOscFreq                                            = 1,
-	ESynthModEnvBiasPatch__PatchToFilterFreq                                         = 2,
-	ESynthModEnvBiasPatch__PatchToFilterQ                                            = 3,
-	ESynthModEnvBiasPatch__PatchToLFO1Gain                                           = 4,
-	ESynthModEnvBiasPatch__PatchToLFO2Gain                                           = 5,
-	ESynthModEnvBiasPatch__PatchToLFO1Freq                                           = 6,
-	ESynthModEnvBiasPatch__PatchToLFO2Freq                                           = 7,
-	ESynthModEnvBiasPatch__Count                                                     = 8
+	PatchToNone                                                                      = 0,
+	PatchToOscFreq                                                                   = 1,
+	PatchToFilterFreq                                                                = 2,
+	PatchToFilterQ                                                                   = 3,
+	PatchToLFO1Gain                                                                  = 4,
+	PatchToLFO2Gain                                                                  = 5,
+	PatchToLFO1Freq                                                                  = 6,
+	PatchToLFO2Freq                                                                  = 7,
+	Count                                                                            = 8
 };
 
 /// Enum /Script/Synthesis.ESynthModEnvPatch
 /// Size: 0x01 (1 bytes)
 enum class ESynthModEnvPatch : uint8_t
 {
-	ESynthModEnvPatch__PatchToNone                                                   = 0,
-	ESynthModEnvPatch__PatchToOscFreq                                                = 1,
-	ESynthModEnvPatch__PatchToFilterFreq                                             = 2,
-	ESynthModEnvPatch__PatchToFilterQ                                                = 3,
-	ESynthModEnvPatch__PatchToLFO1Gain                                               = 4,
-	ESynthModEnvPatch__PatchToLFO2Gain                                               = 5,
-	ESynthModEnvPatch__PatchToLFO1Freq                                               = 6,
-	ESynthModEnvPatch__PatchToLFO2Freq                                               = 7,
-	ESynthModEnvPatch__Count                                                         = 8
+	PatchToNone                                                                      = 0,
+	PatchToOscFreq                                                                   = 1,
+	PatchToFilterFreq                                                                = 2,
+	PatchToFilterQ                                                                   = 3,
+	PatchToLFO1Gain                                                                  = 4,
+	PatchToLFO2Gain                                                                  = 5,
+	PatchToLFO1Freq                                                                  = 6,
+	PatchToLFO2Freq                                                                  = 7,
+	Count                                                                            = 8
 };
 
 /// Enum /Script/Synthesis.ESynthLFOPatchType
 /// Size: 0x01 (1 bytes)
 enum class ESynthLFOPatchType : uint8_t
 {
-	ESynthLFOPatchType__PatchToNone                                                  = 0,
-	ESynthLFOPatchType__PatchToGain                                                  = 1,
-	ESynthLFOPatchType__PatchToOscFreq                                               = 2,
-	ESynthLFOPatchType__PatchToFilterFreq                                            = 3,
-	ESynthLFOPatchType__PatchToFilterQ                                               = 4,
-	ESynthLFOPatchType__PatchToOscPulseWidth                                         = 5,
-	ESynthLFOPatchType__PatchToOscPan                                                = 6,
-	ESynthLFOPatchType__PatchLFO1ToLFO2Frequency                                     = 7,
-	ESynthLFOPatchType__PatchLFO1ToLFO2Gain                                          = 8,
-	ESynthLFOPatchType__Count                                                        = 9
+	PatchToNone                                                                      = 0,
+	PatchToGain                                                                      = 1,
+	PatchToOscFreq                                                                   = 2,
+	PatchToFilterFreq                                                                = 3,
+	PatchToFilterQ                                                                   = 4,
+	PatchToOscPulseWidth                                                             = 5,
+	PatchToOscPan                                                                    = 6,
+	PatchLFO1ToLFO2Frequency                                                         = 7,
+	PatchLFO1ToLFO2Gain                                                              = 8,
+	Count                                                                            = 9
 };
 
 /// Enum /Script/Synthesis.ESynthLFOMode
 /// Size: 0x01 (1 bytes)
 enum class ESynthLFOMode : uint8_t
 {
-	ESynthLFOMode__Sync                                                              = 0,
-	ESynthLFOMode__OneShot                                                           = 1,
-	ESynthLFOMode__Free                                                              = 2,
-	ESynthLFOMode__Count                                                             = 3
+	Sync                                                                             = 0,
+	OneShot                                                                          = 1,
+	Free                                                                             = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.ESynthLFOType
 /// Size: 0x01 (1 bytes)
 enum class ESynthLFOType : uint8_t
 {
-	ESynthLFOType__Sine                                                              = 0,
-	ESynthLFOType__UpSaw                                                             = 1,
-	ESynthLFOType__DownSaw                                                           = 2,
-	ESynthLFOType__Square                                                            = 3,
-	ESynthLFOType__Triangle                                                          = 4,
-	ESynthLFOType__Exponential                                                       = 5,
-	ESynthLFOType__RandomSampleHold                                                  = 6,
-	ESynthLFOType__Count                                                             = 7
+	Sine                                                                             = 0,
+	UpSaw                                                                            = 1,
+	DownSaw                                                                          = 2,
+	Square                                                                           = 3,
+	Triangle                                                                         = 4,
+	Exponential                                                                      = 5,
+	RandomSampleHold                                                                 = 6,
+	Count                                                                            = 7
 };
 
 /// Enum /Script/Synthesis.ESynth1OscType
 /// Size: 0x01 (1 bytes)
 enum class ESynth1OscType : uint8_t
 {
-	ESynth1OscType__Sine                                                             = 0,
-	ESynth1OscType__Saw                                                              = 1,
-	ESynth1OscType__Triangle                                                         = 2,
-	ESynth1OscType__Square                                                           = 3,
-	ESynth1OscType__Noise                                                            = 4,
-	ESynth1OscType__Count                                                            = 5
+	Sine                                                                             = 0,
+	Saw                                                                              = 1,
+	Triangle                                                                         = 2,
+	Square                                                                           = 3,
+	Noise                                                                            = 4,
+	Count                                                                            = 5
 };
 
 /// Enum /Script/Synthesis.ESourceEffectDynamicsPeakMode
 /// Size: 0x01 (1 bytes)
 enum class ESourceEffectDynamicsPeakMode : uint8_t
 {
-	ESourceEffectDynamicsPeakMode__MeanSquared                                       = 0,
-	ESourceEffectDynamicsPeakMode__RootMeanSquared                                   = 1,
-	ESourceEffectDynamicsPeakMode__Peak                                              = 2,
-	ESourceEffectDynamicsPeakMode__Count                                             = 3
+	MeanSquared                                                                      = 0,
+	RootMeanSquared                                                                  = 1,
+	Peak                                                                             = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.ESourceEffectDynamicsProcessorType
 /// Size: 0x01 (1 bytes)
 enum class ESourceEffectDynamicsProcessorType : uint8_t
 {
-	ESourceEffectDynamicsProcessorType__Compressor                                   = 0,
-	ESourceEffectDynamicsProcessorType__Limiter                                      = 1,
-	ESourceEffectDynamicsProcessorType__Expander                                     = 2,
-	ESourceEffectDynamicsProcessorType__Gate                                         = 3,
-	ESourceEffectDynamicsProcessorType__Count                                        = 4
+	Compressor                                                                       = 0,
+	Limiter                                                                          = 1,
+	Expander                                                                         = 2,
+	Gate                                                                             = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/Synthesis.EEnvelopeFollowerPeakMode
 /// Size: 0x01 (1 bytes)
 enum class EEnvelopeFollowerPeakMode : uint8_t
 {
-	EEnvelopeFollowerPeakMode__MeanSquared                                           = 0,
-	EEnvelopeFollowerPeakMode__RootMeanSquared                                       = 1,
-	EEnvelopeFollowerPeakMode__Peak                                                  = 2,
-	EEnvelopeFollowerPeakMode__Count                                                 = 3
+	MeanSquared                                                                      = 0,
+	RootMeanSquared                                                                  = 1,
+	Peak                                                                             = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.ESourceEffectFilterParam
 /// Size: 0x01 (1 bytes)
 enum class ESourceEffectFilterParam : uint8_t
 {
-	ESourceEffectFilterParam__FilterFrequency                                        = 0,
-	ESourceEffectFilterParam__FilterResonance                                        = 1,
-	ESourceEffectFilterParam__Count                                                  = 2
+	FilterFrequency                                                                  = 0,
+	FilterResonance                                                                  = 1,
+	Count                                                                            = 2
 };
 
 /// Enum /Script/Synthesis.ESourceEffectFilterType
 /// Size: 0x01 (1 bytes)
 enum class ESourceEffectFilterType : uint8_t
 {
-	ESourceEffectFilterType__LowPass                                                 = 0,
-	ESourceEffectFilterType__HighPass                                                = 1,
-	ESourceEffectFilterType__BandPass                                                = 2,
-	ESourceEffectFilterType__BandStop                                                = 3,
-	ESourceEffectFilterType__Count                                                   = 4
+	LowPass                                                                          = 0,
+	HighPass                                                                         = 1,
+	BandPass                                                                         = 2,
+	BandStop                                                                         = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/Synthesis.ESourceEffectFilterCircuit
 /// Size: 0x01 (1 bytes)
 enum class ESourceEffectFilterCircuit : uint8_t
 {
-	ESourceEffectFilterCircuit__OnePole                                              = 0,
-	ESourceEffectFilterCircuit__StateVariable                                        = 1,
-	ESourceEffectFilterCircuit__Ladder                                               = 2,
-	ESourceEffectFilterCircuit__Count                                                = 3
+	OnePole                                                                          = 0,
+	StateVariable                                                                    = 1,
+	Ladder                                                                           = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.EStereoChannelMode
 /// Size: 0x01 (1 bytes)
 enum class EStereoChannelMode : uint8_t
 {
-	EStereoChannelMode__MidSide                                                      = 0,
-	EStereoChannelMode__LeftRight                                                    = 1,
-	EStereoChannelMode__count                                                        = 2
+	MidSide                                                                          = 0,
+	LeftRight                                                                        = 1,
+	count                                                                            = 2
 };
 
 /// Enum /Script/Synthesis.EPhaserLFOType
 /// Size: 0x01 (1 bytes)
 enum class EPhaserLFOType : uint8_t
 {
-	EPhaserLFOType__Sine                                                             = 0,
-	EPhaserLFOType__UpSaw                                                            = 1,
-	EPhaserLFOType__DownSaw                                                          = 2,
-	EPhaserLFOType__Square                                                           = 3,
-	EPhaserLFOType__Triangle                                                         = 4,
-	EPhaserLFOType__Exponential                                                      = 5,
-	EPhaserLFOType__RandomSampleHold                                                 = 6,
-	EPhaserLFOType__Count                                                            = 7
+	Sine                                                                             = 0,
+	UpSaw                                                                            = 1,
+	DownSaw                                                                          = 2,
+	Square                                                                           = 3,
+	Triangle                                                                         = 4,
+	Exponential                                                                      = 5,
+	RandomSampleHold                                                                 = 6,
+	Count                                                                            = 7
 };
 
 /// Enum /Script/Synthesis.ERingModulatorTypeSourceEffect
 /// Size: 0x01 (1 bytes)
 enum class ERingModulatorTypeSourceEffect : uint8_t
 {
-	ERingModulatorTypeSourceEffect__Sine                                             = 0,
-	ERingModulatorTypeSourceEffect__Saw                                              = 1,
-	ERingModulatorTypeSourceEffect__Triangle                                         = 2,
-	ERingModulatorTypeSourceEffect__Square                                           = 3,
-	ERingModulatorTypeSourceEffect__Count                                            = 4
+	Sine                                                                             = 0,
+	Saw                                                                              = 1,
+	Triangle                                                                         = 2,
+	Square                                                                           = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/Synthesis.EStereoDelayFiltertype
 /// Size: 0x01 (1 bytes)
 enum class EStereoDelayFiltertype : uint8_t
 {
-	EStereoDelayFiltertype__Lowpass                                                  = 0,
-	EStereoDelayFiltertype__Highpass                                                 = 1,
-	EStereoDelayFiltertype__Bandpass                                                 = 2,
-	EStereoDelayFiltertype__Notch                                                    = 3,
-	EStereoDelayFiltertype__Count                                                    = 4
+	Lowpass                                                                          = 0,
+	Highpass                                                                         = 1,
+	Bandpass                                                                         = 2,
+	Notch                                                                            = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/Synthesis.EStereoDelaySourceEffect
 /// Size: 0x01 (1 bytes)
 enum class EStereoDelaySourceEffect : uint8_t
 {
-	EStereoDelaySourceEffect__Normal                                                 = 0,
-	EStereoDelaySourceEffect__Cross                                                  = 1,
-	EStereoDelaySourceEffect__PingPong                                               = 2,
-	EStereoDelaySourceEffect__Count                                                  = 3
+	Normal                                                                           = 0,
+	Cross                                                                            = 1,
+	PingPong                                                                         = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.ESubmixEffectConvolutionReverbBlockSize
 /// Size: 0x01 (1 bytes)
 enum class ESubmixEffectConvolutionReverbBlockSize : uint8_t
 {
-	ESubmixEffectConvolutionReverbBlockSize__BlockSize256                            = 0,
-	ESubmixEffectConvolutionReverbBlockSize__BlockSize512                            = 1,
-	ESubmixEffectConvolutionReverbBlockSize__BlockSize1024                           = 2
+	BlockSize256                                                                     = 0,
+	BlockSize512                                                                     = 1,
+	BlockSize1024                                                                    = 2
 };
 
 /// Enum /Script/Synthesis.ESubmixFilterAlgorithm
 /// Size: 0x01 (1 bytes)
 enum class ESubmixFilterAlgorithm : uint8_t
 {
-	ESubmixFilterAlgorithm__OnePole                                                  = 0,
-	ESubmixFilterAlgorithm__StateVariable                                            = 1,
-	ESubmixFilterAlgorithm__Ladder                                                   = 2,
-	ESubmixFilterAlgorithm__Count                                                    = 3
+	OnePole                                                                          = 0,
+	StateVariable                                                                    = 1,
+	Ladder                                                                           = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.ESubmixFilterType
 /// Size: 0x01 (1 bytes)
 enum class ESubmixFilterType : uint8_t
 {
-	ESubmixFilterType__LowPass                                                       = 0,
-	ESubmixFilterType__HighPass                                                      = 1,
-	ESubmixFilterType__BandPass                                                      = 2,
-	ESubmixFilterType__BandStop                                                      = 3,
-	ESubmixFilterType__Count                                                         = 4
+	LowPass                                                                          = 0,
+	HighPass                                                                         = 1,
+	BandPass                                                                         = 2,
+	BandStop                                                                         = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/Synthesis.ETapLineMode
 /// Size: 0x01 (1 bytes)
 enum class ETapLineMode : uint8_t
 {
-	ETapLineMode__SendToChannel                                                      = 0,
-	ETapLineMode__Panning                                                            = 1,
-	ETapLineMode__Disabled                                                           = 2
+	SendToChannel                                                                    = 0,
+	Panning                                                                          = 1,
+	Disabled                                                                         = 2
 };
 
 /// Enum /Script/Synthesis.EGranularSynthSeekType
 /// Size: 0x01 (1 bytes)
 enum class EGranularSynthSeekType : uint8_t
 {
-	EGranularSynthSeekType__FromBeginning                                            = 0,
-	EGranularSynthSeekType__FromCurrentPosition                                      = 1,
-	EGranularSynthSeekType__Count                                                    = 2
+	FromBeginning                                                                    = 0,
+	FromCurrentPosition                                                              = 1,
+	Count                                                                            = 2
 };
 
 /// Enum /Script/Synthesis.EGranularSynthEnvelopeType
 /// Size: 0x01 (1 bytes)
 enum class EGranularSynthEnvelopeType : uint8_t
 {
-	EGranularSynthEnvelopeType__Rectangular                                          = 0,
-	EGranularSynthEnvelopeType__Triangle                                             = 1,
-	EGranularSynthEnvelopeType__DownwardTriangle                                     = 2,
-	EGranularSynthEnvelopeType__UpwardTriangle                                       = 3,
-	EGranularSynthEnvelopeType__ExponentialDecay                                     = 4,
-	EGranularSynthEnvelopeType__ExponentialIncrease                                  = 5,
-	EGranularSynthEnvelopeType__Gaussian                                             = 6,
-	EGranularSynthEnvelopeType__Hanning                                              = 7,
-	EGranularSynthEnvelopeType__Lanczos                                              = 8,
-	EGranularSynthEnvelopeType__Cosine                                               = 9,
-	EGranularSynthEnvelopeType__CosineSquared                                        = 10,
-	EGranularSynthEnvelopeType__Welch                                                = 11,
-	EGranularSynthEnvelopeType__Blackman                                             = 12,
-	EGranularSynthEnvelopeType__BlackmanHarris                                       = 13,
-	EGranularSynthEnvelopeType__Count                                                = 14
+	Rectangular                                                                      = 0,
+	Triangle                                                                         = 1,
+	DownwardTriangle                                                                 = 2,
+	UpwardTriangle                                                                   = 3,
+	ExponentialDecay                                                                 = 4,
+	ExponentialIncrease                                                              = 5,
+	Gaussian                                                                         = 6,
+	Hanning                                                                          = 7,
+	Lanczos                                                                          = 8,
+	Cosine                                                                           = 9,
+	CosineSquared                                                                    = 10,
+	Welch                                                                            = 11,
+	Blackman                                                                         = 12,
+	BlackmanHarris                                                                   = 13,
+	Count                                                                            = 14
 };
 
 /// Enum /Script/Synthesis.CurveInterpolationType
 /// Size: 0x01 (1 bytes)
 enum class CurveInterpolationType : uint8_t
 {
-	CurveInterpolationType__AUTOINTERP                                               = 0,
-	CurveInterpolationType__LINEAR                                                   = 1,
-	CurveInterpolationType__CONSTANT                                                 = 2
+	AUTOINTERP                                                                       = 0,
+	LINEAR                                                                           = 1,
+	CONSTANT                                                                         = 2
 };
 
 /// Enum /Script/Synthesis.ESamplePlayerSeekType
 /// Size: 0x01 (1 bytes)
 enum class ESamplePlayerSeekType : uint8_t
 {
-	ESamplePlayerSeekType__FromBeginning                                             = 0,
-	ESamplePlayerSeekType__FromCurrentPosition                                       = 1,
-	ESamplePlayerSeekType__FromEnd                                                   = 2,
-	ESamplePlayerSeekType__Count                                                     = 3
+	FromBeginning                                                                    = 0,
+	FromCurrentPosition                                                              = 1,
+	FromEnd                                                                          = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/Synthesis.ESynthKnobSize
 /// Size: 0x01 (1 bytes)
 enum class ESynthKnobSize : uint8_t
 {
-	ESynthKnobSize__Medium                                                           = 0,
-	ESynthKnobSize__Large                                                            = 1,
-	ESynthKnobSize__Count                                                            = 2
+	Medium                                                                           = 0,
+	Large                                                                            = 1,
+	Count                                                                            = 2
 };
 
 /// Enum /Script/Synthesis.ESynthSlateColorStyle
 /// Size: 0x01 (1 bytes)
 enum class ESynthSlateColorStyle : uint8_t
 {
-	ESynthSlateColorStyle__Light                                                     = 0,
-	ESynthSlateColorStyle__Dark                                                      = 1,
-	ESynthSlateColorStyle__Count                                                     = 2
+	Light                                                                            = 0,
+	Dark                                                                             = 1,
+	Count                                                                            = 2
 };
 
 /// Enum /Script/Synthesis.ESynthSlateSizeType
 /// Size: 0x01 (1 bytes)
 enum class ESynthSlateSizeType : uint8_t
 {
-	ESynthSlateSizeType__Small                                                       = 0,
-	ESynthSlateSizeType__Medium                                                      = 1,
-	ESynthSlateSizeType__Large                                                       = 2,
-	ESynthSlateSizeType__Count                                                       = 3
+	Small                                                                            = 0,
+	Medium                                                                           = 1,
+	Large                                                                            = 2,
+	Count                                                                            = 3
 };
 
 /// Struct /Script/Synthesis.Synth1PatchCable

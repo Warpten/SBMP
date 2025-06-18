@@ -16,25 +16,25 @@
 /// Size: 0x01 (1 bytes)
 enum class EAppleTextureType : uint8_t
 {
-	EAppleTextureType__Unknown                                                       = 0,
-	EAppleTextureType__Image                                                         = 1,
-	EAppleTextureType__PixelBuffer                                                   = 2,
-	EAppleTextureType__Surface                                                       = 3,
-	EAppleTextureType__MetalTexture                                                  = 4
+	Unknown                                                                          = 0,
+	Image                                                                            = 1,
+	PixelBuffer                                                                      = 2,
+	Surface                                                                          = 3,
+	MetalTexture                                                                     = 4
 };
 
 /// Enum /Script/AppleImageUtils.ETextureRotationDirection
 /// Size: 0x01 (1 bytes)
 enum class ETextureRotationDirection : uint8_t
 {
-	ETextureRotationDirection__None                                                  = 0,
-	ETextureRotationDirection__Left                                                  = 1,
-	ETextureRotationDirection__Right                                                 = 2,
-	ETextureRotationDirection__Down                                                  = 3,
-	ETextureRotationDirection__LeftMirrored                                          = 4,
-	ETextureRotationDirection__RightMirrored                                         = 5,
-	ETextureRotationDirection__DownMirrored                                          = 6,
-	ETextureRotationDirection__UpMirrored                                            = 7
+	None                                                                             = 0,
+	Left                                                                             = 1,
+	Right                                                                            = 2,
+	Down                                                                             = 3,
+	LeftMirrored                                                                     = 4,
+	RightMirrored                                                                    = 5,
+	DownMirrored                                                                     = 6,
+	UpMirrored                                                                       = 7
 };
 
 /// Struct /Script/AppleImageUtils.AppleImageUtilsImageConversionResult

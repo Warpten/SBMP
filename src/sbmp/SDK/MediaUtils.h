@@ -14,9 +14,9 @@
 /// Size: 0x01 (1 bytes)
 enum class EMediaPlayerOptionBooleanOverride : uint8_t
 {
-	EMediaPlayerOptionBooleanOverride__UseMediaPlayerSetting                         = 0,
-	EMediaPlayerOptionBooleanOverride__Enabled                                       = 1,
-	EMediaPlayerOptionBooleanOverride__Disabled                                      = 2
+	UseMediaPlayerSetting                                                            = 0,
+	Enabled                                                                          = 1,
+	Disabled                                                                         = 2
 };
 
 /// Struct /Script/MediaUtils.MediaPlayerTrackOptions

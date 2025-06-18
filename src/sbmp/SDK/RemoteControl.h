@@ -16,19 +16,19 @@
 /// Size: 0x01 (1 bytes)
 enum class ERCAccess : uint8_t
 {
-	ERCAccess__NO_ACCESS                                                             = 0,
-	ERCAccess__READ_ACCESS                                                           = 1,
-	ERCAccess__WRITE_ACCESS                                                          = 2,
-	ERCAccess__WRITE_TRANSACTION_ACCESS                                              = 3
+	NO_ACCESS                                                                        = 0,
+	READ_ACCESS                                                                      = 1,
+	WRITE_ACCESS                                                                     = 2,
+	WRITE_TRANSACTION_ACCESS                                                         = 3
 };
 
 /// Enum /Script/RemoteControl.EExposedFieldType
 /// Size: 0x01 (1 bytes)
 enum class EExposedFieldType : uint8_t
 {
-	EExposedFieldType__Invalid                                                       = 0,
-	EExposedFieldType__Property                                                      = 1,
-	EExposedFieldType__Function                                                      = 2
+	Invalid                                                                          = 0,
+	Property                                                                         = 1,
+	Function                                                                         = 2
 };
 
 /// Struct /Script/RemoteControl.RemoteControlPresetGroup

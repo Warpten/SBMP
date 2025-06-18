@@ -17,8 +17,8 @@
 /// Size: 0x01 (1 bytes)
 enum class EClothingWindMethodNv : uint8_t
 {
-	EClothingWindMethodNv__Legacy                                                    = 0,
-	EClothingWindMethodNv__Accurate                                                  = 1
+	Legacy                                                                           = 0,
+	Accurate                                                                         = 1
 };
 
 /// Struct /Script/ClothingSystemRuntimeNv.ClothConstraintSetupNv

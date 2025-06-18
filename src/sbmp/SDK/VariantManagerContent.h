@@ -16,15 +16,15 @@
 /// Size: 0x01 (1 bytes)
 enum class EPropertyValueCategory : uint8_t
 {
-	EPropertyValueCategory__Undefined                                                = 0,
-	EPropertyValueCategory__Generic                                                  = 1,
-	EPropertyValueCategory__RelativeLocation                                         = 2,
-	EPropertyValueCategory__RelativeRotation                                         = 4,
-	EPropertyValueCategory__RelativeScale3D                                          = 8,
-	EPropertyValueCategory__Visibility                                               = 16,
-	EPropertyValueCategory__Material                                                 = 32,
-	EPropertyValueCategory__Color                                                    = 64,
-	EPropertyValueCategory__Option                                                   = 128
+	Undefined                                                                        = 0,
+	Generic                                                                          = 1,
+	RelativeLocation                                                                 = 2,
+	RelativeRotation                                                                 = 4,
+	RelativeScale3D                                                                  = 8,
+	Visibility                                                                       = 16,
+	Material                                                                         = 32,
+	Color                                                                            = 64,
+	Option                                                                           = 128
 };
 
 /// Class /Script/VariantManagerContent.LevelVariantSets

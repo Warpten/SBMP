@@ -15,11 +15,11 @@
 /// Size: 0x01 (1 bytes)
 enum class EClusterUnionMethod : uint8_t
 {
-	EClusterUnionMethod__PointImplicit                                               = 0,
-	EClusterUnionMethod__DelaunayTriangulation                                       = 1,
-	EClusterUnionMethod__MinimalSpanningSubsetDelaunayTriangulation                  = 2,
-	EClusterUnionMethod__PointImplicitAugmentedWithMinimalDelaunay                   = 3,
-	EClusterUnionMethod__None                                                        = 4
+	PointImplicit                                                                    = 0,
+	DelaunayTriangulation                                                            = 1,
+	MinimalSpanningSubsetDelaunayTriangulation                                       = 2,
+	PointImplicitAugmentedWithMinimalDelaunay                                        = 3,
+	None                                                                             = 4
 };
 
 /// Enum /Script/Chaos.EFieldPhysicsDefaultFields
@@ -114,108 +114,108 @@ enum class ESetMaskConditionType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class EEmissionPatternTypeEnum : uint8_t
 {
-	EEmissionPatternTypeEnum__Chaos_Emission_Pattern_First_Frame                     = 0,
-	EEmissionPatternTypeEnum__Chaos_Emission_Pattern_On_Demand                       = 1,
-	EEmissionPatternTypeEnum__Chaos_Max                                              = 2
+	Chaos_Emission_Pattern_First_Frame                                               = 0,
+	Chaos_Emission_Pattern_On_Demand                                                 = 1,
+	Chaos_Max                                                                        = 2
 };
 
 /// Enum /Script/Chaos.EInitialVelocityTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class EInitialVelocityTypeEnum : uint8_t
 {
-	EInitialVelocityTypeEnum__Chaos_Initial_Velocity_User_Defined                    = 0,
-	EInitialVelocityTypeEnum__Chaos_Initial_Velocity_None                            = 1,
-	EInitialVelocityTypeEnum__Chaos_Max                                              = 2
+	Chaos_Initial_Velocity_User_Defined                                              = 0,
+	Chaos_Initial_Velocity_None                                                      = 1,
+	Chaos_Max                                                                        = 2
 };
 
 /// Enum /Script/Chaos.EGeometryCollectionPhysicsTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class EGeometryCollectionPhysicsTypeEnum : uint8_t
 {
-	EGeometryCollectionPhysicsTypeEnum__Chaos_AngularVelocity                        = 0,
-	EGeometryCollectionPhysicsTypeEnum__Chaos_DynamicState                           = 1,
-	EGeometryCollectionPhysicsTypeEnum__Chaos_LinearVelocity                         = 2,
-	EGeometryCollectionPhysicsTypeEnum__Chaos_InitialAngularVelocity                 = 3,
-	EGeometryCollectionPhysicsTypeEnum__Chaos_InitialLinearVelocity                  = 4,
-	EGeometryCollectionPhysicsTypeEnum__Chaos_CollisionGroup                         = 5,
-	EGeometryCollectionPhysicsTypeEnum__Chaos_LinearForce                            = 6,
-	EGeometryCollectionPhysicsTypeEnum__Chaos_AngularTorque                          = 7,
-	EGeometryCollectionPhysicsTypeEnum__Chaos_Max                                    = 8
+	Chaos_AngularVelocity                                                            = 0,
+	Chaos_DynamicState                                                               = 1,
+	Chaos_LinearVelocity                                                             = 2,
+	Chaos_InitialAngularVelocity                                                     = 3,
+	Chaos_InitialLinearVelocity                                                      = 4,
+	Chaos_CollisionGroup                                                             = 5,
+	Chaos_LinearForce                                                                = 6,
+	Chaos_AngularTorque                                                              = 7,
+	Chaos_Max                                                                        = 8
 };
 
 /// Enum /Script/Chaos.EObjectStateTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class EObjectStateTypeEnum : uint8_t
 {
-	EObjectStateTypeEnum__Chaos_NONE                                                 = 0,
-	EObjectStateTypeEnum__Chaos_Object_Sleeping                                      = 1,
-	EObjectStateTypeEnum__Chaos_Object_Kinematic                                     = 2,
-	EObjectStateTypeEnum__Chaos_Object_Static                                        = 3,
-	EObjectStateTypeEnum__Chaos_Object_Dynamic                                       = 4,
-	EObjectStateTypeEnum__Chaos_Object_UserDefined                                   = 100,
-	EObjectStateTypeEnum__Chaos_Max                                                  = 101
+	Chaos_NONE                                                                       = 0,
+	Chaos_Object_Sleeping                                                            = 1,
+	Chaos_Object_Kinematic                                                           = 2,
+	Chaos_Object_Static                                                              = 3,
+	Chaos_Object_Dynamic                                                             = 4,
+	Chaos_Object_UserDefined                                                         = 100,
+	Chaos_Max                                                                        = 101
 };
 
 /// Enum /Script/Chaos.EImplicitTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class EImplicitTypeEnum : uint8_t
 {
-	EImplicitTypeEnum__Chaos_Implicit_Box                                            = 0,
-	EImplicitTypeEnum__Chaos_Implicit_Sphere                                         = 1,
-	EImplicitTypeEnum__Chaos_Implicit_Capsule                                        = 2,
-	EImplicitTypeEnum__Chaos_Implicit_LevelSet                                       = 3,
-	EImplicitTypeEnum__Chaos_Implicit_None                                           = 4,
-	EImplicitTypeEnum__Chaos_Max                                                     = 5
+	Chaos_Implicit_Box                                                               = 0,
+	Chaos_Implicit_Sphere                                                            = 1,
+	Chaos_Implicit_Capsule                                                           = 2,
+	Chaos_Implicit_LevelSet                                                          = 3,
+	Chaos_Implicit_None                                                              = 4,
+	Chaos_Max                                                                        = 5
 };
 
 /// Enum /Script/Chaos.ECollisionTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class ECollisionTypeEnum : uint8_t
 {
-	ECollisionTypeEnum__Chaos_Volumetric                                             = 0,
-	ECollisionTypeEnum__Chaos_Surface_Volumetric                                     = 1,
-	ECollisionTypeEnum__Chaos_Max                                                    = 2
+	Chaos_Volumetric                                                                 = 0,
+	Chaos_Surface_Volumetric                                                         = 1,
+	Chaos_Max                                                                        = 2
 };
 
 /// Enum /Script/Chaos.EChaosBufferMode
 /// Size: 0x01 (1 bytes)
 enum class EChaosBufferMode : uint8_t
 {
-	EChaosBufferMode__Double                                                         = 0,
-	EChaosBufferMode__Triple                                                         = 1,
-	EChaosBufferMode__Num                                                            = 2,
-	EChaosBufferMode__Invalid                                                        = 3
+	Double                                                                           = 0,
+	Triple                                                                           = 1,
+	Num                                                                              = 2,
+	Invalid                                                                          = 3
 };
 
 /// Enum /Script/Chaos.EChaosThreadingMode
 /// Size: 0x01 (1 bytes)
 enum class EChaosThreadingMode : uint8_t
 {
-	EChaosThreadingMode__DedicatedThread                                             = 0,
-	EChaosThreadingMode__TaskGraph                                                   = 1,
-	EChaosThreadingMode__SingleThread                                                = 2,
-	EChaosThreadingMode__Num                                                         = 3,
-	EChaosThreadingMode__Invalid                                                     = 4
+	DedicatedThread                                                                  = 0,
+	TaskGraph                                                                        = 1,
+	SingleThread                                                                     = 2,
+	Num                                                                              = 3,
+	Invalid                                                                          = 4
 };
 
 /// Enum /Script/Chaos.EChaosSolverTickMode
 /// Size: 0x01 (1 bytes)
 enum class EChaosSolverTickMode : uint8_t
 {
-	EChaosSolverTickMode__Fixed                                                      = 0,
-	EChaosSolverTickMode__Variable                                                   = 1,
-	EChaosSolverTickMode__VariableCapped                                             = 2,
-	EChaosSolverTickMode__VariableCappedWithTarget                                   = 3
+	Fixed                                                                            = 0,
+	Variable                                                                         = 1,
+	VariableCapped                                                                   = 2,
+	VariableCappedWithTarget                                                         = 3
 };
 
 /// Enum /Script/Chaos.EGeometryCollectionCacheType
 /// Size: 0x01 (1 bytes)
 enum class EGeometryCollectionCacheType : uint8_t
 {
-	EGeometryCollectionCacheType__None                                               = 0,
-	EGeometryCollectionCacheType__Record                                             = 1,
-	EGeometryCollectionCacheType__Play                                               = 2,
-	EGeometryCollectionCacheType__RecordAndPlay                                      = 3
+	None                                                                             = 0,
+	Record                                                                           = 1,
+	Play                                                                             = 2,
+	RecordAndPlay                                                                    = 3
 };
 
 /// Struct /Script/Chaos.SolverCollisionFilterSettings

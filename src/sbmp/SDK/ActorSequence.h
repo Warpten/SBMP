@@ -17,9 +17,9 @@
 /// Size: 0x01 (1 bytes)
 enum class EActorSequenceObjectReferenceType : uint8_t
 {
-	EActorSequenceObjectReferenceType__ContextActor                                  = 0,
-	EActorSequenceObjectReferenceType__ExternalActor                                 = 1,
-	EActorSequenceObjectReferenceType__Component                                     = 2
+	ContextActor                                                                     = 0,
+	ExternalActor                                                                    = 1,
+	Component                                                                        = 2
 };
 
 /// Struct /Script/ActorSequence.ActorSequenceObjectReference

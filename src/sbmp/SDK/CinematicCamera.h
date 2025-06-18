@@ -16,10 +16,10 @@
 /// Size: 0x01 (1 bytes)
 enum class ECameraFocusMethod : uint8_t
 {
-	ECameraFocusMethod__DoNotOverride                                                = 0,
-	ECameraFocusMethod__Manual                                                       = 1,
-	ECameraFocusMethod__Tracking                                                     = 2,
-	ECameraFocusMethod__Disable                                                      = 3
+	DoNotOverride                                                                    = 0,
+	Manual                                                                           = 1,
+	Tracking                                                                         = 2,
+	Disable                                                                          = 3
 };
 
 /// Struct /Script/CinematicCamera.CameraFilmbackSettings

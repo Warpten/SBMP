@@ -54,54 +54,54 @@ enum class ELandscapeGizmoType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class EGrassScaling : uint8_t
 {
-	EGrassScaling__Uniform                                                           = 0,
-	EGrassScaling__Free                                                              = 1,
-	EGrassScaling__LockXY                                                            = 2
+	Uniform                                                                          = 0,
+	Free                                                                             = 1,
+	LockXY                                                                           = 2
 };
 
 /// Enum /Script/Landscape.ESplineModulationColorMask
 /// Size: 0x01 (1 bytes)
 enum class ESplineModulationColorMask : uint8_t
 {
-	ESplineModulationColorMask__Red                                                  = 0,
-	ESplineModulationColorMask__Green                                                = 1,
-	ESplineModulationColorMask__Blue                                                 = 2,
-	ESplineModulationColorMask__Alpha                                                = 3
+	Red                                                                              = 0,
+	Green                                                                            = 1,
+	Blue                                                                             = 2,
+	Alpha                                                                            = 3
 };
 
 /// Enum /Script/Landscape.ELandscapeLODFalloff
 /// Size: 0x01 (1 bytes)
 enum class ELandscapeLODFalloff : uint8_t
 {
-	ELandscapeLODFalloff__Linear                                                     = 0,
-	ELandscapeLODFalloff__SquareRoot                                                 = 1
+	Linear                                                                           = 0,
+	SquareRoot                                                                       = 1
 };
 
 /// Enum /Script/Landscape.ELandscapeLayerDisplayMode
 /// Size: 0x01 (1 bytes)
 enum class ELandscapeLayerDisplayMode : uint8_t
 {
-	ELandscapeLayerDisplayMode__Default                                              = 0,
-	ELandscapeLayerDisplayMode__Alphabetical                                         = 1,
-	ELandscapeLayerDisplayMode__UserSpecific                                         = 2
+	Default                                                                          = 0,
+	Alphabetical                                                                     = 1,
+	UserSpecific                                                                     = 2
 };
 
 /// Enum /Script/Landscape.ELandscapeLayerPaintingRestriction
 /// Size: 0x01 (1 bytes)
 enum class ELandscapeLayerPaintingRestriction : uint8_t
 {
-	ELandscapeLayerPaintingRestriction__None                                         = 0,
-	ELandscapeLayerPaintingRestriction__UseMaxLayers                                 = 1,
-	ELandscapeLayerPaintingRestriction__ExistingOnly                                 = 2,
-	ELandscapeLayerPaintingRestriction__UseComponentWhitelist                        = 3
+	None                                                                             = 0,
+	UseMaxLayers                                                                     = 1,
+	ExistingOnly                                                                     = 2,
+	UseComponentWhitelist                                                            = 3
 };
 
 /// Enum /Script/Landscape.ELandscapeImportAlphamapType
 /// Size: 0x01 (1 bytes)
 enum class ELandscapeImportAlphamapType : uint8_t
 {
-	ELandscapeImportAlphamapType__Additive                                           = 0,
-	ELandscapeImportAlphamapType__Layered                                            = 1
+	Additive                                                                         = 0,
+	Layered                                                                          = 1
 };
 
 /// Enum /Script/Landscape.LandscapeSplineMeshOrientation

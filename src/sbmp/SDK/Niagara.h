@@ -20,62 +20,62 @@
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraSystemSpawnSectionEndBehavior : uint32_t
 {
-	ENiagaraSystemSpawnSectionEndBehavior__SetSystemInactive                         = 0,
-	ENiagaraSystemSpawnSectionEndBehavior__Deactivate                                = 1,
-	ENiagaraSystemSpawnSectionEndBehavior__None                                      = 2
+	SetSystemInactive                                                                = 0,
+	Deactivate                                                                       = 1,
+	None                                                                             = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraSystemSpawnSectionEvaluateBehavior
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraSystemSpawnSectionEvaluateBehavior : uint32_t
 {
-	ENiagaraSystemSpawnSectionEvaluateBehavior__ActivateIfInactive                   = 0,
-	ENiagaraSystemSpawnSectionEvaluateBehavior__None                                 = 1
+	ActivateIfInactive                                                               = 0,
+	None                                                                             = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraSystemSpawnSectionStartBehavior
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraSystemSpawnSectionStartBehavior : uint32_t
 {
-	ENiagaraSystemSpawnSectionStartBehavior__Activate                                = 0
+	Activate                                                                         = 0
 };
 
 /// Enum /Script/Niagara.ENiagaraSystemSpawnSectionBehavior
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSystemSpawnSectionBehavior : uint8_t
 {
-	ENiagaraSystemSpawnSectionBehavior__None                                         = 0,
-	ENiagaraSystemSpawnSectionBehavior__Activate                                     = 1,
-	ENiagaraSystemSpawnSectionBehavior__ActivateIfInactive                           = 2,
-	ENiagaraSystemSpawnSectionBehavior__SetSystemInactive                            = 3,
-	ENiagaraSystemSpawnSectionBehavior__Deactivate                                   = 4
+	None                                                                             = 0,
+	Activate                                                                         = 1,
+	ActivateIfInactive                                                               = 2,
+	SetSystemInactive                                                                = 3,
+	Deactivate                                                                       = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraCollisionMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraCollisionMode : uint8_t
 {
-	ENiagaraCollisionMode__None                                                      = 0,
-	ENiagaraCollisionMode__SceneGeometry                                             = 1,
-	ENiagaraCollisionMode__DepthBuffer                                               = 2,
-	ENiagaraCollisionMode__DistanceField                                             = 3
+	None                                                                             = 0,
+	SceneGeometry                                                                    = 1,
+	DepthBuffer                                                                      = 2,
+	DistanceField                                                                    = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraLegacyTrailWidthMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraLegacyTrailWidthMode : uint8_t
 {
-	ENiagaraLegacyTrailWidthMode__FromCentre                                         = 0,
-	ENiagaraLegacyTrailWidthMode__FromFirst                                          = 1,
-	ENiagaraLegacyTrailWidthMode__FromSecond                                         = 2
+	FromCentre                                                                       = 0,
+	FromFirst                                                                        = 1,
+	FromSecond                                                                       = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraRendererSourceDataMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRendererSourceDataMode : uint8_t
 {
-	ENiagaraRendererSourceDataMode__Particles                                        = 0,
-	ENiagaraRendererSourceDataMode__Emitter                                          = 1
+	Particles                                                                        = 0,
+	Emitter                                                                          = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraBindingSource
@@ -94,520 +94,520 @@ enum class ENiagaraBindingSource : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraIterationSource : uint8_t
 {
-	ENiagaraIterationSource__Particles                                               = 0,
-	ENiagaraIterationSource__DataInterface                                           = 1
+	Particles                                                                        = 0,
+	DataInterface                                                                    = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptGroup
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptGroup : uint8_t
 {
-	ENiagaraScriptGroup__Particle                                                    = 0,
-	ENiagaraScriptGroup__Emitter                                                     = 1,
-	ENiagaraScriptGroup__System                                                      = 2,
-	ENiagaraScriptGroup__Max                                                         = 3
+	Particle                                                                         = 0,
+	Emitter                                                                          = 1,
+	System                                                                           = 2,
+	Max                                                                              = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptContextStaticSwitch
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptContextStaticSwitch : uint8_t
 {
-	ENiagaraScriptContextStaticSwitch__System                                        = 0,
-	ENiagaraScriptContextStaticSwitch__Emitter                                       = 1,
-	ENiagaraScriptContextStaticSwitch__Particle                                      = 2
+	System                                                                           = 0,
+	Emitter                                                                          = 1,
+	Particle                                                                         = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraCompileUsageStaticSwitch
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraCompileUsageStaticSwitch : uint8_t
 {
-	ENiagaraCompileUsageStaticSwitch__Spawn                                          = 0,
-	ENiagaraCompileUsageStaticSwitch__Update                                         = 1,
-	ENiagaraCompileUsageStaticSwitch__Event                                          = 2,
-	ENiagaraCompileUsageStaticSwitch__SimulationStage                                = 3,
-	ENiagaraCompileUsageStaticSwitch__Default                                        = 4
+	Spawn                                                                            = 0,
+	Update                                                                           = 1,
+	Event                                                                            = 2,
+	SimulationStage                                                                  = 3,
+	Default                                                                          = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptUsage
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptUsage : uint8_t
 {
-	ENiagaraScriptUsage__Function                                                    = 0,
-	ENiagaraScriptUsage__Module                                                      = 1,
-	ENiagaraScriptUsage__DynamicInput                                                = 2,
-	ENiagaraScriptUsage__ParticleSpawnScript                                         = 3,
-	ENiagaraScriptUsage__ParticleSpawnScriptInterpolated                             = 4,
-	ENiagaraScriptUsage__ParticleUpdateScript                                        = 5,
-	ENiagaraScriptUsage__ParticleEventScript                                         = 6,
-	ENiagaraScriptUsage__ParticleSimulationStageScript                               = 7,
-	ENiagaraScriptUsage__ParticleGPUComputeScript                                    = 8,
-	ENiagaraScriptUsage__EmitterSpawnScript                                          = 9,
-	ENiagaraScriptUsage__EmitterUpdateScript                                         = 10,
-	ENiagaraScriptUsage__SystemSpawnScript                                           = 11,
-	ENiagaraScriptUsage__SystemUpdateScript                                          = 12
+	Function                                                                         = 0,
+	Module                                                                           = 1,
+	DynamicInput                                                                     = 2,
+	ParticleSpawnScript                                                              = 3,
+	ParticleSpawnScriptInterpolated                                                  = 4,
+	ParticleUpdateScript                                                             = 5,
+	ParticleEventScript                                                              = 6,
+	ParticleSimulationStageScript                                                    = 7,
+	ParticleGPUComputeScript                                                         = 8,
+	EmitterSpawnScript                                                               = 9,
+	EmitterUpdateScript                                                              = 10,
+	SystemSpawnScript                                                                = 11,
+	SystemUpdateScript                                                               = 12
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptCompileStatus
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptCompileStatus : uint8_t
 {
-	ENiagaraScriptCompileStatus__NCS_Unknown                                         = 0,
-	ENiagaraScriptCompileStatus__NCS_Dirty                                           = 1,
-	ENiagaraScriptCompileStatus__NCS_Error                                           = 2,
-	ENiagaraScriptCompileStatus__NCS_UpToDate                                        = 3,
-	ENiagaraScriptCompileStatus__NCS_BeingCreated                                    = 4,
-	ENiagaraScriptCompileStatus__NCS_UpToDateWithWarnings                            = 5,
-	ENiagaraScriptCompileStatus__NCS_ComputeUpToDateWithWarnings                     = 6
+	NCS_Unknown                                                                      = 0,
+	NCS_Dirty                                                                        = 1,
+	NCS_Error                                                                        = 2,
+	NCS_UpToDate                                                                     = 3,
+	NCS_BeingCreated                                                                 = 4,
+	NCS_UpToDateWithWarnings                                                         = 5,
+	NCS_ComputeUpToDateWithWarnings                                                  = 6
 };
 
 /// Enum /Script/Niagara.ENiagaraInputNodeUsage
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraInputNodeUsage : uint8_t
 {
-	ENiagaraInputNodeUsage__Undefined                                                = 0,
-	ENiagaraInputNodeUsage__Parameter                                                = 1,
-	ENiagaraInputNodeUsage__Attribute                                                = 2,
-	ENiagaraInputNodeUsage__SystemConstant                                           = 3,
-	ENiagaraInputNodeUsage__TranslatorConstant                                       = 4,
-	ENiagaraInputNodeUsage__RapidIterationParameter                                  = 5
+	Undefined                                                                        = 0,
+	Parameter                                                                        = 1,
+	Attribute                                                                        = 2,
+	SystemConstant                                                                   = 3,
+	TranslatorConstant                                                               = 4,
+	RapidIterationParameter                                                          = 5
 };
 
 /// Enum /Script/Niagara.ENiagaraDataSetType
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraDataSetType : uint8_t
 {
-	ENiagaraDataSetType__ParticleData                                                = 0,
-	ENiagaraDataSetType__Shared                                                      = 1,
-	ENiagaraDataSetType__Event                                                       = 2
+	ParticleData                                                                     = 0,
+	Shared                                                                           = 1,
+	Event                                                                            = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraStatDisplayMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraStatDisplayMode : uint8_t
 {
-	ENiagaraStatDisplayMode__Percent                                                 = 0,
-	ENiagaraStatDisplayMode__Absolute                                                = 1
+	Percent                                                                          = 0,
+	Absolute                                                                         = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraStatEvaluationType
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraStatEvaluationType : uint8_t
 {
-	ENiagaraStatEvaluationType__Average                                              = 0,
-	ENiagaraStatEvaluationType__Maximum                                              = 1
+	Average                                                                          = 0,
+	Maximum                                                                          = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraAgeUpdateMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraAgeUpdateMode : uint8_t
 {
-	ENiagaraAgeUpdateMode__TickDeltaTime                                             = 0,
-	ENiagaraAgeUpdateMode__DesiredAge                                                = 1,
-	ENiagaraAgeUpdateMode__DesiredAgeNoSeek                                          = 2
+	TickDeltaTime                                                                    = 0,
+	DesiredAge                                                                       = 1,
+	DesiredAgeNoSeek                                                                 = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraSimTarget
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSimTarget : uint8_t
 {
-	ENiagaraSimTarget__CPUSim                                                        = 0,
-	ENiagaraSimTarget__GPUComputeSim                                                 = 1
+	CPUSim                                                                           = 0,
+	GPUComputeSim                                                                    = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraDefaultMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraDefaultMode : uint8_t
 {
-	ENiagaraDefaultMode__Value                                                       = 0,
-	ENiagaraDefaultMode__Binding                                                     = 1,
-	ENiagaraDefaultMode__Custom                                                      = 2
+	Value                                                                            = 0,
+	Binding                                                                          = 1,
+	Custom                                                                           = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraGpuBufferFormat
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraGpuBufferFormat : uint8_t
 {
-	ENiagaraGpuBufferFormat__Float                                                   = 0,
-	ENiagaraGpuBufferFormat__HalfFloat                                               = 1,
-	ENiagaraGpuBufferFormat__UnsignedNormalizedByte                                  = 2,
-	ENiagaraGpuBufferFormat__Max                                                     = 3
+	Float                                                                            = 0,
+	HalfFloat                                                                        = 1,
+	UnsignedNormalizedByte                                                           = 2,
+	Max                                                                              = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraTickBehavior
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraTickBehavior : uint8_t
 {
-	ENiagaraTickBehavior__UsePrereqs                                                 = 0,
-	ENiagaraTickBehavior__UseComponentTickGroup                                      = 1,
-	ENiagaraTickBehavior__ForceTickFirst                                             = 2,
-	ENiagaraTickBehavior__ForceTickLast                                              = 3
+	UsePrereqs                                                                       = 0,
+	UseComponentTickGroup                                                            = 1,
+	ForceTickFirst                                                                   = 2,
+	ForceTickLast                                                                    = 3
 };
 
 /// Enum /Script/Niagara.ENCPoolMethod
 /// Size: 0x01 (1 bytes)
 enum class ENCPoolMethod : uint8_t
 {
-	ENCPoolMethod__None                                                              = 0,
-	ENCPoolMethod__AutoRelease                                                       = 1,
-	ENCPoolMethod__ManualRelease                                                     = 2,
-	ENCPoolMethod__ManualRelease_OnComplete                                          = 3,
-	ENCPoolMethod__FreeInPool                                                        = 4
+	None                                                                             = 0,
+	AutoRelease                                                                      = 1,
+	ManualRelease                                                                    = 2,
+	ManualRelease_OnComplete                                                         = 3,
+	FreeInPool                                                                       = 4
 };
 
 /// Enum /Script/Niagara.ENDIExport_GPUAllocationMode
 /// Size: 0x01 (1 bytes)
 enum class ENDIExport_GPUAllocationMode : uint8_t
 {
-	ENDIExport_GPUAllocationMode__FixedSize                                          = 0,
-	ENDIExport_GPUAllocationMode__PerParticle                                        = 1
+	FixedSize                                                                        = 0,
+	PerParticle                                                                      = 1
 };
 
 /// Enum /Script/Niagara.ESetResolutionMethod
 /// Size: 0x04 (4 bytes)
 enum class ESetResolutionMethod : uint32_t
 {
-	ESetResolutionMethod__Independent                                                = 0,
-	ESetResolutionMethod__MaxAxis                                                    = 1,
-	ESetResolutionMethod__CellSize                                                   = 2
+	Independent                                                                      = 0,
+	MaxAxis                                                                          = 1,
+	CellSize                                                                         = 2
 };
 
 /// Enum /Script/Niagara.ENDISkeletalMesh_SkinningMode
 /// Size: 0x01 (1 bytes)
 enum class ENDISkeletalMesh_SkinningMode : uint8_t
 {
-	ENDISkeletalMesh_SkinningMode__Invalid                                           = 255,
-	ENDISkeletalMesh_SkinningMode__None                                              = 0,
-	ENDISkeletalMesh_SkinningMode__SkinOnTheFly                                      = 1,
-	ENDISkeletalMesh_SkinningMode__PreSkin                                           = 2
+	Invalid                                                                          = 255,
+	None                                                                             = 0,
+	SkinOnTheFly                                                                     = 1,
+	PreSkin                                                                          = 2
 };
 
 /// Enum /Script/Niagara.ENDISkeletalMesh_SourceMode
 /// Size: 0x01 (1 bytes)
 enum class ENDISkeletalMesh_SourceMode : uint8_t
 {
-	ENDISkeletalMesh_SourceMode__Default                                             = 0,
-	ENDISkeletalMesh_SourceMode__Source                                              = 1,
-	ENDISkeletalMesh_SourceMode__AttachParent                                        = 2
+	Default                                                                          = 0,
+	Source                                                                           = 1,
+	AttachParent                                                                     = 2
 };
 
 /// Enum /Script/Niagara.ENDIStaticMesh_SourceMode
 /// Size: 0x01 (1 bytes)
 enum class ENDIStaticMesh_SourceMode : uint8_t
 {
-	ENDIStaticMesh_SourceMode__Default                                               = 0,
-	ENDIStaticMesh_SourceMode__Source                                                = 1,
-	ENDIStaticMesh_SourceMode__AttachParent                                          = 2,
-	ENDIStaticMesh_SourceMode__DefaultMeshOnly                                       = 3
+	Default                                                                          = 0,
+	Source                                                                           = 1,
+	AttachParent                                                                     = 2,
+	DefaultMeshOnly                                                                  = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraScalabilityUpdateFrequency
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraScalabilityUpdateFrequency : uint32_t
 {
-	ENiagaraScalabilityUpdateFrequency__SpawnOnly                                    = 0,
-	ENiagaraScalabilityUpdateFrequency__Low                                          = 1,
-	ENiagaraScalabilityUpdateFrequency__Medium                                       = 2,
-	ENiagaraScalabilityUpdateFrequency__High                                         = 3,
-	ENiagaraScalabilityUpdateFrequency__Continuous                                   = 4
+	SpawnOnly                                                                        = 0,
+	Low                                                                              = 1,
+	Medium                                                                           = 2,
+	High                                                                             = 3,
+	Continuous                                                                       = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraCullReaction
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraCullReaction : uint32_t
 {
-	ENiagaraCullReaction__Deactivate                                                 = 0,
-	ENiagaraCullReaction__DeactivateImmediate                                        = 1,
-	ENiagaraCullReaction__DeactivateResume                                           = 2,
-	ENiagaraCullReaction__DeactivateImmediateResume                                  = 3
+	Deactivate                                                                       = 0,
+	DeactivateImmediate                                                              = 1,
+	DeactivateResume                                                                 = 2,
+	DeactivateImmediateResume                                                        = 3
 };
 
 /// Enum /Script/Niagara.EParticleAllocationMode
 /// Size: 0x01 (1 bytes)
 enum class EParticleAllocationMode : uint8_t
 {
-	EParticleAllocationMode__AutomaticEstimate                                       = 0,
-	EParticleAllocationMode__ManualEstimate                                          = 1
+	AutomaticEstimate                                                                = 0,
+	ManualEstimate                                                                   = 1
 };
 
 /// Enum /Script/Niagara.EScriptExecutionMode
 /// Size: 0x01 (1 bytes)
 enum class EScriptExecutionMode : uint8_t
 {
-	EScriptExecutionMode__EveryParticle                                              = 0,
-	EScriptExecutionMode__SpawnedParticles                                           = 1,
-	EScriptExecutionMode__SingleParticle                                             = 2
+	EveryParticle                                                                    = 0,
+	SpawnedParticles                                                                 = 1,
+	SingleParticle                                                                   = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraSortMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSortMode : uint8_t
 {
-	ENiagaraSortMode__None                                                           = 0,
-	ENiagaraSortMode__ViewDepth                                                      = 1,
-	ENiagaraSortMode__ViewDistance                                                   = 2,
-	ENiagaraSortMode__CustomAscending                                                = 3,
-	ENiagaraSortMode__CustomDecending                                                = 4
+	None                                                                             = 0,
+	ViewDepth                                                                        = 1,
+	ViewDistance                                                                     = 2,
+	CustomAscending                                                                  = 3,
+	CustomDecending                                                                  = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraMeshLockedAxisSpace
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraMeshLockedAxisSpace : uint8_t
 {
-	ENiagaraMeshLockedAxisSpace__Simulation                                          = 0,
-	ENiagaraMeshLockedAxisSpace__World                                               = 1,
-	ENiagaraMeshLockedAxisSpace__Local                                               = 2
+	Simulation                                                                       = 0,
+	World                                                                            = 1,
+	Local                                                                            = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraMeshPivotOffsetSpace
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraMeshPivotOffsetSpace : uint8_t
 {
-	ENiagaraMeshPivotOffsetSpace__Mesh                                               = 0,
-	ENiagaraMeshPivotOffsetSpace__Simulation                                         = 1,
-	ENiagaraMeshPivotOffsetSpace__World                                              = 2,
-	ENiagaraMeshPivotOffsetSpace__Local                                              = 3
+	Mesh                                                                             = 0,
+	Simulation                                                                       = 1,
+	World                                                                            = 2,
+	Local                                                                            = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraMeshFacingMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraMeshFacingMode : uint8_t
 {
-	ENiagaraMeshFacingMode__Default                                                  = 0,
-	ENiagaraMeshFacingMode__Velocity                                                 = 1,
-	ENiagaraMeshFacingMode__CameraPosition                                           = 2,
-	ENiagaraMeshFacingMode__CameraPlane                                              = 3
+	Default                                                                          = 0,
+	Velocity                                                                         = 1,
+	CameraPosition                                                                   = 2,
+	CameraPlane                                                                      = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraPlatformSetState
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraPlatformSetState : uint8_t
 {
-	ENiagaraPlatformSetState__Disabled                                               = 0,
-	ENiagaraPlatformSetState__Enabled                                                = 1,
-	ENiagaraPlatformSetState__Active                                                 = 2,
-	ENiagaraPlatformSetState__Unknown                                                = 3
+	Disabled                                                                         = 0,
+	Enabled                                                                          = 1,
+	Active                                                                           = 2,
+	Unknown                                                                          = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraPlatformSelectionState
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraPlatformSelectionState : uint8_t
 {
-	ENiagaraPlatformSelectionState__Default                                          = 0,
-	ENiagaraPlatformSelectionState__Enabled                                          = 1,
-	ENiagaraPlatformSelectionState__Disabled                                         = 2
+	Default                                                                          = 0,
+	Enabled                                                                          = 1,
+	Disabled                                                                         = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraPreviewGridResetMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraPreviewGridResetMode : uint8_t
 {
-	ENiagaraPreviewGridResetMode__Never                                              = 0,
-	ENiagaraPreviewGridResetMode__Individual                                         = 1,
-	ENiagaraPreviewGridResetMode__All                                                = 2
+	Never                                                                            = 0,
+	Individual                                                                       = 1,
+	All                                                                              = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonUVDistributionMode
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraRibbonUVDistributionMode : uint32_t
 {
-	ENiagaraRibbonUVDistributionMode__ScaledUniformly                                = 0,
-	ENiagaraRibbonUVDistributionMode__ScaledUsingRibbonSegmentLength                 = 1,
-	ENiagaraRibbonUVDistributionMode__TiledOverRibbonLength                          = 2
+	ScaledUniformly                                                                  = 0,
+	ScaledUsingRibbonSegmentLength                                                   = 1,
+	TiledOverRibbonLength                                                            = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonUVEdgeMode
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraRibbonUVEdgeMode : uint32_t
 {
-	ENiagaraRibbonUVEdgeMode__SmoothTransition                                       = 0,
-	ENiagaraRibbonUVEdgeMode__Locked                                                 = 1
+	SmoothTransition                                                                 = 0,
+	Locked                                                                           = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonTessellationMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRibbonTessellationMode : uint8_t
 {
-	ENiagaraRibbonTessellationMode__Automatic                                        = 0,
-	ENiagaraRibbonTessellationMode__Custom                                           = 1,
-	ENiagaraRibbonTessellationMode__Disabled                                         = 2
+	Automatic                                                                        = 0,
+	Custom                                                                           = 1,
+	Disabled                                                                         = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonDrawDirection
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRibbonDrawDirection : uint8_t
 {
-	ENiagaraRibbonDrawDirection__FrontToBack                                         = 0,
-	ENiagaraRibbonDrawDirection__BackToFront                                         = 1
+	FrontToBack                                                                      = 0,
+	BackToFront                                                                      = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonAgeOffsetMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRibbonAgeOffsetMode : uint8_t
 {
-	ENiagaraRibbonAgeOffsetMode__Scale                                               = 0,
-	ENiagaraRibbonAgeOffsetMode__Clip                                                = 1
+	Scale                                                                            = 0,
+	Clip                                                                             = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonFacingMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRibbonFacingMode : uint8_t
 {
-	ENiagaraRibbonFacingMode__Screen                                                 = 0,
-	ENiagaraRibbonFacingMode__Custom                                                 = 1,
-	ENiagaraRibbonFacingMode__CustomSideVector                                       = 2
+	Screen                                                                           = 0,
+	Custom                                                                           = 1,
+	CustomSideVector                                                                 = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptLibraryVisibility
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptLibraryVisibility : uint8_t
 {
-	ENiagaraScriptLibraryVisibility__Invalid                                         = 0,
-	ENiagaraScriptLibraryVisibility__Unexposed                                       = 1,
-	ENiagaraScriptLibraryVisibility__Library                                         = 2,
-	ENiagaraScriptLibraryVisibility__Hidden                                          = 3
+	Invalid                                                                          = 0,
+	Unexposed                                                                        = 1,
+	Library                                                                          = 2,
+	Hidden                                                                           = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraModuleDependencyScriptConstraint
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraModuleDependencyScriptConstraint : uint8_t
 {
-	ENiagaraModuleDependencyScriptConstraint__SameScript                             = 0,
-	ENiagaraModuleDependencyScriptConstraint__AllScripts                             = 1
+	SameScript                                                                       = 0,
+	AllScripts                                                                       = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraModuleDependencyType
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraModuleDependencyType : uint8_t
 {
-	ENiagaraModuleDependencyType__PreDependency                                      = 0,
-	ENiagaraModuleDependencyType__PostDependency                                     = 1
+	PreDependency                                                                    = 0,
+	PostDependency                                                                   = 1
 };
 
 /// Enum /Script/Niagara.EUnusedAttributeBehaviour
 /// Size: 0x01 (1 bytes)
 enum class EUnusedAttributeBehaviour : uint8_t
 {
-	EUnusedAttributeBehaviour__Copy                                                  = 0,
-	EUnusedAttributeBehaviour__Zero                                                  = 1,
-	EUnusedAttributeBehaviour__None                                                  = 2,
-	EUnusedAttributeBehaviour__MarkInvalid                                           = 3,
-	EUnusedAttributeBehaviour__PassThrough                                           = 4
+	Copy                                                                             = 0,
+	Zero                                                                             = 1,
+	None                                                                             = 2,
+	MarkInvalid                                                                      = 3,
+	PassThrough                                                                      = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraSpriteFacingMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSpriteFacingMode : uint8_t
 {
-	ENiagaraSpriteFacingMode__FaceCamera                                             = 0,
-	ENiagaraSpriteFacingMode__FaceCameraPlane                                        = 1,
-	ENiagaraSpriteFacingMode__CustomFacingVector                                     = 2,
-	ENiagaraSpriteFacingMode__FaceCameraPosition                                     = 3,
-	ENiagaraSpriteFacingMode__FaceCameraDistanceBlend                                = 4
+	FaceCamera                                                                       = 0,
+	FaceCameraPlane                                                                  = 1,
+	CustomFacingVector                                                               = 2,
+	FaceCameraPosition                                                               = 3,
+	FaceCameraDistanceBlend                                                          = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraSpriteAlignment
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSpriteAlignment : uint8_t
 {
-	ENiagaraSpriteAlignment__Unaligned                                               = 0,
-	ENiagaraSpriteAlignment__VelocityAligned                                         = 1,
-	ENiagaraSpriteAlignment__CustomAlignment                                         = 2
+	Unaligned                                                                        = 0,
+	VelocityAligned                                                                  = 1,
+	CustomAlignment                                                                  = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraParameterPanelCategory
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraParameterPanelCategory : uint8_t
 {
-	ENiagaraParameterPanelCategory__Input                                            = 0,
-	ENiagaraParameterPanelCategory__Attributes                                       = 1,
-	ENiagaraParameterPanelCategory__Output                                           = 2,
-	ENiagaraParameterPanelCategory__Local                                            = 3,
-	ENiagaraParameterPanelCategory__User                                             = 4,
-	ENiagaraParameterPanelCategory__Engine                                           = 5,
-	ENiagaraParameterPanelCategory__Owner                                            = 6,
-	ENiagaraParameterPanelCategory__System                                           = 7,
-	ENiagaraParameterPanelCategory__Emitter                                          = 8,
-	ENiagaraParameterPanelCategory__Particles                                        = 9,
-	ENiagaraParameterPanelCategory__ScriptTransient                                  = 10,
-	ENiagaraParameterPanelCategory__StaticSwitch                                     = 11,
-	ENiagaraParameterPanelCategory__None                                             = 12,
-	ENiagaraParameterPanelCategory__Num                                              = 13
+	Input                                                                            = 0,
+	Attributes                                                                       = 1,
+	Output                                                                           = 2,
+	Local                                                                            = 3,
+	User                                                                             = 4,
+	Engine                                                                           = 5,
+	Owner                                                                            = 6,
+	System                                                                           = 7,
+	Emitter                                                                          = 8,
+	Particles                                                                        = 9,
+	ScriptTransient                                                                  = 10,
+	StaticSwitch                                                                     = 11,
+	None                                                                             = 12,
+	Num                                                                              = 13
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptParameterUsage
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraScriptParameterUsage : uint32_t
 {
-	ENiagaraScriptParameterUsage__Input                                              = 0,
-	ENiagaraScriptParameterUsage__Output                                             = 1,
-	ENiagaraScriptParameterUsage__Local                                              = 2,
-	ENiagaraScriptParameterUsage__InputOutput                                        = 3,
-	ENiagaraScriptParameterUsage__InitialValueInput                                  = 4,
-	ENiagaraScriptParameterUsage__None                                               = 5,
-	ENiagaraScriptParameterUsage__Num                                                = 6
+	Input                                                                            = 0,
+	Output                                                                           = 1,
+	Local                                                                            = 2,
+	InputOutput                                                                      = 3,
+	InitialValueInput                                                                = 4,
+	None                                                                             = 5,
+	Num                                                                              = 6
 };
 
 /// Enum /Script/Niagara.ENiagaraParameterScope
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraParameterScope : uint32_t
 {
-	ENiagaraParameterScope__Input                                                    = 0,
-	ENiagaraParameterScope__User                                                     = 1,
-	ENiagaraParameterScope__Engine                                                   = 2,
-	ENiagaraParameterScope__Owner                                                    = 3,
-	ENiagaraParameterScope__System                                                   = 4,
-	ENiagaraParameterScope__Emitter                                                  = 5,
-	ENiagaraParameterScope__Particles                                                = 6,
-	ENiagaraParameterScope__ScriptPersistent                                         = 7,
-	ENiagaraParameterScope__ScriptTransient                                          = 8,
-	ENiagaraParameterScope__Local                                                    = 9,
-	ENiagaraParameterScope__Custom                                                   = 10,
-	ENiagaraParameterScope__DISPLAY_ONLY_StaticSwitch                                = 11,
-	ENiagaraParameterScope__Output                                                   = 12,
-	ENiagaraParameterScope__None                                                     = 13,
-	ENiagaraParameterScope__Num                                                      = 14
+	Input                                                                            = 0,
+	User                                                                             = 1,
+	Engine                                                                           = 2,
+	Owner                                                                            = 3,
+	System                                                                           = 4,
+	Emitter                                                                          = 5,
+	Particles                                                                        = 6,
+	ScriptPersistent                                                                 = 7,
+	ScriptTransient                                                                  = 8,
+	Local                                                                            = 9,
+	Custom                                                                           = 10,
+	DISPLAY_ONLY_StaticSwitch                                                        = 11,
+	Output                                                                           = 12,
+	None                                                                             = 13,
+	Num                                                                              = 14
 };
 
 /// Enum /Script/Niagara.ENiagaraExecutionState
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraExecutionState : uint8_t
 {
-	ENiagaraExecutionState__Active                                                   = 0,
-	ENiagaraExecutionState__Inactive                                                 = 1,
-	ENiagaraExecutionState__InactiveClear                                            = 2,
-	ENiagaraExecutionState__Complete                                                 = 3,
-	ENiagaraExecutionState__Disabled                                                 = 4,
-	ENiagaraExecutionState__Num                                                      = 5
+	Active                                                                           = 0,
+	Inactive                                                                         = 1,
+	InactiveClear                                                                    = 2,
+	Complete                                                                         = 3,
+	Disabled                                                                         = 4,
+	Num                                                                              = 5
 };
 
 /// Enum /Script/Niagara.ENiagaraExecutionStateSource
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraExecutionStateSource : uint8_t
 {
-	ENiagaraExecutionStateSource__Scalability                                        = 0,
-	ENiagaraExecutionStateSource__Internal                                           = 1,
-	ENiagaraExecutionStateSource__Owner                                              = 2,
-	ENiagaraExecutionStateSource__InternalCompletion                                 = 3
+	Scalability                                                                      = 0,
+	Internal                                                                         = 1,
+	Owner                                                                            = 2,
+	InternalCompletion                                                               = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraNumericOutputTypeSelectionMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraNumericOutputTypeSelectionMode : uint8_t
 {
-	ENiagaraNumericOutputTypeSelectionMode__None                                     = 0,
-	ENiagaraNumericOutputTypeSelectionMode__Largest                                  = 1,
-	ENiagaraNumericOutputTypeSelectionMode__Smallest                                 = 2,
-	ENiagaraNumericOutputTypeSelectionMode__Scalar                                   = 3
+	None                                                                             = 0,
+	Largest                                                                          = 1,
+	Smallest                                                                         = 2,
+	Scalar                                                                           = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraVariantMode
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraVariantMode : uint32_t
 {
-	ENiagaraVariantMode__None                                                        = 0,
-	ENiagaraVariantMode__Object                                                      = 1,
-	ENiagaraVariantMode__DataInterface                                               = 2,
-	ENiagaraVariantMode__Bytes                                                       = 3
+	None                                                                             = 0,
+	Object                                                                           = 1,
+	DataInterface                                                                    = 2,
+	Bytes                                                                            = 3
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraTrack

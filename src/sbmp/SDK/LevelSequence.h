@@ -19,10 +19,10 @@
 /// Size: 0x01 (1 bytes)
 enum class ESBPlaySettingReInitType : uint8_t
 {
-	ESBPlaySettingReInitType_None                                                    = 0,
-	ESBPlaySettingReInitType_Playback                                                = 1,
-	ESBPlaySettingReInitType_Camera                                                  = 2,
-	ESBPlaySettingReInitType_AllSettings                                             = 3
+	None                                                                             = 0,
+	Playback                                                                         = 1,
+	Camera                                                                           = 2,
+	AllSettings                                                                      = 3
 };
 
 /// Struct /Script/LevelSequence.LevelSequenceObjectReferenceMap

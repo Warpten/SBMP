@@ -16,36 +16,36 @@
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapARPinType : uint8_t
 {
-	EMagicLeapARPinType__SingleUserSingleSession                                     = 0,
-	EMagicLeapARPinType__SingleUserMultiSession                                      = 1,
-	EMagicLeapARPinType__MultiUserMultiSession                                       = 2
+	SingleUserSingleSession                                                          = 0,
+	SingleUserMultiSession                                                           = 1,
+	MultiUserMultiSession                                                            = 2
 };
 
 /// Enum /Script/MagicLeapARPin.EMagicLeapAutoPinType
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapAutoPinType : uint8_t
 {
-	EMagicLeapAutoPinType__OnlyOnDataRestoration                                     = 0,
-	EMagicLeapAutoPinType__Always                                                    = 1,
-	EMagicLeapAutoPinType__Never                                                     = 2
+	OnlyOnDataRestoration                                                            = 0,
+	Always                                                                           = 1,
+	Never                                                                            = 2
 };
 
 /// Enum /Script/MagicLeapARPin.EMagicLeapPassableWorldError
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapPassableWorldError : uint8_t
 {
-	EMagicLeapPassableWorldError__None                                               = 0,
-	EMagicLeapPassableWorldError__LowMapQuality                                      = 1,
-	EMagicLeapPassableWorldError__UnableToLocalize                                   = 2,
-	EMagicLeapPassableWorldError__Unavailable                                        = 3,
-	EMagicLeapPassableWorldError__PrivilegeDenied                                    = 4,
-	EMagicLeapPassableWorldError__InvalidParam                                       = 5,
-	EMagicLeapPassableWorldError__UnspecifiedFailure                                 = 6,
-	EMagicLeapPassableWorldError__PrivilegeRequestPending                            = 7,
-	EMagicLeapPassableWorldError__StartupPending                                     = 8,
-	EMagicLeapPassableWorldError__SharedWorldNotEnabled                              = 9,
-	EMagicLeapPassableWorldError__NotImplemented                                     = 10,
-	EMagicLeapPassableWorldError__PinNotFound                                        = 11
+	None                                                                             = 0,
+	LowMapQuality                                                                    = 1,
+	UnableToLocalize                                                                 = 2,
+	Unavailable                                                                      = 3,
+	PrivilegeDenied                                                                  = 4,
+	InvalidParam                                                                     = 5,
+	UnspecifiedFailure                                                               = 6,
+	PrivilegeRequestPending                                                          = 7,
+	StartupPending                                                                   = 8,
+	SharedWorldNotEnabled                                                            = 9,
+	NotImplemented                                                                   = 10,
+	PinNotFound                                                                      = 11
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinComponent

@@ -17,83 +17,83 @@
 /// Size: 0x01 (1 bytes)
 enum class ELocationZToSpawnEnum : uint8_t
 {
-	ELocationZToSpawnEnum__ChaosNiagara_LocationZToSpawn_None                        = 0,
-	ELocationZToSpawnEnum__ChaosNiagara_LocationZToSpawn_Min                         = 1,
-	ELocationZToSpawnEnum__ChaosNiagara_LocationZToSpawn_Max                         = 2,
-	ELocationZToSpawnEnum__ChaosNiagara_LocationZToSpawn_MinMax                      = 3,
-	ELocationZToSpawnEnum__ChaosNiagara_Max                                          = 4
+	ChaosNiagara_LocationZToSpawn_None                                               = 0,
+	ChaosNiagara_LocationZToSpawn_Min                                                = 1,
+	ChaosNiagara_LocationZToSpawn_Max                                                = 2,
+	ChaosNiagara_LocationZToSpawn_MinMax                                             = 3,
+	ChaosNiagara_Max                                                                 = 4
 };
 
 /// Enum /Script/ChaosNiagara.ELocationYToSpawnEnum
 /// Size: 0x01 (1 bytes)
 enum class ELocationYToSpawnEnum : uint8_t
 {
-	ELocationYToSpawnEnum__ChaosNiagara_LocationYToSpawn_None                        = 0,
-	ELocationYToSpawnEnum__ChaosNiagara_LocationYToSpawn_Min                         = 1,
-	ELocationYToSpawnEnum__ChaosNiagara_LocationYToSpawn_Max                         = 2,
-	ELocationYToSpawnEnum__ChaosNiagara_LocationYToSpawn_MinMax                      = 3,
-	ELocationYToSpawnEnum__ChaosNiagara_Max                                          = 4
+	ChaosNiagara_LocationYToSpawn_None                                               = 0,
+	ChaosNiagara_LocationYToSpawn_Min                                                = 1,
+	ChaosNiagara_LocationYToSpawn_Max                                                = 2,
+	ChaosNiagara_LocationYToSpawn_MinMax                                             = 3,
+	ChaosNiagara_Max                                                                 = 4
 };
 
 /// Enum /Script/ChaosNiagara.ELocationXToSpawnEnum
 /// Size: 0x01 (1 bytes)
 enum class ELocationXToSpawnEnum : uint8_t
 {
-	ELocationXToSpawnEnum__ChaosNiagara_LocationXToSpawn_None                        = 0,
-	ELocationXToSpawnEnum__ChaosNiagara_LocationXToSpawn_Min                         = 1,
-	ELocationXToSpawnEnum__ChaosNiagara_LocationXToSpawn_Max                         = 2,
-	ELocationXToSpawnEnum__ChaosNiagara_LocationXToSpawn_MinMax                      = 3,
-	ELocationXToSpawnEnum__ChaosNiagara_Max                                          = 4
+	ChaosNiagara_LocationXToSpawn_None                                               = 0,
+	ChaosNiagara_LocationXToSpawn_Min                                                = 1,
+	ChaosNiagara_LocationXToSpawn_Max                                                = 2,
+	ChaosNiagara_LocationXToSpawn_MinMax                                             = 3,
+	ChaosNiagara_Max                                                                 = 4
 };
 
 /// Enum /Script/ChaosNiagara.ELocationFilteringModeEnum
 /// Size: 0x01 (1 bytes)
 enum class ELocationFilteringModeEnum : uint8_t
 {
-	ELocationFilteringModeEnum__ChaosNiagara_LocationFilteringMode_Inclusive         = 0,
-	ELocationFilteringModeEnum__ChaosNiagara_LocationFilteringMode_Exclusive         = 1,
-	ELocationFilteringModeEnum__ChaosNiagara_Max                                     = 2
+	ChaosNiagara_LocationFilteringMode_Inclusive                                     = 0,
+	ChaosNiagara_LocationFilteringMode_Exclusive                                     = 1,
+	ChaosNiagara_Max                                                                 = 2
 };
 
 /// Enum /Script/ChaosNiagara.EDataSourceTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class EDataSourceTypeEnum : uint8_t
 {
-	EDataSourceTypeEnum__ChaosNiagara_DataSourceType_Collision                       = 0,
-	EDataSourceTypeEnum__ChaosNiagara_DataSourceType_Breaking                        = 1,
-	EDataSourceTypeEnum__ChaosNiagara_DataSourceType_Trailing                        = 2,
-	EDataSourceTypeEnum__ChaosNiagara_Max                                            = 3
+	ChaosNiagara_DataSourceType_Collision                                            = 0,
+	ChaosNiagara_DataSourceType_Breaking                                             = 1,
+	ChaosNiagara_DataSourceType_Trailing                                             = 2,
+	ChaosNiagara_Max                                                                 = 3
 };
 
 /// Enum /Script/ChaosNiagara.EDebugTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class EDebugTypeEnum : uint8_t
 {
-	EDebugTypeEnum__ChaosNiagara_DebugType_NoDebug                                   = 0,
-	EDebugTypeEnum__ChaosNiagara_DebugType_ColorBySolver                             = 1,
-	EDebugTypeEnum__ChaosNiagara_DebugType_ColorByParticleIndex                      = 2,
-	EDebugTypeEnum__ChaosNiagara_Max                                                 = 3
+	ChaosNiagara_DebugType_NoDebug                                                   = 0,
+	ChaosNiagara_DebugType_ColorBySolver                                             = 1,
+	ChaosNiagara_DebugType_ColorByParticleIndex                                      = 2,
+	ChaosNiagara_Max                                                                 = 3
 };
 
 /// Enum /Script/ChaosNiagara.ERandomVelocityGenerationTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class ERandomVelocityGenerationTypeEnum : uint8_t
 {
-	ERandomVelocityGenerationTypeEnum__ChaosNiagara_RandomVelocityGenerationType_RandomDistribution = 0,
-	ERandomVelocityGenerationTypeEnum__ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers = 1,
-	ERandomVelocityGenerationTypeEnum__ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased = 2,
-	ERandomVelocityGenerationTypeEnum__ChaosNiagara_Max                              = 3
+	ChaosNiagara_RandomVelocityGenerationType_RandomDistribution                     = 0,
+	ChaosNiagara_RandomVelocityGenerationType_RandomDistributionWithStreamers        = 1,
+	ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased                   = 2,
+	ChaosNiagara_Max                                                                 = 3
 };
 
 /// Enum /Script/ChaosNiagara.EDataSortTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class EDataSortTypeEnum : uint8_t
 {
-	EDataSortTypeEnum__ChaosNiagara_DataSortType_NoSorting                           = 0,
-	EDataSortTypeEnum__ChaosNiagara_DataSortType_RandomShuffle                       = 1,
-	EDataSortTypeEnum__ChaosNiagara_DataSortType_SortByMassMaxToMin                  = 2,
-	EDataSortTypeEnum__ChaosNiagara_DataSortType_SortByMassMinToMax                  = 3,
-	EDataSortTypeEnum__ChaosNiagara_Max                                              = 4
+	ChaosNiagara_DataSortType_NoSorting                                              = 0,
+	ChaosNiagara_DataSortType_RandomShuffle                                          = 1,
+	ChaosNiagara_DataSortType_SortByMassMaxToMin                                     = 2,
+	ChaosNiagara_DataSortType_SortByMassMinToMax                                     = 3,
+	ChaosNiagara_Max                                                                 = 4
 };
 
 /// Class /Script/ChaosNiagara.NiagaraDataInterfaceChaosDestruction

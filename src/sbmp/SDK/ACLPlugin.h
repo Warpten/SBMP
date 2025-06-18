@@ -44,18 +44,18 @@ enum class ACLRotationFormat : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ACLVisualFidelityChangeResult : uint8_t
 {
-	ACLVisualFidelityChangeResult__Dispatched                                        = 0,
-	ACLVisualFidelityChangeResult__Completed                                         = 1,
-	ACLVisualFidelityChangeResult__Failed                                            = 2
+	Dispatched                                                                       = 0,
+	Completed                                                                        = 1,
+	Failed                                                                           = 2
 };
 
 /// Enum /Script/ACLPlugin.ACLVisualFidelity
 /// Size: 0x01 (1 bytes)
 enum class ACLVisualFidelity : uint8_t
 {
-	ACLVisualFidelity__Highest                                                       = 0,
-	ACLVisualFidelity__Medium                                                        = 1,
-	ACLVisualFidelity__Lowest                                                        = 2
+	Highest                                                                          = 0,
+	Medium                                                                           = 1,
+	Lowest                                                                           = 2
 };
 
 /// Class /Script/ACLPlugin.AnimationCompressionLibraryDatabase

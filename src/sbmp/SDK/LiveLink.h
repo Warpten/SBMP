@@ -18,21 +18,21 @@
 /// Size: 0x01 (1 bytes)
 enum class ELiveLinkAxis : uint8_t
 {
-	ELiveLinkAxis__X                                                                 = 0,
-	ELiveLinkAxis__Y                                                                 = 1,
-	ELiveLinkAxis__Z                                                                 = 2,
-	ELiveLinkAxis__XNeg                                                              = 3,
-	ELiveLinkAxis__YNeg                                                              = 4,
-	ELiveLinkAxis__ZNeg                                                              = 5
+	X                                                                                = 0,
+	Y                                                                                = 1,
+	Z                                                                                = 2,
+	XNeg                                                                             = 3,
+	YNeg                                                                             = 4,
+	ZNeg                                                                             = 5
 };
 
 /// Enum /Script/LiveLink.ELiveLinkTimecodeProviderEvaluationType
 /// Size: 0x04 (4 bytes)
 enum class ELiveLinkTimecodeProviderEvaluationType : uint32_t
 {
-	ELiveLinkTimecodeProviderEvaluationType__Lerp                                    = 0,
-	ELiveLinkTimecodeProviderEvaluationType__Nearest                                 = 1,
-	ELiveLinkTimecodeProviderEvaluationType__Latest                                  = 2
+	Lerp                                                                             = 0,
+	Nearest                                                                          = 1,
+	Latest                                                                           = 2
 };
 
 /// Class /Script/LiveLink.LiveLinkRetargetAsset

@@ -17,41 +17,41 @@
 /// Size: 0x01 (1 bytes)
 enum class ECollisionLimitType : uint8_t
 {
-	ECollisionLimitType__None                                                        = 0,
-	ECollisionLimitType__Spherical                                                   = 1,
-	ECollisionLimitType__Capsule                                                     = 2,
-	ECollisionLimitType__Planar                                                      = 3
+	None                                                                             = 0,
+	Spherical                                                                        = 1,
+	Capsule                                                                          = 2,
+	Planar                                                                           = 3
 };
 
 /// Enum /Script/KawaiiPhysics.ELimitAngleType
 /// Size: 0x01 (1 bytes)
 enum class ELimitAngleType : uint8_t
 {
-	ELimitAngleType__AllSide                                                         = 0,
-	ELimitAngleType__LefeSide                                                        = 1,
-	ELimitAngleType__RightSide                                                       = 2
+	AllSide                                                                          = 0,
+	LefeSide                                                                         = 1,
+	RightSide                                                                        = 2
 };
 
 /// Enum /Script/KawaiiPhysics.EBoneForwardAxis
 /// Size: 0x01 (1 bytes)
 enum class EBoneForwardAxis : uint8_t
 {
-	EBoneForwardAxis__X_Positive                                                     = 0,
-	EBoneForwardAxis__X_Negative                                                     = 1,
-	EBoneForwardAxis__Y_Positive                                                     = 2,
-	EBoneForwardAxis__Y_Negative                                                     = 3,
-	EBoneForwardAxis__Z_Positive                                                     = 4,
-	EBoneForwardAxis__Z_Negative                                                     = 5
+	X_Positive                                                                       = 0,
+	X_Negative                                                                       = 1,
+	Y_Positive                                                                       = 2,
+	Y_Negative                                                                       = 3,
+	Z_Positive                                                                       = 4,
+	Z_Negative                                                                       = 5
 };
 
 /// Enum /Script/KawaiiPhysics.EPlanarConstraint
 /// Size: 0x01 (1 bytes)
 enum class EPlanarConstraint : uint8_t
 {
-	EPlanarConstraint__None                                                          = 0,
-	EPlanarConstraint__X                                                             = 1,
-	EPlanarConstraint__Y                                                             = 2,
-	EPlanarConstraint__Z                                                             = 3
+	None                                                                             = 0,
+	X                                                                                = 1,
+	Y                                                                                = 2,
+	Z                                                                                = 3
 };
 
 /// Struct /Script/KawaiiPhysics.CollisionLimitBase

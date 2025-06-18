@@ -18,12 +18,12 @@
 /// Size: 0x01 (1 bytes)
 enum class EClusterConnectionTypeEnum : uint8_t
 {
-	EClusterConnectionTypeEnum__Chaos_PointImplicit                                  = 0,
-	EClusterConnectionTypeEnum__Chaos_DelaunayTriangulation                          = 1,
-	EClusterConnectionTypeEnum__Chaos_MinimalSpanningSubsetDelaunayTriangulation     = 2,
-	EClusterConnectionTypeEnum__Chaos_PointImplicitAugmentedWithMinimalDelaunay      = 3,
-	EClusterConnectionTypeEnum__Chaos_None                                           = 4,
-	EClusterConnectionTypeEnum__Chaos_EClsuterCreationParameters_Max                 = 5
+	Chaos_PointImplicit                                                              = 0,
+	Chaos_DelaunayTriangulation                                                      = 1,
+	Chaos_MinimalSpanningSubsetDelaunayTriangulation                                 = 2,
+	Chaos_PointImplicitAugmentedWithMinimalDelaunay                                  = 3,
+	Chaos_None                                                                       = 4,
+	Chaos_EClsuterCreationParameters_Max                                             = 5
 };
 
 /// Class /Script/ChaosSolverEngine.ChaosDebugDrawComponent

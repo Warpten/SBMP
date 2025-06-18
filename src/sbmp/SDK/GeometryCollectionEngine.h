@@ -20,63 +20,63 @@
 /// Size: 0x01 (1 bytes)
 enum class EChaosBreakingSortMethod : uint8_t
 {
-	EChaosBreakingSortMethod__SortNone                                               = 0,
-	EChaosBreakingSortMethod__SortByHighestMass                                      = 1,
-	EChaosBreakingSortMethod__SortByHighestSpeed                                     = 2,
-	EChaosBreakingSortMethod__SortByNearestFirst                                     = 3,
-	EChaosBreakingSortMethod__Count                                                  = 4
+	SortNone                                                                         = 0,
+	SortByHighestMass                                                                = 1,
+	SortByHighestSpeed                                                               = 2,
+	SortByNearestFirst                                                               = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/GeometryCollectionEngine.EChaosCollisionSortMethod
 /// Size: 0x01 (1 bytes)
 enum class EChaosCollisionSortMethod : uint8_t
 {
-	EChaosCollisionSortMethod__SortNone                                              = 0,
-	EChaosCollisionSortMethod__SortByHighestMass                                     = 1,
-	EChaosCollisionSortMethod__SortByHighestSpeed                                    = 2,
-	EChaosCollisionSortMethod__SortByHighestImpulse                                  = 3,
-	EChaosCollisionSortMethod__SortByNearestFirst                                    = 4,
-	EChaosCollisionSortMethod__Count                                                 = 5
+	SortNone                                                                         = 0,
+	SortByHighestMass                                                                = 1,
+	SortByHighestSpeed                                                               = 2,
+	SortByHighestImpulse                                                             = 3,
+	SortByNearestFirst                                                               = 4,
+	Count                                                                            = 5
 };
 
 /// Enum /Script/GeometryCollectionEngine.EChaosTrailingSortMethod
 /// Size: 0x01 (1 bytes)
 enum class EChaosTrailingSortMethod : uint8_t
 {
-	EChaosTrailingSortMethod__SortNone                                               = 0,
-	EChaosTrailingSortMethod__SortByHighestMass                                      = 1,
-	EChaosTrailingSortMethod__SortByHighestSpeed                                     = 2,
-	EChaosTrailingSortMethod__SortByNearestFirst                                     = 3,
-	EChaosTrailingSortMethod__Count                                                  = 4
+	SortNone                                                                         = 0,
+	SortByHighestMass                                                                = 1,
+	SortByHighestSpeed                                                               = 2,
+	SortByNearestFirst                                                               = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/GeometryCollectionEngine.EGeometryCollectionDebugDrawActorHideGeometry
 /// Size: 0x01 (1 bytes)
 enum class EGeometryCollectionDebugDrawActorHideGeometry : uint8_t
 {
-	EGeometryCollectionDebugDrawActorHideGeometry__HideNone                          = 0,
-	EGeometryCollectionDebugDrawActorHideGeometry__HideWithCollision                 = 1,
-	EGeometryCollectionDebugDrawActorHideGeometry__HideSelected                      = 2,
-	EGeometryCollectionDebugDrawActorHideGeometry__HideWholeCollection               = 3,
-	EGeometryCollectionDebugDrawActorHideGeometry__HideAll                           = 4
+	HideNone                                                                         = 0,
+	HideWithCollision                                                                = 1,
+	HideSelected                                                                     = 2,
+	HideWholeCollection                                                              = 3,
+	HideAll                                                                          = 4
 };
 
 /// Enum /Script/GeometryCollectionEngine.ECollectionGroupEnum
 /// Size: 0x01 (1 bytes)
 enum class ECollectionGroupEnum : uint8_t
 {
-	ECollectionGroupEnum__Chaos_Traansform                                           = 0,
-	ECollectionGroupEnum__Chaos_Max                                                  = 1
+	Chaos_Traansform                                                                 = 0,
+	Chaos_Max                                                                        = 1
 };
 
 /// Enum /Script/GeometryCollectionEngine.ECollectionAttributeEnum
 /// Size: 0x01 (1 bytes)
 enum class ECollectionAttributeEnum : uint8_t
 {
-	ECollectionAttributeEnum__Chaos_Active                                           = 0,
-	ECollectionAttributeEnum__Chaos_DynamicState                                     = 1,
-	ECollectionAttributeEnum__Chaos_CollisionGroup                                   = 2,
-	ECollectionAttributeEnum__Chaos_Max                                              = 3
+	Chaos_Active                                                                     = 0,
+	Chaos_DynamicState                                                               = 1,
+	Chaos_CollisionGroup                                                             = 2,
+	Chaos_Max                                                                        = 3
 };
 
 /// Struct /Script/GeometryCollectionEngine.ChaosCollisionEventRequestSettings

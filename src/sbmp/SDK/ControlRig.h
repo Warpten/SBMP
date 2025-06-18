@@ -24,382 +24,382 @@
 /// Size: 0x01 (1 bytes)
 enum class EControlRigComponentMapDirection : uint8_t
 {
-	EControlRigComponentMapDirection__Input                                          = 0,
-	EControlRigComponentMapDirection__Output                                         = 1
+	Input                                                                            = 0,
+	Output                                                                           = 1
 };
 
 /// Enum /Script/ControlRig.EControlRigComponentSpace
 /// Size: 0x01 (1 bytes)
 enum class EControlRigComponentSpace : uint8_t
 {
-	EControlRigComponentSpace__WorldSpace                                            = 0,
-	EControlRigComponentSpace__ActorSpace                                            = 1,
-	EControlRigComponentSpace__ComponentSpace                                        = 2,
-	EControlRigComponentSpace__RigSpace                                              = 3,
-	EControlRigComponentSpace__LocalSpace                                            = 4,
-	EControlRigComponentSpace__Max                                                   = 5
+	WorldSpace                                                                       = 0,
+	ActorSpace                                                                       = 1,
+	ComponentSpace                                                                   = 2,
+	RigSpace                                                                         = 3,
+	LocalSpace                                                                       = 4,
+	Max                                                                              = 5
 };
 
 /// Enum /Script/ControlRig.ERigExecutionType
 /// Size: 0x01 (1 bytes)
 enum class ERigExecutionType : uint8_t
 {
-	ERigExecutionType__Runtime                                                       = 0,
-	ERigExecutionType__Editing                                                       = 1,
-	ERigExecutionType__Max                                                           = 2
+	Runtime                                                                          = 0,
+	Editing                                                                          = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/ControlRig.EBoneGetterSetterMode
 /// Size: 0x01 (1 bytes)
 enum class EBoneGetterSetterMode : uint8_t
 {
-	EBoneGetterSetterMode__LocalSpace                                                = 0,
-	EBoneGetterSetterMode__GlobalSpace                                               = 1,
-	EBoneGetterSetterMode__Max                                                       = 2
+	LocalSpace                                                                       = 0,
+	GlobalSpace                                                                      = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/ControlRig.ETransformGetterType
 /// Size: 0x01 (1 bytes)
 enum class ETransformGetterType : uint8_t
 {
-	ETransformGetterType__Initial                                                    = 0,
-	ETransformGetterType__Current                                                    = 1,
-	ETransformGetterType__Max                                                        = 2
+	Initial                                                                          = 0,
+	Current                                                                          = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/ControlRig.EControlRigClampSpatialMode
 /// Size: 0x01 (1 bytes)
 enum class EControlRigClampSpatialMode : uint8_t
 {
-	EControlRigClampSpatialMode__Plane                                               = 0,
-	EControlRigClampSpatialMode__Cylinder                                            = 1,
-	EControlRigClampSpatialMode__Sphere                                              = 2
+	Plane                                                                            = 0,
+	Cylinder                                                                         = 1,
+	Sphere                                                                           = 2
 };
 
 /// Enum /Script/ControlRig.ETransformSpaceMode
 /// Size: 0x01 (1 bytes)
 enum class ETransformSpaceMode : uint8_t
 {
-	ETransformSpaceMode__LocalSpace                                                  = 0,
-	ETransformSpaceMode__GlobalSpace                                                 = 1,
-	ETransformSpaceMode__BaseSpace                                                   = 2,
-	ETransformSpaceMode__BaseJoint                                                   = 3,
-	ETransformSpaceMode__Max                                                         = 4
+	LocalSpace                                                                       = 0,
+	GlobalSpace                                                                      = 1,
+	BaseSpace                                                                        = 2,
+	BaseJoint                                                                        = 3,
+	Max                                                                              = 4
 };
 
 /// Enum /Script/ControlRig.EControlRigDrawSettings
 /// Size: 0x01 (1 bytes)
 enum class EControlRigDrawSettings : uint8_t
 {
-	EControlRigDrawSettings__Points                                                  = 0,
-	EControlRigDrawSettings__Lines                                                   = 1,
-	EControlRigDrawSettings__LineStrip                                               = 2,
-	EControlRigDrawSettings__DynamicMesh                                             = 3
+	Points                                                                           = 0,
+	Lines                                                                            = 1,
+	LineStrip                                                                        = 2,
+	DynamicMesh                                                                      = 3
 };
 
 /// Enum /Script/ControlRig.EControlRigDrawHierarchyMode
 /// Size: 0x01 (1 bytes)
 enum class EControlRigDrawHierarchyMode : uint8_t
 {
-	EControlRigDrawHierarchyMode__Axes                                               = 0,
-	EControlRigDrawHierarchyMode__Max                                                = 1
+	Axes                                                                             = 0,
+	Max                                                                              = 1
 };
 
 /// Enum /Script/ControlRig.EControlRigAnimEasingType
 /// Size: 0x01 (1 bytes)
 enum class EControlRigAnimEasingType : uint8_t
 {
-	EControlRigAnimEasingType__Linear                                                = 0,
-	EControlRigAnimEasingType__QuadraticEaseIn                                       = 1,
-	EControlRigAnimEasingType__QuadraticEaseOut                                      = 2,
-	EControlRigAnimEasingType__QuadraticEaseInOut                                    = 3,
-	EControlRigAnimEasingType__CubicEaseIn                                           = 4,
-	EControlRigAnimEasingType__CubicEaseOut                                          = 5,
-	EControlRigAnimEasingType__CubicEaseInOut                                        = 6,
-	EControlRigAnimEasingType__QuarticEaseIn                                         = 7,
-	EControlRigAnimEasingType__QuarticEaseOut                                        = 8,
-	EControlRigAnimEasingType__QuarticEaseInOut                                      = 9,
-	EControlRigAnimEasingType__QuinticEaseIn                                         = 10,
-	EControlRigAnimEasingType__QuinticEaseOut                                        = 11,
-	EControlRigAnimEasingType__QuinticEaseInOut                                      = 12,
-	EControlRigAnimEasingType__SineEaseIn                                            = 13,
-	EControlRigAnimEasingType__SineEaseOut                                           = 14,
-	EControlRigAnimEasingType__SineEaseInOut                                         = 15,
-	EControlRigAnimEasingType__CircularEaseIn                                        = 16,
-	EControlRigAnimEasingType__CircularEaseOut                                       = 17,
-	EControlRigAnimEasingType__CircularEaseInOut                                     = 18,
-	EControlRigAnimEasingType__ExponentialEaseIn                                     = 19,
-	EControlRigAnimEasingType__ExponentialEaseOut                                    = 20,
-	EControlRigAnimEasingType__ExponentialEaseInOut                                  = 21,
-	EControlRigAnimEasingType__ElasticEaseIn                                         = 22,
-	EControlRigAnimEasingType__ElasticEaseOut                                        = 23,
-	EControlRigAnimEasingType__ElasticEaseInOut                                      = 24,
-	EControlRigAnimEasingType__BackEaseIn                                            = 25,
-	EControlRigAnimEasingType__BackEaseOut                                           = 26,
-	EControlRigAnimEasingType__BackEaseInOut                                         = 27,
-	EControlRigAnimEasingType__BounceEaseIn                                          = 28,
-	EControlRigAnimEasingType__BounceEaseOut                                         = 29,
-	EControlRigAnimEasingType__BounceEaseInOut                                       = 30
+	Linear                                                                           = 0,
+	QuadraticEaseIn                                                                  = 1,
+	QuadraticEaseOut                                                                 = 2,
+	QuadraticEaseInOut                                                               = 3,
+	CubicEaseIn                                                                      = 4,
+	CubicEaseOut                                                                     = 5,
+	CubicEaseInOut                                                                   = 6,
+	QuarticEaseIn                                                                    = 7,
+	QuarticEaseOut                                                                   = 8,
+	QuarticEaseInOut                                                                 = 9,
+	QuinticEaseIn                                                                    = 10,
+	QuinticEaseOut                                                                   = 11,
+	QuinticEaseInOut                                                                 = 12,
+	SineEaseIn                                                                       = 13,
+	SineEaseOut                                                                      = 14,
+	SineEaseInOut                                                                    = 15,
+	CircularEaseIn                                                                   = 16,
+	CircularEaseOut                                                                  = 17,
+	CircularEaseInOut                                                                = 18,
+	ExponentialEaseIn                                                                = 19,
+	ExponentialEaseOut                                                               = 20,
+	ExponentialEaseInOut                                                             = 21,
+	ElasticEaseIn                                                                    = 22,
+	ElasticEaseOut                                                                   = 23,
+	ElasticEaseInOut                                                                 = 24,
+	BackEaseIn                                                                       = 25,
+	BackEaseOut                                                                      = 26,
+	BackEaseInOut                                                                    = 27,
+	BounceEaseIn                                                                     = 28,
+	BounceEaseOut                                                                    = 29,
+	BounceEaseInOut                                                                  = 30
 };
 
 /// Enum /Script/ControlRig.EControlRigRotationOrder
 /// Size: 0x01 (1 bytes)
 enum class EControlRigRotationOrder : uint8_t
 {
-	EControlRigRotationOrder__XYZ                                                    = 0,
-	EControlRigRotationOrder__XZY                                                    = 1,
-	EControlRigRotationOrder__YXZ                                                    = 2,
-	EControlRigRotationOrder__YZX                                                    = 3,
-	EControlRigRotationOrder__ZXY                                                    = 4,
-	EControlRigRotationOrder__ZYX                                                    = 5
+	XYZ                                                                              = 0,
+	XZY                                                                              = 1,
+	YXZ                                                                              = 2,
+	YZX                                                                              = 3,
+	ZXY                                                                              = 4,
+	ZYX                                                                              = 5
 };
 
 /// Enum /Script/ControlRig.ECRSimPointIntegrateType
 /// Size: 0x01 (1 bytes)
 enum class ECRSimPointIntegrateType : uint8_t
 {
-	ECRSimPointIntegrateType__Verlet                                                 = 0,
-	ECRSimPointIntegrateType__SemiExplicitEuler                                      = 1
+	Verlet                                                                           = 0,
+	SemiExplicitEuler                                                                = 1
 };
 
 /// Enum /Script/ControlRig.ECRSimConstraintType
 /// Size: 0x01 (1 bytes)
 enum class ECRSimConstraintType : uint8_t
 {
-	ECRSimConstraintType__Distance                                                   = 0,
-	ECRSimConstraintType__DistanceFromA                                              = 1,
-	ECRSimConstraintType__DistanceFromB                                              = 2,
-	ECRSimConstraintType__Plane                                                      = 3
+	Distance                                                                         = 0,
+	DistanceFromA                                                                    = 1,
+	DistanceFromB                                                                    = 2,
+	Plane                                                                            = 3
 };
 
 /// Enum /Script/ControlRig.ECRSimPointForceType
 /// Size: 0x01 (1 bytes)
 enum class ECRSimPointForceType : uint8_t
 {
-	ECRSimPointForceType__Direction                                                  = 0
+	Direction                                                                        = 0
 };
 
 /// Enum /Script/ControlRig.ECRSimSoftCollisionType
 /// Size: 0x01 (1 bytes)
 enum class ECRSimSoftCollisionType : uint8_t
 {
-	ECRSimSoftCollisionType__Plane                                                   = 0,
-	ECRSimSoftCollisionType__Sphere                                                  = 1,
-	ECRSimSoftCollisionType__Cone                                                    = 2
+	Plane                                                                            = 0,
+	Sphere                                                                           = 1,
+	Cone                                                                             = 2
 };
 
 /// Enum /Script/ControlRig.EControlRigFKRigExecuteMode
 /// Size: 0x01 (1 bytes)
 enum class EControlRigFKRigExecuteMode : uint8_t
 {
-	EControlRigFKRigExecuteMode__Replace                                             = 0,
-	EControlRigFKRigExecuteMode__Additive                                            = 1,
-	EControlRigFKRigExecuteMode__Max                                                 = 2
+	Replace                                                                          = 0,
+	Additive                                                                         = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/ControlRig.ERigBoneType
 /// Size: 0x01 (1 bytes)
 enum class ERigBoneType : uint8_t
 {
-	ERigBoneType__Imported                                                           = 0,
-	ERigBoneType__User                                                               = 1
+	Imported                                                                         = 0,
+	User                                                                             = 1
 };
 
 /// Enum /Script/ControlRig.ERigControlAxis
 /// Size: 0x01 (1 bytes)
 enum class ERigControlAxis : uint8_t
 {
-	ERigControlAxis__X                                                               = 0,
-	ERigControlAxis__Y                                                               = 1,
-	ERigControlAxis__Z                                                               = 2
+	X                                                                                = 0,
+	Y                                                                                = 1,
+	Z                                                                                = 2
 };
 
 /// Enum /Script/ControlRig.ERigControlValueType
 /// Size: 0x01 (1 bytes)
 enum class ERigControlValueType : uint8_t
 {
-	ERigControlValueType__Initial                                                    = 0,
-	ERigControlValueType__Current                                                    = 1,
-	ERigControlValueType__Minimum                                                    = 2,
-	ERigControlValueType__Maximum                                                    = 3
+	Initial                                                                          = 0,
+	Current                                                                          = 1,
+	Minimum                                                                          = 2,
+	Maximum                                                                          = 3
 };
 
 /// Enum /Script/ControlRig.ERigControlType
 /// Size: 0x01 (1 bytes)
 enum class ERigControlType : uint8_t
 {
-	ERigControlType__Bool                                                            = 0,
-	ERigControlType__Float                                                           = 1,
-	ERigControlType__Integer                                                         = 2,
-	ERigControlType__Vector2D                                                        = 3,
-	ERigControlType__Position                                                        = 4,
-	ERigControlType__Scale                                                           = 5,
-	ERigControlType__Rotator                                                         = 6,
-	ERigControlType__Transform                                                       = 7,
-	ERigControlType__TransformNoScale                                                = 8,
-	ERigControlType__EulerTransform                                                  = 9
+	Bool                                                                             = 0,
+	Float                                                                            = 1,
+	Integer                                                                          = 2,
+	Vector2D                                                                         = 3,
+	Position                                                                         = 4,
+	Scale                                                                            = 5,
+	Rotator                                                                          = 6,
+	Transform                                                                        = 7,
+	TransformNoScale                                                                 = 8,
+	EulerTransform                                                                   = 9
 };
 
 /// Enum /Script/ControlRig.ERigHierarchyImportMode
 /// Size: 0x01 (1 bytes)
 enum class ERigHierarchyImportMode : uint8_t
 {
-	ERigHierarchyImportMode__Append                                                  = 0,
-	ERigHierarchyImportMode__Replace                                                 = 1,
-	ERigHierarchyImportMode__ReplaceLocalTransform                                   = 2,
-	ERigHierarchyImportMode__ReplaceGlobalTransform                                  = 3,
-	ERigHierarchyImportMode__Max                                                     = 4
+	Append                                                                           = 0,
+	Replace                                                                          = 1,
+	ReplaceLocalTransform                                                            = 2,
+	ReplaceGlobalTransform                                                           = 3,
+	Max                                                                              = 4
 };
 
 /// Enum /Script/ControlRig.EControlRigSetKey
 /// Size: 0x01 (1 bytes)
 enum class EControlRigSetKey : uint8_t
 {
-	EControlRigSetKey__DoNotCare                                                     = 0,
-	EControlRigSetKey__Always                                                        = 1,
-	EControlRigSetKey__Never                                                         = 2
+	DoNotCare                                                                        = 0,
+	Always                                                                           = 1,
+	Never                                                                            = 2
 };
 
 /// Enum /Script/ControlRig.ERigEvent
 /// Size: 0x01 (1 bytes)
 enum class ERigEvent : uint8_t
 {
-	ERigEvent__None                                                                  = 0,
-	ERigEvent__RequestAutoKey                                                        = 1,
-	ERigEvent__Max                                                                   = 2
+	None                                                                             = 0,
+	RequestAutoKey                                                                   = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/ControlRig.ERigElementType
 /// Size: 0x01 (1 bytes)
 enum class ERigElementType : uint8_t
 {
-	ERigElementType__None                                                            = 0,
-	ERigElementType__Bone                                                            = 1,
-	ERigElementType__Space                                                           = 2,
-	ERigElementType__Control                                                         = 4,
-	ERigElementType__Curve                                                           = 8,
-	ERigElementType__All                                                             = 15
+	None                                                                             = 0,
+	Bone                                                                             = 1,
+	Space                                                                            = 2,
+	Control                                                                          = 4,
+	Curve                                                                            = 8,
+	All                                                                              = 15
 };
 
 /// Enum /Script/ControlRig.ERigSpaceType
 /// Size: 0x01 (1 bytes)
 enum class ERigSpaceType : uint8_t
 {
-	ERigSpaceType__Global                                                            = 0,
-	ERigSpaceType__Bone                                                              = 1,
-	ERigSpaceType__Control                                                           = 2,
-	ERigSpaceType__Space                                                             = 3
+	Global                                                                           = 0,
+	Bone                                                                             = 1,
+	Control                                                                          = 2,
+	Space                                                                            = 3
 };
 
 /// Enum /Script/ControlRig.EAimMode
 /// Size: 0x01 (1 bytes)
 enum class EAimMode : uint8_t
 {
-	EAimMode__AimAtTarget                                                            = 0,
-	EAimMode__OrientToTarget                                                         = 1
+	AimAtTarget                                                                      = 0,
+	OrientToTarget                                                                   = 1
 };
 
 /// Enum /Script/ControlRig.EApplyTransformMode
 /// Size: 0x01 (1 bytes)
 enum class EApplyTransformMode : uint8_t
 {
-	EApplyTransformMode__Override                                                    = 0,
-	EApplyTransformMode__Additive                                                    = 1,
-	EApplyTransformMode__Max                                                         = 2
+	Override                                                                         = 0,
+	Additive                                                                         = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/ControlRig.ERigUnitDebugPointMode
 /// Size: 0x01 (1 bytes)
 enum class ERigUnitDebugPointMode : uint8_t
 {
-	ERigUnitDebugPointMode__Point                                                    = 0,
-	ERigUnitDebugPointMode__Vector                                                   = 1,
-	ERigUnitDebugPointMode__Max                                                      = 2
+	Point                                                                            = 0,
+	Vector                                                                           = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/ControlRig.ERigUnitDebugTransformMode
 /// Size: 0x01 (1 bytes)
 enum class ERigUnitDebugTransformMode : uint8_t
 {
-	ERigUnitDebugTransformMode__Point                                                = 0,
-	ERigUnitDebugTransformMode__Axes                                                 = 1,
-	ERigUnitDebugTransformMode__Box                                                  = 2,
-	ERigUnitDebugTransformMode__Max                                                  = 3
+	Point                                                                            = 0,
+	Axes                                                                             = 1,
+	Box                                                                              = 2,
+	Max                                                                              = 3
 };
 
 /// Enum /Script/ControlRig.EControlRigCurveAlignment
 /// Size: 0x01 (1 bytes)
 enum class EControlRigCurveAlignment : uint8_t
 {
-	EControlRigCurveAlignment__Front                                                 = 0,
-	EControlRigCurveAlignment__Stretched                                             = 1
+	Front                                                                            = 0,
+	Stretched                                                                        = 1
 };
 
 /// Enum /Script/ControlRig.EControlRigVectorKind
 /// Size: 0x01 (1 bytes)
 enum class EControlRigVectorKind : uint8_t
 {
-	EControlRigVectorKind__Direction                                                 = 0,
-	EControlRigVectorKind__Location                                                  = 1
+	Direction                                                                        = 0,
+	Location                                                                         = 1
 };
 
 /// Enum /Script/ControlRig.ERBFVectorDistanceType
 /// Size: 0x01 (1 bytes)
 enum class ERBFVectorDistanceType : uint8_t
 {
-	ERBFVectorDistanceType__Euclidean                                                = 0,
-	ERBFVectorDistanceType__Manhattan                                                = 1,
-	ERBFVectorDistanceType__ArcLength                                                = 2
+	Euclidean                                                                        = 0,
+	Manhattan                                                                        = 1,
+	ArcLength                                                                        = 2
 };
 
 /// Enum /Script/ControlRig.ERBFQuatDistanceType
 /// Size: 0x01 (1 bytes)
 enum class ERBFQuatDistanceType : uint8_t
 {
-	ERBFQuatDistanceType__Euclidean                                                  = 0,
-	ERBFQuatDistanceType__ArcLength                                                  = 1,
-	ERBFQuatDistanceType__SwingAngle                                                 = 2,
-	ERBFQuatDistanceType__TwistAngle                                                 = 3
+	Euclidean                                                                        = 0,
+	ArcLength                                                                        = 1,
+	SwingAngle                                                                       = 2,
+	TwistAngle                                                                       = 3
 };
 
 /// Enum /Script/ControlRig.ERBFKernelType
 /// Size: 0x01 (1 bytes)
 enum class ERBFKernelType : uint8_t
 {
-	ERBFKernelType__Gaussian                                                         = 0,
-	ERBFKernelType__Exponential                                                      = 1,
-	ERBFKernelType__Linear                                                           = 2,
-	ERBFKernelType__Cubic                                                            = 3,
-	ERBFKernelType__Quintic                                                          = 4
+	Gaussian                                                                         = 0,
+	Exponential                                                                      = 1,
+	Linear                                                                           = 2,
+	Cubic                                                                            = 3,
+	Quintic                                                                          = 4
 };
 
 /// Enum /Script/ControlRig.EControlRigModifyBoneMode
 /// Size: 0x01 (1 bytes)
 enum class EControlRigModifyBoneMode : uint8_t
 {
-	EControlRigModifyBoneMode__OverrideLocal                                         = 0,
-	EControlRigModifyBoneMode__OverrideGlobal                                        = 1,
-	EControlRigModifyBoneMode__AdditiveLocal                                         = 2,
-	EControlRigModifyBoneMode__AdditiveGlobal                                        = 3,
-	EControlRigModifyBoneMode__Max                                                   = 4
+	OverrideLocal                                                                    = 0,
+	OverrideGlobal                                                                   = 1,
+	AdditiveLocal                                                                    = 2,
+	AdditiveGlobal                                                                   = 3,
+	Max                                                                              = 4
 };
 
 /// Enum /Script/ControlRig.ERigUnitVisualDebugPointMode
 /// Size: 0x01 (1 bytes)
 enum class ERigUnitVisualDebugPointMode : uint8_t
 {
-	ERigUnitVisualDebugPointMode__Point                                              = 0,
-	ERigUnitVisualDebugPointMode__Vector                                             = 1,
-	ERigUnitVisualDebugPointMode__Max                                                = 2
+	Point                                                                            = 0,
+	Vector                                                                           = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/ControlRig.EControlRigState
 /// Size: 0x01 (1 bytes)
 enum class EControlRigState : uint8_t
 {
-	EControlRigState__Init                                                           = 0,
-	EControlRigState__Update                                                         = 1,
-	EControlRigState__Invalid                                                        = 2
+	Init                                                                             = 0,
+	Update                                                                           = 1,
+	Invalid                                                                          = 2
 };
 
 /// Struct /Script/ControlRig.RigElement

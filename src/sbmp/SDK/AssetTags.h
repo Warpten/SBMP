@@ -16,9 +16,9 @@
 /// Size: 0x01 (1 bytes)
 enum class ECollectionScriptingShareType : uint8_t
 {
-	ECollectionScriptingShareType__Local                                             = 0,
-	ECollectionScriptingShareType__Private                                           = 1,
-	ECollectionScriptingShareType__Shared                                            = 2
+	Local                                                                            = 0,
+	Private                                                                          = 1,
+	Shared                                                                           = 2
 };
 
 /// Class /Script/AssetTags.AssetTagsSubsystem

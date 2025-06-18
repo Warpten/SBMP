@@ -19,9 +19,9 @@
 /// Size: 0x01 (1 bytes)
 enum class FSBAnimNode_GroundCollisionBoneAxis : uint8_t
 {
-	FSBAnimNode_GroundCollisionBoneAxis__XYZ                                         = 0,
-	FSBAnimNode_GroundCollisionBoneAxis__ZXY                                         = 1,
-	FSBAnimNode_GroundCollisionBoneAxis__YZX                                         = 2
+	XYZ                                                                              = 0,
+	ZXY                                                                              = 1,
+	YZX                                                                              = 2
 };
 
 /// Enum /Script/SBAnimation.ESBBoneHitShakeMode
@@ -56,15 +56,15 @@ enum class ESBLookAtIKBacksideType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBMovementBoneCurveType : uint8_t
 {
-	ESBMovementBoneCurveType_Linear                                                  = 0,
-	ESBMovementBoneCurveType_Spline                                                  = 1
+	Linear                                                                           = 0,
+	Spline                                                                           = 1
 };
 
 /// Enum /Script/SBAnimation.ESBMovementBoneInterpType
 /// Size: 0x01 (1 bytes)
 enum class ESBMovementBoneInterpType : uint8_t
 {
-	ESBMovementBoneInterpType_Linear                                                 = 0
+	Linear                                                                           = 0
 };
 
 /// Enum /Script/SBAnimation.ESBAnimIKTraceDirection
@@ -83,69 +83,69 @@ enum class ESBAnimIKTraceDirection : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBCollisionShapeType : uint8_t
 {
-	ESBCollisionShapeType_None                                                       = 0,
-	ESBCollisionShapeType_Line                                                       = 1,
-	ESBCollisionShapeType_Box                                                        = 2,
-	ESBCollisionShapeType_Sphere                                                     = 3,
-	ESBCollisionShapeType_Capsule                                                    = 4
+	None                                                                             = 0,
+	Line                                                                             = 1,
+	Box                                                                              = 2,
+	Sphere                                                                           = 3,
+	Capsule                                                                          = 4
 };
 
 /// Enum /Script/SBAnimation.ESBCharacterCustomAnim
 /// Size: 0x01 (1 bytes)
 enum class ESBCharacterCustomAnim : uint8_t
 {
-	ESBCharacterCustomAnim_None                                                      = -1,
-	ESBCharacterCustomAnim_Custom1                                                   = 0,
-	ESBCharacterCustomAnim_Custom2                                                   = 1,
-	ESBCharacterCustomAnim_Custom3                                                   = 2,
-	ESBCharacterCustomAnim_Custom4                                                   = 3,
-	ESBCharacterCustomAnim_Custom5                                                   = 4,
-	ESBCharacterCustomAnim_Custom6                                                   = 5,
-	ESBCharacterCustomAnim_Custom7                                                   = 6,
-	ESBCharacterCustomAnim_Custom8                                                   = 7,
-	ESBCharacterCustomAnim_Custom9                                                   = 8,
-	ESBCharacterCustomAnim_Custom10                                                  = 9,
-	ESBCharacterCustomAnim_Custom11                                                  = 10,
-	ESBCharacterCustomAnim_Custom12                                                  = 11,
-	ESBCharacterCustomAnim_Custom13                                                  = 12,
-	ESBCharacterCustomAnim_Custom14                                                  = 13,
-	ESBCharacterCustomAnim_Custom15                                                  = 14,
-	ESBCharacterCustomAnim_Custom16                                                  = 15,
-	ESBCharacterCustomAnim_Custom17                                                  = 16,
-	ESBCharacterCustomAnim_Custom18                                                  = 17,
-	ESBCharacterCustomAnim_Custom19                                                  = 18,
-	ESBCharacterCustomAnim_Custom20                                                  = 19,
-	ESBCharacterCustomAnim_HitStandLight1Left                                        = 20,
-	ESBCharacterCustomAnim_HitStandLight1Right                                       = 21,
-	ESBCharacterCustomAnim_HitStandLight1Back                                        = 22,
-	ESBCharacterCustomAnim_HitStandLight1Front                                       = 23,
-	ESBCharacterCustomAnim_HitStandLight2Left                                        = 24,
-	ESBCharacterCustomAnim_HitStandLight2Right                                       = 25,
-	ESBCharacterCustomAnim_HitStandLight2Back                                        = 26,
-	ESBCharacterCustomAnim_HitStandLight2Front                                       = 27,
-	ESBCharacterCustomAnim_HitStandStrong1Left                                       = 28,
-	ESBCharacterCustomAnim_HitStandStrong1Right                                      = 29,
-	ESBCharacterCustomAnim_HitStandStrong1Back                                       = 30,
-	ESBCharacterCustomAnim_HitStandStrong1Front                                      = 31,
-	ESBCharacterCustomAnim_HitStandStrong2Left                                       = 32,
-	ESBCharacterCustomAnim_HitStandStrong2Right                                      = 33,
-	ESBCharacterCustomAnim_HitStandStrong2Back                                       = 34,
-	ESBCharacterCustomAnim_HitStandStrong2Front                                      = 35,
-	ESBCharacterCustomAnim_Groggy_Start                                              = 36,
-	ESBCharacterCustomAnim_Groggy_Loop                                               = 37,
-	ESBCharacterCustomAnim_Groggy_End                                                = 38,
-	ESBCharacterCustomAnim_Airborne_Loop                                             = 39,
-	ESBCharacterCustomAnim_KnockDown_Start_Front                                     = 40,
-	ESBCharacterCustomAnim_KnockDown_Start_Back                                      = 41,
-	ESBCharacterCustomAnim_KnockDown_Loop                                            = 42,
-	ESBCharacterCustomAnim_KnockDown_End                                             = 43,
-	ESBCharacterCustomAnim_Caution_LeftToIdle                                        = 44,
-	ESBCharacterCustomAnim_Caution_RightToIdle                                       = 45,
-	ESBCharacterCustomAnim_HitSwordNormalLinkAttack1                                 = 46,
+	None                                                                             = -1,
+	Custom1                                                                          = 0,
+	Custom2                                                                          = 1,
+	Custom3                                                                          = 2,
+	Custom4                                                                          = 3,
+	Custom5                                                                          = 4,
+	Custom6                                                                          = 5,
+	Custom7                                                                          = 6,
+	Custom8                                                                          = 7,
+	Custom9                                                                          = 8,
+	Custom10                                                                         = 9,
+	Custom11                                                                         = 10,
+	Custom12                                                                         = 11,
+	Custom13                                                                         = 12,
+	Custom14                                                                         = 13,
+	Custom15                                                                         = 14,
+	Custom16                                                                         = 15,
+	Custom17                                                                         = 16,
+	Custom18                                                                         = 17,
+	Custom19                                                                         = 18,
+	Custom20                                                                         = 19,
+	HitStandLight1Left                                                               = 20,
+	HitStandLight1Right                                                              = 21,
+	HitStandLight1Back                                                               = 22,
+	HitStandLight1Front                                                              = 23,
+	HitStandLight2Left                                                               = 24,
+	HitStandLight2Right                                                              = 25,
+	HitStandLight2Back                                                               = 26,
+	HitStandLight2Front                                                              = 27,
+	HitStandStrong1Left                                                              = 28,
+	HitStandStrong1Right                                                             = 29,
+	HitStandStrong1Back                                                              = 30,
+	HitStandStrong1Front                                                             = 31,
+	HitStandStrong2Left                                                              = 32,
+	HitStandStrong2Right                                                             = 33,
+	HitStandStrong2Back                                                              = 34,
+	HitStandStrong2Front                                                             = 35,
+	Groggy_Start                                                                     = 36,
+	Groggy_Loop                                                                      = 37,
+	Groggy_End                                                                       = 38,
+	Airborne_Loop                                                                    = 39,
+	KnockDown_Start_Front                                                            = 40,
+	KnockDown_Start_Back                                                             = 41,
+	KnockDown_Loop                                                                   = 42,
+	KnockDown_End                                                                    = 43,
+	Caution_LeftToIdle                                                               = 44,
+	Caution_RightToIdle                                                              = 45,
+	HitSwordNormalLinkAttack1                                                        = 46,
 	ESBCharacterCustom_HitSwordNormalFinishLinkAttack1                               = 47,
 	ESBCharacterCustom_HitSwordAirDropAttack1                                        = 48,
 	ESBCharacterCustom_HitSwordNormalBackStab1                                       = 49,
-	ESBCharacterCustomAnim_Num                                                       = 50
+	Num                                                                              = 50
 };
 
 /// Enum /Script/SBAnimation.ESBCharacterTransitAnim

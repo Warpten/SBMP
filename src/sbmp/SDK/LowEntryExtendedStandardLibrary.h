@@ -18,116 +18,116 @@
 /// Size: 0x01 (1 bytes)
 enum class ELowEntryBatteryState : uint8_t
 {
-	ELowEntryBatteryState__Charging                                                  = 0,
-	ELowEntryBatteryState__Discharging                                               = 1,
-	ELowEntryBatteryState__Full                                                      = 2,
-	ELowEntryBatteryState__NotCharging                                               = 3,
-	ELowEntryBatteryState__Unknown                                                   = 4
+	Charging                                                                         = 0,
+	Discharging                                                                      = 1,
+	Full                                                                             = 2,
+	NotCharging                                                                      = 3,
+	Unknown                                                                          = 4
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibrary0to9
 /// Size: 0x01 (1 bytes)
 enum class ELowEntryExtendedStandardLibrary0to9 : uint8_t
 {
-	ELowEntryExtendedStandardLibrary0to9___0_                                        = 0,
-	ELowEntryExtendedStandardLibrary0to9___1_                                        = 1,
-	ELowEntryExtendedStandardLibrary0to9___2_                                        = 2,
-	ELowEntryExtendedStandardLibrary0to9___3_                                        = 3,
-	ELowEntryExtendedStandardLibrary0to9___4_                                        = 4,
-	ELowEntryExtendedStandardLibrary0to9___5_                                        = 5,
-	ELowEntryExtendedStandardLibrary0to9___6_                                        = 6,
-	ELowEntryExtendedStandardLibrary0to9___7_                                        = 7,
-	ELowEntryExtendedStandardLibrary0to9___8_                                        = 8,
-	ELowEntryExtendedStandardLibrary0to9___9_                                        = 9
+	0_                                                                               = 0,
+	1_                                                                               = 1,
+	2_                                                                               = 2,
+	3_                                                                               = 3,
+	4_                                                                               = 4,
+	5_                                                                               = 5,
+	6_                                                                               = 6,
+	7_                                                                               = 7,
+	8_                                                                               = 8,
+	9_                                                                               = 9
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibrary1to10other
 /// Size: 0x01 (1 bytes)
 enum class ELowEntryExtendedStandardLibrary1to10other : uint8_t
 {
-	ELowEntryExtendedStandardLibrary1to10other___1_                                  = 1,
-	ELowEntryExtendedStandardLibrary1to10other___2_                                  = 2,
-	ELowEntryExtendedStandardLibrary1to10other___3_                                  = 3,
-	ELowEntryExtendedStandardLibrary1to10other___4_                                  = 4,
-	ELowEntryExtendedStandardLibrary1to10other___5_                                  = 5,
-	ELowEntryExtendedStandardLibrary1to10other___6_                                  = 6,
-	ELowEntryExtendedStandardLibrary1to10other___7_                                  = 7,
-	ELowEntryExtendedStandardLibrary1to10other___8_                                  = 8,
-	ELowEntryExtendedStandardLibrary1to10other___9_                                  = 9,
-	ELowEntryExtendedStandardLibrary1to10other___10_                                 = 10,
-	ELowEntryExtendedStandardLibrary1to10other__Other                                = 0
+	1_                                                                               = 1,
+	2_                                                                               = 2,
+	3_                                                                               = 3,
+	4_                                                                               = 4,
+	5_                                                                               = 5,
+	6_                                                                               = 6,
+	7_                                                                               = 7,
+	8_                                                                               = 8,
+	9_                                                                               = 9,
+	10_                                                                              = 10,
+	Other                                                                            = 0
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibraryTrueOrFalse
 /// Size: 0x01 (1 bytes)
 enum class ELowEntryExtendedStandardLibraryTrueOrFalse : uint8_t
 {
-	ELowEntryExtendedStandardLibraryTrueOrFalse___True_                              = 0,
-	ELowEntryExtendedStandardLibraryTrueOrFalse___False_                             = 1
+	True_                                                                            = 0,
+	False_                                                                           = 1
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryHmacAlgorithm
 /// Size: 0x01 (1 bytes)
 enum class ELowEntryHmacAlgorithm : uint8_t
 {
-	ELowEntryHmacAlgorithm__MD5                                                      = 0,
-	ELowEntryHmacAlgorithm__SHA1                                                     = 1,
-	ELowEntryHmacAlgorithm__SHA256                                                   = 2,
-	ELowEntryHmacAlgorithm__SHA512                                                   = 3
+	MD5                                                                              = 0,
+	SHA1                                                                             = 1,
+	SHA256                                                                           = 2,
+	SHA512                                                                           = 3
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryImageFormat
 /// Size: 0x01 (1 bytes)
 enum class ELowEntryImageFormat : uint8_t
 {
-	ELowEntryImageFormat__Invalid                                                    = 0,
-	ELowEntryImageFormat__PNG                                                        = 1,
-	ELowEntryImageFormat__JPEG                                                       = 2,
-	ELowEntryImageFormat__GrayscaleJPEG                                              = 3,
-	ELowEntryImageFormat__BMP                                                        = 4,
-	ELowEntryImageFormat__ICO                                                        = 5,
-	ELowEntryImageFormat__EXR                                                        = 6,
-	ELowEntryImageFormat__ICNS                                                       = 7
+	Invalid                                                                          = 0,
+	PNG                                                                              = 1,
+	JPEG                                                                             = 2,
+	GrayscaleJPEG                                                                    = 3,
+	BMP                                                                              = 4,
+	ICO                                                                              = 5,
+	EXR                                                                              = 6,
+	ICNS                                                                             = 7
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryRGBFormat
 /// Size: 0x01 (1 bytes)
 enum class ELowEntryRGBFormat : uint8_t
 {
-	ELowEntryRGBFormat__Invalid                                                      = 0,
-	ELowEntryRGBFormat__RGBA                                                         = 1,
-	ELowEntryRGBFormat__BGRA                                                         = 2,
-	ELowEntryRGBFormat__Gray                                                         = 3
+	Invalid                                                                          = 0,
+	RGBA                                                                             = 1,
+	BGRA                                                                             = 2,
+	Gray                                                                             = 3
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenType
 /// Size: 0x01 (1 bytes)
 enum class ELowEntrySplitScreenType : uint8_t
 {
-	ELowEntrySplitScreenType__None                                                   = 0,
-	ELowEntrySplitScreenType__TwoPlayer_Horizontal                                   = 1,
-	ELowEntrySplitScreenType__TwoPlayer_Vertical                                     = 2,
-	ELowEntrySplitScreenType__ThreePlayer_FavorTop                                   = 3,
-	ELowEntrySplitScreenType__ThreePlayer_FavorBottom                                = 4,
-	ELowEntrySplitScreenType__ThreePlayer_Vertical                                   = 5,
-	ELowEntrySplitScreenType__FourPlayer_Grid                                        = 6,
-	ELowEntrySplitScreenType__FourPlayer_Vertical                                    = 7
+	None                                                                             = 0,
+	TwoPlayer_Horizontal                                                             = 1,
+	TwoPlayer_Vertical                                                               = 2,
+	ThreePlayer_FavorTop                                                             = 3,
+	ThreePlayer_FavorBottom                                                          = 4,
+	ThreePlayer_Vertical                                                             = 5,
+	FourPlayer_Grid                                                                  = 6,
+	FourPlayer_Vertical                                                              = 7
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenTypeThreePlayers
 /// Size: 0x01 (1 bytes)
 enum class ELowEntrySplitScreenTypeThreePlayers : uint8_t
 {
-	ELowEntrySplitScreenTypeThreePlayers__FavorTop                                   = 0,
-	ELowEntrySplitScreenTypeThreePlayers__FavorBottom                                = 1
+	FavorTop                                                                         = 0,
+	FavorBottom                                                                      = 1
 };
 
 /// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenTypeTwoPlayers
 /// Size: 0x01 (1 bytes)
 enum class ELowEntrySplitScreenTypeTwoPlayers : uint8_t
 {
-	ELowEntrySplitScreenTypeTwoPlayers__Horizontal                                   = 0,
-	ELowEntrySplitScreenTypeTwoPlayers__Vertical                                     = 1
+	Horizontal                                                                       = 0,
+	Vertical                                                                         = 1
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryBitDataEntry

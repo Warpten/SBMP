@@ -16,20 +16,20 @@
 /// Size: 0x01 (1 bytes)
 enum class UNISMode : uint8_t
 {
-	UNISMode__Off                                                                    = 0,
-	UNISMode__UltraQuality                                                           = 1,
-	UNISMode__Quality                                                                = 2,
-	UNISMode__Balanced                                                               = 3,
-	UNISMode__Performance                                                            = 4,
-	UNISMode__Custom                                                                 = 5
+	Off                                                                              = 0,
+	UltraQuality                                                                     = 1,
+	Quality                                                                          = 2,
+	Balanced                                                                         = 3,
+	Performance                                                                      = 4,
+	Custom                                                                           = 5
 };
 
 /// Enum /Script/NISBlueprint.UNISSupport
 /// Size: 0x01 (1 bytes)
 enum class UNISSupport : uint8_t
 {
-	UNISSupport__Supported                                                           = 0,
-	UNISSupport__NotSupported                                                        = 1
+	Supported                                                                        = 0,
+	NotSupported                                                                     = 1
 };
 
 /// Class /Script/NISBlueprint.NISLibrary

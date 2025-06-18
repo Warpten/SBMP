@@ -19,489 +19,489 @@
 /// Size: 0x01 (1 bytes)
 enum class EPathFollowingResult : uint8_t
 {
-	EPathFollowingResult__Success                                                    = 0,
-	EPathFollowingResult__Blocked                                                    = 1,
-	EPathFollowingResult__OffPath                                                    = 2,
-	EPathFollowingResult__Aborted                                                    = 3,
-	EPathFollowingResult__Skipped_DEPRECATED                                         = 4,
-	EPathFollowingResult__Invalid                                                    = 5
+	Success                                                                          = 0,
+	Blocked                                                                          = 1,
+	OffPath                                                                          = 2,
+	Aborted                                                                          = 3,
+	Skipped_DEPRECATED                                                               = 4,
+	Invalid                                                                          = 5
 };
 
 /// Enum /Script/AIModule.EEnvQueryStatus
 /// Size: 0x01 (1 bytes)
 enum class EEnvQueryStatus : uint8_t
 {
-	EEnvQueryStatus__Processing                                                      = 0,
-	EEnvQueryStatus__Success                                                         = 1,
-	EEnvQueryStatus__Failed                                                          = 2,
-	EEnvQueryStatus__Aborted                                                         = 3,
-	EEnvQueryStatus__OwnerLost                                                       = 4,
-	EEnvQueryStatus__MissingParam                                                    = 5
+	Processing                                                                       = 0,
+	Success                                                                          = 1,
+	Failed                                                                           = 2,
+	Aborted                                                                          = 3,
+	OwnerLost                                                                        = 4,
+	MissingParam                                                                     = 5
 };
 
 /// Enum /Script/AIModule.EAISenseNotifyType
 /// Size: 0x01 (1 bytes)
 enum class EAISenseNotifyType : uint8_t
 {
-	EAISenseNotifyType__OnEveryPerception                                            = 0,
-	EAISenseNotifyType__OnPerceptionChange                                           = 1
+	OnEveryPerception                                                                = 0,
+	OnPerceptionChange                                                               = 1
 };
 
 /// Enum /Script/AIModule.EAITaskPriority
 /// Size: 0x01 (1 bytes)
 enum class EAITaskPriority : uint8_t
 {
-	EAITaskPriority__Lowest                                                          = 0,
-	EAITaskPriority__Low                                                             = 64,
-	EAITaskPriority__AutonomousAI                                                    = 127,
-	EAITaskPriority__High                                                            = 192,
-	EAITaskPriority__Ultimate                                                        = 254
+	Lowest                                                                           = 0,
+	Low                                                                              = 64,
+	AutonomousAI                                                                     = 127,
+	High                                                                             = 192,
+	Ultimate                                                                         = 254
 };
 
 /// Enum /Script/AIModule.EGenericAICheck
 /// Size: 0x01 (1 bytes)
 enum class EGenericAICheck : uint8_t
 {
-	EGenericAICheck__Less                                                            = 0,
-	EGenericAICheck__LessOrEqual                                                     = 1,
-	EGenericAICheck__Equal                                                           = 2,
-	EGenericAICheck__NotEqual                                                        = 3,
-	EGenericAICheck__GreaterOrEqual                                                  = 4,
-	EGenericAICheck__Greater                                                         = 5,
-	EGenericAICheck__IsTrue                                                          = 6
+	Less                                                                             = 0,
+	LessOrEqual                                                                      = 1,
+	Equal                                                                            = 2,
+	NotEqual                                                                         = 3,
+	GreaterOrEqual                                                                   = 4,
+	Greater                                                                          = 5,
+	IsTrue                                                                           = 6
 };
 
 /// Enum /Script/AIModule.EAILockSource
 /// Size: 0x01 (1 bytes)
 enum class EAILockSource : uint8_t
 {
-	EAILockSource__Animation                                                         = 0,
-	EAILockSource__Logic                                                             = 1,
-	EAILockSource__Script                                                            = 2,
-	EAILockSource__Gameplay                                                          = 3
+	Animation                                                                        = 0,
+	Logic                                                                            = 1,
+	Script                                                                           = 2,
+	Gameplay                                                                         = 3
 };
 
 /// Enum /Script/AIModule.EAIRequestPriority
 /// Size: 0x01 (1 bytes)
 enum class EAIRequestPriority : uint8_t
 {
-	EAIRequestPriority__SoftScript                                                   = 0,
-	EAIRequestPriority__Logic                                                        = 1,
-	EAIRequestPriority__HardScript                                                   = 2,
-	EAIRequestPriority__Reaction                                                     = 3,
-	EAIRequestPriority__Ultimate                                                     = 4
+	SoftScript                                                                       = 0,
+	Logic                                                                            = 1,
+	HardScript                                                                       = 2,
+	Reaction                                                                         = 3,
+	Ultimate                                                                         = 4
 };
 
 /// Enum /Script/AIModule.EPawnActionEventType
 /// Size: 0x01 (1 bytes)
 enum class EPawnActionEventType : uint8_t
 {
-	EPawnActionEventType__Invalid                                                    = 0,
-	EPawnActionEventType__FailedToStart                                              = 1,
-	EPawnActionEventType__InstantAbort                                               = 2,
-	EPawnActionEventType__FinishedAborting                                           = 3,
-	EPawnActionEventType__FinishedExecution                                          = 4,
-	EPawnActionEventType__Push                                                       = 5
+	Invalid                                                                          = 0,
+	FailedToStart                                                                    = 1,
+	InstantAbort                                                                     = 2,
+	FinishedAborting                                                                 = 3,
+	FinishedExecution                                                                = 4,
+	Push                                                                             = 5
 };
 
 /// Enum /Script/AIModule.EPawnActionResult
 /// Size: 0x01 (1 bytes)
 enum class EPawnActionResult : uint8_t
 {
-	EPawnActionResult__NotStarted                                                    = 0,
-	EPawnActionResult__InProgress                                                    = 1,
-	EPawnActionResult__Success                                                       = 2,
-	EPawnActionResult__Failed                                                        = 3,
-	EPawnActionResult__Aborted                                                       = 4
+	NotStarted                                                                       = 0,
+	InProgress                                                                       = 1,
+	Success                                                                          = 2,
+	Failed                                                                           = 3,
+	Aborted                                                                          = 4
 };
 
 /// Enum /Script/AIModule.EPawnActionAbortState
 /// Size: 0x01 (1 bytes)
 enum class EPawnActionAbortState : uint8_t
 {
-	EPawnActionAbortState__NeverStarted                                              = 0,
-	EPawnActionAbortState__NotBeingAborted                                           = 1,
-	EPawnActionAbortState__MarkPendingAbort                                          = 2,
-	EPawnActionAbortState__LatentAbortInProgress                                     = 3,
-	EPawnActionAbortState__AbortDone                                                 = 4
+	NeverStarted                                                                     = 0,
+	NotBeingAborted                                                                  = 1,
+	MarkPendingAbort                                                                 = 2,
+	LatentAbortInProgress                                                            = 3,
+	AbortDone                                                                        = 4
 };
 
 /// Enum /Script/AIModule.FAIDistanceType
 /// Size: 0x01 (1 bytes)
 enum class FAIDistanceType : uint8_t
 {
-	FAIDistanceType__Distance3D                                                      = 0,
-	FAIDistanceType__Distance2D                                                      = 1,
-	FAIDistanceType__DistanceZ                                                       = 2
+	Distance3D                                                                       = 0,
+	Distance2D                                                                       = 1,
+	DistanceZ                                                                        = 2
 };
 
 /// Enum /Script/AIModule.EAIOptionFlag
 /// Size: 0x01 (1 bytes)
 enum class EAIOptionFlag : uint8_t
 {
-	EAIOptionFlag__Default                                                           = 0,
-	EAIOptionFlag__Enable                                                            = 1,
-	EAIOptionFlag__Disable                                                           = 2
+	Default                                                                          = 0,
+	Enable                                                                           = 1,
+	Disable                                                                          = 2
 };
 
 /// Enum /Script/AIModule.EBTFlowAbortMode
 /// Size: 0x01 (1 bytes)
 enum class EBTFlowAbortMode : uint8_t
 {
-	EBTFlowAbortMode__None                                                           = 0,
-	EBTFlowAbortMode__LowerPriority                                                  = 1,
-	EBTFlowAbortMode__Self                                                           = 2,
-	EBTFlowAbortMode__Both                                                           = 3
+	None                                                                             = 0,
+	LowerPriority                                                                    = 1,
+	Self                                                                             = 2,
+	Both                                                                             = 3
 };
 
 /// Enum /Script/AIModule.EBTNodeResult
 /// Size: 0x01 (1 bytes)
 enum class EBTNodeResult : uint8_t
 {
-	EBTNodeResult__Succeeded                                                         = 0,
-	EBTNodeResult__Failed                                                            = 1,
-	EBTNodeResult__Aborted                                                           = 2,
-	EBTNodeResult__InProgress                                                        = 3
+	Succeeded                                                                        = 0,
+	Failed                                                                           = 1,
+	Aborted                                                                          = 2,
+	InProgress                                                                       = 3
 };
 
 /// Enum /Script/AIModule.ETextKeyOperation
 /// Size: 0x01 (1 bytes)
 enum class ETextKeyOperation : uint8_t
 {
-	ETextKeyOperation__Equal                                                         = 0,
-	ETextKeyOperation__NotEqual                                                      = 1,
-	ETextKeyOperation__Contain                                                       = 2,
-	ETextKeyOperation__NotContain                                                    = 3
+	Equal                                                                            = 0,
+	NotEqual                                                                         = 1,
+	Contain                                                                          = 2,
+	NotContain                                                                       = 3
 };
 
 /// Enum /Script/AIModule.EArithmeticKeyOperation
 /// Size: 0x01 (1 bytes)
 enum class EArithmeticKeyOperation : uint8_t
 {
-	EArithmeticKeyOperation__Equal                                                   = 0,
-	EArithmeticKeyOperation__NotEqual                                                = 1,
-	EArithmeticKeyOperation__Less                                                    = 2,
-	EArithmeticKeyOperation__LessOrEqual                                             = 3,
-	EArithmeticKeyOperation__Greater                                                 = 4,
-	EArithmeticKeyOperation__GreaterOrEqual                                          = 5
+	Equal                                                                            = 0,
+	NotEqual                                                                         = 1,
+	Less                                                                             = 2,
+	LessOrEqual                                                                      = 3,
+	Greater                                                                          = 4,
+	GreaterOrEqual                                                                   = 5
 };
 
 /// Enum /Script/AIModule.EBasicKeyOperation
 /// Size: 0x01 (1 bytes)
 enum class EBasicKeyOperation : uint8_t
 {
-	EBasicKeyOperation__Set                                                          = 0,
-	EBasicKeyOperation__NotSet                                                       = 1
+	Set                                                                              = 0,
+	NotSet                                                                           = 1
 };
 
 /// Enum /Script/AIModule.EBTParallelMode
 /// Size: 0x01 (1 bytes)
 enum class EBTParallelMode : uint8_t
 {
-	EBTParallelMode__AbortBackground                                                 = 0,
-	EBTParallelMode__WaitForBackground                                               = 1
+	AbortBackground                                                                  = 0,
+	WaitForBackground                                                                = 1
 };
 
 /// Enum /Script/AIModule.EBTDecoratorLogic
 /// Size: 0x01 (1 bytes)
 enum class EBTDecoratorLogic : uint8_t
 {
-	EBTDecoratorLogic__Invalid                                                       = 0,
-	EBTDecoratorLogic__Test                                                          = 1,
-	EBTDecoratorLogic__And                                                           = 2,
-	EBTDecoratorLogic__Or                                                            = 3,
-	EBTDecoratorLogic__Not                                                           = 4
+	Invalid                                                                          = 0,
+	Test                                                                             = 1,
+	And                                                                              = 2,
+	Or                                                                               = 3,
+	Not                                                                              = 4
 };
 
 /// Enum /Script/AIModule.EBTChildIndex
 /// Size: 0x01 (1 bytes)
 enum class EBTChildIndex : uint8_t
 {
-	EBTChildIndex__FirstNode                                                         = 0,
-	EBTChildIndex__TaskNode                                                          = 1
+	FirstNode                                                                        = 0,
+	TaskNode                                                                         = 1
 };
 
 /// Enum /Script/AIModule.EBTBlackboardRestart
 /// Size: 0x01 (1 bytes)
 enum class EBTBlackboardRestart : uint8_t
 {
-	EBTBlackboardRestart__ValueChange                                                = 0,
-	EBTBlackboardRestart__ResultChange                                               = 1
+	ValueChange                                                                      = 0,
+	ResultChange                                                                     = 1
 };
 
 /// Enum /Script/AIModule.EBlackBoardEntryComparison
 /// Size: 0x01 (1 bytes)
 enum class EBlackBoardEntryComparison : uint8_t
 {
-	EBlackBoardEntryComparison__Equal                                                = 0,
-	EBlackBoardEntryComparison__NotEqual                                             = 1
+	Equal                                                                            = 0,
+	NotEqual                                                                         = 1
 };
 
 /// Enum /Script/AIModule.EPathExistanceQueryType
 /// Size: 0x01 (1 bytes)
 enum class EPathExistanceQueryType : uint8_t
 {
-	EPathExistanceQueryType__NavmeshRaycast2D                                        = 0,
-	EPathExistanceQueryType__HierarchicalQuery                                       = 1,
-	EPathExistanceQueryType__RegularPathFinding                                      = 2
+	NavmeshRaycast2D                                                                 = 0,
+	HierarchicalQuery                                                                = 1,
+	RegularPathFinding                                                               = 2
 };
 
 /// Enum /Script/AIModule.EPointOnCircleSpacingMethod
 /// Size: 0x01 (1 bytes)
 enum class EPointOnCircleSpacingMethod : uint8_t
 {
-	EPointOnCircleSpacingMethod__BySpaceBetween                                      = 0,
-	EPointOnCircleSpacingMethod__ByNumberOfPoints                                    = 1
+	BySpaceBetween                                                                   = 0,
+	ByNumberOfPoints                                                                 = 1
 };
 
 /// Enum /Script/AIModule.EEQSNormalizationType
 /// Size: 0x01 (1 bytes)
 enum class EEQSNormalizationType : uint8_t
 {
-	EEQSNormalizationType__Absolute                                                  = 0,
-	EEQSNormalizationType__RelativeToScores                                          = 1
+	Absolute                                                                         = 0,
+	RelativeToScores                                                                 = 1
 };
 
 /// Enum /Script/AIModule.EEnvTestDistance
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestDistance : uint8_t
 {
-	EEnvTestDistance__Distance3D                                                     = 0,
-	EEnvTestDistance__Distance2D                                                     = 1,
-	EEnvTestDistance__DistanceZ                                                      = 2,
-	EEnvTestDistance__DistanceAbsoluteZ                                              = 3
+	Distance3D                                                                       = 0,
+	Distance2D                                                                       = 1,
+	DistanceZ                                                                        = 2,
+	DistanceAbsoluteZ                                                                = 3
 };
 
 /// Enum /Script/AIModule.EEnvTestDot
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestDot : uint8_t
 {
-	EEnvTestDot__Dot3D                                                               = 0,
-	EEnvTestDot__Dot2D                                                               = 1
+	Dot3D                                                                            = 0,
+	Dot2D                                                                            = 1
 };
 
 /// Enum /Script/AIModule.EEnvTestPathfinding
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestPathfinding : uint8_t
 {
-	EEnvTestPathfinding__PathExist                                                   = 0,
-	EEnvTestPathfinding__PathCost                                                    = 1,
-	EEnvTestPathfinding__PathLength                                                  = 2
+	PathExist                                                                        = 0,
+	PathCost                                                                         = 1,
+	PathLength                                                                       = 2
 };
 
 /// Enum /Script/AIModule.EEnvQueryTestClamping
 /// Size: 0x01 (1 bytes)
 enum class EEnvQueryTestClamping : uint8_t
 {
-	EEnvQueryTestClamping__None                                                      = 0,
-	EEnvQueryTestClamping__SpecifiedValue                                            = 1,
-	EEnvQueryTestClamping__FilterThreshold                                           = 2
+	None                                                                             = 0,
+	SpecifiedValue                                                                   = 1,
+	FilterThreshold                                                                  = 2
 };
 
 /// Enum /Script/AIModule.EEnvDirection
 /// Size: 0x01 (1 bytes)
 enum class EEnvDirection : uint8_t
 {
-	EEnvDirection__TwoPoints                                                         = 0,
-	EEnvDirection__Rotation                                                          = 1
+	TwoPoints                                                                        = 0,
+	Rotation                                                                         = 1
 };
 
 /// Enum /Script/AIModule.EEnvOverlapShape
 /// Size: 0x01 (1 bytes)
 enum class EEnvOverlapShape : uint8_t
 {
-	EEnvOverlapShape__Box                                                            = 0,
-	EEnvOverlapShape__Sphere                                                         = 1,
-	EEnvOverlapShape__Capsule                                                        = 2
+	Box                                                                              = 0,
+	Sphere                                                                           = 1,
+	Capsule                                                                          = 2
 };
 
 /// Enum /Script/AIModule.EEnvTraceShape
 /// Size: 0x01 (1 bytes)
 enum class EEnvTraceShape : uint8_t
 {
-	EEnvTraceShape__Line                                                             = 0,
-	EEnvTraceShape__Box                                                              = 1,
-	EEnvTraceShape__Sphere                                                           = 2,
-	EEnvTraceShape__Capsule                                                          = 3
+	Line                                                                             = 0,
+	Box                                                                              = 1,
+	Sphere                                                                           = 2,
+	Capsule                                                                          = 3
 };
 
 /// Enum /Script/AIModule.EEnvQueryTrace
 /// Size: 0x01 (1 bytes)
 enum class EEnvQueryTrace : uint8_t
 {
-	EEnvQueryTrace__None                                                             = 0,
-	EEnvQueryTrace__Navigation                                                       = 1,
-	EEnvQueryTrace__Geometry                                                         = 2,
-	EEnvQueryTrace__NavigationOverLedges                                             = 3
+	None                                                                             = 0,
+	Navigation                                                                       = 1,
+	Geometry                                                                         = 2,
+	NavigationOverLedges                                                             = 3
 };
 
 /// Enum /Script/AIModule.EAIParamType
 /// Size: 0x01 (1 bytes)
 enum class EAIParamType : uint8_t
 {
-	EAIParamType__Float                                                              = 0,
-	EAIParamType__Int                                                                = 1,
-	EAIParamType__Bool                                                               = 2
+	Float                                                                            = 0,
+	Int                                                                              = 1,
+	Bool                                                                             = 2
 };
 
 /// Enum /Script/AIModule.EEnvQueryParam
 /// Size: 0x01 (1 bytes)
 enum class EEnvQueryParam : uint8_t
 {
-	EEnvQueryParam__Float                                                            = 0,
-	EEnvQueryParam__Int                                                              = 1,
-	EEnvQueryParam__Bool                                                             = 2
+	Float                                                                            = 0,
+	Int                                                                              = 1,
+	Bool                                                                             = 2
 };
 
 /// Enum /Script/AIModule.EEnvQueryRunMode
 /// Size: 0x01 (1 bytes)
 enum class EEnvQueryRunMode : uint8_t
 {
-	EEnvQueryRunMode__SingleResult                                                   = 0,
-	EEnvQueryRunMode__RandomBest5Pct                                                 = 1,
-	EEnvQueryRunMode__RandomBest25Pct                                                = 2,
-	EEnvQueryRunMode__AllMatching                                                    = 3
+	SingleResult                                                                     = 0,
+	RandomBest5Pct                                                                   = 1,
+	RandomBest25Pct                                                                  = 2,
+	AllMatching                                                                      = 3
 };
 
 /// Enum /Script/AIModule.EEnvTestScoreOperator
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestScoreOperator : uint8_t
 {
-	EEnvTestScoreOperator__AverageScore                                              = 0,
-	EEnvTestScoreOperator__MinScore                                                  = 1,
-	EEnvTestScoreOperator__MaxScore                                                  = 2,
-	EEnvTestScoreOperator__Multiply                                                  = 3
+	AverageScore                                                                     = 0,
+	MinScore                                                                         = 1,
+	MaxScore                                                                         = 2,
+	Multiply                                                                         = 3
 };
 
 /// Enum /Script/AIModule.EEnvTestFilterOperator
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestFilterOperator : uint8_t
 {
-	EEnvTestFilterOperator__AllPass                                                  = 0,
-	EEnvTestFilterOperator__AnyPass                                                  = 1
+	AllPass                                                                          = 0,
+	AnyPass                                                                          = 1
 };
 
 /// Enum /Script/AIModule.EEnvTestCost
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestCost : uint8_t
 {
-	EEnvTestCost__Low                                                                = 0,
-	EEnvTestCost__Medium                                                             = 1,
-	EEnvTestCost__High                                                               = 2
+	Low                                                                              = 0,
+	Medium                                                                           = 1,
+	High                                                                             = 2
 };
 
 /// Enum /Script/AIModule.EEnvTestWeight
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestWeight : uint8_t
 {
-	EEnvTestWeight__None                                                             = 0,
-	EEnvTestWeight__Square                                                           = 1,
-	EEnvTestWeight__Inverse                                                          = 2,
-	EEnvTestWeight__Unused                                                           = 3,
-	EEnvTestWeight__Constant                                                         = 4,
-	EEnvTestWeight__Skip                                                             = 5
+	None                                                                             = 0,
+	Square                                                                           = 1,
+	Inverse                                                                          = 2,
+	Unused                                                                           = 3,
+	Constant                                                                         = 4,
+	Skip                                                                             = 5
 };
 
 /// Enum /Script/AIModule.EEnvTestScoreEquation
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestScoreEquation : uint8_t
 {
-	EEnvTestScoreEquation__Linear                                                    = 0,
-	EEnvTestScoreEquation__Square                                                    = 1,
-	EEnvTestScoreEquation__InverseLinear                                             = 2,
-	EEnvTestScoreEquation__SquareRoot                                                = 3,
-	EEnvTestScoreEquation__Constant                                                  = 4
+	Linear                                                                           = 0,
+	Square                                                                           = 1,
+	InverseLinear                                                                    = 2,
+	SquareRoot                                                                       = 3,
+	Constant                                                                         = 4
 };
 
 /// Enum /Script/AIModule.EEnvTestFilterType
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestFilterType : uint8_t
 {
-	EEnvTestFilterType__Minimum                                                      = 0,
-	EEnvTestFilterType__Maximum                                                      = 1,
-	EEnvTestFilterType__Range                                                        = 2,
-	EEnvTestFilterType__Match                                                        = 3
+	Minimum                                                                          = 0,
+	Maximum                                                                          = 1,
+	Range                                                                            = 2,
+	Match                                                                            = 3
 };
 
 /// Enum /Script/AIModule.EEnvTestPurpose
 /// Size: 0x01 (1 bytes)
 enum class EEnvTestPurpose : uint8_t
 {
-	EEnvTestPurpose__Filter                                                          = 0,
-	EEnvTestPurpose__Score                                                           = 1,
-	EEnvTestPurpose__FilterAndScore                                                  = 2
+	Filter                                                                           = 0,
+	Score                                                                            = 1,
+	FilterAndScore                                                                   = 2
 };
 
 /// Enum /Script/AIModule.EEnvQueryHightlightMode
 /// Size: 0x01 (1 bytes)
 enum class EEnvQueryHightlightMode : uint8_t
 {
-	EEnvQueryHightlightMode__All                                                     = 0,
-	EEnvQueryHightlightMode__Best5Pct                                                = 1,
-	EEnvQueryHightlightMode__Best25Pct                                               = 2
+	All                                                                              = 0,
+	Best5Pct                                                                         = 1,
+	Best25Pct                                                                        = 2
 };
 
 /// Enum /Script/AIModule.ETeamAttitude
 /// Size: 0x01 (1 bytes)
 enum class ETeamAttitude : uint8_t
 {
-	ETeamAttitude__Friendly                                                          = 0,
-	ETeamAttitude__Neutral                                                           = 1,
-	ETeamAttitude__Hostile                                                           = 2
+	Friendly                                                                         = 0,
+	Neutral                                                                          = 1,
+	Hostile                                                                          = 2
 };
 
 /// Enum /Script/AIModule.EPathFollowingRequestResult
 /// Size: 0x01 (1 bytes)
 enum class EPathFollowingRequestResult : uint8_t
 {
-	EPathFollowingRequestResult__Failed                                              = 0,
-	EPathFollowingRequestResult__AlreadyAtGoal                                       = 1,
-	EPathFollowingRequestResult__RequestSuccessful                                   = 2
+	Failed                                                                           = 0,
+	AlreadyAtGoal                                                                    = 1,
+	RequestSuccessful                                                                = 2
 };
 
 /// Enum /Script/AIModule.EPathFollowingAction
 /// Size: 0x01 (1 bytes)
 enum class EPathFollowingAction : uint8_t
 {
-	EPathFollowingAction__Error                                                      = 0,
-	EPathFollowingAction__NoMove                                                     = 1,
-	EPathFollowingAction__DirectMove                                                 = 2,
-	EPathFollowingAction__PartialPath                                                = 3,
-	EPathFollowingAction__PathToGoal                                                 = 4
+	Error                                                                            = 0,
+	NoMove                                                                           = 1,
+	DirectMove                                                                       = 2,
+	PartialPath                                                                      = 3,
+	PathToGoal                                                                       = 4
 };
 
 /// Enum /Script/AIModule.EPathFollowingStatus
 /// Size: 0x01 (1 bytes)
 enum class EPathFollowingStatus : uint8_t
 {
-	EPathFollowingStatus__Idle                                                       = 0,
-	EPathFollowingStatus__Waiting                                                    = 1,
-	EPathFollowingStatus__Paused                                                     = 2,
-	EPathFollowingStatus__Moving                                                     = 3
+	Idle                                                                             = 0,
+	Waiting                                                                          = 1,
+	Paused                                                                           = 2,
+	Moving                                                                           = 3
 };
 
 /// Enum /Script/AIModule.EPawnActionFailHandling
 /// Size: 0x01 (1 bytes)
 enum class EPawnActionFailHandling : uint8_t
 {
-	EPawnActionFailHandling__RequireSuccess                                          = 0,
-	EPawnActionFailHandling__IgnoreFailure                                           = 1
+	RequireSuccess                                                                   = 0,
+	IgnoreFailure                                                                    = 1
 };
 
 /// Enum /Script/AIModule.EPawnSubActionTriggeringPolicy
 /// Size: 0x01 (1 bytes)
 enum class EPawnSubActionTriggeringPolicy : uint8_t
 {
-	EPawnSubActionTriggeringPolicy__CopyBeforeTriggering                             = 0,
-	EPawnSubActionTriggeringPolicy__ReuseInstances                                   = 1
+	CopyBeforeTriggering                                                             = 0,
+	ReuseInstances                                                                   = 1
 };
 
 /// Enum /Script/AIModule.EPawnActionMoveMode
 /// Size: 0x01 (1 bytes)
 enum class EPawnActionMoveMode : uint8_t
 {
-	EPawnActionMoveMode__UsePathfinding                                              = 0,
-	EPawnActionMoveMode__StraightLine                                                = 1
+	UsePathfinding                                                                   = 0,
+	StraightLine                                                                     = 1
 };
 
 /// Class /Script/AIModule.AIController

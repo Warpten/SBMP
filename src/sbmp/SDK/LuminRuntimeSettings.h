@@ -16,82 +16,82 @@
 /// Size: 0x01 (1 bytes)
 enum class ELuminPrivilege : uint8_t
 {
-	ELuminPrivilege__Invalid                                                         = 0,
-	ELuminPrivilege__BatteryInfo                                                     = 1,
-	ELuminPrivilege__CameraCapture                                                   = 2,
-	ELuminPrivilege__ComputerVision                                                  = 3,
-	ELuminPrivilege__WorldReconstruction                                             = 4,
-	ELuminPrivilege__InAppPurchase                                                   = 5,
-	ELuminPrivilege__AudioCaptureMic                                                 = 6,
-	ELuminPrivilege__DrmCertificates                                                 = 7,
-	ELuminPrivilege__Occlusion                                                       = 8,
-	ELuminPrivilege__LowLatencyLightwear                                             = 9,
-	ELuminPrivilege__Internet                                                        = 10,
-	ELuminPrivilege__IdentityRead                                                    = 11,
-	ELuminPrivilege__BackgroundDownload                                              = 12,
-	ELuminPrivilege__BackgroundUpload                                                = 13,
-	ELuminPrivilege__MediaDrm                                                        = 14,
-	ELuminPrivilege__Media                                                           = 15,
-	ELuminPrivilege__MediaMetadata                                                   = 16,
-	ELuminPrivilege__PowerInfo                                                       = 17,
-	ELuminPrivilege__LocalAreaNetwork                                                = 18,
-	ELuminPrivilege__VoiceInput                                                      = 19,
-	ELuminPrivilege__Documents                                                       = 20,
-	ELuminPrivilege__ConnectBackgroundMusicService                                   = 21,
-	ELuminPrivilege__RegisterBackgroundMusicService                                  = 22,
-	ELuminPrivilege__PcfRead                                                         = 23,
-	ELuminPrivilege__PwFoundObjRead                                                  = 23,
-	ELuminPrivilege__NormalNotificationsUsage                                        = 24,
-	ELuminPrivilege__MusicService                                                    = 25,
-	ELuminPrivilege__ControllerPose                                                  = 26,
-	ELuminPrivilege__GesturesSubscribe                                               = 27,
-	ELuminPrivilege__GesturesConfig                                                  = 28,
-	ELuminPrivilege__AddressBookRead                                                 = 29,
-	ELuminPrivilege__AddressBookWrite                                                = 30,
-	ELuminPrivilege__AddressBookBasicAccess                                          = 31,
-	ELuminPrivilege__CoarseLocation                                                  = 32,
-	ELuminPrivilege__FineLocation                                                    = 33,
-	ELuminPrivilege__HandMesh                                                        = 34,
-	ELuminPrivilege__WifiStatusRead                                                  = 35,
-	ELuminPrivilege__SocialConnectionsInvitesAccess                                  = 36,
-	ELuminPrivilege__SocialConnectionsSelectAccess                                   = 37,
-	ELuminPrivilege__SecureBrowserWindow                                             = 38,
-	ELuminPrivilege__BluetoothAdapterExternalApp                                     = 39,
-	ELuminPrivilege__BluetoothAdapterUser                                            = 40,
-	ELuminPrivilege__BluetoothGattWrite                                              = 41
+	Invalid                                                                          = 0,
+	BatteryInfo                                                                      = 1,
+	CameraCapture                                                                    = 2,
+	ComputerVision                                                                   = 3,
+	WorldReconstruction                                                              = 4,
+	InAppPurchase                                                                    = 5,
+	AudioCaptureMic                                                                  = 6,
+	DrmCertificates                                                                  = 7,
+	Occlusion                                                                        = 8,
+	LowLatencyLightwear                                                              = 9,
+	Internet                                                                         = 10,
+	IdentityRead                                                                     = 11,
+	BackgroundDownload                                                               = 12,
+	BackgroundUpload                                                                 = 13,
+	MediaDrm                                                                         = 14,
+	Media                                                                            = 15,
+	MediaMetadata                                                                    = 16,
+	PowerInfo                                                                        = 17,
+	LocalAreaNetwork                                                                 = 18,
+	VoiceInput                                                                       = 19,
+	Documents                                                                        = 20,
+	ConnectBackgroundMusicService                                                    = 21,
+	RegisterBackgroundMusicService                                                   = 22,
+	PcfRead                                                                          = 23,
+	PwFoundObjRead                                                                   = 23,
+	NormalNotificationsUsage                                                         = 24,
+	MusicService                                                                     = 25,
+	ControllerPose                                                                   = 26,
+	GesturesSubscribe                                                                = 27,
+	GesturesConfig                                                                   = 28,
+	AddressBookRead                                                                  = 29,
+	AddressBookWrite                                                                 = 30,
+	AddressBookBasicAccess                                                           = 31,
+	CoarseLocation                                                                   = 32,
+	FineLocation                                                                     = 33,
+	HandMesh                                                                         = 34,
+	WifiStatusRead                                                                   = 35,
+	SocialConnectionsInvitesAccess                                                   = 36,
+	SocialConnectionsSelectAccess                                                    = 37,
+	SecureBrowserWindow                                                              = 38,
+	BluetoothAdapterExternalApp                                                      = 39,
+	BluetoothAdapterUser                                                             = 40,
+	BluetoothGattWrite                                                               = 41
 };
 
 /// Enum /Script/LuminRuntimeSettings.ELuminFrameTimingHint
 /// Size: 0x01 (1 bytes)
 enum class ELuminFrameTimingHint : uint8_t
 {
-	ELuminFrameTimingHint__Unspecified                                               = 0,
-	ELuminFrameTimingHint__Maximum                                                   = 1,
-	ELuminFrameTimingHint__FPS                                                       = 2,
-	ELuminFrameTimingHint__FPS4                                                      = 3
+	Unspecified                                                                      = 0,
+	Maximum                                                                          = 1,
+	FPS                                                                              = 2,
+	FPS4                                                                             = 3
 };
 
 /// Enum /Script/LuminRuntimeSettings.ELuminComponentType
 /// Size: 0x01 (1 bytes)
 enum class ELuminComponentType : uint8_t
 {
-	ELuminComponentType__Universe                                                    = 0,
-	ELuminComponentType__Fullscreen                                                  = 1,
-	ELuminComponentType__SearchProvider                                              = 2,
-	ELuminComponentType__MusicService                                                = 3,
-	ELuminComponentType__Console                                                     = 4,
-	ELuminComponentType__SystemUI                                                    = 5
+	Universe                                                                         = 0,
+	Fullscreen                                                                       = 1,
+	SearchProvider                                                                   = 2,
+	MusicService                                                                     = 3,
+	Console                                                                          = 4,
+	SystemUI                                                                         = 5
 };
 
 /// Enum /Script/LuminRuntimeSettings.ELuminComponentSubElementType
 /// Size: 0x01 (1 bytes)
 enum class ELuminComponentSubElementType : uint8_t
 {
-	ELuminComponentSubElementType__FileExtension                                     = 0,
-	ELuminComponentSubElementType__MimeType                                          = 1,
-	ELuminComponentSubElementType__Mode                                              = 2,
-	ELuminComponentSubElementType__MusicAttribute                                    = 3,
-	ELuminComponentSubElementType__Schema                                            = 4
+	FileExtension                                                                    = 0,
+	MimeType                                                                         = 1,
+	Mode                                                                             = 2,
+	MusicAttribute                                                                   = 3,
+	Schema                                                                           = 4
 };
 
 /// Struct /Script/LuminRuntimeSettings.LocalizedIconInfo

@@ -20,21 +20,21 @@
 /// Size: 0x01 (1 bytes)
 enum class ELuminARLineTraceChannel : uint8_t
 {
-	ELuminARLineTraceChannel__None                                                   = 0,
-	ELuminARLineTraceChannel__FeaturePoint                                           = 1,
-	ELuminARLineTraceChannel__InfinitePlane                                          = 2,
-	ELuminARLineTraceChannel__PlaneUsingExtent                                       = 4,
-	ELuminARLineTraceChannel__PlaneUsingBoundaryPolygon                              = 8,
-	ELuminARLineTraceChannel__FeaturePointWithSurfaceNormal                          = 16
+	None                                                                             = 0,
+	FeaturePoint                                                                     = 1,
+	InfinitePlane                                                                    = 2,
+	PlaneUsingExtent                                                                 = 4,
+	PlaneUsingBoundaryPolygon                                                        = 8,
+	FeaturePointWithSurfaceNormal                                                    = 16
 };
 
 /// Enum /Script/MagicLeapAR.ELuminARTrackingState
 /// Size: 0x01 (1 bytes)
 enum class ELuminARTrackingState : uint8_t
 {
-	ELuminARTrackingState__Tracking                                                  = 0,
-	ELuminARTrackingState__NotTracking                                               = 1,
-	ELuminARTrackingState__StoppedTracking                                           = 2
+	Tracking                                                                         = 0,
+	NotTracking                                                                      = 1,
+	StoppedTracking                                                                  = 2
 };
 
 /// Class /Script/MagicLeapAR.LuminARSessionFunctionLibrary

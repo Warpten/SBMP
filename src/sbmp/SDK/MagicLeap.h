@@ -18,101 +18,101 @@
 /// Size: 0x01 (1 bytes)
 enum class PurchaseType : uint8_t
 {
-	PurchaseType__Consumable                                                         = 0,
-	PurchaseType__Nonconsumable                                                      = 1,
-	PurchaseType__Undefined                                                          = 2
+	Consumable                                                                       = 0,
+	Nonconsumable                                                                    = 1,
+	Undefined                                                                        = 2
 };
 
 /// Enum /Script/MagicLeap.EFocusLostReason
 /// Size: 0x01 (1 bytes)
 enum class EFocusLostReason : uint8_t
 {
-	EFocusLostReason__EFocusLostReason_Invalid                                       = 0,
-	EFocusLostReason__EFocusLostReason_System                                        = 1
+	EFocusLostReason_Invalid                                                         = 0,
+	EFocusLostReason_System                                                          = 1
 };
 
 /// Enum /Script/MagicLeap.EMagicLeapMeshLOD
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapMeshLOD : uint8_t
 {
-	EMagicLeapMeshLOD__Minimum                                                       = 0,
-	EMagicLeapMeshLOD__Medium                                                        = 1,
-	EMagicLeapMeshLOD__Maximum                                                       = 2
+	Minimum                                                                          = 0,
+	Medium                                                                           = 1,
+	Maximum                                                                          = 2
 };
 
 /// Enum /Script/MagicLeap.EMagicLeapMeshState
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapMeshState : uint8_t
 {
-	EMagicLeapMeshState__New                                                         = 0,
-	EMagicLeapMeshState__Updated                                                     = 1,
-	EMagicLeapMeshState__Deleted                                                     = 2,
-	EMagicLeapMeshState__Unchanged                                                   = 3
+	New                                                                              = 0,
+	Updated                                                                          = 1,
+	Deleted                                                                          = 2,
+	Unchanged                                                                        = 3
 };
 
 /// Enum /Script/MagicLeap.EMagicLeapMeshVertexColorMode
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapMeshVertexColorMode : uint8_t
 {
-	EMagicLeapMeshVertexColorMode__None                                              = 0,
-	EMagicLeapMeshVertexColorMode__Confidence                                        = 1,
-	EMagicLeapMeshVertexColorMode__Block                                             = 2,
-	EMagicLeapMeshVertexColorMode__LOD                                               = 3
+	None                                                                             = 0,
+	Confidence                                                                       = 1,
+	Block                                                                            = 2,
+	LOD                                                                              = 3
 };
 
 /// Enum /Script/MagicLeap.EMagicLeapMeshType
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapMeshType : uint8_t
 {
-	EMagicLeapMeshType__Triangles                                                    = 0,
-	EMagicLeapMeshType__PointCloud                                                   = 1
+	Triangles                                                                        = 0,
+	PointCloud                                                                       = 1
 };
 
 /// Enum /Script/MagicLeap.EMagicLeapRaycastResultState
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapRaycastResultState : uint8_t
 {
-	EMagicLeapRaycastResultState__RequestFailed                                      = 0,
-	EMagicLeapRaycastResultState__NoCollision                                        = 1,
-	EMagicLeapRaycastResultState__HitUnobserved                                      = 2,
-	EMagicLeapRaycastResultState__HitObserved                                        = 3
+	RequestFailed                                                                    = 0,
+	NoCollision                                                                      = 1,
+	HitUnobserved                                                                    = 2,
+	HitObserved                                                                      = 3
 };
 
 /// Enum /Script/MagicLeap.CloudStatus
 /// Size: 0x01 (1 bytes)
 enum class CloudStatus : uint8_t
 {
-	CloudStatus__CloudStatus_NotDone                                                 = 0,
-	CloudStatus__CloudStatus_Done                                                    = 1
+	CloudStatus_NotDone                                                              = 0,
+	CloudStatus_Done                                                                 = 1
 };
 
 /// Enum /Script/MagicLeap.EMagicLeapHeadTrackingMapEvent
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapHeadTrackingMapEvent : uint8_t
 {
-	EMagicLeapHeadTrackingMapEvent__Lost                                             = 0,
-	EMagicLeapHeadTrackingMapEvent__Recovered                                        = 1,
-	EMagicLeapHeadTrackingMapEvent__RecoveryFailed                                   = 2,
-	EMagicLeapHeadTrackingMapEvent__NewSession                                       = 3
+	Lost                                                                             = 0,
+	Recovered                                                                        = 1,
+	RecoveryFailed                                                                   = 2,
+	NewSession                                                                       = 3
 };
 
 /// Enum /Script/MagicLeap.EMagicLeapHeadTrackingMode
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapHeadTrackingMode : uint8_t
 {
-	EMagicLeapHeadTrackingMode__PositionAndOrientation                               = 0,
-	EMagicLeapHeadTrackingMode__Unavailable                                          = 1,
-	EMagicLeapHeadTrackingMode__Unknown                                              = 2
+	PositionAndOrientation                                                           = 0,
+	Unavailable                                                                      = 1,
+	Unknown                                                                          = 2
 };
 
 /// Enum /Script/MagicLeap.EMagicLeapHeadTrackingError
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapHeadTrackingError : uint8_t
 {
-	EMagicLeapHeadTrackingError__None                                                = 0,
-	EMagicLeapHeadTrackingError__NotEnoughFeatures                                   = 1,
-	EMagicLeapHeadTrackingError__LowLight                                            = 2,
-	EMagicLeapHeadTrackingError__Unknown                                             = 3
+	None                                                                             = 0,
+	NotEnoughFeatures                                                                = 1,
+	LowLight                                                                         = 2,
+	Unknown                                                                          = 3
 };
 
 /// Class /Script/MagicLeap.InAppPurchaseComponent

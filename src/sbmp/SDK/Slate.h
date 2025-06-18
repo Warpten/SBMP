@@ -17,202 +17,202 @@
 /// Size: 0x01 (1 bytes)
 enum class ETextJustify : uint8_t
 {
-	ETextJustify__Left                                                               = 0,
-	ETextJustify__Center                                                             = 1,
-	ETextJustify__Right                                                              = 2
+	Left                                                                             = 0,
+	Center                                                                           = 1,
+	Right                                                                            = 2
 };
 
 /// Enum /Script/Slate.ETextFlowDirection
 /// Size: 0x01 (1 bytes)
 enum class ETextFlowDirection : uint8_t
 {
-	ETextFlowDirection__Auto                                                         = 0,
-	ETextFlowDirection__LeftToRight                                                  = 1,
-	ETextFlowDirection__RightToLeft                                                  = 2
+	Auto                                                                             = 0,
+	LeftToRight                                                                      = 1,
+	RightToLeft                                                                      = 2
 };
 
 /// Enum /Script/Slate.EVirtualKeyboardDismissAction
 /// Size: 0x01 (1 bytes)
 enum class EVirtualKeyboardDismissAction : uint8_t
 {
-	EVirtualKeyboardDismissAction__TextChangeOnDismiss                               = 0,
-	EVirtualKeyboardDismissAction__TextCommitOnAccept                                = 1,
-	EVirtualKeyboardDismissAction__TextCommitOnDismiss                               = 2
+	TextChangeOnDismiss                                                              = 0,
+	TextCommitOnAccept                                                               = 1,
+	TextCommitOnDismiss                                                              = 2
 };
 
 /// Enum /Script/Slate.EVirtualKeyboardTrigger
 /// Size: 0x01 (1 bytes)
 enum class EVirtualKeyboardTrigger : uint8_t
 {
-	EVirtualKeyboardTrigger__OnFocusByPointer                                        = 0,
-	EVirtualKeyboardTrigger__OnAllFocusEvents                                        = 1
+	OnFocusByPointer                                                                 = 0,
+	OnAllFocusEvents                                                                 = 1
 };
 
 /// Enum /Script/Slate.ETextWrappingPolicy
 /// Size: 0x01 (1 bytes)
 enum class ETextWrappingPolicy : uint8_t
 {
-	ETextWrappingPolicy__DefaultWrapping                                             = 0,
-	ETextWrappingPolicy__AllowPerCharacterWrapping                                   = 1
+	DefaultWrapping                                                                  = 0,
+	AllowPerCharacterWrapping                                                        = 1
 };
 
 /// Enum /Script/Slate.ETableViewMode
 /// Size: 0x01 (1 bytes)
 enum class ETableViewMode : uint8_t
 {
-	ETableViewMode__List                                                             = 0,
-	ETableViewMode__Tile                                                             = 1,
-	ETableViewMode__Tree                                                             = 2
+	List                                                                             = 0,
+	Tile                                                                             = 1,
+	Tree                                                                             = 2
 };
 
 /// Enum /Script/Slate.ESelectionMode
 /// Size: 0x01 (1 bytes)
 enum class ESelectionMode : uint8_t
 {
-	ESelectionMode__None                                                             = 0,
-	ESelectionMode__Single                                                           = 1,
-	ESelectionMode__SingleToggle                                                     = 2,
-	ESelectionMode__Multi                                                            = 3
+	None                                                                             = 0,
+	Single                                                                           = 1,
+	SingleToggle                                                                     = 2,
+	Multi                                                                            = 3
 };
 
 /// Enum /Script/Slate.EMultiBlockType
 /// Size: 0x01 (1 bytes)
 enum class EMultiBlockType : uint8_t
 {
-	EMultiBlockType__None                                                            = 0,
-	EMultiBlockType__ButtonRow                                                       = 1,
-	EMultiBlockType__EditableText                                                    = 2,
-	EMultiBlockType__Heading                                                         = 3,
-	EMultiBlockType__MenuEntry                                                       = 4,
-	EMultiBlockType__Separator                                                       = 5,
-	EMultiBlockType__ToolBarButton                                                   = 6,
-	EMultiBlockType__ToolBarComboButton                                              = 7,
-	EMultiBlockType__Widget                                                          = 8
+	None                                                                             = 0,
+	ButtonRow                                                                        = 1,
+	EditableText                                                                     = 2,
+	Heading                                                                          = 3,
+	MenuEntry                                                                        = 4,
+	Separator                                                                        = 5,
+	ToolBarButton                                                                    = 6,
+	ToolBarComboButton                                                               = 7,
+	Widget                                                                           = 8
 };
 
 /// Enum /Script/Slate.EMultiBoxType
 /// Size: 0x01 (1 bytes)
 enum class EMultiBoxType : uint8_t
 {
-	EMultiBoxType__MenuBar                                                           = 0,
-	EMultiBoxType__ToolBar                                                           = 1,
-	EMultiBoxType__VerticalToolBar                                                   = 2,
-	EMultiBoxType__UniformToolBar                                                    = 3,
-	EMultiBoxType__Menu                                                              = 4,
-	EMultiBoxType__ButtonRow                                                         = 5
+	MenuBar                                                                          = 0,
+	ToolBar                                                                          = 1,
+	VerticalToolBar                                                                  = 2,
+	UniformToolBar                                                                   = 3,
+	Menu                                                                             = 4,
+	ButtonRow                                                                        = 5
 };
 
 /// Enum /Script/Slate.EProgressBarFillType
 /// Size: 0x01 (1 bytes)
 enum class EProgressBarFillType : uint8_t
 {
-	EProgressBarFillType__LeftToRight                                                = 0,
-	EProgressBarFillType__RightToLeft                                                = 1,
-	EProgressBarFillType__FillFromCenter                                             = 2,
-	EProgressBarFillType__TopToBottom                                                = 3,
-	EProgressBarFillType__BottomToTop                                                = 4
+	LeftToRight                                                                      = 0,
+	RightToLeft                                                                      = 1,
+	FillFromCenter                                                                   = 2,
+	TopToBottom                                                                      = 3,
+	BottomToTop                                                                      = 4
 };
 
 /// Enum /Script/Slate.EStretch
 /// Size: 0x01 (1 bytes)
 enum class EStretch : uint8_t
 {
-	EStretch__None                                                                   = 0,
-	EStretch__Fill                                                                   = 1,
-	EStretch__ScaleToFit                                                             = 2,
-	EStretch__ScaleToFitX                                                            = 3,
-	EStretch__ScaleToFitY                                                            = 4,
-	EStretch__ScaleToFill                                                            = 5,
-	EStretch__ScaleBySafeZone                                                        = 6,
-	EStretch__UserSpecified                                                          = 7
+	None                                                                             = 0,
+	Fill                                                                             = 1,
+	ScaleToFit                                                                       = 2,
+	ScaleToFitX                                                                      = 3,
+	ScaleToFitY                                                                      = 4,
+	ScaleToFill                                                                      = 5,
+	ScaleBySafeZone                                                                  = 6,
+	UserSpecified                                                                    = 7
 };
 
 /// Enum /Script/Slate.EStretchDirection
 /// Size: 0x01 (1 bytes)
 enum class EStretchDirection : uint8_t
 {
-	EStretchDirection__Both                                                          = 0,
-	EStretchDirection__DownOnly                                                      = 1,
-	EStretchDirection__UpOnly                                                        = 2
+	Both                                                                             = 0,
+	DownOnly                                                                         = 1,
+	UpOnly                                                                           = 2
 };
 
 /// Enum /Script/Slate.EScrollWhenFocusChanges
 /// Size: 0x01 (1 bytes)
 enum class EScrollWhenFocusChanges : uint8_t
 {
-	EScrollWhenFocusChanges__NoScroll                                                = 0,
-	EScrollWhenFocusChanges__InstantScroll                                           = 1,
-	EScrollWhenFocusChanges__AnimatedScroll                                          = 2
+	NoScroll                                                                         = 0,
+	InstantScroll                                                                    = 1,
+	AnimatedScroll                                                                   = 2
 };
 
 /// Enum /Script/Slate.EDescendantScrollDestination
 /// Size: 0x01 (1 bytes)
 enum class EDescendantScrollDestination : uint8_t
 {
-	EDescendantScrollDestination__IntoView                                           = 0,
-	EDescendantScrollDestination__TopOrLeft                                          = 1,
-	EDescendantScrollDestination__Center                                             = 2
+	IntoView                                                                         = 0,
+	TopOrLeft                                                                        = 1,
+	Center                                                                           = 2
 };
 
 /// Enum /Script/Slate.EListItemAlignment
 /// Size: 0x01 (1 bytes)
 enum class EListItemAlignment : uint8_t
 {
-	EListItemAlignment__EvenlyDistributed                                            = 0,
-	EListItemAlignment__EvenlySize                                                   = 1,
-	EListItemAlignment__EvenlyWide                                                   = 2,
-	EListItemAlignment__LeftAligned                                                  = 3,
-	EListItemAlignment__RightAligned                                                 = 4,
-	EListItemAlignment__CenterAligned                                                = 5,
-	EListItemAlignment__Fill                                                         = 6
+	EvenlyDistributed                                                                = 0,
+	EvenlySize                                                                       = 1,
+	EvenlyWide                                                                       = 2,
+	LeftAligned                                                                      = 3,
+	RightAligned                                                                     = 4,
+	CenterAligned                                                                    = 5,
+	Fill                                                                             = 6
 };
 
 /// Enum /Script/Slate.ETextTransformPolicy
 /// Size: 0x01 (1 bytes)
 enum class ETextTransformPolicy : uint8_t
 {
-	ETextTransformPolicy__None                                                       = 0,
-	ETextTransformPolicy__ToLower                                                    = 1,
-	ETextTransformPolicy__ToUpper                                                    = 2
+	None                                                                             = 0,
+	ToLower                                                                          = 1,
+	ToUpper                                                                          = 2
 };
 
 /// Enum /Script/Slate.ETextVerticalJustify
 /// Size: 0x01 (1 bytes)
 enum class ETextVerticalJustify : uint8_t
 {
-	ETextVerticalJustify__Bottom                                                     = 0,
-	ETextVerticalJustify__Center                                                     = 1,
-	ETextVerticalJustify__Top                                                        = 2
+	Bottom                                                                           = 0,
+	Center                                                                           = 1,
+	Top                                                                              = 2
 };
 
 /// Enum /Script/Slate.ECustomizedToolMenuVisibility
 /// Size: 0x04 (4 bytes)
 enum class ECustomizedToolMenuVisibility : uint32_t
 {
-	ECustomizedToolMenuVisibility__None                                              = 0,
-	ECustomizedToolMenuVisibility__Visible                                           = 1,
-	ECustomizedToolMenuVisibility__Hidden                                            = 2
+	None                                                                             = 0,
+	Visible                                                                          = 1,
+	Hidden                                                                           = 2
 };
 
 /// Enum /Script/Slate.EMultipleKeyBindingIndex
 /// Size: 0x01 (1 bytes)
 enum class EMultipleKeyBindingIndex : uint8_t
 {
-	EMultipleKeyBindingIndex__Primary                                                = 0,
-	EMultipleKeyBindingIndex__Secondary                                              = 1,
-	EMultipleKeyBindingIndex__NumChords                                              = 2
+	Primary                                                                          = 0,
+	Secondary                                                                        = 1,
+	NumChords                                                                        = 2
 };
 
 /// Enum /Script/Slate.EUserInterfaceActionType
 /// Size: 0x01 (1 bytes)
 enum class EUserInterfaceActionType : uint8_t
 {
-	EUserInterfaceActionType__None                                                   = 0,
-	EUserInterfaceActionType__Button                                                 = 1,
-	EUserInterfaceActionType__ToggleButton                                           = 2,
-	EUserInterfaceActionType__RadioButton                                            = 3,
-	EUserInterfaceActionType__Check                                                  = 4,
-	EUserInterfaceActionType__CollapsedButton                                        = 5
+	None                                                                             = 0,
+	Button                                                                           = 1,
+	ToggleButton                                                                     = 2,
+	RadioButton                                                                      = 3,
+	Check                                                                            = 4,
+	CollapsedButton                                                                  = 5
 };
 
 /// Class /Script/Slate.ButtonWidgetStyle

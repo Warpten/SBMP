@@ -17,17 +17,17 @@
 /// Size: 0x01 (1 bytes)
 enum class EPoleVectorOption : uint8_t
 {
-	EPoleVectorOption__Direction                                                     = 0,
-	EPoleVectorOption__Location                                                      = 1
+	Direction                                                                        = 0,
+	Location                                                                         = 1
 };
 
 /// Enum /Script/FullBodyIK.EFBIKBoneLimitType
 /// Size: 0x01 (1 bytes)
 enum class EFBIKBoneLimitType : uint8_t
 {
-	EFBIKBoneLimitType__Free                                                         = 0,
-	EFBIKBoneLimitType__Limit                                                        = 1,
-	EFBIKBoneLimitType__Locked                                                       = 2
+	Free                                                                             = 0,
+	Limit                                                                            = 1,
+	Locked                                                                           = 2
 };
 
 /// Struct /Script/FullBodyIK.MotionProcessInput

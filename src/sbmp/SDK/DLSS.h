@@ -15,26 +15,26 @@
 /// Size: 0x01 (1 bytes)
 enum class EDLSSPreset : uint8_t
 {
-	EDLSSPreset__Default                                                             = 0,
-	EDLSSPreset__A                                                                   = 1,
-	EDLSSPreset__B                                                                   = 2,
-	EDLSSPreset__C                                                                   = 3,
-	EDLSSPreset__D                                                                   = 4,
-	EDLSSPreset__E                                                                   = 5,
-	EDLSSPreset__F                                                                   = 6,
-	EDLSSPreset__G                                                                   = 7,
-	EDLSSPreset__H                                                                   = 8,
-	EDLSSPreset__I                                                                   = 9,
-	EDLSSPreset__J                                                                   = 10
+	Default                                                                          = 0,
+	A                                                                                = 1,
+	B                                                                                = 2,
+	C                                                                                = 3,
+	D                                                                                = 4,
+	E                                                                                = 5,
+	F                                                                                = 6,
+	G                                                                                = 7,
+	H                                                                                = 8,
+	I                                                                                = 9,
+	J                                                                                = 10
 };
 
 /// Enum /Script/DLSS.EDLSSSettingOverride
 /// Size: 0x01 (1 bytes)
 enum class EDLSSSettingOverride : uint8_t
 {
-	EDLSSSettingOverride__Enabled                                                    = 0,
-	EDLSSSettingOverride__Disabled                                                   = 1,
-	EDLSSSettingOverride__UseProjectSettings                                         = 2
+	Enabled                                                                          = 0,
+	Disabled                                                                         = 1,
+	UseProjectSettings                                                               = 2
 };
 
 /// Class /Script/DLSS.DLSSOverrideSettings

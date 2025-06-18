@@ -26,47 +26,47 @@ enum class EInterpCurveMode : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ERangeBoundTypes : uint8_t
 {
-	ERangeBoundTypes__Exclusive                                                      = 0,
-	ERangeBoundTypes__Inclusive                                                      = 1,
-	ERangeBoundTypes__Open                                                           = 2
+	Exclusive                                                                        = 0,
+	Inclusive                                                                        = 1,
+	Open                                                                             = 2
 };
 
 /// Enum /Script/CoreUObject.ELocalizedTextSourceCategory
 /// Size: 0x01 (1 bytes)
 enum class ELocalizedTextSourceCategory : uint8_t
 {
-	ELocalizedTextSourceCategory__Game                                               = 0,
-	ELocalizedTextSourceCategory__Engine                                             = 1,
-	ELocalizedTextSourceCategory__Editor                                             = 2
+	Game                                                                             = 0,
+	Engine                                                                           = 1,
+	Editor                                                                           = 2
 };
 
 /// Enum /Script/CoreUObject.EAutomationEventType
 /// Size: 0x01 (1 bytes)
 enum class EAutomationEventType : uint8_t
 {
-	EAutomationEventType__Info                                                       = 0,
-	EAutomationEventType__Warning                                                    = 1,
-	EAutomationEventType__Error                                                      = 2
+	Info                                                                             = 0,
+	Warning                                                                          = 1,
+	Error                                                                            = 2
 };
 
 /// Enum /Script/CoreUObject.EMouseCursor
 /// Size: 0x01 (1 bytes)
 enum class EMouseCursor : uint8_t
 {
-	EMouseCursor__None                                                               = 0,
-	EMouseCursor__Default                                                            = 1,
-	EMouseCursor__TextEditBeam                                                       = 2,
-	EMouseCursor__ResizeLeftRight                                                    = 3,
-	EMouseCursor__ResizeUpDown                                                       = 4,
-	EMouseCursor__ResizeSouthEast                                                    = 5,
-	EMouseCursor__ResizeSouthWest                                                    = 6,
-	EMouseCursor__CardinalCross                                                      = 7,
-	EMouseCursor__Crosshairs                                                         = 8,
-	EMouseCursor__Hand                                                               = 9,
-	EMouseCursor__GrabHand                                                           = 10,
-	EMouseCursor__GrabHandClosed                                                     = 11,
-	EMouseCursor__SlashedCircle                                                      = 12,
-	EMouseCursor__EyeDropper                                                         = 13
+	None                                                                             = 0,
+	Default                                                                          = 1,
+	TextEditBeam                                                                     = 2,
+	ResizeLeftRight                                                                  = 3,
+	ResizeUpDown                                                                     = 4,
+	ResizeSouthEast                                                                  = 5,
+	ResizeSouthWest                                                                  = 6,
+	CardinalCross                                                                    = 7,
+	Crosshairs                                                                       = 8,
+	Hand                                                                             = 9,
+	GrabHand                                                                         = 10,
+	GrabHandClosed                                                                   = 11,
+	SlashedCircle                                                                    = 12,
+	EyeDropper                                                                       = 13
 };
 
 /// Enum /Script/CoreUObject.ELifetimeCondition
@@ -95,102 +95,102 @@ enum class ELifetimeCondition : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class EDataValidationResult : uint8_t
 {
-	EDataValidationResult__Invalid                                                   = 0,
-	EDataValidationResult__Valid                                                     = 1,
-	EDataValidationResult__NotValidated                                              = 2
+	Invalid                                                                          = 0,
+	Valid                                                                            = 1,
+	NotValidated                                                                     = 2
 };
 
 /// Enum /Script/CoreUObject.EAppMsgType
 /// Size: 0x01 (1 bytes)
 enum class EAppMsgType : uint8_t
 {
-	EAppMsgType__Ok                                                                  = 0,
-	EAppMsgType__YesNo                                                               = 1,
-	EAppMsgType__OkCancel                                                            = 2,
-	EAppMsgType__YesNoCancel                                                         = 3,
-	EAppMsgType__CancelRetryContinue                                                 = 4,
-	EAppMsgType__YesNoYesAllNoAll                                                    = 5,
-	EAppMsgType__YesNoYesAllNoAllCancel                                              = 6,
-	EAppMsgType__YesNoYesAll                                                         = 7
+	Ok                                                                               = 0,
+	YesNo                                                                            = 1,
+	OkCancel                                                                         = 2,
+	YesNoCancel                                                                      = 3,
+	CancelRetryContinue                                                              = 4,
+	YesNoYesAllNoAll                                                                 = 5,
+	YesNoYesAllNoAllCancel                                                           = 6,
+	YesNoYesAll                                                                      = 7
 };
 
 /// Enum /Script/CoreUObject.EAppReturnType
 /// Size: 0x01 (1 bytes)
 enum class EAppReturnType : uint8_t
 {
-	EAppReturnType__No                                                               = 0,
-	EAppReturnType__Yes                                                              = 1,
-	EAppReturnType__YesAll                                                           = 2,
-	EAppReturnType__NoAll                                                            = 3,
-	EAppReturnType__Cancel                                                           = 4,
-	EAppReturnType__Ok                                                               = 5,
-	EAppReturnType__Retry                                                            = 6,
-	EAppReturnType__Continue                                                         = 7
+	No                                                                               = 0,
+	Yes                                                                              = 1,
+	YesAll                                                                           = 2,
+	NoAll                                                                            = 3,
+	Cancel                                                                           = 4,
+	Ok                                                                               = 5,
+	Retry                                                                            = 6,
+	Continue                                                                         = 7
 };
 
 /// Enum /Script/CoreUObject.EPropertyAccessChangeNotifyMode
 /// Size: 0x01 (1 bytes)
 enum class EPropertyAccessChangeNotifyMode : uint8_t
 {
-	EPropertyAccessChangeNotifyMode__Default                                         = 0,
-	EPropertyAccessChangeNotifyMode__Never                                           = 1,
-	EPropertyAccessChangeNotifyMode__Always                                          = 2
+	Default                                                                          = 0,
+	Never                                                                            = 1,
+	Always                                                                           = 2
 };
 
 /// Enum /Script/CoreUObject.EUnit
 /// Size: 0x01 (1 bytes)
 enum class EUnit : uint8_t
 {
-	EUnit__Micrometers                                                               = 0,
-	EUnit__Millimeters                                                               = 1,
-	EUnit__Centimeters                                                               = 2,
-	EUnit__Meters                                                                    = 3,
-	EUnit__Kilometers                                                                = 4,
-	EUnit__Inches                                                                    = 5,
-	EUnit__Feet                                                                      = 6,
-	EUnit__Yards                                                                     = 7,
-	EUnit__Miles                                                                     = 8,
-	EUnit__Lightyears                                                                = 9,
-	EUnit__Degrees                                                                   = 10,
-	EUnit__Radians                                                                   = 11,
-	EUnit__MetersPerSecond                                                           = 12,
-	EUnit__KilometersPerHour                                                         = 13,
-	EUnit__MilesPerHour                                                              = 14,
-	EUnit__Celsius                                                                   = 15,
-	EUnit__Farenheit                                                                 = 16,
-	EUnit__Kelvin                                                                    = 17,
-	EUnit__Micrograms                                                                = 18,
-	EUnit__Milligrams                                                                = 19,
-	EUnit__Grams                                                                     = 20,
-	EUnit__Kilograms                                                                 = 21,
-	EUnit__MetricTons                                                                = 22,
-	EUnit__Ounces                                                                    = 23,
-	EUnit__Pounds                                                                    = 24,
-	EUnit__Stones                                                                    = 25,
-	EUnit__Newtons                                                                   = 26,
-	EUnit__PoundsForce                                                               = 27,
-	EUnit__KilogramsForce                                                            = 28,
-	EUnit__Hertz                                                                     = 29,
-	EUnit__Kilohertz                                                                 = 30,
-	EUnit__Megahertz                                                                 = 31,
-	EUnit__Gigahertz                                                                 = 32,
-	EUnit__RevolutionsPerMinute                                                      = 33,
-	EUnit__Bytes                                                                     = 34,
-	EUnit__Kilobytes                                                                 = 35,
-	EUnit__Megabytes                                                                 = 36,
-	EUnit__Gigabytes                                                                 = 37,
-	EUnit__Terabytes                                                                 = 38,
-	EUnit__Lumens                                                                    = 39,
-	EUnit__Milliseconds                                                              = 43,
-	EUnit__Seconds                                                                   = 44,
-	EUnit__Minutes                                                                   = 45,
-	EUnit__Hours                                                                     = 46,
-	EUnit__Days                                                                      = 47,
-	EUnit__Months                                                                    = 48,
-	EUnit__Years                                                                     = 49,
-	EUnit__Multiplier                                                                = 52,
-	EUnit__Percentage                                                                = 51,
-	EUnit__Unspecified                                                               = 53
+	Micrometers                                                                      = 0,
+	Millimeters                                                                      = 1,
+	Centimeters                                                                      = 2,
+	Meters                                                                           = 3,
+	Kilometers                                                                       = 4,
+	Inches                                                                           = 5,
+	Feet                                                                             = 6,
+	Yards                                                                            = 7,
+	Miles                                                                            = 8,
+	Lightyears                                                                       = 9,
+	Degrees                                                                          = 10,
+	Radians                                                                          = 11,
+	MetersPerSecond                                                                  = 12,
+	KilometersPerHour                                                                = 13,
+	MilesPerHour                                                                     = 14,
+	Celsius                                                                          = 15,
+	Farenheit                                                                        = 16,
+	Kelvin                                                                           = 17,
+	Micrograms                                                                       = 18,
+	Milligrams                                                                       = 19,
+	Grams                                                                            = 20,
+	Kilograms                                                                        = 21,
+	MetricTons                                                                       = 22,
+	Ounces                                                                           = 23,
+	Pounds                                                                           = 24,
+	Stones                                                                           = 25,
+	Newtons                                                                          = 26,
+	PoundsForce                                                                      = 27,
+	KilogramsForce                                                                   = 28,
+	Hertz                                                                            = 29,
+	Kilohertz                                                                        = 30,
+	Megahertz                                                                        = 31,
+	Gigahertz                                                                        = 32,
+	RevolutionsPerMinute                                                             = 33,
+	Bytes                                                                            = 34,
+	Kilobytes                                                                        = 35,
+	Megabytes                                                                        = 36,
+	Gigabytes                                                                        = 37,
+	Terabytes                                                                        = 38,
+	Lumens                                                                           = 39,
+	Milliseconds                                                                     = 43,
+	Seconds                                                                          = 44,
+	Minutes                                                                          = 45,
+	Hours                                                                            = 46,
+	Days                                                                             = 47,
+	Months                                                                           = 48,
+	Years                                                                            = 49,
+	Multiplier                                                                       = 52,
+	Percentage                                                                       = 51,
+	Unspecified                                                                      = 53
 };
 
 /// Enum /Script/CoreUObject.EPixelFormat
@@ -274,36 +274,36 @@ enum class EPixelFormat : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class EAxis : uint8_t
 {
-	EAxis__None                                                                      = 0,
-	EAxis__X                                                                         = 1,
-	EAxis__Y                                                                         = 2,
-	EAxis__Z                                                                         = 3
+	None                                                                             = 0,
+	X                                                                                = 1,
+	Y                                                                                = 2,
+	Z                                                                                = 3
 };
 
 /// Enum /Script/CoreUObject.ELogTimes
 /// Size: 0x01 (1 bytes)
 enum class ELogTimes : uint8_t
 {
-	ELogTimes__None                                                                  = 0,
-	ELogTimes__UTC                                                                   = 1,
-	ELogTimes__SinceGStartTime                                                       = 2,
-	ELogTimes__Local                                                                 = 3
+	None                                                                             = 0,
+	UTC                                                                              = 1,
+	SinceGStartTime                                                                  = 2,
+	Local                                                                            = 3
 };
 
 /// Enum /Script/CoreUObject.ESearchDir
 /// Size: 0x01 (1 bytes)
 enum class ESearchDir : uint8_t
 {
-	ESearchDir__FromStart                                                            = 0,
-	ESearchDir__FromEnd                                                              = 1
+	FromStart                                                                        = 0,
+	FromEnd                                                                          = 1
 };
 
 /// Enum /Script/CoreUObject.ESearchCase
 /// Size: 0x01 (1 bytes)
 enum class ESearchCase : uint8_t
 {
-	ESearchCase__CaseSensitive                                                       = 0,
-	ESearchCase__IgnoreCase                                                          = 1
+	CaseSensitive                                                                    = 0,
+	IgnoreCase                                                                       = 1
 };
 
 /// Class /Script/CoreUObject.Object

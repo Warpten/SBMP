@@ -18,65 +18,65 @@
 /// Size: 0x01 (1 bytes)
 enum class EMediaWebcamCaptureDeviceFilter : uint8_t
 {
-	EMediaWebcamCaptureDeviceFilter__None                                            = 0,
-	EMediaWebcamCaptureDeviceFilter__DepthSensor                                     = 1,
-	EMediaWebcamCaptureDeviceFilter__Front                                           = 2,
-	EMediaWebcamCaptureDeviceFilter__Rear                                            = 4,
-	EMediaWebcamCaptureDeviceFilter__Unknown                                         = 8
+	None                                                                             = 0,
+	DepthSensor                                                                      = 1,
+	Front                                                                            = 2,
+	Rear                                                                             = 4,
+	Unknown                                                                          = 8
 };
 
 /// Enum /Script/MediaAssets.EMediaVideoCaptureDeviceFilter
 /// Size: 0x01 (1 bytes)
 enum class EMediaVideoCaptureDeviceFilter : uint8_t
 {
-	EMediaVideoCaptureDeviceFilter__None                                             = 0,
-	EMediaVideoCaptureDeviceFilter__Card                                             = 1,
-	EMediaVideoCaptureDeviceFilter__Software                                         = 2,
-	EMediaVideoCaptureDeviceFilter__Unknown                                          = 4,
-	EMediaVideoCaptureDeviceFilter__Webcam                                           = 8
+	None                                                                             = 0,
+	Card                                                                             = 1,
+	Software                                                                         = 2,
+	Unknown                                                                          = 4,
+	Webcam                                                                           = 8
 };
 
 /// Enum /Script/MediaAssets.EMediaAudioCaptureDeviceFilter
 /// Size: 0x01 (1 bytes)
 enum class EMediaAudioCaptureDeviceFilter : uint8_t
 {
-	EMediaAudioCaptureDeviceFilter__None                                             = 0,
-	EMediaAudioCaptureDeviceFilter__Card                                             = 1,
-	EMediaAudioCaptureDeviceFilter__Microphone                                       = 2,
-	EMediaAudioCaptureDeviceFilter__Software                                         = 4,
-	EMediaAudioCaptureDeviceFilter__Unknown                                          = 8
+	None                                                                             = 0,
+	Card                                                                             = 1,
+	Microphone                                                                       = 2,
+	Software                                                                         = 4,
+	Unknown                                                                          = 8
 };
 
 /// Enum /Script/MediaAssets.EMediaPlayerTrack
 /// Size: 0x01 (1 bytes)
 enum class EMediaPlayerTrack : uint8_t
 {
-	EMediaPlayerTrack__Audio                                                         = 0,
-	EMediaPlayerTrack__Caption                                                       = 1,
-	EMediaPlayerTrack__Metadata                                                      = 2,
-	EMediaPlayerTrack__Script                                                        = 3,
-	EMediaPlayerTrack__Subtitle                                                      = 4,
-	EMediaPlayerTrack__Text                                                          = 5,
-	EMediaPlayerTrack__Video                                                         = 6
+	Audio                                                                            = 0,
+	Caption                                                                          = 1,
+	Metadata                                                                         = 2,
+	Script                                                                           = 3,
+	Subtitle                                                                         = 4,
+	Text                                                                             = 5,
+	Video                                                                            = 6
 };
 
 /// Enum /Script/MediaAssets.EMediaSoundComponentFFTSize
 /// Size: 0x01 (1 bytes)
 enum class EMediaSoundComponentFFTSize : uint8_t
 {
-	EMediaSoundComponentFFTSize__Min                                                 = 0,
-	EMediaSoundComponentFFTSize__Small                                               = 1,
-	EMediaSoundComponentFFTSize__Medium                                              = 2,
-	EMediaSoundComponentFFTSize__Large                                               = 3
+	Min                                                                              = 0,
+	Small                                                                            = 1,
+	Medium                                                                           = 2,
+	Large                                                                            = 3
 };
 
 /// Enum /Script/MediaAssets.EMediaSoundChannels
 /// Size: 0x04 (4 bytes)
 enum class EMediaSoundChannels : uint32_t
 {
-	EMediaSoundChannels__Mono                                                        = 0,
-	EMediaSoundChannels__Stereo                                                      = 1,
-	EMediaSoundChannels__Surround                                                    = 2
+	Mono                                                                             = 0,
+	Stereo                                                                           = 1,
+	Surround                                                                         = 2
 };
 
 /// Enum /Script/MediaAssets.MediaTextureOrientation

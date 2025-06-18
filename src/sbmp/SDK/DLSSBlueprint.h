@@ -16,27 +16,27 @@
 /// Size: 0x01 (1 bytes)
 enum class UDLSSMode : uint8_t
 {
-	UDLSSMode__Off                                                                   = 0,
-	UDLSSMode__Auto                                                                  = 1,
-	UDLSSMode__DLAA                                                                  = 2,
-	UDLSSMode__UltraQuality                                                          = 3,
-	UDLSSMode__Quality                                                               = 4,
-	UDLSSMode__Balanced                                                              = 5,
-	UDLSSMode__Performance                                                           = 6,
-	UDLSSMode__UltraPerformance                                                      = 7
+	Off                                                                              = 0,
+	Auto                                                                             = 1,
+	DLAA                                                                             = 2,
+	UltraQuality                                                                     = 3,
+	Quality                                                                          = 4,
+	Balanced                                                                         = 5,
+	Performance                                                                      = 6,
+	UltraPerformance                                                                 = 7
 };
 
 /// Enum /Script/DLSSBlueprint.UDLSSSupport
 /// Size: 0x01 (1 bytes)
 enum class UDLSSSupport : uint8_t
 {
-	UDLSSSupport__Supported                                                          = 0,
-	UDLSSSupport__NotSupported                                                       = 1,
-	UDLSSSupport__NotSupportedIncompatibleHardware                                   = 2,
-	UDLSSSupport__NotSupportedDriverOutOfDate                                        = 3,
-	UDLSSSupport__NotSupportedOperatingSystemOutOfDate                               = 4,
-	UDLSSSupport__NotSupportedByPlatformAtBuildTime                                  = 5,
-	UDLSSSupport__NotSupportedIncompatibleAPICaptureToolActive                       = 6
+	Supported                                                                        = 0,
+	NotSupported                                                                     = 1,
+	NotSupportedIncompatibleHardware                                                 = 2,
+	NotSupportedDriverOutOfDate                                                      = 3,
+	NotSupportedOperatingSystemOutOfDate                                             = 4,
+	NotSupportedByPlatformAtBuildTime                                                = 5,
+	NotSupportedIncompatibleAPICaptureToolActive                                     = 6
 };
 
 /// Class /Script/DLSSBlueprint.DLSSLibrary

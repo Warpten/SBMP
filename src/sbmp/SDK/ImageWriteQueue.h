@@ -16,10 +16,10 @@
 /// Size: 0x01 (1 bytes)
 enum class EDesiredImageFormat : uint8_t
 {
-	EDesiredImageFormat__PNG                                                         = 0,
-	EDesiredImageFormat__JPG                                                         = 1,
-	EDesiredImageFormat__BMP                                                         = 2,
-	EDesiredImageFormat__EXR                                                         = 3
+	PNG                                                                              = 0,
+	JPG                                                                              = 1,
+	BMP                                                                              = 2,
+	EXR                                                                              = 3
 };
 
 /// Class /Script/ImageWriteQueue.ImageWriteBlueprintLibrary

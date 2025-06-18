@@ -15,9 +15,9 @@
 /// Size: 0x01 (1 bytes)
 enum class EEyeTrackerStatus : uint8_t
 {
-	EEyeTrackerStatus__NotConnected                                                  = 0,
-	EEyeTrackerStatus__NotTracking                                                   = 1,
-	EEyeTrackerStatus__Tracking                                                      = 2
+	NotConnected                                                                     = 0,
+	NotTracking                                                                      = 1,
+	Tracking                                                                         = 2
 };
 
 /// Class /Script/EyeTracker.EyeTrackerFunctionLibrary

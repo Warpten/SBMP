@@ -15,20 +15,20 @@
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapEyeTrackingCalibrationStatus : uint8_t
 {
-	EMagicLeapEyeTrackingCalibrationStatus__None                                     = 0,
-	EMagicLeapEyeTrackingCalibrationStatus__Bad                                      = 1,
-	EMagicLeapEyeTrackingCalibrationStatus__Good                                     = 2
+	None                                                                             = 0,
+	Bad                                                                              = 1,
+	Good                                                                             = 2
 };
 
 /// Enum /Script/MagicLeapEyeTracker.EMagicLeapEyeTrackingStatus
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapEyeTrackingStatus : uint8_t
 {
-	EMagicLeapEyeTrackingStatus__NotConnected                                        = 0,
-	EMagicLeapEyeTrackingStatus__Disabled                                            = 1,
-	EMagicLeapEyeTrackingStatus__UserNotPresent                                      = 2,
-	EMagicLeapEyeTrackingStatus__UserPresent                                         = 3,
-	EMagicLeapEyeTrackingStatus__UserPresentAndWatchingWindow                        = 4
+	NotConnected                                                                     = 0,
+	Disabled                                                                         = 1,
+	UserNotPresent                                                                   = 2,
+	UserPresent                                                                      = 3,
+	UserPresentAndWatchingWindow                                                     = 4
 };
 
 /// Class /Script/MagicLeapEyeTracker.MagicLeapEyeTrackerFunctionLibrary

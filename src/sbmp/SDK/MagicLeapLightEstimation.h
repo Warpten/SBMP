@@ -16,10 +16,10 @@
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapLightEstimationCamera : uint8_t
 {
-	EMagicLeapLightEstimationCamera__Left                                            = 0,
-	EMagicLeapLightEstimationCamera__Right                                           = 1,
-	EMagicLeapLightEstimationCamera__FarLeft                                         = 2,
-	EMagicLeapLightEstimationCamera__FarRight                                        = 3
+	Left                                                                             = 0,
+	Right                                                                            = 1,
+	FarLeft                                                                          = 2,
+	FarRight                                                                         = 3
 };
 
 /// Class /Script/MagicLeapLightEstimation.MagicLeapLightingTrackingComponent

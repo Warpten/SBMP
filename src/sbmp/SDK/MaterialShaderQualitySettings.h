@@ -15,10 +15,10 @@
 /// Size: 0x01 (1 bytes)
 enum class EMobileShadowQuality : uint8_t
 {
-	EMobileShadowQuality__NoFiltering                                                = 0,
-	EMobileShadowQuality__PCF_1x1                                                    = 1,
-	EMobileShadowQuality__PCF_2x2                                                    = 2,
-	EMobileShadowQuality__PCF_3x3                                                    = 3
+	NoFiltering                                                                      = 0,
+	PCF_1x1                                                                          = 1,
+	PCF_2x2                                                                          = 2,
+	PCF_3x3                                                                          = 3
 };
 
 /// Class /Script/MaterialShaderQualitySettings.MaterialShaderQualitySettings

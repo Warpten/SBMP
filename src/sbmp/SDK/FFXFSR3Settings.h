@@ -17,53 +17,53 @@
 /// Size: 0x04 (4 bytes)
 enum class EFFXFSR3PaceRHIFrameMode : uint32_t
 {
-	EFFXFSR3PaceRHIFrameMode__None                                                   = 0,
-	EFFXFSR3PaceRHIFrameMode__CustomPresentVSync                                     = 1
+	None                                                                             = 0,
+	CustomPresentVSync                                                               = 1
 };
 
 /// Enum /Script/FFXFSR3Settings.EFFXFSR3FrameGenUIMode
 /// Size: 0x04 (4 bytes)
 enum class EFFXFSR3FrameGenUIMode : uint32_t
 {
-	EFFXFSR3FrameGenUIMode__SlateRedraw                                              = 0,
-	EFFXFSR3FrameGenUIMode__UIExtraction                                             = 1
+	SlateRedraw                                                                      = 0,
+	UIExtraction                                                                     = 1
 };
 
 /// Enum /Script/FFXFSR3Settings.EFFXFSR3LandscapeHISMMode
 /// Size: 0x04 (4 bytes)
 enum class EFFXFSR3LandscapeHISMMode : uint32_t
 {
-	EFFXFSR3LandscapeHISMMode__Off                                                   = 0,
-	EFFXFSR3LandscapeHISMMode__AllStatic                                             = 1,
-	EFFXFSR3LandscapeHISMMode__StaticWPO                                             = 2
+	Off                                                                              = 0,
+	AllStatic                                                                        = 1,
+	StaticWPO                                                                        = 2
 };
 
 /// Enum /Script/FFXFSR3Settings.EFFXFSR3DeDitherMode
 /// Size: 0x04 (4 bytes)
 enum class EFFXFSR3DeDitherMode : uint32_t
 {
-	EFFXFSR3DeDitherMode__Off                                                        = 0,
-	EFFXFSR3DeDitherMode__Full                                                       = 1,
-	EFFXFSR3DeDitherMode__HairOnly                                                   = 2
+	Off                                                                              = 0,
+	Full                                                                             = 1,
+	HairOnly                                                                         = 2
 };
 
 /// Enum /Script/FFXFSR3Settings.EFFXFSR3HistoryFormat
 /// Size: 0x04 (4 bytes)
 enum class EFFXFSR3HistoryFormat : uint32_t
 {
-	EFFXFSR3HistoryFormat__FloatRGBA                                                 = 0,
-	EFFXFSR3HistoryFormat__FloatR11G11B10                                            = 1
+	FloatRGBA                                                                        = 0,
+	FloatR11G11B10                                                                   = 1
 };
 
 /// Enum /Script/FFXFSR3Settings.EFFXFSR3QualityMode
 /// Size: 0x04 (4 bytes)
 enum class EFFXFSR3QualityMode : uint32_t
 {
-	EFFXFSR3QualityMode__NativeAA                                                    = 0,
-	EFFXFSR3QualityMode__Quality                                                     = 1,
-	EFFXFSR3QualityMode__Balanced                                                    = 2,
-	EFFXFSR3QualityMode__Performance                                                 = 3,
-	EFFXFSR3QualityMode__UltraPerformance                                            = 4
+	NativeAA                                                                         = 0,
+	Quality                                                                          = 1,
+	Balanced                                                                         = 2,
+	Performance                                                                      = 3,
+	UltraPerformance                                                                 = 4
 };
 
 /// Class /Script/FFXFSR3Settings.FFXFSR3Settings

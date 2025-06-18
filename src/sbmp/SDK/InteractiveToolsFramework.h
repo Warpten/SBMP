@@ -16,156 +16,156 @@
 /// Size: 0x01 (1 bytes)
 enum class EInputCaptureState : uint8_t
 {
-	EInputCaptureState__Begin                                                        = 1,
-	EInputCaptureState__Continue                                                     = 2,
-	EInputCaptureState__End                                                          = 3,
-	EInputCaptureState__Ignore                                                       = 4
+	Begin                                                                            = 1,
+	Continue                                                                         = 2,
+	End                                                                              = 3,
+	Ignore                                                                           = 4
 };
 
 /// Enum /Script/InteractiveToolsFramework.EInputCaptureRequestType
 /// Size: 0x01 (1 bytes)
 enum class EInputCaptureRequestType : uint8_t
 {
-	EInputCaptureRequestType__Begin                                                  = 1,
-	EInputCaptureRequestType__Ignore                                                 = 2
+	Begin                                                                            = 1,
+	Ignore                                                                           = 2
 };
 
 /// Enum /Script/InteractiveToolsFramework.EInputCaptureSide
 /// Size: 0x01 (1 bytes)
 enum class EInputCaptureSide : uint8_t
 {
-	EInputCaptureSide__None                                                          = 0,
-	EInputCaptureSide__Left                                                          = 1,
-	EInputCaptureSide__Right                                                         = 2,
-	EInputCaptureSide__Both                                                          = 3,
-	EInputCaptureSide__Any                                                           = 99
+	None                                                                             = 0,
+	Left                                                                             = 1,
+	Right                                                                            = 2,
+	Both                                                                             = 3,
+	Any                                                                              = 99
 };
 
 /// Enum /Script/InteractiveToolsFramework.EInputDevices
 /// Size: 0x02 (2 bytes)
 enum class EInputDevices : uint16_t
 {
-	EInputDevices__None                                                              = 0,
-	EInputDevices__Keyboard                                                          = 1,
-	EInputDevices__Mouse                                                             = 2,
-	EInputDevices__Gamepad                                                           = 4,
-	EInputDevices__OculusTouch                                                       = 8,
-	EInputDevices__HTCViveWands                                                      = 16,
-	EInputDevices__AnySpatialDevice                                                  = 24,
-	EInputDevices__TabletFingers                                                     = 1024
+	None                                                                             = 0,
+	Keyboard                                                                         = 1,
+	Mouse                                                                            = 2,
+	Gamepad                                                                          = 4,
+	OculusTouch                                                                      = 8,
+	HTCViveWands                                                                     = 16,
+	AnySpatialDevice                                                                 = 24,
+	TabletFingers                                                                    = 1024
 };
 
 /// Enum /Script/InteractiveToolsFramework.ETransformGizmoSubElements
 /// Size: 0x04 (4 bytes)
 enum class ETransformGizmoSubElements : uint32_t
 {
-	ETransformGizmoSubElements__None                                                 = 0,
-	ETransformGizmoSubElements__TranslateAxisX                                       = 2,
-	ETransformGizmoSubElements__TranslateAxisY                                       = 4,
-	ETransformGizmoSubElements__TranslateAxisZ                                       = 8,
-	ETransformGizmoSubElements__TranslateAllAxes                                     = 14,
-	ETransformGizmoSubElements__TranslatePlaneXY                                     = 16,
-	ETransformGizmoSubElements__TranslatePlaneXZ                                     = 32,
-	ETransformGizmoSubElements__TranslatePlaneYZ                                     = 64,
-	ETransformGizmoSubElements__TranslateAllPlanes                                   = 112,
-	ETransformGizmoSubElements__RotateAxisX                                          = 128,
-	ETransformGizmoSubElements__RotateAxisY                                          = 256,
-	ETransformGizmoSubElements__RotateAxisZ                                          = 512,
-	ETransformGizmoSubElements__RotateAllAxes                                        = 896,
-	ETransformGizmoSubElements__ScaleAxisX                                           = 1024,
-	ETransformGizmoSubElements__ScaleAxisY                                           = 2048,
-	ETransformGizmoSubElements__ScaleAxisZ                                           = 4096,
-	ETransformGizmoSubElements__ScaleAllAxes                                         = 7168,
-	ETransformGizmoSubElements__ScalePlaneYZ                                         = 8192,
-	ETransformGizmoSubElements__ScalePlaneXZ                                         = 16384,
-	ETransformGizmoSubElements__ScalePlaneXY                                         = 32768,
-	ETransformGizmoSubElements__ScaleAllPlanes                                       = 57344,
-	ETransformGizmoSubElements__ScaleUniform                                         = 65536,
-	ETransformGizmoSubElements__StandardTranslateRotate                              = 1022,
-	ETransformGizmoSubElements__TranslateRotateUniformScale                          = 66558,
-	ETransformGizmoSubElements__FullTranslateRotateScale                             = 131070
+	None                                                                             = 0,
+	TranslateAxisX                                                                   = 2,
+	TranslateAxisY                                                                   = 4,
+	TranslateAxisZ                                                                   = 8,
+	TranslateAllAxes                                                                 = 14,
+	TranslatePlaneXY                                                                 = 16,
+	TranslatePlaneXZ                                                                 = 32,
+	TranslatePlaneYZ                                                                 = 64,
+	TranslateAllPlanes                                                               = 112,
+	RotateAxisX                                                                      = 128,
+	RotateAxisY                                                                      = 256,
+	RotateAxisZ                                                                      = 512,
+	RotateAllAxes                                                                    = 896,
+	ScaleAxisX                                                                       = 1024,
+	ScaleAxisY                                                                       = 2048,
+	ScaleAxisZ                                                                       = 4096,
+	ScaleAllAxes                                                                     = 7168,
+	ScalePlaneYZ                                                                     = 8192,
+	ScalePlaneXZ                                                                     = 16384,
+	ScalePlaneXY                                                                     = 32768,
+	ScaleAllPlanes                                                                   = 57344,
+	ScaleUniform                                                                     = 65536,
+	StandardTranslateRotate                                                          = 1022,
+	TranslateRotateUniformScale                                                      = 66558,
+	FullTranslateRotateScale                                                         = 131070
 };
 
 /// Enum /Script/InteractiveToolsFramework.EToolChangeTrackingMode
 /// Size: 0x01 (1 bytes)
 enum class EToolChangeTrackingMode : uint8_t
 {
-	EToolChangeTrackingMode__NoChangeTracking                                        = 1,
-	EToolChangeTrackingMode__UndoToExit                                              = 2,
-	EToolChangeTrackingMode__FullUndoRedo                                            = 3
+	NoChangeTracking                                                                 = 1,
+	UndoToExit                                                                       = 2,
+	FullUndoRedo                                                                     = 3
 };
 
 /// Enum /Script/InteractiveToolsFramework.EToolSide
 /// Size: 0x01 (1 bytes)
 enum class EToolSide : uint8_t
 {
-	EToolSide__Left                                                                  = 1,
-	EToolSide__Mouse                                                                 = 1,
-	EToolSide__Right                                                                 = 2
+	Left                                                                             = 1,
+	Mouse                                                                            = 1,
+	Right                                                                            = 2
 };
 
 /// Enum /Script/InteractiveToolsFramework.EViewInteractionState
 /// Size: 0x01 (1 bytes)
 enum class EViewInteractionState : uint8_t
 {
-	EViewInteractionState__None                                                      = 0,
-	EViewInteractionState__Hovered                                                   = 1,
-	EViewInteractionState__Focused                                                   = 2
+	None                                                                             = 0,
+	Hovered                                                                          = 1,
+	Focused                                                                          = 2
 };
 
 /// Enum /Script/InteractiveToolsFramework.ESelectedObjectsModificationType
 /// Size: 0x01 (1 bytes)
 enum class ESelectedObjectsModificationType : uint8_t
 {
-	ESelectedObjectsModificationType__Replace                                        = 0,
-	ESelectedObjectsModificationType__Add                                            = 1,
-	ESelectedObjectsModificationType__Remove                                         = 2,
-	ESelectedObjectsModificationType__Clear                                          = 3
+	Replace                                                                          = 0,
+	Add                                                                              = 1,
+	Remove                                                                           = 2,
+	Clear                                                                            = 3
 };
 
 /// Enum /Script/InteractiveToolsFramework.EToolMessageLevel
 /// Size: 0x01 (1 bytes)
 enum class EToolMessageLevel : uint8_t
 {
-	EToolMessageLevel__Internal                                                      = 0,
-	EToolMessageLevel__UserMessage                                                   = 1,
-	EToolMessageLevel__UserNotification                                              = 2,
-	EToolMessageLevel__UserWarning                                                   = 3,
-	EToolMessageLevel__UserError                                                     = 4
+	Internal                                                                         = 0,
+	UserMessage                                                                      = 1,
+	UserNotification                                                                 = 2,
+	UserWarning                                                                      = 3,
+	UserError                                                                        = 4
 };
 
 /// Enum /Script/InteractiveToolsFramework.EToolContextCoordinateSystem
 /// Size: 0x04 (4 bytes)
 enum class EToolContextCoordinateSystem : uint32_t
 {
-	EToolContextCoordinateSystem__World                                              = 0,
-	EToolContextCoordinateSystem__Local                                              = 1
+	World                                                                            = 0,
+	Local                                                                            = 1
 };
 
 /// Enum /Script/InteractiveToolsFramework.EStandardToolContextMaterials
 /// Size: 0x01 (1 bytes)
 enum class EStandardToolContextMaterials : uint8_t
 {
-	EStandardToolContextMaterials__VertexColorMaterial                               = 1
+	VertexColorMaterial                                                              = 1
 };
 
 /// Enum /Script/InteractiveToolsFramework.ESceneSnapQueryTargetType
 /// Size: 0x01 (1 bytes)
 enum class ESceneSnapQueryTargetType : uint8_t
 {
-	ESceneSnapQueryTargetType__None                                                  = 0,
-	ESceneSnapQueryTargetType__MeshVertex                                            = 1,
-	ESceneSnapQueryTargetType__MeshEdge                                              = 2,
-	ESceneSnapQueryTargetType__Grid                                                  = 4,
-	ESceneSnapQueryTargetType__All                                                   = 7
+	None                                                                             = 0,
+	MeshVertex                                                                       = 1,
+	MeshEdge                                                                         = 2,
+	Grid                                                                             = 4,
+	All                                                                              = 7
 };
 
 /// Enum /Script/InteractiveToolsFramework.ESceneSnapQueryType
 /// Size: 0x01 (1 bytes)
 enum class ESceneSnapQueryType : uint8_t
 {
-	ESceneSnapQueryType__Position                                                    = 1,
-	ESceneSnapQueryType__Rotation                                                    = 2
+	Position                                                                         = 1,
+	Rotation                                                                         = 2
 };
 
 /// Class /Script/InteractiveToolsFramework.InputBehavior

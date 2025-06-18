@@ -16,66 +16,66 @@
 /// Size: 0x01 (1 bytes)
 enum class EStreamlineFeatureRequirementsFlags : uint8_t
 {
-	EStreamlineFeatureRequirementsFlags__None                                        = 0,
-	EStreamlineFeatureRequirementsFlags__D3D11Supported                              = 1,
-	EStreamlineFeatureRequirementsFlags__D3D12Supported                              = 2,
-	EStreamlineFeatureRequirementsFlags__VulkanSupported                             = 4,
-	EStreamlineFeatureRequirementsFlags__VSyncOffRequired                            = 8,
-	EStreamlineFeatureRequirementsFlags__HardwareSchedulingRequired                  = 16
+	None                                                                             = 0,
+	D3D11Supported                                                                   = 1,
+	D3D12Supported                                                                   = 2,
+	VulkanSupported                                                                  = 4,
+	VSyncOffRequired                                                                 = 8,
+	HardwareSchedulingRequired                                                       = 16
 };
 
 /// Enum /Script/StreamlineBlueprint.EStreamlineFeatureSupport
 /// Size: 0x01 (1 bytes)
 enum class EStreamlineFeatureSupport : uint8_t
 {
-	EStreamlineFeatureSupport__Supported                                             = 0,
-	EStreamlineFeatureSupport__NotSupported                                          = 1,
-	EStreamlineFeatureSupport__NotSupportedIncompatibleHardware                      = 2,
-	EStreamlineFeatureSupport__NotSupportedDriverOutOfDate                           = 3,
-	EStreamlineFeatureSupport__NotSupportedOperatingSystemOutOfDate                  = 4,
-	EStreamlineFeatureSupport__NotSupportedHardewareSchedulingDisabled               = 5,
-	EStreamlineFeatureSupport__NotSupportedByRHI                                     = 6,
-	EStreamlineFeatureSupport__NotSupportedByPlatformAtBuildTime                     = 7,
-	EStreamlineFeatureSupport__NotSupportedIncompatibleAPICaptureToolActive          = 8
+	Supported                                                                        = 0,
+	NotSupported                                                                     = 1,
+	NotSupportedIncompatibleHardware                                                 = 2,
+	NotSupportedDriverOutOfDate                                                      = 3,
+	NotSupportedOperatingSystemOutOfDate                                             = 4,
+	NotSupportedHardewareSchedulingDisabled                                          = 5,
+	NotSupportedByRHI                                                                = 6,
+	NotSupportedByPlatformAtBuildTime                                                = 7,
+	NotSupportedIncompatibleAPICaptureToolActive                                     = 8
 };
 
 /// Enum /Script/StreamlineBlueprint.EStreamlineFeature
 /// Size: 0x01 (1 bytes)
 enum class EStreamlineFeature : uint8_t
 {
-	EStreamlineFeature__DLSSG                                                        = 0,
-	EStreamlineFeature__Latewarp                                                     = 1,
-	EStreamlineFeature__Reflex                                                       = 2,
-	EStreamlineFeature__DeepDVC                                                      = 3,
-	EStreamlineFeature__Count                                                        = 4
+	DLSSG                                                                            = 0,
+	Latewarp                                                                         = 1,
+	Reflex                                                                           = 2,
+	DeepDVC                                                                          = 3,
+	Count                                                                            = 4
 };
 
 /// Enum /Script/StreamlineBlueprint.EStreamlineDeepDVCMode
 /// Size: 0x01 (1 bytes)
 enum class EStreamlineDeepDVCMode : uint8_t
 {
-	EStreamlineDeepDVCMode__Off                                                      = 0,
-	EStreamlineDeepDVCMode__On                                                       = 1
+	Off                                                                              = 0,
+	On                                                                               = 1
 };
 
 /// Enum /Script/StreamlineBlueprint.EStreamlineDLSSGMode
 /// Size: 0x01 (1 bytes)
 enum class EStreamlineDLSSGMode : uint8_t
 {
-	EStreamlineDLSSGMode__Off                                                        = 0,
-	EStreamlineDLSSGMode__Auto                                                       = 251,
-	EStreamlineDLSSGMode__On2X                                                       = 17,
-	EStreamlineDLSSGMode__On3X                                                       = 23,
-	EStreamlineDLSSGMode__On4X                                                       = 31
+	Off                                                                              = 0,
+	Auto                                                                             = 251,
+	On2X                                                                             = 17,
+	On3X                                                                             = 23,
+	On4X                                                                             = 31
 };
 
 /// Enum /Script/StreamlineBlueprint.EStreamlineReflexMode
 /// Size: 0x01 (1 bytes)
 enum class EStreamlineReflexMode : uint8_t
 {
-	EStreamlineReflexMode__Off                                                       = 0,
-	EStreamlineReflexMode__Enabled                                                   = 1,
-	EStreamlineReflexMode__Boost                                                     = 3
+	Off                                                                              = 0,
+	Enabled                                                                          = 1,
+	Boost                                                                            = 3
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibrary

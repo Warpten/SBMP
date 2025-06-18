@@ -16,9 +16,9 @@
 /// Size: 0x01 (1 bytes)
 enum class EMeshTrackerVertexColorMode : uint8_t
 {
-	EMeshTrackerVertexColorMode__None                                                = 0,
-	EMeshTrackerVertexColorMode__Confidence                                          = 1,
-	EMeshTrackerVertexColorMode__Block                                               = 2
+	None                                                                             = 0,
+	Confidence                                                                       = 1,
+	Block                                                                            = 2
 };
 
 /// Class /Script/MRMesh.MeshReconstructorBase

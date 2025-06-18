@@ -15,145 +15,145 @@
 /// Size: 0x01 (1 bytes)
 enum class EUINavigation : uint8_t
 {
-	EUINavigation__Left                                                              = 0,
-	EUINavigation__Right                                                             = 1,
-	EUINavigation__Up                                                                = 2,
-	EUINavigation__Down                                                              = 3,
-	EUINavigation__Next                                                              = 4,
-	EUINavigation__Previous                                                          = 5,
-	EUINavigation__Num                                                               = 6,
-	EUINavigation__Invalid                                                           = 7
+	Left                                                                             = 0,
+	Right                                                                            = 1,
+	Up                                                                               = 2,
+	Down                                                                             = 3,
+	Next                                                                             = 4,
+	Previous                                                                         = 5,
+	Num                                                                              = 6,
+	Invalid                                                                          = 7
 };
 
 /// Enum /Script/SlateCore.ECheckBoxState
 /// Size: 0x01 (1 bytes)
 enum class ECheckBoxState : uint8_t
 {
-	ECheckBoxState__Unchecked                                                        = 0,
-	ECheckBoxState__Checked                                                          = 1,
-	ECheckBoxState__Undetermined                                                     = 2
+	Unchecked                                                                        = 0,
+	Checked                                                                          = 1,
+	Undetermined                                                                     = 2
 };
 
 /// Enum /Script/SlateCore.EWidgetClipping
 /// Size: 0x01 (1 bytes)
 enum class EWidgetClipping : uint8_t
 {
-	EWidgetClipping__Inherit                                                         = 0,
-	EWidgetClipping__ClipToBounds                                                    = 1,
-	EWidgetClipping__ClipToBoundsWithoutIntersecting                                 = 2,
-	EWidgetClipping__ClipToBoundsAlways                                              = 3,
-	EWidgetClipping__OnDemand                                                        = 4
+	Inherit                                                                          = 0,
+	ClipToBounds                                                                     = 1,
+	ClipToBoundsWithoutIntersecting                                                  = 2,
+	ClipToBoundsAlways                                                               = 3,
+	OnDemand                                                                         = 4
 };
 
 /// Enum /Script/SlateCore.ESlateBrushImageType
 /// Size: 0x01 (1 bytes)
 enum class ESlateBrushImageType : uint8_t
 {
-	ESlateBrushImageType__NoImage                                                    = 0,
-	ESlateBrushImageType__FullColor                                                  = 1,
-	ESlateBrushImageType__Linear                                                     = 2
+	NoImage                                                                          = 0,
+	FullColor                                                                        = 1,
+	Linear                                                                           = 2
 };
 
 /// Enum /Script/SlateCore.ESlateBrushMirrorType
 /// Size: 0x01 (1 bytes)
 enum class ESlateBrushMirrorType : uint8_t
 {
-	ESlateBrushMirrorType__NoMirror                                                  = 0,
-	ESlateBrushMirrorType__Horizontal                                                = 1,
-	ESlateBrushMirrorType__Vertical                                                  = 2,
-	ESlateBrushMirrorType__Both                                                      = 3
+	NoMirror                                                                         = 0,
+	Horizontal                                                                       = 1,
+	Vertical                                                                         = 2,
+	Both                                                                             = 3
 };
 
 /// Enum /Script/SlateCore.ESlateBrushTileType
 /// Size: 0x01 (1 bytes)
 enum class ESlateBrushTileType : uint8_t
 {
-	ESlateBrushTileType__NoTile                                                      = 0,
-	ESlateBrushTileType__Horizontal                                                  = 1,
-	ESlateBrushTileType__Vertical                                                    = 2,
-	ESlateBrushTileType__Both                                                        = 3
+	NoTile                                                                           = 0,
+	Horizontal                                                                       = 1,
+	Vertical                                                                         = 2,
+	Both                                                                             = 3
 };
 
 /// Enum /Script/SlateCore.ESlateBrushDrawType
 /// Size: 0x01 (1 bytes)
 enum class ESlateBrushDrawType : uint8_t
 {
-	ESlateBrushDrawType__NoDrawType                                                  = 0,
-	ESlateBrushDrawType__Box                                                         = 1,
-	ESlateBrushDrawType__Border                                                      = 2,
-	ESlateBrushDrawType__Image                                                       = 3
+	NoDrawType                                                                       = 0,
+	Box                                                                              = 1,
+	Border                                                                           = 2,
+	Image                                                                            = 3
 };
 
 /// Enum /Script/SlateCore.ESlateColorStylingMode
 /// Size: 0x01 (1 bytes)
 enum class ESlateColorStylingMode : uint8_t
 {
-	ESlateColorStylingMode__UseColor_Specified                                       = 0,
-	ESlateColorStylingMode__UseColor_Specified_Link                                  = 1,
-	ESlateColorStylingMode__UseColor_Foreground                                      = 2,
-	ESlateColorStylingMode__UseColor_Foreground_Subdued                              = 3
+	UseColor_Specified                                                               = 0,
+	UseColor_Specified_Link                                                          = 1,
+	UseColor_Foreground                                                              = 2,
+	UseColor_Foreground_Subdued                                                      = 3
 };
 
 /// Enum /Script/SlateCore.EUINavigationRule
 /// Size: 0x01 (1 bytes)
 enum class EUINavigationRule : uint8_t
 {
-	EUINavigationRule__Escape                                                        = 0,
-	EUINavigationRule__Explicit                                                      = 1,
-	EUINavigationRule__Wrap                                                          = 2,
-	EUINavigationRule__Stop                                                          = 3,
-	EUINavigationRule__Custom                                                        = 4,
-	EUINavigationRule__CustomBoundary                                                = 5,
-	EUINavigationRule__Invalid                                                       = 6
+	Escape                                                                           = 0,
+	Explicit                                                                         = 1,
+	Wrap                                                                             = 2,
+	Stop                                                                             = 3,
+	Custom                                                                           = 4,
+	CustomBoundary                                                                   = 5,
+	Invalid                                                                          = 6
 };
 
 /// Enum /Script/SlateCore.EFlowDirectionPreference
 /// Size: 0x01 (1 bytes)
 enum class EFlowDirectionPreference : uint8_t
 {
-	EFlowDirectionPreference__Inherit                                                = 0,
-	EFlowDirectionPreference__Culture                                                = 1,
-	EFlowDirectionPreference__LeftToRight                                            = 2,
-	EFlowDirectionPreference__RightToLeft                                            = 3
+	Inherit                                                                          = 0,
+	Culture                                                                          = 1,
+	LeftToRight                                                                      = 2,
+	RightToLeft                                                                      = 3
 };
 
 /// Enum /Script/SlateCore.EColorVisionDeficiency
 /// Size: 0x01 (1 bytes)
 enum class EColorVisionDeficiency : uint8_t
 {
-	EColorVisionDeficiency__NormalVision                                             = 0,
-	EColorVisionDeficiency__Deuteranope                                              = 1,
-	EColorVisionDeficiency__Protanope                                                = 2,
-	EColorVisionDeficiency__Tritanope                                                = 3
+	NormalVision                                                                     = 0,
+	Deuteranope                                                                      = 1,
+	Protanope                                                                        = 2,
+	Tritanope                                                                        = 3
 };
 
 /// Enum /Script/SlateCore.ESelectInfo
 /// Size: 0x01 (1 bytes)
 enum class ESelectInfo : uint8_t
 {
-	ESelectInfo__OnKeyPress                                                          = 0,
-	ESelectInfo__OnNavigation                                                        = 1,
-	ESelectInfo__OnMouseClick                                                        = 2,
-	ESelectInfo__Direct                                                              = 3
+	OnKeyPress                                                                       = 0,
+	OnNavigation                                                                     = 1,
+	OnMouseClick                                                                     = 2,
+	Direct                                                                           = 3
 };
 
 /// Enum /Script/SlateCore.ETextCommit
 /// Size: 0x01 (1 bytes)
 enum class ETextCommit : uint8_t
 {
-	ETextCommit__Default                                                             = 0,
-	ETextCommit__OnEnter                                                             = 1,
-	ETextCommit__OnUserMovedFocus                                                    = 2,
-	ETextCommit__OnCleared                                                           = 3
+	Default                                                                          = 0,
+	OnEnter                                                                          = 1,
+	OnUserMovedFocus                                                                 = 2,
+	OnCleared                                                                        = 3
 };
 
 /// Enum /Script/SlateCore.ETextShapingMethod
 /// Size: 0x01 (1 bytes)
 enum class ETextShapingMethod : uint8_t
 {
-	ETextShapingMethod__Auto                                                         = 0,
-	ETextShapingMethod__KerningOnly                                                  = 1,
-	ETextShapingMethod__FullShaping                                                  = 2
+	Auto                                                                             = 0,
+	KerningOnly                                                                      = 1,
+	FullShaping                                                                      = 2
 };
 
 /// Enum /Script/SlateCore.EMenuPlacement
@@ -179,132 +179,132 @@ enum class EMenuPlacement : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class EFontLayoutMethod : uint8_t
 {
-	EFontLayoutMethod__Metrics                                                       = 0,
-	EFontLayoutMethod__BoundingBox                                                   = 1
+	Metrics                                                                          = 0,
+	BoundingBox                                                                      = 1
 };
 
 /// Enum /Script/SlateCore.EFontLoadingPolicy
 /// Size: 0x01 (1 bytes)
 enum class EFontLoadingPolicy : uint8_t
 {
-	EFontLoadingPolicy__LazyLoad                                                     = 0,
-	EFontLoadingPolicy__Stream                                                       = 1,
-	EFontLoadingPolicy__Inline                                                       = 2
+	LazyLoad                                                                         = 0,
+	Stream                                                                           = 1,
+	Inline                                                                           = 2
 };
 
 /// Enum /Script/SlateCore.EFontHinting
 /// Size: 0x01 (1 bytes)
 enum class EFontHinting : uint8_t
 {
-	EFontHinting__Default                                                            = 0,
-	EFontHinting__Auto                                                               = 1,
-	EFontHinting__AutoLight                                                          = 2,
-	EFontHinting__Monochrome                                                         = 3,
-	EFontHinting__None                                                               = 4
+	Default                                                                          = 0,
+	Auto                                                                             = 1,
+	AutoLight                                                                        = 2,
+	Monochrome                                                                       = 3,
+	None                                                                             = 4
 };
 
 /// Enum /Script/SlateCore.EFocusCause
 /// Size: 0x01 (1 bytes)
 enum class EFocusCause : uint8_t
 {
-	EFocusCause__Mouse                                                               = 0,
-	EFocusCause__Navigation                                                          = 1,
-	EFocusCause__SetDirectly                                                         = 2,
-	EFocusCause__Cleared                                                             = 3,
-	EFocusCause__OtherWidgetLostFocus                                                = 4,
-	EFocusCause__WindowActivate                                                      = 5
+	Mouse                                                                            = 0,
+	Navigation                                                                       = 1,
+	SetDirectly                                                                      = 2,
+	Cleared                                                                          = 3,
+	OtherWidgetLostFocus                                                             = 4,
+	WindowActivate                                                                   = 5
 };
 
 /// Enum /Script/SlateCore.ESlateDebuggingFocusEvent
 /// Size: 0x01 (1 bytes)
 enum class ESlateDebuggingFocusEvent : uint8_t
 {
-	ESlateDebuggingFocusEvent__FocusChanging                                         = 0,
-	ESlateDebuggingFocusEvent__FocusLost                                             = 1,
-	ESlateDebuggingFocusEvent__FocusReceived                                         = 2
+	FocusChanging                                                                    = 0,
+	FocusLost                                                                        = 1,
+	FocusReceived                                                                    = 2
 };
 
 /// Enum /Script/SlateCore.ESlateDebuggingNavigationMethod
 /// Size: 0x01 (1 bytes)
 enum class ESlateDebuggingNavigationMethod : uint8_t
 {
-	ESlateDebuggingNavigationMethod__Unknown                                         = 0,
-	ESlateDebuggingNavigationMethod__Explicit                                        = 1,
-	ESlateDebuggingNavigationMethod__CustomDelegateBound                             = 2,
-	ESlateDebuggingNavigationMethod__CustomDelegateUnbound                           = 3,
-	ESlateDebuggingNavigationMethod__NextOrPrevious                                  = 4,
-	ESlateDebuggingNavigationMethod__HitTestGrid                                     = 5
+	Unknown                                                                          = 0,
+	Explicit                                                                         = 1,
+	CustomDelegateBound                                                              = 2,
+	CustomDelegateUnbound                                                            = 3,
+	NextOrPrevious                                                                   = 4,
+	HitTestGrid                                                                      = 5
 };
 
 /// Enum /Script/SlateCore.ESlateDebuggingStateChangeEvent
 /// Size: 0x01 (1 bytes)
 enum class ESlateDebuggingStateChangeEvent : uint8_t
 {
-	ESlateDebuggingStateChangeEvent__MouseCaptureGained                              = 0,
-	ESlateDebuggingStateChangeEvent__MouseCaptureLost                                = 1
+	MouseCaptureGained                                                               = 0,
+	MouseCaptureLost                                                                 = 1
 };
 
 /// Enum /Script/SlateCore.ESlateDebuggingInputEvent
 /// Size: 0x01 (1 bytes)
 enum class ESlateDebuggingInputEvent : uint8_t
 {
-	ESlateDebuggingInputEvent__MouseMove                                             = 0,
-	ESlateDebuggingInputEvent__MouseEnter                                            = 1,
-	ESlateDebuggingInputEvent__MouseLeave                                            = 2,
-	ESlateDebuggingInputEvent__PreviewMouseButtonDown                                = 3,
-	ESlateDebuggingInputEvent__MouseButtonDown                                       = 4,
-	ESlateDebuggingInputEvent__MouseButtonUp                                         = 5,
-	ESlateDebuggingInputEvent__MouseButtonDoubleClick                                = 6,
-	ESlateDebuggingInputEvent__MouseWheel                                            = 7,
-	ESlateDebuggingInputEvent__TouchStart                                            = 8,
-	ESlateDebuggingInputEvent__TouchEnd                                              = 9,
-	ESlateDebuggingInputEvent__TouchForceChanged                                     = 10,
-	ESlateDebuggingInputEvent__TouchFirstMove                                        = 11,
-	ESlateDebuggingInputEvent__TouchMoved                                            = 12,
-	ESlateDebuggingInputEvent__DragDetected                                          = 13,
-	ESlateDebuggingInputEvent__DragEnter                                             = 14,
-	ESlateDebuggingInputEvent__DragLeave                                             = 15,
-	ESlateDebuggingInputEvent__DragOver                                              = 16,
-	ESlateDebuggingInputEvent__DragDrop                                              = 17,
-	ESlateDebuggingInputEvent__DropMessage                                           = 18,
-	ESlateDebuggingInputEvent__PreviewKeyDown                                        = 19,
-	ESlateDebuggingInputEvent__KeyDown                                               = 20,
-	ESlateDebuggingInputEvent__KeyUp                                                 = 21,
-	ESlateDebuggingInputEvent__KeyChar                                               = 22,
-	ESlateDebuggingInputEvent__AnalogInput                                           = 23,
-	ESlateDebuggingInputEvent__TouchGesture                                          = 24,
-	ESlateDebuggingInputEvent__MotionDetected                                        = 25
+	MouseMove                                                                        = 0,
+	MouseEnter                                                                       = 1,
+	MouseLeave                                                                       = 2,
+	PreviewMouseButtonDown                                                           = 3,
+	MouseButtonDown                                                                  = 4,
+	MouseButtonUp                                                                    = 5,
+	MouseButtonDoubleClick                                                           = 6,
+	MouseWheel                                                                       = 7,
+	TouchStart                                                                       = 8,
+	TouchEnd                                                                         = 9,
+	TouchForceChanged                                                                = 10,
+	TouchFirstMove                                                                   = 11,
+	TouchMoved                                                                       = 12,
+	DragDetected                                                                     = 13,
+	DragEnter                                                                        = 14,
+	DragLeave                                                                        = 15,
+	DragOver                                                                         = 16,
+	DragDrop                                                                         = 17,
+	DropMessage                                                                      = 18,
+	PreviewKeyDown                                                                   = 19,
+	KeyDown                                                                          = 20,
+	KeyUp                                                                            = 21,
+	KeyChar                                                                          = 22,
+	AnalogInput                                                                      = 23,
+	TouchGesture                                                                     = 24,
+	MotionDetected                                                                   = 25
 };
 
 /// Enum /Script/SlateCore.ESlateInputActionType
 /// Size: 0x01 (1 bytes)
 enum class ESlateInputActionType : uint8_t
 {
-	ESlateInputActionType__Press                                                     = 0,
-	ESlateInputActionType__Release                                                   = 1,
-	ESlateInputActionType__Move                                                      = 2
+	Press                                                                            = 0,
+	Release                                                                          = 1,
+	Move                                                                             = 2
 };
 
 /// Enum /Script/SlateCore.ESlateInputEventType
 /// Size: 0x01 (1 bytes)
 enum class ESlateInputEventType : uint8_t
 {
-	ESlateInputEventType__Keyboard                                                   = 0,
-	ESlateInputEventType__Mouse                                                      = 1,
-	ESlateInputEventType__Controller                                                 = 2
+	Keyboard                                                                         = 0,
+	Mouse                                                                            = 1,
+	Controller                                                                       = 2
 };
 
 /// Enum /Script/SlateCore.ESlateBrushResourceType
 /// Size: 0x01 (1 bytes)
 enum class ESlateBrushResourceType : uint8_t
 {
-	ESlateBrushResourceType_Default                                                  = 0,
-	ESlateBrushResourceType_StandardKeyboard                                         = 1,
-	ESlateBrushResourceType_AZERTYKeyboard                                           = 2,
-	ESlateBrushResourceType_StandardGamepad                                          = 3,
-	ESlateBrushResourceType_PS4                                                      = 4,
-	ESlateBrushResourceType_PS5                                                      = 5,
-	ESlateBrushResourceType_XBox                                                     = 6
+	Default                                                                          = 0,
+	StandardKeyboard                                                                 = 1,
+	AZERTYKeyboard                                                                   = 2,
+	StandardGamepad                                                                  = 3,
+	PS4                                                                              = 4,
+	PS5                                                                              = 5,
+	XBox                                                                             = 6
 };
 
 /// Enum /Script/SlateCore.EScrollDirection
@@ -347,80 +347,80 @@ enum class EHorizontalAlignment : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ENavigationGenesis : uint8_t
 {
-	ENavigationGenesis__Keyboard                                                     = 0,
-	ENavigationGenesis__Controller                                                   = 1,
-	ENavigationGenesis__User                                                         = 2
+	Keyboard                                                                         = 0,
+	Controller                                                                       = 1,
+	User                                                                             = 2
 };
 
 /// Enum /Script/SlateCore.ENavigationSource
 /// Size: 0x01 (1 bytes)
 enum class ENavigationSource : uint8_t
 {
-	ENavigationSource__FocusedWidget                                                 = 0,
-	ENavigationSource__WidgetUnderCursor                                             = 1
+	FocusedWidget                                                                    = 0,
+	WidgetUnderCursor                                                                = 1
 };
 
 /// Enum /Script/SlateCore.EUINavigationAction
 /// Size: 0x01 (1 bytes)
 enum class EUINavigationAction : uint8_t
 {
-	EUINavigationAction__Accept                                                      = 0,
-	EUINavigationAction__Back                                                        = 1,
-	EUINavigationAction__Num                                                         = 2,
-	EUINavigationAction__Invalid                                                     = 3
+	Accept                                                                           = 0,
+	Back                                                                             = 1,
+	Num                                                                              = 2,
+	Invalid                                                                          = 3
 };
 
 /// Enum /Script/SlateCore.EButtonPressMethod
 /// Size: 0x01 (1 bytes)
 enum class EButtonPressMethod : uint8_t
 {
-	EButtonPressMethod__DownAndUp                                                    = 0,
-	EButtonPressMethod__ButtonPress                                                  = 1,
-	EButtonPressMethod__ButtonRelease                                                = 2
+	DownAndUp                                                                        = 0,
+	ButtonPress                                                                      = 1,
+	ButtonRelease                                                                    = 2
 };
 
 /// Enum /Script/SlateCore.EButtonTouchMethod
 /// Size: 0x01 (1 bytes)
 enum class EButtonTouchMethod : uint8_t
 {
-	EButtonTouchMethod__DownAndUp                                                    = 0,
-	EButtonTouchMethod__Down                                                         = 1,
-	EButtonTouchMethod__PreciseTap                                                   = 2
+	DownAndUp                                                                        = 0,
+	Down                                                                             = 1,
+	PreciseTap                                                                       = 2
 };
 
 /// Enum /Script/SlateCore.EButtonClickMethod
 /// Size: 0x01 (1 bytes)
 enum class EButtonClickMethod : uint8_t
 {
-	EButtonClickMethod__DownAndUp                                                    = 0,
-	EButtonClickMethod__MouseDown                                                    = 1,
-	EButtonClickMethod__MouseUp                                                      = 2,
-	EButtonClickMethod__PreciseClick                                                 = 3
+	DownAndUp                                                                        = 0,
+	MouseDown                                                                        = 1,
+	MouseUp                                                                          = 2,
+	PreciseClick                                                                     = 3
 };
 
 /// Enum /Script/SlateCore.ESlateCheckBoxType
 /// Size: 0x01 (1 bytes)
 enum class ESlateCheckBoxType : uint8_t
 {
-	ESlateCheckBoxType__CheckBox                                                     = 0,
-	ESlateCheckBoxType__ToggleButton                                                 = 1
+	CheckBox                                                                         = 0,
+	ToggleButton                                                                     = 1
 };
 
 /// Enum /Script/SlateCore.ESlateParentWindowSearchMethod
 /// Size: 0x01 (1 bytes)
 enum class ESlateParentWindowSearchMethod : uint8_t
 {
-	ESlateParentWindowSearchMethod__ActiveWindow                                     = 0,
-	ESlateParentWindowSearchMethod__MainWindow                                       = 1
+	ActiveWindow                                                                     = 0,
+	MainWindow                                                                       = 1
 };
 
 /// Enum /Script/SlateCore.EConsumeMouseWheel
 /// Size: 0x01 (1 bytes)
 enum class EConsumeMouseWheel : uint8_t
 {
-	EConsumeMouseWheel__WhenScrollingPossible                                        = 0,
-	EConsumeMouseWheel__Always                                                       = 1,
-	EConsumeMouseWheel__Never                                                        = 2
+	WhenScrollingPossible                                                            = 0,
+	Always                                                                           = 1,
+	Never                                                                            = 2
 };
 
 /// Class /Script/SlateCore.FontBulkData

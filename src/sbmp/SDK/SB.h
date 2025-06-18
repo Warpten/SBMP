@@ -34,12 +34,12 @@
 /// Size: 0x01 (1 bytes)
 enum class ESBInputAxisType : uint8_t
 {
-	ESBInputAxisType_LeftX                                                           = 0,
-	ESBInputAxisType_LeftY                                                           = 1,
-	ESBInputAxisType_RightX                                                          = 2,
-	ESBInputAxisType_RightY                                                          = 3,
-	ESBInputAxisType_TouchX                                                          = 4,
-	ESBInputAxisType_TouchY                                                          = 5
+	LeftX                                                                            = 0,
+	LeftY                                                                            = 1,
+	RightX                                                                           = 2,
+	RightY                                                                           = 3,
+	TouchX                                                                           = 4,
+	TouchY                                                                           = 5
 };
 
 /// Enum /Script/SB.ESBAreaControlVolumeBlockType
@@ -54,31 +54,31 @@ enum class ESBAreaControlVolumeBlockType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBBGMFinishSoundCondition : uint8_t
 {
-	ESBBGMFinishSoundCondition__Battle                                               = 0,
-	ESBBGMFinishSoundCondition__EventBattle                                          = 1
+	Battle                                                                           = 0,
+	EventBattle                                                                      = 1
 };
 
 /// Enum /Script/SB.ESBEventBattleConditionType
 /// Size: 0x01 (1 bytes)
 enum class ESBEventBattleConditionType : uint8_t
 {
-	ESBEventBattleConditionType__EnemyRank                                           = 0,
-	ESBEventBattleConditionType__EnemyCharacterAlias                                 = 1
+	EnemyRank                                                                        = 0,
+	EnemyCharacterAlias                                                              = 1
 };
 
 /// Enum /Script/SB.ESBDecoratorBlackboardSetValueType
 /// Size: 0x01 (1 bytes)
 enum class ESBDecoratorBlackboardSetValueType : uint8_t
 {
-	ESBDecoratorBlackboardSetValueType__None                                         = 0,
-	ESBDecoratorBlackboardSetValueType__Additive                                     = 1
+	None                                                                             = 0,
+	Additive                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBActorTagCheckType
 /// Size: 0x01 (1 bytes)
 enum class ESBActorTagCheckType : uint8_t
 {
-	ESBActorTagCheckType__Floor                                                      = 0
+	Floor                                                                            = 0
 };
 
 /// Enum /Script/SB.ESBCheckStanceCompareType
@@ -93,20 +93,20 @@ enum class ESBCheckStanceCompareType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBBTDecoratorAliveCheckType : uint8_t
 {
-	ESBBTDecoratorAliveCheckType__Alive                                              = 0,
-	ESBBTDecoratorAliveCheckType__Dead                                               = 1,
-	ESBBTDecoratorAliveCheckType__Coma                                               = 2
+	Alive                                                                            = 0,
+	Dead                                                                             = 1,
+	Coma                                                                             = 2
 };
 
 /// Enum /Script/SB.ESBNotifyBPCrowdControl
 /// Size: 0x01 (1 bytes)
 enum class ESBNotifyBPCrowdControl : uint8_t
 {
-	ESBNotifyBPCrowdControl_None                                                     = 0,
-	ESBNotifyBPCrowdControl_Airborne                                                 = 1,
-	ESBNotifyBPCrowdControl_KnockBack                                                = 2,
-	ESBNotifyBPCrowdControl_Down                                                     = 3,
-	ESBNotifyBPCrowdControl_Groggy                                                   = 4
+	None                                                                             = 0,
+	Airborne                                                                         = 1,
+	KnockBack                                                                        = 2,
+	Down                                                                             = 3,
+	Groggy                                                                           = 4
 };
 
 /// Enum /Script/SB.ESBCharacterAnimChannel
@@ -176,24 +176,24 @@ enum class ESBCharacterMoveAnimBlendMode : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBLockOnType : uint8_t
 {
-	ESBLockOnType_MinDistance                                                        = 0,
-	ESBLockOnType_MinDegree                                                          = 1
+	MinDistance                                                                      = 0,
+	MinDegree                                                                        = 1
 };
 
 /// Enum /Script/SB.ESBCharacterMoveType
 /// Size: 0x01 (1 bytes)
 enum class ESBCharacterMoveType : uint8_t
 {
-	ESBCharacterMoveType_None                                                        = 0,
-	ESBCharacterMoveType_Normal                                                      = 1,
-	ESBCharacterMoveType_MoveToIdle                                                  = 2,
-	ESBCharacterMoveType_Fall                                                        = 3,
-	ESBCharacterMoveType_FlyingAction                                                = 4,
-	ESBCharacterMoveType_LogicRule                                                   = 5,
-	ESBCharacterMoveType_EventMove                                                   = 6,
-	ESBCharacterMoveType_SlopeMove                                                   = 7,
-	ESBCharacterMoveType_Sprint                                                      = 8,
-	ESBCharacterMoveType_Grab                                                        = 9
+	None                                                                             = 0,
+	Normal                                                                           = 1,
+	MoveToIdle                                                                       = 2,
+	Fall                                                                             = 3,
+	FlyingAction                                                                     = 4,
+	LogicRule                                                                        = 5,
+	EventMove                                                                        = 6,
+	SlopeMove                                                                        = 7,
+	Sprint                                                                           = 8,
+	Grab                                                                             = 9
 };
 
 /// Enum /Script/SB.ESBCharacterCollisionShapeType
@@ -239,9 +239,9 @@ enum class ESBCharMovingStanceForceType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBCommonCreditState : uint8_t
 {
-	ESBCommonCreditState__None                                                       = 0,
-	ESBCommonCreditState__Leader                                                     = 1,
-	ESBCommonCreditState__Scroll                                                     = 2
+	None                                                                             = 0,
+	Leader                                                                           = 1,
+	Scroll                                                                           = 2
 };
 
 /// Enum /Script/SB.ESBData
@@ -407,92 +407,92 @@ enum class ESBData : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBOnlineStoreType : uint8_t
 {
-	ESBOnlineStoreType__None                                                         = 0,
-	ESBOnlineStoreType__Steam                                                        = 1,
-	ESBOnlineStoreType__EpicGames                                                    = 2,
-	ESBOnlineStoreType__PlayStation                                                  = 3
+	None                                                                             = 0,
+	Steam                                                                            = 1,
+	EpicGames                                                                        = 2,
+	PlayStation                                                                      = 3
 };
 
 /// Enum /Script/SB.ESBMeshStudioType
 /// Size: 0x01 (1 bytes)
 enum class ESBMeshStudioType : uint8_t
 {
-	ESBMeshStudioType__Can                                                           = 0,
-	ESBMeshStudioType__Character                                                     = 1
+	Can                                                                              = 0,
+	Character                                                                        = 1
 };
 
 /// Enum /Script/SB.ESBSequenceContentType
 /// Size: 0x01 (1 bytes)
 enum class ESBSequenceContentType : uint8_t
 {
-	ESBSequenceContentType_Default                                                   = 0,
-	ESBSequenceContentType_Nikke                                                     = 1
+	Default                                                                          = 0,
+	Nikke                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBKeyboardType
 /// Size: 0x01 (1 bytes)
 enum class ESBKeyboardType : uint8_t
 {
-	ESBKeyboardType__QWERTY                                                          = 0,
-	ESBKeyboardType__AZERTY                                                          = 1
+	QWERTY                                                                           = 0,
+	AZERTY                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBCouponFailResponseType
 /// Size: 0x01 (1 bytes)
 enum class ESBCouponFailResponseType : uint8_t
 {
-	ESBCouponFailResponseType__IssuanceError                                         = 0,
-	ESBCouponFailResponseType__PurchaseInfoError                                     = 1,
-	ESBCouponFailResponseType__Expired                                               = 2,
-	ESBCouponFailResponseType__DataVerificationError                                 = 3,
-	ESBCouponFailResponseType__NetworkError                                          = 4
+	IssuanceError                                                                    = 0,
+	PurchaseInfoError                                                                = 1,
+	Expired                                                                          = 2,
+	DataVerificationError                                                            = 3,
+	NetworkError                                                                     = 4
 };
 
 /// Enum /Script/SB.ESBCouponNotAvailableType
 /// Size: 0x01 (1 bytes)
 enum class ESBCouponNotAvailableType : uint8_t
 {
-	ESBCouponNotAvailableType__None                                                  = 0,
-	ESBCouponNotAvailableType__NotEnoughPlayTime                                     = 1,
-	ESBCouponNotAvailableType__Expired                                               = 2,
-	ESBCouponNotAvailableType__NetworkError                                          = 3
+	None                                                                             = 0,
+	NotEnoughPlayTime                                                                = 1,
+	Expired                                                                          = 2,
+	NetworkError                                                                     = 3
 };
 
 /// Enum /Script/SB.ESBCouponState
 /// Size: 0x01 (1 bytes)
 enum class ESBCouponState : uint8_t
 {
-	ESBCouponState__None                                                             = 0,
-	ESBCouponState__NotAvailable                                                     = 1,
-	ESBCouponState__Available                                                        = 2,
-	ESBCouponState__WaitRequest                                                      = 3,
-	ESBCouponState__Acquired                                                         = 4
+	None                                                                             = 0,
+	NotAvailable                                                                     = 1,
+	Available                                                                        = 2,
+	WaitRequest                                                                      = 3,
+	Acquired                                                                         = 4
 };
 
 /// Enum /Script/SB.ESBFrameLimit
 /// Size: 0x01 (1 bytes)
 enum class ESBFrameLimit : uint8_t
 {
-	ESBFrameLimit__FrameLimit                                                        = 0,
-	ESBFrameLimit__FrameLimit2                                                       = 1,
-	ESBFrameLimit__FrameLimit3                                                       = 2,
-	ESBFrameLimit__FrameLimit4                                                       = 3,
-	ESBFrameLimit__FrameLimit5                                                       = 4,
-	ESBFrameLimit__FrameLimit6                                                       = 5,
-	ESBFrameLimit__FrameLimit_Unlimited                                              = 6
+	FrameLimit                                                                       = 0,
+	FrameLimit2                                                                      = 1,
+	FrameLimit3                                                                      = 2,
+	FrameLimit4                                                                      = 3,
+	FrameLimit5                                                                      = 4,
+	FrameLimit6                                                                      = 5,
+	FrameLimit_Unlimited                                                             = 6
 };
 
 /// Enum /Script/SB.ESBAspectRatio
 /// Size: 0x01 (1 bytes)
 enum class ESBAspectRatio : uint8_t
 {
-	ESBAspectRatio__AspectRatio_Auto                                                 = 0,
-	ESBAspectRatio__AspectRatio_32                                                   = 1,
-	ESBAspectRatio__AspectRatio_21                                                   = 2,
-	ESBAspectRatio__AspectRatio_16                                                   = 3,
-	ESBAspectRatio__AspectRatio_165                                                  = 4,
-	ESBAspectRatio__AspectRatio_4                                                    = 5,
-	ESBAspectRatio__AspectRatio_5                                                    = 6
+	AspectRatio_Auto                                                                 = 0,
+	AspectRatio_32                                                                   = 1,
+	AspectRatio_21                                                                   = 2,
+	AspectRatio_16                                                                   = 3,
+	AspectRatio_165                                                                  = 4,
+	AspectRatio_4                                                                    = 5,
+	AspectRatio_5                                                                    = 6
 };
 
 /// Enum /Script/SB.ESBGameUserSettingsQuality
@@ -513,153 +513,153 @@ enum class ESBGameUserSettingsQuality : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBEventContentsType : uint8_t
 {
-	ESBEventContentsType_Summer                                                      = 0,
-	ESBEventContentsType_Christmas                                                   = 1,
-	ESBEventContentsType_Max                                                         = 2
+	Summer                                                                           = 0,
+	Christmas                                                                        = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/SB.ESBPhotoModeNotifyType
 /// Size: 0x01 (1 bytes)
 enum class ESBPhotoModeNotifyType : uint8_t
 {
-	ESBPhotoModeNotifyType__ESBPhotoModeNotifyType_FailSweepCheck                    = 0,
-	ESBPhotoModeNotifyType__ESBPhotoModeNotifyType_AutoFocus                         = 1,
-	ESBPhotoModeNotifyType__ESBPhotoModeNotifyType_Cancel                            = 2,
-	ESBPhotoModeNotifyType__ESBPhotoModeNotifyType_AutoFocus_OutsideCameraFrustum    = 3
+	ESBPhotoModeNotifyType_FailSweepCheck                                            = 0,
+	ESBPhotoModeNotifyType_AutoFocus                                                 = 1,
+	ESBPhotoModeNotifyType_Cancel                                                    = 2,
+	ESBPhotoModeNotifyType_AutoFocus_OutsideCameraFrustum                            = 3
 };
 
 /// Enum /Script/SB.ESBPhotoModeInteractionAllowType
 /// Size: 0x01 (1 bytes)
 enum class ESBPhotoModeInteractionAllowType : uint8_t
 {
-	ESBPhotoModeInteractionAllowType_EnableFree                                      = 0,
-	ESBPhotoModeInteractionAllowType_EnableCutScene                                  = 1,
-	ESBPhotoModeInteractionAllowType_Disable                                         = 2
+	EnableFree                                                                       = 0,
+	EnableCutScene                                                                   = 1,
+	Disable                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBInputActionItemUseType
 /// Size: 0x01 (1 bytes)
 enum class ESBInputActionItemUseType : uint8_t
 {
-	ESBInputActionItemUseType__None                                                  = 0,
-	ESBInputActionItemUseType__Heal                                                  = 1,
-	ESBInputActionItemUseType__Util                                                  = 2,
-	ESBInputActionItemUseType__Bullet                                                = 3
+	None                                                                             = 0,
+	Heal                                                                             = 1,
+	Util                                                                             = 2,
+	Bullet                                                                           = 3
 };
 
 /// Enum /Script/SB.ESBKeyCombinationType
 /// Size: 0x01 (1 bytes)
 enum class ESBKeyCombinationType : uint8_t
 {
-	ESBKeyCombinationType__None                                                      = 0,
-	ESBKeyCombinationType__Shift                                                     = 1,
-	ESBKeyCombinationType__Ctrl                                                      = 2,
-	ESBKeyCombinationType__Alt                                                       = 3,
-	ESBKeyCombinationType__Cmd                                                       = 4
+	None                                                                             = 0,
+	Shift                                                                            = 1,
+	Ctrl                                                                             = 2,
+	Alt                                                                              = 3,
+	Cmd                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBKeyMappingPresetType
 /// Size: 0x01 (1 bytes)
 enum class ESBKeyMappingPresetType : uint8_t
 {
-	ESBKeyMappingPresetType__Default                                                 = 0,
-	ESBKeyMappingPresetType__AzertyKeyboard                                          = 1
+	Default                                                                          = 0,
+	AzertyKeyboard                                                                   = 1
 };
 
 /// Enum /Script/SB.ESBKeyMappingWarningType
 /// Size: 0x01 (1 bytes)
 enum class ESBKeyMappingWarningType : uint8_t
 {
-	ESBKeyMappingWarningType__None                                                   = 0,
-	ESBKeyMappingWarningType__DuplicateWarning                                       = 1,
-	ESBKeyMappingWarningType__EssentialWarning                                       = 2,
-	ESBKeyMappingWarningType__RecommendCaution                                       = 3
+	None                                                                             = 0,
+	DuplicateWarning                                                                 = 1,
+	EssentialWarning                                                                 = 2,
+	RecommendCaution                                                                 = 3
 };
 
 /// Enum /Script/SB.ESBKeyMappingAxisScaleType
 /// Size: 0x01 (1 bytes)
 enum class ESBKeyMappingAxisScaleType : uint8_t
 {
-	ESBKeyMappingAxisScaleType__Positive                                             = 0,
-	ESBKeyMappingAxisScaleType__Negative                                             = 1
+	Positive                                                                         = 0,
+	Negative                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBKeyMappingChannelType
 /// Size: 0x01 (1 bytes)
 enum class ESBKeyMappingChannelType : uint8_t
 {
-	ESBKeyMappingChannelType__Main                                                   = 0,
-	ESBKeyMappingChannelType__Sub                                                    = 1
+	Main                                                                             = 0,
+	Sub                                                                              = 1
 };
 
 /// Enum /Script/SB.ESBKeyMappingStrengthType
 /// Size: 0x01 (1 bytes)
 enum class ESBKeyMappingStrengthType : uint8_t
 {
-	ESBKeyMappingStrengthType__Free                                                  = 0,
-	ESBKeyMappingStrengthType__Recommend                                             = 1,
-	ESBKeyMappingStrengthType__Essential                                             = 2,
-	ESBKeyMappingStrengthType__UnmappableAll                                         = 3
+	Free                                                                             = 0,
+	Recommend                                                                        = 1,
+	Essential                                                                        = 2,
+	UnmappableAll                                                                    = 3
 };
 
 /// Enum /Script/SB.ESBBossChallengePresetType
 /// Size: 0x01 (1 bytes)
 enum class ESBBossChallengePresetType : uint8_t
 {
-	ESBBossChallengePresetType__LastSaveSlot                                         = 0,
-	ESBBossChallengePresetType__Maximum                                              = 1,
-	ESBBossChallengePresetType__MaximumWithNewGamePlus                               = 2,
-	ESBBossChallengePresetType__Minimum                                              = 3
+	LastSaveSlot                                                                     = 0,
+	Maximum                                                                          = 1,
+	MaximumWithNewGamePlus                                                           = 2,
+	Minimum                                                                          = 3
 };
 
 /// Enum /Script/SB.ESBBossChallengePlayerSettingType
 /// Size: 0x01 (1 bytes)
 enum class ESBBossChallengePlayerSettingType : uint8_t
 {
-	ESBBossChallengePlayerSettingType_None                                           = 0,
-	ESBBossChallengePlayerSettingType_LastPlaySlot                                   = 1,
-	ESBBossChallengePlayerSettingType_PresetMaximum                                  = 2,
-	ESBBossChallengePlayerSettingType_PresetMaximumNGPlus                            = 3,
-	ESBBossChallengePlayerSettingType_PresetMinimum                                  = 4
+	None                                                                             = 0,
+	LastPlaySlot                                                                     = 1,
+	PresetMaximum                                                                    = 2,
+	PresetMaximumNGPlus                                                              = 3,
+	PresetMinimum                                                                    = 4
 };
 
 /// Enum /Script/SB.ESBBossChallengeStep
 /// Size: 0x01 (1 bytes)
 enum class ESBBossChallengeStep : uint8_t
 {
-	ESBBossChallengeStep_None                                                        = 0,
-	ESBBossChallengeStep_RequestEnter                                                = 1,
-	ESBBossChallengeStep_EnterComplete                                               = 2,
-	ESBBossChallengeStep_FinishStep                                                  = 3,
-	ESBBossChallengeStep_CompleteFinishStep                                          = 4
+	None                                                                             = 0,
+	RequestEnter                                                                     = 1,
+	EnterComplete                                                                    = 2,
+	FinishStep                                                                       = 3,
+	CompleteFinishStep                                                               = 4
 };
 
 /// Enum /Script/SB.ESBEventGiftType
 /// Size: 0x01 (1 bytes)
 enum class ESBEventGiftType : uint8_t
 {
-	ESBEventGiftType_None                                                            = 0,
-	ESBEventGiftType_BossChallenge                                                   = 1,
-	ESBEventGiftType_Event                                                           = 2,
-	ESBEventGiftType_FusionEndingGift                                                = 3,
-	ESBEventGiftType_PSN                                                             = 4
+	None                                                                             = 0,
+	BossChallenge                                                                    = 1,
+	Event                                                                            = 2,
+	FusionEndingGift                                                                 = 3,
+	PSN                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBNGPlusAlreadySetupType
 /// Size: 0x01 (1 bytes)
 enum class ESBNGPlusAlreadySetupType : uint8_t
 {
-	ESBNGPlusAlreadySetupType_None                                                   = 0,
-	ESBNGPlusAlreadySetupType_Env                                                    = 1,
-	ESBNGPlusAlreadySetupType_Trigger                                                = 2
+	None                                                                             = 0,
+	Env                                                                              = 1,
+	Trigger                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBGameProgressRecordFilter
 /// Size: 0x01 (1 bytes)
 enum class ESBGameProgressRecordFilter : uint8_t
 {
-	ESBGameProgressRecordFilter_None                                                 = 0,
-	ESBGameProgressRecordFilter_DifferientZoneEvent                                  = 1
+	None                                                                             = 0,
+	DifferientZoneEvent                                                              = 1
 };
 
 /// Enum /Script/SB.ESBFSR2QualityMode
@@ -677,44 +677,44 @@ enum class ESBFSR2QualityMode : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBGameEndingType : uint8_t
 {
-	ESBGameEndingType__None                                                          = 0,
-	ESBGameEndingType__KillElder                                                     = 1,
-	ESBGameEndingType__KillLily                                                      = 2,
-	ESBGameEndingType__SaveLily                                                      = 3
+	None                                                                             = 0,
+	KillElder                                                                        = 1,
+	KillLily                                                                         = 2,
+	SaveLily                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBMeshClipingApplyType
 /// Size: 0x01 (1 bytes)
 enum class ESBMeshClipingApplyType : uint8_t
 {
-	ESBMeshClipingApplyType_None                                                     = 0,
-	ESBMeshClipingApplyType_Ponytail                                                 = 1,
-	ESBMeshClipingApplyType_Body                                                     = 2,
-	ESBMeshClipingApplyType_All                                                      = 3
+	None                                                                             = 0,
+	Ponytail                                                                         = 1,
+	Body                                                                             = 2,
+	All                                                                              = 3
 };
 
 /// Enum /Script/SB.ESBClipMatParamIndex
 /// Size: 0x01 (1 bytes)
 enum class ESBClipMatParamIndex : uint8_t
 {
-	ESBClipMatParamIndex_Location                                                    = 0,
-	ESBClipMatParamIndex_Bounds                                                      = 1,
-	ESBClipMatParamIndex_BasisX                                                      = 2,
-	ESBClipMatParamIndex_BasisY                                                      = 3,
-	ESBClipMatParamIndex_BasisZ                                                      = 4,
-	ESBClipMatParamIndex_ExclusivePlaneNormal                                        = 5,
-	ESBClipMatParamIndex_ExclusivePlaneOrigin                                        = 6,
-	ESBClipMatParamIndex_Num                                                         = 7
+	Location                                                                         = 0,
+	Bounds                                                                           = 1,
+	BasisX                                                                           = 2,
+	BasisY                                                                           = 3,
+	BasisZ                                                                           = 4,
+	ExclusivePlaneNormal                                                             = 5,
+	ExclusivePlaneOrigin                                                             = 6,
+	Num                                                                              = 7
 };
 
 /// Enum /Script/SB.ESBQuestSymbolUIType
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestSymbolUIType : uint8_t
 {
-	ESBQuestSymbolUIType_None                                                        = 0,
-	ESBQuestSymbolUIType_Epic                                                        = 1,
-	ESBQuestSymbolUIType_Sub                                                         = 2,
-	ESBQuestSymbolUIType_Request                                                     = 3
+	None                                                                             = 0,
+	Epic                                                                             = 1,
+	Sub                                                                              = 2,
+	Request                                                                          = 3
 };
 
 /// Enum /Script/SB.ESBDebugHistoryLogType
@@ -736,150 +736,150 @@ enum class ESBDebugHistoryLogType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBAcquisitionSkillVisibleCondition : uint8_t
 {
-	ESBAcquisitionSkillVisibleCondition__AlwaysShow                                  = 0,
-	ESBAcquisitionSkillVisibleCondition__OnlyNewGamePlus                             = 1
+	AlwaysShow                                                                       = 0,
+	OnlyNewGamePlus                                                                  = 1
 };
 
 /// Enum /Script/SB.ESBPhotoModeShowHiddenFlag
 /// Size: 0x01 (1 bytes)
 enum class ESBPhotoModeShowHiddenFlag : uint8_t
 {
-	ESBPhotoModeShowHiddenFlag__None                                                 = 0,
-	ESBPhotoModeShowHiddenFlag__ShowHiddenOnPoseChange                               = 1
+	None                                                                             = 0,
+	ShowHiddenOnPoseChange                                                           = 1
 };
 
 /// Enum /Script/SB.ESBPhotoModeInputDirection
 /// Size: 0x01 (1 bytes)
 enum class ESBPhotoModeInputDirection : uint8_t
 {
-	ESBPhotoModeInputDirection_None                                                  = 0,
-	ESBPhotoModeInputDirection_FB                                                    = 1,
-	ESBPhotoModeInputDirection_LR                                                    = 2,
-	ESBPhotoModeInputDirection_Up                                                    = 3,
-	ESBPhotoModeInputDirection_Down                                                  = 4,
-	ESBPhotoModeInputDirection_Turn                                                  = 5,
-	ESBPhotoModeInputDirection_Look                                                  = 6,
-	ESBPhotoModeInputDirection_MouseX                                                = 7,
-	ESBPhotoModeInputDirection_MouseY                                                = 8,
-	ESBPhotoModeInputDirection_Light_F                                               = 9,
-	ESBPhotoModeInputDirection_Light_B                                               = 10,
-	ESBPhotoModeInputDirection_Light_LR                                              = 11,
-	ESBPhotoModeInputDirection_Light_Up                                              = 12,
-	ESBPhotoModeInputDirection_Light_Down                                            = 13,
-	ESBPhotoModeInputDirection_Selfie_Arm_UD                                         = 14,
-	ESBPhotoModeInputDirection_Selfie_Char_LR                                        = 15,
-	ESBPhotoModeInputDirection_Selfie_CharHead_LR                                    = 16,
-	ESBPhotoModeInputDirection_Selfie_Cam_LR                                         = 17,
-	ESBPhotoModeInputDirection_Selfie_CharHead_UD                                    = 18,
-	ESBPhotoModeInputDirection_Selfie_Cam_UD                                         = 19,
-	ESBPhotoModeInputDirection_Max                                                   = 20
+	None                                                                             = 0,
+	FB                                                                               = 1,
+	LR                                                                               = 2,
+	Up                                                                               = 3,
+	Down                                                                             = 4,
+	Turn                                                                             = 5,
+	Look                                                                             = 6,
+	MouseX                                                                           = 7,
+	MouseY                                                                           = 8,
+	Light_F                                                                          = 9,
+	Light_B                                                                          = 10,
+	Light_LR                                                                         = 11,
+	Light_Up                                                                         = 12,
+	Light_Down                                                                       = 13,
+	Selfie_Arm_UD                                                                    = 14,
+	Selfie_Char_LR                                                                   = 15,
+	Selfie_CharHead_LR                                                               = 16,
+	Selfie_Cam_LR                                                                    = 17,
+	Selfie_CharHead_UD                                                               = 18,
+	Selfie_Cam_UD                                                                    = 19,
+	Max                                                                              = 20
 };
 
 /// Enum /Script/SB.ESBPhotoModeSelfieDirection
 /// Size: 0x01 (1 bytes)
 enum class ESBPhotoModeSelfieDirection : uint8_t
 {
-	ESBPhotoModeSelfieDirection__ESBPhotoModeSelfieDirection_None                    = 0,
-	ESBPhotoModeSelfieDirection__ESBPhotoModeSelfieDirection_Left                    = 1,
-	ESBPhotoModeSelfieDirection__ESBPhotoModeSelfieDirection_Right                   = 2
+	ESBPhotoModeSelfieDirection_None                                                 = 0,
+	ESBPhotoModeSelfieDirection_Left                                                 = 1,
+	ESBPhotoModeSelfieDirection_Right                                                = 2
 };
 
 /// Enum /Script/SB.ESBPhotoModeOptionUISlotType
 /// Size: 0x01 (1 bytes)
 enum class ESBPhotoModeOptionUISlotType : uint8_t
 {
-	ESBPhotoModeOptionUISlotType_None                                                = 0,
-	ESBPhotoModeOptionUISlotType_SliderSlot                                          = 1,
-	ESBPhotoModeOptionUISlotType_RollingSlot                                         = 2,
-	ESBPhotoModeOptionUISlotType_ButtonSlot                                          = 3,
-	ESBPhotoModeOptionUISlotType_Max                                                 = 4
+	None                                                                             = 0,
+	SliderSlot                                                                       = 1,
+	RollingSlot                                                                      = 2,
+	ButtonSlot                                                                       = 3,
+	Max                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBPhotoModeCameraType
 /// Size: 0x01 (1 bytes)
 enum class ESBPhotoModeCameraType : uint8_t
 {
-	ESBPhotoModeCameraType_None                                                      = 0,
-	ESBPhotoModeCameraType_FreeCamera                                                = 1,
-	ESBPhotoModeCameraType_SelfieCamera                                              = 2,
-	ESBPhotoModeCameraType_CutSceneCamera                                            = 3,
-	ESBPhotoModeCameraType_Max                                                       = 4
+	None                                                                             = 0,
+	FreeCamera                                                                       = 1,
+	SelfieCamera                                                                     = 2,
+	CutSceneCamera                                                                   = 3,
+	Max                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBPhotoModeOptionType
 /// Size: 0x01 (1 bytes)
 enum class ESBPhotoModeOptionType : uint8_t
 {
-	ESBPhotoModeOptionType_None                                                      = 0,
-	ESBPhotoModeOptionType_CameraRoll                                                = 1,
-	ESBPhotoModeOptionType_CameraFOV                                                 = 2,
-	ESBPhotoModeOptionType_Dither                                                    = 3,
-	ESBPhotoModeOptionType_DOFOverride                                               = 4,
-	ESBPhotoModeOptionType_DOFVisualize                                              = 5,
-	ESBPhotoModeOptionType_DOFFocalDistance                                          = 6,
-	ESBPhotoModeOptionType_DOFAperture                                               = 7,
-	ESBPhotoModeOptionType_ImageHDR                                                  = 8,
-	ESBPhotoModeOptionType_ImageExposure                                             = 9,
-	ESBPhotoModeOptionType_ImageContrast                                             = 10,
-	ESBPhotoModeOptionType_ImageColorSaturation                                      = 11,
-	ESBPhotoModeOptionType_ImageHue                                                  = 12,
-	ESBPhotoModeOptionType_ImageHueIntensity                                         = 13,
-	ESBPhotoModeOptionType_ImageBrightness                                           = 14,
-	ESBPhotoModeOptionType_ImageBloomIntensity                                       = 15,
-	ESBPhotoModeOptionType_ImageTonemapperSharpen                                    = 16,
-	ESBPhotoModeOptionType_ImageFilter                                               = 17,
-	ESBPhotoModeOptionType_ImageFilterIntensity                                      = 18,
-	ESBPhotoModeOptionType_ImageFilterMaskEVE                                        = 19,
-	ESBPhotoModeOptionType_ImageFilterMaskNPC                                        = 20,
-	ESBPhotoModeOptionType_ImageFilterMaskMonster                                    = 21,
-	ESBPhotoModeOptionType_ImageFilterZoomBlur                                       = 22,
-	ESBPhotoModeOptionType_ImageFilterZoomBlurIntensity                              = 23,
-	ESBPhotoModeOptionType_ImageMotionBlur                                           = 24,
-	ESBPhotoModeOptionType_ImageMotionBlurScale                                      = 25,
-	ESBPhotoModeOptionType_ImageChromaticAberration                                  = 26,
-	ESBPhotoModeOptionType_ImageFilmGrain                                            = 27,
-	ESBPhotoModeOptionType_ImageFilmGrainIntensity                                   = 28,
-	ESBPhotoModeOptionType_DecoBorder                                                = 29,
-	ESBPhotoModeOptionType_DecoCopyright                                             = 30,
-	ESBPhotoModeOptionType_DecoLogo1                                                 = 31,
-	ESBPhotoModeOptionType_DecoLogo2                                                 = 32,
-	ESBPhotoModeOptionType_DecoLogo3                                                 = 33,
-	ESBPhotoModeOptionType_DecoLogo4                                                 = 34,
-	ESBPhotoModeOptionType_DecoLogo5                                                 = 35,
-	ESBPhotoModeOptionType_DecoVignette                                              = 36,
-	ESBPhotoModeOptionType_CharacterEveFacial                                        = 37,
-	ESBPhotoModeOptionType_CharacterLilyFacial                                       = 38,
-	ESBPhotoModeOptionType_CharacterAdamFacial                                       = 39,
-	ESBPhotoModeOptionType_CharacterEvePose                                          = 40,
-	ESBPhotoModeOptionType_CharacterLilyPose                                         = 41,
-	ESBPhotoModeOptionType_CharacterAdamPose                                         = 42,
-	ESBPhotoModeOptionType_CharacterEVE                                              = 43,
-	ESBPhotoModeOptionType_CharacterDrone                                            = 44,
-	ESBPhotoModeOptionType_CharacterLily                                             = 45,
-	ESBPhotoModeOptionType_CharacterAdam                                             = 46,
-	ESBPhotoModeOptionType_CharacterExtra                                            = 47,
-	ESBPhotoModeOptionType_CharacterDroneLight                                       = 48,
-	ESBPhotoModeOptionType_CharacterDroneLightIntensity                              = 49,
-	ESBPhotoModeOptionType_CharacterEVELookCamera                                    = 50,
-	ESBPhotoModeOptionType_CharacterAdamLookCamera                                   = 51,
-	ESBPhotoModeOptionType_CharacterLilyLookCamera                                   = 52,
-	ESBPhotoModeOptionType_LightSelect                                               = 53,
-	ESBPhotoModeOptionType_LightActive                                               = 54,
-	ESBPhotoModeOptionType_LightChannels                                             = 55,
-	ESBPhotoModeOptionType_LightShadow                                               = 56,
-	ESBPhotoModeOptionType_LightIntensity                                            = 57,
-	ESBPhotoModeOptionType_LightAttenuationRadius                                    = 58,
-	ESBPhotoModeOptionType_LightPresetColor                                          = 59,
-	ESBPhotoModeOptionType_LightCustomColorH                                         = 60,
-	ESBPhotoModeOptionType_LightCustomColorS                                         = 61,
-	ESBPhotoModeOptionType_LightCustomColorL                                         = 62,
-	ESBPhotoModeOptionType_LightVolumetricScatteringIntensity                        = 63,
-	ESBPhotoModeOptionType_LightWorldLightIntensity                                  = 64,
-	ESBPhotoModeOptionType_EyeControl                                                = 65,
-	ESBPhotoModeOptionType_EyeControl_Target                                         = 66,
-	ESBPhotoModeOptionType_Preset_Save                                               = 67,
-	ESBPhotoModeOptionType_Preset_Load                                               = 68,
-	ESBPhotoModeOptionType_Max                                                       = 69
+	None                                                                             = 0,
+	CameraRoll                                                                       = 1,
+	CameraFOV                                                                        = 2,
+	Dither                                                                           = 3,
+	DOFOverride                                                                      = 4,
+	DOFVisualize                                                                     = 5,
+	DOFFocalDistance                                                                 = 6,
+	DOFAperture                                                                      = 7,
+	ImageHDR                                                                         = 8,
+	ImageExposure                                                                    = 9,
+	ImageContrast                                                                    = 10,
+	ImageColorSaturation                                                             = 11,
+	ImageHue                                                                         = 12,
+	ImageHueIntensity                                                                = 13,
+	ImageBrightness                                                                  = 14,
+	ImageBloomIntensity                                                              = 15,
+	ImageTonemapperSharpen                                                           = 16,
+	ImageFilter                                                                      = 17,
+	ImageFilterIntensity                                                             = 18,
+	ImageFilterMaskEVE                                                               = 19,
+	ImageFilterMaskNPC                                                               = 20,
+	ImageFilterMaskMonster                                                           = 21,
+	ImageFilterZoomBlur                                                              = 22,
+	ImageFilterZoomBlurIntensity                                                     = 23,
+	ImageMotionBlur                                                                  = 24,
+	ImageMotionBlurScale                                                             = 25,
+	ImageChromaticAberration                                                         = 26,
+	ImageFilmGrain                                                                   = 27,
+	ImageFilmGrainIntensity                                                          = 28,
+	DecoBorder                                                                       = 29,
+	DecoCopyright                                                                    = 30,
+	DecoLogo1                                                                        = 31,
+	DecoLogo2                                                                        = 32,
+	DecoLogo3                                                                        = 33,
+	DecoLogo4                                                                        = 34,
+	DecoLogo5                                                                        = 35,
+	DecoVignette                                                                     = 36,
+	CharacterEveFacial                                                               = 37,
+	CharacterLilyFacial                                                              = 38,
+	CharacterAdamFacial                                                              = 39,
+	CharacterEvePose                                                                 = 40,
+	CharacterLilyPose                                                                = 41,
+	CharacterAdamPose                                                                = 42,
+	CharacterEVE                                                                     = 43,
+	CharacterDrone                                                                   = 44,
+	CharacterLily                                                                    = 45,
+	CharacterAdam                                                                    = 46,
+	CharacterExtra                                                                   = 47,
+	CharacterDroneLight                                                              = 48,
+	CharacterDroneLightIntensity                                                     = 49,
+	CharacterEVELookCamera                                                           = 50,
+	CharacterAdamLookCamera                                                          = 51,
+	CharacterLilyLookCamera                                                          = 52,
+	LightSelect                                                                      = 53,
+	LightActive                                                                      = 54,
+	LightChannels                                                                    = 55,
+	LightShadow                                                                      = 56,
+	LightIntensity                                                                   = 57,
+	LightAttenuationRadius                                                           = 58,
+	LightPresetColor                                                                 = 59,
+	LightCustomColorH                                                                = 60,
+	LightCustomColorS                                                                = 61,
+	LightCustomColorL                                                                = 62,
+	LightVolumetricScatteringIntensity                                               = 63,
+	LightWorldLightIntensity                                                         = 64,
+	EyeControl                                                                       = 65,
+	EyeControl_Target                                                                = 66,
+	Preset_Save                                                                      = 67,
+	Preset_Load                                                                      = 68,
+	Max                                                                              = 69
 };
 
 /// Enum /Script/SB.ESBPhotoModeFacialAnimType
@@ -911,32 +911,32 @@ enum class ESBIdleAnimType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBManualType : uint8_t
 {
-	ESBManualType_None                                                               = 0,
-	ESBManualType_Combat                                                             = 1,
-	ESBManualType_Skill                                                              = 2,
-	ESBManualType_Ranged                                                             = 3,
-	ESBManualType_Item                                                               = 4,
-	ESBManualType_Expedition                                                         = 5,
-	ESBManualType_Combo                                                              = 6,
-	ESBManualType_Max                                                                = 7
+	None                                                                             = 0,
+	Combat                                                                           = 1,
+	Skill                                                                            = 2,
+	Ranged                                                                           = 3,
+	Item                                                                             = 4,
+	Expedition                                                                       = 5,
+	Combo                                                                            = 6,
+	Max                                                                              = 7
 };
 
 /// Enum /Script/SB.ESBGameDifficultyType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameDifficultyType : uint8_t
 {
-	ESBGameDifficultyType__NormalMode                                                = 0,
-	ESBGameDifficultyType__StoryMode                                                 = 1,
-	ESBGameDifficultyType__HardMode                                                  = 2
+	NormalMode                                                                       = 0,
+	StoryMode                                                                        = 1,
+	HardMode                                                                         = 2
 };
 
 /// Enum /Script/SB.ESBStopEffectEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBStopEffectEvent : uint8_t
 {
-	ESBStopEffectEvent_Force                                                         = 0,
-	ESBStopEffectEvent_OnDead                                                        = 1,
-	ESBStopEffectEvent_OnRevival                                                     = 2
+	Force                                                                            = 0,
+	OnDead                                                                           = 1,
+	OnRevival                                                                        = 2
 };
 
 /// Enum /Script/SB.ESBTheaterInteractionLineMarkerType
@@ -972,121 +972,121 @@ enum class ESBEffectVolumeType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBTutorialType : uint8_t
 {
-	ESBTutorialType_On                                                               = 0,
-	ESBTutorialType_Off                                                              = 1
+	On                                                                               = 0,
+	Off                                                                              = 1
 };
 
 /// Enum /Script/SB.ESBGuideStartType
 /// Size: 0x01 (1 bytes)
 enum class ESBGuideStartType : uint8_t
 {
-	ESBGuideStartType_None                                                           = 0,
-	ESBGuideStartType_BetaGauge                                                      = 1,
-	ESBGuideStartType_Aggro                                                          = 2,
-	ESBGuideStartType_Battle                                                         = 3,
-	ESBGuideStartType_Fishing                                                        = 4,
-	ESBGuideStartType_EventMove                                                      = 5,
-	ESBGuideStartType_Swimming                                                       = 6,
-	ESBGuideStartType_UWSwimming                                                     = 7,
-	ESBGuideStartType_SlopeSliding                                                   = 8,
-	ESBGuideStartType_Interaction                                                    = 9,
-	ESBGuideStartType_Effect                                                         = 10
+	None                                                                             = 0,
+	BetaGauge                                                                        = 1,
+	Aggro                                                                            = 2,
+	Battle                                                                           = 3,
+	Fishing                                                                          = 4,
+	EventMove                                                                        = 5,
+	Swimming                                                                         = 6,
+	UWSwimming                                                                       = 7,
+	SlopeSliding                                                                     = 8,
+	Interaction                                                                      = 9,
+	Effect                                                                           = 10
 };
 
 /// Enum /Script/SB.ESBGuideCompleteType
 /// Size: 0x01 (1 bytes)
 enum class ESBGuideCompleteType : uint8_t
 {
-	ESBGuideCompleteType_None                                                        = 0,
-	ESBGuideCompleteType_Command                                                     = 1,
-	ESBGuideCompleteType_SkillActiveStep                                             = 2,
-	ESBGuideCompleteType_ActorCondition                                              = 3,
-	ESBGuideCompleteType_EventMove                                                   = 4,
-	ESBGuideCompleteType_Effect                                                      = 5,
-	ESBGuideCompleteType_Scan                                                        = 6,
-	ESBGuideCompleteType_LockOn                                                      = 7,
-	ESBGuideCompleteType_AcquireItem                                                 = 8,
-	ESBGuideCompleteType_Swimming                                                    = 9,
-	ESBGuideCompleteType_UWSwimming                                                  = 10,
-	ESBGuideCompleteType_SlopeSliding                                                = 11,
-	ESBGuideCompleteType_SlopeJumping                                                = 12,
-	ESBGuideCompleteType_Fishing                                                     = 13,
-	ESBGuideCompleteType_Interaction                                                 = 14
+	None                                                                             = 0,
+	Command                                                                          = 1,
+	SkillActiveStep                                                                  = 2,
+	ActorCondition                                                                   = 3,
+	EventMove                                                                        = 4,
+	Effect                                                                           = 5,
+	Scan                                                                             = 6,
+	LockOn                                                                           = 7,
+	AcquireItem                                                                      = 8,
+	Swimming                                                                         = 9,
+	UWSwimming                                                                       = 10,
+	SlopeSliding                                                                     = 11,
+	SlopeJumping                                                                     = 12,
+	Fishing                                                                          = 13,
+	Interaction                                                                      = 14
 };
 
 /// Enum /Script/SB.ESBScanControlOwner
 /// Size: 0x01 (1 bytes)
 enum class ESBScanControlOwner : uint8_t
 {
-	ESBScanControlOwner_None                                                         = 0,
-	ESBScanControlOwner_Drone                                                        = 1,
-	ESBScanControlOwner_Studio                                                       = 2,
-	ESBScanControlOwner_Sequence                                                     = 3
+	None                                                                             = 0,
+	Drone                                                                            = 1,
+	Studio                                                                           = 2,
+	Sequence                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBSequencerSubtitleType
 /// Size: 0x01 (1 bytes)
 enum class ESBSequencerSubtitleType : uint8_t
 {
-	ESBSequencerSubtitleType_ShowImmidate                                            = 0,
-	ESBSequencerSubtitleType_TypewriteVoice                                          = 1,
-	ESBSequencerSubtitleType_TypewriteOnly                                           = 2
+	ShowImmidate                                                                     = 0,
+	TypewriteVoice                                                                   = 1,
+	TypewriteOnly                                                                    = 2
 };
 
 /// Enum /Script/SB.ESBAlbumType
 /// Size: 0x01 (1 bytes)
 enum class ESBAlbumType : uint8_t
 {
-	ESBAlbumType_None                                                                = 0,
-	ESBAlbumType_MemoryStick                                                         = 1,
-	ESBAlbumType_Document                                                            = 2,
-	ESBAlbumType_PassCode                                                            = 3,
-	ESBAlbumType_Native                                                              = 4,
-	ESBAlbumType_Fish                                                                = 5,
-	ESBAlbumType_Character                                                           = 6,
-	ESBAlbumType_ETC                                                                 = 7,
-	ESBAlbumType_PhotoChallenge                                                      = 8,
-	ESBAlbumType_Nier                                                                = 9,
-	ESBAlbumType_Max                                                                 = 10
+	None                                                                             = 0,
+	MemoryStick                                                                      = 1,
+	Document                                                                         = 2,
+	PassCode                                                                         = 3,
+	Native                                                                           = 4,
+	Fish                                                                             = 5,
+	Character                                                                        = 6,
+	ETC                                                                              = 7,
+	PhotoChallenge                                                                   = 8,
+	Nier                                                                             = 9,
+	Max                                                                              = 10
 };
 
 /// Enum /Script/SB.ESBShopType
 /// Size: 0x01 (1 bytes)
 enum class ESBShopType : uint8_t
 {
-	ESBShopType_None                                                                 = 0,
-	ESBShopType_Buy                                                                  = 1,
-	ESBShopType_Exchange                                                             = 2,
-	ESBShopType_Sell                                                                 = 3,
-	ESBShopType_Max                                                                  = 4
+	None                                                                             = 0,
+	Buy                                                                              = 1,
+	Exchange                                                                         = 2,
+	Sell                                                                             = 3,
+	Max                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBEventZoneEventActorControlType
 /// Size: 0x01 (1 bytes)
 enum class ESBEventZoneEventActorControlType : uint8_t
 {
-	ESBEventZoneEventActorControlType_None                                           = 0,
-	ESBEventZoneEventActorControlType_DestructionTimer                               = 1,
-	ESBEventZoneEventActorControlType_DisableDestruction                             = 2
+	None                                                                             = 0,
+	DestructionTimer                                                                 = 1,
+	DisableDestruction                                                               = 2
 };
 
 /// Enum /Script/SB.ESBRetryGameStateType
 /// Size: 0x01 (1 bytes)
 enum class ESBRetryGameStateType : uint8_t
 {
-	ESBRetryGameStateType_None                                                       = 0,
-	ESBRetryGameStateType_Start                                                      = 1,
-	ESBRetryGameStateType_Cancel                                                     = 2,
-	ESBRetryGameStateType_Finish                                                     = 3
+	None                                                                             = 0,
+	Start                                                                            = 1,
+	Cancel                                                                           = 2,
+	Finish                                                                           = 3
 };
 
 /// Enum /Script/SB.ESBShowSoundOwnerTarget
 /// Size: 0x01 (1 bytes)
 enum class ESBShowSoundOwnerTarget : uint8_t
 {
-	ESBShowSoundOwnerTarget__Auto                                                    = 0,
-	ESBShowSoundOwnerTarget__MainActor                                               = 1,
-	ESBShowSoundOwnerTarget__OtherActor                                              = 2
+	Auto                                                                             = 0,
+	MainActor                                                                        = 1,
+	OtherActor                                                                       = 2
 };
 
 /// Enum /Script/SB.ESBShowVibrationTarget
@@ -1101,27 +1101,27 @@ enum class ESBShowVibrationTarget : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBEquipStatViewerType : uint8_t
 {
-	ESBEquipStatViewerType_Attack                                                    = 0,
-	ESBEquipStatViewerType_Survival                                                  = 1,
-	ESBEquipStatViewerType_Ability                                                   = 2
+	Attack                                                                           = 0,
+	Survival                                                                         = 1,
+	Ability                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBHintType
 /// Size: 0x01 (1 bytes)
 enum class ESBHintType : uint8_t
 {
-	ESBHintType_Normal                                                               = 0,
-	ESBHintType_Disable                                                              = 1,
-	ESBHintType_LongTime                                                             = 2
+	Normal                                                                           = 0,
+	Disable                                                                          = 1,
+	LongTime                                                                         = 2
 };
 
 /// Enum /Script/SB.ESBWorldTransitionType
 /// Size: 0x01 (1 bytes)
 enum class ESBWorldTransitionType : uint8_t
 {
-	ESBWorldTransitionType_None                                                      = 0,
-	ESBWorldTransitionType_Event                                                     = 1,
-	ESBWorldTransitionType_Tetrapod                                                  = 2
+	None                                                                             = 0,
+	Event                                                                            = 1,
+	Tetrapod                                                                         = 2
 };
 
 /// Enum /Script/SB.ESBRuleMoveBlockAreaTarget
@@ -1255,539 +1255,539 @@ enum class ESBDualSenseTrigger : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceDebugSubType : uint8_t
 {
-	ESBResourceDebugSubType__None                                                    = 0,
-	ESBResourceDebugSubType__ToolData_Start                                          = 1,
-	ESBResourceDebugSubType__ToolData_EventSpawn                                     = 2,
-	ESBResourceDebugSubType__ToolData_EventItem                                      = 3,
-	ESBResourceDebugSubType__ToolData_ZoneEnvSpawn                                   = 4,
-	ESBResourceDebugSubType__ToolData_ZoneEffectVolume                               = 5,
-	ESBResourceDebugSubType__ToolData_AreaControlVolume                              = 6,
-	ESBResourceDebugSubType__ToolData_ZoneTrigger                                    = 7,
-	ESBResourceDebugSubType__ToolData_GuideAction                                    = 8,
-	ESBResourceDebugSubType__ToolData_LevelTargetFilter                              = 9,
-	ESBResourceDebugSubType__ToolData_Condition                                      = 10,
-	ESBResourceDebugSubType__ToolData_ConditionGroup                                 = 11,
-	ESBResourceDebugSubType__ToolData_ZoneEvent                                      = 12,
-	ESBResourceDebugSubType__ToolData_EventObjControl                                = 13,
-	ESBResourceDebugSubType__ToolData_EventRequestPathWay                            = 14,
-	ESBResourceDebugSubType__ToolData_ZonePhaseEvent                                 = 15,
-	ESBResourceDebugSubType__ToolData_EventEffectVolumeControl                       = 16,
-	ESBResourceDebugSubType__ToolData_EventEnvControl                                = 17,
-	ESBResourceDebugSubType__ToolData_EventAreaControlVolumeControl                  = 18,
-	ESBResourceDebugSubType__ToolData_EventActorEffect                               = 19,
-	ESBResourceDebugSubType__ToolData_EventGuideAction                               = 20,
-	ESBResourceDebugSubType__ToolData_EventInteractCamp                              = 21,
-	ESBResourceDebugSubType__ToolData_EventItemAction                                = 22,
-	ESBResourceDebugSubType__ToolData_EventQuest                                     = 23,
-	ESBResourceDebugSubType__ToolData_EventLevelSeq                                  = 24,
-	ESBResourceDebugSubType__ToolData_EventTheater                                   = 25,
-	ESBResourceDebugSubType__ToolData_EventUIAction                                  = 26,
-	ESBResourceDebugSubType__ToolData_EventZoneWarp                                  = 27,
-	ESBResourceDebugSubType__ToolData_End                                            = 28,
-	ESBResourceDebugSubType__DataTable_Start                                         = 29,
-	ESBResourceDebugSubType__DataTable_GamePlayProgressRecord                        = 30,
-	ESBResourceDebugSubType__DataTable_EventEnvControl                               = 31,
-	ESBResourceDebugSubType__DataTable_Achievement                                   = 32,
-	ESBResourceDebugSubType__DataTable_QuestTask                                     = 33,
-	ESBResourceDebugSubType__DataTable_End                                           = 34,
-	ESBResourceDebugSubType__InteractionGraph_Start                                  = 35,
-	ESBResourceDebugSubType__InteractionGraph_ZoneEvent                              = 36,
-	ESBResourceDebugSubType__InteractionGraph_QuestEvent                             = 37,
-	ESBResourceDebugSubType__InteractionGraph_End                                    = 38,
-	ESBResourceDebugSubType__Num                                                     = 39,
-	ESBResourceDebugSubType__Duration                                                = 40
+	None                                                                             = 0,
+	ToolData_Start                                                                   = 1,
+	ToolData_EventSpawn                                                              = 2,
+	ToolData_EventItem                                                               = 3,
+	ToolData_ZoneEnvSpawn                                                            = 4,
+	ToolData_ZoneEffectVolume                                                        = 5,
+	ToolData_AreaControlVolume                                                       = 6,
+	ToolData_ZoneTrigger                                                             = 7,
+	ToolData_GuideAction                                                             = 8,
+	ToolData_LevelTargetFilter                                                       = 9,
+	ToolData_Condition                                                               = 10,
+	ToolData_ConditionGroup                                                          = 11,
+	ToolData_ZoneEvent                                                               = 12,
+	ToolData_EventObjControl                                                         = 13,
+	ToolData_EventRequestPathWay                                                     = 14,
+	ToolData_ZonePhaseEvent                                                          = 15,
+	ToolData_EventEffectVolumeControl                                                = 16,
+	ToolData_EventEnvControl                                                         = 17,
+	ToolData_EventAreaControlVolumeControl                                           = 18,
+	ToolData_EventActorEffect                                                        = 19,
+	ToolData_EventGuideAction                                                        = 20,
+	ToolData_EventInteractCamp                                                       = 21,
+	ToolData_EventItemAction                                                         = 22,
+	ToolData_EventQuest                                                              = 23,
+	ToolData_EventLevelSeq                                                           = 24,
+	ToolData_EventTheater                                                            = 25,
+	ToolData_EventUIAction                                                           = 26,
+	ToolData_EventZoneWarp                                                           = 27,
+	ToolData_End                                                                     = 28,
+	DataTable_Start                                                                  = 29,
+	DataTable_GamePlayProgressRecord                                                 = 30,
+	DataTable_EventEnvControl                                                        = 31,
+	DataTable_Achievement                                                            = 32,
+	DataTable_QuestTask                                                              = 33,
+	DataTable_End                                                                    = 34,
+	InteractionGraph_Start                                                           = 35,
+	InteractionGraph_ZoneEvent                                                       = 36,
+	InteractionGraph_QuestEvent                                                      = 37,
+	InteractionGraph_End                                                             = 38,
+	Num                                                                              = 39,
+	Duration                                                                         = 40
 };
 
 /// Enum /Script/SB.ESBResourceDebugMainType
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceDebugMainType : uint8_t
 {
-	ESBResourceDebugMainType__None                                                   = 0,
-	ESBResourceDebugMainType__ToolData                                               = 1,
-	ESBResourceDebugMainType__DataTable                                              = 2,
-	ESBResourceDebugMainType__InteractionGraph                                       = 3,
-	ESBResourceDebugMainType__Num                                                    = 4
+	None                                                                             = 0,
+	ToolData                                                                         = 1,
+	DataTable                                                                        = 2,
+	InteractionGraph                                                                 = 3,
+	Num                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBGameOptionPuzzleTimeLimitType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionPuzzleTimeLimitType : uint8_t
 {
-	ESBGameOptionPuzzleTimeLimitType__Normal                                         = 0,
-	ESBGameOptionPuzzleTimeLimitType__Infinite                                       = 1
+	Normal                                                                           = 0,
+	Infinite                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionReverseLRStickType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionReverseLRStickType : uint8_t
 {
-	ESBGameOptionReverseLRStickType__Disable                                         = 0,
-	ESBGameOptionReverseLRStickType__Enable                                          = 1
+	Disable                                                                          = 0,
+	Enable                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionReverseOKCancelType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionReverseOKCancelType : uint8_t
 {
-	ESBGameOptionReverseOKCancelType__Disable                                        = 0,
-	ESBGameOptionReverseOKCancelType__Enable                                         = 1
+	Disable                                                                          = 0,
+	Enable                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionSwipeShortCutType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionSwipeShortCutType : uint8_t
 {
-	ESBGameOptionSwipeShortCutType__None                                             = 0,
-	ESBGameOptionSwipeShortCutType__GameMenu                                         = 1,
-	ESBGameOptionSwipeShortCutType__Scan                                             = 2,
-	ESBGameOptionSwipeShortCutType__Hint                                             = 3,
-	ESBGameOptionSwipeShortCutType__PhotoMode                                        = 4,
-	ESBGameOptionSwipeShortCutType__GameMenuMap                                      = 5,
-	ESBGameOptionSwipeShortCutType__GameMenuQuestJournal                             = 6,
-	ESBGameOptionSwipeShortCutType__GameMenuSkill                                    = 7,
-	ESBGameOptionSwipeShortCutType__GameMenuInventory                                = 8
+	None                                                                             = 0,
+	GameMenu                                                                         = 1,
+	Scan                                                                             = 2,
+	Hint                                                                             = 3,
+	PhotoMode                                                                        = 4,
+	GameMenuMap                                                                      = 5,
+	GameMenuQuestJournal                                                             = 6,
+	GameMenuSkill                                                                    = 7,
+	GameMenuInventory                                                                = 8
 };
 
 /// Enum /Script/SB.ESBGameOptionLockMouseOnWindowType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionLockMouseOnWindowType : uint8_t
 {
-	ESBGameOptionLockMouseOnWindowType__Hide                                         = 0,
-	ESBGameOptionLockMouseOnWindowType__Show                                         = 1
+	Hide                                                                             = 0,
+	Show                                                                             = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionVisibleSkipUIType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionVisibleSkipUIType : uint8_t
 {
-	ESBGameOptionVisibleSkipUIType__Disable                                          = 0,
-	ESBGameOptionVisibleSkipUIType__Enable                                           = 1
+	Disable                                                                          = 0,
+	Enable                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionAutoLockOnAfterTPSType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionAutoLockOnAfterTPSType : uint8_t
 {
-	ESBGameOptionAutoLockOnAfterTPSType__Enable                                      = 0,
-	ESBGameOptionAutoLockOnAfterTPSType__Disable                                     = 1
+	Enable                                                                           = 0,
+	Disable                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionActionAssistType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionActionAssistType : uint8_t
 {
-	ESBGameOptionActionAssistType__Disable                                           = 0,
-	ESBGameOptionActionAssistType__Enable                                            = 1
+	Disable                                                                          = 0,
+	Enable                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionAudioDeviceType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionAudioDeviceType : uint8_t
 {
-	ESBGameOptionAudioDeviceType__Auto                                               = 0,
-	ESBGameOptionAudioDeviceType__TV                                                 = 1,
-	ESBGameOptionAudioDeviceType__Headphone                                          = 2
+	Auto                                                                             = 0,
+	TV                                                                               = 1,
+	Headphone                                                                        = 2
 };
 
 /// Enum /Script/SB.ESBGameOptionHighContrastType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionHighContrastType : uint8_t
 {
-	ESBGameOptionHighContrastType__Off                                               = 0,
-	ESBGameOptionHighContrastType__Preset1                                           = 1,
-	ESBGameOptionHighContrastType__Preset2                                           = 2,
-	ESBGameOptionHighContrastType__Preset3                                           = 3
+	Off                                                                              = 0,
+	Preset1                                                                          = 1,
+	Preset2                                                                          = 2,
+	Preset3                                                                          = 3
 };
 
 /// Enum /Script/SB.ESBGameOptionPonytailLengthType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionPonytailLengthType : uint8_t
 {
-	ESBGameOptionPonytailLengthType__ESBGameOptionPonytailLengthType_Long            = 0,
-	ESBGameOptionPonytailLengthType__ESBGameOptionPonytailLengthType_Short           = 1,
-	ESBGameOptionPonytailLengthType__ESBGameOptionPonytailLengthType_RemovePonyTail  = 2
+	ESBGameOptionPonytailLengthType_Long                                             = 0,
+	ESBGameOptionPonytailLengthType_Short                                            = 1,
+	ESBGameOptionPonytailLengthType_RemovePonyTail                                   = 2
 };
 
 /// Enum /Script/SB.ESBGameOptionRecordPopupType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionRecordPopupType : uint8_t
 {
-	ESBGameOptionRecordPopupType__ESBGameOptionRecordPopupType_On                    = 0,
-	ESBGameOptionRecordPopupType__ESBGameOptionRecordPopupType_Off                   = 1
+	ESBGameOptionRecordPopupType_On                                                  = 0,
+	ESBGameOptionRecordPopupType_Off                                                 = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionTutorialType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionTutorialType : uint8_t
 {
-	ESBGameOptionTutorialType__ESBGameOptionTutorialType_On                          = 0,
-	ESBGameOptionTutorialType__ESBGameOptionTutorialType_Off                         = 1
+	ESBGameOptionTutorialType_On                                                     = 0,
+	ESBGameOptionTutorialType_Off                                                    = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionColorBlindType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionColorBlindType : uint8_t
 {
-	ESBGameOptionColorBlindType__Normal                                              = 0,
-	ESBGameOptionColorBlindType__Green                                               = 1,
-	ESBGameOptionColorBlindType__Red                                                 = 2,
-	ESBGameOptionColorBlindType__Blue                                                = 3
+	Normal                                                                           = 0,
+	Green                                                                            = 1,
+	Red                                                                              = 2,
+	Blue                                                                             = 3
 };
 
 /// Enum /Script/SB.ESBGameOptionHintType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionHintType : uint8_t
 {
-	ESBGameOptionHintType__ESBGameOptionHintType_Normal                              = 0,
-	ESBGameOptionHintType__ESBGameOptionHintType_Disable                             = 1,
-	ESBGameOptionHintType__ESBGameOptionHintType_LongTime                            = 2
+	ESBGameOptionHintType_Normal                                                     = 0,
+	ESBGameOptionHintType_Disable                                                    = 1,
+	ESBGameOptionHintType_LongTime                                                   = 2
 };
 
 /// Enum /Script/SB.ESBGameOptionAdaptiveTriggerType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionAdaptiveTriggerType : uint8_t
 {
-	ESBGameOptionAdaptiveTriggerType__ExperienceFirst                                = 0,
-	ESBGameOptionAdaptiveTriggerType__FunctionFirst                                  = 1,
-	ESBGameOptionAdaptiveTriggerType__Disable                                        = 2
+	ExperienceFirst                                                                  = 0,
+	FunctionFirst                                                                    = 1,
+	Disable                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBGameOptionCompassType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionCompassType : uint8_t
 {
-	ESBGameOptionCompassType__Disable                                                = 0,
-	ESBGameOptionCompassType__Enable                                                 = 1
+	Disable                                                                          = 0,
+	Enable                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionHUDCenterDotType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionHUDCenterDotType : uint8_t
 {
-	ESBGameOptionHUDCenterDotType__Enable                                            = 0,
-	ESBGameOptionHUDCenterDotType__Disable                                           = 1
+	Enable                                                                           = 0,
+	Disable                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionMouseLockOnMove
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionMouseLockOnMove : uint8_t
 {
-	ESBGameOptionMouseLockOnMove__Enable                                             = 0,
-	ESBGameOptionMouseLockOnMove__Disable                                            = 1
+	Enable                                                                           = 0,
+	Disable                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionFishingSystem
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionFishingSystem : uint8_t
 {
-	ESBGameOptionFishingSystem__PrecisionTrigger                                     = 0,
-	ESBGameOptionFishingSystem__Timing                                               = 1
+	PrecisionTrigger                                                                 = 0,
+	Timing                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionFishingAssistType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionFishingAssistType : uint8_t
 {
-	ESBGameOptionFishingAssistType__Enable                                           = 0,
-	ESBGameOptionFishingAssistType__Disable                                          = 1
+	Enable                                                                           = 0,
+	Disable                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionQTEForceSuccessType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionQTEForceSuccessType : uint8_t
 {
-	ESBGameOptionQTEForceSuccessType__Enable                                         = 0,
-	ESBGameOptionQTEForceSuccessType__Disable                                        = 1
+	Enable                                                                           = 0,
+	Disable                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionItemAutoInteractionType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionItemAutoInteractionType : uint8_t
 {
-	ESBGameOptionItemAutoInteractionType__Enable                                     = 0,
-	ESBGameOptionItemAutoInteractionType__Disable                                    = 1
+	Enable                                                                           = 0,
+	Disable                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionHUDShowType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionHUDShowType : uint8_t
 {
-	ESBGameOptionHUDShowType__Default                                                = 0,
-	ESBGameOptionHUDShowType__AlwaysBattle                                           = 1,
-	ESBGameOptionHUDShowType__AlwaysPeace                                            = 2
+	Default                                                                          = 0,
+	AlwaysBattle                                                                     = 1,
+	AlwaysPeace                                                                      = 2
 };
 
 /// Enum /Script/SB.ESBGameOptionSubtitleAuthorType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionSubtitleAuthorType : uint8_t
 {
-	ESBGameOptionSubtitleAuthorType__Show                                            = 0,
-	ESBGameOptionSubtitleAuthorType__Hide                                            = 1
+	Show                                                                             = 0,
+	Hide                                                                             = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionHUDSizeType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionHUDSizeType : uint8_t
 {
-	ESBGameOptionHUDSizeType__Large                                                  = 0,
-	ESBGameOptionHUDSizeType__Medium                                                 = 1,
-	ESBGameOptionHUDSizeType__Small                                                  = 2
+	Large                                                                            = 0,
+	Medium                                                                           = 1,
+	Small                                                                            = 2
 };
 
 /// Enum /Script/SB.ESBGameOptionSubtitleBGType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionSubtitleBGType : uint8_t
 {
-	ESBGameOptionSubtitleBGType__Hide                                                = 0,
-	ESBGameOptionSubtitleBGType__Translucent                                         = 1,
-	ESBGameOptionSubtitleBGType__Opacity                                             = 2
+	Hide                                                                             = 0,
+	Translucent                                                                      = 1,
+	Opacity                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBGameOptionSubtitleSizeType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionSubtitleSizeType : uint8_t
 {
-	ESBGameOptionSubtitleSizeType__Large                                             = 0,
-	ESBGameOptionSubtitleSizeType__Medium                                            = 1,
-	ESBGameOptionSubtitleSizeType__Small                                             = 2
+	Large                                                                            = 0,
+	Medium                                                                           = 1,
+	Small                                                                            = 2
 };
 
 /// Enum /Script/SB.ESBGameOptionSubtitleVisibleType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionSubtitleVisibleType : uint8_t
 {
-	ESBGameOptionSubtitleVisibleType__Enable                                         = 0,
-	ESBGameOptionSubtitleVisibleType__Disable                                        = 1
+	Enable                                                                           = 0,
+	Disable                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionCommonToggleDisableType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionCommonToggleDisableType : uint8_t
 {
-	ESBGameOptionCommonToggleDisableType__Disable                                    = 0,
-	ESBGameOptionCommonToggleDisableType__Enable                                     = 1
+	Disable                                                                          = 0,
+	Enable                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionCommonToggleEnableType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionCommonToggleEnableType : uint8_t
 {
-	ESBGameOptionCommonToggleEnableType__Enable                                      = 0,
-	ESBGameOptionCommonToggleEnableType__Disable                                     = 1
+	Enable                                                                           = 0,
+	Disable                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionDifficultyType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionDifficultyType : uint8_t
 {
-	ESBGameOptionDifficultyType__NormalMode                                          = 0,
-	ESBGameOptionDifficultyType__StoryMode                                           = 1
+	NormalMode                                                                       = 0,
+	StoryMode                                                                        = 1
 };
 
 /// Enum /Script/SB.ESBGameOptionType
 /// Size: 0x01 (1 bytes)
 enum class ESBGameOptionType : uint8_t
 {
-	ESBGameOptionType__None                                                          = 0,
-	ESBGameOptionType__Version                                                       = 1,
-	ESBGameOptionType__Display_Resolution                                            = 2,
-	ESBGameOptionType__Display_AspectRatio                                           = 3,
-	ESBGameOptionType__Display_ScreenType                                            = 4,
-	ESBGameOptionType__Display_VSync                                                 = 5,
-	ESBGameOptionType__Display_FrameLimit                                            = 6,
-	ESBGameOptionType__Display_MonitorSwitch                                         = 7,
-	ESBGameOptionType__Display_Gamma                                                 = 8,
-	ESBGameOptionType__Display_HDR                                                   = 9,
-	ESBGameOptionType__Display_HDRBrightness                                         = 10,
-	ESBGameOptionType__Display_HDRContrast                                           = 11,
-	ESBGameOptionType__Display_HDRClampMin                                           = 12,
-	ESBGameOptionType__Display_HDRClampMax                                           = 13,
-	ESBGameOptionType__Display_HDRAdditionalMinLuminance                             = 14,
-	ESBGameOptionType__Display_HDRAdditionalMaxLuminance                             = 15,
-	ESBGameOptionType__Display_HDRUILevel                                            = 16,
-	ESBGameOptionType__Display_GraphicMode                                           = 17,
-	ESBGameOptionType__Display_GraphicPreset                                         = 18,
-	ESBGameOptionType__Display_GraphicEnviromentObjectDetail                         = 19,
-	ESBGameOptionType__Display_GraphicCharacterObjectDetail                          = 20,
-	ESBGameOptionType__Display_GraphicEnviromentTextures                             = 21,
-	ESBGameOptionType__Display_GraphicCharacterTextures                              = 22,
-	ESBGameOptionType__Display_GraphicAnisotropicFiltering                           = 23,
-	ESBGameOptionType__Display_GraphicVolumetricFog                                  = 24,
-	ESBGameOptionType__Display_GraphicShadowQuality                                  = 25,
-	ESBGameOptionType__Display_GraphicEffectQuality                                  = 26,
-	ESBGameOptionType__Display_GraphicEnvironmentQuality                             = 27,
-	ESBGameOptionType__Display_GraphicLighting                                       = 28,
-	ESBGameOptionType__Display_GraphicFoliageQuality                                 = 29,
-	ESBGameOptionType__Display_GraphicAmbientOcclusion                               = 30,
-	ESBGameOptionType__Display_GraphicDepthOfField                                   = 31,
-	ESBGameOptionType__Display_GraphicScreenSpaceReflection                          = 32,
-	ESBGameOptionType__Display_GraphicAntiAliasing                                   = 33,
-	ESBGameOptionType__Display_GraphicResolutionScale                                = 34,
-	ESBGameOptionType__Display_GraphicResolutionScalingType                          = 35,
-	ESBGameOptionType__Display_GraphicSharpen                                        = 36,
-	ESBGameOptionType__Display_GraphicSharpen_DLSS                                   = 37,
-	ESBGameOptionType__Display_GraphicSharpen_FSR3                                   = 38,
-	ESBGameOptionType__Display_GraphicNvidiaDLSS                                     = 39,
-	ESBGameOptionType__Display_GraphicNvidiaFrameGeneration                          = 40,
-	ESBGameOptionType__Display_GraphicNvidiaReflexLowLatency                         = 41,
-	ESBGameOptionType__Display_GraphicAmdFSR3                                        = 42,
-	ESBGameOptionType__Display_GraphicAmdFrameInterpolation                          = 43,
-	ESBGameOptionType__Display_GraphicIntelXeSS                                      = 44,
-	ESBGameOptionType__Display_GraphicAnimationQuality                               = 45,
-	ESBGameOptionType__Display_GraphicCharacterViewDistance                          = 46,
-	ESBGameOptionType__Display_GraphicEnviromentObjectViewDistance                   = 47,
-	ESBGameOptionType__Display_HDDMode                                               = 48,
-	ESBGameOptionType__Display_SubtitleVisible                                       = 49,
-	ESBGameOptionType__Display_SubtitleSize                                          = 50,
-	ESBGameOptionType__Display_SubtitleBG                                            = 51,
-	ESBGameOptionType__Display_SubtitleAuthor                                        = 52,
-	ESBGameOptionType__Display_HUDSize                                               = 53,
-	ESBGameOptionType__Display_HUDBG                                                 = 54,
-	ESBGameOptionType__Display_HUDShow                                               = 55,
-	ESBGameOptionType__Display_Compass                                               = 56,
-	ESBGameOptionType__Display_AntiAliasingQuality                                   = 57,
-	ESBGameOptionType__Display_ResolutionQuality                                     = 58,
-	ESBGameOptionType__Display_FilmGrain                                             = 59,
-	ESBGameOptionType__Display_ColorFringe                                           = 60,
-	ESBGameOptionType__Display_HFR                                                   = 61,
-	ESBGameOptionType__Display_HUDAspectRatio                                        = 62,
-	ESBGameOptionType__Display_LockMouseOnWindow                                     = 63,
-	ESBGameOptionType__Localize_Language                                             = 64,
-	ESBGameOptionType__Localize_Voice                                                = 65,
-	ESBGameOptionType__Sound_MasterVolume                                            = 66,
-	ESBGameOptionType__Sound_BGMVolume                                               = 67,
-	ESBGameOptionType__Sound_DialogVolume                                            = 68,
-	ESBGameOptionType__Sound_SEVolume                                                = 69,
-	ESBGameOptionType__Sound_HapticVolume                                            = 70,
-	ESBGameOptionType__Sound_AudioDeviceType                                         = 71,
-	ESBGameOptionType__Sound_ControllerSpeaker                                       = 72,
-	ESBGameOptionType__Sound_MuteWhenUnfocus                                         = 73,
-	ESBGameOptionType__Develop_RecordMode                                            = 74,
-	ESBGameOptionType__Develop_MinimizeUI                                            = 75,
-	ESBGameOptionType__Develop_NetworkPlay                                           = 76,
-	ESBGameOptionType__Develop_JiraAuthorize                                         = 77,
-	ESBGameOptionType__GamePlay_Difficulty                                           = 78,
-	ESBGameOptionType__GamePlay_Hint                                                 = 79,
-	ESBGameOptionType__GamePlay_Restart                                              = 80,
-	ESBGameOptionType__GamePlay_NightOperationGiveUp                                 = 81,
-	ESBGameOptionType__GamePlay_Tutorial                                             = 82,
-	ESBGameOptionType__GamePlay_RecordPopup                                          = 83,
-	ESBGameOptionType__GamePlay_PonytailLength                                       = 84,
-	ESBGameOptionType__GamePlay_ActionAssist                                         = 85,
-	ESBGameOptionType__GamePlay_Demo_TrialCleared                                    = 86,
-	ESBGameOptionType__GamePlay_Demo_UseBossChallengeMessagePopup                    = 87,
-	ESBGameOptionType__GamePlay_ReachEnding                                          = 88,
-	ESBGameOptionType__GamePlay_NoticeReachEnding                                    = 89,
-	ESBGameOptionType__GamePlay_VisibleSkipUI                                        = 90,
-	ESBGameOptionType__GamePlay_EventContents                                        = 91,
-	ESBGameOptionType__GamePlay_DLCContents                                          = 92,
-	ESBGameOptionType__Accessibility_ItemAutoInteraction                             = 93,
-	ESBGameOptionType__Accessibility_MotionBlurScale                                 = 94,
-	ESBGameOptionType__Accessibility_QTEForceSuccess                                 = 95,
-	ESBGameOptionType__Accessibility_HUDCenterDot                                    = 96,
-	ESBGameOptionType__Accessibility_ColorBlind                                      = 97,
-	ESBGameOptionType__Accessibility_ColorBlindScale                                 = 98,
-	ESBGameOptionType__Accessibility_HighContrast                                    = 99,
-	ESBGameOptionType__Accessibility_HighContrastOnOff                               = 100,
-	ESBGameOptionType__Accessibility_FishingAssist                                   = 101,
-	ESBGameOptionType__Accessibility_PuzzleTimeLimit                                 = 102,
-	ESBGameOptionType__Accessibility_ItemEquipHold                                   = 103,
-	ESBGameOptionType__Accessibility_EasyPlatformAction                              = 104,
-	ESBGameOptionType__Accessibility_HUDViewStatValue                                = 105,
-	ESBGameOptionType__Accessibility_MotionSicknessPreset                            = 106,
-	ESBGameOptionType__Accessibility_MotorPreset                                     = 107,
-	ESBGameOptionType__Accessibility_VisualPreset                                    = 108,
-	ESBGameOptionType__Accessibility_SoundPreset                                     = 109,
-	ESBGameOptionType__Interface_UMPCMode                                            = 110,
-	ESBGameOptionType__CameraNormalSensitivity_Horizental                            = 111,
-	ESBGameOptionType__CameraNormalSensitivity_Vertical                              = 112,
-	ESBGameOptionType__CameraTPSSensitivity_Horizental                               = 113,
-	ESBGameOptionType__CameraTPSSensitivity_Vertical                                 = 114,
-	ESBGameOptionType__CameraHorizentalInvert                                        = 115,
-	ESBGameOptionType__CameraVerticalnvert                                           = 116,
-	ESBGameOptionType__CameraAutoRotate                                              = 117,
-	ESBGameOptionType__CameraAutoRotate_Mouse                                        = 118,
-	ESBGameOptionType__AdaptiveTrigger                                               = 119,
-	ESBGameOptionType__Control_TPSAimSlowDownAdditiveScale                           = 120,
-	ESBGameOptionType__Control_TPSAimSlowDownAdditiveScale_Mouse                     = 121,
-	ESBGameOptionType__Control_AutoLockOn                                            = 122,
-	ESBGameOptionType__Control_AutoLockOn_Mouse                                      = 123,
-	ESBGameOptionType__Control_AutoLockOnAfterTPS                                    = 124,
-	ESBGameOptionType__Control_AutoLockOnAfterTPS_Mouse                              = 125,
-	ESBGameOptionType__Control_SwipeShortCutUp                                       = 126,
-	ESBGameOptionType__Control_SwipeShortCutDown                                     = 127,
-	ESBGameOptionType__Control_SwipeShortCutLeft                                     = 128,
-	ESBGameOptionType__Control_SwipeShortCutRight                                    = 129,
-	ESBGameOptionType__Control_ReverseOKCancel                                       = 130,
-	ESBGameOptionType__Control_ReverseLRStick                                        = 131,
-	ESBGameOptionType__Control_WalkKeyInputType_Pad                                  = 132,
-	ESBGameOptionType__Control_TPSKeyInputType_Pad                                   = 133,
-	ESBGameOptionType__Control_WalkKeyInputType_Mouse                                = 134,
-	ESBGameOptionType__Control_TPSKeyInputType_Mouse                                 = 135,
-	ESBGameOptionType__Control_ControllerSpeakerVolume                               = 136,
-	ESBGameOptionType__Control_FishingSystem                                         = 137,
-	ESBGameOptionType__Control_RangeModeAimAlign                                     = 138,
-	ESBGameOptionType__Control_RangeModeAimAlign_Mouse                               = 139,
-	ESBGameOptionType__Control_RangeModeShotCorrection                               = 140,
-	ESBGameOptionType__Control_RangeModeShotCorrection_Mouse                         = 141,
-	ESBGameOptionType__Control_MouseLockOnMove                                       = 142,
-	ESBGameOptionType__Control_LockOnMoveSensitivity                                 = 143,
-	ESBGameOptionType__Control_KeyMapping                                            = 144,
-	ESBGameOptionType__CameraShake_Intensity                                         = 145,
-	ESBGameOptionType__Game_Quit                                                     = 146,
-	ESBGameOptionType__Game_ApplicationQuit                                          = 147,
-	ESBGameOptionType__PhotoMode_EnterPhotoMode                                      = 148,
-	ESBGameOptionType__GlobalData_NoticeReward_1_003                                 = 149,
-	ESBGameOptionType__GlobalData_NoticeBossChallengeReward                          = 150,
-	ESBGameOptionType__GlobalData_NoticeUnlockBossChallenge                          = 151,
-	ESBGameOptionType__GlobalData_NoticeUnlockArtBook                                = 152,
-	ESBGameOptionType__GlobalData_NoticeFusionEnding                                 = 153,
-	ESBGameOptionType__GlobalData_NoticeInAppPurchase                                = 154,
-	ESBGameOptionType__GlobalData_NoticeSteamInput                                   = 155,
-	ESBGameOptionType__GlobalData_NoticeLaunchingReward                              = 156,
-	ESBGameOptionType__GlobalData_ReachFusionEnding                                  = 157,
-	ESBGameOptionType__GlobalData_MigrateFlag_1_008                                  = 158,
-	ESBGameOptionType__GlobalData_CanNoticeScreenSkip                                = 159,
-	ESBGameOptionType__GlobalData_NeedInitialSetup                                   = 160,
-	ESBGameOptionType__GlobalData_NeedInitialContentsSetup                           = 161,
-	ESBGameOptionType__GlobalData_PSNAccount                                         = 162,
-	ESBGameOptionType__GlobalData_PersonalInformation                                = 163,
-	ESBGameOptionType__MouseCameraNormalSensitivity_Horizental                       = 164,
-	ESBGameOptionType__MouseCameraNormalSensitivity_Vertical                         = 165,
-	ESBGameOptionType__MouseCameraTPSSensitivity_Horizental                          = 166,
-	ESBGameOptionType__MouseCameraTPSSensitivity_Vertical                            = 167,
-	ESBGameOptionType__MouseCameraHorizentalInvert                                   = 168,
-	ESBGameOptionType__MouseCameraVerticalnvert                                      = 169,
-	ESBGameOptionType__Num                                                           = 170
+	None                                                                             = 0,
+	Version                                                                          = 1,
+	Display_Resolution                                                               = 2,
+	Display_AspectRatio                                                              = 3,
+	Display_ScreenType                                                               = 4,
+	Display_VSync                                                                    = 5,
+	Display_FrameLimit                                                               = 6,
+	Display_MonitorSwitch                                                            = 7,
+	Display_Gamma                                                                    = 8,
+	Display_HDR                                                                      = 9,
+	Display_HDRBrightness                                                            = 10,
+	Display_HDRContrast                                                              = 11,
+	Display_HDRClampMin                                                              = 12,
+	Display_HDRClampMax                                                              = 13,
+	Display_HDRAdditionalMinLuminance                                                = 14,
+	Display_HDRAdditionalMaxLuminance                                                = 15,
+	Display_HDRUILevel                                                               = 16,
+	Display_GraphicMode                                                              = 17,
+	Display_GraphicPreset                                                            = 18,
+	Display_GraphicEnviromentObjectDetail                                            = 19,
+	Display_GraphicCharacterObjectDetail                                             = 20,
+	Display_GraphicEnviromentTextures                                                = 21,
+	Display_GraphicCharacterTextures                                                 = 22,
+	Display_GraphicAnisotropicFiltering                                              = 23,
+	Display_GraphicVolumetricFog                                                     = 24,
+	Display_GraphicShadowQuality                                                     = 25,
+	Display_GraphicEffectQuality                                                     = 26,
+	Display_GraphicEnvironmentQuality                                                = 27,
+	Display_GraphicLighting                                                          = 28,
+	Display_GraphicFoliageQuality                                                    = 29,
+	Display_GraphicAmbientOcclusion                                                  = 30,
+	Display_GraphicDepthOfField                                                      = 31,
+	Display_GraphicScreenSpaceReflection                                             = 32,
+	Display_GraphicAntiAliasing                                                      = 33,
+	Display_GraphicResolutionScale                                                   = 34,
+	Display_GraphicResolutionScalingType                                             = 35,
+	Display_GraphicSharpen                                                           = 36,
+	Display_GraphicSharpen_DLSS                                                      = 37,
+	Display_GraphicSharpen_FSR3                                                      = 38,
+	Display_GraphicNvidiaDLSS                                                        = 39,
+	Display_GraphicNvidiaFrameGeneration                                             = 40,
+	Display_GraphicNvidiaReflexLowLatency                                            = 41,
+	Display_GraphicAmdFSR3                                                           = 42,
+	Display_GraphicAmdFrameInterpolation                                             = 43,
+	Display_GraphicIntelXeSS                                                         = 44,
+	Display_GraphicAnimationQuality                                                  = 45,
+	Display_GraphicCharacterViewDistance                                             = 46,
+	Display_GraphicEnviromentObjectViewDistance                                      = 47,
+	Display_HDDMode                                                                  = 48,
+	Display_SubtitleVisible                                                          = 49,
+	Display_SubtitleSize                                                             = 50,
+	Display_SubtitleBG                                                               = 51,
+	Display_SubtitleAuthor                                                           = 52,
+	Display_HUDSize                                                                  = 53,
+	Display_HUDBG                                                                    = 54,
+	Display_HUDShow                                                                  = 55,
+	Display_Compass                                                                  = 56,
+	Display_AntiAliasingQuality                                                      = 57,
+	Display_ResolutionQuality                                                        = 58,
+	Display_FilmGrain                                                                = 59,
+	Display_ColorFringe                                                              = 60,
+	Display_HFR                                                                      = 61,
+	Display_HUDAspectRatio                                                           = 62,
+	Display_LockMouseOnWindow                                                        = 63,
+	Localize_Language                                                                = 64,
+	Localize_Voice                                                                   = 65,
+	Sound_MasterVolume                                                               = 66,
+	Sound_BGMVolume                                                                  = 67,
+	Sound_DialogVolume                                                               = 68,
+	Sound_SEVolume                                                                   = 69,
+	Sound_HapticVolume                                                               = 70,
+	Sound_AudioDeviceType                                                            = 71,
+	Sound_ControllerSpeaker                                                          = 72,
+	Sound_MuteWhenUnfocus                                                            = 73,
+	Develop_RecordMode                                                               = 74,
+	Develop_MinimizeUI                                                               = 75,
+	Develop_NetworkPlay                                                              = 76,
+	Develop_JiraAuthorize                                                            = 77,
+	GamePlay_Difficulty                                                              = 78,
+	GamePlay_Hint                                                                    = 79,
+	GamePlay_Restart                                                                 = 80,
+	GamePlay_NightOperationGiveUp                                                    = 81,
+	GamePlay_Tutorial                                                                = 82,
+	GamePlay_RecordPopup                                                             = 83,
+	GamePlay_PonytailLength                                                          = 84,
+	GamePlay_ActionAssist                                                            = 85,
+	GamePlay_Demo_TrialCleared                                                       = 86,
+	GamePlay_Demo_UseBossChallengeMessagePopup                                       = 87,
+	GamePlay_ReachEnding                                                             = 88,
+	GamePlay_NoticeReachEnding                                                       = 89,
+	GamePlay_VisibleSkipUI                                                           = 90,
+	GamePlay_EventContents                                                           = 91,
+	GamePlay_DLCContents                                                             = 92,
+	Accessibility_ItemAutoInteraction                                                = 93,
+	Accessibility_MotionBlurScale                                                    = 94,
+	Accessibility_QTEForceSuccess                                                    = 95,
+	Accessibility_HUDCenterDot                                                       = 96,
+	Accessibility_ColorBlind                                                         = 97,
+	Accessibility_ColorBlindScale                                                    = 98,
+	Accessibility_HighContrast                                                       = 99,
+	Accessibility_HighContrastOnOff                                                  = 100,
+	Accessibility_FishingAssist                                                      = 101,
+	Accessibility_PuzzleTimeLimit                                                    = 102,
+	Accessibility_ItemEquipHold                                                      = 103,
+	Accessibility_EasyPlatformAction                                                 = 104,
+	Accessibility_HUDViewStatValue                                                   = 105,
+	Accessibility_MotionSicknessPreset                                               = 106,
+	Accessibility_MotorPreset                                                        = 107,
+	Accessibility_VisualPreset                                                       = 108,
+	Accessibility_SoundPreset                                                        = 109,
+	Interface_UMPCMode                                                               = 110,
+	CameraNormalSensitivity_Horizental                                               = 111,
+	CameraNormalSensitivity_Vertical                                                 = 112,
+	CameraTPSSensitivity_Horizental                                                  = 113,
+	CameraTPSSensitivity_Vertical                                                    = 114,
+	CameraHorizentalInvert                                                           = 115,
+	CameraVerticalnvert                                                              = 116,
+	CameraAutoRotate                                                                 = 117,
+	CameraAutoRotate_Mouse                                                           = 118,
+	AdaptiveTrigger                                                                  = 119,
+	Control_TPSAimSlowDownAdditiveScale                                              = 120,
+	Control_TPSAimSlowDownAdditiveScale_Mouse                                        = 121,
+	Control_AutoLockOn                                                               = 122,
+	Control_AutoLockOn_Mouse                                                         = 123,
+	Control_AutoLockOnAfterTPS                                                       = 124,
+	Control_AutoLockOnAfterTPS_Mouse                                                 = 125,
+	Control_SwipeShortCutUp                                                          = 126,
+	Control_SwipeShortCutDown                                                        = 127,
+	Control_SwipeShortCutLeft                                                        = 128,
+	Control_SwipeShortCutRight                                                       = 129,
+	Control_ReverseOKCancel                                                          = 130,
+	Control_ReverseLRStick                                                           = 131,
+	Control_WalkKeyInputType_Pad                                                     = 132,
+	Control_TPSKeyInputType_Pad                                                      = 133,
+	Control_WalkKeyInputType_Mouse                                                   = 134,
+	Control_TPSKeyInputType_Mouse                                                    = 135,
+	Control_ControllerSpeakerVolume                                                  = 136,
+	Control_FishingSystem                                                            = 137,
+	Control_RangeModeAimAlign                                                        = 138,
+	Control_RangeModeAimAlign_Mouse                                                  = 139,
+	Control_RangeModeShotCorrection                                                  = 140,
+	Control_RangeModeShotCorrection_Mouse                                            = 141,
+	Control_MouseLockOnMove                                                          = 142,
+	Control_LockOnMoveSensitivity                                                    = 143,
+	Control_KeyMapping                                                               = 144,
+	CameraShake_Intensity                                                            = 145,
+	Game_Quit                                                                        = 146,
+	Game_ApplicationQuit                                                             = 147,
+	PhotoMode_EnterPhotoMode                                                         = 148,
+	GlobalData_NoticeReward_1_003                                                    = 149,
+	GlobalData_NoticeBossChallengeReward                                             = 150,
+	GlobalData_NoticeUnlockBossChallenge                                             = 151,
+	GlobalData_NoticeUnlockArtBook                                                   = 152,
+	GlobalData_NoticeFusionEnding                                                    = 153,
+	GlobalData_NoticeInAppPurchase                                                   = 154,
+	GlobalData_NoticeSteamInput                                                      = 155,
+	GlobalData_NoticeLaunchingReward                                                 = 156,
+	GlobalData_ReachFusionEnding                                                     = 157,
+	GlobalData_MigrateFlag_1_008                                                     = 158,
+	GlobalData_CanNoticeScreenSkip                                                   = 159,
+	GlobalData_NeedInitialSetup                                                      = 160,
+	GlobalData_NeedInitialContentsSetup                                              = 161,
+	GlobalData_PSNAccount                                                            = 162,
+	GlobalData_PersonalInformation                                                   = 163,
+	MouseCameraNormalSensitivity_Horizental                                          = 164,
+	MouseCameraNormalSensitivity_Vertical                                            = 165,
+	MouseCameraTPSSensitivity_Horizental                                             = 166,
+	MouseCameraTPSSensitivity_Vertical                                               = 167,
+	MouseCameraHorizentalInvert                                                      = 168,
+	MouseCameraVerticalnvert                                                         = 169,
+	Num                                                                              = 170
 };
 
 /// Enum /Script/SB.ESBConditionResultVisibleType
 /// Size: 0x01 (1 bytes)
 enum class ESBConditionResultVisibleType : uint8_t
 {
-	ESBConditionResultVisibleType_None                                               = 0,
-	ESBConditionResultVisibleType_IsVisibility                                       = 1,
-	ESBConditionResultVisibleType_IsEnable                                           = 2
+	None                                                                             = 0,
+	IsVisibility                                                                     = 1,
+	IsEnable                                                                         = 2
 };
 
 /// Enum /Script/SB.ESBTheaterInteractionSelectType
 /// Size: 0x01 (1 bytes)
 enum class ESBTheaterInteractionSelectType : uint8_t
 {
-	ESBTheaterInteractionSelectType_None                                             = 0,
-	ESBTheaterInteractionSelectType_Show                                             = 1,
-	ESBTheaterInteractionSelectType_Lock                                             = 2,
-	ESBTheaterInteractionSelectType_Hide                                             = 3
+	None                                                                             = 0,
+	Show                                                                             = 1,
+	Lock                                                                             = 2,
+	Hide                                                                             = 3
 };
 
 /// Enum /Script/SB.ESBTheaterInteractionDesignType
 /// Size: 0x01 (1 bytes)
 enum class ESBTheaterInteractionDesignType : uint8_t
 {
-	ESBTheaterInteractionDesignType_None                                             = 0,
-	ESBTheaterInteractionDesignType_Select                                           = 1,
-	ESBTheaterInteractionDesignType_YesNo                                            = 2,
-	ESBTheaterInteractionDesignType_AdamFusion                                       = 3
+	None                                                                             = 0,
+	Select                                                                           = 1,
+	YesNo                                                                            = 2,
+	AdamFusion                                                                       = 3
 };
 
 /// Enum /Script/SB.ESBFixedRotationAxisType
@@ -1805,9 +1805,9 @@ enum class ESBFixedRotationAxisType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBMetaAIEventType : uint8_t
 {
-	ESBMetaAIEventType_SpecialBehavior                                               = 0,
-	ESBMetaAIEventType_ForceThink                                                    = 1,
-	ESBMetaAIEventType_AddTag                                                        = 2
+	SpecialBehavior                                                                  = 0,
+	ForceThink                                                                       = 1,
+	AddTag                                                                           = 2
 };
 
 /// Enum /Script/SB.ESBDebugViewerDataCategory
@@ -1823,122 +1823,122 @@ enum class ESBDebugViewerDataCategory : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBDebugDataState : uint8_t
 {
-	ESBDebugDataState_None                                                           = 0,
-	ESBDebugDataState_Normal                                                         = 1,
-	ESBDebugDataState_Warning                                                        = 2,
-	ESBDebugDataState_Critical                                                       = 3
+	None                                                                             = 0,
+	Normal                                                                           = 1,
+	Warning                                                                          = 2,
+	Critical                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBDebugData
 /// Size: 0x01 (1 bytes)
 enum class ESBDebugData : uint8_t
 {
-	ESBDebugData_Character                                                           = 0,
-	ESBDebugData_ZoneEnv                                                             = 1,
-	ESBDebugData_ZoneTrigger                                                         = 2,
-	ESBDebugData_ZoneEventActor                                                      = 3,
-	ESBDebugData_ZoneItem                                                            = 4,
-	ESBDebugData_AreaControlVolume                                                   = 5,
-	ESBDebugData_LevelStreaming                                                      = 6,
-	ESBDebugData_Trophy                                                              = 7,
-	ESBDebugData_Log                                                                 = 8
+	Character                                                                        = 0,
+	ZoneEnv                                                                          = 1,
+	ZoneTrigger                                                                      = 2,
+	ZoneEventActor                                                                   = 3,
+	ZoneItem                                                                         = 4,
+	AreaControlVolume                                                                = 5,
+	LevelStreaming                                                                   = 6,
+	Trophy                                                                           = 7,
+	Log                                                                              = 8
 };
 
 /// Enum /Script/SB.ESBSignificanceLevel
 /// Size: 0x01 (1 bytes)
 enum class ESBSignificanceLevel : uint8_t
 {
-	ESBSignificanceLevel_VeryLow                                                     = 0,
-	ESBSignificanceLevel_Low                                                         = 1,
-	ESBSignificanceLevel_Medium                                                      = 2,
-	ESBSignificanceLevel_High                                                        = 3,
-	ESBSignificanceLevel_VeryHigh                                                    = 4
+	VeryLow                                                                          = 0,
+	Low                                                                              = 1,
+	Medium                                                                           = 2,
+	High                                                                             = 3,
+	VeryHigh                                                                         = 4
 };
 
 /// Enum /Script/SB.ESBMetaAIBehaviorStance
 /// Size: 0x01 (1 bytes)
 enum class ESBMetaAIBehaviorStance : uint8_t
 {
-	ESBMetaAIBehaviorStance__Default                                                 = 0,
-	ESBMetaAIBehaviorStance__Stand                                                   = 1,
-	ESBMetaAIBehaviorStance__Sit                                                     = 2,
-	ESBMetaAIBehaviorStance__Crouch                                                  = 3,
-	ESBMetaAIBehaviorStance__Flop                                                    = 4,
-	ESBMetaAIBehaviorStance__Silence                                                 = 5,
-	ESBMetaAIBehaviorStance__RailLean                                                = 6,
-	ESBMetaAIBehaviorStance__WallLean                                                = 7,
-	ESBMetaAIBehaviorStance__Sing                                                    = 8
+	Default                                                                          = 0,
+	Stand                                                                            = 1,
+	Sit                                                                              = 2,
+	Crouch                                                                           = 3,
+	Flop                                                                             = 4,
+	Silence                                                                          = 5,
+	RailLean                                                                         = 6,
+	WallLean                                                                         = 7,
+	Sing                                                                             = 8
 };
 
 /// Enum /Script/SB.ESBMetaAILookAtType
 /// Size: 0x01 (1 bytes)
 enum class ESBMetaAILookAtType : uint8_t
 {
-	ESBMetaAILookAtType__None                                                        = 0,
-	ESBMetaAILookAtType__Ignore                                                      = 1,
-	ESBMetaAILookAtType__Once                                                        = 2,
-	ESBMetaAILookAtType__Always                                                      = 3
+	None                                                                             = 0,
+	Ignore                                                                           = 1,
+	Once                                                                             = 2,
+	Always                                                                           = 3
 };
 
 /// Enum /Script/SB.ESBAIWorldNodeType
 /// Size: 0x01 (1 bytes)
 enum class ESBAIWorldNodeType : uint8_t
 {
-	ESBAIWorldNodeType__Road                                                         = 0,
-	ESBAIWorldNodeType__Behavior                                                     = 1,
-	ESBAIWorldNodeType__BehaviorPosition                                             = 2,
-	ESBAIWorldNodeType__SubBehavior                                                  = 3,
-	ESBAIWorldNodeType__InteractionPosition                                          = 4,
-	ESBAIWorldNodeType__Root_BehaviorPosition                                        = 5,
-	ESBAIWorldNodeType__Root_SubBehavior                                             = 6
+	Road                                                                             = 0,
+	Behavior                                                                         = 1,
+	BehaviorPosition                                                                 = 2,
+	SubBehavior                                                                      = 3,
+	InteractionPosition                                                              = 4,
+	Root_BehaviorPosition                                                            = 5,
+	Root_SubBehavior                                                                 = 6
 };
 
 /// Enum /Script/SB.ESBMetaAIBehavior
 /// Size: 0x01 (1 bytes)
 enum class ESBMetaAIBehavior : uint8_t
 {
-	ESBMetaAIBehavior__None                                                          = 0,
-	ESBMetaAIBehavior__Wait                                                          = 1,
-	ESBMetaAIBehavior__Walk                                                          = 2,
-	ESBMetaAIBehavior__Behavior                                                      = 3,
-	ESBMetaAIBehavior__SpecialBehavior                                               = 4,
-	ESBMetaAIBehavior__InteractionWithPlayer                                         = 5,
-	ESBMetaAIBehavior__Follow                                                        = 6,
-	ESBMetaAIBehavior__ReadyInteractionGraph                                         = 7,
-	ESBMetaAIBehavior__HideAndSeek                                                   = 8,
-	ESBMetaAIBehavior__HideAndSeekWait                                               = 9
+	None                                                                             = 0,
+	Wait                                                                             = 1,
+	Walk                                                                             = 2,
+	Behavior                                                                         = 3,
+	SpecialBehavior                                                                  = 4,
+	InteractionWithPlayer                                                            = 5,
+	Follow                                                                           = 6,
+	ReadyInteractionGraph                                                            = 7,
+	HideAndSeek                                                                      = 8,
+	HideAndSeekWait                                                                  = 9
 };
 
 /// Enum /Script/SB.ESBMetaAIThink
 /// Size: 0x01 (1 bytes)
 enum class ESBMetaAIThink : uint8_t
 {
-	ESBMetaAIThink__None                                                             = 0,
-	ESBMetaAIThink__MoveAround                                                       = 1,
-	ESBMetaAIThink__FollowGroupLeader                                                = 2,
-	ESBMetaAIThink__Behavior                                                         = 3,
-	ESBMetaAIThink__SpecialBehavior                                                  = 4,
-	ESBMetaAIThink__HideAndSeek                                                      = 5
+	None                                                                             = 0,
+	MoveAround                                                                       = 1,
+	FollowGroupLeader                                                                = 2,
+	Behavior                                                                         = 3,
+	SpecialBehavior                                                                  = 4,
+	HideAndSeek                                                                      = 5
 };
 
 /// Enum /Script/SB.ESBJob
 /// Size: 0x01 (1 bytes)
 enum class ESBJob : uint8_t
 {
-	ESBJob__None                                                                     = 0,
-	ESBJob__Citizen                                                                  = 1,
-	ESBJob__Guard                                                                    = 2,
-	ESBJob__Engineer                                                                 = 3,
-	ESBJob__Scavenger                                                                = 4,
-	ESBJob__Merchant                                                                 = 5
+	None                                                                             = 0,
+	Citizen                                                                          = 1,
+	Guard                                                                            = 2,
+	Engineer                                                                         = 3,
+	Scavenger                                                                        = 4,
+	Merchant                                                                         = 5
 };
 
 /// Enum /Script/SB.ESBShowSESoundAttachType
 /// Size: 0x01 (1 bytes)
 enum class ESBShowSESoundAttachType : uint8_t
 {
-	ESBShowSESoundAttachType__SESoundSetTarget                                       = 0,
-	ESBShowSESoundAttachType__AttachProperty                                         = 1
+	SESoundSetTarget                                                                 = 0,
+	AttachProperty                                                                   = 1
 };
 
 /// Enum /Script/SB.ESBShowCharacterParticleTarget
@@ -1953,151 +1953,151 @@ enum class ESBShowCharacterParticleTarget : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBConditionItemCheckRangeType : uint8_t
 {
-	ESBConditionItemCheckRangeType_Inven                                             = 0,
-	ESBConditionItemCheckRangeType_InvenZone                                         = 1,
-	ESBConditionItemCheckRangeType_InvenZoneWorld                                    = 2
+	Inven                                                                            = 0,
+	InvenZone                                                                        = 1,
+	InvenZoneWorld                                                                   = 2
 };
 
 /// Enum /Script/SB.ESBWorldGlobalValueType
 /// Size: 0x01 (1 bytes)
 enum class ESBWorldGlobalValueType : uint8_t
 {
-	ESBWorldGlobalValueType_None                                                     = 0,
-	ESBWorldGlobalValueType_DitherWeight                                             = 1,
-	ESBWorldGlobalValueType_MotinBlurScale                                           = 2,
-	ESBWorldGlobalValueType_Max                                                      = 3
+	None                                                                             = 0,
+	DitherWeight                                                                     = 1,
+	MotinBlurScale                                                                   = 2,
+	Max                                                                              = 3
 };
 
 /// Enum /Script/SB.ESBWorldEnvCounterType
 /// Size: 0x01 (1 bytes)
 enum class ESBWorldEnvCounterType : uint8_t
 {
-	ESBWorldEnvCounterType_None                                                      = 0,
-	ESBWorldEnvCounterType_DitherDisable                                             = 1,
-	ESBWorldEnvCounterType_VolumetricRenderTargetDisable                             = 2,
-	ESBWorldEnvCounterType_MouseCursorVisible                                        = 3,
-	ESBWorldEnvCounterType_PostProcessingDisable                                     = 4,
-	ESBWorldEnvCounterType_MouseCursorVisibleWhenKeyboardInput                       = 5,
-	ESBWorldEnvCounterType_Max                                                       = 6
+	None                                                                             = 0,
+	DitherDisable                                                                    = 1,
+	VolumetricRenderTargetDisable                                                    = 2,
+	MouseCursorVisible                                                               = 3,
+	PostProcessingDisable                                                            = 4,
+	MouseCursorVisibleWhenKeyboardInput                                              = 5,
+	Max                                                                              = 6
 };
 
 /// Enum /Script/SB.ESBFishingBobberState
 /// Size: 0x01 (1 bytes)
 enum class ESBFishingBobberState : uint8_t
 {
-	ESBFishingBobberState_None                                                       = 0,
-	ESBFishingBobberState_Casting                                                    = 1,
-	ESBFishingBobberState_Waiting                                                    = 2,
-	ESBFishingBobberState_Touch                                                      = 3,
-	ESBFishingBobberState_Bite                                                       = 4,
-	ESBFishingBobberState_Fighting                                                   = 5,
-	ESBFishingBobberState_RunAway                                                    = 6,
-	ESBFishingBobberState_Pulling                                                    = 7,
-	ESBFishingBobberState_FinalPulling                                               = 8,
-	ESBFishingBobberState_LiftUpReady                                                = 9,
-	ESBFishingBobberState_LiftUp                                                     = 10
+	None                                                                             = 0,
+	Casting                                                                          = 1,
+	Waiting                                                                          = 2,
+	Touch                                                                            = 3,
+	Bite                                                                             = 4,
+	Fighting                                                                         = 5,
+	RunAway                                                                          = 6,
+	Pulling                                                                          = 7,
+	FinalPulling                                                                     = 8,
+	LiftUpReady                                                                      = 9,
+	LiftUp                                                                           = 10
 };
 
 /// Enum /Script/SB.ESBFishingCameraModeType
 /// Size: 0x01 (1 bytes)
 enum class ESBFishingCameraModeType : uint8_t
 {
-	ESBFishingCameraModeType_Default                                                 = 0,
-	ESBFishingCameraModeType_Aim                                                     = 1,
-	ESBFishingCameraModeType_Waiting                                                 = 2,
-	ESBFishingCameraModeType_Fighting                                                = 3,
-	ESBFishingCameraModeType_LiftUpReady                                             = 4,
-	ESBFishingCameraModeType_LiftUp                                                  = 5
+	Default                                                                          = 0,
+	Aim                                                                              = 1,
+	Waiting                                                                          = 2,
+	Fighting                                                                         = 3,
+	LiftUpReady                                                                      = 4,
+	LiftUp                                                                           = 5
 };
 
 /// Enum /Script/SB.ESBFishingCommandType
 /// Size: 0x01 (1 bytes)
 enum class ESBFishingCommandType : uint8_t
 {
-	ESBFishingCommandType_None                                                       = 0,
-	ESBFishingCommandType_Cancel                                                     = 1,
-	ESBFishingCommandType_Casting                                                    = 2,
-	ESBFishingCommandType_Reel                                                       = 3,
-	ESBFishingCommandType_Attack                                                     = 4,
-	ESBFishingCommandType_TimingPull                                                 = 5,
-	ESBFishingCommandType_LiftUp                                                     = 6
+	None                                                                             = 0,
+	Cancel                                                                           = 1,
+	Casting                                                                          = 2,
+	Reel                                                                             = 3,
+	Attack                                                                           = 4,
+	TimingPull                                                                       = 5,
+	LiftUp                                                                           = 6
 };
 
 /// Enum /Script/SB.ESBFishingTakeBackType
 /// Size: 0x01 (1 bytes)
 enum class ESBFishingTakeBackType : uint8_t
 {
-	ESBFishingTakeBackType_MotionTilt                                                = 0,
-	ESBFishingTakeBackType_ButtonPress                                               = 1,
-	ESBFishingTakeBackType_MoveInput                                                 = 2
+	MotionTilt                                                                       = 0,
+	ButtonPress                                                                      = 1,
+	MoveInput                                                                        = 2
 };
 
 /// Enum /Script/SB.ESBFishingModeType
 /// Size: 0x01 (1 bytes)
 enum class ESBFishingModeType : uint8_t
 {
-	ESBFishingModeType_None                                                          = 0,
-	ESBFishingModeType_Idle                                                          = 1,
-	ESBFishingModeType_Aim                                                           = 2,
-	ESBFishingModeType_TakeBack                                                      = 3,
-	ESBFishingModeType_Casting                                                       = 4,
-	ESBFishingModeType_Waiting                                                       = 5,
-	ESBFishingModeType_Fighting                                                      = 6,
-	ESBFishingModeType_RunAway                                                       = 7,
-	ESBFishingModeType_Pulling                                                       = 8,
-	ESBFishingModeType_FinalPulling                                                  = 9,
-	ESBFishingModeType_LiftUpReady                                                   = 10,
-	ESBFishingModeType_LiftUp                                                        = 11
+	None                                                                             = 0,
+	Idle                                                                             = 1,
+	Aim                                                                              = 2,
+	TakeBack                                                                         = 3,
+	Casting                                                                          = 4,
+	Waiting                                                                          = 5,
+	Fighting                                                                         = 6,
+	RunAway                                                                          = 7,
+	Pulling                                                                          = 8,
+	FinalPulling                                                                     = 9,
+	LiftUpReady                                                                      = 10,
+	LiftUp                                                                           = 11
 };
 
 /// Enum /Script/SB.ESBFishRarityType
 /// Size: 0x01 (1 bytes)
 enum class ESBFishRarityType : uint8_t
 {
-	ESBFishRarityType_None                                                           = 0,
-	ESBFishRarityType_Common                                                         = 1,
-	ESBFishRarityType_Uncommon                                                       = 2,
-	ESBFishRarityType_Rare                                                           = 3,
-	ESBFishRarityType_Epic                                                           = 4,
-	ESBFishRarityType_Legendary                                                      = 5
+	None                                                                             = 0,
+	Common                                                                           = 1,
+	Uncommon                                                                         = 2,
+	Rare                                                                             = 3,
+	Epic                                                                             = 4,
+	Legendary                                                                        = 5
 };
 
 /// Enum /Script/SB.ESBScanActorType
 /// Size: 0x01 (1 bytes)
 enum class ESBScanActorType : uint8_t
 {
-	ESBScanActorType_None                                                            = 0,
-	ESBScanActorType_Character                                                       = 1,
-	ESBScanActorType_Item                                                            = 2,
-	ESBScanActorType_EventMove                                                       = 3,
-	ESBScanActorType_ZoneEnv                                                         = 4
+	None                                                                             = 0,
+	Character                                                                        = 1,
+	Item                                                                             = 2,
+	EventMove                                                                        = 3,
+	ZoneEnv                                                                          = 4
 };
 
 /// Enum /Script/SB.ESBScanDisplayType
 /// Size: 0x01 (1 bytes)
 enum class ESBScanDisplayType : uint8_t
 {
-	ESBScanDisplayType_None                                                          = 0,
-	ESBScanDisplayType_CharNative                                                    = 1,
-	ESBScanDisplayType_CharRobotEnemy                                                = 2,
-	ESBScanDisplayType_CharRobotAlly                                                 = 3,
-	ESBScanDisplayType_CharAEEnemy                                                   = 4,
-	ESBScanDisplayType_CharAEAlly                                                    = 5,
-	ESBScanDisplayType_CharUnknownAlly                                               = 6,
-	ESBScanDisplayType_EnvMachine                                                    = 50,
-	ESBScanDisplayType_EnvCrate                                                      = 51,
-	ESBScanDisplayType_EnvAE                                                         = 52,
-	ESBScanDisplayType_EnvRobot                                                      = 53,
-	ESBScanDisplayType_ItemNormal                                                    = 100,
-	ESBScanDisplayType_ItemEquipment                                                 = 101,
-	ESBScanDisplayType_ItemFusionCell                                                = 102,
-	ESBScanDisplayType_ItemAmmo                                                      = 103,
-	ESBScanDisplayType_ItemGold                                                      = 104,
-	ESBScanDisplayType_ItemCore                                                      = 105,
-	ESBScanDisplayType_ItemValuables                                                 = 106,
-	ESBScanDisplayType_ItemMaterial                                                  = 107,
-	ESBScanDisplayType_EventMovePath                                                 = 150,
-	ESBScanDisplayType_Max                                                           = 255
+	None                                                                             = 0,
+	CharNative                                                                       = 1,
+	CharRobotEnemy                                                                   = 2,
+	CharRobotAlly                                                                    = 3,
+	CharAEEnemy                                                                      = 4,
+	CharAEAlly                                                                       = 5,
+	CharUnknownAlly                                                                  = 6,
+	EnvMachine                                                                       = 50,
+	EnvCrate                                                                         = 51,
+	EnvAE                                                                            = 52,
+	EnvRobot                                                                         = 53,
+	ItemNormal                                                                       = 100,
+	ItemEquipment                                                                    = 101,
+	ItemFusionCell                                                                   = 102,
+	ItemAmmo                                                                         = 103,
+	ItemGold                                                                         = 104,
+	ItemCore                                                                         = 105,
+	ItemValuables                                                                    = 106,
+	ItemMaterial                                                                     = 107,
+	EventMovePath                                                                    = 150,
+	Max                                                                              = 255
 };
 
 /// Enum /Script/SB.ESBMovementModeBlockType
@@ -2112,210 +2112,210 @@ enum class ESBMovementModeBlockType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBTPSModeType : uint8_t
 {
-	ESBTPSModeType_Default                                                           = 0,
-	ESBTPSModeType_MiniGame                                                          = 1,
-	ESBTPSModeType_Nikke                                                             = 2
+	Default                                                                          = 0,
+	MiniGame                                                                         = 1,
+	Nikke                                                                            = 2
 };
 
 /// Enum /Script/SB.ESBWeaponStepType
 /// Size: 0x01 (1 bytes)
 enum class ESBWeaponStepType : uint8_t
 {
-	ESBWeaponStepType_Step1                                                          = 0,
-	ESBWeaponStepType_Step2                                                          = 1,
-	ESBWeaponStepType_Step3                                                          = 2
+	Step1                                                                            = 0,
+	Step2                                                                            = 1,
+	Step3                                                                            = 2
 };
 
 /// Enum /Script/SB.ESBSoundStatSortType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundStatSortType : uint8_t
 {
-	ESBSoundStatSortType__None                                                       = 0,
-	ESBSoundStatSortType__Volume                                                     = 1,
-	ESBSoundStatSortType__SoundName                                                  = 2,
-	ESBSoundStatSortType__SoundPath                                                  = 3,
-	ESBSoundStatSortType__Distance                                                   = 4,
-	ESBSoundStatSortType__Priority                                                   = 5,
-	ESBSoundStatSortType__PlaybackTime                                               = 6,
-	ESBSoundStatSortType__PlaybackTimeNonVirtualized                                 = 7,
-	ESBSoundStatSortType__ClassName                                                  = 8
+	None                                                                             = 0,
+	Volume                                                                           = 1,
+	SoundName                                                                        = 2,
+	SoundPath                                                                        = 3,
+	Distance                                                                         = 4,
+	Priority                                                                         = 5,
+	PlaybackTime                                                                     = 6,
+	PlaybackTimeNonVirtualized                                                       = 7,
+	ClassName                                                                        = 8
 };
 
 /// Enum /Script/SB.ESBSoundDebuggerSettingEnumType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundDebuggerSettingEnumType : uint8_t
 {
-	ESBSoundDebuggerSettingEnumType__LogViewerEnable                                 = 0,
-	ESBSoundDebuggerSettingEnumType__StatLogEnableType                               = 1
+	LogViewerEnable                                                                  = 0,
+	StatLogEnableType                                                                = 1
 };
 
 /// Enum /Script/SB.ESBSoundStatLogType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundStatLogType : uint8_t
 {
-	ESBSoundStatLogType_None                                                         = 0,
-	ESBSoundStatLogType_Sounds                                                       = 1,
-	ESBSoundStatLogType_Wave                                                         = 2,
-	ESBSoundStatLogType_Cue                                                          = 4,
-	ESBSoundStatLogType_Vibration                                                    = 8,
-	ESBSoundStatLogType_ForceFeedback                                                = 16
+	None                                                                             = 0,
+	Sounds                                                                           = 1,
+	Wave                                                                             = 2,
+	Cue                                                                              = 4,
+	Vibration                                                                        = 8,
+	ForceFeedback                                                                    = 16
 };
 
 /// Enum /Script/SB.ESBSoundLogViewerType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundLogViewerType : uint8_t
 {
-	ESBSoundLogViewerType_None                                                       = 0,
-	ESBSoundLogViewerType_EventLog                                                   = 1,
-	ESBSoundLogViewerType_FixedLog                                                   = 2,
-	ESBSoundLogViewerType_StatLog                                                    = 4,
-	ESBSoundLogViewerType_WorldLog                                                   = 8,
-	ESBSoundLogViewerType_All                                                        = 15
+	None                                                                             = 0,
+	EventLog                                                                         = 1,
+	FixedLog                                                                         = 2,
+	StatLog                                                                          = 4,
+	WorldLog                                                                         = 8,
+	All                                                                              = 15
 };
 
 /// Enum /Script/SB.ESBSoundEventLevelSequenceType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundEventLevelSequenceType : uint8_t
 {
-	ESBSoundEventLevelSequenceType__Begin                                            = 0,
-	ESBSoundEventLevelSequenceType__Finish                                           = 1
+	Begin                                                                            = 0,
+	Finish                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBSoundEventQuestType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundEventQuestType : uint8_t
 {
-	ESBSoundEventQuestType__Acquire                                                  = 0,
-	ESBSoundEventQuestType__Complete                                                 = 1
+	Acquire                                                                          = 0,
+	Complete                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBSoundEventSystemType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundEventSystemType : uint8_t
 {
-	ESBSoundEventSystemType__None                                                    = 0,
-	ESBSoundEventSystemType__MainBGM                                                 = 1,
-	ESBSoundEventSystemType__AmbientBGM                                              = 2,
-	ESBSoundEventSystemType__AmbientSound                                            = 3,
-	ESBSoundEventSystemType__BGMState                                                = 4,
-	ESBSoundEventSystemType__SoundClass                                              = 5,
-	ESBSoundEventSystemType__Num                                                     = 6
+	None                                                                             = 0,
+	MainBGM                                                                          = 1,
+	AmbientBGM                                                                       = 2,
+	AmbientSound                                                                     = 3,
+	BGMState                                                                         = 4,
+	SoundClass                                                                       = 5,
+	Num                                                                              = 6
 };
 
 /// Enum /Script/SB.ESBSoundClassType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundClassType : uint8_t
 {
-	ESBSoundClassType__None                                                          = 0,
-	ESBSoundClassType__DialogVoice                                                   = 1,
-	ESBSoundClassType__ActionVoice                                                   = 2,
-	ESBSoundClassType__PCFootstepSound                                               = 3,
-	ESBSoundClassType__MonFootstepSound                                              = 4,
-	ESBSoundClassType__Num                                                           = 5
+	None                                                                             = 0,
+	DialogVoice                                                                      = 1,
+	ActionVoice                                                                      = 2,
+	PCFootstepSound                                                                  = 3,
+	MonFootstepSound                                                                 = 4,
+	Num                                                                              = 5
 };
 
 /// Enum /Script/SB.ESBSoundBGMStateRule
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundBGMStateRule : uint8_t
 {
-	ESBSoundBGMStateRule__None                                                       = 0,
-	ESBSoundBGMStateRule__Auto                                                       = 1,
-	ESBSoundBGMStateRule__ForceDefault                                               = 2,
-	ESBSoundBGMStateRule__ForceBattle                                                = 3,
-	ESBSoundBGMStateRule__ForceEventBattle                                           = 4,
-	ESBSoundBGMStateRule__RequestFinishSound                                         = 5,
-	ESBSoundBGMStateRule__AutoWithResetEvent                                         = 6
+	None                                                                             = 0,
+	Auto                                                                             = 1,
+	ForceDefault                                                                     = 2,
+	ForceBattle                                                                      = 3,
+	ForceEventBattle                                                                 = 4,
+	RequestFinishSound                                                               = 5,
+	AutoWithResetEvent                                                               = 6
 };
 
 /// Enum /Script/SB.ESBSoundBGMState
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundBGMState : uint8_t
 {
-	ESBSoundBGMState__None                                                           = 0,
-	ESBSoundBGMState__Default                                                        = 1,
-	ESBSoundBGMState__Battle                                                         = 2,
-	ESBSoundBGMState__EventBattle                                                    = 3,
-	ESBSoundBGMState__BattleFinish                                                   = 4
+	None                                                                             = 0,
+	Default                                                                          = 1,
+	Battle                                                                           = 2,
+	EventBattle                                                                      = 3,
+	BattleFinish                                                                     = 4
 };
 
 /// Enum /Script/SB.ESBAmbientSoundControlType
 /// Size: 0x01 (1 bytes)
 enum class ESBAmbientSoundControlType : uint8_t
 {
-	ESBAmbientSoundControlType__Enable                                               = 0,
-	ESBAmbientSoundControlType__Priority                                             = 1
+	Enable                                                                           = 0,
+	Priority                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBSoundRestartType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundRestartType : uint8_t
 {
-	ESBSoundRestartType__Default                                                     = 0,
-	ESBSoundRestartType__Alway                                                       = 1
+	Default                                                                          = 0,
+	Alway                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBSoundParamType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundParamType : uint8_t
 {
-	ESBSoundParamType__None                                                          = 0,
-	ESBSoundParamType__BossHPRate                                                    = 1,
-	ESBSoundParamType__SBVelocityX                                                   = 2,
-	ESBSoundParamType__SBVelocityY                                                   = 3,
-	ESBSoundParamType__SlidingSlipTurnRate                                           = 4,
-	ESBSoundParamType__SlopeSlidingTurnRate                                          = 5,
-	ESBSoundParamType__ChangeBattleBGMElapsedTime                                    = 6,
-	ESBSoundParamType__ChangeDefaultBGMElapsedTime                                   = 7,
-	ESBSoundParamType__TopDownRopeMoveRate                                           = 8,
-	ESBSoundParamType__Num                                                           = 9
+	None                                                                             = 0,
+	BossHPRate                                                                       = 1,
+	SBVelocityX                                                                      = 2,
+	SBVelocityY                                                                      = 3,
+	SlidingSlipTurnRate                                                              = 4,
+	SlopeSlidingTurnRate                                                             = 5,
+	ChangeBattleBGMElapsedTime                                                       = 6,
+	ChangeDefaultBGMElapsedTime                                                      = 7,
+	TopDownRopeMoveRate                                                              = 8,
+	Num                                                                              = 9
 };
 
 /// Enum /Script/SB.ESBSoundVolumeChannel
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundVolumeChannel : uint8_t
 {
-	ESBSoundVolumeChannel__None                                                      = 0,
-	ESBSoundVolumeChannel__Master                                                    = 1,
-	ESBSoundVolumeChannel__BGM                                                       = 2,
-	ESBSoundVolumeChannel__TurntableMusic                                            = 3,
-	ESBSoundVolumeChannel__PlayerCharacterSE                                         = 4,
-	ESBSoundVolumeChannel__MonsterSE                                                 = 5,
-	ESBSoundVolumeChannel__NpcSE                                                     = 6,
-	ESBSoundVolumeChannel__WorldSE                                                   = 7,
-	ESBSoundVolumeChannel__Ambience                                                  = 8,
-	ESBSoundVolumeChannel__General                                                   = 9,
-	ESBSoundVolumeChannel__Boss                                                      = 10,
-	ESBSoundVolumeChannel__Dialog                                                    = 11,
-	ESBSoundVolumeChannel__UI                                                        = 12,
-	ESBSoundVolumeChannel__TrainingUI                                                = 13,
-	ESBSoundVolumeChannel__Cinema                                                    = 14,
-	ESBSoundVolumeChannel__ActionVoice                                               = 15,
-	ESBSoundVolumeChannel__TurntableMusicDuck                                        = 16,
-	ESBSoundVolumeChannel__Haptic                                                    = 17,
-	ESBSoundVolumeChannel__Num                                                       = 18
+	None                                                                             = 0,
+	Master                                                                           = 1,
+	BGM                                                                              = 2,
+	TurntableMusic                                                                   = 3,
+	PlayerCharacterSE                                                                = 4,
+	MonsterSE                                                                        = 5,
+	NpcSE                                                                            = 6,
+	WorldSE                                                                          = 7,
+	Ambience                                                                         = 8,
+	General                                                                          = 9,
+	Boss                                                                             = 10,
+	Dialog                                                                           = 11,
+	UI                                                                               = 12,
+	TrainingUI                                                                       = 13,
+	Cinema                                                                           = 14,
+	ActionVoice                                                                      = 15,
+	TurntableMusicDuck                                                               = 16,
+	Haptic                                                                           = 17,
+	Num                                                                              = 18
 };
 
 /// Enum /Script/SB.ESBSoundVolumeControlType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundVolumeControlType : uint8_t
 {
-	ESBSoundVolumeControlType__None                                                  = 0,
-	ESBSoundVolumeControlType__System                                                = 1,
-	ESBSoundVolumeControlType__User                                                  = 2,
-	ESBSoundVolumeControlType__Loading                                               = 3,
-	ESBSoundVolumeControlType__Timer                                                 = 4,
-	ESBSoundVolumeControlType__Num                                                   = 5
+	None                                                                             = 0,
+	System                                                                           = 1,
+	User                                                                             = 2,
+	Loading                                                                          = 3,
+	Timer                                                                            = 4,
+	Num                                                                              = 5
 };
 
 /// Enum /Script/SB.ESBRuleState
 /// Size: 0x01 (1 bytes)
 enum class ESBRuleState : uint8_t
 {
-	ESBRuleState_None                                                                = 0,
-	ESBRuleState_StartWait                                                           = 1,
-	ESBRuleState_Playing                                                             = 2,
-	ESBRuleState_EndWait                                                             = 3,
-	ESBRuleState_End                                                                 = 4
+	None                                                                             = 0,
+	StartWait                                                                        = 1,
+	Playing                                                                          = 2,
+	EndWait                                                                          = 3,
+	End                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBEventMoveRopeType
@@ -2331,9 +2331,9 @@ enum class ESBEventMoveRopeType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBShowClientEvent : uint8_t
 {
-	ESBShowClientEvent_CompletedMountingEquipment                                    = 0,
-	ESBShowClientEvent_CompleteChangeEquipmentShow                                   = 1,
-	ESBShowClientEvent_SetAIDecoratorData                                            = 2
+	CompletedMountingEquipment                                                       = 0,
+	CompleteChangeEquipmentShow                                                      = 1,
+	SetAIDecoratorData                                                               = 2
 };
 
 /// Enum /Script/SB.ESBSpiderNavigationPlaceType
@@ -2350,29 +2350,29 @@ enum class ESBSpiderNavigationPlaceType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBTargetLocationTransformType : uint8_t
 {
-	ESBTargetLocationTransformType_Base                                              = 0,
-	ESBTargetLocationTransformType_Socket                                            = 1,
-	ESBTargetLocationTransformType_Component                                         = 2
+	Base                                                                             = 0,
+	Socket                                                                           = 1,
+	Component                                                                        = 2
 };
 
 /// Enum /Script/SB.ESBRequestGameModeType
 /// Size: 0x01 (1 bytes)
 enum class ESBRequestGameModeType : uint8_t
 {
-	ESBRequestGameModeType__None                                                     = 0,
-	ESBRequestGameModeType__StoryMode                                                = 1,
-	ESBRequestGameModeType__NormalMode                                               = 2,
-	ESBRequestGameModeType__HardMode                                                 = 3
+	None                                                                             = 0,
+	StoryMode                                                                        = 1,
+	NormalMode                                                                       = 2,
+	HardMode                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBRequestGameDataType
 /// Size: 0x01 (1 bytes)
 enum class ESBRequestGameDataType : uint8_t
 {
-	ESBRequestGameDataType_None                                                      = 0,
-	ESBRequestGameDataType_NewGame                                                   = 1,
-	ESBRequestGameDataType_LoadGame                                                  = 2,
-	ESBRequestGameDataType_LoadMap                                                   = 3
+	None                                                                             = 0,
+	NewGame                                                                          = 1,
+	LoadGame                                                                         = 2,
+	LoadMap                                                                          = 3
 };
 
 /// Enum /Script/SB.ESBEnterZoneStepResultType
@@ -2390,57 +2390,57 @@ enum class ESBEnterZoneStepResultType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneProcessState : uint8_t
 {
-	ESBZoneProcessState_None                                                         = 0,
-	ESBZoneProcessState_EnterRequest                                                 = 1,
-	ESBZoneProcessState_ResetRequest                                                 = 2,
-	ESBZoneProcessState_Complete                                                     = 3
+	None                                                                             = 0,
+	EnterRequest                                                                     = 1,
+	ResetRequest                                                                     = 2,
+	Complete                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBGameWorldState
 /// Size: 0x01 (1 bytes)
 enum class ESBGameWorldState : uint8_t
 {
-	ESBGameWorldState_None                                                           = 0,
-	ESBGameWorldState_BeginCreateZone                                                = 1,
-	ESBGameWorldState_CreatingZoneObject                                             = 2,
-	ESBGameWorldState_CreateZoneComplete                                             = 3,
-	ESBGameWorldState_BeginDestoryZone                                               = 4,
-	ESBGameWorldState_RequestDestroyZone                                             = 5,
-	ESBGameWorldState_DestoryZoneComplete                                            = 6,
-	ESBGameWorldState_BeginChangeWorld                                               = 7,
-	ESBGameWorldState_ChangingWorld                                                  = 8,
-	ESBGameWorldState_ChangeWorldComplete                                            = 9,
-	ESBGameWorldState_RequestInteractZone                                            = 10,
-	ESBGameWorldState_RequestDestroyZoneObject                                       = 11,
-	ESBGameWorldState_RunningResetZoneObject                                         = 12,
-	ESBGameWorldState_RequestCreateResetZoneObject                                   = 13,
-	ESBGameWorldState_CompleteResetZone                                              = 14,
-	ESBGameWorldState_RequestResourceCacheAsyncLoad                                  = 15,
-	ESBGameWorldState_CompleteResourceCacheAsyncLoad                                 = 16,
-	ESBGameWorldState_Complete                                                       = 17
+	None                                                                             = 0,
+	BeginCreateZone                                                                  = 1,
+	CreatingZoneObject                                                               = 2,
+	CreateZoneComplete                                                               = 3,
+	BeginDestoryZone                                                                 = 4,
+	RequestDestroyZone                                                               = 5,
+	DestoryZoneComplete                                                              = 6,
+	BeginChangeWorld                                                                 = 7,
+	ChangingWorld                                                                    = 8,
+	ChangeWorldComplete                                                              = 9,
+	RequestInteractZone                                                              = 10,
+	RequestDestroyZoneObject                                                         = 11,
+	RunningResetZoneObject                                                           = 12,
+	RequestCreateResetZoneObject                                                     = 13,
+	CompleteResetZone                                                                = 14,
+	RequestResourceCacheAsyncLoad                                                    = 15,
+	CompleteResourceCacheAsyncLoad                                                   = 16,
+	Complete                                                                         = 17
 };
 
 /// Enum /Script/SB.ESBTargetGameWorldState
 /// Size: 0x01 (1 bytes)
 enum class ESBTargetGameWorldState : uint8_t
 {
-	ESBTargetGameWorldState_None                                                     = 0,
-	ESBTargetGameWorldState_CreateZone                                               = 1,
-	ESBTargetGameWorldState_DestoryZone                                              = 2,
-	ESBTargetGameWorldState_InteractZone                                             = 3
+	None                                                                             = 0,
+	CreateZone                                                                       = 1,
+	DestoryZone                                                                      = 2,
+	InteractZone                                                                     = 3
 };
 
 /// Enum /Script/SB.ESBClientLobbyFlowState
 /// Size: 0x01 (1 bytes)
 enum class ESBClientLobbyFlowState : uint8_t
 {
-	ESBClientLobbyFlowState_None                                                     = 0,
-	ESBClientLobbyFlowState_LeaveGame                                                = 1,
-	ESBClientLobbyFlowState_PostLeaveProcessing                                      = 2,
-	ESBClientLobbyFlowState_CompleteLeaveGame                                        = 3,
-	ESBClientLobbyFlowState_RequestLobbyLevel                                        = 4,
-	ESBClientLobbyFlowState_LoadCompleteLobbyLevel                                   = 5,
-	ESBClientLobbyFlowState_CompleteEnterLobby                                       = 6
+	None                                                                             = 0,
+	LeaveGame                                                                        = 1,
+	PostLeaveProcessing                                                              = 2,
+	CompleteLeaveGame                                                                = 3,
+	RequestLobbyLevel                                                                = 4,
+	LoadCompleteLobbyLevel                                                           = 5,
+	CompleteEnterLobby                                                               = 6
 };
 
 /// Enum /Script/SB.ESBClientEnterGameFlowState
@@ -2472,10 +2472,10 @@ enum class ESBClientEnterGameFlowState : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBClientTargetGameStep : uint8_t
 {
-	ESBClientTargetGameStep_None                                                     = 0,
-	ESBClientTargetGameStep_EnterLevel                                               = 1,
-	ESBClientTargetGameStep_EnterZone                                                = 2,
-	ESBClientTargetGameStep_EnterLobby                                               = 3
+	None                                                                             = 0,
+	EnterLevel                                                                       = 1,
+	EnterZone                                                                        = 2,
+	EnterLobby                                                                       = 3
 };
 
 /// Enum /Script/SB.ESBLocalClientStageType
@@ -2491,40 +2491,40 @@ enum class ESBLocalClientStageType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBRequestZoneState : uint8_t
 {
-	ESBRequestZoneState_None                                                         = 0,
-	ESBRequestZoneState_Create                                                       = 1,
-	ESBRequestZoneState_Reset                                                        = 2,
-	ESBRequestZoneState_CreateComplete                                               = 3,
-	ESBRequestZoneState_ResetComplete                                                = 4
+	None                                                                             = 0,
+	Create                                                                           = 1,
+	Reset                                                                            = 2,
+	CreateComplete                                                                   = 3,
+	ResetComplete                                                                    = 4
 };
 
 /// Enum /Script/SB.ESBActorWarpType
 /// Size: 0x01 (1 bytes)
 enum class ESBActorWarpType : uint8_t
 {
-	ESBActorWarpType_EngineHandle                                                    = 0,
-	ESBActorWarpType_ActorGUID                                                       = 1
+	EngineHandle                                                                     = 0,
+	ActorGUID                                                                        = 1
 };
 
 /// Enum /Script/SB.ESBActorSpeedType
 /// Size: 0x01 (1 bytes)
 enum class ESBActorSpeedType : uint8_t
 {
-	ESBActorSpeedType_None                                                           = 0,
-	ESBActorSpeedType_Run                                                            = 1,
-	ESBActorSpeedType_Walk                                                           = 2,
-	ESBActorSpeedType_LockOnRun                                                      = 3,
-	ESBActorSpeedType_LockOnWalk                                                     = 4,
-	ESBActorSpeedType_JoggingRun                                                     = 5,
-	ESBActorSpeedType_RotateAnglePerSecond                                           = 6
+	None                                                                             = 0,
+	Run                                                                              = 1,
+	Walk                                                                             = 2,
+	LockOnRun                                                                        = 3,
+	LockOnWalk                                                                       = 4,
+	JoggingRun                                                                       = 5,
+	RotateAnglePerSecond                                                             = 6
 };
 
 /// Enum /Script/SB.ESBBodySuitToggleEventType
 /// Size: 0x01 (1 bytes)
 enum class ESBBodySuitToggleEventType : uint8_t
 {
-	ESBBodySuitToggleEventType_Visible                                               = 0,
-	ESBBodySuitToggleEventType_Change                                                = 1
+	Visible                                                                          = 0,
+	Change                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBZoneTriggerFilterType
@@ -2552,8 +2552,8 @@ enum class ESBCharacterObjectStateType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBBroadcastMoveType : uint8_t
 {
-	ESBBroadcastMoveType_None                                                        = 0,
-	ESBBroadcastMoveType_LeaveEventVolume                                            = 1
+	None                                                                             = 0,
+	LeaveEventVolume                                                                 = 1
 };
 
 /// Enum /Script/SB.ESBEventMoveIKApplySlot
@@ -2571,53 +2571,53 @@ enum class ESBEventMoveIKApplySlot : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBRewardGiveType : uint8_t
 {
-	ESBRewardGiveType_Drop                                                           = 0,
-	ESBRewardGiveType_Direct                                                         = 1
+	Drop                                                                             = 0,
+	Direct                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBPhaseFlowProcessEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBPhaseFlowProcessEvent : uint8_t
 {
-	ESBPhaseFlowProcessEvent_Start                                                   = 0,
-	ESBPhaseFlowProcessEvent_CompleteShowLoadingScreen                               = 1,
-	ESBPhaseFlowProcessEvent_CompleteHideLoadingScreen                               = 2,
-	ESBPhaseFlowProcessEvent_CompleteClearSB                                         = 3,
-	ESBPhaseFlowProcessEvent_CompleteClearEngine                                     = 4,
-	ESBPhaseFlowProcessEvent_CompleteLoadMap                                         = 5,
-	ESBPhaseFlowProcessEvent_CompleteEngineInit                                      = 6,
-	ESBPhaseFlowProcessEvent_CompleteClientInit                                      = 7,
-	ESBPhaseFlowProcessEvent_CompleteClientReset                                     = 8,
-	ESBPhaseFlowProcessEvent_CompleteEnterZone                                       = 9,
-	ESBPhaseFlowProcessEvent_FailEnterZone                                           = 10,
-	ESBPhaseFlowProcessEvent_CompleteResetZone                                       = 11,
-	ESBPhaseFlowProcessEvent_CompleteLoadSaveFileProc                                = 12,
-	ESBPhaseFlowProcessEvent_CompletePlayerActorSpawn                                = 13,
-	ESBPhaseFlowProcessEvent_PlayIntroSequence                                       = 14
+	Start                                                                            = 0,
+	CompleteShowLoadingScreen                                                        = 1,
+	CompleteHideLoadingScreen                                                        = 2,
+	CompleteClearSB                                                                  = 3,
+	CompleteClearEngine                                                              = 4,
+	CompleteLoadMap                                                                  = 5,
+	CompleteEngineInit                                                               = 6,
+	CompleteClientInit                                                               = 7,
+	CompleteClientReset                                                              = 8,
+	CompleteEnterZone                                                                = 9,
+	FailEnterZone                                                                    = 10,
+	CompleteResetZone                                                                = 11,
+	CompleteLoadSaveFileProc                                                         = 12,
+	CompletePlayerActorSpawn                                                         = 13,
+	PlayIntroSequence                                                                = 14
 };
 
 /// Enum /Script/SB.ESBPhaseFlowEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBPhaseFlowEvent : uint8_t
 {
-	ESBPhaseFlowEvent_EnterPhase                                                     = 0,
-	ESBPhaseFlowEvent_ChangeGameMap                                                  = 1,
-	ESBPhaseFlowEvent_Revival                                                        = 2,
-	ESBPhaseFlowEvent_Quit                                                           = 3,
-	ESBPhaseFlowEvent_CompleteLoading                                                = 4,
-	ESBPhaseFlowEvent_CompleteRevival                                                = 5,
-	ESBPhaseFlowEvent_ConnectToMultiPlay                                             = 6,
-	ESBPhaseFlowEvent_ReturnToSinglePlay                                             = 7
+	EnterPhase                                                                       = 0,
+	ChangeGameMap                                                                    = 1,
+	Revival                                                                          = 2,
+	Quit                                                                             = 3,
+	CompleteLoading                                                                  = 4,
+	CompleteRevival                                                                  = 5,
+	ConnectToMultiPlay                                                               = 6,
+	ReturnToSinglePlay                                                               = 7
 };
 
 /// Enum /Script/SB.ESBCameraVoumeMoveConstraintDirectionType
 /// Size: 0x01 (1 bytes)
 enum class ESBCameraVoumeMoveConstraintDirectionType : uint8_t
 {
-	ESBCameraVoumeMoveConstraintDirectionType_NotControl                             = 0,
-	ESBCameraVoumeMoveConstraintDirectionType_Vector                                 = 1,
-	ESBCameraVoumeMoveConstraintDirectionType_ActorPoint                             = 2,
-	ESBCameraVoumeMoveConstraintDirectionType_TargetLocation                         = 3
+	NotControl                                                                       = 0,
+	Vector                                                                           = 1,
+	ActorPoint                                                                       = 2,
+	TargetLocation                                                                   = 3
 };
 
 /// Enum /Script/SB.ESBCameraSlopeMoveType
@@ -2635,8 +2635,8 @@ enum class ESBCameraSlopeMoveType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBKeepDataType : uint8_t
 {
-	ESBKeepDataType_None                                                             = 0,
-	ESBKeepDataType_Actor                                                            = 1
+	None                                                                             = 0,
+	Actor                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBEffectUIType
@@ -2684,113 +2684,113 @@ enum class ESBOperationType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBAchievementParamType : uint8_t
 {
-	ESBAchievementParamType_None                                                     = 0,
-	ESBAchievementParamType_QuestAlias                                               = 1,
-	ESBAchievementParamType_ItemAlias                                                = 2,
-	ESBAchievementParamType_ItemCategory                                             = 3,
-	ESBAchievementParamType_CharacterAlias                                           = 4,
-	ESBAchievementParamType_ZoneEnvAlias                                             = 5,
-	ESBAchievementParamType_ZoneEnvSpawnAlias                                        = 6,
-	ESBAchievementParamType_SkillAlias                                               = 7,
-	ESBAchievementParamType_ZoneAlias                                                = 8,
-	ESBAchievementParamType_EffectVolumnAlias                                        = 9,
-	ESBAchievementParamType_AchievementAlias                                         = 10,
-	ESBAchievementParamType_LevelType                                                = 11,
-	ESBAchievementParamType_LevelValue                                               = 12,
-	ESBAchievementParamType_EnvState                                                 = 13,
-	ESBAchievementParamType_ZoneEventActorAlias                                      = 14,
-	ESBAchievementParamType_CharacterRank                                            = 15,
-	ESBAchievementParamType_ZoneTriggerAlias                                         = 16,
-	ESBAchievementParamType_SkillAchievementTag                                      = 17,
-	ESBAchievementParamType_SkillHitResult                                           = 18,
-	ESBAchievementParamType_SkillActiveStepAlias                                     = 19,
-	ESBAchievementParamType_ItemAmount                                               = 20,
-	ESBAchievementParamType_FishWeight                                               = 21,
-	ESBAchievementParamType_ItemCategoryTag                                          = 22,
-	ESBAchievementParamType_ShopTag                                                  = 23,
-	ESBAchievementParamType_WorldAlias                                               = 24,
-	ESBAchievementParamType_AcquisitionSkillAchievementTag                           = 25,
-	ESBAchievementParamType_AcquiredSkillCount                                       = 26,
-	ESBAchievementParamType_NikkeStageAlias                                          = 27
+	None                                                                             = 0,
+	QuestAlias                                                                       = 1,
+	ItemAlias                                                                        = 2,
+	ItemCategory                                                                     = 3,
+	CharacterAlias                                                                   = 4,
+	ZoneEnvAlias                                                                     = 5,
+	ZoneEnvSpawnAlias                                                                = 6,
+	SkillAlias                                                                       = 7,
+	ZoneAlias                                                                        = 8,
+	EffectVolumnAlias                                                                = 9,
+	AchievementAlias                                                                 = 10,
+	LevelType                                                                        = 11,
+	LevelValue                                                                       = 12,
+	EnvState                                                                         = 13,
+	ZoneEventActorAlias                                                              = 14,
+	CharacterRank                                                                    = 15,
+	ZoneTriggerAlias                                                                 = 16,
+	SkillAchievementTag                                                              = 17,
+	SkillHitResult                                                                   = 18,
+	SkillActiveStepAlias                                                             = 19,
+	ItemAmount                                                                       = 20,
+	FishWeight                                                                       = 21,
+	ItemCategoryTag                                                                  = 22,
+	ShopTag                                                                          = 23,
+	WorldAlias                                                                       = 24,
+	AcquisitionSkillAchievementTag                                                   = 25,
+	AcquiredSkillCount                                                               = 26,
+	NikkeStageAlias                                                                  = 27
 };
 
 /// Enum /Script/SB.ESBAchievementCategoryType
 /// Size: 0x01 (1 bytes)
 enum class ESBAchievementCategoryType : uint8_t
 {
-	ESBAchievementCategoryType_None                                                  = 0,
-	ESBAchievementCategoryType_Quest                                                 = 1,
-	ESBAchievementCategoryType_Item                                                  = 2,
-	ESBAchievementCategoryType_Character                                             = 3,
-	ESBAchievementCategoryType_ZoneEnv                                               = 4,
-	ESBAchievementCategoryType_Skill                                                 = 5,
-	ESBAchievementCategoryType_Zone                                                  = 6,
-	ESBAchievementCategoryType_EffectVolumn                                          = 7,
-	ESBAchievementCategoryType_Achievement                                           = 8,
-	ESBAchievementCategoryType_ZoneEventActor                                        = 9,
-	ESBAchievementCategoryType_ZoneTrigger                                           = 10,
-	ESBAchievementCategoryType_SkillActiveStep                                       = 11,
-	ESBAchievementCategoryType_World                                                 = 12,
-	ESBAchievementCategoryType_FriendShip                                            = 13,
-	ESBAchievementCategoryType_PhotoChallenge                                        = 14,
-	ESBAchievementCategoryType_NikkeStage                                            = 15
+	None                                                                             = 0,
+	Quest                                                                            = 1,
+	Item                                                                             = 2,
+	Character                                                                        = 3,
+	ZoneEnv                                                                          = 4,
+	Skill                                                                            = 5,
+	Zone                                                                             = 6,
+	EffectVolumn                                                                     = 7,
+	Achievement                                                                      = 8,
+	ZoneEventActor                                                                   = 9,
+	ZoneTrigger                                                                      = 10,
+	SkillActiveStep                                                                  = 11,
+	World                                                                            = 12,
+	FriendShip                                                                       = 13,
+	PhotoChallenge                                                                   = 14,
+	NikkeStage                                                                       = 15
 };
 
 /// Enum /Script/SB.ESBAchievementEventType
 /// Size: 0x01 (1 bytes)
 enum class ESBAchievementEventType : uint8_t
 {
-	ESBAchievementEventType_None                                                     = 0,
-	ESBAchievementEventType_Complete                                                 = 1,
-	ESBAchievementEventType_Acquire                                                  = 2,
-	ESBAchievementEventType_Interact                                                 = 3,
-	ESBAchievementEventType_Kill                                                     = 4,
-	ESBAchievementEventType_Enter                                                    = 5,
-	ESBAchievementEventType_LevelUp                                                  = 6,
-	ESBAchievementEventType_ChangeState                                              = 7,
-	ESBAchievementEventType_Hit                                                      = 8,
-	ESBAchievementEventType_BeHit                                                    = 9,
-	ESBAchievementEventType_Remove                                                   = 10,
-	ESBAchievementEventType_CheckAmount                                              = 11,
-	ESBAchievementEventType_Start                                                    = 12,
-	ESBAchievementEventType_Fishing                                                  = 13,
-	ESBAchievementEventType_ConsumeInShop                                            = 14,
-	ESBAchievementEventType_SellItem                                                 = 15,
-	ESBAchievementEventType_BuyItem                                                  = 16
+	None                                                                             = 0,
+	Complete                                                                         = 1,
+	Acquire                                                                          = 2,
+	Interact                                                                         = 3,
+	Kill                                                                             = 4,
+	Enter                                                                            = 5,
+	LevelUp                                                                          = 6,
+	ChangeState                                                                      = 7,
+	Hit                                                                              = 8,
+	BeHit                                                                            = 9,
+	Remove                                                                           = 10,
+	CheckAmount                                                                      = 11,
+	Start                                                                            = 12,
+	Fishing                                                                          = 13,
+	ConsumeInShop                                                                    = 14,
+	SellItem                                                                         = 15,
+	BuyItem                                                                          = 16
 };
 
 /// Enum /Script/SB.ESBCharacterLevelType
 /// Size: 0x01 (1 bytes)
 enum class ESBCharacterLevelType : uint8_t
 {
-	ESBCharacterLevelType_None                                                       = 0,
-	ESBCharacterLevelType_Body                                                       = 1,
-	ESBCharacterLevelType_Beta                                                       = 2,
-	ESBCharacterLevelType_RechargeablePotion                                         = 3,
-	ESBCharacterLevelType_Weapon                                                     = 4,
-	ESBCharacterLevelType_GearSlot                                                   = 5,
-	ESBCharacterLevelType_ProtectorSlot                                              = 6
+	None                                                                             = 0,
+	Body                                                                             = 1,
+	Beta                                                                             = 2,
+	RechargeablePotion                                                               = 3,
+	Weapon                                                                           = 4,
+	GearSlot                                                                         = 5,
+	ProtectorSlot                                                                    = 6
 };
 
 /// Enum /Script/SB.ESBGamePhaseEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBGamePhaseEvent : uint8_t
 {
-	ESBGamePhaseEvent_None                                                           = 0,
-	ESBGamePhaseEvent_EnterGame                                                      = 1,
-	ESBGamePhaseEvent_Quit                                                           = 2,
-	ESBGamePhaseEvent_Restart                                                        = 3,
-	ESBGamePhaseEvent_PostLoadMap                                                    = 4,
-	ESBGamePhaseEvent_ChangeMap                                                      = 5
+	None                                                                             = 0,
+	EnterGame                                                                        = 1,
+	Quit                                                                             = 2,
+	Restart                                                                          = 3,
+	PostLoadMap                                                                      = 4,
+	ChangeMap                                                                        = 5
 };
 
 /// Enum /Script/SB.ESBGamePhaseState
 /// Size: 0x01 (1 bytes)
 enum class ESBGamePhaseState : uint8_t
 {
-	ESBGamePhaseState_None                                                           = 0,
-	ESBGamePhaseState_Lobby                                                          = 1,
-	ESBGamePhaseState_PlayGame                                                       = 2
+	None                                                                             = 0,
+	Lobby                                                                            = 1,
+	PlayGame                                                                         = 2
 };
 
 /// Enum /Script/SB.ESBDroneFollowLocationType
@@ -2814,67 +2814,67 @@ enum class ESBMoveInputType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBPhaseEventState : uint8_t
 {
-	ESBPhaseEventState_None                                                          = 0,
-	ESBPhaseEventState_Pending                                                       = 1,
-	ESBPhaseEventState_Running                                                       = 2,
-	ESBPhaseEventState_Complete                                                      = 3
+	None                                                                             = 0,
+	Pending                                                                          = 1,
+	Running                                                                          = 2,
+	Complete                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBPhaseEventCompleteType
 /// Size: 0x01 (1 bytes)
 enum class ESBPhaseEventCompleteType : uint8_t
 {
-	ESBPhaseEventCompleteType_None                                                   = 0,
-	ESBPhaseEventCompleteType_AllDie                                                 = 1,
-	ESBPhaseEventCompleteType_KillCount                                              = 2,
-	ESBPhaseEventCompleteType_DurationTime                                           = 3
+	None                                                                             = 0,
+	AllDie                                                                           = 1,
+	KillCount                                                                        = 2,
+	DurationTime                                                                     = 3
 };
 
 /// Enum /Script/SB.ESBPhaseEventType
 /// Size: 0x01 (1 bytes)
 enum class ESBPhaseEventType : uint8_t
 {
-	ESBPhaseEventType_General                                                        = 0,
-	ESBPhaseEventType_Nikke                                                          = 1
+	General                                                                          = 0,
+	Nikke                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBPhaseEventStepType
 /// Size: 0x01 (1 bytes)
 enum class ESBPhaseEventStepType : uint8_t
 {
-	ESBPhaseEventStepType_None                                                       = 0,
-	ESBPhaseEventStepType_Event                                                      = 1,
-	ESBPhaseEventStepType_StartEvent                                                 = 2,
-	ESBPhaseEventStepType_EndEvent                                                   = 3
+	None                                                                             = 0,
+	Event                                                                            = 1,
+	StartEvent                                                                       = 2,
+	EndEvent                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBNotifyBPEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBNotifyBPEvent : uint8_t
 {
-	ESBNotifyBPEvent_GuideAction_Start                                               = 0,
-	ESBNotifyBPEvent_GuideAction_Wait                                                = 1,
-	ESBNotifyBPEvent_GuideAction_Cancel                                              = 2,
-	ESBNotifyBPEvent_GuideAction_End                                                 = 3,
-	ESBNotifyBPEvent_ActorDead                                                       = 4,
-	ESBNotifyBPEvent_CharacterBindingOn                                              = 5,
-	ESBNotifyBPEvent_CharacterBindingOff                                             = 6,
-	ESBNotifyBPEvent_ActorHitMe                                                      = 7
+	GuideAction_Start                                                                = 0,
+	GuideAction_Wait                                                                 = 1,
+	GuideAction_Cancel                                                               = 2,
+	GuideAction_End                                                                  = 3,
+	ActorDead                                                                        = 4,
+	CharacterBindingOn                                                               = 5,
+	CharacterBindingOff                                                              = 6,
+	ActorHitMe                                                                       = 7
 };
 
 /// Enum /Script/SB.ESBWarpStepState
 /// Size: 0x01 (1 bytes)
 enum class ESBWarpStepState : uint8_t
 {
-	ESBWarpStepState_None                                                            = 0,
-	ESBWarpStepState_StartWarp                                                       = 1,
-	ESBWarpStepState_RequestChangeWrold                                              = 2,
-	ESBWarpStepState_ChangeWrold                                                     = 3,
-	ESBWarpStepState_CompleteChangeWrold                                             = 4,
-	ESBWarpStepState_RequestLocation                                                 = 5,
-	ESBWarpStepState_PendingStreamLevel                                              = 6,
-	ESBWarpStepState_SetupZone                                                       = 7,
-	ESBWarpStepState_Complete                                                        = 8
+	None                                                                             = 0,
+	StartWarp                                                                        = 1,
+	RequestChangeWrold                                                               = 2,
+	ChangeWrold                                                                      = 3,
+	CompleteChangeWrold                                                              = 4,
+	RequestLocation                                                                  = 5,
+	PendingStreamLevel                                                               = 6,
+	SetupZone                                                                        = 7,
+	Complete                                                                         = 8
 };
 
 /// Enum /Script/SB.ESBResetZoneStepState
@@ -2892,21 +2892,21 @@ enum class ESBResetZoneStepState : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBWorldObjectType : uint8_t
 {
-	ESBWorldObjectType_None                                                          = 0,
-	ESBWorldObjectType_EffectVolume                                                  = 1,
-	ESBWorldObjectType_ZoneEventActor                                                = 2,
-	ESBWorldObjectType_AreaControlVolume                                             = 3,
-	ESBWorldObjectType_RestorationWorldActor                                         = 4,
-	ESBWorldObjectType_BlockingVolume                                                = 5
+	None                                                                             = 0,
+	EffectVolume                                                                     = 1,
+	ZoneEventActor                                                                   = 2,
+	AreaControlVolume                                                                = 3,
+	RestorationWorldActor                                                            = 4,
+	BlockingVolume                                                                   = 5
 };
 
 /// Enum /Script/SB.ESBSoundChannel
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundChannel : uint8_t
 {
-	ESBSoundChannel_Default                                                          = 0,
-	ESBSoundChannel_BGM                                                              = 1,
-	ESBSoundChannel_Ambient                                                          = 2
+	Default                                                                          = 0,
+	BGM                                                                              = 1,
+	Ambient                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBMenuCommonButtonType
@@ -2924,9 +2924,9 @@ enum class ESBMenuCommonButtonType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBMenuUIType : uint8_t
 {
-	ESBMenuUIType_Equip                                                              = 1,
-	ESBMenuUIType_Skill                                                              = 2,
-	ESBMenuUIType_Max                                                                = 3
+	Equip                                                                            = 1,
+	Skill                                                                            = 2,
+	Max                                                                              = 3
 };
 
 /// Enum /Script/SB.ESBFootIKApplyType
@@ -2942,164 +2942,164 @@ enum class ESBFootIKApplyType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBEquipType : uint8_t
 {
-	ESBEquipType_None                                                                = 0,
-	ESBEquipType_GearCommon1                                                         = 1,
-	ESBEquipType_GearCommon2                                                         = 2,
-	ESBEquipType_GearCommon3                                                         = 3,
-	ESBEquipType_GearCommon4                                                         = 4,
-	ESBEquipType_NanoSuit                                                            = 5,
-	ESBEquipType_Protector1                                                          = 6,
-	ESBEquipType_Protector2                                                          = 7,
-	ESBEquipType_Hair1                                                               = 8,
-	ESBEquipType_Ponytail                                                            = 9,
-	ESBEquipType_Accessory1                                                          = 10,
-	ESBEquipType_Accessory2                                                          = 11,
-	ESBEquipType_Accessory3                                                          = 12,
-	ESBEquipType_Accessory4                                                          = 13,
-	ESBEquipType_Accessory5                                                          = 14,
-	ESBEquipType_Lily                                                                = 15,
-	ESBEquipType_Adam                                                                = 16,
-	ESBEquipType_Drone                                                               = 17
+	None                                                                             = 0,
+	GearCommon1                                                                      = 1,
+	GearCommon2                                                                      = 2,
+	GearCommon3                                                                      = 3,
+	GearCommon4                                                                      = 4,
+	NanoSuit                                                                         = 5,
+	Protector1                                                                       = 6,
+	Protector2                                                                       = 7,
+	Hair1                                                                            = 8,
+	Ponytail                                                                         = 9,
+	Accessory1                                                                       = 10,
+	Accessory2                                                                       = 11,
+	Accessory3                                                                       = 12,
+	Accessory4                                                                       = 13,
+	Accessory5                                                                       = 14,
+	Lily                                                                             = 15,
+	Adam                                                                             = 16,
+	Drone                                                                            = 17
 };
 
 /// Enum /Script/SB.ESBGearStatType
 /// Size: 0x01 (1 bytes)
 enum class ESBGearStatType : uint8_t
 {
-	ESBGearStatType_None                                                             = 0,
-	ESBGearStatType_ActorStat                                                        = 1,
-	ESBGearStatType_Effect                                                           = 2
+	None                                                                             = 0,
+	ActorStat                                                                        = 1,
+	Effect                                                                           = 2
 };
 
 /// Enum /Script/SB.ESBGearType
 /// Size: 0x01 (1 bytes)
 enum class ESBGearType : uint8_t
 {
-	ESBGearType_None                                                                 = 0,
-	ESBGearType_Common                                                               = 1
+	None                                                                             = 0,
+	Common                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBTheaterSequenceEventType
 /// Size: 0x01 (1 bytes)
 enum class ESBTheaterSequenceEventType : uint8_t
 {
-	ESBTheaterSequenceEventType_InputCounter_Hit                                     = 0
+	InputCounter_Hit                                                                 = 0
 };
 
 /// Enum /Script/SB.ESBTheaterTakeStateType
 /// Size: 0x01 (1 bytes)
 enum class ESBTheaterTakeStateType : uint8_t
 {
-	ESBTheaterTakeStateType_Init                                                     = 0,
-	ESBTheaterTakeStateType_Playing                                                  = 1,
-	ESBTheaterTakeStateType_Finish                                                   = 2,
-	ESBTheaterTakeStateType_Stop                                                     = 3
+	Init                                                                             = 0,
+	Playing                                                                          = 1,
+	Finish                                                                           = 2,
+	Stop                                                                             = 3
 };
 
 /// Enum /Script/SB.ESBCreateEffectAxis
 /// Size: 0x01 (1 bytes)
 enum class ESBCreateEffectAxis : uint8_t
 {
-	ESBCreateEffectAxis__WorldAxis                                                   = 0,
-	ESBCreateEffectAxis__CreatorAxis                                                 = 1,
-	ESBCreateEffectAxis__TargetEnemyAxis                                             = 2,
-	ESBCreateEffectAxis__EffectAxis                                                  = 3
+	WorldAxis                                                                        = 0,
+	CreatorAxis                                                                      = 1,
+	TargetEnemyAxis                                                                  = 2,
+	EffectAxis                                                                       = 3
 };
 
 /// Enum /Script/SB.ESBCreateEffectPosition
 /// Size: 0x01 (1 bytes)
 enum class ESBCreateEffectPosition : uint8_t
 {
-	ESBCreateEffectPosition__ConstructorActor                                        = 0,
-	ESBCreateEffectPosition__MainActor                                               = 1,
-	ESBCreateEffectPosition__WorldPosition                                           = 2
+	ConstructorActor                                                                 = 0,
+	MainActor                                                                        = 1,
+	WorldPosition                                                                    = 2
 };
 
 /// Enum /Script/SB.ESBPuzzleTextType
 /// Size: 0x01 (1 bytes)
 enum class ESBPuzzleTextType : uint8_t
 {
-	ESBPuzzleTextType_Text1                                                          = 0,
-	ESBPuzzleTextType_Text2                                                          = 1,
-	ESBPuzzleTextType_Text3                                                          = 2,
-	ESBPuzzleTextType_Text4                                                          = 3,
-	ESBPuzzleTextType_Text5                                                          = 4,
-	ESBPuzzleTextType_End                                                            = 5
+	Text1                                                                            = 0,
+	Text2                                                                            = 1,
+	Text3                                                                            = 2,
+	Text4                                                                            = 3,
+	Text5                                                                            = 4,
+	End                                                                              = 5
 };
 
 /// Enum /Script/SB.ESBPuzzleDataType
 /// Size: 0x01 (1 bytes)
 enum class ESBPuzzleDataType : uint8_t
 {
-	ESBPuzzleDataType_None                                                           = 0,
-	ESBPuzzleDataType_String                                                         = 1,
-	ESBPuzzleDataType_Float                                                          = 2,
-	ESBPuzzleDataType_Int                                                            = 3,
-	ESBPuzzleDataType_Bool                                                           = 4
+	None                                                                             = 0,
+	String                                                                           = 1,
+	Float                                                                            = 2,
+	Int                                                                              = 3,
+	Bool                                                                             = 4
 };
 
 /// Enum /Script/SB.ESBBufferDataSlot
 /// Size: 0x01 (1 bytes)
 enum class ESBBufferDataSlot : uint8_t
 {
-	ESBBufferDataSlot_Slot0                                                          = 0,
-	ESBBufferDataSlot_Slot1                                                          = 1,
-	ESBBufferDataSlot_Slot2                                                          = 2,
-	ESBBufferDataSlot_Slot3                                                          = 3,
-	ESBBufferDataSlot_Slot4                                                          = 4,
-	ESBBufferDataSlot_Slot5                                                          = 5,
-	ESBBufferDataSlot_Slot6                                                          = 6,
-	ESBBufferDataSlot_Slot7                                                          = 7,
-	ESBBufferDataSlot_Slot8                                                          = 8,
-	ESBBufferDataSlot_Slot9                                                          = 9,
-	ESBBufferDataSlot_Slot10                                                         = 10,
-	ESBBufferDataSlot_Slot11                                                         = 11,
-	ESBBufferDataSlot_Slot12                                                         = 12,
-	ESBBufferDataSlot_Slot13                                                         = 13,
-	ESBBufferDataSlot_Slot14                                                         = 14,
-	ESBBufferDataSlot_Slot15                                                         = 15,
-	ESBBufferDataSlot_Slot16                                                         = 16,
-	ESBBufferDataSlot_Slot17                                                         = 17,
-	ESBBufferDataSlot_Slot18                                                         = 18,
-	ESBBufferDataSlot_Slot19                                                         = 19,
-	ESBBufferDataSlot_Slot20                                                         = 20,
-	ESBBufferDataSlot_End                                                            = 21
+	Slot0                                                                            = 0,
+	Slot1                                                                            = 1,
+	Slot2                                                                            = 2,
+	Slot3                                                                            = 3,
+	Slot4                                                                            = 4,
+	Slot5                                                                            = 5,
+	Slot6                                                                            = 6,
+	Slot7                                                                            = 7,
+	Slot8                                                                            = 8,
+	Slot9                                                                            = 9,
+	Slot10                                                                           = 10,
+	Slot11                                                                           = 11,
+	Slot12                                                                           = 12,
+	Slot13                                                                           = 13,
+	Slot14                                                                           = 14,
+	Slot15                                                                           = 15,
+	Slot16                                                                           = 16,
+	Slot17                                                                           = 17,
+	Slot18                                                                           = 18,
+	Slot19                                                                           = 19,
+	Slot20                                                                           = 20,
+	End                                                                              = 21
 };
 
 /// Enum /Script/SB.ESBZoneEnvDataSlot
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneEnvDataSlot : uint8_t
 {
-	ESBZoneEnvDataSlot_Slot1                                                         = 0,
-	ESBZoneEnvDataSlot_Slot2                                                         = 1,
-	ESBZoneEnvDataSlot_Slot3                                                         = 2,
-	ESBZoneEnvDataSlot_Slot4                                                         = 3,
-	ESBZoneEnvDataSlot_Slot5                                                         = 4,
-	ESBZoneEnvDataSlot_Slot6                                                         = 5,
-	ESBZoneEnvDataSlot_Slot7                                                         = 6,
-	ESBZoneEnvDataSlot_Slot8                                                         = 7,
-	ESBZoneEnvDataSlot_Slot9                                                         = 8,
-	ESBZoneEnvDataSlot_Slot10                                                        = 9,
-	ESBZoneEnvDataSlot_Slot11                                                        = 10,
-	ESBZoneEnvDataSlot_Slot12                                                        = 11,
-	ESBZoneEnvDataSlot_Slot13                                                        = 12,
-	ESBZoneEnvDataSlot_Slot14                                                        = 13,
-	ESBZoneEnvDataSlot_Slot15                                                        = 14,
-	ESBZoneEnvDataSlot_Slot16                                                        = 15,
-	ESBZoneEnvDataSlot_Slot17                                                        = 16,
-	ESBZoneEnvDataSlot_Slot18                                                        = 17,
-	ESBZoneEnvDataSlot_Slot19                                                        = 18,
-	ESBZoneEnvDataSlot_Slot20                                                        = 19,
-	ESBZoneEnvDataSlot_End                                                           = 20
+	Slot1                                                                            = 0,
+	Slot2                                                                            = 1,
+	Slot3                                                                            = 2,
+	Slot4                                                                            = 3,
+	Slot5                                                                            = 4,
+	Slot6                                                                            = 5,
+	Slot7                                                                            = 6,
+	Slot8                                                                            = 7,
+	Slot9                                                                            = 8,
+	Slot10                                                                           = 9,
+	Slot11                                                                           = 10,
+	Slot12                                                                           = 11,
+	Slot13                                                                           = 12,
+	Slot14                                                                           = 13,
+	Slot15                                                                           = 14,
+	Slot16                                                                           = 15,
+	Slot17                                                                           = 16,
+	Slot18                                                                           = 17,
+	Slot19                                                                           = 18,
+	Slot20                                                                           = 19,
+	End                                                                              = 20
 };
 
 /// Enum /Script/SB.ESBCautionToTargetMoveType
 /// Size: 0x01 (1 bytes)
 enum class ESBCautionToTargetMoveType : uint8_t
 {
-	ESBCautionToTargetMoveType__All                                                  = 0,
-	ESBCautionToTargetMoveType__Side                                                 = 1,
-	ESBCautionToTargetMoveType__ForwardAndSide                                       = 2
+	All                                                                              = 0,
+	Side                                                                             = 1,
+	ForwardAndSide                                                                   = 2
 };
 
 /// Enum /Script/SB.ESBSummonActorSpawnRotationType
@@ -3127,129 +3127,129 @@ enum class ESBSummonActorSpawnLocationType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBRagdollLockLocationType : uint8_t
 {
-	ESBRagdollLockLocationType__None                                                 = 0,
-	ESBRagdollLockLocationType__XY                                                   = 1,
-	ESBRagdollLockLocationType__XYZ                                                  = 2
+	None                                                                             = 0,
+	XY                                                                               = 1,
+	XYZ                                                                              = 2
 };
 
 /// Enum /Script/SB.ESBTextureStyleType
 /// Size: 0x01 (1 bytes)
 enum class ESBTextureStyleType : uint8_t
 {
-	ESBTextureStyleType_Default                                                      = 0,
-	ESBTextureStyleType_StanardKeyboard                                              = 1,
-	ESBTextureStyleType_StanardJoystic                                               = 2,
-	ESBTextureStyleType_PS4                                                          = 3,
-	ESBTextureStyleType_XBox                                                         = 4
+	Default                                                                          = 0,
+	StanardKeyboard                                                                  = 1,
+	StanardJoystic                                                                   = 2,
+	PS4                                                                              = 3,
+	XBox                                                                             = 4
 };
 
 /// Enum /Script/SB.ESBSkillSlotType
 /// Size: 0x01 (1 bytes)
 enum class ESBSkillSlotType : uint8_t
 {
-	ESBSkillSlotType_None                                                            = 0,
-	ESBSkillSlotType_Slot                                                            = 1,
-	ESBSkillSlotType_Slot3                                                           = 2,
-	ESBSkillSlotType_Slot4                                                           = 3,
-	ESBSkillSlotType_Slot5                                                           = 4,
-	ESBSkillSlotType_BurstSlot                                                       = 5,
-	ESBSkillSlotType_BurstSlot7                                                      = 6,
-	ESBSkillSlotType_BurstSlot8                                                      = 7,
-	ESBSkillSlotType_BurstSlot9                                                      = 8,
-	ESBSkillSlotType_TachySlot                                                       = 9,
-	ESBSkillSlotType_TachySlot11                                                     = 10,
-	ESBSkillSlotType_TachySlot12                                                     = 11,
-	ESBSkillSlotType_TachySlot13                                                     = 12,
-	ESBSkillSlotType_FusionSlot                                                      = 13,
-	ESBSkillSlotType_FusionSlot15                                                    = 14,
-	ESBSkillSlotType_FusionSlot16                                                    = 15,
-	ESBSkillSlotType_FusionSlot17                                                    = 16,
-	ESBSkillSlotType_Dash                                                            = 17,
-	ESBSkillSlotType_NikkeBurstSlot                                                  = 18,
-	ESBSkillSlotType_NikkeBurstSlot20                                                = 19,
-	ESBSkillSlotType_NikkeBurstSlot21                                                = 20,
-	ESBSkillSlotType_All                                                             = 21
+	None                                                                             = 0,
+	Slot                                                                             = 1,
+	Slot3                                                                            = 2,
+	Slot4                                                                            = 3,
+	Slot5                                                                            = 4,
+	BurstSlot                                                                        = 5,
+	BurstSlot7                                                                       = 6,
+	BurstSlot8                                                                       = 7,
+	BurstSlot9                                                                       = 8,
+	TachySlot                                                                        = 9,
+	TachySlot11                                                                      = 10,
+	TachySlot12                                                                      = 11,
+	TachySlot13                                                                      = 12,
+	FusionSlot                                                                       = 13,
+	FusionSlot15                                                                     = 14,
+	FusionSlot16                                                                     = 15,
+	FusionSlot17                                                                     = 16,
+	Dash                                                                             = 17,
+	NikkeBurstSlot                                                                   = 18,
+	NikkeBurstSlot20                                                                 = 19,
+	NikkeBurstSlot21                                                                 = 20,
+	All                                                                              = 21
 };
 
 /// Enum /Script/SB.ESBSkillImportanceType
 /// Size: 0x01 (1 bytes)
 enum class ESBSkillImportanceType : uint8_t
 {
-	ESBSkillImportanceType__Medium                                                   = 0,
-	ESBSkillImportanceType__High                                                     = 1
+	Medium                                                                           = 0,
+	High                                                                             = 1
 };
 
 /// Enum /Script/SB.ESBSkillEnergyVisibleType
 /// Size: 0x01 (1 bytes)
 enum class ESBSkillEnergyVisibleType : uint8_t
 {
-	ESBSkillEnergyVisibleType__Hidden                                                = 0,
-	ESBSkillEnergyVisibleType__Visible                                               = 1
+	Hidden                                                                           = 0,
+	Visible                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBAcquisitionSkillType
 /// Size: 0x01 (1 bytes)
 enum class ESBAcquisitionSkillType : uint8_t
 {
-	ESBAcquisitionSkillType_Active                                                   = 0,
-	ESBAcquisitionSkillType_Passive                                                  = 1
+	Active                                                                           = 0,
+	Passive                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBAIGroupTargetShareCondition
 /// Size: 0x01 (1 bytes)
 enum class ESBAIGroupTargetShareCondition : uint8_t
 {
-	ESBAIGroupTargetShareCondition_Detect                                            = 0,
-	ESBAIGroupTargetShareCondition_UnderHPRate                                       = 1
+	Detect                                                                           = 0,
+	UnderHPRate                                                                      = 1
 };
 
 /// Enum /Script/SB.ESBAttackerSelectMethod
 /// Size: 0x01 (1 bytes)
 enum class ESBAttackerSelectMethod : uint8_t
 {
-	ESBAttackerSelectMethod_NearDistance                                             = 0
+	NearDistance                                                                     = 0
 };
 
 /// Enum /Script/SB.ESBItemActionType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemActionType : uint8_t
 {
-	ESBItemActionType_None                                                           = 0,
-	ESBItemActionType_Acquire                                                        = 1,
-	ESBItemActionType_Remove                                                         = 2,
-	ESBItemActionType_Consume                                                        = 3,
-	ESBItemActionType_MustAcquisition                                                = 4
+	None                                                                             = 0,
+	Acquire                                                                          = 1,
+	Remove                                                                           = 2,
+	Consume                                                                          = 3,
+	MustAcquisition                                                                  = 4
 };
 
 /// Enum /Script/SB.ESBEventUIActionType
 /// Size: 0x01 (1 bytes)
 enum class ESBEventUIActionType : uint8_t
 {
-	ESBEventUIActionType_None                                                        = 0,
-	ESBEventUIActionType_OpenUI                                                      = 1,
-	ESBEventUIActionType_ActionEvent                                                 = 2,
-	ESBEventUIActionType_AlbumNotifyUpdate                                           = 3,
-	ESBEventUIActionType_HUDInputLock                                                = 4,
-	ESBEventUIActionType_GameMenuInputLock                                           = 5,
-	ESBEventUIActionType_NikkeHUDSendUIWidgetEvent                                   = 6
+	None                                                                             = 0,
+	OpenUI                                                                           = 1,
+	ActionEvent                                                                      = 2,
+	AlbumNotifyUpdate                                                                = 3,
+	HUDInputLock                                                                     = 4,
+	GameMenuInputLock                                                                = 5,
+	NikkeHUDSendUIWidgetEvent                                                        = 6
 };
 
 /// Enum /Script/SB.ESBQuestMissionDataType
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestMissionDataType : uint8_t
 {
-	ESBQuestMissionDataType_None                                                     = 0,
-	ESBQuestMissionDataType_Int                                                      = 1,
-	ESBQuestMissionDataType_Float                                                    = 2,
-	ESBQuestMissionDataType_String                                                   = 3
+	None                                                                             = 0,
+	Int                                                                              = 1,
+	Float                                                                            = 2,
+	String                                                                           = 3
 };
 
 /// Enum /Script/SB.ESBLevelSequenceContentsType
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceContentsType : uint8_t
 {
-	ESBLevelSequenceContentsType_Default                                             = 0,
-	ESBLevelSequenceContentsType_SubTitle                                            = 1
+	Default                                                                          = 0,
+	SubTitle                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequencePlayType
@@ -3265,41 +3265,41 @@ enum class ESBLevelSequencePlayType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBEngineTheaterInput : uint8_t
 {
-	ESBEngineTheaterInput_Key1                                                       = 1,
-	ESBEngineTheaterInput_Key2                                                       = 2,
-	ESBEngineTheaterInput_Key3                                                       = 3,
-	ESBEngineTheaterInput_Key4                                                       = 4
+	Key1                                                                             = 1,
+	Key2                                                                             = 2,
+	Key3                                                                             = 3,
+	Key4                                                                             = 4
 };
 
 /// Enum /Script/SB.ESBEngineTheaterEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBEngineTheaterEvent : uint8_t
 {
-	ESBEngineTheaterEvent_Play                                                       = 0,
-	ESBEngineTheaterEvent_End                                                        = 1,
-	ESBEngineTheaterEvent_ShotSubtitle                                               = 2,
-	ESBEngineTheaterEvent_ShotDialogue                                               = 3,
-	ESBEngineTheaterEvent_ShotInputCounter                                           = 4,
-	ESBEngineTheaterEvent_Input                                                      = 5
+	Play                                                                             = 0,
+	End                                                                              = 1,
+	ShotSubtitle                                                                     = 2,
+	ShotDialogue                                                                     = 3,
+	ShotInputCounter                                                                 = 4,
+	Input                                                                            = 5
 };
 
 /// Enum /Script/SB.ESBZoneEventActorTriggerType
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneEventActorTriggerType : uint8_t
 {
-	ESBZoneEventActorTriggerType__None                                               = 0,
-	ESBZoneEventActorTriggerType__DestructionFromActorAttack                         = 1,
-	ESBZoneEventActorTriggerType__DestructionFromActorMove                           = 2,
-	ESBZoneEventActorTriggerType__DestructionFromActorRuleMove                       = 3,
-	ESBZoneEventActorTriggerType__DestructionFromActorRangedAttack                   = 4
+	None                                                                             = 0,
+	DestructionFromActorAttack                                                       = 1,
+	DestructionFromActorMove                                                         = 2,
+	DestructionFromActorRuleMove                                                     = 3,
+	DestructionFromActorRangedAttack                                                 = 4
 };
 
 /// Enum /Script/SB.ESBRewardUIType
 /// Size: 0x01 (1 bytes)
 enum class ESBRewardUIType : uint8_t
 {
-	ESBRewardUIType__Default                                                         = 0,
-	ESBRewardUIType__Special                                                         = 1
+	Default                                                                          = 0,
+	Special                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBRewardGroupDropType
@@ -3324,15 +3324,15 @@ enum class ESBRewardGroupPickType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBInteractionQuestEventType : uint8_t
 {
-	ESBInteractionQuestEventType_ProgressCounterTask                                 = 0
+	ProgressCounterTask                                                              = 0
 };
 
 /// Enum /Script/SB.ESBInteractionUIDataType
 /// Size: 0x01 (1 bytes)
 enum class ESBInteractionUIDataType : uint8_t
 {
-	ESBInteractionUIDataType_None                                                    = 0,
-	ESBInteractionUIDataType_Description                                             = 1
+	None                                                                             = 0,
+	Description                                                                      = 1
 };
 
 /// Enum /Script/SB.ESBInteractionTargetShopData
@@ -3365,8 +3365,8 @@ enum class ESBInteractionConditionCheckType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBInteractionPreDataType : uint8_t
 {
-	ESBInteractionPreDataType__None                                                  = 0,
-	ESBInteractionPreDataType__InteractionUIData_Description                         = 1
+	None                                                                             = 0,
+	InteractionUIData_Description                                                    = 1
 };
 
 /// Enum /Script/SB.ESBInteractionNodeType
@@ -3466,9 +3466,9 @@ enum class ESBInteractionOwnerRotationType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBInteractShowPlayRuleType : uint8_t
 {
-	ESBInteractShowPlayRuleType_None                                                 = 0,
-	ESBInteractShowPlayRuleType_Static                                               = 1,
-	ESBInteractShowPlayRuleType_PointName                                            = 2
+	None                                                                             = 0,
+	Static                                                                           = 1,
+	PointName                                                                        = 2
 };
 
 /// Enum /Script/SB.ESBInteractionStepState
@@ -3496,8 +3496,8 @@ enum class ESBInteractionInputState : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBInteractionCancelFilterType : uint8_t
 {
-	ESBInteractionCancelFilterType_None                                              = 0,
-	ESBInteractionCancelFilterType_Laser                                             = 1
+	None                                                                             = 0,
+	Laser                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBInteractionRelevantType
@@ -3542,160 +3542,160 @@ enum class ESBInteractionActionCategory : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBActorInteractionStepEvent : uint8_t
 {
-	ESBActorInteractionStepEvent_None                                                = 0,
-	ESBActorInteractionStepEvent_Start                                               = 1,
-	ESBActorInteractionStepEvent_Finish                                              = 2
+	None                                                                             = 0,
+	Start                                                                            = 1,
+	Finish                                                                           = 2
 };
 
 /// Enum /Script/SB.ESBItemLureWeightUpType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemLureWeightUpType : uint8_t
 {
-	ESBItemLureWeightUpType_None                                                     = 0,
-	ESBItemLureWeightUpType_Small                                                    = 1,
-	ESBItemLureWeightUpType_Medium                                                   = 2,
-	ESBItemLureWeightUpType_Large                                                    = 3
+	None                                                                             = 0,
+	Small                                                                            = 1,
+	Medium                                                                           = 2,
+	Large                                                                            = 3
 };
 
 /// Enum /Script/SB.ESBItemOverrideSaveType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemOverrideSaveType : uint8_t
 {
-	ESBItemOverrideSaveType_None                                                     = 0,
-	ESBItemOverrideSaveType_Save                                                     = 1,
-	ESBItemOverrideSaveType_NoneSave                                                 = 2
+	None                                                                             = 0,
+	Save                                                                             = 1,
+	NoneSave                                                                         = 2
 };
 
 /// Enum /Script/SB.ESBItemSaveType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemSaveType : uint8_t
 {
-	ESBItemSaveType_None                                                             = 0,
-	ESBItemSaveType_Save                                                             = 1
+	None                                                                             = 0,
+	Save                                                                             = 1
 };
 
 /// Enum /Script/SB.ESBItemNotificationType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemNotificationType : uint8_t
 {
-	ESBItemNotificationType_Default                                                  = 0,
-	ESBItemNotificationType_Always                                                   = 1,
-	ESBItemNotificationType_Ignore                                                   = 2,
-	ESBItemNotificationType_Hidden                                                   = 3,
-	ESBItemNotificationType_CharLevel                                                = 4
+	Default                                                                          = 0,
+	Always                                                                           = 1,
+	Ignore                                                                           = 2,
+	Hidden                                                                           = 3,
+	CharLevel                                                                        = 4
 };
 
 /// Enum /Script/SB.ESBItemSpawnRangeType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemSpawnRangeType : uint8_t
 {
-	ESBItemSpawnRangeType_None                                                       = 0,
-	ESBItemSpawnRangeType_RandomRange                                                = 1,
-	ESBItemSpawnRangeType_SequentialArc                                              = 2
+	None                                                                             = 0,
+	RandomRange                                                                      = 1,
+	SequentialArc                                                                    = 2
 };
 
 /// Enum /Script/SB.ESBItemBucketEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBItemBucketEvent : uint8_t
 {
-	ESBItemBucketEvent_None                                                          = -1,
-	ESBItemBucketEvent_Load                                                          = 0,
-	ESBItemBucketEvent_Add                                                           = 1,
-	ESBItemBucketEvent_Remove                                                        = 2,
-	ESBItemBucketEvent_Consume                                                       = 3
+	None                                                                             = -1,
+	Load                                                                             = 0,
+	Add                                                                              = 1,
+	Remove                                                                           = 2,
+	Consume                                                                          = 3
 };
 
 /// Enum /Script/SB.ESBItemBucketType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemBucketType : uint8_t
 {
-	ESBItemBucketType_None                                                           = 0,
-	ESBItemBucketType_Inventory                                                      = 1,
-	ESBItemBucketType_Zone                                                           = 2,
-	ESBItemBucketType_World                                                          = 3,
-	ESBItemBucketType_Max                                                            = 4
+	None                                                                             = 0,
+	Inventory                                                                        = 1,
+	Zone                                                                             = 2,
+	World                                                                            = 3,
+	Max                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBItemEquipStatType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemEquipStatType : uint8_t
 {
-	ESBItemEquipStatType_BaseStat                                                    = 1,
-	ESBItemEquipStatType_MainStat1                                                   = 11,
-	ESBItemEquipStatType_MainStat2                                                   = 12,
-	ESBItemEquipStatType_SubStat1                                                    = 21,
-	ESBItemEquipStatType_SubStat2                                                    = 22,
-	ESBItemEquipStatType_SubStat3                                                    = 23,
-	ESBItemEquipStatType_SubStat4                                                    = 24,
-	ESBItemEquipStatType_SubStat5                                                    = 25
+	BaseStat                                                                         = 1,
+	MainStat1                                                                        = 11,
+	MainStat2                                                                        = 12,
+	SubStat1                                                                         = 21,
+	SubStat2                                                                         = 22,
+	SubStat3                                                                         = 23,
+	SubStat4                                                                         = 24,
+	SubStat5                                                                         = 25
 };
 
 /// Enum /Script/SB.ESBItemRarityType
 /// Size: 0x01 (1 bytes)
 enum class ESBItemRarityType : uint8_t
 {
-	ESBItemRarityType_None                                                           = 0,
-	ESBItemRarityType_Common                                                         = 1,
-	ESBItemRarityType_Uncommon                                                       = 2,
-	ESBItemRarityType_Rare                                                           = 3,
-	ESBItemRarityType_Epic                                                           = 4,
-	ESBItemRarityType_Legendary                                                      = 5
+	None                                                                             = 0,
+	Common                                                                           = 1,
+	Uncommon                                                                         = 2,
+	Rare                                                                             = 3,
+	Epic                                                                             = 4,
+	Legendary                                                                        = 5
 };
 
 /// Enum /Script/SB.ESBItemCategory
 /// Size: 0x01 (1 bytes)
 enum class ESBItemCategory : uint8_t
 {
-	ESBItemCategory_None                                                             = 0,
-	ESBItemCategory_BetaCrystal                                                      = 1,
-	ESBItemCategory_Gear                                                             = 2,
-	ESBItemCategory_ExoSpine                                                         = 3,
-	ESBItemCategory_NanoSuit                                                         = 4,
-	ESBItemCategory_Potion                                                           = 5,
-	ESBItemCategory_SkillPoint                                                       = 6,
-	ESBItemCategory_Quest                                                            = 7,
-	ESBItemCategory_SubQuest                                                         = 8,
-	ESBItemCategory_Weapon                                                           = 9,
-	ESBItemCategory_Material                                                         = 10,
-	ESBItemCategory_Core                                                             = 11,
-	ESBItemCategory_RecoveryPotion                                                   = 12,
-	ESBItemCategory_Bullet                                                           = 13,
-	ESBItemCategory_BulletPackage                                                    = 14,
-	ESBItemCategory_Revival                                                          = 15,
-	ESBItemCategory_Grenade                                                          = 16,
-	ESBItemCategory_Tool                                                             = 17,
-	ESBItemCategory_Fish                                                             = 18,
-	ESBItemCategory_Lure                                                             = 19,
-	ESBItemCategory_ETC                                                              = 20,
-	ESBItemCategory_Hair                                                             = 21,
-	ESBItemCategory_FaceAccessory                                                    = 22,
-	ESBItemCategory_EarRing                                                          = 23,
-	ESBItemCategory_Recipe                                                           = 24,
-	ESBItemCategory_Can                                                              = 25,
-	ESBItemCategory_Lily                                                             = 26,
-	ESBItemCategory_Adam                                                             = 27,
-	ESBItemCategory_Drone                                                            = 28,
-	ESBItemCategory_SPLevel                                                          = 29,
-	ESBItemCategory_Record                                                           = 30
+	None                                                                             = 0,
+	BetaCrystal                                                                      = 1,
+	Gear                                                                             = 2,
+	ExoSpine                                                                         = 3,
+	NanoSuit                                                                         = 4,
+	Potion                                                                           = 5,
+	SkillPoint                                                                       = 6,
+	Quest                                                                            = 7,
+	SubQuest                                                                         = 8,
+	Weapon                                                                           = 9,
+	Material                                                                         = 10,
+	Core                                                                             = 11,
+	RecoveryPotion                                                                   = 12,
+	Bullet                                                                           = 13,
+	BulletPackage                                                                    = 14,
+	Revival                                                                          = 15,
+	Grenade                                                                          = 16,
+	Tool                                                                             = 17,
+	Fish                                                                             = 18,
+	Lure                                                                             = 19,
+	ETC                                                                              = 20,
+	Hair                                                                             = 21,
+	FaceAccessory                                                                    = 22,
+	EarRing                                                                          = 23,
+	Recipe                                                                           = 24,
+	Can                                                                              = 25,
+	Lily                                                                             = 26,
+	Adam                                                                             = 27,
+	Drone                                                                            = 28,
+	SPLevel                                                                          = 29,
+	Record                                                                           = 30
 };
 
 /// Enum /Script/SB.ESBConditionTriggerRunType
 /// Size: 0x01 (1 bytes)
 enum class ESBConditionTriggerRunType : uint8_t
 {
-	ESBConditionTriggerRunType_None                                                  = 0,
-	ESBConditionTriggerRunType_Once                                                  = 1,
-	ESBConditionTriggerRunType_Repeat                                                = 2
+	None                                                                             = 0,
+	Once                                                                             = 1,
+	Repeat                                                                           = 2
 };
 
 /// Enum /Script/SB.ESBConditionTriggerExecType
 /// Size: 0x01 (1 bytes)
 enum class ESBConditionTriggerExecType : uint8_t
 {
-	ESBConditionTriggerExecType_None                                                 = 0,
-	ESBConditionTriggerExecType_ToTrue                                               = 1,
-	ESBConditionTriggerExecType_ToFalse                                              = 2,
-	ESBConditionTriggerExecType_RunTime                                              = 3
+	None                                                                             = 0,
+	ToTrue                                                                           = 1,
+	ToFalse                                                                          = 2,
+	RunTime                                                                          = 3
 };
 
 /// Enum /Script/SB.ESBZoneObjControlActionType
@@ -3723,14 +3723,14 @@ enum class ESBObjectState : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneCampObjectType : uint8_t
 {
-	ESBZoneCampObjectType_None                                                       = 0,
-	ESBZoneCampObjectType_VendingMachine                                             = 1,
-	ESBZoneCampObjectType_FullCampTeleportMachine                                    = 2,
-	ESBZoneCampObjectType_TetrapodTeleportMachine                                    = 3,
-	ESBZoneCampObjectType_SkillMachine                                               = 4,
-	ESBZoneCampObjectType_Turntable                                                  = 5,
-	ESBZoneCampObjectType_Storage                                                    = 6,
-	ESBZoneCampObjectType_Chair                                                      = 7
+	None                                                                             = 0,
+	VendingMachine                                                                   = 1,
+	FullCampTeleportMachine                                                          = 2,
+	TetrapodTeleportMachine                                                          = 3,
+	SkillMachine                                                                     = 4,
+	Turntable                                                                        = 5,
+	Storage                                                                          = 6,
+	Chair                                                                            = 7
 };
 
 /// Enum /Script/SB.ESBZoneEnvChildObjectType
@@ -3754,12 +3754,12 @@ enum class ESBSaveGameCompModeType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneCampType : uint8_t
 {
-	ESBZoneCampType_None                                                             = 0,
-	ESBZoneCampType_SaveVolume                                                       = 1,
-	ESBZoneCampType_SimplyCamp                                                       = 2,
-	ESBZoneCampType_FullCamp                                                         = 3,
-	ESBZoneCampType_Tetrapod                                                         = 4,
-	ESBZoneCampType_PhoneBooth                                                       = 5
+	None                                                                             = 0,
+	SaveVolume                                                                       = 1,
+	SimplyCamp                                                                       = 2,
+	FullCamp                                                                         = 3,
+	Tetrapod                                                                         = 4,
+	PhoneBooth                                                                       = 5
 };
 
 /// Enum /Script/SB.ESBInteractCampType
@@ -3784,12 +3784,12 @@ enum class ESBZoneEventInteractSaveType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBAdjustInteractPosType : uint8_t
 {
-	ESBAdjustInteractPosType_None                                                    = 0,
-	ESBAdjustInteractPosType_TargetRange                                             = 1,
-	ESBAdjustInteractPosType_TargetRangeForce                                        = 2,
-	ESBAdjustInteractPosType_AxisX                                                   = 3,
-	ESBAdjustInteractPosType_AxisY                                                   = 4,
-	ESBAdjustInteractPosType_AxisZ                                                   = 5
+	None                                                                             = 0,
+	TargetRange                                                                      = 1,
+	TargetRangeForce                                                                 = 2,
+	AxisX                                                                            = 3,
+	AxisY                                                                            = 4,
+	AxisZ                                                                            = 5
 };
 
 /// Enum /Script/SB.ESBEnvProgressNotifyFireType
@@ -3826,16 +3826,16 @@ enum class ESBZoneEnvControlType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneEnvResetFilterType : uint8_t
 {
-	ESBZoneEnvResetFilterType_None                                                   = 0,
-	ESBZoneEnvResetFilterType_EnvEnable                                              = 1,
-	ESBZoneEnvResetFilterType_EnvDisable                                             = 2
+	None                                                                             = 0,
+	EnvEnable                                                                        = 1,
+	EnvDisable                                                                       = 2
 };
 
 /// Enum /Script/SB.ESBZoneEnvNotifyType
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneEnvNotifyType : uint8_t
 {
-	ESBZoneEnvNotifyType_GrabCancel                                                  = 0
+	GrabCancel                                                                       = 0
 };
 
 /// Enum /Script/SB.ESBSpawnRuleType
@@ -3916,69 +3916,69 @@ enum class ESBEnvironmentType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBConditionCalcuationType : uint8_t
 {
-	ESBConditionCalcuationType_None                                                  = 0,
-	ESBConditionCalcuationType_Self                                                  = 1,
-	ESBConditionCalcuationType_Percent                                               = 2,
-	ESBConditionCalcuationType_Absolute                                              = 3
+	None                                                                             = 0,
+	Self                                                                             = 1,
+	Percent                                                                          = 2,
+	Absolute                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBConditionType
 /// Size: 0x01 (1 bytes)
 enum class ESBConditionType : uint8_t
 {
-	ESBConditionType_None                                                            = 0,
-	ESBConditionType_RequireItem                                                     = 1,
-	ESBConditionType_QuestState                                                      = 2,
-	ESBConditionType_EnvState                                                        = 3,
-	ESBConditionType_PlayerLevel                                                     = 4,
-	ESBConditionType_ActorHP                                                         = 5,
-	ESBConditionType_ActorBeta                                                       = 6,
-	ESBConditionType_ActorShield                                                     = 7,
-	ESBConditionType_ActorStamina                                                    = 8,
-	ESBConditionType_ActorState                                                      = 9,
-	ESBConditionType_ActorCondition                                                  = 10,
-	ESBConditionType_ActorMovement                                                   = 11,
-	ESBConditionType_ActorEffect                                                     = 12,
-	ESBConditionType_ActorAchievement                                                = 13,
-	ESBConditionType_ActorIsBattle                                                   = 14,
-	ESBConditionType_ItemSpawnCheck                                                  = 15,
-	ESBConditionType_ItemChargeCheck                                                 = 16,
-	ESBConditionType_NetworkEnable                                                   = 17,
-	ESBConditionType_PlayerIsDead                                                    = 18,
-	ESBConditionType_ActorInRange                                                    = 19,
-	ESBConditionType_TheaterPlaying                                                  = 20,
-	ESBConditionType_QuestTaskProgress                                               = 21,
-	ESBConditionType_QuestTaskGroupProgress                                          = 22,
-	ESBConditionType_AchievementProgress                                             = 23,
-	ESBConditionType_ActorBurst                                                      = 24,
-	ESBConditionType_IsInWorld                                                       = 25,
-	ESBConditionType_IsAliveSpawnActor                                               = 26,
-	ESBConditionType_InteractionCustomValue                                          = 27,
-	ESBConditionType_GameOption                                                      = 28,
-	ESBConditionType_ActorFishingMode                                                = 29,
-	ESBConditionType_IsValidActor                                                    = 30,
-	ESBConditionType_HUDNotifyCoreComplete                                           = 31,
-	ESBConditionType_PlayGo                                                          = 32,
-	ESBConditionType_Entitlement                                                     = 33,
-	ESBConditionType_FirstTimeTrainingRoom                                           = 34,
-	ESBConditionType_HasAggro                                                        = 35,
-	ESBConditionType_ActiveUI                                                        = 36,
-	ESBConditionType_IsHUDNotifyEmpty                                                = 37,
-	ESBConditionType_OnlyQuestState                                                  = 38,
-	ESBConditionType_EquipLure                                                       = 39,
-	ESBConditionType_CanOpenWorldMap                                                 = 40,
-	ESBConditionType_IsTrialVersion                                                  = 41,
-	ESBConditionType_EnvStateProgress                                                = 42,
-	ESBConditionType_IsNewGamePlus                                                   = 43,
-	ESBConditionType_PlayerLevelArray                                                = 44,
-	ESBConditionType_IsInZone                                                        = 45,
-	ESBConditionType_ActivateDLC                                                     = 46,
-	ESBConditionType_SummerEventContents                                             = 47,
-	ESBConditionType_ChristmasEventContents                                          = 48,
-	ESBConditionType_ItemEquipCheck                                                  = 49,
-	ESBConditionType_PlayTime                                                        = 50,
-	ESBConditionType_HasReceivedCoupon                                               = 51,
-	ESBConditionType_IsPhotoModeOn                                                   = 52
+	None                                                                             = 0,
+	RequireItem                                                                      = 1,
+	QuestState                                                                       = 2,
+	EnvState                                                                         = 3,
+	PlayerLevel                                                                      = 4,
+	ActorHP                                                                          = 5,
+	ActorBeta                                                                        = 6,
+	ActorShield                                                                      = 7,
+	ActorStamina                                                                     = 8,
+	ActorState                                                                       = 9,
+	ActorCondition                                                                   = 10,
+	ActorMovement                                                                    = 11,
+	ActorEffect                                                                      = 12,
+	ActorAchievement                                                                 = 13,
+	ActorIsBattle                                                                    = 14,
+	ItemSpawnCheck                                                                   = 15,
+	ItemChargeCheck                                                                  = 16,
+	NetworkEnable                                                                    = 17,
+	PlayerIsDead                                                                     = 18,
+	ActorInRange                                                                     = 19,
+	TheaterPlaying                                                                   = 20,
+	QuestTaskProgress                                                                = 21,
+	QuestTaskGroupProgress                                                           = 22,
+	AchievementProgress                                                              = 23,
+	ActorBurst                                                                       = 24,
+	IsInWorld                                                                        = 25,
+	IsAliveSpawnActor                                                                = 26,
+	InteractionCustomValue                                                           = 27,
+	GameOption                                                                       = 28,
+	ActorFishingMode                                                                 = 29,
+	IsValidActor                                                                     = 30,
+	HUDNotifyCoreComplete                                                            = 31,
+	PlayGo                                                                           = 32,
+	Entitlement                                                                      = 33,
+	FirstTimeTrainingRoom                                                            = 34,
+	HasAggro                                                                         = 35,
+	ActiveUI                                                                         = 36,
+	IsHUDNotifyEmpty                                                                 = 37,
+	OnlyQuestState                                                                   = 38,
+	EquipLure                                                                        = 39,
+	CanOpenWorldMap                                                                  = 40,
+	IsTrialVersion                                                                   = 41,
+	EnvStateProgress                                                                 = 42,
+	IsNewGamePlus                                                                    = 43,
+	PlayerLevelArray                                                                 = 44,
+	IsInZone                                                                         = 45,
+	ActivateDLC                                                                      = 46,
+	SummerEventContents                                                              = 47,
+	ChristmasEventContents                                                           = 48,
+	ItemEquipCheck                                                                   = 49,
+	PlayTime                                                                         = 50,
+	HasReceivedCoupon                                                                = 51,
+	IsPhotoModeOn                                                                    = 52
 };
 
 /// Enum /Script/SB.ESBLevelObjectType
@@ -4027,10 +4027,10 @@ enum class ESBMaterialParamType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBBlackboardVarType : uint8_t
 {
-	ESBBlackboardVarType__INT                                                        = 0,
-	ESBBlackboardVarType__FLOAT                                                      = 1,
-	ESBBlackboardVarType__VECTOR                                                     = 2,
-	ESBBlackboardVarType__BOOL                                                       = 3
+	INT                                                                              = 0,
+	FLOAT                                                                            = 1,
+	VECTOR                                                                           = 2,
+	BOOL                                                                             = 3
 };
 
 /// Enum /Script/SB.ESBEquation
@@ -4052,28 +4052,28 @@ enum class ESBEquation : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestWarpType : uint8_t
 {
-	ESBQuestWarpType__None                                                           = 0,
-	ESBQuestWarpType__ToLocation                                                     = 1,
-	ESBQuestWarpType__ToSpawnPoint                                                   = 2,
-	ESBQuestWarpType__ToZoneCamp                                                     = 3,
-	ESBQuestWarpType__ToRequestBoard                                                 = 4
+	None                                                                             = 0,
+	ToLocation                                                                       = 1,
+	ToSpawnPoint                                                                     = 2,
+	ToZoneCamp                                                                       = 3,
+	ToRequestBoard                                                                   = 4
 };
 
 /// Enum /Script/SB.ESBQuestUIType
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestUIType : uint8_t
 {
-	ESBQuestUIType__ShowAll                                                          = 0,
-	ESBQuestUIType__HideAll                                                          = 1,
-	ESBQuestUIType__TaskNoticeOnly                                                   = 2
+	ShowAll                                                                          = 0,
+	HideAll                                                                          = 1,
+	TaskNoticeOnly                                                                   = 2
 };
 
 /// Enum /Script/SB.ESBQuestTaskDescriptionUIType
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestTaskDescriptionUIType : uint8_t
 {
-	ESBQuestTaskDescriptionUIType__Always                                            = 0,
-	ESBQuestTaskDescriptionUIType__AfterComplete                                     = 1
+	Always                                                                           = 0,
+	AfterComplete                                                                    = 1
 };
 
 /// Enum /Script/SB.ESBQuestTaskUIType
@@ -4097,11 +4097,11 @@ enum class ESBQuestStepType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestTaskState : uint8_t
 {
-	ESBQuestTaskState_None                                                           = 0,
-	ESBQuestTaskState_Progress                                                       = 1,
-	ESBQuestTaskState_Complete                                                       = 2,
-	ESBQuestTaskState_Failed                                                         = 3,
-	ESBQuestTaskState_Inactive                                                       = 4
+	None                                                                             = 0,
+	Progress                                                                         = 1,
+	Complete                                                                         = 2,
+	Failed                                                                           = 3,
+	Inactive                                                                         = 4
 };
 
 /// Enum /Script/SB.ESBQuestTaskGroupState
@@ -4132,16 +4132,16 @@ enum class ESBQuestState : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBDisplayRequestBoardType : uint8_t
 {
-	ESBDisplayRequestBoardType__BaseBoard                                            = 0,
-	ESBDisplayRequestBoardType__NikkeCollaboBoard                                    = 1
+	BaseBoard                                                                        = 0,
+	NikkeCollaboBoard                                                                = 1
 };
 
 /// Enum /Script/SB.ESBQuestRequestType
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestRequestType : uint8_t
 {
-	ESBQuestRequestType__Normal                                                      = 0,
-	ESBQuestRequestType__CantAccept                                                  = 1
+	Normal                                                                           = 0,
+	CantAccept                                                                       = 1
 };
 
 /// Enum /Script/SB.ESBQuestType
@@ -4172,33 +4172,33 @@ enum class ESBConditionResultType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestRequireItemTaskCheckType : uint8_t
 {
-	ESBQuestRequireItemTaskCheckType__ItemAlias                                      = 1,
-	ESBQuestRequireItemTaskCheckType__ItemCategory                                   = 2,
-	ESBQuestRequireItemTaskCheckType__ItemCategoryTag                                = 3
+	ItemAlias                                                                        = 1,
+	ItemCategory                                                                     = 2,
+	ItemCategoryTag                                                                  = 3
 };
 
 /// Enum /Script/SB.ESBQuestRequireItemTaskCountType
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestRequireItemTaskCountType : uint8_t
 {
-	ESBQuestRequireItemTaskCountType__InventoryAndObtain                             = 0,
-	ESBQuestRequireItemTaskCountType__OnlyInventory                                  = 1,
-	ESBQuestRequireItemTaskCountType__OnlyObtain                                     = 2
+	InventoryAndObtain                                                               = 0,
+	OnlyInventory                                                                    = 1,
+	OnlyObtain                                                                       = 2
 };
 
 /// Enum /Script/SB.ESBQuestEventType
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestEventType : uint8_t
 {
-	ESBQuestEventType__ProgressCounterTask                                           = 0,
-	ESBQuestEventType__CompleteRequest                                               = 1
+	ProgressCounterTask                                                              = 0,
+	CompleteRequest                                                                  = 1
 };
 
 /// Enum /Script/SB.ESBQuestTaskConditonType
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestTaskConditonType : uint8_t
 {
-	ESBQuestTaskConditonType__CompleteCount                                          = 0
+	CompleteCount                                                                    = 0
 };
 
 /// Enum /Script/SB.ESBQuestMissionType
@@ -4231,8 +4231,8 @@ enum class ESBQuestMissionType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBPhysicHitType : uint8_t
 {
-	ESBPhysicHitType_AddForceDir                                                     = 0,
-	ESBPhysicHitType_AddForceImpactPoint                                             = 1
+	AddForceDir                                                                      = 0,
+	AddForceImpactPoint                                                              = 1
 };
 
 /// Enum /Script/SB.ESBConditionEventType
@@ -4284,128 +4284,128 @@ enum class ESBLevelTargetActor : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBAIDetectTargetCancel : uint8_t
 {
-	ESBAIDetectTargetCancel_ZeroHP                                                   = 0,
-	ESBAIDetectTargetCancel_Despawn                                                  = 1,
-	ESBAIDetectTargetCancel_Destroy                                                  = 2
+	ZeroHP                                                                           = 0,
+	Despawn                                                                          = 1,
+	Destroy                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBAIDetectTargetFindOP
 /// Size: 0x01 (1 bytes)
 enum class ESBAIDetectTargetFindOP : uint8_t
 {
-	ESBAIDetectTargetFindOP_Near                                                     = 0,
-	ESBAIDetectTargetFindOP_Far                                                      = 1,
-	ESBAIDetectTargetFindOP_MinHP                                                    = 2,
-	ESBAIDetectTargetFindOP_MaxHP                                                    = 3
+	Near                                                                             = 0,
+	Far                                                                              = 1,
+	MinHP                                                                            = 2,
+	MaxHP                                                                            = 3
 };
 
 /// Enum /Script/SB.ESBCustomDepthStencilValue
 /// Size: 0x04 (4 bytes)
 enum class ESBCustomDepthStencilValue : uint32_t
 {
-	ESBCustomDepthStencilValue__None                                                 = 0,
-	ESBCustomDepthStencilValue__Enemy                                                = 1,
-	ESBCustomDepthStencilValue__Item                                                 = 2,
-	ESBCustomDepthStencilValue__Interaction_WallBlock                                = 3,
-	ESBCustomDepthStencilValue__Interaction                                          = 4,
-	ESBCustomDepthStencilValue__Ally                                                 = 5,
-	ESBCustomDepthStencilValue__Env                                                  = 6,
-	ESBCustomDepthStencilValue__EnvDisable                                           = 7,
-	ESBCustomDepthStencilValue__Enemy_Stealth                                        = 9,
-	ESBCustomDepthStencilValue__PC                                                   = 10,
-	ESBCustomDepthStencilValue__Drone                                                = 12
+	None                                                                             = 0,
+	Enemy                                                                            = 1,
+	Item                                                                             = 2,
+	Interaction_WallBlock                                                            = 3,
+	Interaction                                                                      = 4,
+	Ally                                                                             = 5,
+	Env                                                                              = 6,
+	EnvDisable                                                                       = 7,
+	Enemy_Stealth                                                                    = 9,
+	PC                                                                               = 10,
+	Drone                                                                            = 12
 };
 
 /// Enum /Script/SB.ESBKeyEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBKeyEvent : uint8_t
 {
-	ESBKeyEvent_None                                                                 = 0,
-	ESBKeyEvent_GameOption_Key                                                       = 1,
-	ESBKeyEvent_CrossKey_Up                                                          = 2,
-	ESBKeyEvent_CrossKey_Down                                                        = 3,
-	ESBKeyEvent_CrossKey_Left                                                        = 4,
-	ESBKeyEvent_CrossKey_Right                                                       = 5,
-	ESBKeyEvent_LeftKey_Click                                                        = 6,
-	ESBKeyEvent_RightKey_Up                                                          = 7,
-	ESBKeyEvent_RightKey_Down                                                        = 8,
-	ESBKeyEvent_RightKey_Left                                                        = 9,
-	ESBKeyEvent_RightKey_Right                                                       = 10,
-	ESBKeyEvent_RightKey_Click                                                       = 11,
-	ESBKeyEvent_LeftShoulderKey                                                      = 12,
-	ESBKeyEvent_RightShoulderKey                                                     = 13,
-	ESBKeyEvent_LeftTriggerKey                                                       = 14,
-	ESBKeyEvent_RightTriggerKey                                                      = 15,
-	ESBKeyEvent_FocusChangeKey                                                       = 16,
-	ESBKeyEvent_SystemFunction1                                                      = 17,
-	ESBKeyEvent_SystemFunction2                                                      = 18,
-	ESBKeyEvent_Max                                                                  = 19
+	None                                                                             = 0,
+	GameOption_Key                                                                   = 1,
+	CrossKey_Up                                                                      = 2,
+	CrossKey_Down                                                                    = 3,
+	CrossKey_Left                                                                    = 4,
+	CrossKey_Right                                                                   = 5,
+	LeftKey_Click                                                                    = 6,
+	RightKey_Up                                                                      = 7,
+	RightKey_Down                                                                    = 8,
+	RightKey_Left                                                                    = 9,
+	RightKey_Right                                                                   = 10,
+	RightKey_Click                                                                   = 11,
+	LeftShoulderKey                                                                  = 12,
+	RightShoulderKey                                                                 = 13,
+	LeftTriggerKey                                                                   = 14,
+	RightTriggerKey                                                                  = 15,
+	FocusChangeKey                                                                   = 16,
+	SystemFunction1                                                                  = 17,
+	SystemFunction2                                                                  = 18,
+	Max                                                                              = 19
 };
 
 /// Enum /Script/SB.ESBAnimState
 /// Size: 0x01 (1 bytes)
 enum class ESBAnimState : uint8_t
 {
-	ESBAnimState__Walk                                                               = 0,
-	ESBAnimState__Swimming                                                           = 1,
-	ESBAnimState__UnderWaterSwimming                                                 = 2,
-	ESBAnimState__Sliding                                                            = 3,
-	ESBAnimState__SlopeMoving                                                        = 4,
-	ESBAnimState__EventMove_SideToSide                                               = 5,
-	ESBAnimState__EventMove_Rod                                                      = 6,
-	ESBAnimState__EventMove_SideRod                                                  = 7
+	Walk                                                                             = 0,
+	Swimming                                                                         = 1,
+	UnderWaterSwimming                                                               = 2,
+	Sliding                                                                          = 3,
+	SlopeMoving                                                                      = 4,
+	EventMove_SideToSide                                                             = 5,
+	EventMove_Rod                                                                    = 6,
+	EventMove_SideRod                                                                = 7
 };
 
 /// Enum /Script/SB.ESBAISkillComboType
 /// Size: 0x01 (1 bytes)
 enum class ESBAISkillComboType : uint8_t
 {
-	ESBAISkillComboType__None                                                        = 0,
-	ESBAISkillComboType__TableCommand                                                = 1,
-	ESBAISkillComboType__TableSkillFlag                                              = 2
+	None                                                                             = 0,
+	TableCommand                                                                     = 1,
+	TableSkillFlag                                                                   = 2
 };
 
 /// Enum /Script/SB.ESBAIActorType
 /// Size: 0x01 (1 bytes)
 enum class ESBAIActorType : uint8_t
 {
-	ESBAIActorType__Self                                                             = 0,
-	ESBAIActorType__Target                                                           = 1,
-	ESBAIActorType__Owner                                                            = 2,
-	ESBAIActorType__SubTarget                                                        = 3
+	Self                                                                             = 0,
+	Target                                                                           = 1,
+	Owner                                                                            = 2,
+	SubTarget                                                                        = 3
 };
 
 /// Enum /Script/SB.ESBCompare
 /// Size: 0x01 (1 bytes)
 enum class ESBCompare : uint8_t
 {
-	ESBCompare__Equal                                                                = 0,
-	ESBCompare__NotEqual                                                             = 1,
-	ESBCompare__Less                                                                 = 2,
-	ESBCompare__LessOrEqual                                                          = 3,
-	ESBCompare__Greater                                                              = 4,
-	ESBCompare__GreaterOrEqual                                                       = 5
+	Equal                                                                            = 0,
+	NotEqual                                                                         = 1,
+	Less                                                                             = 2,
+	LessOrEqual                                                                      = 3,
+	Greater                                                                          = 4,
+	GreaterOrEqual                                                                   = 5
 };
 
 /// Enum /Script/SB.ESBProjectileMovementType
 /// Size: 0x01 (1 bytes)
 enum class ESBProjectileMovementType : uint8_t
 {
-	ESBProjectileMovementType__Velocity                                              = 0,
-	ESBProjectileMovementType__ParabolicMotion                                       = 1,
-	ESBProjectileMovementType__GuidedMissile                                         = 2
+	Velocity                                                                         = 0,
+	ParabolicMotion                                                                  = 1,
+	GuidedMissile                                                                    = 2
 };
 
 /// Enum /Script/SB.ESBProjectileTarget
 /// Size: 0x01 (1 bytes)
 enum class ESBProjectileTarget : uint8_t
 {
-	ESBProjectileTarget__MainActor                                                   = 0,
-	ESBProjectileTarget__OtherActor                                                  = 1,
-	ESBProjectileTarget__SetLocation                                                 = 2,
-	ESBProjectileTarget__StartToDestDirection                                        = 3,
-	ESBProjectileTarget__SkillTargetLocation                                         = 4,
-	ESBProjectileTarget__InputTransform                                              = 5
+	MainActor                                                                        = 0,
+	OtherActor                                                                       = 1,
+	SetLocation                                                                      = 2,
+	StartToDestDirection                                                             = 3,
+	SkillTargetLocation                                                              = 4,
+	InputTransform                                                                   = 5
 };
 
 /// Enum /Script/SB.ESBAIAggroLevel
@@ -4476,30 +4476,30 @@ enum class ESBSkelMeshSlot : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBSequencePlayTransformCastType : uint8_t
 {
-	ESBSequencePlayTransformCastType_None                                            = 0,
-	ESBSequencePlayTransformCastType_SBActorCenter                                   = 1
+	None                                                                             = 0,
+	SBActorCenter                                                                    = 1
 };
 
 /// Enum /Script/SB.ESBZoneEventPendingType
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneEventPendingType : uint8_t
 {
-	ESBZoneEventPendingType_None                                                     = 0,
-	ESBZoneEventPendingType_LevelStream                                              = 1,
-	ESBZoneEventPendingType_BindActors                                               = 2,
-	ESBZoneEventPendingType_BindActorsWithLevelStream                                = 3
+	None                                                                             = 0,
+	LevelStream                                                                      = 1,
+	BindActors                                                                       = 2,
+	BindActorsWithLevelStream                                                        = 3
 };
 
 /// Enum /Script/SB.ESBSequenceBindTargetType
 /// Size: 0x01 (1 bytes)
 enum class ESBSequenceBindTargetType : uint8_t
 {
-	ESBSequenceBindTargetType_None                                                   = 0,
-	ESBSequenceBindTargetType_ZoneEnv                                                = 1,
-	ESBSequenceBindTargetType_LastInteractCamp                                       = 2,
-	ESBSequenceBindTargetType_LastInteractFullCamp                                   = 3,
-	ESBSequenceBindTargetType_ActorTag                                               = 4,
-	ESBSequenceBindTargetType_ActorTagLevel                                          = 5
+	None                                                                             = 0,
+	ZoneEnv                                                                          = 1,
+	LastInteractCamp                                                                 = 2,
+	LastInteractFullCamp                                                             = 3,
+	ActorTag                                                                         = 4,
+	ActorTagLevel                                                                    = 5
 };
 
 /// Enum /Script/SB.ESBSequencePlayTransformType
@@ -4567,9 +4567,9 @@ enum class ESBZoneEventZoneControlTarget : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneEventActorCaster : uint8_t
 {
-	ESBZoneEventActorCaster_None                                                     = 0,
-	ESBZoneEventActorCaster_ActorTargetToPlayer                                      = 1,
-	ESBZoneEventActorCaster_ActorTargetToTag                                         = 2
+	None                                                                             = 0,
+	ActorTargetToPlayer                                                              = 1,
+	ActorTargetToTag                                                                 = 2
 };
 
 /// Enum /Script/SB.ESBZoneEventEventorType
@@ -4585,9 +4585,9 @@ enum class ESBZoneEventEventorType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBQuestEventTargetType : uint8_t
 {
-	ESBQuestEventTargetType_None                                                     = 0,
-	ESBQuestEventTargetType_Eventor                                                  = 1,
-	ESBQuestEventTargetType_LocalPlayer                                              = 2
+	None                                                                             = 0,
+	Eventor                                                                          = 1,
+	LocalPlayer                                                                      = 2
 };
 
 /// Enum /Script/SB.ESBZoneEventActorTarget
@@ -4604,25 +4604,25 @@ enum class ESBZoneEventActorTarget : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneResetKeepObjTMType : uint8_t
 {
-	ESBZoneResetKeepObjTMType_None                                                   = 0,
-	ESBZoneResetKeepObjTMType_SpawnPoint                                             = 1
+	None                                                                             = 0,
+	SpawnPoint                                                                       = 1
 };
 
 /// Enum /Script/SB.ESBInteractRelevantType
 /// Size: 0x01 (1 bytes)
 enum class ESBInteractRelevantType : uint8_t
 {
-	ESBInteractRelevantType_None                                                     = 0,
-	ESBInteractRelevantType_Quest                                                    = 1
+	None                                                                             = 0,
+	Quest                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBSpawnRotationType
 /// Size: 0x01 (1 bytes)
 enum class ESBSpawnRotationType : uint8_t
 {
-	ESBSpawnRotationType_None                                                        = 0,
-	ESBSpawnRotationType_SpawnPointRot                                               = 1,
-	ESBSpawnRotationType_ToEventor                                                   = 2
+	None                                                                             = 0,
+	SpawnPointRot                                                                    = 1,
+	ToEventor                                                                        = 2
 };
 
 /// Enum /Script/SB.ESBZoneSpawnType
@@ -4679,9 +4679,9 @@ enum class ESBZoneEventType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneEventConditionCheckType : uint8_t
 {
-	ESBZoneEventConditionCheckType_RunEvent                                          = 0,
-	ESBZoneEventConditionCheckType_RequestEvent                                      = 1,
-	ESBZoneEventConditionCheckType_None                                              = 2
+	RunEvent                                                                         = 0,
+	RequestEvent                                                                     = 1,
+	None                                                                             = 2
 };
 
 /// Enum /Script/SB.ESBTrainningRoomCommandType
@@ -4723,22 +4723,22 @@ enum class ESBTrainningRoomChangeType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBTrainningRoomState : uint8_t
 {
-	ESBTrainningRoomState_None                                                       = 0,
-	ESBTrainningRoomState_RequestEnter                                               = 1,
-	ESBTrainningRoomState_Entered                                                    = 2,
-	ESBTrainningRoomState_RequestLeave                                               = 3
+	None                                                                             = 0,
+	RequestEnter                                                                     = 1,
+	Entered                                                                          = 2,
+	RequestLeave                                                                     = 3
 };
 
 /// Enum /Script/SB.ESBZoneState
 /// Size: 0x01 (1 bytes)
 enum class ESBZoneState : uint8_t
 {
-	ESBZoneState_None                                                                = 0,
-	ESBZoneState_CreateZone                                                          = 1,
-	ESBZoneState_ResetZone                                                           = 2,
-	ESBZoneState_CompleteCreateZone                                                  = 3,
-	ESBZoneState_CompleteResetZone                                                   = 4,
-	ESBZoneState_DestroyZone                                                         = 5
+	None                                                                             = 0,
+	CreateZone                                                                       = 1,
+	ResetZone                                                                        = 2,
+	CompleteCreateZone                                                               = 3,
+	CompleteResetZone                                                                = 4,
+	DestroyZone                                                                      = 5
 };
 
 /// Enum /Script/SB.ESBStayZoneSaveType
@@ -5023,19 +5023,19 @@ enum class ESBIKTraceDirection : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBCollisionShapeCheckType : uint8_t
 {
-	ESBCollisionShapeCheckType_MeleeAttack                                           = 0,
-	ESBCollisionShapeCheckType_RangeAttack                                           = 1,
-	ESBCollisionShapeCheckType_None                                                  = 2
+	MeleeAttack                                                                      = 0,
+	RangeAttack                                                                      = 1,
+	None                                                                             = 2
 };
 
 /// Enum /Script/SB.ESBCollisionShape
 /// Size: 0x01 (1 bytes)
 enum class ESBCollisionShape : uint8_t
 {
-	ESBCollisionShape_Line                                                           = 0,
-	ESBCollisionShape_Box                                                            = 1,
-	ESBCollisionShape_Sphere                                                         = 2,
-	ESBCollisionShape_Capsule                                                        = 3
+	Line                                                                             = 0,
+	Box                                                                              = 1,
+	Sphere                                                                           = 2,
+	Capsule                                                                          = 3
 };
 
 /// Enum /Script/SB.ESBCheckShape
@@ -5070,17 +5070,17 @@ enum class ESBActorSortType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBActorStatTextType : uint8_t
 {
-	ESBActorStatTextType_Static                                                      = 0,
-	ESBActorStatTextType_Percent                                                     = 1
+	Static                                                                           = 0,
+	Percent                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBActorCalculatedStatType
 /// Size: 0x01 (1 bytes)
 enum class ESBActorCalculatedStatType : uint8_t
 {
-	ESBActorCalculatedStatType_None                                                  = 0,
-	ESBActorCalculatedStatType_MaxDamageReduction                                    = 1,
-	ESBActorCalculatedStatType_Num                                                   = 2
+	None                                                                             = 0,
+	MaxDamageReduction                                                               = 1,
+	Num                                                                              = 2
 };
 
 /// Enum /Script/SB.ESBActorStatType
@@ -5239,31 +5239,31 @@ enum class ESBActorStance : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBSaveSubProperty : uint8_t
 {
-	ESBSaveSubProperty_None                                                          = 0,
-	ESBSaveSubProperty_Hidden                                                        = 1,
-	ESBSaveSubProperty_Active                                                        = 2,
-	ESBSaveSubProperty_All                                                           = 3
+	None                                                                             = 0,
+	Hidden                                                                           = 1,
+	Active                                                                           = 2,
+	All                                                                              = 3
 };
 
 /// Enum /Script/SB.ESBEnterGameResult
 /// Size: 0x01 (1 bytes)
 enum class ESBEnterGameResult : uint8_t
 {
-	ESBEnterGameResult_None                                                          = 0,
-	ESBEnterGameResult_NotExistSaveSlot                                              = 1,
-	ESBEnterGameResult_NotFoundTargetCamp                                            = 2,
-	ESBEnterGameResult_NotFoundTargetZone                                            = 3,
-	ESBEnterGameResult_EnterFail                                                     = 4,
-	ESBEnterGameResult_EnterSuccess                                                  = 5
+	None                                                                             = 0,
+	NotExistSaveSlot                                                                 = 1,
+	NotFoundTargetCamp                                                               = 2,
+	NotFoundTargetZone                                                               = 3,
+	EnterFail                                                                        = 4,
+	EnterSuccess                                                                     = 5
 };
 
 /// Enum /Script/SB.ESBSaveGameDataType
 /// Size: 0x01 (1 bytes)
 enum class ESBSaveGameDataType : uint8_t
 {
-	ESBSaveGameDataType_None                                                         = 0,
-	ESBSaveGameDataType_GameData                                                     = 1,
-	ESBSaveGameDataType_OptionData                                                   = 2
+	None                                                                             = 0,
+	GameData                                                                         = 1,
+	OptionData                                                                       = 2
 };
 
 /// Enum /Script/SB.ESBZoneObjectSaveType
@@ -5281,32 +5281,32 @@ enum class ESBZoneObjectSaveType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBActorLifeState : uint8_t
 {
-	ESBActorLifeState_None                                                           = 0,
-	ESBActorLifeState_Spawn                                                          = 1,
-	ESBActorLifeState_Coma                                                           = 2,
-	ESBActorLifeState_Dead                                                           = 3,
-	ESBActorLifeState_Despawn                                                        = 4,
-	ESBActorLifeState_Destroy                                                        = 5,
-	ESBActorLifeState_Spawning                                                       = 6
+	None                                                                             = 0,
+	Spawn                                                                            = 1,
+	Coma                                                                             = 2,
+	Dead                                                                             = 3,
+	Despawn                                                                          = 4,
+	Destroy                                                                          = 5,
+	Spawning                                                                         = 6
 };
 
 /// Enum /Script/SB.ESBActorCondition
 /// Size: 0x01 (1 bytes)
 enum class ESBActorCondition : uint8_t
 {
-	ESBActorCondition_None                                                           = 0,
-	ESBActorCondition_Jumping                                                        = 1,
-	ESBActorCondition_WallRun                                                        = 2,
-	ESBActorCondition_Falling                                                        = 3,
-	ESBActorCondition_OnGround                                                       = 4,
-	ESBActorCondition_Sprint                                                         = 5,
-	ESBActorCondition_Run                                                            = 6,
-	ESBActorCondition_Moving                                                         = 7,
-	ESBActorCondition_BlockMove                                                      = 8,
-	ESBActorCondition_BlockSkill                                                     = 9,
-	ESBActorCondition_Stealth                                                        = 10,
-	ESBActorCondition_BattleMode                                                     = 11,
-	ESBActorCondition_Max                                                            = 12
+	None                                                                             = 0,
+	Jumping                                                                          = 1,
+	WallRun                                                                          = 2,
+	Falling                                                                          = 3,
+	OnGround                                                                         = 4,
+	Sprint                                                                           = 5,
+	Run                                                                              = 6,
+	Moving                                                                           = 7,
+	BlockMove                                                                        = 8,
+	BlockSkill                                                                       = 9,
+	Stealth                                                                          = 10,
+	BattleMode                                                                       = 11,
+	Max                                                                              = 12
 };
 
 /// Enum /Script/SB.ESBActorState
@@ -6097,9 +6097,9 @@ enum class ESBShowActorTarget : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBFindNodeSearchType : uint8_t
 {
-	ESBFindNodeSearchType_Text                                                       = 0,
-	ESBFindNodeSearchType_NodeName                                                   = 1,
-	ESBFindNodeSearchType_Num                                                        = 2
+	Text                                                                             = 0,
+	NodeName                                                                         = 1,
+	Num                                                                              = 2
 };
 
 /// Enum /Script/SB.ESBAssetSearchBubbleContain
@@ -6166,160 +6166,160 @@ enum class ESBEventMove_CableForceType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBFeedbackActorState : uint8_t
 {
-	ESBFeedbackActorState_Tray                                                       = 0,
-	ESBFeedbackActorState_Show                                                       = 1,
-	ESBFeedbackActorState_Hide                                                       = 2,
-	ESBFeedbackActorState_Max                                                        = 3
+	Tray                                                                             = 0,
+	Show                                                                             = 1,
+	Hide                                                                             = 2,
+	Max                                                                              = 3
 };
 
 /// Enum /Script/SB.ESBFeedbackUIState
 /// Size: 0x01 (1 bytes)
 enum class ESBFeedbackUIState : uint8_t
 {
-	ESBFeedbackUIState_None                                                          = 0,
-	ESBFeedbackUIState_ViewerOpen                                                    = 1
+	None                                                                             = 0,
+	ViewerOpen                                                                       = 1
 };
 
 /// Enum /Script/SB.ESBFeedbackIssuePriority
 /// Size: 0x01 (1 bytes)
 enum class ESBFeedbackIssuePriority : uint8_t
 {
-	ESBFeedbackIssuePriority_None                                                    = 0,
-	ESBFeedbackIssuePriority_Highest                                                 = 1,
-	ESBFeedbackIssuePriority_High                                                    = 2,
-	ESBFeedbackIssuePriority_Midium                                                  = 3,
-	ESBFeedbackIssuePriority_Low                                                     = 4,
-	ESBFeedbackIssuePriority_Lowest                                                  = 5
+	None                                                                             = 0,
+	Highest                                                                          = 1,
+	High                                                                             = 2,
+	Midium                                                                           = 3,
+	Low                                                                              = 4,
+	Lowest                                                                           = 5
 };
 
 /// Enum /Script/SB.ESBFeedbackIssueUpdate
 /// Size: 0x01 (1 bytes)
 enum class ESBFeedbackIssueUpdate : uint8_t
 {
-	ESBFeedbackIssueUpdate_None                                                      = 0,
-	ESBFeedbackIssueUpdate_Summary                                                   = 1,
-	ESBFeedbackIssueUpdate_Description                                               = 2,
-	ESBFeedbackIssueUpdate_Priority                                                  = 4,
-	ESBFeedbackIssueUpdate_Like                                                      = 8
+	None                                                                             = 0,
+	Summary                                                                          = 1,
+	Description                                                                      = 2,
+	Priority                                                                         = 4,
+	Like                                                                             = 8
 };
 
 /// Enum /Script/SB.ESBFeedbackEvent
 /// Size: 0x01 (1 bytes)
 enum class ESBFeedbackEvent : uint8_t
 {
-	ESBFeedbackEvent_CategoryRefresh                                                 = 0,
-	ESBFeedbackEvent_IssueCreate                                                     = 1,
-	ESBFeedbackEvent_IssueClose                                                      = 2,
-	ESBFeedbackEvent_IssueUpdate                                                     = 3,
-	ESBFeedbackEvent_IssueRefresh                                                    = 4,
-	ESBFeedbackEvent_CommentsRefresh                                                 = 5,
-	ESBFeedbackEvent_CommentAdd                                                      = 6,
-	ESBFeedbackEvent_CommentRemove                                                   = 7,
-	ESBFeedbackEvent_CommentEdit                                                     = 8,
-	ESBFeedbackEvent_LikeUpdate                                                      = 9,
-	ESBFeedbackEvent_AssignIssue                                                     = 10,
-	ESBFeedbackEvent_StatusChange                                                    = 11,
-	ESBFeedbackEvent_IssueMapChange                                                  = 12
+	CategoryRefresh                                                                  = 0,
+	IssueCreate                                                                      = 1,
+	IssueClose                                                                       = 2,
+	IssueUpdate                                                                      = 3,
+	IssueRefresh                                                                     = 4,
+	CommentsRefresh                                                                  = 5,
+	CommentAdd                                                                       = 6,
+	CommentRemove                                                                    = 7,
+	CommentEdit                                                                      = 8,
+	LikeUpdate                                                                       = 9,
+	AssignIssue                                                                      = 10,
+	StatusChange                                                                     = 11,
+	IssueMapChange                                                                   = 12
 };
 
 /// Enum /Script/SB.ESBFeedbackCategory
 /// Size: 0x01 (1 bytes)
 enum class ESBFeedbackCategory : uint8_t
 {
-	ESBFeedbackCategory_None                                                         = 0,
-	ESBFeedbackCategory_UMap                                                         = 1
+	None                                                                             = 0,
+	UMap                                                                             = 1
 };
 
 /// Enum /Script/SB.ESBForceFeedbackConcurrencyRule
 /// Size: 0x01 (1 bytes)
 enum class ESBForceFeedbackConcurrencyRule : uint8_t
 {
-	ESBForceFeedbackConcurrencyRule__PreventNew                                      = 0,
-	ESBForceFeedbackConcurrencyRule__StopOldest                                      = 1,
-	ESBForceFeedbackConcurrencyRule__StopLowestPriority                              = 2
+	PreventNew                                                                       = 0,
+	StopOldest                                                                       = 1,
+	StopLowestPriority                                                               = 2
 };
 
 /// Enum /Script/SB.ESBResourceCacheCommandletMode
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheCommandletMode : uint8_t
 {
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_PlayerAndDrone    = 0,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_Character         = 1,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_World             = 2,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_World_ClusteringOnly = 3,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_AllWorld          = 4,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_AllWorld_ClusteringOnly = 5,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_Whitelist         = 6,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_Configuration     = 7,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_TrainingRoom      = 8,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_All               = 9,
-	ESBResourceCacheCommandletMode__ESBResourceCacheCommandletMode_Max               = 10
+	ESBResourceCacheCommandletMode_PlayerAndDrone                                    = 0,
+	ESBResourceCacheCommandletMode_Character                                         = 1,
+	ESBResourceCacheCommandletMode_World                                             = 2,
+	ESBResourceCacheCommandletMode_World_ClusteringOnly                              = 3,
+	ESBResourceCacheCommandletMode_AllWorld                                          = 4,
+	ESBResourceCacheCommandletMode_AllWorld_ClusteringOnly                           = 5,
+	ESBResourceCacheCommandletMode_Whitelist                                         = 6,
+	ESBResourceCacheCommandletMode_Configuration                                     = 7,
+	ESBResourceCacheCommandletMode_TrainingRoom                                      = 8,
+	ESBResourceCacheCommandletMode_All                                               = 9,
+	ESBResourceCacheCommandletMode_Max                                               = 10
 };
 
 /// Enum /Script/SB.ESBGraphicsOptionsDebugger_FrameLimit
 /// Size: 0x01 (1 bytes)
 enum class ESBGraphicsOptionsDebugger_FrameLimit : uint8_t
 {
-	ESBGraphicsOptionsDebugger_FrameLimit__LimitFrame                                = 0,
-	ESBGraphicsOptionsDebugger_FrameLimit__LimitFrame2                               = 1,
-	ESBGraphicsOptionsDebugger_FrameLimit__LimitFrame3                               = 2,
-	ESBGraphicsOptionsDebugger_FrameLimit__LimitFrame4                               = 3,
-	ESBGraphicsOptionsDebugger_FrameLimit__LimitFrame5                               = 4,
-	ESBGraphicsOptionsDebugger_FrameLimit__Unlimited                                 = 5
+	LimitFrame                                                                       = 0,
+	LimitFrame2                                                                      = 1,
+	LimitFrame3                                                                      = 2,
+	LimitFrame4                                                                      = 3,
+	LimitFrame5                                                                      = 4,
+	Unlimited                                                                        = 5
 };
 
 /// Enum /Script/SB.ESBGraphicsOptionsDebugger
 /// Size: 0x01 (1 bytes)
 enum class ESBGraphicsOptionsDebugger : uint8_t
 {
-	ESBGraphicsOptionsDebugger__VSync                                                = 0,
-	ESBGraphicsOptionsDebugger__FrameLimit                                           = 1,
-	ESBGraphicsOptionsDebugger__Preset                                               = 2,
-	ESBGraphicsOptionsDebugger__EnviromentObjectDetail                               = 3,
-	ESBGraphicsOptionsDebugger__CharacterObjectDetail                                = 4,
-	ESBGraphicsOptionsDebugger__EnviromentTextures                                   = 5,
-	ESBGraphicsOptionsDebugger__CharacterTextures                                    = 6,
-	ESBGraphicsOptionsDebugger__AnisotropicFiltering                                 = 7,
-	ESBGraphicsOptionsDebugger__VolumetricFog                                        = 8,
-	ESBGraphicsOptionsDebugger__ShadowQuality                                        = 9,
-	ESBGraphicsOptionsDebugger__EffectQuality                                        = 10,
-	ESBGraphicsOptionsDebugger__EnvironmentQuality                                   = 11,
-	ESBGraphicsOptionsDebugger__Lighting                                             = 12,
-	ESBGraphicsOptionsDebugger__FoliageQuality                                       = 13,
-	ESBGraphicsOptionsDebugger__AmbientOcclusion                                     = 14,
-	ESBGraphicsOptionsDebugger__DepthOfField                                         = 15,
-	ESBGraphicsOptionsDebugger__ScreenSpaceReflection                                = 16,
-	ESBGraphicsOptionsDebugger__SceneColorFringeQuality                              = 17,
-	ESBGraphicsOptionsDebugger__GrainQuality                                         = 18,
-	ESBGraphicsOptionsDebugger__MaterialQuality                                      = 19,
-	ESBGraphicsOptionsDebugger__AntiAliasing                                         = 20,
-	ESBGraphicsOptionsDebugger__ResolutionScale                                      = 21,
-	ESBGraphicsOptionsDebugger__NvidiaDLSS                                           = 22,
-	ESBGraphicsOptionsDebugger__NvidiaFrameGeneration                                = 23,
-	ESBGraphicsOptionsDebugger__NvidiaReflexLowLatency                               = 24,
-	ESBGraphicsOptionsDebugger__AmdFSR3                                              = 25,
-	ESBGraphicsOptionsDebugger__AmdFrameInterpolation                                = 26,
-	ESBGraphicsOptionsDebugger__IntelXeSS                                            = 27,
-	ESBGraphicsOptionsDebugger__AnimationQuality                                     = 28,
-	ESBGraphicsOptionsDebugger__CharacterViewDistance                                = 29,
-	ESBGraphicsOptionsDebugger__EnviromentObjectViewDistance                         = 30,
-	ESBGraphicsOptionsDebugger__Num                                                  = 31
+	VSync                                                                            = 0,
+	FrameLimit                                                                       = 1,
+	Preset                                                                           = 2,
+	EnviromentObjectDetail                                                           = 3,
+	CharacterObjectDetail                                                            = 4,
+	EnviromentTextures                                                               = 5,
+	CharacterTextures                                                                = 6,
+	AnisotropicFiltering                                                             = 7,
+	VolumetricFog                                                                    = 8,
+	ShadowQuality                                                                    = 9,
+	EffectQuality                                                                    = 10,
+	EnvironmentQuality                                                               = 11,
+	Lighting                                                                         = 12,
+	FoliageQuality                                                                   = 13,
+	AmbientOcclusion                                                                 = 14,
+	DepthOfField                                                                     = 15,
+	ScreenSpaceReflection                                                            = 16,
+	SceneColorFringeQuality                                                          = 17,
+	GrainQuality                                                                     = 18,
+	MaterialQuality                                                                  = 19,
+	AntiAliasing                                                                     = 20,
+	ResolutionScale                                                                  = 21,
+	NvidiaDLSS                                                                       = 22,
+	NvidiaFrameGeneration                                                            = 23,
+	NvidiaReflexLowLatency                                                           = 24,
+	AmdFSR3                                                                          = 25,
+	AmdFrameInterpolation                                                            = 26,
+	IntelXeSS                                                                        = 27,
+	AnimationQuality                                                                 = 28,
+	CharacterViewDistance                                                            = 29,
+	EnviromentObjectViewDistance                                                     = 30,
+	Num                                                                              = 31
 };
 
 /// Enum /Script/SB.ESBIndicatorButtonType
 /// Size: 0x04 (4 bytes)
 enum class ESBIndicatorButtonType : uint32_t
 {
-	ESBIndicatorButtonType__Default                                                  = 0,
-	ESBIndicatorButtonType__Hold                                                     = 1
+	Default                                                                          = 0,
+	Hold                                                                             = 1
 };
 
 /// Enum /Script/SB.ESBLaserBounceType
 /// Size: 0x01 (1 bytes)
 enum class ESBLaserBounceType : uint8_t
 {
-	ESBLaserBounceType_AngleOfIncidence                                              = 0,
-	ESBLaserBounceType_FixedDirection                                                = 1
+	AngleOfIncidence                                                                 = 0,
+	FixedDirection                                                                   = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequenceCharacterActionType
@@ -6338,8 +6338,8 @@ enum class ESBLevelSequenceCharacterActionType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceEventHUDActionType : uint8_t
 {
-	ESBLevelSequenceEventHUDActionType_ControlHideUI                                 = 0,
-	ESBLevelSequenceEventHUDActionType_HUDInputLock                                  = 1
+	ControlHideUI                                                                    = 0,
+	HUDInputLock                                                                     = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequenceEventPlayerActionType
@@ -6374,16 +6374,16 @@ enum class ESBLevelSequenceLookAtTargetType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceMoveToLocationType : uint8_t
 {
-	ESBLevelSequenceMoveToLocationType_Play                                          = 0,
-	ESBLevelSequenceMoveToLocationType_Stop                                          = 1
+	Play                                                                             = 0,
+	Stop                                                                             = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequenceSkeletalAnimationAssetType
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceSkeletalAnimationAssetType : uint8_t
 {
-	ESBLevelSequenceSkeletalAnimationAssetType_Asset                                 = 0,
-	ESBLevelSequenceSkeletalAnimationAssetType_SocialAnim                            = 1
+	Asset                                                                            = 0,
+	SocialAnim                                                                       = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequenceSkeletalAnimationFootIKType
@@ -6399,40 +6399,40 @@ enum class ESBLevelSequenceSkeletalAnimationFootIKType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceSkeletalAnimationPlayType : uint8_t
 {
-	ESBLevelSequenceSkeletalAnimationPlayType_CustomPlay                             = 0,
-	ESBLevelSequenceSkeletalAnimationPlayType_CustomMeshSlotPlay                     = 1
+	CustomPlay                                                                       = 0,
+	CustomMeshSlotPlay                                                               = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequenceTheaterInputCounterAlignmentType
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceTheaterInputCounterAlignmentType : uint8_t
 {
-	ESBLevelSequenceTheaterInputCounterAlignmentType_None                            = 0,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_LeftTop                         = 1,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_Top                             = 2,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_RightTop                        = 3,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_LeftCenter                      = 4,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_Center                          = 5,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_RightCenter                     = 6,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_LeftBottom                      = 7,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_Bottom                          = 8,
-	ESBLevelSequenceTheaterInputCounterAlignmentType_RightBottom                     = 9
+	None                                                                             = 0,
+	LeftTop                                                                          = 1,
+	Top                                                                              = 2,
+	RightTop                                                                         = 3,
+	LeftCenter                                                                       = 4,
+	Center                                                                           = 5,
+	RightCenter                                                                      = 6,
+	LeftBottom                                                                       = 7,
+	Bottom                                                                           = 8,
+	RightBottom                                                                      = 9
 };
 
 /// Enum /Script/SB.ESBLevelSequenceTheaterInputCounterLocationType
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceTheaterInputCounterLocationType : uint8_t
 {
-	ESBLevelSequenceTheaterInputCounterLocationType_Screen                           = 0,
-	ESBLevelSequenceTheaterInputCounterLocationType_Actor                            = 1
+	Screen                                                                           = 0,
+	Actor                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequenceTheaterInputCounterType
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceTheaterInputCounterType : uint8_t
 {
-	ESBLevelSequenceTheaterInputCounterType_GamePad_FaceButton_Left                  = 0,
-	ESBLevelSequenceTheaterInputCounterType_GamePad_FaceButton_Top                   = 1,
+	GamePad_FaceButton_Left                                                          = 0,
+	GamePad_FaceButton_Top                                                           = 1,
 	SBLevelSequenceTheaterInputCounterType_GamePad_FaceButton_Right                  = 2,
 	SBLevelSequenceTheaterInputCounterType_GamePad_FaceButton_Bottom                 = 3,
 	SBLevelSequenceTheaterInputCounterType_Gamepad_LeftShoulder                      = 4,
@@ -6447,50 +6447,50 @@ enum class ESBLevelSequenceTheaterInputCounterType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceTheaterInputCounterActionType : uint8_t
 {
-	ESBLevelSequenceTheaterInputCounterActionType_None                               = 0,
-	ESBLevelSequenceTheaterInputCounterActionType_SinglePress                        = 1,
-	ESBLevelSequenceTheaterInputCounterActionType_DoublePress                        = 2,
-	ESBLevelSequenceTheaterInputCounterActionType_FlowPress                          = 3
+	None                                                                             = 0,
+	SinglePress                                                                      = 1,
+	DoublePress                                                                      = 2,
+	FlowPress                                                                        = 3
 };
 
 /// Enum /Script/SB.FSBLevelSequenceEventInputFeedbackActionType
 /// Size: 0x01 (1 bytes)
 enum class FSBLevelSequenceEventInputFeedbackActionType : uint8_t
 {
-	FSBLevelSequenceEventInputFeedbackActionType_LevelSequencePlay                   = 0,
-	FSBLevelSequenceEventInputFeedbackActionType_ProgressState                       = 1
+	LevelSequencePlay                                                                = 0,
+	ProgressState                                                                    = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequenceTheaterQTEAlignmentType
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceTheaterQTEAlignmentType : uint8_t
 {
-	ESBLevelSequenceTheaterQTEAlignmentType_None                                     = 0,
-	ESBLevelSequenceTheaterQTEAlignmentType_LeftTop                                  = 1,
-	ESBLevelSequenceTheaterQTEAlignmentType_Top                                      = 2,
-	ESBLevelSequenceTheaterQTEAlignmentType_RightTop                                 = 3,
-	ESBLevelSequenceTheaterQTEAlignmentType_LeftCenter                               = 4,
-	ESBLevelSequenceTheaterQTEAlignmentType_Center                                   = 5,
-	ESBLevelSequenceTheaterQTEAlignmentType_RightCenter                              = 6,
-	ESBLevelSequenceTheaterQTEAlignmentType_LeftBottom                               = 7,
-	ESBLevelSequenceTheaterQTEAlignmentType_Bottom                                   = 8,
-	ESBLevelSequenceTheaterQTEAlignmentType_RightBottom                              = 9
+	None                                                                             = 0,
+	LeftTop                                                                          = 1,
+	Top                                                                              = 2,
+	RightTop                                                                         = 3,
+	LeftCenter                                                                       = 4,
+	Center                                                                           = 5,
+	RightCenter                                                                      = 6,
+	LeftBottom                                                                       = 7,
+	Bottom                                                                           = 8,
+	RightBottom                                                                      = 9
 };
 
 /// Enum /Script/SB.ESBLevelSequenceTheaterQTELocationType
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceTheaterQTELocationType : uint8_t
 {
-	ESBLevelSequenceTheaterQTELocationType_Screen                                    = 0,
-	ESBLevelSequenceTheaterQTELocationType_Actor                                     = 1
+	Screen                                                                           = 0,
+	Actor                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBLevelSequenceTheaterQTEType
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceTheaterQTEType : uint8_t
 {
-	ESBLevelSequenceTheaterQTEType_GamePad_FaceButton_Left                           = 0,
-	ESBLevelSequenceTheaterQTEType_GamePad_FaceButton_Top                            = 1,
+	GamePad_FaceButton_Left                                                          = 0,
+	GamePad_FaceButton_Top                                                           = 1,
 	SBLevelSequenceTheaterQTEType_GamePad_FaceButton_Right                           = 2,
 	SBLevelSequenceTheaterQTEType_GamePad_FaceButton_Bottom                          = 3,
 	SBLevelSequenceTheaterQTEType_Gamepad_LeftShoulder                               = 4,
@@ -6505,10 +6505,10 @@ enum class ESBLevelSequenceTheaterQTEType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelSequenceTheaterQTEActionType : uint8_t
 {
-	ESBLevelSequenceTheaterQTEActionType_None                                        = 0,
-	ESBLevelSequenceTheaterQTEActionType_SinglePress                                 = 1,
-	ESBLevelSequenceTheaterQTEActionType_DoublePress                                 = 2,
-	ESBLevelSequenceTheaterQTEActionType_FlowPress                                   = 3
+	None                                                                             = 0,
+	SinglePress                                                                      = 1,
+	DoublePress                                                                      = 2,
+	FlowPress                                                                        = 3
 };
 
 /// Enum /Script/SB.ESBLevelSequenceTheaterReactionTriggerType
@@ -6524,62 +6524,62 @@ enum class ESBLevelSequenceTheaterReactionTriggerType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelStreamingProfileTarget : uint8_t
 {
-	ESBLevelStreamingProfileTarget_Texture                                           = 0,
-	ESBLevelStreamingProfileTarget_StaticMeshComponent                               = 1,
-	ESBLevelStreamingProfileTarget_StaticMeshComponent_StaticMesh                    = 2,
-	ESBLevelStreamingProfileTarget_StaticMeshComponent_Material                      = 3
+	Texture                                                                          = 0,
+	StaticMeshComponent                                                              = 1,
+	StaticMeshComponent_StaticMesh                                                   = 2,
+	StaticMeshComponent_Material                                                     = 3
 };
 
 /// Enum /Script/SB.ESBLevelStreamProfilerMode
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelStreamProfilerMode : uint8_t
 {
-	ESBLevelStreamProfilerMode_All                                                   = 0,
-	ESBLevelStreamProfilerMode_Single                                                = 1
+	All                                                                              = 0,
+	Single                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBLevelStreamProfilerState
 /// Size: 0x01 (1 bytes)
 enum class ESBLevelStreamProfilerState : uint8_t
 {
-	ESBLevelStreamProfilerState_Idle                                                 = 0,
-	ESBLevelStreamProfilerState_Ready                                                = 1,
-	ESBLevelStreamProfilerState_UnloadIterative                                      = 2,
-	ESBLevelStreamProfilerState_GCAndWait                                            = 3,
-	ESBLevelStreamProfilerState_CheckUnloadedAll                                     = 4,
-	ESBLevelStreamProfilerState_Profiling                                            = 5,
-	ESBLevelStreamProfilerState_Loading                                              = 6,
-	ESBLevelStreamProfilerState_PostLoadWait                                         = 7,
-	ESBLevelStreamProfilerState_ProfileLevel                                         = 8,
-	ESBLevelStreamProfilerState_Unloading                                            = 9,
-	ESBLevelStreamProfilerState_PostUnloadWaitForGC                                  = 10,
-	ESBLevelStreamProfilerState_PrepareForNextLevel                                  = 11,
-	ESBLevelStreamProfilerState_Finished                                             = 12,
-	ESBLevelStreamProfilerState_ErrorOccured                                         = 13
+	Idle                                                                             = 0,
+	Ready                                                                            = 1,
+	UnloadIterative                                                                  = 2,
+	GCAndWait                                                                        = 3,
+	CheckUnloadedAll                                                                 = 4,
+	Profiling                                                                        = 5,
+	Loading                                                                          = 6,
+	PostLoadWait                                                                     = 7,
+	ProfileLevel                                                                     = 8,
+	Unloading                                                                        = 9,
+	PostUnloadWaitForGC                                                              = 10,
+	PrepareForNextLevel                                                              = 11,
+	Finished                                                                         = 12,
+	ErrorOccured                                                                     = 13
 };
 
 /// Enum /Script/SB.ESBLocalize
 /// Size: 0x01 (1 bytes)
 enum class ESBLocalize : uint8_t
 {
-	ESBLocalize_AcquisitionSkill                                                     = 0,
-	ESBLocalize_ActorStat                                                            = 1,
-	ESBLocalize_Character                                                            = 2,
-	ESBLocalize_Cheat                                                                = 3,
-	ESBLocalize_Effect                                                               = 4,
-	ESBLocalize_Item                                                                 = 5,
-	ESBLocalize_Quest                                                                = 6,
-	ESBLocalize_Skill                                                                = 7,
-	ESBLocalize_Activity                                                             = 8,
-	ESBLocalize_AreaName                                                             = 9,
-	ESBLocalize_GameHelp                                                             = 10,
-	ESBLocalize_Guide                                                                = 11,
-	ESBLocalize_Operation                                                            = 12,
-	ESBLocalize_Puzzle                                                               = 13,
-	ESBLocalize_Records                                                              = 14,
-	ESBLocalize_Seq                                                                  = 15,
-	ESBLocalize_Trophy                                                               = 16,
-	ESBLocalize_UI                                                                   = 17
+	AcquisitionSkill                                                                 = 0,
+	ActorStat                                                                        = 1,
+	Character                                                                        = 2,
+	Cheat                                                                            = 3,
+	Effect                                                                           = 4,
+	Item                                                                             = 5,
+	Quest                                                                            = 6,
+	Skill                                                                            = 7,
+	Activity                                                                         = 8,
+	AreaName                                                                         = 9,
+	GameHelp                                                                         = 10,
+	Guide                                                                            = 11,
+	Operation                                                                        = 12,
+	Puzzle                                                                           = 13,
+	Records                                                                          = 14,
+	Seq                                                                              = 15,
+	Trophy                                                                           = 16,
+	UI                                                                               = 17
 };
 
 /// Enum /Script/SB.ESBOObjectDensityType
@@ -6596,17 +6596,17 @@ enum class ESBOObjectDensityType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBParticleDynamicInstanceParameterType : uint8_t
 {
-	ESBParticleDynamicInstanceParameterType__Scalar                                  = 0,
-	ESBParticleDynamicInstanceParameterType__Vector                                  = 1,
-	ESBParticleDynamicInstanceParameterType__SocketLocation                          = 2
+	Scalar                                                                           = 0,
+	Vector                                                                           = 1,
+	SocketLocation                                                                   = 2
 };
 
 /// Enum /Script/SB.ESBResourceCacheActorState
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheActorState : uint8_t
 {
-	ESBResourceCacheActorState__ESBResourceCacheActorState_OutOfRange                = 0,
-	ESBResourceCacheActorState__ESBResourceCacheActorState_InRange                   = 1
+	ESBResourceCacheActorState_OutOfRange                                            = 0,
+	ESBResourceCacheActorState_InRange                                               = 1
 };
 
 /// Enum /Script/SB.ESBResourceCacheAsyncBulkProcessorWorkMode
@@ -6637,119 +6637,119 @@ enum class ESBResourceCacheAsyncLoadState : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheLockType : uint8_t
 {
-	ESBResourceCacheLockType_Unlocked                                                = 0,
-	ESBResourceCacheLockType_WorldLocked                                             = 1,
-	ESBResourceCacheLockType_GameLocked                                              = 2
+	Unlocked                                                                         = 0,
+	WorldLocked                                                                      = 1,
+	GameLocked                                                                       = 2
 };
 
 /// Enum /Script/SB.ESBResourceCacheType
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheType : uint8_t
 {
-	ESBResourceCacheType__ESBResourceCacheType_Uninitialized                         = 0,
-	ESBResourceCacheType__ESBResourceCacheType_General                               = 1,
-	ESBResourceCacheType__ESBResourceCacheType_Animation                             = 2,
-	ESBResourceCacheType__ESBResourceCacheType_BehaviorTree                          = 3,
-	ESBResourceCacheType__ESBResourceCacheType_Blueprint                             = 4,
-	ESBResourceCacheType__ESBResourceCacheType_Blueprint_Character                   = 5,
-	ESBResourceCacheType__ESBResourceCacheType_Blueprint_Projectile                  = 6,
-	ESBResourceCacheType__ESBResourceCacheType_Blueprint_Item                        = 7,
-	ESBResourceCacheType__ESBResourceCacheType_Curve                                 = 8,
-	ESBResourceCacheType__ESBResourceCacheType_InteractionGraph                      = 9,
-	ESBResourceCacheType__ESBResourceCacheType_LevelSequence                         = 10,
-	ESBResourceCacheType__ESBResourceCacheType_Material                              = 11,
-	ESBResourceCacheType__ESBResourceCacheType_NiagaraSystem                         = 12,
-	ESBResourceCacheType__ESBResourceCacheType_ParticleSystem                        = 12,
-	ESBResourceCacheType__ESBResourceCacheType_PhysParticleSet                       = 13,
-	ESBResourceCacheType__ESBResourceCacheType_Projectile                            = 14,
-	ESBResourceCacheType__ESBResourceCacheType_RewardGroupSpawnFormation             = 15,
-	ESBResourceCacheType__ESBResourceCacheType_Show                                  = 16,
-	ESBResourceCacheType__ESBResourceCacheType_Skelmesh                              = 17,
-	ESBResourceCacheType__ESBResourceCacheType_PhysicsAsset                          = 18,
-	ESBResourceCacheType__ESBResourceCacheType_Texture                               = 19,
-	ESBResourceCacheType__ESBResourceCacheType_Theater                               = 20,
-	ESBResourceCacheType__ESBResourceCacheType_TheaterTemplate                       = 21,
-	ESBResourceCacheType__ESBResourceCacheType_VibrationSet                          = 22,
-	ESBResourceCacheType__ESBResourceCacheType_SoundMix                              = 23,
-	ESBResourceCacheType__ESBResourceCacheType_CharacterSoundSet                     = 24,
-	ESBResourceCacheType__ESBResourceCacheType_RootMotionData                        = 25
+	ESBResourceCacheType_Uninitialized                                               = 0,
+	ESBResourceCacheType_General                                                     = 1,
+	ESBResourceCacheType_Animation                                                   = 2,
+	ESBResourceCacheType_BehaviorTree                                                = 3,
+	ESBResourceCacheType_Blueprint                                                   = 4,
+	ESBResourceCacheType_Blueprint_Character                                         = 5,
+	ESBResourceCacheType_Blueprint_Projectile                                        = 6,
+	ESBResourceCacheType_Blueprint_Item                                              = 7,
+	ESBResourceCacheType_Curve                                                       = 8,
+	ESBResourceCacheType_InteractionGraph                                            = 9,
+	ESBResourceCacheType_LevelSequence                                               = 10,
+	ESBResourceCacheType_Material                                                    = 11,
+	ESBResourceCacheType_NiagaraSystem                                               = 12,
+	ESBResourceCacheType_ParticleSystem                                              = 12,
+	ESBResourceCacheType_PhysParticleSet                                             = 13,
+	ESBResourceCacheType_Projectile                                                  = 14,
+	ESBResourceCacheType_RewardGroupSpawnFormation                                   = 15,
+	ESBResourceCacheType_Show                                                        = 16,
+	ESBResourceCacheType_Skelmesh                                                    = 17,
+	ESBResourceCacheType_PhysicsAsset                                                = 18,
+	ESBResourceCacheType_Texture                                                     = 19,
+	ESBResourceCacheType_Theater                                                     = 20,
+	ESBResourceCacheType_TheaterTemplate                                             = 21,
+	ESBResourceCacheType_VibrationSet                                                = 22,
+	ESBResourceCacheType_SoundMix                                                    = 23,
+	ESBResourceCacheType_CharacterSoundSet                                           = 24,
+	ESBResourceCacheType_RootMotionData                                              = 25
 };
 
 /// Enum /Script/SB.ESBResourceCacheManagerGameFloatNotificationState
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheManagerGameFloatNotificationState : uint8_t
 {
-	ESBResourceCacheManagerGameFloatNotificationState__ESBResourceCacheManagerGameFloatNotificationState_Idle = 0,
-	ESBResourceCacheManagerGameFloatNotificationState__ESBResourceCacheManagerGameFloatNotificationState_AsyncStarted = 1,
-	ESBResourceCacheManagerGameFloatNotificationState__ESBResourceCacheManagerGameFloatNotificationState_AsyncFinished = 2
+	ESBResourceCacheManagerGameFloatNotificationState_Idle                           = 0,
+	ESBResourceCacheManagerGameFloatNotificationState_AsyncStarted                   = 1,
+	ESBResourceCacheManagerGameFloatNotificationState_AsyncFinished                  = 2
 };
 
 /// Enum /Script/SB.ESBResourceCacheManagerPauseState
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheManagerPauseState : uint8_t
 {
-	ESBResourceCacheManagerPauseState__ESBResourceCacheManagerPauseState_None        = 0,
-	ESBResourceCacheManagerPauseState__ESBResourceCacheManagerPauseState_Paused      = 1,
-	ESBResourceCacheManagerPauseState__ESBResourceCacheManagerPauseState_Unpaused    = 2
+	ESBResourceCacheManagerPauseState_None                                           = 0,
+	ESBResourceCacheManagerPauseState_Paused                                         = 1,
+	ESBResourceCacheManagerPauseState_Unpaused                                       = 2
 };
 
 /// Enum /Script/SB.ESBResourceCacheManagerPhaseState
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheManagerPhaseState : uint8_t
 {
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_Init         = 0,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_WaitingForStartLevelToStart = 1,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_WaitingForInitialCaching = 2,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_CachingInitials = 3,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_FinishedInitialCaching = 4,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_WaitingForStartZoneToCache = 5,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_CachingStartZone = 6,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_PoolingBP    = 7,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_FinishedStartZoneCaching = 8,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_Operating    = 9,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_Operating_Server = 10,
-	ESBResourceCacheManagerPhaseState__SBResourceCacheManagerPhaseState_Terminated   = 11
+	SBResourceCacheManagerPhaseState_Init                                            = 0,
+	SBResourceCacheManagerPhaseState_WaitingForStartLevelToStart                     = 1,
+	SBResourceCacheManagerPhaseState_WaitingForInitialCaching                        = 2,
+	SBResourceCacheManagerPhaseState_CachingInitials                                 = 3,
+	SBResourceCacheManagerPhaseState_FinishedInitialCaching                          = 4,
+	SBResourceCacheManagerPhaseState_WaitingForStartZoneToCache                      = 5,
+	SBResourceCacheManagerPhaseState_CachingStartZone                                = 6,
+	SBResourceCacheManagerPhaseState_PoolingBP                                       = 7,
+	SBResourceCacheManagerPhaseState_FinishedStartZoneCaching                        = 8,
+	SBResourceCacheManagerPhaseState_Operating                                       = 9,
+	SBResourceCacheManagerPhaseState_Operating_Server                                = 10,
+	SBResourceCacheManagerPhaseState_Terminated                                      = 11
 };
 
 /// Enum /Script/SB.ESBResourceCacheSBCharacterSpawnerState
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheSBCharacterSpawnerState : uint8_t
 {
-	ESBResourceCacheSBCharacterSpawnerState__ESBResourceCacheSBCharacterSpawnerState_Idle = 0,
-	ESBResourceCacheSBCharacterSpawnerState__ESBResourceCacheSBCharacterSpawnerState_Spawnning = 1,
-	ESBResourceCacheSBCharacterSpawnerState__ESBResourceCacheSBCharacterSpawnerState_Pooling = 2,
-	ESBResourceCacheSBCharacterSpawnerState__ESBResourceCacheSBCharacterSpawnerState_Finished = 3
+	ESBResourceCacheSBCharacterSpawnerState_Idle                                     = 0,
+	ESBResourceCacheSBCharacterSpawnerState_Spawnning                                = 1,
+	ESBResourceCacheSBCharacterSpawnerState_Pooling                                  = 2,
+	ESBResourceCacheSBCharacterSpawnerState_Finished                                 = 3
 };
 
 /// Enum /Script/SB.ESBResourceCacheSkeletalMeshManagerFailedReason
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheSkeletalMeshManagerFailedReason : uint8_t
 {
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_Unknown = 0,
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_HandleInvalidWhenRequested = 1,
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_HandleInactive = 2,
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_HandleNotLoading = 3,
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_HandleInvalidWhileLoading = 4,
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_HandleAssetIsInvalid = 5,
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_HandleInvalidAfterCompleteLoading = 6,
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_FailedToRequestAsyncClothFabric = 7,
-	ESBResourceCacheSkeletalMeshManagerFailedReason__ESBResourceCacheSkeletalMeshManagerFailedReason_Max = 8
+	ESBResourceCacheSkeletalMeshManagerFailedReason_Unknown                          = 0,
+	ESBResourceCacheSkeletalMeshManagerFailedReason_HandleInvalidWhenRequested       = 1,
+	ESBResourceCacheSkeletalMeshManagerFailedReason_HandleInactive                   = 2,
+	ESBResourceCacheSkeletalMeshManagerFailedReason_HandleNotLoading                 = 3,
+	ESBResourceCacheSkeletalMeshManagerFailedReason_HandleInvalidWhileLoading        = 4,
+	ESBResourceCacheSkeletalMeshManagerFailedReason_HandleAssetIsInvalid             = 5,
+	ESBResourceCacheSkeletalMeshManagerFailedReason_HandleInvalidAfterCompleteLoading = 6,
+	ESBResourceCacheSkeletalMeshManagerFailedReason_FailedToRequestAsyncClothFabric  = 7,
+	ESBResourceCacheSkeletalMeshManagerFailedReason_Max                              = 8
 };
 
 /// Enum /Script/SB.ESBResourceCacheSkeletalMeshManagerLoadState
 /// Size: 0x01 (1 bytes)
 enum class ESBResourceCacheSkeletalMeshManagerLoadState : uint8_t
 {
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_Idle = 0,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_Requested = 1,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_AsyncAssetLoadStarted = 2,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_AsyncAssetLoadFinished = 3,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_AsyncClothLoadStarted = 4,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_AsyncClothLoadFinished = 5,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_LoadComplete = 6,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_Finished = 7,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_Failed = 8,
-	ESBResourceCacheSkeletalMeshManagerLoadState__ESBResourceCacheSkeletalMeshManagerLoadState_Max = 9
+	ESBResourceCacheSkeletalMeshManagerLoadState_Idle                                = 0,
+	ESBResourceCacheSkeletalMeshManagerLoadState_Requested                           = 1,
+	ESBResourceCacheSkeletalMeshManagerLoadState_AsyncAssetLoadStarted               = 2,
+	ESBResourceCacheSkeletalMeshManagerLoadState_AsyncAssetLoadFinished              = 3,
+	ESBResourceCacheSkeletalMeshManagerLoadState_AsyncClothLoadStarted               = 4,
+	ESBResourceCacheSkeletalMeshManagerLoadState_AsyncClothLoadFinished              = 5,
+	ESBResourceCacheSkeletalMeshManagerLoadState_LoadComplete                        = 6,
+	ESBResourceCacheSkeletalMeshManagerLoadState_Finished                            = 7,
+	ESBResourceCacheSkeletalMeshManagerLoadState_Failed                              = 8,
+	ESBResourceCacheSkeletalMeshManagerLoadState_Max                                 = 9
 };
 
 /// Enum /Script/SB.ESBClothWindDirectionType
@@ -6764,68 +6764,68 @@ enum class ESBClothWindDirectionType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBBlendSpaceChannel : uint8_t
 {
-	ESBBlendSpaceChannel__Upper                                                      = 0,
-	ESBBlendSpaceChannel__Lower                                                      = 1,
-	ESBBlendSpaceChannel__All                                                        = 2
+	Upper                                                                            = 0,
+	Lower                                                                            = 1,
+	All                                                                              = 2
 };
 
 /// Enum /Script/SB.ESBShowAnimSequencePlayType
 /// Size: 0x01 (1 bytes)
 enum class ESBShowAnimSequencePlayType : uint8_t
 {
-	ESBShowAnimSequencePlayType__Default                                             = 0,
-	ESBShowAnimSequencePlayType__UseDirectionalBlend                                 = 1,
-	ESBShowAnimSequencePlayType__UseMoveWeight                                       = 2,
-	ESBShowAnimSequencePlayType__UseAreaDirectionCheck                               = 3,
-	ESBShowAnimSequencePlayType__DirectionalAnimation                                = 4,
-	ESBShowAnimSequencePlayType__CheckFootLeftRight                                  = 5,
-	ESBShowAnimSequencePlayType__XZ_DirectionalBlend                                 = 6
+	Default                                                                          = 0,
+	UseDirectionalBlend                                                              = 1,
+	UseMoveWeight                                                                    = 2,
+	UseAreaDirectionCheck                                                            = 3,
+	DirectionalAnimation                                                             = 4,
+	CheckFootLeftRight                                                               = 5,
+	XZ_DirectionalBlend                                                              = 6
 };
 
 /// Enum /Script/SB.ESBShowAnimCheckActiveType
 /// Size: 0x01 (1 bytes)
 enum class ESBShowAnimCheckActiveType : uint8_t
 {
-	ESBShowAnimCheckActiveType__NoneCheck                                            = 0,
-	ESBShowAnimCheckActiveType__SelfForwardVectorAndSelfToTargetAngle                = 1
+	NoneCheck                                                                        = 0,
+	SelfForwardVectorAndSelfToTargetAngle                                            = 1
 };
 
 /// Enum /Script/SB.ESBShowAnimDirectionalAnimationType
 /// Size: 0x01 (1 bytes)
 enum class ESBShowAnimDirectionalAnimationType : uint8_t
 {
-	ESBShowAnimDirectionalAnimationType__Velocity                                    = 0,
-	ESBShowAnimDirectionalAnimationType__InverseHitDirection                         = 1,
-	ESBShowAnimDirectionalAnimationType__HitDirection                                = 2,
-	ESBShowAnimDirectionalAnimationType__VelocityInSwimming                          = 3,
-	ESBShowAnimDirectionalAnimationType__SkillAttackDirection                        = 4,
-	ESBShowAnimDirectionalAnimationType__EventDirection                              = 5,
-	ESBShowAnimDirectionalAnimationType__CameraDirection                             = 6
+	Velocity                                                                         = 0,
+	InverseHitDirection                                                              = 1,
+	HitDirection                                                                     = 2,
+	VelocityInSwimming                                                               = 3,
+	SkillAttackDirection                                                             = 4,
+	EventDirection                                                                   = 5,
+	CameraDirection                                                                  = 6
 };
 
 /// Enum /Script/SB.ESBShowAnimAreaDirectionCheckType
 /// Size: 0x01 (1 bytes)
 enum class ESBShowAnimAreaDirectionCheckType : uint8_t
 {
-	ESBShowAnimAreaDirectionCheckType__FourSide                                      = 0,
-	ESBShowAnimAreaDirectionCheckType__TwoSideRL                                     = 1
+	FourSide                                                                         = 0,
+	TwoSideRL                                                                        = 1
 };
 
 /// Enum /Script/SB.ESBShowAnimPlayBody
 /// Size: 0x01 (1 bytes)
 enum class ESBShowAnimPlayBody : uint8_t
 {
-	ESBShowAnimPlayBody__AllBody                                                     = 0,
-	ESBShowAnimPlayBody__UpperBody                                                   = 1
+	AllBody                                                                          = 0,
+	UpperBody                                                                        = 1
 };
 
 /// Enum /Script/SB.ESBAnimTransitChannel
 /// Size: 0x01 (1 bytes)
 enum class ESBAnimTransitChannel : uint8_t
 {
-	ESBAnimTransitChannel__Upper                                                     = 0,
-	ESBAnimTransitChannel__Lower                                                     = 1,
-	ESBAnimTransitChannel__All                                                       = 2
+	Upper                                                                            = 0,
+	Lower                                                                            = 1,
+	All                                                                              = 2
 };
 
 /// Enum /Script/SB.ESBShowCamAnimCheckTarget
@@ -6954,30 +6954,30 @@ enum class ESBShowKey : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBDOFFocalDistanceType : uint8_t
 {
-	ESBDOFFocalDistanceType__Value                                                   = 0,
-	ESBDOFFocalDistanceType__ToTargetDistance                                        = 1
+	Value                                                                            = 0,
+	ToTargetDistance                                                                 = 1
 };
 
 /// Enum /Script/SB.ESBShowEffectTableFieldType
 /// Size: 0x01 (1 bytes)
 enum class ESBShowEffectTableFieldType : uint8_t
 {
-	ESBShowEffectTableFieldType_StartSelfEffect                                      = 0,
-	ESBShowEffectTableFieldType_StartTargetEffect                                    = 1,
-	ESBShowEffectTableFieldType_SelfPositionEffect                                   = 2,
-	ESBShowEffectTableFieldType_TargetPositionEffect                                 = 3
+	StartSelfEffect                                                                  = 0,
+	StartTargetEffect                                                                = 1,
+	SelfPositionEffect                                                               = 2,
+	TargetPositionEffect                                                             = 3
 };
 
 /// Enum /Script/SB.ESBParticleRelativeAxis
 /// Size: 0x01 (1 bytes)
 enum class ESBParticleRelativeAxis : uint8_t
 {
-	ESBParticleRelativeAxis__Default                                                 = 0,
-	ESBParticleRelativeAxis__World                                                   = 1,
-	ESBParticleRelativeAxis__Socket                                                  = 2,
-	ESBParticleRelativeAxis__Actor                                                   = 3,
-	ESBParticleRelativeAxis__HitDirection                                            = 4,
-	ESBParticleRelativeAxis__WeaponDirection                                         = 5
+	Default                                                                          = 0,
+	World                                                                            = 1,
+	Socket                                                                           = 2,
+	Actor                                                                            = 3,
+	HitDirection                                                                     = 4,
+	WeaponDirection                                                                  = 5
 };
 
 /// Enum /Script/SB.ESBShowParticleTarget
@@ -6996,44 +6996,44 @@ enum class ESBShowParticleTarget : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBShowParticlePhysCheckDirectionType : uint8_t
 {
-	ESBShowParticlePhysCheckDirectionType__DownVector                                = 0,
-	ESBShowParticlePhysCheckDirectionType__InverseHitDirection                       = 1
+	DownVector                                                                       = 0,
+	InverseHitDirection                                                              = 1
 };
 
 /// Enum /Script/SB.ESBShowRagdollDirectionType
 /// Size: 0x01 (1 bytes)
 enum class ESBShowRagdollDirectionType : uint8_t
 {
-	ESBShowRagdollDirectionType__Static                                              = 0,
-	ESBShowRagdollDirectionType__HitDirection                                        = 1,
-	ESBShowRagdollDirectionType__TargetToSelf                                        = 2,
-	ESBShowRagdollDirectionType__HitLocationToSelf                                   = 3,
-	ESBShowRagdollDirectionType__Velocity                                            = 4,
-	ESBShowRagdollDirectionType__StaticLocal                                         = 5
+	Static                                                                           = 0,
+	HitDirection                                                                     = 1,
+	TargetToSelf                                                                     = 2,
+	HitLocationToSelf                                                                = 3,
+	Velocity                                                                         = 4,
+	StaticLocal                                                                      = 5
 };
 
 /// Enum /Script/SB.ESBShowSkillResultTableFieldType
 /// Size: 0x01 (1 bytes)
 enum class ESBShowSkillResultTableFieldType : uint8_t
 {
-	ESBShowSkillResultTableFieldType_Default                                         = 0,
-	ESBShowSkillResultTableFieldType_WhenParry                                       = 1,
-	ESBShowSkillResultTableFieldType_WhenJustParry                                   = 2,
-	ESBShowSkillResultTableFieldType_WhenGuard                                       = 3,
-	ESBShowSkillResultTableFieldType_WhenBreakGuard                                  = 4,
-	ESBShowSkillResultTableFieldType_WhenPerfectParry                                = 5
+	Default                                                                          = 0,
+	WhenParry                                                                        = 1,
+	WhenJustParry                                                                    = 2,
+	WhenGuard                                                                        = 3,
+	WhenBreakGuard                                                                   = 4,
+	WhenPerfectParry                                                                 = 5
 };
 
 /// Enum /Script/SB.ESBSoundRelativeAxis
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundRelativeAxis : uint8_t
 {
-	ESBSoundRelativeAxis__Default                                                    = 0,
-	ESBSoundRelativeAxis__World                                                      = 1,
-	ESBSoundRelativeAxis__Socket                                                     = 2,
-	ESBSoundRelativeAxis__Actor                                                      = 3,
-	ESBSoundRelativeAxis__HitDirection                                               = 4,
-	ESBSoundRelativeAxis__WeaponDirection                                            = 5
+	Default                                                                          = 0,
+	World                                                                            = 1,
+	Socket                                                                           = 2,
+	Actor                                                                            = 3,
+	HitDirection                                                                     = 4,
+	WeaponDirection                                                                  = 5
 };
 
 /// Enum /Script/SB.ESBShowSoundTarget
@@ -7059,153 +7059,153 @@ enum class ESBShowUIStudioSequenceType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBShowWindVolumeDirectionType : uint8_t
 {
-	ESBShowWindVolumeDirectionType__World                                            = 0,
-	ESBShowWindVolumeDirectionType__Local                                            = 1
+	World                                                                            = 0,
+	Local                                                                            = 1
 };
 
 /// Enum /Script/SB.ESBSignificanceUpdateTarget
 /// Size: 0x01 (1 bytes)
 enum class ESBSignificanceUpdateTarget : uint8_t
 {
-	ESBSignificanceUpdateTarget__None                                                = 0,
-	ESBSignificanceUpdateTarget__MovementComponent                                   = 1,
-	ESBSignificanceUpdateTarget__SkeletalMeshComponent_Tick                          = 2,
-	ESBSignificanceUpdateTarget__SkeletalMeshComponent_Shadow                        = 3,
-	ESBSignificanceUpdateTarget__SkeletalMeshComponent_VisibilityBasedAnimTickOption = 4,
-	ESBSignificanceUpdateTarget__CollisionGroupComponent                             = 5,
-	ESBSignificanceUpdateTarget__AnimURO                                             = 6,
-	ESBSignificanceUpdateTarget__Actor                                               = 7,
-	ESBSignificanceUpdateTarget__LaserComponent                                      = 8,
-	ESBSignificanceUpdateTarget__DestructibleComponent                               = 9,
-	ESBSignificanceUpdateTarget__CableComponent                                      = 10
+	None                                                                             = 0,
+	MovementComponent                                                                = 1,
+	SkeletalMeshComponent_Tick                                                       = 2,
+	SkeletalMeshComponent_Shadow                                                     = 3,
+	SkeletalMeshComponent_VisibilityBasedAnimTickOption                              = 4,
+	CollisionGroupComponent                                                          = 5,
+	AnimURO                                                                          = 6,
+	Actor                                                                            = 7,
+	LaserComponent                                                                   = 8,
+	DestructibleComponent                                                            = 9,
+	CableComponent                                                                   = 10
 };
 
 /// Enum /Script/SB.ESBSignificanceTimerKey
 /// Size: 0x01 (1 bytes)
 enum class ESBSignificanceTimerKey : uint8_t
 {
-	ESBSignificanceTimerKey__None                                                    = 0,
-	ESBSignificanceTimerKey__SkipTick                                                = 1,
-	ESBSignificanceTimerKey__IgnoreOptimization                                      = 2,
-	ESBSignificanceTimerKey__ActiveTimeAfterInteraction                              = 3,
-	ESBSignificanceTimerKey__MovementComponentAfterGrabFinished                      = 4,
-	ESBSignificanceTimerKey__MovementComponentAfterLandOnFloor                       = 5,
-	ESBSignificanceTimerKey__CompleteShowStage                                       = 6,
-	ESBSignificanceTimerKey__CustomTickInterval                                      = 7,
-	ESBSignificanceTimerKey__SBActorTickInterval                                     = 8
+	None                                                                             = 0,
+	SkipTick                                                                         = 1,
+	IgnoreOptimization                                                               = 2,
+	ActiveTimeAfterInteraction                                                       = 3,
+	MovementComponentAfterGrabFinished                                               = 4,
+	MovementComponentAfterLandOnFloor                                                = 5,
+	CompleteShowStage                                                                = 6,
+	CustomTickInterval                                                               = 7,
+	SBActorTickInterval                                                              = 8
 };
 
 /// Enum /Script/SB.ESBSignificanceObjectType
 /// Size: 0x01 (1 bytes)
 enum class ESBSignificanceObjectType : uint8_t
 {
-	ESBSignificanceObjectType__None                                                  = 0,
-	ESBSignificanceObjectType__Character                                             = 1,
-	ESBSignificanceObjectType__ZoneEnvActor                                          = 2,
-	ESBSignificanceObjectType__ZoneEventActor                                        = 3,
-	ESBSignificanceObjectType__LaserComponent                                        = 4,
-	ESBSignificanceObjectType__DestructibleComponent                                 = 5,
-	ESBSignificanceObjectType__OptimizationActor                                     = 6,
-	ESBSignificanceObjectType__SBItem                                                = 7,
-	ESBSignificanceObjectType__Max                                                   = 8
+	None                                                                             = 0,
+	Character                                                                        = 1,
+	ZoneEnvActor                                                                     = 2,
+	ZoneEventActor                                                                   = 3,
+	LaserComponent                                                                   = 4,
+	DestructibleComponent                                                            = 5,
+	OptimizationActor                                                                = 6,
+	SBItem                                                                           = 7,
+	Max                                                                              = 8
 };
 
 /// Enum /Script/SB.ESBSingleSoundTransitType
 /// Size: 0x04 (4 bytes)
 enum class ESBSingleSoundTransitType : uint32_t
 {
-	ESBSingleSoundTransitType__FadeInOut                                             = 0,
-	ESBSingleSoundTransitType__Switching                                             = 1
+	FadeInOut                                                                        = 0,
+	Switching                                                                        = 1
 };
 
 /// Enum /Script/SB.ESBSkillTreeUnlockAnimationType
 /// Size: 0x04 (4 bytes)
 enum class ESBSkillTreeUnlockAnimationType : uint32_t
 {
-	ESBSkillTreeUnlockAnimationType__LowerSlotWithLine                               = 0,
-	ESBSkillTreeUnlockAnimationType__UpperSlotWithLine                               = 1,
-	ESBSkillTreeUnlockAnimationType__SlotAndLine                                     = 2
+	LowerSlotWithLine                                                                = 0,
+	UpperSlotWithLine                                                                = 1,
+	SlotAndLine                                                                      = 2
 };
 
 /// Enum /Script/SB.ESBSoundDebuggingKey
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundDebuggingKey : uint8_t
 {
-	ESBSoundDebuggingKey__None                                                       = 0,
-	ESBSoundDebuggingKey__SoundEvent                                                 = 1,
-	ESBSoundDebuggingKey__SoundEvent_Zone                                            = 2,
-	ESBSoundDebuggingKey__SoundEvent_ZoneTrigger                                     = 3,
-	ESBSoundDebuggingKey__SoundEvent_LevelSequence                                   = 4,
-	ESBSoundDebuggingKey__SoundEvent_Quest                                           = 5,
-	ESBSoundDebuggingKey__SoundEvent_Dialogue                                        = 6,
-	ESBSoundDebuggingKey__SoundEvent_Camp                                            = 7,
-	ESBSoundDebuggingKey__SoundEvent_ActorStance                                     = 8,
-	ESBSoundDebuggingKey__SoundEvent_ZoneEvent                                       = 9,
-	ESBSoundDebuggingKey__SoundEvent_Achievement                                     = 10,
-	ESBSoundDebuggingKey__SoundEvent_GameProgress                                    = 11,
-	ESBSoundDebuggingKey__SoundEvent_AreaControlVolume                               = 12,
-	ESBSoundDebuggingKey__SoundEvent_Show                                            = 13,
-	ESBSoundDebuggingKey__SoundEvent_Equipment                                       = 14,
-	ESBSoundDebuggingKey__MainBGMTrack                                               = 15,
-	ESBSoundDebuggingKey__AmbientBGMTrack                                            = 16,
-	ESBSoundDebuggingKey__BGMState                                                   = 17,
-	ESBSoundDebuggingKey__BGMEventBattle                                             = 18,
-	ESBSoundDebuggingKey__BGMStateRule                                               = 19,
-	ESBSoundDebuggingKey__FootStep                                                   = 20,
-	ESBSoundDebuggingKey__IsHeadphonePluggedIn                                       = 21,
-	ESBSoundDebuggingKey__AspectRatio                                                = 22,
-	ESBSoundDebuggingKey__ETC                                                        = 23
+	None                                                                             = 0,
+	SoundEvent                                                                       = 1,
+	SoundEvent_Zone                                                                  = 2,
+	SoundEvent_ZoneTrigger                                                           = 3,
+	SoundEvent_LevelSequence                                                         = 4,
+	SoundEvent_Quest                                                                 = 5,
+	SoundEvent_Dialogue                                                              = 6,
+	SoundEvent_Camp                                                                  = 7,
+	SoundEvent_ActorStance                                                           = 8,
+	SoundEvent_ZoneEvent                                                             = 9,
+	SoundEvent_Achievement                                                           = 10,
+	SoundEvent_GameProgress                                                          = 11,
+	SoundEvent_AreaControlVolume                                                     = 12,
+	SoundEvent_Show                                                                  = 13,
+	SoundEvent_Equipment                                                             = 14,
+	MainBGMTrack                                                                     = 15,
+	AmbientBGMTrack                                                                  = 16,
+	BGMState                                                                         = 17,
+	BGMEventBattle                                                                   = 18,
+	BGMStateRule                                                                     = 19,
+	FootStep                                                                         = 20,
+	IsHeadphonePluggedIn                                                             = 21,
+	AspectRatio                                                                      = 22,
+	ETC                                                                              = 23
 };
 
 /// Enum /Script/SB.ESBSoundEventType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundEventType : uint8_t
 {
-	ESBSoundEventType__GenerateSound                                                 = 1,
-	ESBSoundEventType__PlaySound                                                     = 2,
-	ESBSoundEventType__StopSound                                                     = 3,
-	ESBSoundEventType__AdjustVolume                                                  = 4,
-	ESBSoundEventType__AdjustLPF                                                     = 5,
-	ESBSoundEventType__ChangeBGMTrack                                                = 6,
-	ESBSoundEventType__ChangeBGMStateRule                                            = 7,
-	ESBSoundEventType__ModifyTargetedByEnemy                                         = 8,
-	ESBSoundEventType__ChangeOverrideAttenuation                                     = 9,
-	ESBSoundEventType__ReserveAmbientSound                                           = 10,
-	ESBSoundEventType__CancelAmbientSound                                            = 11,
-	ESBSoundEventType__Pause                                                         = 12
+	GenerateSound                                                                    = 1,
+	PlaySound                                                                        = 2,
+	StopSound                                                                        = 3,
+	AdjustVolume                                                                     = 4,
+	AdjustLPF                                                                        = 5,
+	ChangeBGMTrack                                                                   = 6,
+	ChangeBGMStateRule                                                               = 7,
+	ModifyTargetedByEnemy                                                            = 8,
+	ChangeOverrideAttenuation                                                        = 9,
+	ReserveAmbientSound                                                              = 10,
+	CancelAmbientSound                                                               = 11,
+	Pause                                                                            = 12
 };
 
 /// Enum /Script/SB.ESBSoundNodeConditionBranchType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundNodeConditionBranchType : uint8_t
 {
-	ESBSoundNodeConditionBranchType__None                                            = 0,
-	ESBSoundNodeConditionBranchType__EntertedNikkeMiniGame                           = 1
+	None                                                                             = 0,
+	EntertedNikkeMiniGame                                                            = 1
 };
 
 /// Enum /Script/SB.ESBHighPassFilterSoundNodeType
 /// Size: 0x04 (4 bytes)
 enum class ESBHighPassFilterSoundNodeType : uint32_t
 {
-	ESBHighPassFilterSoundNodeType__Replace                                          = 0,
-	ESBHighPassFilterSoundNodeType__Multiply                                         = 1
+	Replace                                                                          = 0,
+	Multiply                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBLowPassFilterSoundNodeType
 /// Size: 0x04 (4 bytes)
 enum class ESBLowPassFilterSoundNodeType : uint32_t
 {
-	ESBLowPassFilterSoundNodeType__Replace                                           = 0,
-	ESBLowPassFilterSoundNodeType__Multiply                                          = 1
+	Replace                                                                          = 0,
+	Multiply                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBSoundOcclusionActorShapeType
 /// Size: 0x01 (1 bytes)
 enum class ESBSoundOcclusionActorShapeType : uint8_t
 {
-	ESBSoundOcclusionActorShapeType__Box                                             = 0,
-	ESBSoundOcclusionActorShapeType__Sphere                                          = 1,
-	ESBSoundOcclusionActorShapeType__Capsule                                         = 2
+	Box                                                                              = 0,
+	Sphere                                                                           = 1,
+	Capsule                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBCameraDollySplineExtra
@@ -7231,9 +7231,9 @@ enum class ESBCameraDollySplineExtra : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBTheaterLevelSequenceStopType : uint8_t
 {
-	ESBTheaterLevelSequenceStopType_TakeChange                                       = 0,
-	ESBTheaterLevelSequenceStopType_ShotEnd                                          = 1,
-	ESBTheaterLevelSequenceStopType_TheaterEnd                                       = 2
+	TakeChange                                                                       = 0,
+	ShotEnd                                                                          = 1,
+	TheaterEnd                                                                       = 2
 };
 
 /// Enum /Script/SB.ESBTheaterShort
@@ -7251,355 +7251,355 @@ enum class ESBTheaterShort : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBUIActionEventType : uint8_t
 {
-	ESBUIActionEventType_None                                                        = 0,
-	ESBUIActionEventType_UnlockBurst                                                 = 1,
-	ESBUIActionEventType_UpdateIndicator                                             = 2,
-	ESBUIActionEventType_SkillTreeUnlock                                             = 3,
-	ESBUIActionEventType_AcquireSkill                                                = 4,
-	ESBUIActionEventType_ChangedAcquisitionSkill                                     = 5,
-	ESBUIActionEventType_QuestTaskUpdate                                             = 6,
-	ESBUIActionEventType_QuestTaskGroupChangedState                                  = 7,
-	ESBUIActionEventType_NotifyUpdate                                                = 8,
-	ESBUIActionEventType_WorkshopPopupOpen                                           = 9,
-	ESBUIActionEventType_WorkshopPopupClosed                                         = 10,
-	ESBUIActionEventType_WorkshopCoveredByPopup                                      = 11,
-	ESBUIActionEventType_WorkshopUnlockTabClosed                                     = 12,
-	ESBUIActionEventType_TopTabSetVisibility                                         = 13,
-	ESBUIActionEventType_CurrencyUpdateCancel                                        = 14,
-	ESBUIActionEventType_LobbyStateUpdate                                            = 15,
-	ESBUIActionEventType_LobbySlotPopupUpdate                                        = 16,
-	ESBUIActionEventType_EnableInput                                                 = 17,
-	ESBUIActionEventType_HUDVisible                                                  = 18,
-	ESBUIActionEventType_HUDRefresh                                                  = 19,
-	ESBUIActionEventType_HUDItemSlotRefreshItemInfo                                  = 20,
-	ESBUIActionEventType_HUDSizeChange                                               = 21,
-	ESBUIActionEventType_HUDBGChange                                                 = 22,
-	ESBUIActionEventType_HUDShowChange                                               = 23,
-	ESBUIActionEventType_HUDUnlockItemUtil                                           = 24,
-	ESBUIActionEventType_HUDItemVisible                                              = 25,
-	ESBUIActionEventType_HUDSkillVisible                                             = 26,
-	ESBUIActionEventType_HUDSkillDashVisible                                         = 27,
-	ESBUIActionEventType_HUDPlayerInfoBetaVisible                                    = 28,
-	ESBUIActionEventType_WarpComplete                                                = 29,
-	ESBUIActionEventType_HUDCenterDot                                                = 30,
-	ESBUIActionEventType_RefreshSettingUI                                            = 31,
-	ESBUIActionEventType_CloseSettingPopup                                           = 32,
-	ESBUIActionEventType_HUDQuestInfo                                                = 33,
-	ESBUIActionEventType_HUDGuideMessageRequest                                      = 34,
-	ESBUIActionEventType_HUDGuideMessage                                             = 35,
-	ESBUIActionEventType_HUDGuideMessageVisiblity                                    = 36,
-	ESBUIActionEventType_GameMenuOpen                                                = 37,
-	ESBUIActionEventType_HUDResetZoneNotice                                          = 38,
-	ESBUIActionEventType_PlayerLevelUp                                               = 39,
-	ESBUIActionEventType_ItemGainClose                                               = 40,
-	ESBUIActionEventType_HUDNotifyCanGain                                            = 41,
-	ESBUIActionEventType_ManualUnlock                                                = 42,
-	ESBUIActionEventType_HUDDroneGuideAction                                         = 43,
-	ESBUIActionEventType_SetDeadUIDelayTime                                          = 44,
-	ESBUIActionEventType_TrainingRoomSkillCommand                                    = 45,
-	ESBUIActionEventType_TrainingRoomActiveStep                                      = 46,
-	ESBUIActionEventType_TrainingRoomJump                                            = 47,
-	ESBUIActionEventType_GainFriendShip                                              = 48,
-	ESBUIActionEventType_HUDCountDownActive                                          = 49,
-	ESBUIActionEventType_HUDTPSState                                                 = 50,
-	ESBUIActionEventType_ActionAssistStart                                           = 51,
-	ESBUIActionEventType_ActionAssistStop                                            = 52,
-	ESBUIActionEventType_AchieveNewQuestByFriendShip                                 = 53,
-	ESBUIActionEventType_ItemAdd                                                     = 54,
-	ESBUIActionEventType_ShowSpecialRewardUI                                         = 55,
-	ESBUIActionEventType_PlayerHit                                                   = 56,
-	ESBUIActionEventType_UpdateTracking                                              = 57,
-	ESBUIActionEventType_SaveState                                                   = 58,
-	ESBUIActionEventType_HUDItemEquipVisible                                         = 59,
-	ESBUIActionEventType_TutorialTPSMode                                             = 60,
-	ESBUIActionEventType_TrainingRoomVisible                                         = 61,
-	ESBUIActionEventType_LinkedItemUnlock                                            = 62,
-	ESBUIActionEventType_ItemUse                                                     = 63,
-	ESBUIActionEventType_HintShow                                                    = 64,
-	ESBUIActionEventType_AutoFocus                                                   = 65,
-	ESBUIActionEventType_AutoFocusCancel                                             = 66,
-	ESBUIActionEventType_ScreenShotCapture                                           = 67,
-	ESBUIActionEventType_HUDGetNikkeLostArticle                                      = 68,
-	ESBUIActionEventType_HUDViewStatValue                                            = 69,
-	ESBUIActionEventType_RefreshNikkeLostGoodsIndicator                              = 70,
-	ESBUIActionEventType_HUDClearInput                                               = 71
+	None                                                                             = 0,
+	UnlockBurst                                                                      = 1,
+	UpdateIndicator                                                                  = 2,
+	SkillTreeUnlock                                                                  = 3,
+	AcquireSkill                                                                     = 4,
+	ChangedAcquisitionSkill                                                          = 5,
+	QuestTaskUpdate                                                                  = 6,
+	QuestTaskGroupChangedState                                                       = 7,
+	NotifyUpdate                                                                     = 8,
+	WorkshopPopupOpen                                                                = 9,
+	WorkshopPopupClosed                                                              = 10,
+	WorkshopCoveredByPopup                                                           = 11,
+	WorkshopUnlockTabClosed                                                          = 12,
+	TopTabSetVisibility                                                              = 13,
+	CurrencyUpdateCancel                                                             = 14,
+	LobbyStateUpdate                                                                 = 15,
+	LobbySlotPopupUpdate                                                             = 16,
+	EnableInput                                                                      = 17,
+	HUDVisible                                                                       = 18,
+	HUDRefresh                                                                       = 19,
+	HUDItemSlotRefreshItemInfo                                                       = 20,
+	HUDSizeChange                                                                    = 21,
+	HUDBGChange                                                                      = 22,
+	HUDShowChange                                                                    = 23,
+	HUDUnlockItemUtil                                                                = 24,
+	HUDItemVisible                                                                   = 25,
+	HUDSkillVisible                                                                  = 26,
+	HUDSkillDashVisible                                                              = 27,
+	HUDPlayerInfoBetaVisible                                                         = 28,
+	WarpComplete                                                                     = 29,
+	HUDCenterDot                                                                     = 30,
+	RefreshSettingUI                                                                 = 31,
+	CloseSettingPopup                                                                = 32,
+	HUDQuestInfo                                                                     = 33,
+	HUDGuideMessageRequest                                                           = 34,
+	HUDGuideMessage                                                                  = 35,
+	HUDGuideMessageVisiblity                                                         = 36,
+	GameMenuOpen                                                                     = 37,
+	HUDResetZoneNotice                                                               = 38,
+	PlayerLevelUp                                                                    = 39,
+	ItemGainClose                                                                    = 40,
+	HUDNotifyCanGain                                                                 = 41,
+	ManualUnlock                                                                     = 42,
+	HUDDroneGuideAction                                                              = 43,
+	SetDeadUIDelayTime                                                               = 44,
+	TrainingRoomSkillCommand                                                         = 45,
+	TrainingRoomActiveStep                                                           = 46,
+	TrainingRoomJump                                                                 = 47,
+	GainFriendShip                                                                   = 48,
+	HUDCountDownActive                                                               = 49,
+	HUDTPSState                                                                      = 50,
+	ActionAssistStart                                                                = 51,
+	ActionAssistStop                                                                 = 52,
+	AchieveNewQuestByFriendShip                                                      = 53,
+	ItemAdd                                                                          = 54,
+	ShowSpecialRewardUI                                                              = 55,
+	PlayerHit                                                                        = 56,
+	UpdateTracking                                                                   = 57,
+	SaveState                                                                        = 58,
+	HUDItemEquipVisible                                                              = 59,
+	TutorialTPSMode                                                                  = 60,
+	TrainingRoomVisible                                                              = 61,
+	LinkedItemUnlock                                                                 = 62,
+	ItemUse                                                                          = 63,
+	HintShow                                                                         = 64,
+	AutoFocus                                                                        = 65,
+	AutoFocusCancel                                                                  = 66,
+	ScreenShotCapture                                                                = 67,
+	HUDGetNikkeLostArticle                                                           = 68,
+	HUDViewStatValue                                                                 = 69,
+	RefreshNikkeLostGoodsIndicator                                                   = 70,
+	HUDClearInput                                                                    = 71
 };
 
 /// Enum /Script/SB.ESBUIMessageBoxAppearanceType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIMessageBoxAppearanceType : uint8_t
 {
-	ESBUIMessageBoxAppearanceType__Default                                           = 0,
-	ESBUIMessageBoxAppearanceType__LaunchingReward                                   = 1
+	Default                                                                          = 0,
+	LaunchingReward                                                                  = 1
 };
 
 /// Enum /Script/SB.ESBUIDLCPurchasePopupType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIDLCPurchasePopupType : uint8_t
 {
-	ESBUIDLCPurchasePopupType__None                                                  = 0,
-	ESBUIDLCPurchasePopupType__NierDLC                                               = 1,
-	ESBUIDLCPurchasePopupType__NikkeDLC                                              = 2
+	None                                                                             = 0,
+	NierDLC                                                                          = 1,
+	NikkeDLC                                                                         = 2
 };
 
 /// Enum /Script/SB.ESBUIAcceptMessageBoxConditionType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIAcceptMessageBoxConditionType : uint8_t
 {
-	ESBUIAcceptMessageBoxConditionType__None                                         = 0,
-	ESBUIAcceptMessageBoxConditionType__ChangedFrameGeneration                       = 1,
-	ESBUIAcceptMessageBoxConditionType__Count                                        = 2
+	None                                                                             = 0,
+	ChangedFrameGeneration                                                           = 1,
+	Count                                                                            = 2
 };
 
 /// Enum /Script/SB.ESBUIInputAxisType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIInputAxisType : uint8_t
 {
-	ESBUIInputAxisType__LeftAxisX                                                    = 0,
-	ESBUIInputAxisType__LeftAxisY                                                    = 1,
-	ESBUIInputAxisType__RightAxisX                                                   = 2,
-	ESBUIInputAxisType__RightAxisY                                                   = 3,
-	ESBUIInputAxisType__Max                                                          = 4
+	LeftAxisX                                                                        = 0,
+	LeftAxisY                                                                        = 1,
+	RightAxisX                                                                       = 2,
+	RightAxisY                                                                       = 3,
+	Max                                                                              = 4
 };
 
 /// Enum /Script/SB.ESBUIPhotoModeTab
 /// Size: 0x01 (1 bytes)
 enum class ESBUIPhotoModeTab : uint8_t
 {
-	ESBUIPhotoModeTab_None                                                           = 0,
-	ESBUIPhotoModeTab_Camera                                                         = 1,
-	ESBUIPhotoModeTab_Shutter                                                        = 2,
-	ESBUIPhotoModeTab_Scene                                                          = 3,
-	ESBUIPhotoModeTab_Deco                                                           = 4,
-	ESBUIPhotoModeTab_Character                                                      = 5,
-	ESBUIPhotoModeTab_Light                                                          = 6,
-	ESBUIPhotoModeTab_Preset                                                         = 7,
-	ESBUIPhotoModeTab_Max                                                            = 8
+	None                                                                             = 0,
+	Camera                                                                           = 1,
+	Shutter                                                                          = 2,
+	Scene                                                                            = 3,
+	Deco                                                                             = 4,
+	Character                                                                        = 5,
+	Light                                                                            = 6,
+	Preset                                                                           = 7,
+	Max                                                                              = 8
 };
 
 /// Enum /Script/SB.ESBUIKeyInputDeviceType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIKeyInputDeviceType : uint8_t
 {
-	ESBUIKeyInputDeviceType__GamePad                                                 = 0,
-	ESBUIKeyInputDeviceType__KeyboardMouse                                           = 1
+	GamePad                                                                          = 0,
+	KeyboardMouse                                                                    = 1
 };
 
 /// Enum /Script/SB.ESBUIKeyMappingViewerManualSlotCondition
 /// Size: 0x01 (1 bytes)
 enum class ESBUIKeyMappingViewerManualSlotCondition : uint8_t
 {
-	ESBUIKeyMappingViewerManualSlotCondition__None                                   = 0,
-	ESBUIKeyMappingViewerManualSlotCondition__EnableReverseThumbStick                = 1,
-	ESBUIKeyMappingViewerManualSlotCondition__DisableReverseThumbStick               = 2,
-	ESBUIKeyMappingViewerManualSlotCondition__Count                                  = 3
+	None                                                                             = 0,
+	EnableReverseThumbStick                                                          = 1,
+	DisableReverseThumbStick                                                         = 2,
+	Count                                                                            = 3
 };
 
 /// Enum /Script/SB.ESBUIKeyMappingViewerCategoryType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIKeyMappingViewerCategoryType : uint8_t
 {
-	ESBUIKeyMappingViewerCategoryType__All                                           = 0,
-	ESBUIKeyMappingViewerCategoryType__Main                                          = 1,
-	ESBUIKeyMappingViewerCategoryType__TPSMode                                       = 2,
-	ESBUIKeyMappingViewerCategoryType__Swim                                          = 3,
-	ESBUIKeyMappingViewerCategoryType__Interaction                                   = 4,
-	ESBUIKeyMappingViewerCategoryType__Fishing                                       = 5
+	All                                                                              = 0,
+	Main                                                                             = 1,
+	TPSMode                                                                          = 2,
+	Swim                                                                             = 3,
+	Interaction                                                                      = 4,
+	Fishing                                                                          = 5
 };
 
 /// Enum /Script/SB.ESBUIKeyMappingListDataType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIKeyMappingListDataType : uint8_t
 {
-	ESBUIKeyMappingListDataType__Category                                            = 0,
-	ESBUIKeyMappingListDataType__KeyMap                                              = 1
+	Category                                                                         = 0,
+	KeyMap                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBUIBossChallengeItemState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIBossChallengeItemState : uint8_t
 {
-	ESBUIBossChallengeItemState__Available                                           = 0,
-	ESBUIBossChallengeItemState__Unavailable                                         = 1,
-	ESBUIBossChallengeItemState__Cleared                                             = 2
+	Available                                                                        = 0,
+	Unavailable                                                                      = 1,
+	Cleared                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBUIEnhanceCharacterTabType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIEnhanceCharacterTabType : uint8_t
 {
-	ESBUIEnhanceCharacterTabType__None                                               = 0,
-	ESBUIEnhanceCharacterTabType__Weapon                                             = 1,
-	ESBUIEnhanceCharacterTabType__Tumbler                                            = 2,
-	ESBUIEnhanceCharacterTabType__ExtendedTumbler                                    = 3,
-	ESBUIEnhanceCharacterTabType__GearSlot                                           = 4,
-	ESBUIEnhanceCharacterTabType__Count                                              = 5
+	None                                                                             = 0,
+	Weapon                                                                           = 1,
+	Tumbler                                                                          = 2,
+	ExtendedTumbler                                                                  = 3,
+	GearSlot                                                                         = 4,
+	Count                                                                            = 5
 };
 
 /// Enum /Script/SB.ESBUIActionAssistSignalType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIActionAssistSignalType : uint8_t
 {
-	ESBUIActionAssistSignalType__Parry                                               = 0,
-	ESBUIActionAssistSignalType__Evade                                               = 1,
-	ESBUIActionAssistSignalType__Repulse                                             = 2,
-	ESBUIActionAssistSignalType__Blink                                               = 3
+	Parry                                                                            = 0,
+	Evade                                                                            = 1,
+	Repulse                                                                          = 2,
+	Blink                                                                            = 3
 };
 
 /// Enum /Script/SB.ESBUIQuestTrackingMessageOwnerType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIQuestTrackingMessageOwnerType : uint8_t
 {
-	ESBUIQuestTrackingMessageOwnerType__QuestMenu                                    = 0,
-	ESBUIQuestTrackingMessageOwnerType__RequestBoard                                 = 1
+	QuestMenu                                                                        = 0,
+	RequestBoard                                                                     = 1
 };
 
 /// Enum /Script/SB.ESBUIQuestJournalTitleType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIQuestJournalTitleType : uint8_t
 {
-	ESBUIQuestJournalTitleType_Epic                                                  = 0,
-	ESBUIQuestJournalTitleType_Sub                                                   = 1,
-	ESBUIQuestJournalTitleType_Request                                               = 2
+	Epic                                                                             = 0,
+	Sub                                                                              = 1,
+	Request                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBUIGuideMessageDisplayType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIGuideMessageDisplayType : uint8_t
 {
-	ESBUIGuideMessageDisplayType_Default                                             = 0,
-	ESBUIGuideMessageDisplayType_Mini                                                = 1
+	Default                                                                          = 0,
+	Mini                                                                             = 1
 };
 
 /// Enum /Script/SB.ESBUIGameMenuEquipPresentationEventType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIGameMenuEquipPresentationEventType : uint8_t
 {
-	ESBUIGameMenuEquipPresentationEventType_None                                     = 0,
-	ESBUIGameMenuEquipPresentationEventType_Open                                     = 1,
-	ESBUIGameMenuEquipPresentationEventType_Unlock                                   = 2
+	None                                                                             = 0,
+	Open                                                                             = 1,
+	Unlock                                                                           = 2
 };
 
 /// Enum /Script/SB.ESBUIGameMenuEquipPresentationWidgetType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIGameMenuEquipPresentationWidgetType : uint8_t
 {
-	ESBUIGameMenuEquipPresentationWidgetType_None                                    = 0,
-	ESBUIGameMenuEquipPresentationWidgetType_Popup                                   = 1,
-	ESBUIGameMenuEquipPresentationWidgetType_Slot                                    = 2
+	None                                                                             = 0,
+	Popup                                                                            = 1,
+	Slot                                                                             = 2
 };
 
 /// Enum /Script/SB.ESBUIWorldMapTargetQuestState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIWorldMapTargetQuestState : uint8_t
 {
-	ESBUIWorldMapTargetQuestState_None                                               = 0,
-	ESBUIWorldMapTargetQuestState_NotTrackingNotComplete                             = 1,
-	ESBUIWorldMapTargetQuestState_TrackingNotComplete                                = 2,
-	ESBUIWorldMapTargetQuestState_NotTrackingComplete                                = 3,
-	ESBUIWorldMapTargetQuestState_TrackingComplete                                   = 4
+	None                                                                             = 0,
+	NotTrackingNotComplete                                                           = 1,
+	TrackingNotComplete                                                              = 2,
+	NotTrackingComplete                                                              = 3,
+	TrackingComplete                                                                 = 4
 };
 
 /// Enum /Script/SB.ESBUIWorldMapTargetDisplayType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIWorldMapTargetDisplayType : uint8_t
 {
-	ESBUIWorldMapTargetDisplayType_None                                              = 0,
-	ESBUIWorldMapTargetDisplayType_Always                                            = 1,
-	ESBUIWorldMapTargetDisplayType_WhenActive                                        = 2,
-	ESBUIWorldMapTargetDisplayType_Never                                             = 3
+	None                                                                             = 0,
+	Always                                                                           = 1,
+	WhenActive                                                                       = 2,
+	Never                                                                            = 3
 };
 
 /// Enum /Script/SB.ESBUICampWorldMapDisplayType
 /// Size: 0x01 (1 bytes)
 enum class ESBUICampWorldMapDisplayType : uint8_t
 {
-	ESBUICampWorldMapDisplayType_None                                                = 0,
-	ESBUICampWorldMapDisplayType_WhenActive                                          = 1,
-	ESBUICampWorldMapDisplayType_WhenLinkActive                                      = 2,
-	ESBUICampWorldMapDisplayType_WhenLinkDeactive                                    = 3,
-	ESBUICampWorldMapDisplayType_Always                                              = 4,
-	ESBUICampWorldMapDisplayType_Never                                               = 5
+	None                                                                             = 0,
+	WhenActive                                                                       = 1,
+	WhenLinkActive                                                                   = 2,
+	WhenLinkDeactive                                                                 = 3,
+	Always                                                                           = 4,
+	Never                                                                            = 5
 };
 
 /// Enum /Script/SB.ESBUIWorldMapTargetType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIWorldMapTargetType : uint8_t
 {
-	ESBUIWorldMapTargetType_None                                                     = 0,
-	ESBUIWorldMapTargetType_Epic                                                     = 1,
-	ESBUIWorldMapTargetType_Sub                                                      = 2,
-	ESBUIWorldMapTargetType_Request                                                  = 3,
-	ESBUIWorldMapTargetType_Portal                                                   = 4,
-	ESBUIWorldMapTargetType_TetraPod                                                 = 5,
-	ESBUIWorldMapTargetType_FullCamp                                                 = 6,
-	ESBUIWorldMapTargetType_SimpleCamp                                               = 7,
-	ESBUIWorldMapTargetType_SaveVolume                                               = 8,
-	ESBUIWorldMapTargetType_NewQuest                                                 = 9,
-	ESBUIWorldMapTargetType_EnvSpawn                                                 = 10,
-	ESBUIWorldMapTargetType_CharacterSpawn                                           = 11,
-	ESBUIWorldMapTargetType_PhoneBooth                                               = 12,
-	ESBUIWorldMapTargetType_CustomPin                                                = 13
+	None                                                                             = 0,
+	Epic                                                                             = 1,
+	Sub                                                                              = 2,
+	Request                                                                          = 3,
+	Portal                                                                           = 4,
+	TetraPod                                                                         = 5,
+	FullCamp                                                                         = 6,
+	SimpleCamp                                                                       = 7,
+	SaveVolume                                                                       = 8,
+	NewQuest                                                                         = 9,
+	EnvSpawn                                                                         = 10,
+	CharacterSpawn                                                                   = 11,
+	PhoneBooth                                                                       = 12,
+	CustomPin                                                                        = 13
 };
 
 /// Enum /Script/SB.ESBUITaskConditionDisplayType
 /// Size: 0x01 (1 bytes)
 enum class ESBUITaskConditionDisplayType : uint8_t
 {
-	ESBUITaskConditionDisplayType_ShowChild                                          = 0,
-	ESBUITaskConditionDisplayType_ShowSelf                                           = 1
+	ShowChild                                                                        = 0,
+	ShowSelf                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBUIRequestPresentationState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIRequestPresentationState : uint8_t
 {
-	ESBUIRequestPresentationState__None                                              = 0,
-	ESBUIRequestPresentationState__ReadyTitleRefreshAni                              = 1,
-	ESBUIRequestPresentationState__PlayingTitleRefreshAni                            = 2,
-	ESBUIRequestPresentationState__FinishTitleRefreshAni                             = 3
+	None                                                                             = 0,
+	ReadyTitleRefreshAni                                                             = 1,
+	PlayingTitleRefreshAni                                                           = 2,
+	FinishTitleRefreshAni                                                            = 3
 };
 
 /// Enum /Script/SB.ESBUIRequestState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIRequestState : uint8_t
 {
-	ESBUIRequestState__None                                                          = 0,
-	ESBUIRequestState__CanAcquire                                                    = 1,
-	ESBUIRequestState__CantAcquire                                                   = 2,
-	ESBUIRequestState__Progress                                                      = 3,
-	ESBUIRequestState__CanComplete                                                   = 4,
-	ESBUIRequestState__Complete                                                      = 5,
-	ESBUIRequestState__Failed                                                        = 6,
-	ESBUIRequestState__Deny                                                          = 7
+	None                                                                             = 0,
+	CanAcquire                                                                       = 1,
+	CantAcquire                                                                      = 2,
+	Progress                                                                         = 3,
+	CanComplete                                                                      = 4,
+	Complete                                                                         = 5,
+	Failed                                                                           = 6,
+	Deny                                                                             = 7
 };
 
 /// Enum /Script/SB.ESBUIRequestMessageType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIRequestMessageType : uint8_t
 {
-	ESBUIRequestMessageType__Accept                                                  = 0,
-	ESBUIRequestMessageType__Complete                                                = 1
+	Accept                                                                           = 0,
+	Complete                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBUIRequestBoardType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIRequestBoardType : uint8_t
 {
-	ESBUIRequestBoardType_Default                                                    = 0,
-	ESBUIRequestBoardType_CantAcquire                                                = 1,
-	ESBUIRequestBoardType_NikkeCollabo                                               = 2
+	Default                                                                          = 0,
+	CantAcquire                                                                      = 1,
+	NikkeCollabo                                                                     = 2
 };
 
 /// Enum /Script/SB.ESBUISoundDebuggerStatCategory
 /// Size: 0x01 (1 bytes)
 enum class ESBUISoundDebuggerStatCategory : uint8_t
 {
-	ESBUISoundDebuggerStatCategory__None                                             = 0,
-	ESBUISoundDebuggerStatCategory__Index                                            = 1,
-	ESBUISoundDebuggerStatCategory__Option                                           = 2,
-	ESBUISoundDebuggerStatCategory__Class                                            = 3,
-	ESBUISoundDebuggerStatCategory__SoundPath                                        = 4
+	None                                                                             = 0,
+	Index                                                                            = 1,
+	Option                                                                           = 2,
+	Class                                                                            = 3,
+	SoundPath                                                                        = 4
 };
 
 /// Enum /Script/SB.ESBUIGuideMessageEventType
@@ -7646,1368 +7646,1368 @@ enum class ESBUILogicGameMenuEquipMountType : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESBUIStudioState : uint8_t
 {
-	ESBUIStudioState_None                                                            = 0,
-	ESBUIStudioState_GameMenuEquipDefault                                            = 1,
-	ESBUIStudioState_GameMenuEquipExospine                                           = 2,
-	ESBUIStudioState_GameMenuEquipGear                                               = 3,
-	ESBUIStudioState_GameMenuEquipNanoSuit                                           = 4,
-	ESBUIStudioState_GameMenuEquipAcc                                                = 5,
-	ESBUIStudioState_GameMenuEquipEarring                                            = 6,
-	ESBUIStudioState_GameMenuEquipDrone                                              = 7,
-	ESBUIStudioState_GameMenuEquipLily                                               = 8,
-	ESBUIStudioState_GameMenuEquipAdam                                               = 9
+	None                                                                             = 0,
+	GameMenuEquipDefault                                                             = 1,
+	GameMenuEquipExospine                                                            = 2,
+	GameMenuEquipGear                                                                = 3,
+	GameMenuEquipNanoSuit                                                            = 4,
+	GameMenuEquipAcc                                                                 = 5,
+	GameMenuEquipEarring                                                             = 6,
+	GameMenuEquipDrone                                                               = 7,
+	GameMenuEquipLily                                                                = 8,
+	GameMenuEquipAdam                                                                = 9
 };
 
 /// Enum /Script/SB.ESBUIHUDQuestEventType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIHUDQuestEventType : uint8_t
 {
-	ESBUIHUDQuestEventType__None                                                     = 0,
-	ESBUIHUDQuestEventType__TaskStart                                                = 1,
-	ESBUIHUDQuestEventType__TaskUpdate                                               = 2,
-	ESBUIHUDQuestEventType__TaskDone                                                 = 3,
-	ESBUIHUDQuestEventType__QuestStart                                               = 4,
-	ESBUIHUDQuestEventType__QuestDone                                                = 5,
-	ESBUIHUDQuestEventType__TrackingIn                                               = 6,
-	ESBUIHUDQuestEventType__TrackingOut                                              = 7,
-	ESBUIHUDQuestEventType__ForceUpdate                                              = 8
+	None                                                                             = 0,
+	TaskStart                                                                        = 1,
+	TaskUpdate                                                                       = 2,
+	TaskDone                                                                         = 3,
+	QuestStart                                                                       = 4,
+	QuestDone                                                                        = 5,
+	TrackingIn                                                                       = 6,
+	TrackingOut                                                                      = 7,
+	ForceUpdate                                                                      = 8
 };
 
 /// Enum /Script/SB.ESBUIStudioPlayType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIStudioPlayType : uint8_t
 {
-	ESBUIStudioPlayType_None                                                         = 0,
-	ESBUIStudioPlayType_Start                                                        = 1,
-	ESBUIStudioPlayType_Loop                                                         = 2,
-	ESBUIStudioPlayType_End                                                          = 3
+	None                                                                             = 0,
+	Start                                                                            = 1,
+	Loop                                                                             = 2,
+	End                                                                              = 3
 };
 
 /// Enum /Script/SB.ESBUIWorkshopEnhanceTabState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIWorkshopEnhanceTabState : uint8_t
 {
-	ESBUIWorkshopEnhanceTabState__None                                               = 0,
-	ESBUIWorkshopEnhanceTabState__CanEnhance                                         = 1,
-	ESBUIWorkshopEnhanceTabState__NotEnoughMaterial                                  = 2,
-	ESBUIWorkshopEnhanceTabState__MaxLevel                                           = 3
+	None                                                                             = 0,
+	CanEnhance                                                                       = 1,
+	NotEnoughMaterial                                                                = 2,
+	MaxLevel                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBUISavePageType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISavePageType : uint8_t
 {
-	ESBUISavePageType__None                                                          = 0,
-	ESBUISavePageType__NewGame                                                       = 1,
-	ESBUISavePageType__NewGamePlus                                                   = 2,
-	ESBUISavePageType__LoadGame                                                      = 3,
-	ESBUISavePageType__OverwriteGame                                                 = 4,
-	ESBUISavePageType__LoadTestMap                                                   = 5
+	None                                                                             = 0,
+	NewGame                                                                          = 1,
+	NewGamePlus                                                                      = 2,
+	LoadGame                                                                         = 3,
+	OverwriteGame                                                                    = 4,
+	LoadTestMap                                                                      = 5
 };
 
 /// Enum /Script/SB.ESBUILobbyType
 /// Size: 0x01 (1 bytes)
 enum class ESBUILobbyType : uint8_t
 {
-	ESBUILobbyType__FirstStart                                                       = 0,
-	ESBUILobbyType__NormalStart                                                      = 1
+	FirstStart                                                                       = 0,
+	NormalStart                                                                      = 1
 };
 
 /// Enum /Script/SB.ESBUILobbyStep
 /// Size: 0x01 (1 bytes)
 enum class ESBUILobbyStep : uint8_t
 {
-	ESBUILobbyStep__SelectMenu                                                       = 0,
-	ESBUILobbyStep__SelectMode                                                       = 1
+	SelectMenu                                                                       = 0,
+	SelectMode                                                                       = 1
 };
 
 /// Enum /Script/SB.ESBUILobbyState
 /// Size: 0x01 (1 bytes)
 enum class ESBUILobbyState : uint8_t
 {
-	ESBUILobbyState__None                                                            = 0,
-	ESBUILobbyState__InitialSetup                                                    = 1,
-	ESBUILobbyState__Splash                                                          = 2,
-	ESBUILobbyState__MainScreen                                                      = 3,
-	ESBUILobbyState__GameSetup                                                       = 4,
-	ESBUILobbyState__FirstMainScreen                                                 = 5
+	None                                                                             = 0,
+	InitialSetup                                                                     = 1,
+	Splash                                                                           = 2,
+	MainScreen                                                                       = 3,
+	GameSetup                                                                        = 4,
+	FirstMainScreen                                                                  = 5
 };
 
 /// Enum /Script/SB.ESBUIDevelopSummaryType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIDevelopSummaryType : uint8_t
 {
-	ESBUIDevelopSummaryType_Hide                                                     = 0,
-	ESBUIDevelopSummaryType_BaseInfo                                                 = 1,
-	ESBUIDevelopSummaryType_Max                                                      = 2
+	Hide                                                                             = 0,
+	BaseInfo                                                                         = 1,
+	Max                                                                              = 2
 };
 
 /// Enum /Script/SB.ESBUIRedDotState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIRedDotState : uint8_t
 {
-	ESBUIRedDotState_None                                                            = 0,
-	ESBUIRedDotState_New                                                             = 1,
-	ESBUIRedDotState_Dirty                                                           = 2,
-	ESBUIRedDotState_Enable                                                          = 3
+	None                                                                             = 0,
+	New                                                                              = 1,
+	Dirty                                                                            = 2,
+	Enable                                                                           = 3
 };
 
 /// Enum /Script/SB.ESBUIPlatform
 /// Size: 0x01 (1 bytes)
 enum class ESBUIPlatform : uint8_t
 {
-	ESBUIPlatform_Unknown                                                            = 0,
-	ESBUIPlatform_Windows                                                            = 1,
-	ESBUIPlatform_PS4                                                                = 2,
-	ESBUIPlatform_PS5                                                                = 4,
-	ESBUIPlatform_XBoxOne                                                            = 8,
-	ESBUIPlatform_All                                                                = 15
+	Unknown                                                                          = 0,
+	Windows                                                                          = 1,
+	PS4                                                                              = 2,
+	PS5                                                                              = 4,
+	XBoxOne                                                                          = 8,
+	All                                                                              = 15
 };
 
 /// Enum /Script/SB.ESBUISettingPopupType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingPopupType : uint8_t
 {
-	ESBUISettingPopupType__None                                                      = 0,
-	ESBUISettingPopupType__DisplaySetting                                            = 205,
-	ESBUISettingPopupType__PersonalInfo                                              = 141
+	None                                                                             = 0,
+	DisplaySetting                                                                   = 205,
+	PersonalInfo                                                                     = 141
 };
 
 /// Enum /Script/SB.ESBUISettingShowInNightOperationType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingShowInNightOperationType : uint8_t
 {
-	ESBUISettingShowInNightOperationType__None                                       = 0,
-	ESBUISettingShowInNightOperationType__Hide                                       = 1,
-	ESBUISettingShowInNightOperationType__Show                                       = 2
+	None                                                                             = 0,
+	Hide                                                                             = 1,
+	Show                                                                             = 2
 };
 
 /// Enum /Script/SB.ESBUISettingButtonType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingButtonType : uint8_t
 {
-	ESBUISettingButtonType__None                                                     = 0,
-	ESBUISettingButtonType__OpenPopup                                                = 1,
-	ESBUISettingButtonType__Game_Quit                                                = 2,
-	ESBUISettingButtonType__Game_ApplicationQuit                                     = 3,
-	ESBUISettingButtonType__GamePlay_Restart                                         = 4,
-	ESBUISettingButtonType__GamePlay_NightOperationGiveUp                            = 5,
-	ESBUISettingButtonType__PhotoMode_EnterPhotoMode                                 = 6,
-	ESBUISettingButtonType__System_PersonalInfo                                      = 7,
-	ESBUISettingButtonType__CreateUI                                                 = 8,
-	ESBUISettingButtonType__CreateKeyMappingViewerPad                                = 9,
-	ESBUISettingButtonType__CreateKeyMappingViewerKeyboardMouse                      = 10,
-	ESBUISettingButtonType__Accessibility_MotionSicknessPreset                       = 11,
-	ESBUISettingButtonType__Accessibility_MotorPreset                                = 12,
-	ESBUISettingButtonType__Accessibility_VisualPreset                               = 13,
-	ESBUISettingButtonType__Accessibility_SoundPreset                                = 14
+	None                                                                             = 0,
+	OpenPopup                                                                        = 1,
+	Game_Quit                                                                        = 2,
+	Game_ApplicationQuit                                                             = 3,
+	GamePlay_Restart                                                                 = 4,
+	GamePlay_NightOperationGiveUp                                                    = 5,
+	PhotoMode_EnterPhotoMode                                                         = 6,
+	System_PersonalInfo                                                              = 7,
+	CreateUI                                                                         = 8,
+	CreateKeyMappingViewerPad                                                        = 9,
+	CreateKeyMappingViewerKeyboardMouse                                              = 10,
+	Accessibility_MotionSicknessPreset                                               = 11,
+	Accessibility_MotorPreset                                                        = 12,
+	Accessibility_VisualPreset                                                       = 13,
+	Accessibility_SoundPreset                                                        = 14
 };
 
 /// Enum /Script/SB.ESBUISettingRadioBoxType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingRadioBoxType : uint8_t
 {
-	ESBUISettingRadioBoxType__None                                                   = 0,
-	ESBUISettingRadioBoxType__Display_GraphicMode                                    = 1,
-	ESBUISettingRadioBoxType__Display_HighContrastType                               = 2
+	None                                                                             = 0,
+	Display_GraphicMode                                                              = 1,
+	Display_HighContrastType                                                         = 2
 };
 
 /// Enum /Script/SB.ESBUISettingSliderType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingSliderType : uint8_t
 {
-	ESBUISettingSliderType__None                                                     = 0,
-	ESBUISettingSliderType__Display_Gamma                                            = 1,
-	ESBUISettingSliderType__Display_HDRBrightness                                    = 2,
-	ESBUISettingSliderType__Display_HDRContrast                                      = 3,
-	ESBUISettingSliderType__Display_HDRClampMin                                      = 4,
-	ESBUISettingSliderType__Display_HDRClampMax                                      = 5,
-	ESBUISettingSliderType__Display_HDRAdditionalMinLuminance                        = 6,
-	ESBUISettingSliderType__Display_HDRAdditionalMaxLuminance                        = 7,
-	ESBUISettingSliderType__Display_HDRUILevel                                       = 8,
-	ESBUISettingSliderType__Display_GraphicSharpen                                   = 9,
-	ESBUISettingSliderType__Display_GraphicSharpen_DLSS                              = 10,
-	ESBUISettingSliderType__Display_GraphicSharpen_FSR3                              = 11,
-	ESBUISettingSliderType__Display_GraphicResolutionScale                           = 12,
-	ESBUISettingSliderType__Display_GraphicCharacterViewDistance                     = 13,
-	ESBUISettingSliderType__Display_GraphicEnviromentObjectViewDistance              = 14,
-	ESBUISettingSliderType__Sound_MasterVolume                                       = 15,
-	ESBUISettingSliderType__Sound_BGMVolume                                          = 16,
-	ESBUISettingSliderType__Sound_DialogVolume                                       = 17,
-	ESBUISettingSliderType__Sound_SEVolume                                           = 18,
-	ESBUISettingSliderType__Accessibility_MotionBlurScale                            = 19,
-	ESBUISettingSliderType__Accessibility_ColorBlindScale                            = 20,
-	ESBUISettingSliderType__Accessibility_ItemEquipHold                              = 21,
-	ESBUISettingSliderType__CameraNormalSensitivity_Horizental                       = 22,
-	ESBUISettingSliderType__CameraNormalSensitivity_Vertical                         = 23,
-	ESBUISettingSliderType__CameraTPSSensitivity_Horizental                          = 24,
-	ESBUISettingSliderType__CameraTPSSensitivity_Vertical                            = 25,
-	ESBUISettingSliderType__Control_TPSAimSlowDownAdditiveScale                      = 26,
-	ESBUISettingSliderType__Control_TPSAimSlowDownAdditiveScale_Mouse                = 27,
-	ESBUISettingSliderType__Control_HapticScale                                      = 28,
-	ESBUISettingSliderType__Control_ControllerSpeakerVolume                          = 29,
-	ESBUISettingSliderType__Control_LockOnMoveSensitivity                            = 30,
-	ESBUISettingSliderType__CameraShake_IntensityScale                               = 31,
-	ESBUISettingSliderType__MouseCameraNormalSensitivity_Horizental                  = 32,
-	ESBUISettingSliderType__MouseCameraNormalSensitivity_Vertical                    = 33,
-	ESBUISettingSliderType__MouseCameraTPSSensitivity_Horizental                     = 34,
-	ESBUISettingSliderType__MouseCameraTPSSensitivity_Vertical                       = 35,
-	ESBUISettingSliderType__Num                                                      = 36
+	None                                                                             = 0,
+	Display_Gamma                                                                    = 1,
+	Display_HDRBrightness                                                            = 2,
+	Display_HDRContrast                                                              = 3,
+	Display_HDRClampMin                                                              = 4,
+	Display_HDRClampMax                                                              = 5,
+	Display_HDRAdditionalMinLuminance                                                = 6,
+	Display_HDRAdditionalMaxLuminance                                                = 7,
+	Display_HDRUILevel                                                               = 8,
+	Display_GraphicSharpen                                                           = 9,
+	Display_GraphicSharpen_DLSS                                                      = 10,
+	Display_GraphicSharpen_FSR3                                                      = 11,
+	Display_GraphicResolutionScale                                                   = 12,
+	Display_GraphicCharacterViewDistance                                             = 13,
+	Display_GraphicEnviromentObjectViewDistance                                      = 14,
+	Sound_MasterVolume                                                               = 15,
+	Sound_BGMVolume                                                                  = 16,
+	Sound_DialogVolume                                                               = 17,
+	Sound_SEVolume                                                                   = 18,
+	Accessibility_MotionBlurScale                                                    = 19,
+	Accessibility_ColorBlindScale                                                    = 20,
+	Accessibility_ItemEquipHold                                                      = 21,
+	CameraNormalSensitivity_Horizental                                               = 22,
+	CameraNormalSensitivity_Vertical                                                 = 23,
+	CameraTPSSensitivity_Horizental                                                  = 24,
+	CameraTPSSensitivity_Vertical                                                    = 25,
+	Control_TPSAimSlowDownAdditiveScale                                              = 26,
+	Control_TPSAimSlowDownAdditiveScale_Mouse                                        = 27,
+	Control_HapticScale                                                              = 28,
+	Control_ControllerSpeakerVolume                                                  = 29,
+	Control_LockOnMoveSensitivity                                                    = 30,
+	CameraShake_IntensityScale                                                       = 31,
+	MouseCameraNormalSensitivity_Horizental                                          = 32,
+	MouseCameraNormalSensitivity_Vertical                                            = 33,
+	MouseCameraTPSSensitivity_Horizental                                             = 34,
+	MouseCameraTPSSensitivity_Vertical                                               = 35,
+	Num                                                                              = 36
 };
 
 /// Enum /Script/SB.ESBUISettingRollingWidgetType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingRollingWidgetType : uint8_t
 {
-	ESBUISettingRollingWidgetType__Rolling                                           = 0,
-	ESBUISettingRollingWidgetType__ComboBox                                          = 1
+	Rolling                                                                          = 0,
+	ComboBox                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBUISettingRollingType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingRollingType : uint8_t
 {
-	ESBUISettingRollingType__None                                                    = 0,
-	ESBUISettingRollingType__Display_Resolution                                      = 1,
-	ESBUISettingRollingType__Display_AspectRatio                                     = 2,
-	ESBUISettingRollingType__Display_ScreenType                                      = 3,
-	ESBUISettingRollingType__Display_VSync                                           = 4,
-	ESBUISettingRollingType__Display_FrameLimit                                      = 5,
-	ESBUISettingRollingType__Display_MonitorSwitch                                   = 6,
-	ESBUISettingRollingType__Display_Gamma                                           = 7,
-	ESBUISettingRollingType__Display_HDR                                             = 8,
-	ESBUISettingRollingType__Display_GraphicMode                                     = 9,
-	ESBUISettingRollingType__Display_GraphicPreset                                   = 10,
-	ESBUISettingRollingType__Display_GraphicEnviromentObjectDetail                   = 11,
-	ESBUISettingRollingType__Display_GraphicCharacterObjectDetail                    = 12,
-	ESBUISettingRollingType__Display_GraphicEnviromentTextures                       = 13,
-	ESBUISettingRollingType__Display_GraphicCharacterTextures                        = 14,
-	ESBUISettingRollingType__Display_GraphicAnisotropicFiltering                     = 15,
-	ESBUISettingRollingType__Display_GraphicVolumetricFog                            = 16,
-	ESBUISettingRollingType__Display_GraphicShadowQuality                            = 17,
-	ESBUISettingRollingType__Display_GraphicEffectQuality                            = 18,
-	ESBUISettingRollingType__Display_GraphicEnvironmentQuality                       = 19,
-	ESBUISettingRollingType__Display_GraphicLighting                                 = 20,
-	ESBUISettingRollingType__Display_GraphicFoliageQuality                           = 21,
-	ESBUISettingRollingType__Display_GraphicAmbientOcclusion                         = 22,
-	ESBUISettingRollingType__Display_GraphicDepthOfField                             = 23,
-	ESBUISettingRollingType__Display_GraphicScreenSpaceReflection                    = 24,
-	ESBUISettingRollingType__Display_GraphicAntiAliasing                             = 25,
-	ESBUISettingRollingType__Display_GraphicResolutionScalingType                    = 26,
-	ESBUISettingRollingType__Display_GraphicNvidiaDLSS                               = 27,
-	ESBUISettingRollingType__Display_GraphicNvidiaFrameGeneration                    = 28,
-	ESBUISettingRollingType__Display_GraphicNvidiaReflexLowLatency                   = 29,
-	ESBUISettingRollingType__Display_GraphicAmdFSR3                                  = 30,
-	ESBUISettingRollingType__Display_GraphicAmdFrameInterpolation                    = 31,
-	ESBUISettingRollingType__Display_GraphicIntelXeSS                                = 32,
-	ESBUISettingRollingType__Display_GraphicAnimationQuality                         = 33,
-	ESBUISettingRollingType__Display_HDDMode                                         = 34,
-	ESBUISettingRollingType__Display_SubtitleVisible                                 = 35,
-	ESBUISettingRollingType__Display_SubtitleSize                                    = 36,
-	ESBUISettingRollingType__Display_SubtitleBG                                      = 37,
-	ESBUISettingRollingType__Display_SubtitleAuthor                                  = 38,
-	ESBUISettingRollingType__Display_HUDSize                                         = 39,
-	ESBUISettingRollingType__Display_HUDBG                                           = 40,
-	ESBUISettingRollingType__Display_HUDShow                                         = 41,
-	ESBUISettingRollingType__Display_Compass                                         = 42,
-	ESBUISettingRollingType__Display_AntiAliasingQuality                             = 43,
-	ESBUISettingRollingType__Display_ResolutionQuality                               = 44,
-	ESBUISettingRollingType__Display_FilmGrain                                       = 45,
-	ESBUISettingRollingType__Display_ColorFringe                                     = 46,
-	ESBUISettingRollingType__Display_HFR                                             = 47,
-	ESBUISettingRollingType__Display_HUDAspectRatio                                  = 48,
-	ESBUISettingRollingType__Display_LockMouseOnWindow                               = 49,
-	ESBUISettingRollingType__Localize_Language                                       = 50,
-	ESBUISettingRollingType__Localize_Voice                                          = 51,
-	ESBUISettingRollingType__Sound_AudioDeviceType                                   = 52,
-	ESBUISettingRollingType__Sound_ControllerSpeaker                                 = 53,
-	ESBUISettingRollingType__Sound_MuteWhenUnfocus                                   = 54,
-	ESBUISettingRollingType__Develop_RecordMode                                      = 55,
-	ESBUISettingRollingType__Develop_MinimizeUI                                      = 56,
-	ESBUISettingRollingType__Develop_NetworkPlay                                     = 57,
-	ESBUISettingRollingType__GamePlay_Difficulty                                     = 58,
-	ESBUISettingRollingType__GamePlay_Hint                                           = 59,
-	ESBUISettingRollingType__GamePlay_Restart                                        = 60,
-	ESBUISettingRollingType__GamePlay_NightOperationGiveUp                           = 61,
-	ESBUISettingRollingType__GamePlay_Tutorial                                       = 62,
-	ESBUISettingRollingType__GamePlay_RecordPopup                                    = 63,
-	ESBUISettingRollingType__GamePlay_PonytailLength                                 = 64,
-	ESBUISettingRollingType__GamePlay_ActionAssist                                   = 65,
-	ESBUISettingRollingType__GamePlay_VisibleSkipUI                                  = 66,
-	ESBUISettingRollingType__GamePlay_EventContents                                  = 67,
-	ESBUISettingRollingType__GamePlay_DLCContents                                    = 68,
-	ESBUISettingRollingType__Accessibility_ItemAutoInteraction                       = 69,
-	ESBUISettingRollingType__Accessibility_QTEForceSuccess                           = 70,
-	ESBUISettingRollingType__Accessibility_HUDCenterDot                              = 71,
-	ESBUISettingRollingType__Accessibility_ColorBlind                                = 72,
-	ESBUISettingRollingType__Accessibility_HighContrast                              = 73,
-	ESBUISettingRollingType__Accessibility_FishingAssist                             = 74,
-	ESBUISettingRollingType__Accessibility_PuzzleTimeLimit                           = 75,
-	ESBUISettingRollingType__Accessibility_ItemEquipHold                             = 76,
-	ESBUISettingRollingType__Accessibility_EasyPlatformAction                        = 77,
-	ESBUISettingRollingType__Accessibility_HUDViewStatValue                          = 78,
-	ESBUISettingRollingType__Accessibility_MotionSicknessPreset                      = 79,
-	ESBUISettingRollingType__Accessibility_MotorPreset                               = 80,
-	ESBUISettingRollingType__Accessibility_VisualPreset                              = 81,
-	ESBUISettingRollingType__Accessibility_SoundPreset                               = 82,
-	ESBUISettingRollingType__Interface_UMPCMode                                      = 83,
-	ESBUISettingRollingType__CameraHorizentalInvert                                  = 84,
-	ESBUISettingRollingType__CameraVerticalnvert                                     = 85,
-	ESBUISettingRollingType__CameraAutoRotate                                        = 86,
-	ESBUISettingRollingType__CameraAutoRotate_Mouse                                  = 87,
-	ESBUISettingRollingType__AdaptiveTrigger                                         = 88,
-	ESBUISettingRollingType__Control_AutoLockOn                                      = 89,
-	ESBUISettingRollingType__Control_AutoLockOn_Mouse                                = 90,
-	ESBUISettingRollingType__Control_AutoLockOnAfterTPS                              = 91,
-	ESBUISettingRollingType__Control_AutoLockOnAfterTPS_Mouse                        = 92,
-	ESBUISettingRollingType__Control_SwipeShortCutUp                                 = 93,
-	ESBUISettingRollingType__Control_SwipeShortCutDown                               = 94,
-	ESBUISettingRollingType__Control_SwipeShortCutLeft                               = 95,
-	ESBUISettingRollingType__Control_SwipeShortCutRight                              = 96,
-	ESBUISettingRollingType__Control_ReverseOKCancel                                 = 97,
-	ESBUISettingRollingType__Control_ReverseLRStick                                  = 98,
-	ESBUISettingRollingType__Control_WalkKeyInputType_Pad                            = 99,
-	ESBUISettingRollingType__Control_TPSKeyInputType_Pad                             = 100,
-	ESBUISettingRollingType__Control_WalkKeyInputType_Mouse                          = 101,
-	ESBUISettingRollingType__Control_TPSKeyInputType_Mouse                           = 102,
-	ESBUISettingRollingType__Control_FishingSystem                                   = 103,
-	ESBUISettingRollingType__Control_RangeModeAimAlign                               = 104,
-	ESBUISettingRollingType__Control_RangeModeAimAlign_Mouse                         = 105,
-	ESBUISettingRollingType__Control_RangeModeShotCorrection                         = 106,
-	ESBUISettingRollingType__Control_RangeModeShotCorrection_Mouse                   = 107,
-	ESBUISettingRollingType__Control_MouseLockOnMove                                 = 108,
-	ESBUISettingRollingType__MouseCameraHorizentalInvert                             = 109,
-	ESBUISettingRollingType__MouseCameraVerticalnvert                                = 110,
-	ESBUISettingRollingType__Num                                                     = 111
+	None                                                                             = 0,
+	Display_Resolution                                                               = 1,
+	Display_AspectRatio                                                              = 2,
+	Display_ScreenType                                                               = 3,
+	Display_VSync                                                                    = 4,
+	Display_FrameLimit                                                               = 5,
+	Display_MonitorSwitch                                                            = 6,
+	Display_Gamma                                                                    = 7,
+	Display_HDR                                                                      = 8,
+	Display_GraphicMode                                                              = 9,
+	Display_GraphicPreset                                                            = 10,
+	Display_GraphicEnviromentObjectDetail                                            = 11,
+	Display_GraphicCharacterObjectDetail                                             = 12,
+	Display_GraphicEnviromentTextures                                                = 13,
+	Display_GraphicCharacterTextures                                                 = 14,
+	Display_GraphicAnisotropicFiltering                                              = 15,
+	Display_GraphicVolumetricFog                                                     = 16,
+	Display_GraphicShadowQuality                                                     = 17,
+	Display_GraphicEffectQuality                                                     = 18,
+	Display_GraphicEnvironmentQuality                                                = 19,
+	Display_GraphicLighting                                                          = 20,
+	Display_GraphicFoliageQuality                                                    = 21,
+	Display_GraphicAmbientOcclusion                                                  = 22,
+	Display_GraphicDepthOfField                                                      = 23,
+	Display_GraphicScreenSpaceReflection                                             = 24,
+	Display_GraphicAntiAliasing                                                      = 25,
+	Display_GraphicResolutionScalingType                                             = 26,
+	Display_GraphicNvidiaDLSS                                                        = 27,
+	Display_GraphicNvidiaFrameGeneration                                             = 28,
+	Display_GraphicNvidiaReflexLowLatency                                            = 29,
+	Display_GraphicAmdFSR3                                                           = 30,
+	Display_GraphicAmdFrameInterpolation                                             = 31,
+	Display_GraphicIntelXeSS                                                         = 32,
+	Display_GraphicAnimationQuality                                                  = 33,
+	Display_HDDMode                                                                  = 34,
+	Display_SubtitleVisible                                                          = 35,
+	Display_SubtitleSize                                                             = 36,
+	Display_SubtitleBG                                                               = 37,
+	Display_SubtitleAuthor                                                           = 38,
+	Display_HUDSize                                                                  = 39,
+	Display_HUDBG                                                                    = 40,
+	Display_HUDShow                                                                  = 41,
+	Display_Compass                                                                  = 42,
+	Display_AntiAliasingQuality                                                      = 43,
+	Display_ResolutionQuality                                                        = 44,
+	Display_FilmGrain                                                                = 45,
+	Display_ColorFringe                                                              = 46,
+	Display_HFR                                                                      = 47,
+	Display_HUDAspectRatio                                                           = 48,
+	Display_LockMouseOnWindow                                                        = 49,
+	Localize_Language                                                                = 50,
+	Localize_Voice                                                                   = 51,
+	Sound_AudioDeviceType                                                            = 52,
+	Sound_ControllerSpeaker                                                          = 53,
+	Sound_MuteWhenUnfocus                                                            = 54,
+	Develop_RecordMode                                                               = 55,
+	Develop_MinimizeUI                                                               = 56,
+	Develop_NetworkPlay                                                              = 57,
+	GamePlay_Difficulty                                                              = 58,
+	GamePlay_Hint                                                                    = 59,
+	GamePlay_Restart                                                                 = 60,
+	GamePlay_NightOperationGiveUp                                                    = 61,
+	GamePlay_Tutorial                                                                = 62,
+	GamePlay_RecordPopup                                                             = 63,
+	GamePlay_PonytailLength                                                          = 64,
+	GamePlay_ActionAssist                                                            = 65,
+	GamePlay_VisibleSkipUI                                                           = 66,
+	GamePlay_EventContents                                                           = 67,
+	GamePlay_DLCContents                                                             = 68,
+	Accessibility_ItemAutoInteraction                                                = 69,
+	Accessibility_QTEForceSuccess                                                    = 70,
+	Accessibility_HUDCenterDot                                                       = 71,
+	Accessibility_ColorBlind                                                         = 72,
+	Accessibility_HighContrast                                                       = 73,
+	Accessibility_FishingAssist                                                      = 74,
+	Accessibility_PuzzleTimeLimit                                                    = 75,
+	Accessibility_ItemEquipHold                                                      = 76,
+	Accessibility_EasyPlatformAction                                                 = 77,
+	Accessibility_HUDViewStatValue                                                   = 78,
+	Accessibility_MotionSicknessPreset                                               = 79,
+	Accessibility_MotorPreset                                                        = 80,
+	Accessibility_VisualPreset                                                       = 81,
+	Accessibility_SoundPreset                                                        = 82,
+	Interface_UMPCMode                                                               = 83,
+	CameraHorizentalInvert                                                           = 84,
+	CameraVerticalnvert                                                              = 85,
+	CameraAutoRotate                                                                 = 86,
+	CameraAutoRotate_Mouse                                                           = 87,
+	AdaptiveTrigger                                                                  = 88,
+	Control_AutoLockOn                                                               = 89,
+	Control_AutoLockOn_Mouse                                                         = 90,
+	Control_AutoLockOnAfterTPS                                                       = 91,
+	Control_AutoLockOnAfterTPS_Mouse                                                 = 92,
+	Control_SwipeShortCutUp                                                          = 93,
+	Control_SwipeShortCutDown                                                        = 94,
+	Control_SwipeShortCutLeft                                                        = 95,
+	Control_SwipeShortCutRight                                                       = 96,
+	Control_ReverseOKCancel                                                          = 97,
+	Control_ReverseLRStick                                                           = 98,
+	Control_WalkKeyInputType_Pad                                                     = 99,
+	Control_TPSKeyInputType_Pad                                                      = 100,
+	Control_WalkKeyInputType_Mouse                                                   = 101,
+	Control_TPSKeyInputType_Mouse                                                    = 102,
+	Control_FishingSystem                                                            = 103,
+	Control_RangeModeAimAlign                                                        = 104,
+	Control_RangeModeAimAlign_Mouse                                                  = 105,
+	Control_RangeModeShotCorrection                                                  = 106,
+	Control_RangeModeShotCorrection_Mouse                                            = 107,
+	Control_MouseLockOnMove                                                          = 108,
+	MouseCameraHorizentalInvert                                                      = 109,
+	MouseCameraVerticalnvert                                                         = 110,
+	Num                                                                              = 111
 };
 
 /// Enum /Script/SB.ESBUISettingState
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingState : uint8_t
 {
-	ESBUISettingState__None                                                          = 0,
-	ESBUISettingState__FocusSideTab                                                  = 1,
-	ESBUISettingState__FocusDetail                                                   = 2,
-	ESBUISettingState__SelectDetailSlot                                              = 3
+	None                                                                             = 0,
+	FocusSideTab                                                                     = 1,
+	FocusDetail                                                                      = 2,
+	SelectDetailSlot                                                                 = 3
 };
 
 /// Enum /Script/SB.ESBUISettingType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISettingType : uint8_t
 {
-	ESBUISettingType_None                                                            = 0,
-	ESBUISettingType_GameMenu                                                        = 1,
-	ESBUISettingType_Lobby                                                           = 2,
-	ESBUISettingType_All                                                             = 3
+	None                                                                             = 0,
+	GameMenu                                                                         = 1,
+	Lobby                                                                            = 2,
+	All                                                                              = 3
 };
 
 /// Enum /Script/SB.ESBUIExospineEnhanceState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIExospineEnhanceState : uint8_t
 {
-	ESBUIExospineEnhanceState__None                                                  = 0,
-	ESBUIExospineEnhanceState__CanEnhance                                            = 1,
-	ESBUIExospineEnhanceState__MaxLevel                                              = 2,
-	ESBUIExospineEnhanceState__NotEnoughMaterial                                     = 3
+	None                                                                             = 0,
+	CanEnhance                                                                       = 1,
+	MaxLevel                                                                         = 2,
+	NotEnoughMaterial                                                                = 3
 };
 
 /// Enum /Script/SB.ESBUINanoSuitCraftState
 /// Size: 0x01 (1 bytes)
 enum class ESBUINanoSuitCraftState : uint8_t
 {
-	ESBUINanoSuitCraftState__Enable                                                  = 0,
-	ESBUINanoSuitCraftState__Disable                                                 = 1,
-	ESBUINanoSuitCraftState__Complete                                                = 2
+	Enable                                                                           = 0,
+	Disable                                                                          = 1,
+	Complete                                                                         = 2
 };
 
 /// Enum /Script/SB.ESBUITrackingQuestType
 /// Size: 0x01 (1 bytes)
 enum class ESBUITrackingQuestType : uint8_t
 {
-	ESBUITrackingQuestType_Epic                                                      = 0,
-	ESBUITrackingQuestType_Sub                                                       = 1,
-	ESBUITrackingQuestType_Request                                                   = 2
+	Epic                                                                             = 0,
+	Sub                                                                              = 1,
+	Request                                                                          = 2
 };
 
 /// Enum /Script/SB.ESBUITrackingContainerType
 /// Size: 0x01 (1 bytes)
 enum class ESBUITrackingContainerType : uint8_t
 {
-	ESBUITrackingContainerType_None                                                  = 0,
-	ESBUITrackingContainerType_Instance                                              = 1,
-	ESBUITrackingContainerType_SpawnPoint                                            = 2,
-	ESBUITrackingContainerType_SaveData                                              = 3
+	None                                                                             = 0,
+	Instance                                                                         = 1,
+	SpawnPoint                                                                       = 2,
+	SaveData                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBUITrackingMarkerWidgetType
 /// Size: 0x01 (1 bytes)
 enum class ESBUITrackingMarkerWidgetType : uint8_t
 {
-	ESBUITrackingMarkerWidgetType_World                                              = 0,
-	ESBUITrackingMarkerWidgetType_Compass                                            = 1
+	World                                                                            = 0,
+	Compass                                                                          = 1
 };
 
 /// Enum /Script/SB.ESBUITrackingType
 /// Size: 0x01 (1 bytes)
 enum class ESBUITrackingType : uint8_t
 {
-	ESBUITrackingType_None                                                           = 0,
-	ESBUITrackingType_Character                                                      = 1,
-	ESBUITrackingType_ZoneEnv                                                        = 2,
-	ESBUITrackingType_ZoneTrigger                                                    = 3,
-	ESBUITrackingType_PathNode                                                       = 4,
-	ESBUITrackingType_Max                                                            = 5
+	None                                                                             = 0,
+	Character                                                                        = 1,
+	ZoneEnv                                                                          = 2,
+	ZoneTrigger                                                                      = 3,
+	PathNode                                                                         = 4,
+	Max                                                                              = 5
 };
 
 /// Enum /Script/SB.ESBUITrackingMarkerType
 /// Size: 0x01 (1 bytes)
 enum class ESBUITrackingMarkerType : uint8_t
 {
-	ESBUITrackingMarkerType_None                                                     = 0,
-	ESBUITrackingMarkerType_Target                                                   = 1,
-	ESBUITrackingMarkerType_Portal                                                   = 2,
-	ESBUITrackingMarkerType_Max                                                      = 3
+	None                                                                             = 0,
+	Target                                                                           = 1,
+	Portal                                                                           = 2,
+	Max                                                                              = 3
 };
 
 /// Enum /Script/SB.ESBUIHUDNotifyUpdateType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIHUDNotifyUpdateType : uint8_t
 {
-	ESBUIHUDNotifyUpdateType__None                                                   = 0,
-	ESBUIHUDNotifyUpdateType__Album                                                  = 1,
-	ESBUIHUDNotifyUpdateType__Quest                                                  = 2,
-	ESBUIHUDNotifyUpdateType__Turntable                                              = 3
+	None                                                                             = 0,
+	Album                                                                            = 1,
+	Quest                                                                            = 2,
+	Turntable                                                                        = 3
 };
 
 /// Enum /Script/SB.ESBUIHUDNotifyGroupType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIHUDNotifyGroupType : uint8_t
 {
-	ESBUIHUDNotifyGroupType_None                                                     = 0,
-	ESBUIHUDNotifyGroupType_TopCenter1                                               = 1,
-	ESBUIHUDNotifyGroupType_TopCenter2                                               = 2,
-	ESBUIHUDNotifyGroupType_TopRight1                                                = 3,
-	ESBUIHUDNotifyGroupType_MiddleLeft1                                              = 4,
-	ESBUIHUDNotifyGroupType_MiddleCenter1                                            = 5,
-	ESBUIHUDNotifyGroupType_MiddleCenter2                                            = 6,
-	ESBUIHUDNotifyGroupType_MiddleRight1                                             = 7,
-	ESBUIHUDNotifyGroupType_Max                                                      = 8
+	None                                                                             = 0,
+	TopCenter1                                                                       = 1,
+	TopCenter2                                                                       = 2,
+	TopRight1                                                                        = 3,
+	MiddleLeft1                                                                      = 4,
+	MiddleCenter1                                                                    = 5,
+	MiddleCenter2                                                                    = 6,
+	MiddleRight1                                                                     = 7,
+	Max                                                                              = 8
 };
 
 /// Enum /Script/SB.ESBUIActionFinishType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIActionFinishType : uint8_t
 {
-	ESBUIActionFinishType_None                                                       = 0,
-	ESBUIActionFinishType_Time                                                       = 1,
-	ESBUIActionFinishType_Close                                                      = 2,
-	ESBUIActionFinishType_TimeWithClose                                              = 3
+	None                                                                             = 0,
+	Time                                                                             = 1,
+	Close                                                                            = 2,
+	TimeWithClose                                                                    = 3
 };
 
 /// Enum /Script/SB.ESBUIActionExecuteType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIActionExecuteType : uint8_t
 {
-	ESBUIActionExecuteType_None                                                      = 0,
-	ESBUIActionExecuteType_LogicCreate                                               = 1,
-	ESBUIActionExecuteType_LogicEvent                                                = 2,
-	ESBUIActionExecuteType_WidgetCreate                                              = 3,
-	ESBUIActionExecuteType_InputBlock                                                = 4
+	None                                                                             = 0,
+	LogicCreate                                                                      = 1,
+	LogicEvent                                                                       = 2,
+	WidgetCreate                                                                     = 3,
+	InputBlock                                                                       = 4
 };
 
 /// Enum /Script/SB.ESBUIDeadHUDState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIDeadHUDState : uint8_t
 {
-	ESBUIDeadHUDState__Hidden                                                        = 0,
-	ESBUIDeadHUDState__Dead                                                          = 1,
-	ESBUIDeadHUDState__DeadRespawn                                                   = 2,
-	ESBUIDeadHUDState__Coma                                                          = 3,
-	ESBUIDeadHUDState__ComaRevival                                                   = 4,
-	ESBUIDeadHUDState__ComaRespawn                                                   = 5,
-	ESBUIDeadHUDState__ExistBossChallenge                                            = 6
+	Hidden                                                                           = 0,
+	Dead                                                                             = 1,
+	DeadRespawn                                                                      = 2,
+	Coma                                                                             = 3,
+	ComaRevival                                                                      = 4,
+	ComaRespawn                                                                      = 5,
+	ExistBossChallenge                                                               = 6
 };
 
 /// Enum /Script/SB.ESBUILogicHUDSkillModeType
 /// Size: 0x01 (1 bytes)
 enum class ESBUILogicHUDSkillModeType : uint8_t
 {
-	ESBUILogicHUDSkillModeType_Beta                                                  = 0,
-	ESBUILogicHUDSkillModeType_Burst                                                 = 1,
-	ESBUILogicHUDSkillModeType_Tachy                                                 = 2,
-	ESBUILogicHUDSkillModeType_Dash                                                  = 3
+	Beta                                                                             = 0,
+	Burst                                                                            = 1,
+	Tachy                                                                            = 2,
+	Dash                                                                             = 3
 };
 
 /// Enum /Script/SB.ESBUILoadingScreenTag
 /// Size: 0x01 (1 bytes)
 enum class ESBUILoadingScreenTag : uint8_t
 {
-	ESBUILoadingScreenTag__None                                                      = 0,
-	ESBUILoadingScreenTag__LevelSequence                                             = 1,
-	ESBUILoadingScreenTag__Shop                                                      = 2,
-	ESBUILoadingScreenTag__StudioActor                                               = 3,
-	ESBUILoadingScreenTag__PhotoMode                                                 = 4,
-	ESBUILoadingScreenTag__Load                                                      = 5
+	None                                                                             = 0,
+	LevelSequence                                                                    = 1,
+	Shop                                                                             = 2,
+	StudioActor                                                                      = 3,
+	PhotoMode                                                                        = 4,
+	Load                                                                             = 5
 };
 
 /// Enum /Script/SB.ESBUILogicHUDScanFieldType
 /// Size: 0x01 (1 bytes)
 enum class ESBUILogicHUDScanFieldType : uint8_t
 {
-	ESBUILogicHUDScanFieldType_None                                                  = 0,
-	ESBUILogicHUDScanFieldType_Actor                                                 = 1,
-	ESBUILogicHUDScanFieldType_Weak                                                  = 2,
-	ESBUILogicHUDScanFieldType_Item                                                  = 3,
-	ESBUILogicHUDScanFieldType_EventMove                                             = 4,
-	ESBUILogicHUDScanFieldType_ZoneEnv                                               = 5
+	None                                                                             = 0,
+	Actor                                                                            = 1,
+	Weak                                                                             = 2,
+	Item                                                                             = 3,
+	EventMove                                                                        = 4,
+	ZoneEnv                                                                          = 5
 };
 
 /// Enum /Script/SB.ESBUIHUDModeType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIHUDModeType : uint8_t
 {
-	ESBUIHUDModeType_Normal                                                          = 0,
-	ESBUIHUDModeType_HPOnly                                                          = 1,
-	ESBUIHUDModeType_ItemBlockOnly                                                   = 2,
-	ESBUIHUDModeType_Fishing                                                         = 3,
-	ESBUIHUDModeType_TachyMode                                                       = 4,
-	ESBUIHUDModeType_TPS                                                             = 5,
-	ESBUIHUDModeType_TPSNikke                                                        = 6,
-	ESBUIHUDModeType_Fusion2Mode                                                     = 7
+	Normal                                                                           = 0,
+	HPOnly                                                                           = 1,
+	ItemBlockOnly                                                                    = 2,
+	Fishing                                                                          = 3,
+	TachyMode                                                                        = 4,
+	TPS                                                                              = 5,
+	TPSNikke                                                                         = 6,
+	Fusion2Mode                                                                      = 7
 };
 
 /// Enum /Script/SB.ESBUIInteractableState
 /// Size: 0x01 (1 bytes)
 enum class ESBUIInteractableState : uint8_t
 {
-	ESBUIInteractableState__Interactable                                             = 0,
-	ESBUIInteractableState__Battle                                                   = 1,
-	ESBUIInteractableState__Dialogue                                                 = 2,
-	ESBUIInteractableState__Unknown                                                  = 3
+	Interactable                                                                     = 0,
+	Battle                                                                           = 1,
+	Dialogue                                                                         = 2,
+	Unknown                                                                          = 3
 };
 
 /// Enum /Script/SB.ESBUICommonMessageBoxButtonType
 /// Size: 0x01 (1 bytes)
 enum class ESBUICommonMessageBoxButtonType : uint8_t
 {
-	ESBUICommonMessageBoxButtonType__None                                            = 0,
-	ESBUICommonMessageBoxButtonType__Close                                           = 1,
-	ESBUICommonMessageBoxButtonType__PositiveNegative                                = 2,
-	ESBUICommonMessageBoxButtonType__YesNo                                           = 3,
-	ESBUICommonMessageBoxButtonType__HoldYesNo                                       = 4,
-	ESBUICommonMessageBoxButtonType__HoldIgnoreRetry                                 = 5,
-	ESBUICommonMessageBoxButtonType__ConfirmCancel                                   = 6,
-	ESBUICommonMessageBoxButtonType__HoldConfirmCancel                               = 7,
-	ESBUICommonMessageBoxButtonType__ConfirmDontAgain                                = 8
+	None                                                                             = 0,
+	Close                                                                            = 1,
+	PositiveNegative                                                                 = 2,
+	YesNo                                                                            = 3,
+	HoldYesNo                                                                        = 4,
+	HoldIgnoreRetry                                                                  = 5,
+	ConfirmCancel                                                                    = 6,
+	HoldConfirmCancel                                                                = 7,
+	ConfirmDontAgain                                                                 = 8
 };
 
 /// Enum /Script/SB.ESBUIHUDItemSlotType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIHUDItemSlotType : uint8_t
 {
-	ESBUIHUDItemSlotType_None                                                        = 0,
-	ESBUIHUDItemSlotType_Heal                                                        = 1,
-	ESBUIHUDItemSlotType_Util                                                        = 2,
-	ESBUIHUDItemSlotType_Fishing                                                     = 3,
-	ESBUIHUDItemSlotType_Bullet                                                      = 4
+	None                                                                             = 0,
+	Heal                                                                             = 1,
+	Util                                                                             = 2,
+	Fishing                                                                          = 3,
+	Bullet                                                                           = 4
 };
 
 /// Enum /Script/SB.ESBUIShopTabType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIShopTabType : uint8_t
 {
-	ESBUIShopTabType_All                                                             = 0,
-	ESBUIShopTabType_Core                                                            = 1,
-	ESBUIShopTabType_Quest                                                           = 2,
-	ESBUIShopTabType_UsableItem                                                      = 3,
-	ESBUIShopTabType_Bullet                                                          = 4,
-	ESBUIShopTabType_Material                                                        = 5,
-	ESBUIShopTabType_Gear                                                            = 6,
-	ESBUIShopTabType_Recipe                                                          = 7,
-	ESBUIShopTabType_Look                                                            = 8,
-	ESBUIShopTabType_Fish                                                            = 9,
-	ESBUIShopTabType_Etc                                                             = 10,
-	ESBUIShopTabType_Sell                                                            = 11,
-	ESBUIShopTabType_Max                                                             = 12
+	All                                                                              = 0,
+	Core                                                                             = 1,
+	Quest                                                                            = 2,
+	UsableItem                                                                       = 3,
+	Bullet                                                                           = 4,
+	Material                                                                         = 5,
+	Gear                                                                             = 6,
+	Recipe                                                                           = 7,
+	Look                                                                             = 8,
+	Fish                                                                             = 9,
+	Etc                                                                              = 10,
+	Sell                                                                             = 11,
+	Max                                                                              = 12
 };
 
 /// Enum /Script/SB.ESBUIFillCurve
 /// Size: 0x01 (1 bytes)
 enum class ESBUIFillCurve : uint8_t
 {
-	ESBUIFillCurve__Linear                                                           = 0,
-	ESBUIFillCurve__Deceleration                                                     = 1,
-	ESBUIFillCurve__Acceleration                                                     = 2
+	Linear                                                                           = 0,
+	Deceleration                                                                     = 1,
+	Acceleration                                                                     = 2
 };
 
 /// Enum /Script/SB.ESBUIHoldButtonStateType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIHoldButtonStateType : uint8_t
 {
-	ESBUIHoldButtonStateType__None                                                   = 0,
-	ESBUIHoldButtonStateType__Enable                                                 = 1,
-	ESBUIHoldButtonStateType__Disable                                                = 2,
-	ESBUIHoldButtonStateType__Ready                                                  = 3,
-	ESBUIHoldButtonStateType__Hold                                                   = 4,
-	ESBUIHoldButtonStateType__Lock                                                   = 5
+	None                                                                             = 0,
+	Enable                                                                           = 1,
+	Disable                                                                          = 2,
+	Ready                                                                            = 3,
+	Hold                                                                             = 4,
+	Lock                                                                             = 5
 };
 
 /// Enum /Script/SB.ESBUIIndicatorHiddenChannel
 /// Size: 0x01 (1 bytes)
 enum class ESBUIIndicatorHiddenChannel : uint8_t
 {
-	ESBUIIndicatorHiddenChannel_None                                                 = 0,
-	ESBUIIndicatorHiddenChannel                                                      = 2,
-	ESBUIIndicatorHiddenChannel3                                                     = 4,
-	ESBUIIndicatorHiddenChannel4                                                     = 8,
-	ESBUIIndicatorHiddenChannel5                                                     = 16
+	None                                                                             = 0,
+	                                                                                 = 2,
+	3                                                                                = 4,
+	4                                                                                = 8,
+	5                                                                                = 16
 };
 
 /// Enum /Script/SB.ESBUIIndicatorLockChannel
 /// Size: 0x01 (1 bytes)
 enum class ESBUIIndicatorLockChannel : uint8_t
 {
-	ESBUIIndicatorLockChannel_None                                                   = 0,
-	ESBUIIndicatorLockChannel                                                        = 2,
-	ESBUIIndicatorLockChannel3                                                       = 4,
-	ESBUIIndicatorLockChannel4                                                       = 8,
-	ESBUIIndicatorLockChannel5                                                       = 16
+	None                                                                             = 0,
+	                                                                                 = 2,
+	3                                                                                = 4,
+	4                                                                                = 8,
+	5                                                                                = 16
 };
 
 /// Enum /Script/SB.ESBUISkillUnlockPresentationType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISkillUnlockPresentationType : uint8_t
 {
-	ESBUISkillUnlockPresentationType__None                                           = 0,
-	ESBUISkillUnlockPresentationType__UnlockTree                                     = 1,
-	ESBUISkillUnlockPresentationType__UnlockSlotByAchievement                        = 2,
-	ESBUISkillUnlockPresentationType__UnlockNewGamePlus                              = 3
+	None                                                                             = 0,
+	UnlockTree                                                                       = 1,
+	UnlockSlotByAchievement                                                          = 2,
+	UnlockNewGamePlus                                                                = 3
 };
 
 /// Enum /Script/SB.ESBSkillTreeUnlockProgressType
 /// Size: 0x01 (1 bytes)
 enum class ESBSkillTreeUnlockProgressType : uint8_t
 {
-	ESBSkillTreeUnlockProgressType__None                                             = 0,
-	ESBSkillTreeUnlockProgressType__Ready                                            = 1,
-	ESBSkillTreeUnlockProgressType__Start                                            = 2,
-	ESBSkillTreeUnlockProgressType__Complete                                         = 3
+	None                                                                             = 0,
+	Ready                                                                            = 1,
+	Start                                                                            = 2,
+	Complete                                                                         = 3
 };
 
 /// Enum /Script/SB.ESBUISkillTreeType
 /// Size: 0x01 (1 bytes)
 enum class ESBUISkillTreeType : uint8_t
 {
-	ESBUISkillTreeType__ETC                                                          = 0,
-	ESBUISkillTreeType__TPS                                                          = 1,
-	ESBUISkillTreeType__Burst                                                        = 2,
-	ESBUISkillTreeType__Tachy                                                        = 3,
-	ESBUISkillTreeType__Survive                                                      = 4,
-	ESBUISkillTreeType__Beta                                                         = 5
+	ETC                                                                              = 0,
+	TPS                                                                              = 1,
+	Burst                                                                            = 2,
+	Tachy                                                                            = 3,
+	Survive                                                                          = 4,
+	Beta                                                                             = 5
 };
 
 /// Enum /Script/SB.ESBUISkillSlotState
 /// Size: 0x01 (1 bytes)
 enum class ESBUISkillSlotState : uint8_t
 {
-	ESBUISkillSlotState__None                                                        = 0,
-	ESBUISkillSlotState__Enable                                                      = 1,
-	ESBUISkillSlotState__Disable                                                     = 2,
-	ESBUISkillSlotState__Acquisition                                                 = 3,
-	ESBUISkillSlotState__Lock                                                        = 4,
-	ESBUISkillSlotState__LockByAchievement                                           = 5,
-	ESBUISkillSlotState__DisableByNewGamePlus                                        = 6
+	None                                                                             = 0,
+	Enable                                                                           = 1,
+	Disable                                                                          = 2,
+	Acquisition                                                                      = 3,
+	Lock                                                                             = 4,
+	LockByAchievement                                                                = 5,
+	DisableByNewGamePlus                                                             = 6
 };
 
 /// Enum /Script/SB.ESBUIBodySuitSlotType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIBodySuitSlotType : uint8_t
 {
-	ESBUIBodySuitSlotType_Left                                                       = 0,
-	ESBUIBodySuitSlotType_Top                                                        = 1,
-	ESBUIBodySuitSlotType_Right                                                      = 2,
-	ESBUIBodySuitSlotType_Bottom                                                     = 3
+	Left                                                                             = 0,
+	Top                                                                              = 1,
+	Right                                                                            = 2,
+	Bottom                                                                           = 3
 };
 
 /// Enum /Script/SB.ESBUIWorkshopPopupType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIWorkshopPopupType : uint8_t
 {
-	ESBUIWorkshopPopupType__None                                                     = 0,
-	ESBUIWorkshopPopupType__CraftResult                                              = 1,
-	ESBUIWorkshopPopupType__EveEnhanceResult_RechargeablePotion                      = 2,
-	ESBUIWorkshopPopupType__EveEnhanceResult_ExtendedTumbler                         = 3,
-	ESBUIWorkshopPopupType__EveEnhanceResult_Weapon                                  = 4,
-	ESBUIWorkshopPopupType__EveEnhanceResult_GearSlot                                = 5
+	None                                                                             = 0,
+	CraftResult                                                                      = 1,
+	EveEnhanceResult_RechargeablePotion                                              = 2,
+	EveEnhanceResult_ExtendedTumbler                                                 = 3,
+	EveEnhanceResult_Weapon                                                          = 4,
+	EveEnhanceResult_GearSlot                                                        = 5
 };
 
 /// Enum /Script/SB.ESBUIWorkShopType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIWorkShopType : uint8_t
 {
-	ESBUIWorkShopType_Default                                                        = 0,
-	ESBUIWorkShopType_EnhanceEve                                                     = 1,
-	ESBUIWorkShopType_NanoSuit                                                       = 2,
-	ESBUIWorkShopType_Exospine                                                       = 3,
-	ESBUIWorkShopType_Drone                                                          = 4,
-	ESBUIWorkShopType_Max                                                            = 5
+	Default                                                                          = 0,
+	EnhanceEve                                                                       = 1,
+	NanoSuit                                                                         = 2,
+	Exospine                                                                         = 3,
+	Drone                                                                            = 4,
+	Max                                                                              = 5
 };
 
 /// Enum /Script/SB.ESBUIBagTabType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIBagTabType : uint8_t
 {
-	ESBUIBagTabType_Material                                                         = 0,
-	ESBUIBagTabType_Core                                                             = 1,
-	ESBUIBagTabType_Quest                                                            = 2
+	Material                                                                         = 0,
+	Core                                                                             = 1,
+	Quest                                                                            = 2
 };
 
 /// Enum /Script/SB.ESBUIEquipSlotType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIEquipSlotType : uint8_t
 {
-	ESBUIEquipSlotType_None                                                          = 0,
-	ESBUIEquipSlotType_BodySuit                                                      = 1,
-	ESBUIEquipSlotType_Weapon                                                        = 2,
-	ESBUIEquipSlotType_Protector                                                     = 3,
-	ESBUIEquipSlotType_Gear                                                          = 4,
-	ESBUIEquipSlotType_Consume                                                       = 5,
-	ESBUIEquipSlotType_Acc                                                           = 6,
-	ESBUIEquipSlotType_EarRing                                                       = 7,
-	ESBUIEquipSlotType_Drone                                                         = 8,
-	ESBUIEquipSlotType_Lily                                                          = 9,
-	ESBUIEquipSlotType_Adam                                                          = 10,
-	ESBUIEquipSlotType_Hair                                                          = 11
+	None                                                                             = 0,
+	BodySuit                                                                         = 1,
+	Weapon                                                                           = 2,
+	Protector                                                                        = 3,
+	Gear                                                                             = 4,
+	Consume                                                                          = 5,
+	Acc                                                                              = 6,
+	EarRing                                                                          = 7,
+	Drone                                                                            = 8,
+	Lily                                                                             = 9,
+	Adam                                                                             = 10,
+	Hair                                                                             = 11
 };
 
 /// Enum /Script/SB.ESBUIGameMenuType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIGameMenuType : uint8_t
 {
-	ESBUIGameMenuType_Default                                                        = 0,
-	ESBUIGameMenuType_Equip                                                          = 1,
-	ESBUIGameMenuType_QuestJournal                                                   = 2,
-	ESBUIGameMenuType_Map                                                            = 3,
-	ESBUIGameMenuType_Bag                                                            = 4,
-	ESBUIGameMenuType_NewSkill                                                       = 5,
-	ESBUIGameMenuType_Album                                                          = 6,
-	ESBUIGameMenuType_Manual                                                         = 7,
-	ESBUIGameMenuType_Setting                                                        = 8,
-	ESBUIGameMenuType_Max                                                            = 9
+	Default                                                                          = 0,
+	Equip                                                                            = 1,
+	QuestJournal                                                                     = 2,
+	Map                                                                              = 3,
+	Bag                                                                              = 4,
+	NewSkill                                                                         = 5,
+	Album                                                                            = 6,
+	Manual                                                                           = 7,
+	Setting                                                                          = 8,
+	Max                                                                              = 9
 };
 
 /// Enum /Script/SB.ESBUIInputType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIInputType : uint8_t
 {
-	ESBUIInputType_Positive                                                          = 0,
-	ESBUIInputType_Negative                                                          = 1,
-	ESBUIInputType_Gamepad_X                                                         = 2,
-	ESBUIInputType_Gamepad_Y                                                         = 3,
-	ESBUIInputType_Gamepad_A                                                         = 4,
-	ESBUIInputType_Gamepad_B                                                         = 5
+	Positive                                                                         = 0,
+	Negative                                                                         = 1,
+	Gamepad_X                                                                        = 2,
+	Gamepad_Y                                                                        = 3,
+	Gamepad_A                                                                        = 4,
+	Gamepad_B                                                                        = 5
 };
 
 /// Enum /Script/SB.ESBUMGWidgetComboBox
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetComboBox : uint8_t
 {
-	ESBUMGWidgetComboBox_None                                                        = 0,
-	ESBUMGWidgetComboBox_Visibility                                                  = 1,
-	ESBUMGWidgetComboBox_AddItem                                                     = 2,
-	ESBUMGWidgetComboBox_RemoveItem                                                  = 3,
-	ESBUMGWidgetComboBox_SelectItem                                                  = 4,
-	ESBUMGWidgetComboBox_ClearList                                                   = 5,
-	ESBUMGWidgetComboBox_FocusRow                                                    = 6,
-	ESBUMGWidgetComboBox_ScrollToTop                                                 = 7,
-	ESBUMGWidgetComboBox_ScrollToBottom                                              = 8,
-	ESBUMGWidgetComboBox_ScrollIndexIntoView                                         = 9,
-	ESBUMGWidgetComboBox_GetSelectedIndex                                            = 10,
-	ESBUMGWidgetComboBox_GetHoveredIndex                                             = 11,
-	ESBUMGWidgetComboBox_GetFocusedIndex                                             = 12,
-	ESBUMGWidgetComboBox_GetNumItems                                                 = 13,
-	ESBUMGWidgetComboBox_UpdateItem                                                  = 14,
-	ESBUMGWidgetComboBox_RegenerateAllEntries                                        = 15,
-	ESBUMGWidgetComboBox_SendWidgetEvent                                             = 16,
-	ESBUMGWidgetComboBox_RefreshItems                                                = 17,
-	ESBUMGWidgetComboBox_IsRefreshPending                                            = 18,
-	ESBUMGWidgetComboBox_OpenContentPopup                                            = 19,
-	ESBUMGWidgetComboBox_CloseContentPopup                                           = 20,
-	ESBUMGWidgetComboBox_IsOpenContentPopup                                          = 21,
-	ESBUMGWidgetComboBox_OnDoubleClicked                                             = 22,
-	ESBUMGWidgetComboBox_OnClicked                                                   = 23,
-	ESBUMGWidgetComboBox_OnPressed                                                   = 24,
-	ESBUMGWidgetComboBox_OnReleased                                                  = 25
+	None                                                                             = 0,
+	Visibility                                                                       = 1,
+	AddItem                                                                          = 2,
+	RemoveItem                                                                       = 3,
+	SelectItem                                                                       = 4,
+	ClearList                                                                        = 5,
+	FocusRow                                                                         = 6,
+	ScrollToTop                                                                      = 7,
+	ScrollToBottom                                                                   = 8,
+	ScrollIndexIntoView                                                              = 9,
+	GetSelectedIndex                                                                 = 10,
+	GetHoveredIndex                                                                  = 11,
+	GetFocusedIndex                                                                  = 12,
+	GetNumItems                                                                      = 13,
+	UpdateItem                                                                       = 14,
+	RegenerateAllEntries                                                             = 15,
+	SendWidgetEvent                                                                  = 16,
+	RefreshItems                                                                     = 17,
+	IsRefreshPending                                                                 = 18,
+	OpenContentPopup                                                                 = 19,
+	CloseContentPopup                                                                = 20,
+	IsOpenContentPopup                                                               = 21,
+	OnDoubleClicked                                                                  = 22,
+	OnClicked                                                                        = 23,
+	OnPressed                                                                        = 24,
+	OnReleased                                                                       = 25
 };
 
 /// Enum /Script/SB.ESBUMGWidgetRichText
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetRichText : uint8_t
 {
-	ESBUMGWidgetRichText_None                                                        = 0,
-	ESBUMGWidgetRichText_Text                                                        = 1,
-	ESBUMGWidgetRichText_Visibility                                                  = 2,
-	ESBUMGWidgetRichText_ActionText                                                  = 3
+	None                                                                             = 0,
+	Text                                                                             = 1,
+	Visibility                                                                       = 2,
+	ActionText                                                                       = 3
 };
 
 /// Enum /Script/SB.ESBUMGWidgetTileView
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetTileView : uint8_t
 {
-	ESBUMGWidgetTileView_None                                                        = 0,
-	ESBUMGWidgetTileView_Visibility                                                  = 1,
-	ESBUMGWidgetTileView_AddItem                                                     = 2,
-	ESBUMGWidgetTileView_RemoveItem                                                  = 3,
-	ESBUMGWidgetTileView_ClearList                                                   = 4,
-	ESBUMGWidgetTileView_FocusRow                                                    = 5,
-	ESBUMGWidgetTileView_ScrollToTop                                                 = 6,
-	ESBUMGWidgetTileView_ScrollToBottom                                              = 7,
-	ESBUMGWidgetTileView_ScrollIndexIntoView                                         = 8,
-	ESBUMGWidgetTileView_GetSelectedIndex                                            = 9,
-	ESBUMGWidgetTileView_UpdateItem                                                  = 10,
-	ESBUMGWidgetTileView_RegenerateAllEntries                                        = 11,
-	ESBUMGWidgetTileView_NavigateToIndex                                             = 12,
-	ESBUMGWidgetTileView_SetEnableItemSelect                                         = 13,
-	ESBUMGWidgetTileView_GetNumItems                                                 = 14,
-	ESBUMGWidgetTileView_SendWidgetEvent                                             = 15,
-	ESBUMGWidgetTileView_OnClicked                                                   = 16,
-	ESBUMGWidgetTileView_OnDoubleClicked                                             = 17,
-	ESBUMGWidgetTileView_OnPressed                                                   = 18,
-	ESBUMGWidgetTileView_OnReleased                                                  = 19,
-	ESBUMGWidgetTileView_SetSelectedIndex                                            = 20
+	None                                                                             = 0,
+	Visibility                                                                       = 1,
+	AddItem                                                                          = 2,
+	RemoveItem                                                                       = 3,
+	ClearList                                                                        = 4,
+	FocusRow                                                                         = 5,
+	ScrollToTop                                                                      = 6,
+	ScrollToBottom                                                                   = 7,
+	ScrollIndexIntoView                                                              = 8,
+	GetSelectedIndex                                                                 = 9,
+	UpdateItem                                                                       = 10,
+	RegenerateAllEntries                                                             = 11,
+	NavigateToIndex                                                                  = 12,
+	SetEnableItemSelect                                                              = 13,
+	GetNumItems                                                                      = 14,
+	SendWidgetEvent                                                                  = 15,
+	OnClicked                                                                        = 16,
+	OnDoubleClicked                                                                  = 17,
+	OnPressed                                                                        = 18,
+	OnReleased                                                                       = 19,
+	SetSelectedIndex                                                                 = 20
 };
 
 /// Enum /Script/SB.ESBUMGWidgetExtendedListView
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetExtendedListView : uint8_t
 {
-	ESBUMGWidgetExtendedListView_None                                                = 19,
-	ESBUMGWidgetExtendedListView_FastFocusPrev                                       = 20,
-	ESBUMGWidgetExtendedListView_FastFocusNext                                       = 21
+	None                                                                             = 19,
+	FastFocusPrev                                                                    = 20,
+	FastFocusNext                                                                    = 21
 };
 
 /// Enum /Script/SB.ESBUMGWidgetListView
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetListView : uint8_t
 {
-	ESBUMGWidgetListView_None                                                        = 0,
-	ESBUMGWidgetListView_Visibility                                                  = 1,
-	ESBUMGWidgetListView_AddItem                                                     = 2,
-	ESBUMGWidgetListView_RemoveItem                                                  = 3,
-	ESBUMGWidgetListView_ClearList                                                   = 4,
-	ESBUMGWidgetListView_FocusRow                                                    = 5,
-	ESBUMGWidgetListView_ScrollToTop                                                 = 6,
-	ESBUMGWidgetListView_ScrollToBottom                                              = 7,
-	ESBUMGWidgetListView_ScrollIndexIntoView                                         = 8,
-	ESBUMGWidgetListView_GetSelectedIndex                                            = 9,
-	ESBUMGWidgetListView_GetNumItems                                                 = 10,
-	ESBUMGWidgetListView_UpdateItem                                                  = 11,
-	ESBUMGWidgetListView_RegenerateAllEntries                                        = 12,
-	ESBUMGWidgetListView_SendWidgetEvent                                             = 13,
-	ESBUMGWidgetListView_IsRefreshPending                                            = 14,
-	ESBUMGWidgetListView_OnDoubleClicked                                             = 15,
-	ESBUMGWidgetListView_OnClicked                                                   = 16,
-	ESBUMGWidgetListView_OnPressed                                                   = 17,
-	ESBUMGWidgetListView_OnReleased                                                  = 18,
-	ESBUMGWidgetListView_Max                                                         = 19
+	None                                                                             = 0,
+	Visibility                                                                       = 1,
+	AddItem                                                                          = 2,
+	RemoveItem                                                                       = 3,
+	ClearList                                                                        = 4,
+	FocusRow                                                                         = 5,
+	ScrollToTop                                                                      = 6,
+	ScrollToBottom                                                                   = 7,
+	ScrollIndexIntoView                                                              = 8,
+	GetSelectedIndex                                                                 = 9,
+	GetNumItems                                                                      = 10,
+	UpdateItem                                                                       = 11,
+	RegenerateAllEntries                                                             = 12,
+	SendWidgetEvent                                                                  = 13,
+	IsRefreshPending                                                                 = 14,
+	OnDoubleClicked                                                                  = 15,
+	OnClicked                                                                        = 16,
+	OnPressed                                                                        = 17,
+	OnReleased                                                                       = 18,
+	Max                                                                              = 19
 };
 
 /// Enum /Script/SB.ESBUMGWidgetMultiLineEditableText
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetMultiLineEditableText : uint8_t
 {
-	ESBUMGWidgetMultiLineEditableText_None                                           = 0,
-	ESBUMGWidgetMultiLineEditableText_Text                                           = 1,
-	ESBUMGWidgetMultiLineEditableText_SetKeyboardFocus                               = 2,
-	ESBUMGWidgetMultiLineEditableText_HasKeyboardFocus                               = 3
+	None                                                                             = 0,
+	Text                                                                             = 1,
+	SetKeyboardFocus                                                                 = 2,
+	HasKeyboardFocus                                                                 = 3
 };
 
 /// Enum /Script/SB.ESBUMGWidgetEditableText
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetEditableText : uint8_t
 {
-	ESBUMGWidgetEditableText_None                                                    = 0,
-	ESBUMGWidgetEditableText_Text                                                    = 1,
-	ESBUMGWidgetEditableText_SetKeyboardFocus                                        = 2,
-	ESBUMGWidgetEditableText_HasKeyboardFocus                                        = 3
+	None                                                                             = 0,
+	Text                                                                             = 1,
+	SetKeyboardFocus                                                                 = 2,
+	HasKeyboardFocus                                                                 = 3
 };
 
 /// Enum /Script/SB.ESBUMGWidgetBorder
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetBorder : uint8_t
 {
-	ESBUMGWidgetBorder_None                                                          = 0,
-	ESBUMGWidgetBorder_Visibility                                                    = 1,
-	ESBUMGWidgetBorder_BackgroundDrawAs                                              = 2,
-	ESBUMGWidgetBorder_SetKeyboardFocus                                              = 3,
-	ESBUMGWidgetBorder_BrushColor                                                    = 4
+	None                                                                             = 0,
+	Visibility                                                                       = 1,
+	BackgroundDrawAs                                                                 = 2,
+	SetKeyboardFocus                                                                 = 3,
+	BrushColor                                                                       = 4
 };
 
 /// Enum /Script/SB.ESBUMGWidgetSBUserWidget
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetSBUserWidget : uint8_t
 {
-	ESBUMGWidgetSBUserWidget_None                                                    = 0,
-	ESBUMGWidgetSBUserWidget_Visibility                                              = 1,
-	ESBUMGWidgetSBUserWidget_InvalidateLayoutAndVolatility                           = 2
+	None                                                                             = 0,
+	Visibility                                                                       = 1,
+	InvalidateLayoutAndVolatility                                                    = 2
 };
 
 /// Enum /Script/SB.ESBUMGWidgetHorizontalBox
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetHorizontalBox : uint8_t
 {
-	ESBUMGWidgetHorizontalBox_None                                                   = 0,
-	ESBUMGWidgetHorizontalBox_Visibility                                             = 1,
-	ESBUMGWidgetHorizontalBox_RebuildWidget                                          = 2
+	None                                                                             = 0,
+	Visibility                                                                       = 1,
+	RebuildWidget                                                                    = 2
 };
 
 /// Enum /Script/SB.ESBUMGWidgetVerticalBox
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetVerticalBox : uint8_t
 {
-	ESBUMGWidgetVerticalBox_None                                                     = 0,
-	ESBUMGWidgetVerticalBox_Visibility                                               = 1,
-	ESBUMGWidgetVerticalBox_Translation                                              = 2
+	None                                                                             = 0,
+	Visibility                                                                       = 1,
+	Translation                                                                      = 2
 };
 
 /// Enum /Script/SB.ESBUMGWidgetScaleBox
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetScaleBox : uint8_t
 {
-	ESBUMGWidgetScaleBox_None                                                        = 0,
-	ESBUMGWidgetScaleBox_Visibility                                                  = 1
+	None                                                                             = 0,
+	Visibility                                                                       = 1
 };
 
 /// Enum /Script/SB.ESBUMGWidgetImage
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetImage : uint8_t
 {
-	ESBUMGWidgetImage_None                                                           = 0,
-	ESBUMGWidgetImage_BrushFromTexture                                               = 1,
-	ESBUMGWidgetImage_BrushFromMediaSource                                           = 2,
-	ESBUMGWidgetImage_BrushFromMaterial                                              = 3,
-	ESBUMGWidgetImage_Visibility                                                     = 4,
-	ESBUMGWidgetImage_Translation                                                    = 5,
-	ESBUMGWidgetImage_ColorAndOpacity                                                = 6,
-	ESBUMGWidgetImage_MatInstScalarParam                                             = 7,
-	ESBUMGWidgetImage_SetBrushFromResourceAsset                                      = 8
+	None                                                                             = 0,
+	BrushFromTexture                                                                 = 1,
+	BrushFromMediaSource                                                             = 2,
+	BrushFromMaterial                                                                = 3,
+	Visibility                                                                       = 4,
+	Translation                                                                      = 5,
+	ColorAndOpacity                                                                  = 6,
+	MatInstScalarParam                                                               = 7,
+	SetBrushFromResourceAsset                                                        = 8
 };
 
 /// Enum /Script/SB.ESBUMGWidgetOverlay
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetOverlay : uint8_t
 {
-	ESBUMGWidgetOverlay_None                                                         = 0,
-	ESBUMGWidgetOverlay_Visibility                                                   = 1,
-	ESBUMGWidgetOverlay_Translation                                                  = 2,
-	ESBUMGWidgetOverlay_Invalidate                                                   = 3,
-	ESBUMGWidgetOverlay_RenderOpacity                                                = 4
+	None                                                                             = 0,
+	Visibility                                                                       = 1,
+	Translation                                                                      = 2,
+	Invalidate                                                                       = 3,
+	RenderOpacity                                                                    = 4
 };
 
 /// Enum /Script/SB.ESBUMGWidgetCanvasPanel
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetCanvasPanel : uint8_t
 {
-	ESBUMGWidgetCanvasPanel_None                                                     = 0,
-	ESBUMGWidgetCanvasPanel_Visibility                                               = 1
+	None                                                                             = 0,
+	Visibility                                                                       = 1
 };
 
 /// Enum /Script/SB.ESBUMGWidgetProgressBar
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetProgressBar : uint8_t
 {
-	ESBUMGWidgetProgressBar_None                                                     = 0,
-	ESBUMGWidgetProgressBar_Percent                                                  = 1,
-	ESBUMGWidgetProgressBar_Visibility                                               = 2,
-	ESBUMGWidgetProgressBar_FillImage                                                = 3
+	None                                                                             = 0,
+	Percent                                                                          = 1,
+	Visibility                                                                       = 2,
+	FillImage                                                                        = 3
 };
 
 /// Enum /Script/SB.ESBUMGWidgetText
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetText : uint8_t
 {
-	ESBUMGWidgetText_None                                                            = 0,
-	ESBUMGWidgetText_Text                                                            = 1,
-	ESBUMGWidgetText_Visibility                                                      = 2,
-	ESBUMGWidgetText_FontSize                                                        = 3,
-	ESBUMGWidgetText_ColorAndOpacity                                                 = 4
+	None                                                                             = 0,
+	Text                                                                             = 1,
+	Visibility                                                                       = 2,
+	FontSize                                                                         = 3,
+	ColorAndOpacity                                                                  = 4
 };
 
 /// Enum /Script/SB.ESBUMGWidgetButton
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetButton : uint8_t
 {
-	ESBUMGWidgetButton_None                                                          = 0,
-	ESBUMGWidgetButton_OnClicked                                                     = 1,
-	ESBUMGWidgetButton_OnPressed                                                     = 2,
-	ESBUMGWidgetButton_OnReleased                                                    = 3,
-	ESBUMGWidgetButton_OnHovered                                                     = 4,
-	ESBUMGWidgetButton_OnUnhovered                                                   = 5,
-	ESBUMGWidgetButton_Visibility                                                    = 6,
-	ESBUMGWidgetButton_NormalImage                                                   = 7,
-	ESBUMGWidgetButton_HoveredImage                                                  = 8,
-	ESBUMGWidgetButton_PressedImage                                                  = 9,
-	ESBUMGWidgetButton_NormalColorAndOpacity                                         = 10,
-	ESBUMGWidgetButton_HoveredColorAndOpacity                                        = 11,
-	ESBUMGWidgetButton_PressedColorAndOpacity                                        = 12,
-	ESBUMGWidgetButton_OnDoubleClicked                                               = 13
+	None                                                                             = 0,
+	OnClicked                                                                        = 1,
+	OnPressed                                                                        = 2,
+	OnReleased                                                                       = 3,
+	OnHovered                                                                        = 4,
+	OnUnhovered                                                                      = 5,
+	Visibility                                                                       = 6,
+	NormalImage                                                                      = 7,
+	HoveredImage                                                                     = 8,
+	PressedImage                                                                     = 9,
+	NormalColorAndOpacity                                                            = 10,
+	HoveredColorAndOpacity                                                           = 11,
+	PressedColorAndOpacity                                                           = 12,
+	OnDoubleClicked                                                                  = 13
 };
 
 /// Enum /Script/SB.ESBUMGWidgetCommonActionDetail
 /// Size: 0x02 (2 bytes)
 enum class ESBUMGWidgetCommonActionDetail : uint16_t
 {
-	ESBUMGWidgetCommonActionDetail_AttachChild                                       = 60000,
-	ESBUMGWidgetCommonActionDetail_DetachChild                                       = 60001
+	AttachChild                                                                      = 60000,
+	DetachChild                                                                      = 60001
 };
 
 /// Enum /Script/SB.ESBUMGWidgetType
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetType : uint8_t
 {
-	ESBUMGWidgetType_None                                                            = 0,
-	ESBUMGWidgetType_Button                                                          = 1,
-	ESBUMGWidgetType_Text                                                            = 2,
-	ESBUMGWidgetType_Overlay                                                         = 3,
-	ESBUMGWidgetType_Image                                                           = 4,
-	ESBUMGWidgetType_ScaleBox                                                        = 5,
-	ESBUMGWidgetType_VerticalBox                                                     = 6,
-	ESBUMGWidgetType_HorizontalBox                                                   = 7,
-	ESBUMGWidgetType_SBUserWidget                                                    = 8,
-	ESBUMGWidgetType_CanvasPanel                                                     = 9,
-	ESBUMGWidgetType_ProgressBar                                                     = 10,
-	ESBUMGWidgetType_Border                                                          = 11,
-	ESBUMGWidgetType_EditableText                                                    = 12,
-	ESBUMGWidgetType_MultiLineEditableText                                           = 13,
-	ESBUMGWidgetType_ListView                                                        = 14,
-	ESBUMGWidgetType_ExtendedListView                                                = 15,
-	ESBUMGWidgetType_RichText                                                        = 16,
-	ESBUMGWidgetType_TileView                                                        = 17,
-	ESBUMGWidgetType_ComboBox                                                        = 18
+	None                                                                             = 0,
+	Button                                                                           = 1,
+	Text                                                                             = 2,
+	Overlay                                                                          = 3,
+	Image                                                                            = 4,
+	ScaleBox                                                                         = 5,
+	VerticalBox                                                                      = 6,
+	HorizontalBox                                                                    = 7,
+	SBUserWidget                                                                     = 8,
+	CanvasPanel                                                                      = 9,
+	ProgressBar                                                                      = 10,
+	Border                                                                           = 11,
+	EditableText                                                                     = 12,
+	MultiLineEditableText                                                            = 13,
+	ListView                                                                         = 14,
+	ExtendedListView                                                                 = 15,
+	RichText                                                                         = 16,
+	TileView                                                                         = 17,
+	ComboBox                                                                         = 18
 };
 
 /// Enum /Script/SB.ESBUMGWidgetAction
 /// Size: 0x01 (1 bytes)
 enum class ESBUMGWidgetAction : uint8_t
 {
-	ESBUMGWidgetAction_None                                                          = 0,
-	ESBUMGWidgetAction_Get                                                           = 1,
-	ESBUMGWidgetAction_Set                                                           = 2,
-	ESBUMGWidgetAction_Bind                                                          = 3,
-	ESBUMGWidgetAction_Unbind                                                        = 4,
-	ESBUMGWidgetAction_Call                                                          = 5
+	None                                                                             = 0,
+	Get                                                                              = 1,
+	Set                                                                              = 2,
+	Bind                                                                             = 3,
+	Unbind                                                                           = 4,
+	Call                                                                             = 5
 };
 
 /// Enum /Script/SB.ESBUILogicType
 /// Size: 0x01 (1 bytes)
 enum class ESBUILogicType : uint8_t
 {
-	ESBUILogicType_NONE                                                              = 0,
-	ESBUILogicType_HUD                                                               = 1,
-	ESBUILogicType_HUDGetNotice                                                      = 2,
-	ESBUILogicType_HUDGetNoticeSlot                                                  = 3,
-	ESBUILogicType_HUDGetNewNotice                                                   = 4,
-	ESBUILogicType_HUDGetNewNoticeSlot                                               = 5,
-	ESBUILogicType_HUDSystemNotice                                                   = 6,
-	ESBUILogicType_HUDSystemNoticeSlot                                               = 7,
-	ESBUILogicType_HUDItemNotice                                                     = 8,
-	ESBUILogicType_HUDItemNoticeSlot                                                 = 9,
-	ESBUILogicType_HUDItemNewNotice                                                  = 10,
-	ESBUILogicType_HUDItemNewNoticeSlot                                              = 11,
-	ESBUILogicType_HUDPlayerInfo                                                     = 12,
-	ESBUILogicType_HUDEnemyInfo                                                      = 13,
-	ESBUILogicType_HUDEnemyStateBar                                                  = 14,
-	ESBUILogicType_HUDEffectIcon                                                     = 15,
-	ESBUILogicType_HUDSave                                                           = 16,
-	ESBUILogicType_HUDSaveList                                                       = 17,
-	ESBUILogicType_HUDLoadList                                                       = 18,
-	ESBUILogicType_HUDDead                                                           = 19,
-	ESBUILogicType_HUDFade                                                           = 20,
-	ESBUILogicType_HUDScanField                                                      = 21,
-	ESBUILogicType_HUDScanFieldSlot                                                  = 22,
-	ESBUILogicType_HUDInteractable                                                   = 23,
-	ESBUILogicType_HUDInteractableSlot                                               = 24,
-	ESBUILogicType_HUDSkill                                                          = 25,
-	ESBUILogicType_HUDSkillSlot                                                      = 26,
-	ESBUILogicType_HUDSkillMarker                                                    = 27,
-	ESBUILogicType_HUDSkillEquipmentPopup                                            = 28,
-	ESBUILogicType_HUDSkillEquipmentPopupSlot                                        = 29,
-	ESBUILogicType_HUDSkillPoint                                                     = 30,
-	ESBUILogicType_HUDSkillPreview                                                   = 31,
-	ESBUILogicType_HUDSystemInfo                                                     = 32,
-	ESBUILogicType_HUDBodySuit                                                       = 33,
-	ESBUILogicType_HUDEnhanceResult                                                  = 34,
-	ESBUILogicType_HUDItemSlot                                                       = 35,
-	ESBUILogicType_HUDItemEquip                                                      = 36,
-	ESBUILogicType_HUDMultiPlayPvp                                                   = 37,
-	ESBUILogicType_HUDNightOperation                                                 = 38,
-	ESBUILogicType_HUDNightOperationFriendSlot                                       = 39,
-	ESBUILogicType_HUDNightOperationFriendIndicator                                  = 40,
-	ESBUILogicType_HUDTPSMode                                                        = 41,
-	ESBUILogicType_HUDTPSBullet                                                      = 42,
-	ESBUILogicType_HUDTPSBulletSlot                                                  = 43,
-	ESBUILogicType_HUDTPSNikkeMode                                                   = 44,
-	ESBUILogicType_HUDNikkeEnemy                                                     = 45,
-	ESBUILogicType_HUDNikkeQte                                                       = 46,
-	ESBUILogicType_HUDFishing                                                        = 47,
-	ESBUILogicType_HUDFishingDebugger                                                = 48,
-	ESBUILogicType_HUDTachySlot                                                      = 49,
-	ESBUILogicType_HUDQuestDebugger                                                  = 50,
-	ESBUILogicType_HUDNotifyCoreItem                                                 = 51,
-	ESBUILogicType_HUDNotifyQuest                                                    = 52,
-	ESBUILogicType_HUDNotifyQuestTask                                                = 53,
-	ESBUILogicType_HUDNotifyUpdate                                                   = 54,
-	ESBUILogicType_HUDNotifySkillExp                                                 = 55,
-	ESBUILogicType_HUDNotifyCanGain                                                  = 56,
-	ESBUILogicType_HUDNotifySpecialReward                                            = 57,
-	ESBUILogicType_HUDNotifyReturn                                                   = 58,
-	ESBUILogicType_HUDNotifyLilyExp                                                  = 59,
-	ESBUILogicType_HUDTracking                                                       = 60,
-	ESBUILogicType_HUDTrackingCompass                                                = 61,
-	ESBUILogicType_HUDTrackingSlot                                                   = 62,
-	ESBUILogicType_HUDOffScreenIndicator                                             = 63,
-	ESBUILogicType_HUDOffScreenIndicatorSlot                                         = 64,
-	ESBUILogicType_HUDHint                                                           = 65,
-	ESBUILogicType_HUDCampIndicator                                                  = 66,
-	ESBUILogicType_HUDQuestInfo                                                      = 67,
-	ESBUILogicType_HUDQuestInfoSlot                                                  = 68,
-	ESBUILogicType_HUDDroneIndicator                                                 = 69,
-	ESBUILogicType_HUDCountDown                                                      = 70,
-	ESBUILogicType_HUDActionAssist                                                   = 71,
-	ESBUILogicType_HUDNikkeLostGoodsIndicator                                        = 72,
-	ESBUILogicType_HUDPostRoot                                                       = 73,
-	ESBUILogicType_SequencePostRoot                                                  = 74,
-	ESBUILogicType_SaveMarker                                                        = 75,
-	ESBUILogicType_NotifyMessage                                                     = 76,
-	ESBUILogicType_SkillAcquisition                                                  = 77,
-	ESBUILogicType_InteractionPoint                                                  = 78,
-	ESBUILogicType_Loading                                                           = 79,
-	ESBUILogicType_GameMenu                                                          = 80,
-	ESBUILogicType_GameMenuTab                                                       = 81,
-	ESBUILogicType_GameMenuSkillPoint                                                = 82,
-	ESBUILogicType_GameMenuNewSkill                                                  = 83,
-	ESBUILogicType_GameMenuNewSkillTree                                              = 84,
-	ESBUILogicType_GameMenuNewSkillTreeSlot                                          = 85,
-	ESBUILogicType_GameMenuNewSkillResetPopup                                        = 86,
-	ESBUILogicType_GameMenuEquip                                                     = 87,
-	ESBUILogicType_GameMenuEquipCallOutGear                                          = 88,
-	ESBUILogicType_GameMenuEquipCallOutExoSpine                                      = 89,
-	ESBUILogicType_GameMenuEquipMount                                                = 90,
-	ESBUILogicType_GameMenuEquipInven                                                = 91,
-	ESBUILogicType_GameMenuEquipDetail                                               = 92,
-	ESBUILogicType_GameMenuEquipIconSlot                                             = 93,
-	ESBUILogicType_GameMenuEquipStatViewer                                           = 94,
-	ESBUILogicType_GameMenuEquipStatViewerList                                       = 95,
-	ESBUILogicType_GameMenuBag                                                       = 96,
-	ESBUILogicType_GameMenuBagInven                                                  = 97,
-	ESBUILogicType_GameMenuBagDetail                                                 = 98,
-	ESBUILogicType_GameMenuSetting                                                   = 99,
-	ESBUILogicType_GameMenuQuestJournal                                              = 100,
-	ESBUILogicType_GameMenuSave                                                      = 101,
-	ESBUILogicType_GameMenuLoad                                                      = 102,
-	ESBUILogicType_GameMenuManual                                                    = 103,
-	ESBUILogicType_GameMenuManualDetail                                              = 104,
-	ESBUILogicType_GameMenuStat                                                      = 105,
-	ESBUILogicType_GameMenuStatSlot                                                  = 106,
-	ESBUILogicType_GameMenuAlbum                                                     = 107,
-	ESBUILogicType_GameMenuAlbumList                                                 = 108,
-	ESBUILogicType_GameMenuAlbumTileView                                             = 109,
-	ESBUILogicType_GameMenuAlbumDetail                                               = 110,
-	ESBUILogicType_GameMenuMap                                                       = 111,
-	ESBUILogicType_GameMenuMapPointer                                                = 112,
-	ESBUILogicType_GameMenuMapSelectCustomPin                                        = 113,
-	ESBUILogicType_GameMenuPlayGo                                                    = 114,
-	ESBUILogicType_CommonChoice                                                      = 115,
-	ESBUILogicType_CommonMessageBox                                                  = 116,
-	ESBUILogicType_CommonMessageBoxNew                                               = 117,
-	ESBUILogicType_CommonMessageBoxV3                                                = 118,
-	ESBUILogicType_CommonToastMessage                                                = 119,
-	ESBUILogicType_CommonCurrency                                                    = 120,
-	ESBUILogicType_CommonTab                                                         = 121,
-	ESBUILogicType_CommonManualTab                                                   = 122,
-	ESBUILogicType_First                                                             = 123,
-	ESBUILogicType_FinishEve                                                         = 124,
-	ESBUILogicType_FinishEve2                                                        = 125,
-	ESBUILogicType_FinishTrial                                                       = 126,
-	ESBUILogicType_Lobby                                                             = 127,
-	ESBUILogicType_LobbyBackground                                                   = 128,
-	ESBUILogicType_ShortcutGame                                                      = 129,
-	ESBUILogicType_InitialSetup                                                      = 130,
-	ESBUILogicType_LobbySetting                                                      = 131,
-	ESBUILogicType_SaveSlot                                                          = 132,
-	ESBUILogicType_SavePage                                                          = 133,
-	ESBUILogicType_GameSplash                                                        = 134,
-	ESBUILogicType_LoadDemoSaveData                                                  = 135,
-	ESBUILogicType_MessageBoxList                                                    = 136,
-	ESBUILogicType_ShaderCompile                                                     = 137,
-	ESBUILogicType_ContentsSettingPopup                                              = 138,
-	ESBUILogicType_AccessibilitySettingPopup                                         = 139,
-	ESBUILogicType_PSNLoginPopup                                                     = 140,
-	ESBUILogicType_PersonalInfoPopup                                                 = 141,
-	ESBUILogicType_WorkShop                                                          = 142,
-	ESBUILogicType_WorkShopTab                                                       = 143,
-	ESBUILogicType_WorkShopEnhanceEve                                                = 144,
-	ESBUILogicType_WorkShopNanoSuit                                                  = 145,
-	ESBUILogicType_WorkShopDrone                                                     = 146,
-	ESBUILogicType_WorkShopExospine                                                  = 147,
-	ESBUILogicType_WorkShopBodySuitResult                                            = 148,
-	ESBUILogicType_WorkShopRecoveryPotionResultPopup                                 = 149,
-	ESBUILogicType_WorkShopWeaponResultPopup                                         = 150,
-	ESBUILogicType_WorkShopTabUnlockPopup                                            = 151,
-	ESBUILogicType_Puzzle                                                            = 152,
-	ESBUILogicType_RecordPopup                                                       = 153,
-	ESBUILogicType_FishingResult                                                     = 154,
-	ESBUILogicType_FishingFishDetail                                                 = 155,
-	ESBUILogicType_FishingBoxReward                                                  = 156,
-	ESBUILogicType_FishingBoxRewardSlot                                              = 157,
-	ESBUILogicType_CanCollection                                                     = 158,
-	ESBUILogicType_CanDetail                                                         = 159,
-	ESBUILogicType_CanGain                                                           = 160,
-	ESBUILogicType_TestNavigation                                                    = 161,
-	ESBUILogicType_AreaName                                                          = 162,
-	ESBUILogicType_GuideVideo                                                        = 163,
-	ESBUILogicType_GuideUnlockMode                                                   = 164,
-	ESBUILogicType_GuideMessage                                                      = 165,
-	ESBUILogicType_GuideMessageSlot                                                  = 166,
-	ESBUILogicType_GuideRewardList                                                   = 167,
-	ESBUILogicType_TutorialFloater                                                   = 168,
-	ESBUILogicType_Shop                                                              = 169,
-	ESBUILogicType_Shop_ItemList                                                     = 170,
-	ESBUILogicType_Shop_ItemDetail                                                   = 171,
-	ESBUILogicType_Shop_Popup                                                        = 172,
-	ESBUILogicType_ShopAll                                                           = 173,
-	ESBUILogicType_ShopCore                                                          = 174,
-	ESBUILogicType_ShopQuest                                                         = 175,
-	ESBUILogicType_ShopUsableItem                                                    = 176,
-	ESBUILogicType_ShopBullet                                                        = 177,
-	ESBUILogicType_ShopMaterial                                                      = 178,
-	ESBUILogicType_ShopGear                                                          = 179,
-	ESBUILogicType_ShopRecipe                                                        = 180,
-	ESBUILogicType_ShopLook                                                          = 181,
-	ESBUILogicType_ShopFish                                                          = 182,
-	ESBUILogicType_ShopEtc                                                           = 183,
-	ESBUILogicType_ShopSell                                                          = 184,
-	ESBUILogicType_TeleportCamp                                                      = 185,
-	ESBUILogicType_TeleportRegion                                                    = 186,
-	ESBUILogicType_TeleportRegionSlot                                                = 187,
-	ESBUILogicType_Empty                                                             = 188,
-	ESBUILogicType_DebugCommand                                                      = 189,
-	ESBUILogicType_MiniGameGorgon                                                    = 190,
-	ESBUILogicType_DebugViewer                                                       = 191,
-	ESBUILogicType_HUDRealTimeDebug                                                  = 192,
-	ESBUILogicType_HUDSoundDebugger                                                  = 193,
-	ESBUILogicType_HUDSoundDebuggerSetting                                           = 194,
-	ESBUILogicType_Indicator                                                         = 195,
-	ESBUILogicType_RedDot                                                            = 196,
-	ESBUILogicType_SettingSlotRadioBox                                               = 197,
-	ESBUILogicType_SettingSlotRadioButton                                            = 198,
-	ESBUILogicType_SettingV2                                                         = 199,
-	ESBUILogicType_SettingSlotComboBox                                               = 200,
-	ESBUILogicType_SettingSlotRollingV2                                              = 201,
-	ESBUILogicType_SettingSlotSliderV2                                               = 202,
-	ESBUILogicType_SettingSlotButtonV2                                               = 203,
-	ESBUILogicType_SettingPopup                                                      = 204,
-	ESBUILogicType_SettingPopupDisplay                                               = 205,
-	ESBUILogicType_SettingPopupDisplaySDR                                            = 206,
-	ESBUILogicType_SettingPopupDisplayHDR                                            = 207,
-	ESBUILogicType_KeyMappingViewer                                                  = 208,
-	ESBUILogicType_KeyMappingPadViewer                                               = 209,
-	ESBUILogicType_KeyMappingPopup                                                   = 210,
-	ESBUILogicType_KeyMappingSlotContainer                                           = 211,
-	ESBUILogicType_KeyMappingSlot                                                    = 212,
-	ESBUILogicType_RequestBoard                                                      = 213,
-	ESBUILogicType_NextChapterPopup                                                  = 214,
-	ESBUILogicType_NightOperationSelect                                              = 215,
-	ESBUILogicType_HUDResetNotice                                                    = 216,
-	ESBUILogicType_HUDResetNoticeSlot                                                = 217,
-	ESBUILogicType_HairSalon                                                         = 218,
-	ESBUILogicType_HairSalonDetail                                                   = 219,
-	ESBUILogicType_TrainingRoom                                                      = 220,
-	ESBUILogicType_TrainingRoomMenu                                                  = 221,
-	ESBUILogicType_TrainingRoomSkillInfo                                             = 222,
-	ESBUILogicType_TrainingRoomSkillStackSlot                                        = 223,
-	ESBUILogicType_TestTextCorrect                                                   = 224,
-	ESBUILogicType_Reward                                                            = 225,
-	ESBUILogicType_RewardSlot                                                        = 226,
-	ESBUILogicType_SpecialReward                                                     = 227,
-	ESBUILogicType_DebugToastMessage                                                 = 228,
-	ESBUILogicType_InteractionMessageBox                                             = 229,
-	ESBUILogicType_DebugPlayerInfo                                                   = 230,
-	ESBUILogicType_GameSplashSaveGuide                                               = 231,
-	ESBUILogicType_GameSplashTrialNotice                                             = 232,
-	ESBUILogicType_TrialBossChallengeMessage                                         = 233,
-	ESBUILogicType_TrialShopApp                                                      = 234,
-	ESBUILogicType_DLCPurchasePopup                                                  = 235,
-	ESBUILogicType_BossChallenge                                                     = 236,
-	ESBUILogicType_BossChallengeFinishResult                                         = 237,
-	ESBUILogicType_BossChallengeDebugInfo                                            = 238,
-	ESBUILogicType_BossChallengeExit                                                 = 239,
-	ESBUILogicType_PhotoMode                                                         = 240,
-	ESBUILogicType_PhotoModeSettingSlotSlider                                        = 241,
-	ESBUILogicType_PhotoModeSettingSlotRolling                                       = 242,
-	ESBUILogicType_PhotoModeSettingSlotButton                                        = 243,
-	ESBUILogicType_Turntable                                                         = 244,
-	ESBUILogicType_NikkeLostArticlePopup                                             = 245,
-	ESBUILogicType_NikkeMinigameResult                                               = 246,
-	ESBUILogicType_MailBox                                                           = 247,
-	ESBUILogicType_Coupon                                                            = 248,
-	ESBUILogicType_ArtBook                                                           = 249,
-	ESBUILogicType_NikkeStagePoup                                                    = 250,
-	ESBUILogicType_GamePause                                                         = 251
+	NONE                                                                             = 0,
+	HUD                                                                              = 1,
+	HUDGetNotice                                                                     = 2,
+	HUDGetNoticeSlot                                                                 = 3,
+	HUDGetNewNotice                                                                  = 4,
+	HUDGetNewNoticeSlot                                                              = 5,
+	HUDSystemNotice                                                                  = 6,
+	HUDSystemNoticeSlot                                                              = 7,
+	HUDItemNotice                                                                    = 8,
+	HUDItemNoticeSlot                                                                = 9,
+	HUDItemNewNotice                                                                 = 10,
+	HUDItemNewNoticeSlot                                                             = 11,
+	HUDPlayerInfo                                                                    = 12,
+	HUDEnemyInfo                                                                     = 13,
+	HUDEnemyStateBar                                                                 = 14,
+	HUDEffectIcon                                                                    = 15,
+	HUDSave                                                                          = 16,
+	HUDSaveList                                                                      = 17,
+	HUDLoadList                                                                      = 18,
+	HUDDead                                                                          = 19,
+	HUDFade                                                                          = 20,
+	HUDScanField                                                                     = 21,
+	HUDScanFieldSlot                                                                 = 22,
+	HUDInteractable                                                                  = 23,
+	HUDInteractableSlot                                                              = 24,
+	HUDSkill                                                                         = 25,
+	HUDSkillSlot                                                                     = 26,
+	HUDSkillMarker                                                                   = 27,
+	HUDSkillEquipmentPopup                                                           = 28,
+	HUDSkillEquipmentPopupSlot                                                       = 29,
+	HUDSkillPoint                                                                    = 30,
+	HUDSkillPreview                                                                  = 31,
+	HUDSystemInfo                                                                    = 32,
+	HUDBodySuit                                                                      = 33,
+	HUDEnhanceResult                                                                 = 34,
+	HUDItemSlot                                                                      = 35,
+	HUDItemEquip                                                                     = 36,
+	HUDMultiPlayPvp                                                                  = 37,
+	HUDNightOperation                                                                = 38,
+	HUDNightOperationFriendSlot                                                      = 39,
+	HUDNightOperationFriendIndicator                                                 = 40,
+	HUDTPSMode                                                                       = 41,
+	HUDTPSBullet                                                                     = 42,
+	HUDTPSBulletSlot                                                                 = 43,
+	HUDTPSNikkeMode                                                                  = 44,
+	HUDNikkeEnemy                                                                    = 45,
+	HUDNikkeQte                                                                      = 46,
+	HUDFishing                                                                       = 47,
+	HUDFishingDebugger                                                               = 48,
+	HUDTachySlot                                                                     = 49,
+	HUDQuestDebugger                                                                 = 50,
+	HUDNotifyCoreItem                                                                = 51,
+	HUDNotifyQuest                                                                   = 52,
+	HUDNotifyQuestTask                                                               = 53,
+	HUDNotifyUpdate                                                                  = 54,
+	HUDNotifySkillExp                                                                = 55,
+	HUDNotifyCanGain                                                                 = 56,
+	HUDNotifySpecialReward                                                           = 57,
+	HUDNotifyReturn                                                                  = 58,
+	HUDNotifyLilyExp                                                                 = 59,
+	HUDTracking                                                                      = 60,
+	HUDTrackingCompass                                                               = 61,
+	HUDTrackingSlot                                                                  = 62,
+	HUDOffScreenIndicator                                                            = 63,
+	HUDOffScreenIndicatorSlot                                                        = 64,
+	HUDHint                                                                          = 65,
+	HUDCampIndicator                                                                 = 66,
+	HUDQuestInfo                                                                     = 67,
+	HUDQuestInfoSlot                                                                 = 68,
+	HUDDroneIndicator                                                                = 69,
+	HUDCountDown                                                                     = 70,
+	HUDActionAssist                                                                  = 71,
+	HUDNikkeLostGoodsIndicator                                                       = 72,
+	HUDPostRoot                                                                      = 73,
+	SequencePostRoot                                                                 = 74,
+	SaveMarker                                                                       = 75,
+	NotifyMessage                                                                    = 76,
+	SkillAcquisition                                                                 = 77,
+	InteractionPoint                                                                 = 78,
+	Loading                                                                          = 79,
+	GameMenu                                                                         = 80,
+	GameMenuTab                                                                      = 81,
+	GameMenuSkillPoint                                                               = 82,
+	GameMenuNewSkill                                                                 = 83,
+	GameMenuNewSkillTree                                                             = 84,
+	GameMenuNewSkillTreeSlot                                                         = 85,
+	GameMenuNewSkillResetPopup                                                       = 86,
+	GameMenuEquip                                                                    = 87,
+	GameMenuEquipCallOutGear                                                         = 88,
+	GameMenuEquipCallOutExoSpine                                                     = 89,
+	GameMenuEquipMount                                                               = 90,
+	GameMenuEquipInven                                                               = 91,
+	GameMenuEquipDetail                                                              = 92,
+	GameMenuEquipIconSlot                                                            = 93,
+	GameMenuEquipStatViewer                                                          = 94,
+	GameMenuEquipStatViewerList                                                      = 95,
+	GameMenuBag                                                                      = 96,
+	GameMenuBagInven                                                                 = 97,
+	GameMenuBagDetail                                                                = 98,
+	GameMenuSetting                                                                  = 99,
+	GameMenuQuestJournal                                                             = 100,
+	GameMenuSave                                                                     = 101,
+	GameMenuLoad                                                                     = 102,
+	GameMenuManual                                                                   = 103,
+	GameMenuManualDetail                                                             = 104,
+	GameMenuStat                                                                     = 105,
+	GameMenuStatSlot                                                                 = 106,
+	GameMenuAlbum                                                                    = 107,
+	GameMenuAlbumList                                                                = 108,
+	GameMenuAlbumTileView                                                            = 109,
+	GameMenuAlbumDetail                                                              = 110,
+	GameMenuMap                                                                      = 111,
+	GameMenuMapPointer                                                               = 112,
+	GameMenuMapSelectCustomPin                                                       = 113,
+	GameMenuPlayGo                                                                   = 114,
+	CommonChoice                                                                     = 115,
+	CommonMessageBox                                                                 = 116,
+	CommonMessageBoxNew                                                              = 117,
+	CommonMessageBoxV3                                                               = 118,
+	CommonToastMessage                                                               = 119,
+	CommonCurrency                                                                   = 120,
+	CommonTab                                                                        = 121,
+	CommonManualTab                                                                  = 122,
+	First                                                                            = 123,
+	FinishEve                                                                        = 124,
+	FinishEve2                                                                       = 125,
+	FinishTrial                                                                      = 126,
+	Lobby                                                                            = 127,
+	LobbyBackground                                                                  = 128,
+	ShortcutGame                                                                     = 129,
+	InitialSetup                                                                     = 130,
+	LobbySetting                                                                     = 131,
+	SaveSlot                                                                         = 132,
+	SavePage                                                                         = 133,
+	GameSplash                                                                       = 134,
+	LoadDemoSaveData                                                                 = 135,
+	MessageBoxList                                                                   = 136,
+	ShaderCompile                                                                    = 137,
+	ContentsSettingPopup                                                             = 138,
+	AccessibilitySettingPopup                                                        = 139,
+	PSNLoginPopup                                                                    = 140,
+	PersonalInfoPopup                                                                = 141,
+	WorkShop                                                                         = 142,
+	WorkShopTab                                                                      = 143,
+	WorkShopEnhanceEve                                                               = 144,
+	WorkShopNanoSuit                                                                 = 145,
+	WorkShopDrone                                                                    = 146,
+	WorkShopExospine                                                                 = 147,
+	WorkShopBodySuitResult                                                           = 148,
+	WorkShopRecoveryPotionResultPopup                                                = 149,
+	WorkShopWeaponResultPopup                                                        = 150,
+	WorkShopTabUnlockPopup                                                           = 151,
+	Puzzle                                                                           = 152,
+	RecordPopup                                                                      = 153,
+	FishingResult                                                                    = 154,
+	FishingFishDetail                                                                = 155,
+	FishingBoxReward                                                                 = 156,
+	FishingBoxRewardSlot                                                             = 157,
+	CanCollection                                                                    = 158,
+	CanDetail                                                                        = 159,
+	CanGain                                                                          = 160,
+	TestNavigation                                                                   = 161,
+	AreaName                                                                         = 162,
+	GuideVideo                                                                       = 163,
+	GuideUnlockMode                                                                  = 164,
+	GuideMessage                                                                     = 165,
+	GuideMessageSlot                                                                 = 166,
+	GuideRewardList                                                                  = 167,
+	TutorialFloater                                                                  = 168,
+	Shop                                                                             = 169,
+	Shop_ItemList                                                                    = 170,
+	Shop_ItemDetail                                                                  = 171,
+	Shop_Popup                                                                       = 172,
+	ShopAll                                                                          = 173,
+	ShopCore                                                                         = 174,
+	ShopQuest                                                                        = 175,
+	ShopUsableItem                                                                   = 176,
+	ShopBullet                                                                       = 177,
+	ShopMaterial                                                                     = 178,
+	ShopGear                                                                         = 179,
+	ShopRecipe                                                                       = 180,
+	ShopLook                                                                         = 181,
+	ShopFish                                                                         = 182,
+	ShopEtc                                                                          = 183,
+	ShopSell                                                                         = 184,
+	TeleportCamp                                                                     = 185,
+	TeleportRegion                                                                   = 186,
+	TeleportRegionSlot                                                               = 187,
+	Empty                                                                            = 188,
+	DebugCommand                                                                     = 189,
+	MiniGameGorgon                                                                   = 190,
+	DebugViewer                                                                      = 191,
+	HUDRealTimeDebug                                                                 = 192,
+	HUDSoundDebugger                                                                 = 193,
+	HUDSoundDebuggerSetting                                                          = 194,
+	Indicator                                                                        = 195,
+	RedDot                                                                           = 196,
+	SettingSlotRadioBox                                                              = 197,
+	SettingSlotRadioButton                                                           = 198,
+	SettingV2                                                                        = 199,
+	SettingSlotComboBox                                                              = 200,
+	SettingSlotRollingV2                                                             = 201,
+	SettingSlotSliderV2                                                              = 202,
+	SettingSlotButtonV2                                                              = 203,
+	SettingPopup                                                                     = 204,
+	SettingPopupDisplay                                                              = 205,
+	SettingPopupDisplaySDR                                                           = 206,
+	SettingPopupDisplayHDR                                                           = 207,
+	KeyMappingViewer                                                                 = 208,
+	KeyMappingPadViewer                                                              = 209,
+	KeyMappingPopup                                                                  = 210,
+	KeyMappingSlotContainer                                                          = 211,
+	KeyMappingSlot                                                                   = 212,
+	RequestBoard                                                                     = 213,
+	NextChapterPopup                                                                 = 214,
+	NightOperationSelect                                                             = 215,
+	HUDResetNotice                                                                   = 216,
+	HUDResetNoticeSlot                                                               = 217,
+	HairSalon                                                                        = 218,
+	HairSalonDetail                                                                  = 219,
+	TrainingRoom                                                                     = 220,
+	TrainingRoomMenu                                                                 = 221,
+	TrainingRoomSkillInfo                                                            = 222,
+	TrainingRoomSkillStackSlot                                                       = 223,
+	TestTextCorrect                                                                  = 224,
+	Reward                                                                           = 225,
+	RewardSlot                                                                       = 226,
+	SpecialReward                                                                    = 227,
+	DebugToastMessage                                                                = 228,
+	InteractionMessageBox                                                            = 229,
+	DebugPlayerInfo                                                                  = 230,
+	GameSplashSaveGuide                                                              = 231,
+	GameSplashTrialNotice                                                            = 232,
+	TrialBossChallengeMessage                                                        = 233,
+	TrialShopApp                                                                     = 234,
+	DLCPurchasePopup                                                                 = 235,
+	BossChallenge                                                                    = 236,
+	BossChallengeFinishResult                                                        = 237,
+	BossChallengeDebugInfo                                                           = 238,
+	BossChallengeExit                                                                = 239,
+	PhotoMode                                                                        = 240,
+	PhotoModeSettingSlotSlider                                                       = 241,
+	PhotoModeSettingSlotRolling                                                      = 242,
+	PhotoModeSettingSlotButton                                                       = 243,
+	Turntable                                                                        = 244,
+	NikkeLostArticlePopup                                                            = 245,
+	NikkeMinigameResult                                                              = 246,
+	MailBox                                                                          = 247,
+	Coupon                                                                           = 248,
+	ArtBook                                                                          = 249,
+	NikkeStagePoup                                                                   = 250,
+	GamePause                                                                        = 251
 };
 
 /// Enum /Script/SB.ESBUIMessageBoxListBackgroundType
 /// Size: 0x01 (1 bytes)
 enum class ESBUIMessageBoxListBackgroundType : uint8_t
 {
-	ESBUIMessageBoxListBackgroundType__None                                          = 0,
-	ESBUIMessageBoxListBackgroundType__BlackBoard                                    = 1,
-	ESBUIMessageBoxListBackgroundType__FadeBlackBoard                                = 2
+	None                                                                             = 0,
+	BlackBoard                                                                       = 1,
+	FadeBlackBoard                                                                   = 2
 };
 
 /// Enum /Script/SB.ESBWidgetGeometryMode
 /// Size: 0x01 (1 bytes)
 enum class ESBWidgetGeometryMode : uint8_t
 {
-	ESBWidgetGeometryMode__Plane                                                     = 0,
-	ESBWidgetGeometryMode__Cylinder                                                  = 1,
-	ESBWidgetGeometryMode__Billboard                                                 = 2
+	Plane                                                                            = 0,
+	Cylinder                                                                         = 1,
+	Billboard                                                                        = 2
 };
 
 /// Enum /Script/SB.ESBWidgetBlendMode
 /// Size: 0x01 (1 bytes)
 enum class ESBWidgetBlendMode : uint8_t
 {
-	ESBWidgetBlendMode__Opaque                                                       = 0,
-	ESBWidgetBlendMode__Masked                                                       = 1,
-	ESBWidgetBlendMode__Transparent                                                  = 2
+	Opaque                                                                           = 0,
+	Masked                                                                           = 1,
+	Transparent                                                                      = 2
 };
 
 /// Enum /Script/SB.ESBWidgetTimingPolicy
 /// Size: 0x01 (1 bytes)
 enum class ESBWidgetTimingPolicy : uint8_t
 {
-	ESBWidgetTimingPolicy__RealTime                                                  = 0,
-	ESBWidgetTimingPolicy__GameTime                                                  = 1
+	RealTime                                                                         = 0,
+	GameTime                                                                         = 1
 };
 
 /// Enum /Script/SB.ESBWidgetSpace
 /// Size: 0x01 (1 bytes)
 enum class ESBWidgetSpace : uint8_t
 {
-	ESBWidgetSpace__World                                                            = 0,
-	ESBWidgetSpace__Screen                                                           = 1
+	World                                                                            = 0,
+	Screen                                                                           = 1
 };
 
 /// Enum /Script/SB.ESBCharacterWindVolumeEncompassState
 /// Size: 0x01 (1 bytes)
 enum class ESBCharacterWindVolumeEncompassState : uint8_t
 {
-	ESBCharacterWindVolumeEncompassState__ESBCharacterWindVolumeEncompassState_None  = 0,
-	ESBCharacterWindVolumeEncompassState__ESBCharacterWindVolumeEncompassState_Entering = 1,
-	ESBCharacterWindVolumeEncompassState__ESBCharacterWindVolumeEncompassState_Entered = 2,
-	ESBCharacterWindVolumeEncompassState__ESBCharacterWindVolumeEncompassState_Leaving = 3,
-	ESBCharacterWindVolumeEncompassState__ESBCharacterWindVolumeEncompassState_FinishedLeaving = 4
+	ESBCharacterWindVolumeEncompassState_None                                        = 0,
+	ESBCharacterWindVolumeEncompassState_Entering                                    = 1,
+	ESBCharacterWindVolumeEncompassState_Entered                                     = 2,
+	ESBCharacterWindVolumeEncompassState_Leaving                                     = 3,
+	ESBCharacterWindVolumeEncompassState_FinishedLeaving                             = 4
 };
 
 /// Class /Script/SB.SBWidgetNavigationCustom

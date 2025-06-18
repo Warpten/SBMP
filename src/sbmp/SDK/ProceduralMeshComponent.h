@@ -16,9 +16,9 @@
 /// Size: 0x01 (1 bytes)
 enum class EProcMeshSliceCapOption : uint8_t
 {
-	EProcMeshSliceCapOption__NoCap                                                   = 0,
-	EProcMeshSliceCapOption__CreateNewSectionForCap                                  = 1,
-	EProcMeshSliceCapOption__UseLastSectionForCap                                    = 2
+	NoCap                                                                            = 0,
+	CreateNewSectionForCap                                                           = 1,
+	UseLastSectionForCap                                                             = 2
 };
 
 /// Enum /Script/ProceduralMeshComponent.EProcMeshVertexType

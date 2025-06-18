@@ -17,471 +17,471 @@
 /// Size: 0x01 (1 bytes)
 enum class EARTrackingState : uint8_t
 {
-	EARTrackingState__Unknown                                                        = 0,
-	EARTrackingState__Tracking                                                       = 1,
-	EARTrackingState__NotTracking                                                    = 2,
-	EARTrackingState__StoppedTracking                                                = 3
+	Unknown                                                                          = 0,
+	Tracking                                                                         = 1,
+	NotTracking                                                                      = 2,
+	StoppedTracking                                                                  = 3
 };
 
 /// Enum /Script/AugmentedReality.EGeoAnchorComponentDebugMode
 /// Size: 0x01 (1 bytes)
 enum class EGeoAnchorComponentDebugMode : uint8_t
 {
-	EGeoAnchorComponentDebugMode__None                                               = 0,
-	EGeoAnchorComponentDebugMode__ShowGeoData                                        = 1
+	None                                                                             = 0,
+	ShowGeoData                                                                      = 1
 };
 
 /// Enum /Script/AugmentedReality.EPoseComponentDebugMode
 /// Size: 0x01 (1 bytes)
 enum class EPoseComponentDebugMode : uint8_t
 {
-	EPoseComponentDebugMode__None                                                    = 0,
-	EPoseComponentDebugMode__ShowSkeleton                                            = 1
+	None                                                                             = 0,
+	ShowSkeleton                                                                     = 1
 };
 
 /// Enum /Script/AugmentedReality.EQRCodeComponentDebugMode
 /// Size: 0x01 (1 bytes)
 enum class EQRCodeComponentDebugMode : uint8_t
 {
-	EQRCodeComponentDebugMode__None                                                  = 0,
-	EQRCodeComponentDebugMode__ShowQRCode                                            = 1
+	None                                                                             = 0,
+	ShowQRCode                                                                       = 1
 };
 
 /// Enum /Script/AugmentedReality.EImageComponentDebugMode
 /// Size: 0x01 (1 bytes)
 enum class EImageComponentDebugMode : uint8_t
 {
-	EImageComponentDebugMode__None                                                   = 0,
-	EImageComponentDebugMode__ShowDetectedImage                                      = 1
+	None                                                                             = 0,
+	ShowDetectedImage                                                                = 1
 };
 
 /// Enum /Script/AugmentedReality.EARFaceTransformMixing
 /// Size: 0x01 (1 bytes)
 enum class EARFaceTransformMixing : uint8_t
 {
-	EARFaceTransformMixing__ComponentOnly                                            = 0,
-	EARFaceTransformMixing__ComponentLocationTrackedRotation                         = 1,
-	EARFaceTransformMixing__ComponentWithTracked                                     = 2,
-	EARFaceTransformMixing__TrackingOnly                                             = 3
+	ComponentOnly                                                                    = 0,
+	ComponentLocationTrackedRotation                                                 = 1,
+	ComponentWithTracked                                                             = 2,
+	TrackingOnly                                                                     = 3
 };
 
 /// Enum /Script/AugmentedReality.EFaceComponentDebugMode
 /// Size: 0x01 (1 bytes)
 enum class EFaceComponentDebugMode : uint8_t
 {
-	EFaceComponentDebugMode__None                                                    = 0,
-	EFaceComponentDebugMode__ShowEyeVectors                                          = 1,
-	EFaceComponentDebugMode__ShowFaceMesh                                            = 2
+	None                                                                             = 0,
+	ShowEyeVectors                                                                   = 1,
+	ShowFaceMesh                                                                     = 2
 };
 
 /// Enum /Script/AugmentedReality.EPlaneComponentDebugMode
 /// Size: 0x01 (1 bytes)
 enum class EPlaneComponentDebugMode : uint8_t
 {
-	EPlaneComponentDebugMode__None                                                   = 0,
-	EPlaneComponentDebugMode__ShowNetworkRole                                        = 1,
-	EPlaneComponentDebugMode__ShowClassification                                     = 2
+	None                                                                             = 0,
+	ShowNetworkRole                                                                  = 1,
+	ShowClassification                                                               = 2
 };
 
 /// Enum /Script/AugmentedReality.EARSessionConfigFlags
 /// Size: 0x01 (1 bytes)
 enum class EARSessionConfigFlags : uint8_t
 {
-	EARSessionConfigFlags__None                                                      = 0,
-	EARSessionConfigFlags__GenerateMeshData                                          = 1,
-	EARSessionConfigFlags__RenderMeshDataInWireframe                                 = 2,
-	EARSessionConfigFlags__GenerateCollisionForMeshData                              = 4,
-	EARSessionConfigFlags__GenerateNavMeshForMeshData                                = 8,
-	EARSessionConfigFlags__UseMeshDataForOcclusion                                   = 16
+	None                                                                             = 0,
+	GenerateMeshData                                                                 = 1,
+	RenderMeshDataInWireframe                                                        = 2,
+	GenerateCollisionForMeshData                                                     = 4,
+	GenerateNavMeshForMeshData                                                       = 8,
+	UseMeshDataForOcclusion                                                          = 16
 };
 
 /// Enum /Script/AugmentedReality.EARServicePermissionRequestResult
 /// Size: 0x01 (1 bytes)
 enum class EARServicePermissionRequestResult : uint8_t
 {
-	EARServicePermissionRequestResult__Granted                                       = 0,
-	EARServicePermissionRequestResult__Denied                                        = 1
+	Granted                                                                          = 0,
+	Denied                                                                           = 1
 };
 
 /// Enum /Script/AugmentedReality.EARServiceInstallRequestResult
 /// Size: 0x01 (1 bytes)
 enum class EARServiceInstallRequestResult : uint8_t
 {
-	EARServiceInstallRequestResult__Installed                                        = 0,
-	EARServiceInstallRequestResult__DeviceNotCompatible                              = 1,
-	EARServiceInstallRequestResult__UserDeclinedInstallation                         = 2,
-	EARServiceInstallRequestResult__FatalError                                       = 3
+	Installed                                                                        = 0,
+	DeviceNotCompatible                                                              = 1,
+	UserDeclinedInstallation                                                         = 2,
+	FatalError                                                                       = 3
 };
 
 /// Enum /Script/AugmentedReality.EARServiceAvailability
 /// Size: 0x01 (1 bytes)
 enum class EARServiceAvailability : uint8_t
 {
-	EARServiceAvailability__UnknownError                                             = 0,
-	EARServiceAvailability__UnknownChecking                                          = 1,
-	EARServiceAvailability__UnknownTimedOut                                          = 2,
-	EARServiceAvailability__UnsupportedDeviceNotCapable                              = 3,
-	EARServiceAvailability__SupportedNotInstalled                                    = 4,
-	EARServiceAvailability__SupportedVersionTooOld                                   = 5,
-	EARServiceAvailability__SupportedInstalled                                       = 6
+	UnknownError                                                                     = 0,
+	UnknownChecking                                                                  = 1,
+	UnknownTimedOut                                                                  = 2,
+	UnsupportedDeviceNotCapable                                                      = 3,
+	SupportedNotInstalled                                                            = 4,
+	SupportedVersionTooOld                                                           = 5,
+	SupportedInstalled                                                               = 6
 };
 
 /// Enum /Script/AugmentedReality.EARGeoTrackingAccuracy
 /// Size: 0x01 (1 bytes)
 enum class EARGeoTrackingAccuracy : uint8_t
 {
-	EARGeoTrackingAccuracy__Undetermined                                             = 0,
-	EARGeoTrackingAccuracy__Low                                                      = 1,
-	EARGeoTrackingAccuracy__Medium                                                   = 2,
-	EARGeoTrackingAccuracy__High                                                     = 3
+	Undetermined                                                                     = 0,
+	Low                                                                              = 1,
+	Medium                                                                           = 2,
+	High                                                                             = 3
 };
 
 /// Enum /Script/AugmentedReality.EARGeoTrackingStateReason
 /// Size: 0x01 (1 bytes)
 enum class EARGeoTrackingStateReason : uint8_t
 {
-	EARGeoTrackingStateReason__None                                                  = 0,
-	EARGeoTrackingStateReason__NotAvailableAtLocation                                = 1,
-	EARGeoTrackingStateReason__NeedLocationPermissions                               = 2,
-	EARGeoTrackingStateReason__DevicePointedTooLow                                   = 3,
-	EARGeoTrackingStateReason__WorldTrackingUnstable                                 = 4,
-	EARGeoTrackingStateReason__WaitingForLocation                                    = 5,
-	EARGeoTrackingStateReason__GeoDataNotLoaded                                      = 6,
-	EARGeoTrackingStateReason__VisualLocalizationFailed                              = 7,
-	EARGeoTrackingStateReason__WaitingForAvailabilityCheck                           = 8
+	None                                                                             = 0,
+	NotAvailableAtLocation                                                           = 1,
+	NeedLocationPermissions                                                          = 2,
+	DevicePointedTooLow                                                              = 3,
+	WorldTrackingUnstable                                                            = 4,
+	WaitingForLocation                                                               = 5,
+	GeoDataNotLoaded                                                                 = 6,
+	VisualLocalizationFailed                                                         = 7,
+	WaitingForAvailabilityCheck                                                      = 8
 };
 
 /// Enum /Script/AugmentedReality.EARGeoTrackingState
 /// Size: 0x01 (1 bytes)
 enum class EARGeoTrackingState : uint8_t
 {
-	EARGeoTrackingState__Initializing                                                = 0,
-	EARGeoTrackingState__Localized                                                   = 1,
-	EARGeoTrackingState__Localizing                                                  = 2,
-	EARGeoTrackingState__NotAvailable                                                = 3
+	Initializing                                                                     = 0,
+	Localized                                                                        = 1,
+	Localizing                                                                       = 2,
+	NotAvailable                                                                     = 3
 };
 
 /// Enum /Script/AugmentedReality.EARSceneReconstruction
 /// Size: 0x01 (1 bytes)
 enum class EARSceneReconstruction : uint8_t
 {
-	EARSceneReconstruction__None                                                     = 0,
-	EARSceneReconstruction__MeshOnly                                                 = 1,
-	EARSceneReconstruction__MeshWithClassification                                   = 2
+	None                                                                             = 0,
+	MeshOnly                                                                         = 1,
+	MeshWithClassification                                                           = 2
 };
 
 /// Enum /Script/AugmentedReality.EARSessionTrackingFeature
 /// Size: 0x01 (1 bytes)
 enum class EARSessionTrackingFeature : uint8_t
 {
-	EARSessionTrackingFeature__None                                                  = 0,
-	EARSessionTrackingFeature__PoseDetection2D                                       = 1,
-	EARSessionTrackingFeature__PersonSegmentation                                    = 2,
-	EARSessionTrackingFeature__PersonSegmentationWithDepth                           = 3,
-	EARSessionTrackingFeature__SceneDepth                                            = 4,
-	EARSessionTrackingFeature__SmoothedSceneDepth                                    = 5
+	None                                                                             = 0,
+	PoseDetection2D                                                                  = 1,
+	PersonSegmentation                                                               = 2,
+	PersonSegmentationWithDepth                                                      = 3,
+	SceneDepth                                                                       = 4,
+	SmoothedSceneDepth                                                               = 5
 };
 
 /// Enum /Script/AugmentedReality.EARFaceTrackingUpdate
 /// Size: 0x01 (1 bytes)
 enum class EARFaceTrackingUpdate : uint8_t
 {
-	EARFaceTrackingUpdate__CurvesAndGeo                                              = 0,
-	EARFaceTrackingUpdate__CurvesOnly                                                = 1
+	CurvesAndGeo                                                                     = 0,
+	CurvesOnly                                                                       = 1
 };
 
 /// Enum /Script/AugmentedReality.EAREnvironmentCaptureProbeType
 /// Size: 0x01 (1 bytes)
 enum class EAREnvironmentCaptureProbeType : uint8_t
 {
-	EAREnvironmentCaptureProbeType__None                                             = 0,
-	EAREnvironmentCaptureProbeType__Manual                                           = 1,
-	EAREnvironmentCaptureProbeType__Automatic                                        = 2
+	None                                                                             = 0,
+	Manual                                                                           = 1,
+	Automatic                                                                        = 2
 };
 
 /// Enum /Script/AugmentedReality.EARFrameSyncMode
 /// Size: 0x01 (1 bytes)
 enum class EARFrameSyncMode : uint8_t
 {
-	EARFrameSyncMode__SyncTickWithCameraImage                                        = 0,
-	EARFrameSyncMode__SyncTickWithoutCameraImage                                     = 1
+	SyncTickWithCameraImage                                                          = 0,
+	SyncTickWithoutCameraImage                                                       = 1
 };
 
 /// Enum /Script/AugmentedReality.EARLightEstimationMode
 /// Size: 0x01 (1 bytes)
 enum class EARLightEstimationMode : uint8_t
 {
-	EARLightEstimationMode__None                                                     = 0,
-	EARLightEstimationMode__AmbientLightEstimate                                     = 1,
-	EARLightEstimationMode__DirectionalLightEstimate                                 = 2
+	None                                                                             = 0,
+	AmbientLightEstimate                                                             = 1,
+	DirectionalLightEstimate                                                         = 2
 };
 
 /// Enum /Script/AugmentedReality.EARPlaneDetectionMode
 /// Size: 0x01 (1 bytes)
 enum class EARPlaneDetectionMode : uint8_t
 {
-	EARPlaneDetectionMode__None                                                      = 0,
-	EARPlaneDetectionMode__HorizontalPlaneDetection                                  = 1,
-	EARPlaneDetectionMode__VerticalPlaneDetection                                    = 2
+	None                                                                             = 0,
+	HorizontalPlaneDetection                                                         = 1,
+	VerticalPlaneDetection                                                           = 2
 };
 
 /// Enum /Script/AugmentedReality.EARSessionType
 /// Size: 0x01 (1 bytes)
 enum class EARSessionType : uint8_t
 {
-	EARSessionType__None                                                             = 0,
-	EARSessionType__Orientation                                                      = 1,
-	EARSessionType__World                                                            = 2,
-	EARSessionType__Face                                                             = 3,
-	EARSessionType__Image                                                            = 4,
-	EARSessionType__ObjectScanning                                                   = 5,
-	EARSessionType__PoseTracking                                                     = 6,
-	EARSessionType__GeoTracking                                                      = 7
+	None                                                                             = 0,
+	Orientation                                                                      = 1,
+	World                                                                            = 2,
+	Face                                                                             = 3,
+	Image                                                                            = 4,
+	ObjectScanning                                                                   = 5,
+	PoseTracking                                                                     = 6,
+	GeoTracking                                                                      = 7
 };
 
 /// Enum /Script/AugmentedReality.EARWorldAlignment
 /// Size: 0x01 (1 bytes)
 enum class EARWorldAlignment : uint8_t
 {
-	EARWorldAlignment__Gravity                                                       = 0,
-	EARWorldAlignment__GravityAndHeading                                             = 1,
-	EARWorldAlignment__Camera                                                        = 2
+	Gravity                                                                          = 0,
+	GravityAndHeading                                                                = 1,
+	Camera                                                                           = 2
 };
 
 /// Enum /Script/AugmentedReality.EARDepthAccuracy
 /// Size: 0x01 (1 bytes)
 enum class EARDepthAccuracy : uint8_t
 {
-	EARDepthAccuracy__Unkown                                                         = 0,
-	EARDepthAccuracy__Approximate                                                    = 1,
-	EARDepthAccuracy__Accurate                                                       = 2
+	Unkown                                                                           = 0,
+	Approximate                                                                      = 1,
+	Accurate                                                                         = 2
 };
 
 /// Enum /Script/AugmentedReality.EARDepthQuality
 /// Size: 0x01 (1 bytes)
 enum class EARDepthQuality : uint8_t
 {
-	EARDepthQuality__Unkown                                                          = 0,
-	EARDepthQuality__Low                                                             = 1,
-	EARDepthQuality__High                                                            = 2
+	Unkown                                                                           = 0,
+	Low                                                                              = 1,
+	High                                                                             = 2
 };
 
 /// Enum /Script/AugmentedReality.EARTextureType
 /// Size: 0x01 (1 bytes)
 enum class EARTextureType : uint8_t
 {
-	EARTextureType__Unknown                                                          = 0,
-	EARTextureType__CameraImage                                                      = 1,
-	EARTextureType__CameraDepth                                                      = 2,
-	EARTextureType__EnvironmentCapture                                               = 3,
-	EARTextureType__PersonSegmentationImage                                          = 4,
-	EARTextureType__PersonSegmentationDepth                                          = 5,
-	EARTextureType__SceneDepthMap                                                    = 6,
-	EARTextureType__SceneDepthConfidenceMap                                          = 7
+	Unknown                                                                          = 0,
+	CameraImage                                                                      = 1,
+	CameraDepth                                                                      = 2,
+	EnvironmentCapture                                                               = 3,
+	PersonSegmentationImage                                                          = 4,
+	PersonSegmentationDepth                                                          = 5,
+	SceneDepthMap                                                                    = 6,
+	SceneDepthConfidenceMap                                                          = 7
 };
 
 /// Enum /Script/AugmentedReality.EAREye
 /// Size: 0x01 (1 bytes)
 enum class EAREye : uint8_t
 {
-	EAREye__LeftEye                                                                  = 0,
-	EAREye__RightEye                                                                 = 1
+	LeftEye                                                                          = 0,
+	RightEye                                                                         = 1
 };
 
 /// Enum /Script/AugmentedReality.EARFaceBlendShape
 /// Size: 0x01 (1 bytes)
 enum class EARFaceBlendShape : uint8_t
 {
-	EARFaceBlendShape__EyeBlinkLeft                                                  = 0,
-	EARFaceBlendShape__EyeLookDownLeft                                               = 1,
-	EARFaceBlendShape__EyeLookInLeft                                                 = 2,
-	EARFaceBlendShape__EyeLookOutLeft                                                = 3,
-	EARFaceBlendShape__EyeLookUpLeft                                                 = 4,
-	EARFaceBlendShape__EyeSquintLeft                                                 = 5,
-	EARFaceBlendShape__EyeWideLeft                                                   = 6,
-	EARFaceBlendShape__EyeBlinkRight                                                 = 7,
-	EARFaceBlendShape__EyeLookDownRight                                              = 8,
-	EARFaceBlendShape__EyeLookInRight                                                = 9,
-	EARFaceBlendShape__EyeLookOutRight                                               = 10,
-	EARFaceBlendShape__EyeLookUpRight                                                = 11,
-	EARFaceBlendShape__EyeSquintRight                                                = 12,
-	EARFaceBlendShape__EyeWideRight                                                  = 13,
-	EARFaceBlendShape__JawForward                                                    = 14,
-	EARFaceBlendShape__JawLeft                                                       = 15,
-	EARFaceBlendShape__JawRight                                                      = 16,
-	EARFaceBlendShape__JawOpen                                                       = 17,
-	EARFaceBlendShape__MouthClose                                                    = 18,
-	EARFaceBlendShape__MouthFunnel                                                   = 19,
-	EARFaceBlendShape__MouthPucker                                                   = 20,
-	EARFaceBlendShape__MouthLeft                                                     = 21,
-	EARFaceBlendShape__MouthRight                                                    = 22,
-	EARFaceBlendShape__MouthSmileLeft                                                = 23,
-	EARFaceBlendShape__MouthSmileRight                                               = 24,
-	EARFaceBlendShape__MouthFrownLeft                                                = 25,
-	EARFaceBlendShape__MouthFrownRight                                               = 26,
-	EARFaceBlendShape__MouthDimpleLeft                                               = 27,
-	EARFaceBlendShape__MouthDimpleRight                                              = 28,
-	EARFaceBlendShape__MouthStretchLeft                                              = 29,
-	EARFaceBlendShape__MouthStretchRight                                             = 30,
-	EARFaceBlendShape__MouthRollLower                                                = 31,
-	EARFaceBlendShape__MouthRollUpper                                                = 32,
-	EARFaceBlendShape__MouthShrugLower                                               = 33,
-	EARFaceBlendShape__MouthShrugUpper                                               = 34,
-	EARFaceBlendShape__MouthPressLeft                                                = 35,
-	EARFaceBlendShape__MouthPressRight                                               = 36,
-	EARFaceBlendShape__MouthLowerDownLeft                                            = 37,
-	EARFaceBlendShape__MouthLowerDownRight                                           = 38,
-	EARFaceBlendShape__MouthUpperUpLeft                                              = 39,
-	EARFaceBlendShape__MouthUpperUpRight                                             = 40,
-	EARFaceBlendShape__BrowDownLeft                                                  = 41,
-	EARFaceBlendShape__BrowDownRight                                                 = 42,
-	EARFaceBlendShape__BrowInnerUp                                                   = 43,
-	EARFaceBlendShape__BrowOuterUpLeft                                               = 44,
-	EARFaceBlendShape__BrowOuterUpRight                                              = 45,
-	EARFaceBlendShape__CheekPuff                                                     = 46,
-	EARFaceBlendShape__CheekSquintLeft                                               = 47,
-	EARFaceBlendShape__CheekSquintRight                                              = 48,
-	EARFaceBlendShape__NoseSneerLeft                                                 = 49,
-	EARFaceBlendShape__NoseSneerRight                                                = 50,
-	EARFaceBlendShape__TongueOut                                                     = 51,
-	EARFaceBlendShape__HeadYaw                                                       = 52,
-	EARFaceBlendShape__HeadPitch                                                     = 53,
-	EARFaceBlendShape__HeadRoll                                                      = 54,
-	EARFaceBlendShape__LeftEyeYaw                                                    = 55,
-	EARFaceBlendShape__LeftEyePitch                                                  = 56,
-	EARFaceBlendShape__LeftEyeRoll                                                   = 57,
-	EARFaceBlendShape__RightEyeYaw                                                   = 58,
-	EARFaceBlendShape__RightEyePitch                                                 = 59,
-	EARFaceBlendShape__RightEyeRoll                                                  = 60
+	EyeBlinkLeft                                                                     = 0,
+	EyeLookDownLeft                                                                  = 1,
+	EyeLookInLeft                                                                    = 2,
+	EyeLookOutLeft                                                                   = 3,
+	EyeLookUpLeft                                                                    = 4,
+	EyeSquintLeft                                                                    = 5,
+	EyeWideLeft                                                                      = 6,
+	EyeBlinkRight                                                                    = 7,
+	EyeLookDownRight                                                                 = 8,
+	EyeLookInRight                                                                   = 9,
+	EyeLookOutRight                                                                  = 10,
+	EyeLookUpRight                                                                   = 11,
+	EyeSquintRight                                                                   = 12,
+	EyeWideRight                                                                     = 13,
+	JawForward                                                                       = 14,
+	JawLeft                                                                          = 15,
+	JawRight                                                                         = 16,
+	JawOpen                                                                          = 17,
+	MouthClose                                                                       = 18,
+	MouthFunnel                                                                      = 19,
+	MouthPucker                                                                      = 20,
+	MouthLeft                                                                        = 21,
+	MouthRight                                                                       = 22,
+	MouthSmileLeft                                                                   = 23,
+	MouthSmileRight                                                                  = 24,
+	MouthFrownLeft                                                                   = 25,
+	MouthFrownRight                                                                  = 26,
+	MouthDimpleLeft                                                                  = 27,
+	MouthDimpleRight                                                                 = 28,
+	MouthStretchLeft                                                                 = 29,
+	MouthStretchRight                                                                = 30,
+	MouthRollLower                                                                   = 31,
+	MouthRollUpper                                                                   = 32,
+	MouthShrugLower                                                                  = 33,
+	MouthShrugUpper                                                                  = 34,
+	MouthPressLeft                                                                   = 35,
+	MouthPressRight                                                                  = 36,
+	MouthLowerDownLeft                                                               = 37,
+	MouthLowerDownRight                                                              = 38,
+	MouthUpperUpLeft                                                                 = 39,
+	MouthUpperUpRight                                                                = 40,
+	BrowDownLeft                                                                     = 41,
+	BrowDownRight                                                                    = 42,
+	BrowInnerUp                                                                      = 43,
+	BrowOuterUpLeft                                                                  = 44,
+	BrowOuterUpRight                                                                 = 45,
+	CheekPuff                                                                        = 46,
+	CheekSquintLeft                                                                  = 47,
+	CheekSquintRight                                                                 = 48,
+	NoseSneerLeft                                                                    = 49,
+	NoseSneerRight                                                                   = 50,
+	TongueOut                                                                        = 51,
+	HeadYaw                                                                          = 52,
+	HeadPitch                                                                        = 53,
+	HeadRoll                                                                         = 54,
+	LeftEyeYaw                                                                       = 55,
+	LeftEyePitch                                                                     = 56,
+	LeftEyeRoll                                                                      = 57,
+	RightEyeYaw                                                                      = 58,
+	RightEyePitch                                                                    = 59,
+	RightEyeRoll                                                                     = 60
 };
 
 /// Enum /Script/AugmentedReality.EARFaceTrackingDirection
 /// Size: 0x01 (1 bytes)
 enum class EARFaceTrackingDirection : uint8_t
 {
-	EARFaceTrackingDirection__FaceRelative                                           = 0,
-	EARFaceTrackingDirection__FaceMirrored                                           = 1
+	FaceRelative                                                                     = 0,
+	FaceMirrored                                                                     = 1
 };
 
 /// Enum /Script/AugmentedReality.EARCandidateImageOrientation
 /// Size: 0x01 (1 bytes)
 enum class EARCandidateImageOrientation : uint8_t
 {
-	EARCandidateImageOrientation__Landscape                                          = 0,
-	EARCandidateImageOrientation__Portrait                                           = 1
+	Landscape                                                                        = 0,
+	Portrait                                                                         = 1
 };
 
 /// Enum /Script/AugmentedReality.EARAltitudeSource
 /// Size: 0x01 (1 bytes)
 enum class EARAltitudeSource : uint8_t
 {
-	EARAltitudeSource__Precise                                                       = 0,
-	EARAltitudeSource__Coarse                                                        = 1,
-	EARAltitudeSource__UserDefined                                                   = 2,
-	EARAltitudeSource__Unknown                                                       = 3
+	Precise                                                                          = 0,
+	Coarse                                                                           = 1,
+	UserDefined                                                                      = 2,
+	Unknown                                                                          = 3
 };
 
 /// Enum /Script/AugmentedReality.EARJointTransformSpace
 /// Size: 0x01 (1 bytes)
 enum class EARJointTransformSpace : uint8_t
 {
-	EARJointTransformSpace__Model                                                    = 0,
-	EARJointTransformSpace__ParentJoint                                              = 1
+	Model                                                                            = 0,
+	ParentJoint                                                                      = 1
 };
 
 /// Enum /Script/AugmentedReality.EARObjectClassification
 /// Size: 0x01 (1 bytes)
 enum class EARObjectClassification : uint8_t
 {
-	EARObjectClassification__NotApplicable                                           = 0,
-	EARObjectClassification__Unknown                                                 = 1,
-	EARObjectClassification__Wall                                                    = 2,
-	EARObjectClassification__Ceiling                                                 = 3,
-	EARObjectClassification__Floor                                                   = 4,
-	EARObjectClassification__Table                                                   = 5,
-	EARObjectClassification__Seat                                                    = 6,
-	EARObjectClassification__Face                                                    = 7,
-	EARObjectClassification__Image                                                   = 8,
-	EARObjectClassification__World                                                   = 9,
-	EARObjectClassification__SceneObject                                             = 10,
-	EARObjectClassification__HandMesh                                                = 11,
-	EARObjectClassification__Door                                                    = 12,
-	EARObjectClassification__Window                                                  = 13
+	NotApplicable                                                                    = 0,
+	Unknown                                                                          = 1,
+	Wall                                                                             = 2,
+	Ceiling                                                                          = 3,
+	Floor                                                                            = 4,
+	Table                                                                            = 5,
+	Seat                                                                             = 6,
+	Face                                                                             = 7,
+	Image                                                                            = 8,
+	World                                                                            = 9,
+	SceneObject                                                                      = 10,
+	HandMesh                                                                         = 11,
+	Door                                                                             = 12,
+	Window                                                                           = 13
 };
 
 /// Enum /Script/AugmentedReality.EARPlaneOrientation
 /// Size: 0x01 (1 bytes)
 enum class EARPlaneOrientation : uint8_t
 {
-	EARPlaneOrientation__Horizontal                                                  = 0,
-	EARPlaneOrientation__Vertical                                                    = 1,
-	EARPlaneOrientation__Diagonal                                                    = 2
+	Horizontal                                                                       = 0,
+	Vertical                                                                         = 1,
+	Diagonal                                                                         = 2
 };
 
 /// Enum /Script/AugmentedReality.EARWorldMappingState
 /// Size: 0x01 (1 bytes)
 enum class EARWorldMappingState : uint8_t
 {
-	EARWorldMappingState__NotAvailable                                               = 0,
-	EARWorldMappingState__StillMappingNotRelocalizable                               = 1,
-	EARWorldMappingState__StillMappingRelocalizable                                  = 2,
-	EARWorldMappingState__Mapped                                                     = 3
+	NotAvailable                                                                     = 0,
+	StillMappingNotRelocalizable                                                     = 1,
+	StillMappingRelocalizable                                                        = 2,
+	Mapped                                                                           = 3
 };
 
 /// Enum /Script/AugmentedReality.EARSessionStatus
 /// Size: 0x01 (1 bytes)
 enum class EARSessionStatus : uint8_t
 {
-	EARSessionStatus__NotStarted                                                     = 0,
-	EARSessionStatus__Running                                                        = 1,
-	EARSessionStatus__NotSupported                                                   = 2,
-	EARSessionStatus__FatalError                                                     = 3,
-	EARSessionStatus__PermissionNotGranted                                           = 4,
-	EARSessionStatus__UnsupportedConfiguration                                       = 5,
-	EARSessionStatus__Other                                                          = 6
+	NotStarted                                                                       = 0,
+	Running                                                                          = 1,
+	NotSupported                                                                     = 2,
+	FatalError                                                                       = 3,
+	PermissionNotGranted                                                             = 4,
+	UnsupportedConfiguration                                                         = 5,
+	Other                                                                            = 6
 };
 
 /// Enum /Script/AugmentedReality.EARTrackingQualityReason
 /// Size: 0x01 (1 bytes)
 enum class EARTrackingQualityReason : uint8_t
 {
-	EARTrackingQualityReason__None                                                   = 0,
-	EARTrackingQualityReason__Initializing                                           = 1,
-	EARTrackingQualityReason__Relocalizing                                           = 2,
-	EARTrackingQualityReason__ExcessiveMotion                                        = 3,
-	EARTrackingQualityReason__InsufficientFeatures                                   = 4,
-	EARTrackingQualityReason__InsufficientLight                                      = 5,
-	EARTrackingQualityReason__BadState                                               = 6
+	None                                                                             = 0,
+	Initializing                                                                     = 1,
+	Relocalizing                                                                     = 2,
+	ExcessiveMotion                                                                  = 3,
+	InsufficientFeatures                                                             = 4,
+	InsufficientLight                                                                = 5,
+	BadState                                                                         = 6
 };
 
 /// Enum /Script/AugmentedReality.EARTrackingQuality
 /// Size: 0x01 (1 bytes)
 enum class EARTrackingQuality : uint8_t
 {
-	EARTrackingQuality__NotTracking                                                  = 0,
-	EARTrackingQuality__OrientationOnly                                              = 1,
-	EARTrackingQuality__OrientationAndPosition                                       = 2
+	NotTracking                                                                      = 0,
+	OrientationOnly                                                                  = 1,
+	OrientationAndPosition                                                           = 2
 };
 
 /// Enum /Script/AugmentedReality.EARLineTraceChannels
 /// Size: 0x01 (1 bytes)
 enum class EARLineTraceChannels : uint8_t
 {
-	EARLineTraceChannels__None                                                       = 0,
-	EARLineTraceChannels__FeaturePoint                                               = 1,
-	EARLineTraceChannels__GroundPlane                                                = 2,
-	EARLineTraceChannels__PlaneUsingExtent                                           = 4,
-	EARLineTraceChannels__PlaneUsingBoundaryPolygon                                  = 8
+	None                                                                             = 0,
+	FeaturePoint                                                                     = 1,
+	GroundPlane                                                                      = 2,
+	PlaneUsingExtent                                                                 = 4,
+	PlaneUsingBoundaryPolygon                                                        = 8
 };
 
 /// Enum /Script/AugmentedReality.EARCaptureType
 /// Size: 0x01 (1 bytes)
 enum class EARCaptureType : uint8_t
 {
-	EARCaptureType__Camera                                                           = 0,
-	EARCaptureType__QRCode                                                           = 1,
-	EARCaptureType__SpatialMapping                                                   = 2,
-	EARCaptureType__SceneUnderstanding                                               = 3
+	Camera                                                                           = 0,
+	QRCode                                                                           = 1,
+	SpatialMapping                                                                   = 2,
+	SceneUnderstanding                                                               = 3
 };
 
 /// Class /Script/AugmentedReality.AROriginActor

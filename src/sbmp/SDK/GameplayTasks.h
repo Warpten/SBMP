@@ -16,30 +16,30 @@
 /// Size: 0x01 (1 bytes)
 enum class ETaskResourceOverlapPolicy : uint8_t
 {
-	ETaskResourceOverlapPolicy__StartOnTop                                           = 0,
-	ETaskResourceOverlapPolicy__StartAtEnd                                           = 1
+	StartOnTop                                                                       = 0,
+	StartAtEnd                                                                       = 1
 };
 
 /// Enum /Script/GameplayTasks.EGameplayTaskState
 /// Size: 0x01 (1 bytes)
 enum class EGameplayTaskState : uint8_t
 {
-	EGameplayTaskState__Uninitialized                                                = 0,
-	EGameplayTaskState__AwaitingActivation                                           = 1,
-	EGameplayTaskState__Paused                                                       = 2,
-	EGameplayTaskState__Active                                                       = 3,
-	EGameplayTaskState__Finished                                                     = 4
+	Uninitialized                                                                    = 0,
+	AwaitingActivation                                                               = 1,
+	Paused                                                                           = 2,
+	Active                                                                           = 3,
+	Finished                                                                         = 4
 };
 
 /// Enum /Script/GameplayTasks.EGameplayTaskRunResult
 /// Size: 0x01 (1 bytes)
 enum class EGameplayTaskRunResult : uint8_t
 {
-	EGameplayTaskRunResult__Error                                                    = 0,
-	EGameplayTaskRunResult__Failed                                                   = 1,
-	EGameplayTaskRunResult__Success_Paused                                           = 2,
-	EGameplayTaskRunResult__Success_Active                                           = 3,
-	EGameplayTaskRunResult__Success_Finished                                         = 4
+	Error                                                                            = 0,
+	Failed                                                                           = 1,
+	Success_Paused                                                                   = 2,
+	Success_Active                                                                   = 3,
+	Success_Finished                                                                 = 4
 };
 
 /// Class /Script/GameplayTasks.GameplayTask

@@ -16,23 +16,23 @@
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapPlaneQueryFlags : uint8_t
 {
-	EMagicLeapPlaneQueryFlags__Vertical                                              = 0,
-	EMagicLeapPlaneQueryFlags__Horizontal                                            = 1,
-	EMagicLeapPlaneQueryFlags__Arbitrary                                             = 2,
-	EMagicLeapPlaneQueryFlags__OrientToGravity                                       = 3,
-	EMagicLeapPlaneQueryFlags__PreferInner                                           = 4,
-	EMagicLeapPlaneQueryFlags__Ceiling                                               = 5,
-	EMagicLeapPlaneQueryFlags__Floor                                                 = 6,
-	EMagicLeapPlaneQueryFlags__Wall                                                  = 7,
-	EMagicLeapPlaneQueryFlags__Polygons                                              = 8
+	Vertical                                                                         = 0,
+	Horizontal                                                                       = 1,
+	Arbitrary                                                                        = 2,
+	OrientToGravity                                                                  = 3,
+	PreferInner                                                                      = 4,
+	Ceiling                                                                          = 5,
+	Floor                                                                            = 6,
+	Wall                                                                             = 7,
+	Polygons                                                                         = 8
 };
 
 /// Enum /Script/MagicLeapPlanes.EMagicLeapPlaneQueryType
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapPlaneQueryType : uint8_t
 {
-	EMagicLeapPlaneQueryType__Bulk                                                   = 0,
-	EMagicLeapPlaneQueryType__Delta                                                  = 1
+	Bulk                                                                             = 0,
+	Delta                                                                            = 1
 };
 
 /// Class /Script/MagicLeapPlanes.MagicLeapPlanesComponent

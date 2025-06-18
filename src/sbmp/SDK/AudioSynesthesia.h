@@ -17,35 +17,35 @@
 /// Size: 0x01 (1 bytes)
 enum class EConstantQFFTSizeEnum : uint8_t
 {
-	EConstantQFFTSizeEnum__Min                                                       = 0,
-	EConstantQFFTSizeEnum__XXSmall                                                   = 1,
-	EConstantQFFTSizeEnum__XSmall                                                    = 2,
-	EConstantQFFTSizeEnum__Small                                                     = 3,
-	EConstantQFFTSizeEnum__Medium                                                    = 4,
-	EConstantQFFTSizeEnum__Large                                                     = 5,
-	EConstantQFFTSizeEnum__XLarge                                                    = 6,
-	EConstantQFFTSizeEnum__XXLarge                                                   = 7,
-	EConstantQFFTSizeEnum__Max                                                       = 8
+	Min                                                                              = 0,
+	XXSmall                                                                          = 1,
+	XSmall                                                                           = 2,
+	Small                                                                            = 3,
+	Medium                                                                           = 4,
+	Large                                                                            = 5,
+	XLarge                                                                           = 6,
+	XXLarge                                                                          = 7,
+	Max                                                                              = 8
 };
 
 /// Enum /Script/AudioSynesthesia.EConstantQNormalizationEnum
 /// Size: 0x01 (1 bytes)
 enum class EConstantQNormalizationEnum : uint8_t
 {
-	EConstantQNormalizationEnum__EqualEuclideanNorm                                  = 0,
-	EConstantQNormalizationEnum__EqualEnergy                                         = 1,
-	EConstantQNormalizationEnum__EqualAmplitude                                      = 2
+	EqualEuclideanNorm                                                               = 0,
+	EqualEnergy                                                                      = 1,
+	EqualAmplitude                                                                   = 2
 };
 
 /// Enum /Script/AudioSynesthesia.ELoudnessNRTCurveTypeEnum
 /// Size: 0x01 (1 bytes)
 enum class ELoudnessNRTCurveTypeEnum : uint8_t
 {
-	ELoudnessNRTCurveTypeEnum__A                                                     = 0,
-	ELoudnessNRTCurveTypeEnum__B                                                     = 1,
-	ELoudnessNRTCurveTypeEnum__C                                                     = 2,
-	ELoudnessNRTCurveTypeEnum__D                                                     = 3,
-	ELoudnessNRTCurveTypeEnum__None                                                  = 4
+	A                                                                                = 0,
+	B                                                                                = 1,
+	C                                                                                = 2,
+	D                                                                                = 3,
+	None                                                                             = 4
 };
 
 /// Class /Script/AudioSynesthesia.AudioSynesthesiaNRTSettings

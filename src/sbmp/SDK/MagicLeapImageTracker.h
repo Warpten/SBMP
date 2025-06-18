@@ -16,17 +16,17 @@
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapImageTargetOrientation : uint8_t
 {
-	EMagicLeapImageTargetOrientation__ForwardAxisAsNormal                            = 0,
-	EMagicLeapImageTargetOrientation__UpAxisAsNormal                                 = 1
+	ForwardAxisAsNormal                                                              = 0,
+	UpAxisAsNormal                                                                   = 1
 };
 
 /// Enum /Script/MagicLeapImageTracker.EMagicLeapImageTargetStatus
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapImageTargetStatus : uint8_t
 {
-	EMagicLeapImageTargetStatus__Tracked                                             = 0,
-	EMagicLeapImageTargetStatus__Unreliable                                          = 1,
-	EMagicLeapImageTargetStatus__NotTracked                                          = 2
+	Tracked                                                                          = 0,
+	Unreliable                                                                       = 1,
+	NotTracked                                                                       = 2
 };
 
 /// Class /Script/MagicLeapImageTracker.MagicLeapImageTrackerComponent

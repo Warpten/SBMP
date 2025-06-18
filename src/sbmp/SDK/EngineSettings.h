@@ -15,35 +15,35 @@
 /// Size: 0x01 (1 bytes)
 enum class ESubLevelStripMode : uint8_t
 {
-	ESubLevelStripMode__ExactClass                                                   = 0,
-	ESubLevelStripMode__IsChildOf                                                    = 1
+	ExactClass                                                                       = 0,
+	IsChildOf                                                                        = 1
 };
 
 /// Enum /Script/EngineSettings.EFourPlayerSplitScreenType
 /// Size: 0x01 (1 bytes)
 enum class EFourPlayerSplitScreenType : uint8_t
 {
-	EFourPlayerSplitScreenType__Grid                                                 = 0,
-	EFourPlayerSplitScreenType__Vertical                                             = 1,
-	EFourPlayerSplitScreenType__Horizontal                                           = 2
+	Grid                                                                             = 0,
+	Vertical                                                                         = 1,
+	Horizontal                                                                       = 2
 };
 
 /// Enum /Script/EngineSettings.EThreePlayerSplitScreenType
 /// Size: 0x01 (1 bytes)
 enum class EThreePlayerSplitScreenType : uint8_t
 {
-	EThreePlayerSplitScreenType__FavorTop                                            = 0,
-	EThreePlayerSplitScreenType__FavorBottom                                         = 1,
-	EThreePlayerSplitScreenType__Vertical                                            = 2,
-	EThreePlayerSplitScreenType__Horizontal                                          = 3
+	FavorTop                                                                         = 0,
+	FavorBottom                                                                      = 1,
+	Vertical                                                                         = 2,
+	Horizontal                                                                       = 3
 };
 
 /// Enum /Script/EngineSettings.ETwoPlayerSplitScreenType
 /// Size: 0x01 (1 bytes)
 enum class ETwoPlayerSplitScreenType : uint8_t
 {
-	ETwoPlayerSplitScreenType__Horizontal                                            = 0,
-	ETwoPlayerSplitScreenType__Vertical                                              = 1
+	Horizontal                                                                       = 0,
+	Vertical                                                                         = 1
 };
 
 /// Struct /Script/EngineSettings.AutoCompleteCommand

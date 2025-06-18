@@ -17,8 +17,8 @@
 /// Size: 0x01 (1 bytes)
 enum class EBodyCollisionResponse : uint8_t
 {
-	EBodyCollisionResponse__BodyCollision_Enabled                                    = 0,
-	EBodyCollisionResponse__BodyCollision_Disabled                                   = 1
+	BodyCollision_Enabled                                                            = 0,
+	BodyCollision_Disabled                                                           = 1
 };
 
 /// Enum /Script/PhysicsCore.EPhysicsType
@@ -53,8 +53,8 @@ enum class ELinearConstraintMotion : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class EConstraintFrame : uint8_t
 {
-	EConstraintFrame__Frame1                                                         = 0,
-	EConstraintFrame__Frame2                                                         = 1
+	Frame1                                                                           = 0,
+	Frame2                                                                           = 1
 };
 
 /// Enum /Script/PhysicsCore.EAngularConstraintMotion
@@ -70,9 +70,9 @@ enum class EAngularConstraintMotion : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESleepFamily : uint8_t
 {
-	ESleepFamily__Normal                                                             = 0,
-	ESleepFamily__Sensitive                                                          = 1,
-	ESleepFamily__Custom                                                             = 2
+	Normal                                                                           = 0,
+	Sensitive                                                                        = 1,
+	Custom                                                                           = 2
 };
 
 /// Enum /Script/PhysicsCore.ERadialImpulseFalloff
@@ -157,10 +157,10 @@ enum class EPhysicalSurface : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class EFrictionCombineMode : uint8_t
 {
-	EFrictionCombineMode__Average                                                    = 0,
-	EFrictionCombineMode__Min                                                        = 1,
-	EFrictionCombineMode__Multiply                                                   = 2,
-	EFrictionCombineMode__Max                                                        = 3
+	Average                                                                          = 0,
+	Min                                                                              = 1,
+	Multiply                                                                         = 2,
+	Max                                                                              = 3
 };
 
 /// Class /Script/PhysicsCore.PhysicalMaterial

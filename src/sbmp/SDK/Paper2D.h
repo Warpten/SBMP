@@ -17,72 +17,72 @@
 /// Size: 0x01 (1 bytes)
 enum class EFlipbookCollisionMode : uint8_t
 {
-	EFlipbookCollisionMode__NoCollision                                              = 0,
-	EFlipbookCollisionMode__FirstFrameCollision                                      = 1,
-	EFlipbookCollisionMode__EachFrameCollision                                       = 2
+	NoCollision                                                                      = 0,
+	FirstFrameCollision                                                              = 1,
+	EachFrameCollision                                                               = 2
 };
 
 /// Enum /Script/Paper2D.EPaperSpriteAtlasPadding
 /// Size: 0x01 (1 bytes)
 enum class EPaperSpriteAtlasPadding : uint8_t
 {
-	EPaperSpriteAtlasPadding__DilateBorder                                           = 0,
-	EPaperSpriteAtlasPadding__PadWithZero                                            = 1
+	DilateBorder                                                                     = 0,
+	PadWithZero                                                                      = 1
 };
 
 /// Enum /Script/Paper2D.ETileMapProjectionMode
 /// Size: 0x01 (1 bytes)
 enum class ETileMapProjectionMode : uint8_t
 {
-	ETileMapProjectionMode__Orthogonal                                               = 0,
-	ETileMapProjectionMode__IsometricDiamond                                         = 1,
-	ETileMapProjectionMode__IsometricStaggered                                       = 2,
-	ETileMapProjectionMode__HexagonalStaggered                                       = 3
+	Orthogonal                                                                       = 0,
+	IsometricDiamond                                                                 = 1,
+	IsometricStaggered                                                               = 2,
+	HexagonalStaggered                                                               = 3
 };
 
 /// Enum /Script/Paper2D.ESpritePivotMode
 /// Size: 0x01 (1 bytes)
 enum class ESpritePivotMode : uint8_t
 {
-	ESpritePivotMode__Top_Left                                                       = 0,
-	ESpritePivotMode__Top_Center                                                     = 1,
-	ESpritePivotMode__Top_Right                                                      = 2,
-	ESpritePivotMode__Center_Left                                                    = 3,
-	ESpritePivotMode__Center_Center                                                  = 4,
-	ESpritePivotMode__Center_Right                                                   = 5,
-	ESpritePivotMode__Bottom_Left                                                    = 6,
-	ESpritePivotMode__Bottom_Center                                                  = 7,
-	ESpritePivotMode__Bottom_Right                                                   = 8,
-	ESpritePivotMode__Custom                                                         = 9
+	Top_Left                                                                         = 0,
+	Top_Center                                                                       = 1,
+	Top_Right                                                                        = 2,
+	Center_Left                                                                      = 3,
+	Center_Center                                                                    = 4,
+	Center_Right                                                                     = 5,
+	Bottom_Left                                                                      = 6,
+	Bottom_Center                                                                    = 7,
+	Bottom_Right                                                                     = 8,
+	Custom                                                                           = 9
 };
 
 /// Enum /Script/Paper2D.ESpritePolygonMode
 /// Size: 0x01 (1 bytes)
 enum class ESpritePolygonMode : uint8_t
 {
-	ESpritePolygonMode__SourceBoundingBox                                            = 0,
-	ESpritePolygonMode__TightBoundingBox                                             = 1,
-	ESpritePolygonMode__ShrinkWrapped                                                = 2,
-	ESpritePolygonMode__FullyCustom                                                  = 3,
-	ESpritePolygonMode__Diced                                                        = 4
+	SourceBoundingBox                                                                = 0,
+	TightBoundingBox                                                                 = 1,
+	ShrinkWrapped                                                                    = 2,
+	FullyCustom                                                                      = 3,
+	Diced                                                                            = 4
 };
 
 /// Enum /Script/Paper2D.ESpriteShapeType
 /// Size: 0x01 (1 bytes)
 enum class ESpriteShapeType : uint8_t
 {
-	ESpriteShapeType__Box                                                            = 0,
-	ESpriteShapeType__Circle                                                         = 1,
-	ESpriteShapeType__Polygon                                                        = 2
+	Box                                                                              = 0,
+	Circle                                                                           = 1,
+	Polygon                                                                          = 2
 };
 
 /// Enum /Script/Paper2D.ESpriteCollisionMode
 /// Size: 0x01 (1 bytes)
 enum class ESpriteCollisionMode : uint8_t
 {
-	ESpriteCollisionMode__None                                                       = 0,
-	ESpriteCollisionMode__Use2DPhysics                                               = 1,
-	ESpriteCollisionMode__Use3DPhysics                                               = 2
+	None                                                                             = 0,
+	Use2DPhysics                                                                     = 1,
+	Use3DPhysics                                                                     = 2
 };
 
 /// Class /Script/Paper2D.MaterialExpressionSpriteTextureSampler

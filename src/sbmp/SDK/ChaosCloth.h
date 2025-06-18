@@ -17,21 +17,21 @@
 /// Size: 0x01 (1 bytes)
 enum class EChaosClothTetherMode : uint8_t
 {
-	EChaosClothTetherMode__FastTetherFastLength                                      = 0,
-	EChaosClothTetherMode__AccurateTetherFastLength                                  = 1,
-	EChaosClothTetherMode__AccurateTetherAccurateLength                              = 2,
-	EChaosClothTetherMode__MaxChaosClothTetherMode                                   = 3
+	FastTetherFastLength                                                             = 0,
+	AccurateTetherFastLength                                                         = 1,
+	AccurateTetherAccurateLength                                                     = 2,
+	MaxChaosClothTetherMode                                                          = 3
 };
 
 /// Enum /Script/ChaosCloth.EChaosWeightMapTarget
 /// Size: 0x01 (1 bytes)
 enum class EChaosWeightMapTarget : uint8_t
 {
-	EChaosWeightMapTarget__None                                                      = 0,
-	EChaosWeightMapTarget__MaxDistance                                               = 1,
-	EChaosWeightMapTarget__BackstopDistance                                          = 2,
-	EChaosWeightMapTarget__BackstopRadius                                            = 3,
-	EChaosWeightMapTarget__AnimDriveMultiplier                                       = 4
+	None                                                                             = 0,
+	MaxDistance                                                                      = 1,
+	BackstopDistance                                                                 = 2,
+	BackstopRadius                                                                   = 3,
+	AnimDriveMultiplier                                                              = 4
 };
 
 /// Class /Script/ChaosCloth.ChaosClothConfig

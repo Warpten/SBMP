@@ -29,10 +29,10 @@ enum class EHDRCaptureGamut : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class EMovieSceneCaptureProtocolState : uint8_t
 {
-	EMovieSceneCaptureProtocolState__Idle                                            = 0,
-	EMovieSceneCaptureProtocolState__Initialized                                     = 1,
-	EMovieSceneCaptureProtocolState__Capturing                                       = 2,
-	EMovieSceneCaptureProtocolState__Finalizing                                      = 3
+	Idle                                                                             = 0,
+	Initialized                                                                      = 1,
+	Capturing                                                                        = 2,
+	Finalizing                                                                       = 3
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneCaptureProtocolBase

@@ -16,22 +16,22 @@
 /// Size: 0x01 (1 bytes)
 enum class EFoliageScaling : uint8_t
 {
-	EFoliageScaling__Uniform                                                         = 0,
-	EFoliageScaling__Free                                                            = 1,
-	EFoliageScaling__LockXY                                                          = 2,
-	EFoliageScaling__LockXZ                                                          = 3,
-	EFoliageScaling__LockYZ                                                          = 4
+	Uniform                                                                          = 0,
+	Free                                                                             = 1,
+	LockXY                                                                           = 2,
+	LockXZ                                                                           = 3,
+	LockYZ                                                                           = 4
 };
 
 /// Enum /Script/Foliage.EVertexColorMaskChannel
 /// Size: 0x01 (1 bytes)
 enum class EVertexColorMaskChannel : uint8_t
 {
-	EVertexColorMaskChannel__Red                                                     = 0,
-	EVertexColorMaskChannel__Green                                                   = 1,
-	EVertexColorMaskChannel__Blue                                                    = 2,
-	EVertexColorMaskChannel__Alpha                                                   = 3,
-	EVertexColorMaskChannel__MAX_None                                                = 4
+	Red                                                                              = 0,
+	Green                                                                            = 1,
+	Blue                                                                             = 2,
+	Alpha                                                                            = 3,
+	MAX_None                                                                         = 4
 };
 
 /// Enum /Script/Foliage.FoliageVertexColorMask
@@ -49,19 +49,19 @@ enum class FoliageVertexColorMask : uint8_t
 /// Size: 0x01 (1 bytes)
 enum class ESimulationQuery : uint8_t
 {
-	ESimulationQuery__None                                                           = 0,
-	ESimulationQuery__CollisionOverlap                                               = 1,
-	ESimulationQuery__ShadeOverlap                                                   = 2,
-	ESimulationQuery__AnyOverlap                                                     = 3
+	None                                                                             = 0,
+	CollisionOverlap                                                                 = 1,
+	ShadeOverlap                                                                     = 2,
+	AnyOverlap                                                                       = 3
 };
 
 /// Enum /Script/Foliage.ESimulationOverlap
 /// Size: 0x01 (1 bytes)
 enum class ESimulationOverlap : uint8_t
 {
-	ESimulationOverlap__CollisionOverlap                                             = 0,
-	ESimulationOverlap__ShadeOverlap                                                 = 1,
-	ESimulationOverlap__None                                                         = 2
+	CollisionOverlap                                                                 = 0,
+	ShadeOverlap                                                                     = 1,
+	None                                                                             = 2
 };
 
 /// Class /Script/Foliage.FoliageInstancedStaticMeshComponent

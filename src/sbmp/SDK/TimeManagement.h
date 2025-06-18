@@ -16,29 +16,29 @@
 /// Size: 0x01 (1 bytes)
 enum class EFrameNumberDisplayFormats : uint8_t
 {
-	EFrameNumberDisplayFormats__NonDropFrameTimecode                                 = 0,
-	EFrameNumberDisplayFormats__DropFrameTimecode                                    = 1,
-	EFrameNumberDisplayFormats__Seconds                                              = 2,
-	EFrameNumberDisplayFormats__Frames                                               = 3,
-	EFrameNumberDisplayFormats__MAX_Count                                            = 4
+	NonDropFrameTimecode                                                             = 0,
+	DropFrameTimecode                                                                = 1,
+	Seconds                                                                          = 2,
+	Frames                                                                           = 3,
+	MAX_Count                                                                        = 4
 };
 
 /// Enum /Script/TimeManagement.ETimedDataInputState
 /// Size: 0x01 (1 bytes)
 enum class ETimedDataInputState : uint8_t
 {
-	ETimedDataInputState__Connected                                                  = 0,
-	ETimedDataInputState__Unresponsive                                               = 1,
-	ETimedDataInputState__Disconnected                                               = 2
+	Connected                                                                        = 0,
+	Unresponsive                                                                     = 1,
+	Disconnected                                                                     = 2
 };
 
 /// Enum /Script/TimeManagement.ETimedDataInputEvaluationType
 /// Size: 0x01 (1 bytes)
 enum class ETimedDataInputEvaluationType : uint8_t
 {
-	ETimedDataInputEvaluationType__None                                              = 0,
-	ETimedDataInputEvaluationType__Timecode                                          = 1,
-	ETimedDataInputEvaluationType__PlatformTime                                      = 2
+	None                                                                             = 0,
+	Timecode                                                                         = 1,
+	PlatformTime                                                                     = 2
 };
 
 /// Class /Script/TimeManagement.TimeSynchronizationSource

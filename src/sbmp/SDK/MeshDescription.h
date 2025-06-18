@@ -15,10 +15,10 @@
 /// Size: 0x01 (1 bytes)
 enum class EComputeNTBsOptions : uint8_t
 {
-	EComputeNTBsOptions__None                                                        = 0,
-	EComputeNTBsOptions__Normals                                                     = 1,
-	EComputeNTBsOptions__Tangents                                                    = 2,
-	EComputeNTBsOptions__WeightedNTBs                                                = 4
+	None                                                                             = 0,
+	Normals                                                                          = 1,
+	Tangents                                                                         = 2,
+	WeightedNTBs                                                                     = 4
 };
 
 /// Class /Script/MeshDescription.MeshDescription

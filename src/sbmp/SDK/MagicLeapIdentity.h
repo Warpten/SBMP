@@ -15,38 +15,38 @@
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapIdentityKey : uint8_t
 {
-	EMagicLeapIdentityKey__GivenName                                                 = 0,
-	EMagicLeapIdentityKey__FamilyName                                                = 1,
-	EMagicLeapIdentityKey__Email                                                     = 2,
-	EMagicLeapIdentityKey__Bio                                                       = 3,
-	EMagicLeapIdentityKey__PhoneNumber                                               = 4,
-	EMagicLeapIdentityKey__Avatar2D                                                  = 5,
-	EMagicLeapIdentityKey__Avatar3D                                                  = 6,
-	EMagicLeapIdentityKey__Unknown                                                   = 7
+	GivenName                                                                        = 0,
+	FamilyName                                                                       = 1,
+	Email                                                                            = 2,
+	Bio                                                                              = 3,
+	PhoneNumber                                                                      = 4,
+	Avatar2D                                                                         = 5,
+	Avatar3D                                                                         = 6,
+	Unknown                                                                          = 7
 };
 
 /// Enum /Script/MagicLeapIdentity.EMagicLeapIdentityError
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapIdentityError : uint8_t
 {
-	EMagicLeapIdentityError__Ok                                                      = 0,
-	EMagicLeapIdentityError__InvalidParam                                            = 1,
-	EMagicLeapIdentityError__AllocFailed                                             = 2,
-	EMagicLeapIdentityError__PrivilegeDenied                                         = 3,
-	EMagicLeapIdentityError__FailedToConnectToLocalService                           = 4,
-	EMagicLeapIdentityError__FailedToConnectToCloudService                           = 5,
-	EMagicLeapIdentityError__CloudAuthentication                                     = 6,
-	EMagicLeapIdentityError__InvalidInformationFromCloud                             = 7,
-	EMagicLeapIdentityError__NotLoggedIn                                             = 8,
-	EMagicLeapIdentityError__ExpiredCredentials                                      = 9,
-	EMagicLeapIdentityError__FailedToGetUserProfile                                  = 10,
-	EMagicLeapIdentityError__Unauthorized                                            = 11,
-	EMagicLeapIdentityError__CertificateError                                        = 12,
-	EMagicLeapIdentityError__RejectedByCloud                                         = 13,
-	EMagicLeapIdentityError__AlreadyLoggedIn                                         = 14,
-	EMagicLeapIdentityError__ModifyIsNotSupported                                    = 15,
-	EMagicLeapIdentityError__NetworkError                                            = 16,
-	EMagicLeapIdentityError__UnspecifiedFailure                                      = 17
+	Ok                                                                               = 0,
+	InvalidParam                                                                     = 1,
+	AllocFailed                                                                      = 2,
+	PrivilegeDenied                                                                  = 3,
+	FailedToConnectToLocalService                                                    = 4,
+	FailedToConnectToCloudService                                                    = 5,
+	CloudAuthentication                                                              = 6,
+	InvalidInformationFromCloud                                                      = 7,
+	NotLoggedIn                                                                      = 8,
+	ExpiredCredentials                                                               = 9,
+	FailedToGetUserProfile                                                           = 10,
+	Unauthorized                                                                     = 11,
+	CertificateError                                                                 = 12,
+	RejectedByCloud                                                                  = 13,
+	AlreadyLoggedIn                                                                  = 14,
+	ModifyIsNotSupported                                                             = 15,
+	NetworkError                                                                     = 16,
+	UnspecifiedFailure                                                               = 17
 };
 
 /// Class /Script/MagicLeapIdentity.MagicLeapIdentity

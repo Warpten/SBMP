@@ -17,19 +17,19 @@
 /// Size: 0x01 (1 bytes)
 enum class EClothingWindMethod_Legacy : uint8_t
 {
-	EClothingWindMethod_Legacy__Legacy                                               = 0,
-	EClothingWindMethod_Legacy__Accurate                                             = 1
+	Legacy                                                                           = 0,
+	Accurate                                                                         = 1
 };
 
 /// Enum /Script/ClothingSystemRuntimeCommon.EWeightMapTargetCommon
 /// Size: 0x01 (1 bytes)
 enum class EWeightMapTargetCommon : uint8_t
 {
-	EWeightMapTargetCommon__None                                                     = 0,
-	EWeightMapTargetCommon__MaxDistance                                              = 1,
-	EWeightMapTargetCommon__BackstopDistance                                         = 2,
-	EWeightMapTargetCommon__BackstopRadius                                           = 3,
-	EWeightMapTargetCommon__AnimDriveMultiplier                                      = 4
+	None                                                                             = 0,
+	MaxDistance                                                                      = 1,
+	BackstopDistance                                                                 = 2,
+	BackstopRadius                                                                   = 3,
+	AnimDriveMultiplier                                                              = 4
 };
 
 /// Class /Script/ClothingSystemRuntimeCommon.ClothConfigCommon

@@ -15,11 +15,11 @@
 /// Size: 0x01 (1 bytes)
 enum class EUdpMessageFormat : uint8_t
 {
-	EUdpMessageFormat__None                                                          = 0,
-	EUdpMessageFormat__Json                                                          = 1,
-	EUdpMessageFormat__TaggedProperty                                                = 2,
-	EUdpMessageFormat__CborPlatformEndianness                                        = 3,
-	EUdpMessageFormat__CborStandardEndianness                                        = 4
+	None                                                                             = 0,
+	Json                                                                             = 1,
+	TaggedProperty                                                                   = 2,
+	CborPlatformEndianness                                                           = 3,
+	CborStandardEndianness                                                           = 4
 };
 
 /// Class /Script/UdpMessaging.UdpMessagingSettings

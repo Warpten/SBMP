@@ -16,37 +16,37 @@
 /// Size: 0x01 (1 bytes)
 enum class ERuntimeGenerationType : uint8_t
 {
-	ERuntimeGenerationType__Static                                                   = 0,
-	ERuntimeGenerationType__DynamicModifiersOnly                                     = 1,
-	ERuntimeGenerationType__Dynamic                                                  = 2,
-	ERuntimeGenerationType__LegacyGeneration                                         = 3
+	Static                                                                           = 0,
+	DynamicModifiersOnly                                                             = 1,
+	Dynamic                                                                          = 2,
+	LegacyGeneration                                                                 = 3
 };
 
 /// Enum /Script/NavigationSystem.ENavCostDisplay
 /// Size: 0x01 (1 bytes)
 enum class ENavCostDisplay : uint8_t
 {
-	ENavCostDisplay__TotalCost                                                       = 0,
-	ENavCostDisplay__HeuristicOnly                                                   = 1,
-	ENavCostDisplay__RealCostOnly                                                    = 2
+	TotalCost                                                                        = 0,
+	HeuristicOnly                                                                    = 1,
+	RealCostOnly                                                                     = 2
 };
 
 /// Enum /Script/NavigationSystem.ENavSystemOverridePolicy
 /// Size: 0x01 (1 bytes)
 enum class ENavSystemOverridePolicy : uint8_t
 {
-	ENavSystemOverridePolicy__Override                                               = 0,
-	ENavSystemOverridePolicy__Append                                                 = 1,
-	ENavSystemOverridePolicy__Skip                                                   = 2
+	Override                                                                         = 0,
+	Append                                                                           = 1,
+	Skip                                                                             = 2
 };
 
 /// Enum /Script/NavigationSystem.ERecastPartitioning
 /// Size: 0x01 (1 bytes)
 enum class ERecastPartitioning : uint8_t
 {
-	ERecastPartitioning__Monotone                                                    = 0,
-	ERecastPartitioning__Watershed                                                   = 1,
-	ERecastPartitioning__ChunkyMonotone                                              = 2
+	Monotone                                                                         = 0,
+	Watershed                                                                        = 1,
+	ChunkyMonotone                                                                   = 2
 };
 
 /// Struct /Script/NavigationSystem.SupportedAreaData
