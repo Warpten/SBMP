@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -13,7 +15,7 @@
 #pragma pack(push, 0x1)
 
 /// Class /Script/ActorLayerUtilities.LayersBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class ULayersBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -22,22 +24,22 @@ public:
     // Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.RemoveActorFromLayer
     // [0] InActor : const AActor*
     // [1] Layer : const FActorLayer&
-    constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> RemoveActorFromLayer = { 0x196fba0, 0 };
+    constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> RemoveActorFromLayer = { 0x1977300, 0 };
     // Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.GetActors
     // [0] WorldContextObject : const UObject*
     // [1] ActorLayer : const FActorLayer&
-    constexpr static const FunctionPointer<ULayersBlueprintLibrary, TArray<AActor*>, const UObject*, const FActorLayer&> GetActors = { 0x196fee0, 1 };
+    constexpr static const FunctionPointer<ULayersBlueprintLibrary, TArray<AActor*>, const UObject*, const FActorLayer&> GetActors = { 0x1977640, 1 };
     // Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.AddActorToLayer
     // [0] InActor : const AActor*
     // [1] Layer : const FActorLayer&
-    constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> AddActorToLayer = { 0x196fd40, 2 };
+    constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> AddActorToLayer = { 0x19774a0, 2 };
 };
 
 /// Struct /Script/ActorLayerUtilities.ActorLayer
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FActorLayer
 { 
-    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    FName                                              Name;                                                       // 0x0000   (0x0008)
 };
 
 #pragma pack(pop)

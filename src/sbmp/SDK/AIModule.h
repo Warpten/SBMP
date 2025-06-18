@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -505,54 +507,54 @@ enum class EPawnActionMoveMode : uint8_t
 };
 
 /// Class /Script/AIModule.AIController
-/// Size: 0x03D0 (976 bytes) (0x000340 - 0x0003D0) align n/a MaxSize: 0x03D0
+/// Size: 0x03D0 (976 bytes) (0x000340 - 0x0003D0) align 8 MaxSize: 0x03D0
 class AAIController : public AController
 { 
 public:
-    unsigned char                                      UnknownData03_8[0x38];                                      // 0x0340   (0x0038) MISSED
-    bool                                               bStartAILogicOnPossess : 1;                                 // 0x0378:0 (0x0001) 
-    bool                                               bStopAILogicOnUnposses : 1;                                 // 0x0378:1 (0x0001) 
-    bool                                               bLOSflag : 1;                                               // 0x0378:2 (0x0001) 
-    bool                                               bSkipExtraLOSChecks : 1;                                    // 0x0378:3 (0x0001) 
-    bool                                               bAllowStrafe : 1;                                           // 0x0378:4 (0x0001) 
-    bool                                               bWantsPlayerState : 1;                                      // 0x0378:5 (0x0001) 
-    bool                                               bSetControlRotationFromPawnOrientation : 1;                 // 0x0378:6 (0x0001) 
-    unsigned char                                      UnknownData04_5[0x7];                                       // 0x0379   (0x0007) MISSED
-    class UPathFollowingComponent*                     PathFollowingComponent;                                     // 0x0380   (0x0008) 
-    class UBrainComponent*                             BrainComponent;                                             // 0x0388   (0x0008) 
-    class UAIPerceptionComponent*                      PerceptionComponent;                                        // 0x0390   (0x0008) 
-    class UPawnActionsComponent*                       ActionsComp;                                                // 0x0398   (0x0008) 
-    class UBlackboardComponent*                        Blackboard;                                                 // 0x03A0   (0x0008) 
-    class UGameplayTasksComponent*                     CachedGameplayTasksComponent;                               // 0x03A8   (0x0008) 
-    class UClass*                                      DefaultNavigationFilterClass;                               // 0x03B0   (0x0008) 
-    FMulticastInlineDelegate                           ReceiveMoveCompleted;                                       // 0x03B8   (0x0010) 
-    unsigned char                                      UnknownData05_7[0x8];                                       // 0x03C8   (0x0008) MISSED
+    unsigned char                                      UnknownData00_8[0x38];                                      // 0x0340   (0x0038) MISSED
+    bool                                               bStartAILogicOnPossess : 1;                                 // 0x0378:0 (0x0001)
+    bool                                               bStopAILogicOnUnposses : 1;                                 // 0x0378:1 (0x0001)
+    bool                                               bLOSflag : 1;                                               // 0x0378:2 (0x0001)
+    bool                                               bSkipExtraLOSChecks : 1;                                    // 0x0378:3 (0x0001)
+    bool                                               bAllowStrafe : 1;                                           // 0x0378:4 (0x0001)
+    bool                                               bWantsPlayerState : 1;                                      // 0x0378:5 (0x0001)
+    bool                                               bSetControlRotationFromPawnOrientation : 1;                 // 0x0378:6 (0x0001)
+    unsigned char                                      UnknownData01_5[0x7];                                       // 0x0379   (0x0007) MISSED
+    class UPathFollowingComponent*                     PathFollowingComponent;                                     // 0x0380   (0x0008)
+    class UBrainComponent*                             BrainComponent;                                             // 0x0388   (0x0008)
+    class UAIPerceptionComponent*                      PerceptionComponent;                                        // 0x0390   (0x0008)
+    class UPawnActionsComponent*                       ActionsComp;                                                // 0x0398   (0x0008)
+    class UBlackboardComponent*                        Blackboard;                                                 // 0x03A0   (0x0008)
+    class UGameplayTasksComponent*                     CachedGameplayTasksComponent;                               // 0x03A8   (0x0008)
+    class UClass*                                      DefaultNavigationFilterClass;                               // 0x03B0   (0x0008)
+    FMulticastInlineDelegate                           ReceiveMoveCompleted;                                       // 0x03B8   (0x0010)
+    unsigned char                                      UnknownData02_7[0x8];                                       // 0x03C8   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AIModule.AIController.UseBlackboard
     // [0] BlackboardAsset : const UBlackboardData*
     // [1] BlackboardComponent : const UBlackboardComponent*&
-    constexpr static const FunctionPointer<AAIController, bool, const UBlackboardData*, const UBlackboardComponent*&> UseBlackboard = { 0x4bdb8a0, 0 };
+    constexpr static const FunctionPointer<AAIController, bool, const UBlackboardData*, const UBlackboardComponent*&> UseBlackboard = { 0x4bf0e60, 0 };
     // Function /Script/AIModule.AIController.UnclaimTaskResource
     // [0] ResourceClass : const UClass*
-    constexpr static const FunctionPointer<AAIController, void, const UClass*> UnclaimTaskResource = { 0x4bdb390, 1 };
+    constexpr static const FunctionPointer<AAIController, void, const UClass*> UnclaimTaskResource = { 0x4bf0950, 1 };
     // Function /Script/AIModule.AIController.SetPathFollowingComponent
     // [0] NewPFComponent : const UPathFollowingComponent*
-    constexpr static const FunctionPointer<AAIController, void, const UPathFollowingComponent*> SetPathFollowingComponent = { 0x4bdad90, 2 };
+    constexpr static const FunctionPointer<AAIController, void, const UPathFollowingComponent*> SetPathFollowingComponent = { 0x4bf0350, 2 };
     // Function /Script/AIModule.AIController.SetMoveBlockDetection
     // [0] bEnable : const bool
-    constexpr static const FunctionPointer<AAIController, void, const bool> SetMoveBlockDetection = { 0x4bdbc80, 3 };
+    constexpr static const FunctionPointer<AAIController, void, const bool> SetMoveBlockDetection = { 0x4bf1240, 3 };
     // Function /Script/AIModule.AIController.RunBehaviorTree
     // [0] BTAsset : const UBehaviorTree*
-    constexpr static const FunctionPointer<AAIController, bool, const UBehaviorTree*> RunBehaviorTree = { 0x4bdbb90, 4 };
+    constexpr static const FunctionPointer<AAIController, bool, const UBehaviorTree*> RunBehaviorTree = { 0x4bf1150, 4 };
     // Function /Script/AIModule.AIController.OnUsingBlackBoard
     // [0] BlackboardComp : const UBlackboardComponent*
     // [1] BlackboardAsset : const UBlackboardData*
-    constexpr static const FunctionPointer<AAIController, void, const UBlackboardComponent*, const UBlackboardData*> OnUsingBlackBoard = { 0x2bbb090, 5 };
+    constexpr static const FunctionPointer<AAIController, void, const UBlackboardComponent*, const UBlackboardData*> OnUsingBlackBoard = { 0x2bc7620, 5 };
     // Function /Script/AIModule.AIController.OnGameplayTaskResourcesClaimed
     // [0] NewlyClaimed : const FGameplayResourceSet
     // [1] FreshlyReleased : const FGameplayResourceSet
-    constexpr static const FunctionPointer<AAIController, void, const FGameplayResourceSet, const FGameplayResourceSet> OnGameplayTaskResourcesClaimed = { 0x4bdaeb0, 6 };
+    constexpr static const FunctionPointer<AAIController, void, const FGameplayResourceSet, const FGameplayResourceSet> OnGameplayTaskResourcesClaimed = { 0x4bf0470, 6 };
     // Function /Script/AIModule.AIController.MoveToLocation
     // [0] Dest : const FVector&
     // [1] AcceptanceRadius : const float
@@ -563,7 +565,7 @@ public:
     // [6] FilterClass : const UClass*
     // [7] bAllowPartialPath : const bool
     // [8] inValidGoalDistance : const float
-    constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingRequestResult>, const FVector&, const float, const bool, const bool, const bool, const bool, const UClass*, const bool, const float> MoveToLocation = { 0x4bdbe90, 7 };
+    constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingRequestResult>, const FVector&, const float, const bool, const bool, const bool, const bool, const UClass*, const bool, const float> MoveToLocation = { 0x4bf1450, 7 };
     // Function /Script/AIModule.AIController.MoveToActor
     // [0] Goal : const AActor*
     // [1] AcceptanceRadius : const float
@@ -572,146 +574,146 @@ public:
     // [4] bCanStrafe : const bool
     // [5] FilterClass : const UClass*
     // [6] bAllowPartialPath : const bool
-    constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingRequestResult>, const AActor*, const float, const bool, const bool, const bool, const UClass*, const bool> MoveToActor = { 0x4bdc3d0, 8 };
+    constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingRequestResult>, const AActor*, const float, const bool, const bool, const bool, const UClass*, const bool> MoveToActor = { 0x4bf1990, 8 };
     // Function /Script/AIModule.AIController.K2_SetFocus
     // [0] NewFocus : const AActor*
-    constexpr static const FunctionPointer<AAIController, void, const AActor*> K2_SetFocus = { 0x4bdb080, 9 };
+    constexpr static const FunctionPointer<AAIController, void, const AActor*> K2_SetFocus = { 0x4bf0640, 9 };
     // Function /Script/AIModule.AIController.K2_SetFocalPoint
     // [0] FP : const FVector
-    constexpr static const FunctionPointer<AAIController, void, const FVector> K2_SetFocalPoint = { 0x4bdb160, 10 };
+    constexpr static const FunctionPointer<AAIController, void, const FVector> K2_SetFocalPoint = { 0x4bf0720, 10 };
     // Function /Script/AIModule.AIController.K2_ClearFocus
-    constexpr static const FunctionPointer<AAIController, void> K2_ClearFocus = { 0x4bdb020, 11 };
+    constexpr static const FunctionPointer<AAIController, void> K2_ClearFocus = { 0x4bf05e0, 11 };
     // Function /Script/AIModule.AIController.HasPartialPath
-    constexpr static const FunctionPointer<AAIController, bool> HasPartialPath = { 0x4bdbe00, 12 };
+    constexpr static const FunctionPointer<AAIController, bool> HasPartialPath = { 0x4bf13c0, 12 };
     // Function /Script/AIModule.AIController.GetPathFollowingComponent
-    constexpr static const FunctionPointer<AAIController, UPathFollowingComponent*> GetPathFollowingComponent = { 0x4bdae90, 13 };
+    constexpr static const FunctionPointer<AAIController, UPathFollowingComponent*> GetPathFollowingComponent = { 0x4bf0450, 13 };
     // Function /Script/AIModule.AIController.GetMoveStatus
-    constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingStatus>> GetMoveStatus = { 0x4bdbe50, 14 };
+    constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingStatus>> GetMoveStatus = { 0x4bf1410, 14 };
     // Function /Script/AIModule.AIController.GetImmediateMoveDestination
-    constexpr static const FunctionPointer<AAIController, FVector> GetImmediateMoveDestination = { 0x4bdbd90, 15 };
+    constexpr static const FunctionPointer<AAIController, FVector> GetImmediateMoveDestination = { 0x4bf1350, 15 };
     // Function /Script/AIModule.AIController.GetFocusActor
-    constexpr static const FunctionPointer<AAIController, AActor*> GetFocusActor = { 0x4bdb050, 16 };
+    constexpr static const FunctionPointer<AAIController, AActor*> GetFocusActor = { 0x4bf0610, 16 };
     // Function /Script/AIModule.AIController.GetFocalPointOnActor
     // [0] Actor : const AActor*
-    constexpr static const FunctionPointer<AAIController, FVector, const AActor*> GetFocalPointOnActor = { 0x4bdb250, 17 };
+    constexpr static const FunctionPointer<AAIController, FVector, const AActor*> GetFocalPointOnActor = { 0x4bf0810, 17 };
     // Function /Script/AIModule.AIController.GetFocalPoint
-    constexpr static const FunctionPointer<AAIController, FVector> GetFocalPoint = { 0x4bdb350, 18 };
+    constexpr static const FunctionPointer<AAIController, FVector> GetFocalPoint = { 0x4bf0910, 18 };
     // Function /Script/AIModule.AIController.GetAIPerceptionComponent
-    constexpr static const FunctionPointer<AAIController, UAIPerceptionComponent*> GetAIPerceptionComponent = { 0x4bdae70, 19 };
+    constexpr static const FunctionPointer<AAIController, UAIPerceptionComponent*> GetAIPerceptionComponent = { 0x4bf0430, 19 };
     // Function /Script/AIModule.AIController.ClaimTaskResource
     // [0] ResourceClass : const UClass*
-    constexpr static const FunctionPointer<AAIController, void, const UClass*> ClaimTaskResource = { 0x4bdb5a0, 20 };
+    constexpr static const FunctionPointer<AAIController, void, const UClass*> ClaimTaskResource = { 0x4bf0b60, 20 };
 };
 
 /// Class /Script/AIModule.BrainComponent
-/// Size: 0x0118 (280 bytes) (0x0000C0 - 0x000118) align n/a MaxSize: 0x0118
+/// Size: 0x0118 (280 bytes) (0x0000C0 - 0x000118) align 8 MaxSize: 0x0118
 class UBrainComponent : public UActorComponent
 { 
 public:
-    unsigned char                                      UnknownData02_8[0x8];                                       // 0x00C0   (0x0008) MISSED
-    class UBlackboardComponent*                        BlackboardComp;                                             // 0x00C8   (0x0008) 
-    class AAIController*                               AIOwner;                                                    // 0x00D0   (0x0008) 
-    unsigned char                                      UnknownData03_7[0x40];                                      // 0x00D8   (0x0040) MISSED
+    unsigned char                                      UnknownData00_8[0x8];                                       // 0x00C0   (0x0008) MISSED
+    class UBlackboardComponent*                        BlackboardComp;                                             // 0x00C8   (0x0008)
+    class AAIController*                               AIOwner;                                                    // 0x00D0   (0x0008)
+    unsigned char                                      UnknownData01_7[0x40];                                      // 0x00D8   (0x0040) MISSED
 
     /// Functions
     // Function /Script/AIModule.BrainComponent.StopLogic
     // [0] reason : const FString
-    constexpr static const FunctionPointer<UBrainComponent, void, const FString> StopLogic = { 0x4bf2a10, 0 };
+    constexpr static const FunctionPointer<UBrainComponent, void, const FString> StopLogic = { 0x4c07fd0, 0 };
     // Function /Script/AIModule.BrainComponent.StartLogic
-    constexpr static const FunctionPointer<UBrainComponent, void> StartLogic = { 0x475b390, 1 };
+    constexpr static const FunctionPointer<UBrainComponent, void> StartLogic = { 0x476fec0, 1 };
     // Function /Script/AIModule.BrainComponent.RestartLogic
-    constexpr static const FunctionPointer<UBrainComponent, void> RestartLogic = { 0x475b370, 2 };
+    constexpr static const FunctionPointer<UBrainComponent, void> RestartLogic = { 0x476fea0, 2 };
     // Function /Script/AIModule.BrainComponent.IsRunning
-    constexpr static const FunctionPointer<UBrainComponent, bool> IsRunning = { 0x4bf29e0, 3 };
+    constexpr static const FunctionPointer<UBrainComponent, bool> IsRunning = { 0x4c07fa0, 3 };
     // Function /Script/AIModule.BrainComponent.IsPaused
-    constexpr static const FunctionPointer<UBrainComponent, bool> IsPaused = { 0x4bf29b0, 4 };
+    constexpr static const FunctionPointer<UBrainComponent, bool> IsPaused = { 0x4c07f70, 4 };
 };
 
 /// Class /Script/AIModule.BehaviorTreeComponent
-/// Size: 0x02A8 (680 bytes) (0x000118 - 0x0002A8) align n/a MaxSize: 0x02A8
+/// Size: 0x02A8 (680 bytes) (0x000118 - 0x0002A8) align 8 MaxSize: 0x02A8
 class UBehaviorTreeComponent : public UBrainComponent
 { 
 public:
-    unsigned char                                      UnknownData03_8[0x20];                                      // 0x0118   (0x0020) MISSED
-    TArray<class UBTNode*>                             NodeInstances;                                              // 0x0138   (0x0010) 
-    unsigned char                                      UnknownData04_6[0x140];                                     // 0x0148   (0x0140) MISSED
-    class UBehaviorTree*                               DefaultBehaviorTreeAsset;                                   // 0x0288   (0x0008) 
-    unsigned char                                      UnknownData05_7[0x18];                                      // 0x0290   (0x0018) MISSED
+    unsigned char                                      UnknownData00_8[0x20];                                      // 0x0118   (0x0020) MISSED
+    TArray<class UBTNode*>                             NodeInstances;                                              // 0x0138   (0x0010)
+    unsigned char                                      UnknownData01_6[0x140];                                     // 0x0148   (0x0140) MISSED
+    class UBehaviorTree*                               DefaultBehaviorTreeAsset;                                   // 0x0288   (0x0008)
+    unsigned char                                      UnknownData02_7[0x18];                                      // 0x0290   (0x0018) MISSED
 
     /// Functions
     // Function /Script/AIModule.BehaviorTreeComponent.SetDynamicSubtree
     // [0] InjectTag : const FGameplayTag
     // [1] BehaviorAsset : const UBehaviorTree*
-    constexpr static const FunctionPointer<UBehaviorTreeComponent, void, const FGameplayTag, const UBehaviorTree*> SetDynamicSubtree = { 0x4bebc10, 0 };
+    constexpr static const FunctionPointer<UBehaviorTreeComponent, void, const FGameplayTag, const UBehaviorTree*> SetDynamicSubtree = { 0x4c011d0, 0 };
     // Function /Script/AIModule.BehaviorTreeComponent.GetTagCooldownEndTime
     // [0] CooldownTag : const FGameplayTag
-    constexpr static const FunctionPointer<UBehaviorTreeComponent, float, const FGameplayTag> GetTagCooldownEndTime = { 0x4bebf70, 1 };
+    constexpr static const FunctionPointer<UBehaviorTreeComponent, float, const FGameplayTag> GetTagCooldownEndTime = { 0x4c01530, 1 };
     // Function /Script/AIModule.BehaviorTreeComponent.AddCooldownTagDuration
     // [0] CooldownTag : const FGameplayTag
     // [1] CooldownDuration : const float
     // [2] bAddToExistingDuration : const bool
-    constexpr static const FunctionPointer<UBehaviorTreeComponent, void, const FGameplayTag, const float, const bool> AddCooldownTagDuration = { 0x4bebd80, 2 };
+    constexpr static const FunctionPointer<UBehaviorTreeComponent, void, const FGameplayTag, const float, const bool> AddCooldownTagDuration = { 0x4c01340, 2 };
 };
 
 /// Class /Script/AIModule.BTNode
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
 class UBTNode : public UObject
 { 
 public:
-    unsigned char                                      UnknownData02_8[0x8];                                       // 0x0028   (0x0008) MISSED
-    FString                                            NodeName;                                                   // 0x0030   (0x0010) 
-    class UBehaviorTree*                               TreeAsset;                                                  // 0x0040   (0x0008) 
-    class UBTCompositeNode*                            ParentNode;                                                 // 0x0048   (0x0008) 
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x0050   (0x0008) MISSED
+    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    FString                                            NodeName;                                                   // 0x0030   (0x0010)
+    class UBehaviorTree*                               TreeAsset;                                                  // 0x0040   (0x0008)
+    class UBTCompositeNode*                            ParentNode;                                                 // 0x0048   (0x0008)
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0050   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BTAuxiliaryNode
-/// Size: 0x0060 (96 bytes) (0x000058 - 0x000060) align n/a MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000058 - 0x000060) align 8 MaxSize: 0x0060
 class UBTAuxiliaryNode : public UBTNode
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0058   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0058   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator
-/// Size: 0x0068 (104 bytes) (0x000060 - 0x000068) align n/a MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000060 - 0x000068) align 8 MaxSize: 0x0068
 class UBTDecorator : public UBTAuxiliaryNode
 { 
 public:
-    bool                                               bInverseCondition : 1;                                      // 0x0060:7 (0x0001) 
-    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0061   (0x0003) MISSED
-    TEnumAsByte<EBTFlowAbortMode>                      FlowAbortMode;                                              // 0x0064   (0x0001) 
-    unsigned char                                      UnknownData03_7[0x3];                                       // 0x0065   (0x0003) MISSED
+    bool                                               bInverseCondition : 1;                                      // 0x0060:7 (0x0001)
+    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0061   (0x0003) MISSED
+    TEnumAsByte<EBTFlowAbortMode>                      FlowAbortMode;                                              // 0x0064   (0x0001)
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0065   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTTaskNode
-/// Size: 0x0070 (112 bytes) (0x000058 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000058 - 0x000070) align 8 MaxSize: 0x0070
 class UBTTaskNode : public UBTNode
 { 
 public:
-    TArray<class UBTService*>                          Services;                                                   // 0x0058   (0x0010) 
-    bool                                               bIgnoreRestartSelf : 1;                                     // 0x0068:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0069   (0x0007) MISSED
+    TArray<class UBTService*>                          Services;                                                   // 0x0058   (0x0010)
+    bool                                               bIgnoreRestartSelf : 1;                                     // 0x0068:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0069   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.AIAsyncTaskBlueprintProxy
-/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align n/a MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align 8 MaxSize: 0x0068
 class UAIAsyncTaskBlueprintProxy : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
-    FMulticastInlineDelegate                           OnFail;                                                     // 0x0038   (0x0010) 
-    unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020) MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    FMulticastInlineDelegate                           OnFail;                                                     // 0x0038   (0x0010)
+    unsigned char                                      UnknownData00_7[0x20];                                      // 0x0048   (0x0020) MISSED
 
     /// Functions
     // Function /Script/AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
     // [0] RequestID : const FAIRequestID
     // [1] MovementResult : const TEnumAsByte<EPathFollowingResult>
-    constexpr static const FunctionPointer<UAIAsyncTaskBlueprintProxy, void, const FAIRequestID, const TEnumAsByte<EPathFollowingResult>> OnMoveCompleted = { 0x4bd7f10, 0 };
+    constexpr static const FunctionPointer<UAIAsyncTaskBlueprintProxy, void, const FAIRequestID, const TEnumAsByte<EPathFollowingResult>> OnMoveCompleted = { 0x4bed4d0, 0 };
 };
 
 /// Class /Script/AIModule.AIBlueprintHelperLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UAIBlueprintHelperLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -721,7 +723,7 @@ public:
     // [0] AnimInstance : const UAnimInstance*
     // [1] bUnlockMovement : const bool
     // [2] UnlockAILogic : const bool
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const UAnimInstance*, const bool, const bool> UnlockAIResourcesWithAnimation = { 0x4bd92b0, 0 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const UAnimInstance*, const bool, const bool> UnlockAIResourcesWithAnimation = { 0x4bee870, 0 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.SpawnAIFromClass
     // [0] WorldContextObject : const UObject*
     // [1] PawnClass : const UClass*
@@ -730,53 +732,53 @@ public:
     // [4] Rotation : const FRotator
     // [5] bNoCollisionFail : const bool
     // [6] Owner : const AActor*
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, APawn*, const UObject*, const UClass*, const UBehaviorTree*, const FVector, const FRotator, const bool, const AActor*> SpawnAIFromClass = { 0x4bd9a50, 1 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, APawn*, const UObject*, const UClass*, const UBehaviorTree*, const FVector, const FRotator, const bool, const AActor*> SpawnAIFromClass = { 0x4bef010, 1 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.SimpleMoveToLocation
     // [0] Controller : const AController*
     // [1] Goal : const FVector&
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const AController*, const FVector&> SimpleMoveToLocation = { 0x4bd86a0, 2 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const AController*, const FVector&> SimpleMoveToLocation = { 0x4bedc60, 2 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.SimpleMoveToActor
     // [0] Controller : const AController*
     // [1] Goal : const AActor*
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const AController*, const AActor*> SimpleMoveToActor = { 0x4bd8810, 3 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const AController*, const AActor*> SimpleMoveToActor = { 0x4beddd0, 3 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.SendAIMessage
     // [0] Target : const APawn*
     // [1] Message : const FName
     // [2] MessageSource : const UObject*
     // [3] bSuccess : const bool
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const APawn*, const FName, const UObject*, const bool> SendAIMessage = { 0x4bda000, 4 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const APawn*, const FName, const UObject*, const bool> SendAIMessage = { 0x4bef5c0, 4 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.LockAIResourcesWithAnimation
     // [0] AnimInstance : const UAnimInstance*
     // [1] bLockMovement : const bool
     // [2] LockAILogic : const bool
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const UAnimInstance*, const bool, const bool> LockAIResourcesWithAnimation = { 0x4bd9540, 5 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const UAnimInstance*, const bool, const bool> LockAIResourcesWithAnimation = { 0x4beeb00, 5 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.IsValidAIRotation
     // [0] Rotation : const FRotator
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FRotator> IsValidAIRotation = { 0x4bd8f40, 6 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FRotator> IsValidAIRotation = { 0x4bee500, 6 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.IsValidAILocation
     // [0] Location : const FVector
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FVector> IsValidAILocation = { 0x4bd9180, 7 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FVector> IsValidAILocation = { 0x4bee740, 7 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.IsValidAIDirection
     // [0] DirectionVector : const FVector
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FVector> IsValidAIDirection = { 0x4bd9040, 8 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FVector> IsValidAIDirection = { 0x4bee600, 8 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.GetNextNavLinkIndex
     // [0] Controller : const AController*
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, int32_t, const AController*> GetNextNavLinkIndex = { 0x4bd8960, 9 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, int32_t, const AController*> GetNextNavLinkIndex = { 0x4bedf20, 9 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.GetCurrentPathPoints
     // [0] Controller : const AController*
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, TArray<FVector>, const AController*> GetCurrentPathPoints = { 0x4bd8c90, 10 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, TArray<FVector>, const AController*> GetCurrentPathPoints = { 0x4bee250, 10 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.GetCurrentPathIndex
     // [0] Controller : const AController*
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, int32_t, const AController*> GetCurrentPathIndex = { 0x4bd8b50, 11 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, int32_t, const AController*> GetCurrentPathIndex = { 0x4bee110, 11 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.GetCurrentPath
     // [0] Controller : const AController*
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UNavigationPath*, const AController*> GetCurrentPath = { 0x4bd8d80, 12 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UNavigationPath*, const AController*> GetCurrentPath = { 0x4bee340, 12 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.GetBlackboard
     // [0] Target : const AActor*
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UBlackboardComponent*, const AActor*> GetBlackboard = { 0x4bd97d0, 13 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UBlackboardComponent*, const AActor*> GetBlackboard = { 0x4beed90, 13 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.GetAIController
     // [0] ControlledActor : const AActor*
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, AAIController*, const AActor*> GetAIController = { 0x4bd9920, 14 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, AAIController*, const AActor*> GetAIController = { 0x4beeee0, 14 };
     // Function /Script/AIModule.AIBlueprintHelperLibrary.CreateMoveToProxyObject
     // [0] WorldContextObject : const UObject*
     // [1] Pawn : const APawn*
@@ -784,259 +786,259 @@ public:
     // [3] TargetActor : const AActor*
     // [4] AcceptanceRadius : const float
     // [5] bStopOnOverlap : const bool
-    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UAIAsyncTaskBlueprintProxy*, const UObject*, const APawn*, const FVector, const AActor*, const float, const bool> CreateMoveToProxyObject = { 0x4bda390, 15 };
+    constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UAIAsyncTaskBlueprintProxy*, const UObject*, const APawn*, const FVector, const AActor*, const float, const bool> CreateMoveToProxyObject = { 0x4bef950, 15 };
 };
 
 /// Class /Script/AIModule.AIDataProvider
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UAIDataProvider : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIDataProvider_QueryParams
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
 class UAIDataProvider_QueryParams : public UAIDataProvider
 { 
 public:
-    FName                                              ParamName;                                                  // 0x0028   (0x0008) 
-    float                                              FloatValue;                                                 // 0x0030   (0x0004) 
-    int32_t                                            IntValue;                                                   // 0x0034   (0x0004) 
-    bool                                               BoolValue;                                                  // 0x0038   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0039   (0x0007) MISSED
+    FName                                              ParamName;                                                  // 0x0028   (0x0008)
+    float                                              FloatValue;                                                 // 0x0030   (0x0004)
+    int32_t                                            IntValue;                                                   // 0x0034   (0x0004)
+    bool                                               BoolValue;                                                  // 0x0038   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0039   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.AIDataProvider_Random
-/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align 8 MaxSize: 0x0050
 class UAIDataProvider_Random : public UAIDataProvider_QueryParams
 { 
 public:
-    float                                              Min;                                                        // 0x0040   (0x0004) 
-    float                                              Max;                                                        // 0x0044   (0x0004) 
-    bool                                               bInteger : 1;                                               // 0x0048:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    float                                              Min;                                                        // 0x0040   (0x0004)
+    float                                              Max;                                                        // 0x0044   (0x0004)
+    bool                                               bInteger : 1;                                               // 0x0048:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.AIHotSpotManager
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UAIHotSpotManager : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIPerceptionComponent
-/// Size: 0x01A0 (416 bytes) (0x0000C0 - 0x0001A0) align n/a MaxSize: 0x01A0
+/// Size: 0x01A0 (416 bytes) (0x0000C0 - 0x0001A0) align 8 MaxSize: 0x01A0
 class UAIPerceptionComponent : public UActorComponent
 { 
 public:
-    TArray<class UAISenseConfig*>                      SensesConfig;                                               // 0x00C0   (0x0010) 
-    class UClass*                                      DominantSense;                                              // 0x00D0   (0x0008) 
-    unsigned char                                      UnknownData02_6[0x10];                                      // 0x00D8   (0x0010) MISSED
-    class AAIController*                               AIOwner;                                                    // 0x00E8   (0x0008) 
-    unsigned char                                      UnknownData03_6[0x80];                                      // 0x00F0   (0x0080) MISSED
-    FMulticastInlineDelegate                           OnPerceptionUpdated;                                        // 0x0170   (0x0010) 
-    FMulticastInlineDelegate                           OnTargetPerceptionUpdated;                                  // 0x0180   (0x0010) 
-    FMulticastInlineDelegate                           OnTargetPerceptionInfoUpdated;                              // 0x0190   (0x0010) 
+    TArray<class UAISenseConfig*>                      SensesConfig;                                               // 0x00C0   (0x0010)
+    class UClass*                                      DominantSense;                                              // 0x00D0   (0x0008)
+    unsigned char                                      UnknownData00_6[0x10];                                      // 0x00D8   (0x0010) MISSED
+    class AAIController*                               AIOwner;                                                    // 0x00E8   (0x0008)
+    unsigned char                                      UnknownData01_6[0x80];                                      // 0x00F0   (0x0080) MISSED
+    FMulticastInlineDelegate                           OnPerceptionUpdated;                                        // 0x0170   (0x0010)
+    FMulticastInlineDelegate                           OnTargetPerceptionUpdated;                                  // 0x0180   (0x0010)
+    FMulticastInlineDelegate                           OnTargetPerceptionInfoUpdated;                              // 0x0190   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AIPerceptionComponent.SetSenseEnabled
     // [0] SenseClass : const UClass*
     // [1] bEnable : const bool
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const bool> SetSenseEnabled = { 0x4bde1a0, 0 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const bool> SetSenseEnabled = { 0x4bf3760, 0 };
     // Function /Script/AIModule.AIPerceptionComponent.RequestStimuliListenerUpdate
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void> RequestStimuliListenerUpdate = { 0x4bdeda0, 1 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void> RequestStimuliListenerUpdate = { 0x4bf4360, 1 };
     // Function /Script/AIModule.AIPerceptionComponent.OnOwnerEndPlay
     // [0] Actor : const AActor*
     // [1] EndPlayReason : const TEnumAsByte<EEndPlayReason>
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const AActor*, const TEnumAsByte<EEndPlayReason>> OnOwnerEndPlay = { 0x4bdedc0, 2 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const AActor*, const TEnumAsByte<EEndPlayReason>> OnOwnerEndPlay = { 0x4bf4380, 2 };
     // Function /Script/AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense
     // [0] SenseToUse : const UClass*
     // [1] OutActors : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetPerceivedHostileActorsBySense = { 0x4bdeaf0, 3 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetPerceivedHostileActorsBySense = { 0x4bf40b0, 3 };
     // Function /Script/AIModule.AIPerceptionComponent.GetPerceivedHostileActors
     // [0] OutActors : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const TArray<AActor*>&> GetPerceivedHostileActors = { 0x4bdec90, 4 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const TArray<AActor*>&> GetPerceivedHostileActors = { 0x4bf4250, 4 };
     // Function /Script/AIModule.AIPerceptionComponent.GetPerceivedActors
     // [0] SenseToUse : const UClass*
     // [1] OutActors : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetPerceivedActors = { 0x4bde7b0, 5 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetPerceivedActors = { 0x4bf3d70, 5 };
     // Function /Script/AIModule.AIPerceptionComponent.GetKnownPerceivedActors
     // [0] SenseToUse : const UClass*
     // [1] OutActors : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetKnownPerceivedActors = { 0x4bde950, 6 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetKnownPerceivedActors = { 0x4bf3f10, 6 };
     // Function /Script/AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors
     // [0] SenseToUse : const UClass*
     // [1] OutActors : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetCurrentlyPerceivedActors = { 0x4bde7b0, 7 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetCurrentlyPerceivedActors = { 0x4bf3d70, 7 };
     // Function /Script/AIModule.AIPerceptionComponent.GetActorsPerception
     // [0] Actor : const AActor*
     // [1] Info : const FActorPerceptionBlueprintInfo&
-    constexpr static const FunctionPointer<UAIPerceptionComponent, bool, const AActor*, const FActorPerceptionBlueprintInfo&> GetActorsPerception = { 0x4bde460, 8 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, bool, const AActor*, const FActorPerceptionBlueprintInfo&> GetActorsPerception = { 0x4bf3a20, 8 };
     // Function /Script/AIModule.AIPerceptionComponent.ForgetAll
-    constexpr static const FunctionPointer<UAIPerceptionComponent, void> ForgetAll = { 0x4bded80, 9 };
+    constexpr static const FunctionPointer<UAIPerceptionComponent, void> ForgetAll = { 0x4bf4340, 9 };
 };
 
 /// Class /Script/AIModule.AIPerceptionListenerInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UAIPerceptionListenerInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIPerceptionStimuliSourceComponent
-/// Size: 0x00D8 (216 bytes) (0x0000C0 - 0x0000D8) align n/a MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x0000C0 - 0x0000D8) align 8 MaxSize: 0x00D8
 class UAIPerceptionStimuliSourceComponent : public UActorComponent
 { 
 public:
-    bool                                               bAutoRegisterAsSource : 1;                                  // 0x00C0:0 (0x0001) 
-    unsigned char                                      UnknownData01_5[0x7];                                       // 0x00C1   (0x0007) MISSED
-    TArray<class UClass*>                              RegisterAsSourceForSenses;                                  // 0x00C8   (0x0010) 
+    bool                                               bAutoRegisterAsSource : 1;                                  // 0x00C0:0 (0x0001)
+    unsigned char                                      UnknownData00_5[0x7];                                       // 0x00C1   (0x0007) MISSED
+    TArray<class UClass*>                              RegisterAsSourceForSenses;                                  // 0x00C8   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense
     // [0] SenseClass : const UClass*
-    constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void, const UClass*> UnregisterFromSense = { 0x4bdf7b0, 0 };
+    constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void, const UClass*> UnregisterFromSense = { 0x4bf4d70, 0 };
     // Function /Script/AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromPerceptionSystem
-    constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void> UnregisterFromPerceptionSystem = { 0x4bdfa30, 1 };
+    constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void> UnregisterFromPerceptionSystem = { 0x4bf4ff0, 1 };
     // Function /Script/AIModule.AIPerceptionStimuliSourceComponent.RegisterWithPerceptionSystem
-    constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void> RegisterWithPerceptionSystem = { 0x4bdfd50, 2 };
+    constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void> RegisterWithPerceptionSystem = { 0x4bf5310, 2 };
     // Function /Script/AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense
     // [0] SenseClass : const UClass*
-    constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void, const UClass*> RegisterForSense = { 0x4bdfb00, 3 };
+    constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void, const UClass*> RegisterForSense = { 0x4bf50c0, 3 };
 };
 
 /// Class /Script/AIModule.AISubsystem
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
 class UAISubsystem : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_8[0x8];                                       // 0x0028   (0x0008) MISSED
-    class UAISystem*                                   AISystem;                                                   // 0x0030   (0x0008) 
+    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    class UAISystem*                                   AISystem;                                                   // 0x0030   (0x0008)
 };
 
 /// Class /Script/AIModule.AIPerceptionSystem
-/// Size: 0x0130 (304 bytes) (0x000038 - 0x000130) align n/a MaxSize: 0x0130
+/// Size: 0x0130 (304 bytes) (0x000038 - 0x000130) align 8 MaxSize: 0x0130
 class UAIPerceptionSystem : public UAISubsystem
 { 
 public:
-    unsigned char                                      UnknownData02_8[0x50];                                      // 0x0038   (0x0050) MISSED
-    TArray<class UAISense*>                            Senses;                                                     // 0x0088   (0x0010) 
-    float                                              PerceptionAgingRate;                                        // 0x0098   (0x0004) 
-    unsigned char                                      UnknownData03_7[0x94];                                      // 0x009C   (0x0094) MISSED
+    unsigned char                                      UnknownData00_8[0x50];                                      // 0x0038   (0x0050) MISSED
+    TArray<class UAISense*>                            Senses;                                                     // 0x0088   (0x0010)
+    float                                              PerceptionAgingRate;                                        // 0x0098   (0x0004)
+    unsigned char                                      UnknownData01_7[0x94];                                      // 0x009C   (0x0094) MISSED
 
     /// Functions
     // Function /Script/AIModule.AIPerceptionSystem.ReportPerceptionEvent
     // [0] WorldContextObject : const UObject*
     // [1] PerceptionEvent : const UAISenseEvent*
-    constexpr static const FunctionPointer<UAIPerceptionSystem, void, const UObject*, const UAISenseEvent*> ReportPerceptionEvent = { 0x4be0f50, 0 };
+    constexpr static const FunctionPointer<UAIPerceptionSystem, void, const UObject*, const UAISenseEvent*> ReportPerceptionEvent = { 0x4bf6510, 0 };
     // Function /Script/AIModule.AIPerceptionSystem.ReportEvent
     // [0] PerceptionEvent : const UAISenseEvent*
-    constexpr static const FunctionPointer<UAIPerceptionSystem, void, const UAISenseEvent*> ReportEvent = { 0x4be11a0, 1 };
+    constexpr static const FunctionPointer<UAIPerceptionSystem, void, const UAISenseEvent*> ReportEvent = { 0x4bf6760, 1 };
     // Function /Script/AIModule.AIPerceptionSystem.RegisterPerceptionStimuliSource
     // [0] WorldContextObject : const UObject*
     // [1] Sense : const UClass*
     // [2] Target : const AActor*
-    constexpr static const FunctionPointer<UAIPerceptionSystem, bool, const UObject*, const UClass*, const AActor*> RegisterPerceptionStimuliSource = { 0x4be0cc0, 2 };
+    constexpr static const FunctionPointer<UAIPerceptionSystem, bool, const UObject*, const UClass*, const AActor*> RegisterPerceptionStimuliSource = { 0x4bf6280, 2 };
     // Function /Script/AIModule.AIPerceptionSystem.OnPerceptionStimuliSourceEndPlay
     // [0] Actor : const AActor*
     // [1] EndPlayReason : const TEnumAsByte<EEndPlayReason>
-    constexpr static const FunctionPointer<UAIPerceptionSystem, void, const AActor*, const TEnumAsByte<EEndPlayReason>> OnPerceptionStimuliSourceEndPlay = { 0x4be0900, 3 };
+    constexpr static const FunctionPointer<UAIPerceptionSystem, void, const AActor*, const TEnumAsByte<EEndPlayReason>> OnPerceptionStimuliSourceEndPlay = { 0x4bf5ec0, 3 };
     // Function /Script/AIModule.AIPerceptionSystem.GetSenseClassForStimulus
     // [0] WorldContextObject : const UObject*
     // [1] Stimulus : const FAIStimulus&
-    constexpr static const FunctionPointer<UAIPerceptionSystem, UClass*, const UObject*, const FAIStimulus&> GetSenseClassForStimulus = { 0x4be0a60, 4 };
+    constexpr static const FunctionPointer<UAIPerceptionSystem, UClass*, const UObject*, const FAIStimulus&> GetSenseClassForStimulus = { 0x4bf6020, 4 };
 };
 
 /// Class /Script/AIModule.AIResourceInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UAIResourceInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIResource_Movement
-/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align 8 MaxSize: 0x0038
 class UAIResource_Movement : public UGameplayTaskResource
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIResource_Logic
-/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align 8 MaxSize: 0x0038
 class UAIResource_Logic : public UGameplayTaskResource
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISense
-/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align 8 MaxSize: 0x0080
 class UAISense : public UObject
 { 
 public:
-    float                                              DefaultExpirationAge;                                       // 0x0028   (0x0004) 
-    EAISenseNotifyType                                 NotifyType;                                                 // 0x002C   (0x0001) 
-    unsigned char                                      UnknownData03_6[0x3];                                       // 0x002D   (0x0003) MISSED
-    bool                                               bWantsNewPawnNotification : 1;                              // 0x0030:0 (0x0001) 
-    bool                                               bAutoRegisterAllPawnsAsSources : 1;                         // 0x0030:1 (0x0001) 
-    unsigned char                                      UnknownData04_5[0x7];                                       // 0x0031   (0x0007) MISSED
-    class UAIPerceptionSystem*                         PerceptionSystemInstance;                                   // 0x0038   (0x0008) 
-    unsigned char                                      UnknownData05_7[0x40];                                      // 0x0040   (0x0040) MISSED
+    float                                              DefaultExpirationAge;                                       // 0x0028   (0x0004)
+    EAISenseNotifyType                                 NotifyType;                                                 // 0x002C   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x002D   (0x0003) MISSED
+    bool                                               bWantsNewPawnNotification : 1;                              // 0x0030:0 (0x0001)
+    bool                                               bAutoRegisterAllPawnsAsSources : 1;                         // 0x0030:1 (0x0001)
+    unsigned char                                      UnknownData01_5[0x7];                                       // 0x0031   (0x0007) MISSED
+    class UAIPerceptionSystem*                         PerceptionSystemInstance;                                   // 0x0038   (0x0008)
+    unsigned char                                      UnknownData02_7[0x40];                                      // 0x0040   (0x0040) MISSED
 };
 
 /// Class /Script/AIModule.AISense_Blueprint
-/// Size: 0x00A8 (168 bytes) (0x000080 - 0x0000A8) align n/a MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000080 - 0x0000A8) align 8 MaxSize: 0x00A8
 class UAISense_Blueprint : public UAISense
 { 
 public:
-    class UClass*                                      ListenerDataType;                                           // 0x0080   (0x0008) 
-    TArray<class UAIPerceptionComponent*>              ListenerContainer;                                          // 0x0088   (0x0010) 
-    TArray<class UAISenseEvent*>                       UnprocessedEvents;                                          // 0x0098   (0x0010) 
+    class UClass*                                      ListenerDataType;                                           // 0x0080   (0x0008)
+    TArray<class UAIPerceptionComponent*>              ListenerContainer;                                          // 0x0088   (0x0010)
+    TArray<class UAISenseEvent*>                       UnprocessedEvents;                                          // 0x0098   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AISense_Blueprint.OnUpdate
     // [0] EventsToProcess : const TArray<UAISenseEvent*>&
-    constexpr static const FunctionPointer<UAISense_Blueprint, float, const TArray<UAISenseEvent*>&> OnUpdate = { 0x2bbb090, 0 };
+    constexpr static const FunctionPointer<UAISense_Blueprint, float, const TArray<UAISenseEvent*>&> OnUpdate = { 0x2bc7620, 0 };
     // Function /Script/AIModule.AISense_Blueprint.OnListenerUpdated
     // [0] ActorListener : const AActor*
     // [1] PerceptionComponent : const UAIPerceptionComponent*
-    constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerUpdated = { 0x2bbb090, 1 };
+    constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerUpdated = { 0x2bc7620, 1 };
     // Function /Script/AIModule.AISense_Blueprint.OnListenerUnregistered
     // [0] ActorListener : const AActor*
     // [1] PerceptionComponent : const UAIPerceptionComponent*
-    constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerUnregistered = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerUnregistered = { 0x2bc7620, 2 };
     // Function /Script/AIModule.AISense_Blueprint.OnListenerRegistered
     // [0] ActorListener : const AActor*
     // [1] PerceptionComponent : const UAIPerceptionComponent*
-    constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerRegistered = { 0x2bbb090, 3 };
+    constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerRegistered = { 0x2bc7620, 3 };
     // Function /Script/AIModule.AISense_Blueprint.K2_OnNewPawn
     // [0] NewPawn : const APawn*
-    constexpr static const FunctionPointer<UAISense_Blueprint, void, const APawn*> K2_OnNewPawn = { 0x2bbb090, 4 };
+    constexpr static const FunctionPointer<UAISense_Blueprint, void, const APawn*> K2_OnNewPawn = { 0x2bc7620, 4 };
     // Function /Script/AIModule.AISense_Blueprint.GetAllListenerComponents
     // [0] ListenerComponents : const TArray<UAIPerceptionComponent*>&
-    constexpr static const FunctionPointer<UAISense_Blueprint, void, const TArray<UAIPerceptionComponent*>&> GetAllListenerComponents = { 0x4be2680, 5 };
+    constexpr static const FunctionPointer<UAISense_Blueprint, void, const TArray<UAIPerceptionComponent*>&> GetAllListenerComponents = { 0x4bf7c40, 5 };
     // Function /Script/AIModule.AISense_Blueprint.GetAllListenerActors
     // [0] ListenerActors : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UAISense_Blueprint, void, const TArray<AActor*>&> GetAllListenerActors = { 0x4be27c0, 6 };
+    constexpr static const FunctionPointer<UAISense_Blueprint, void, const TArray<AActor*>&> GetAllListenerActors = { 0x4bf7d80, 6 };
 };
 
 /// Struct /Script/AIModule.AIDamageEvent
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
 struct FAIDamageEvent
 { 
-    float                                              Amount;                                                     // 0x0000   (0x0004) 
-    FVector                                            Location;                                                   // 0x0004   (0x000C) 
-    FVector                                            HitLocation;                                                // 0x0010   (0x000C) 
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x001C   (0x0004) MISSED
-    class AActor*                                      DamagedActor;                                               // 0x0020   (0x0008) 
-    class AActor*                                      Instigator;                                                 // 0x0028   (0x0008) 
+    float                                              Amount;                                                     // 0x0000   (0x0004)
+    FVector                                            Location;                                                   // 0x0004   (0x000C)
+    FVector                                            HitLocation;                                                // 0x0010   (0x000C)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x001C   (0x0004) MISSED
+    class AActor*                                      DamagedActor;                                               // 0x0020   (0x0008)
+    class AActor*                                      Instigator;                                                 // 0x0028   (0x0008)
 };
 
 /// Class /Script/AIModule.AISense_Damage
-/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align 8 MaxSize: 0x0090
 class UAISense_Damage : public UAISense
 { 
 public:
-    TArray<FAIDamageEvent>                             RegisteredEvents;                                           // 0x0080   (0x0010) 
+    TArray<FAIDamageEvent>                             RegisteredEvents;                                           // 0x0080   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AISense_Damage.ReportDamageEvent
@@ -1046,30 +1048,30 @@ public:
     // [3] DamageAmount : const float
     // [4] EventLocation : const FVector
     // [5] HitLocation : const FVector
-    constexpr static const FunctionPointer<UAISense_Damage, void, const UObject*, const AActor*, const AActor*, const float, const FVector, const FVector> ReportDamageEvent = { 0x4be2eb0, 0 };
+    constexpr static const FunctionPointer<UAISense_Damage, void, const UObject*, const AActor*, const AActor*, const float, const FVector, const FVector> ReportDamageEvent = { 0x4bf8470, 0 };
 };
 
 /// Struct /Script/AIModule.AINoiseEvent
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
 struct FAINoiseEvent
 { 
-    unsigned char                                      UnknownData02_7[0x4];                                       // 0x0000   (0x0004) MISSED
-    FVector                                            NoiseLocation;                                              // 0x0004   (0x000C) 
-    float                                              Loudness;                                                   // 0x0010   (0x0004) 
-    float                                              MaxRange;                                                   // 0x0014   (0x0004) 
-    class AActor*                                      Instigator;                                                 // 0x0018   (0x0008) 
-    FName                                              Tag;                                                        // 0x0020   (0x0008) 
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x0028   (0x0008) MISSED
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0000   (0x0004) MISSED
+    FVector                                            NoiseLocation;                                              // 0x0004   (0x000C)
+    float                                              Loudness;                                                   // 0x0010   (0x0004)
+    float                                              MaxRange;                                                   // 0x0014   (0x0004)
+    class AActor*                                      Instigator;                                                 // 0x0018   (0x0008)
+    FName                                              Tag;                                                        // 0x0020   (0x0008)
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.AISense_Hearing
-/// Size: 0x00E8 (232 bytes) (0x000080 - 0x0000E8) align n/a MaxSize: 0x00E8
+/// Size: 0x00E8 (232 bytes) (0x000080 - 0x0000E8) align 8 MaxSize: 0x00E8
 class UAISense_Hearing : public UAISense
 { 
 public:
-    TArray<FAINoiseEvent>                              NoiseEvents;                                                // 0x0080   (0x0010) 
-    float                                              SpeedOfSoundSq;                                             // 0x0090   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x54];                                      // 0x0094   (0x0054) MISSED
+    TArray<FAINoiseEvent>                              NoiseEvents;                                                // 0x0080   (0x0010)
+    float                                              SpeedOfSoundSq;                                             // 0x0090   (0x0004)
+    unsigned char                                      UnknownData00_7[0x54];                                      // 0x0094   (0x0054) MISSED
 
     /// Functions
     // Function /Script/AIModule.AISense_Hearing.ReportNoiseEvent
@@ -1079,279 +1081,279 @@ public:
     // [3] Instigator : const AActor*
     // [4] MaxRange : const float
     // [5] Tag : const FName
-    constexpr static const FunctionPointer<UAISense_Hearing, void, const UObject*, const FVector, const float, const AActor*, const float, const FName> ReportNoiseEvent = { 0x4be3910, 0 };
+    constexpr static const FunctionPointer<UAISense_Hearing, void, const UObject*, const FVector, const float, const AActor*, const float, const FName> ReportNoiseEvent = { 0x4bf8ed0, 0 };
 };
 
 /// Struct /Script/AIModule.AIPredictionEvent
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FAIPredictionEvent
 { 
-    class AActor*                                      Requestor;                                                  // 0x0000   (0x0008) 
-    class AActor*                                      PredictedActor;                                             // 0x0008   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0010   (0x0008) MISSED
+    class AActor*                                      Requestor;                                                  // 0x0000   (0x0008)
+    class AActor*                                      PredictedActor;                                             // 0x0008   (0x0008)
+    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0010   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.AISense_Prediction
-/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align 8 MaxSize: 0x0090
 class UAISense_Prediction : public UAISense
 { 
 public:
-    TArray<FAIPredictionEvent>                         RegisteredEvents;                                           // 0x0080   (0x0010) 
+    TArray<FAIPredictionEvent>                         RegisteredEvents;                                           // 0x0080   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AISense_Prediction.RequestPawnPredictionEvent
     // [0] Requestor : const APawn*
     // [1] PredictedActor : const AActor*
     // [2] PredictionTime : const float
-    constexpr static const FunctionPointer<UAISense_Prediction, void, const APawn*, const AActor*, const float> RequestPawnPredictionEvent = { 0x4be4240, 0 };
+    constexpr static const FunctionPointer<UAISense_Prediction, void, const APawn*, const AActor*, const float> RequestPawnPredictionEvent = { 0x4bf9800, 0 };
     // Function /Script/AIModule.AISense_Prediction.RequestControllerPredictionEvent
     // [0] Requestor : const AAIController*
     // [1] PredictedActor : const AActor*
     // [2] PredictionTime : const float
-    constexpr static const FunctionPointer<UAISense_Prediction, void, const AAIController*, const AActor*, const float> RequestControllerPredictionEvent = { 0x4be44c0, 1 };
+    constexpr static const FunctionPointer<UAISense_Prediction, void, const AAIController*, const AActor*, const float> RequestControllerPredictionEvent = { 0x4bf9a80, 1 };
 };
 
 /// Class /Script/AIModule.AISense_Sight
-/// Size: 0x0170 (368 bytes) (0x000080 - 0x000170) align n/a MaxSize: 0x0170
+/// Size: 0x0170 (368 bytes) (0x000080 - 0x000170) align 8 MaxSize: 0x0170
 class UAISense_Sight : public UAISense
 { 
 public:
-    unsigned char                                      UnknownData03_8[0xC8];                                      // 0x0080   (0x00C8) MISSED
-    int32_t                                            MaxTracesPerTick;                                           // 0x0148   (0x0004) 
-    int32_t                                            MinQueriesPerTimeSliceCheck;                                // 0x014C   (0x0004) 
-    double                                             MaxTimeSlicePerTick;                                        // 0x0150   (0x0008) 
-    float                                              HighImportanceQueryDistanceThreshold;                       // 0x0158   (0x0004) 
-    unsigned char                                      UnknownData04_6[0x4];                                       // 0x015C   (0x0004) MISSED
-    float                                              MaxQueryImportance;                                         // 0x0160   (0x0004) 
-    float                                              SightLimitQueryImportance;                                  // 0x0164   (0x0004) 
-    unsigned char                                      UnknownData05_7[0x8];                                       // 0x0168   (0x0008) MISSED
+    unsigned char                                      UnknownData00_8[0xC8];                                      // 0x0080   (0x00C8) MISSED
+    int32_t                                            MaxTracesPerTick;                                           // 0x0148   (0x0004)
+    int32_t                                            MinQueriesPerTimeSliceCheck;                                // 0x014C   (0x0004)
+    double                                             MaxTimeSlicePerTick;                                        // 0x0150   (0x0008)
+    float                                              HighImportanceQueryDistanceThreshold;                       // 0x0158   (0x0004)
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x015C   (0x0004) MISSED
+    float                                              MaxQueryImportance;                                         // 0x0160   (0x0004)
+    float                                              SightLimitQueryImportance;                                  // 0x0164   (0x0004)
+    unsigned char                                      UnknownData02_7[0x8];                                       // 0x0168   (0x0008) MISSED
 };
 
 /// Struct /Script/AIModule.AITeamStimulusEvent
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
 struct FAITeamStimulusEvent
 { 
-    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0000   (0x0028) MISSED
-    class AActor*                                      Broadcaster;                                                // 0x0028   (0x0008) 
-    class AActor*                                      Enemy;                                                      // 0x0030   (0x0008) 
+    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0000   (0x0028) MISSED
+    class AActor*                                      Broadcaster;                                                // 0x0028   (0x0008)
+    class AActor*                                      Enemy;                                                      // 0x0030   (0x0008)
 };
 
 /// Class /Script/AIModule.AISense_Team
-/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align 8 MaxSize: 0x0090
 class UAISense_Team : public UAISense
 { 
 public:
-    TArray<FAITeamStimulusEvent>                       RegisteredEvents;                                           // 0x0080   (0x0010) 
+    TArray<FAITeamStimulusEvent>                       RegisteredEvents;                                           // 0x0080   (0x0010)
 };
 
 /// Struct /Script/AIModule.AITouchEvent
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FAITouchEvent
 { 
-    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    class AActor*                                      TouchReceiver;                                              // 0x0010   (0x0008) 
-    class AActor*                                      OtherActor;                                                 // 0x0018   (0x0008) 
+    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    class AActor*                                      TouchReceiver;                                              // 0x0010   (0x0008)
+    class AActor*                                      OtherActor;                                                 // 0x0018   (0x0008)
 };
 
 /// Class /Script/AIModule.AISense_Touch
-/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align 8 MaxSize: 0x0090
 class UAISense_Touch : public UAISense
 { 
 public:
-    TArray<FAITouchEvent>                              RegisteredEvents;                                           // 0x0080   (0x0010) 
+    TArray<FAITouchEvent>                              RegisteredEvents;                                           // 0x0080   (0x0010)
 };
 
 /// Class /Script/AIModule.AISenseBlueprintListener
-/// Size: 0x0108 (264 bytes) (0x000108 - 0x000108) align n/a MaxSize: 0x0108
+/// Size: 0x0108 (264 bytes) (0x000108 - 0x000108) align 8 MaxSize: 0x0108
 class UAISenseBlueprintListener : public UUserDefinedStruct
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseConfig
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
 class UAISenseConfig : public UObject
 { 
 public:
-    FColor                                             DebugColor;                                                 // 0x0028   (0x0004) 
-    float                                              MaxAge;                                                     // 0x002C   (0x0004) 
-    bool                                               bStartsEnabled : 1;                                         // 0x0030:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x17];                                      // 0x0031   (0x0017) MISSED
+    FColor                                             DebugColor;                                                 // 0x0028   (0x0004)
+    float                                              MaxAge;                                                     // 0x002C   (0x0004)
+    bool                                               bStartsEnabled : 1;                                         // 0x0030:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x17];                                      // 0x0031   (0x0017) MISSED
 };
 
 /// Class /Script/AIModule.AISenseConfig_Blueprint
-/// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align 8 MaxSize: 0x0050
 class UAISenseConfig_Blueprint : public UAISenseConfig
 { 
 public:
-    class UClass*                                      Implementation;                                             // 0x0048   (0x0008) 
+    class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
 };
 
 /// Class /Script/AIModule.AISenseConfig_Damage
-/// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align 8 MaxSize: 0x0050
 class UAISenseConfig_Damage : public UAISenseConfig
 { 
 public:
-    class UClass*                                      Implementation;                                             // 0x0048   (0x0008) 
+    class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
 };
 
 /// Struct /Script/AIModule.AISenseAffiliationFilter
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
 struct FAISenseAffiliationFilter
 { 
-    bool                                               bDetectEnemies : 1;                                         // 0x0000:0 (0x0001) 
-    bool                                               bDetectNeutrals : 1;                                        // 0x0000:1 (0x0001) 
-    bool                                               bDetectFriendlies : 1;                                      // 0x0000:2 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0001   (0x0003) MISSED
+    bool                                               bDetectEnemies : 1;                                         // 0x0000:0 (0x0001)
+    bool                                               bDetectNeutrals : 1;                                        // 0x0000:1 (0x0001)
+    bool                                               bDetectFriendlies : 1;                                      // 0x0000:2 (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0001   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.AISenseConfig_Hearing
-/// Size: 0x0060 (96 bytes) (0x000048 - 0x000060) align n/a MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000048 - 0x000060) align 8 MaxSize: 0x0060
 class UAISenseConfig_Hearing : public UAISenseConfig
 { 
 public:
-    class UClass*                                      Implementation;                                             // 0x0048   (0x0008) 
-    float                                              HearingRange;                                               // 0x0050   (0x0004) 
-    float                                              LoSHearingRange;                                            // 0x0054   (0x0004) 
-    bool                                               bUseLoSHearing : 1;                                         // 0x0058:0 (0x0001) 
-    unsigned char                                      UnknownData01_5[0x3];                                       // 0x0059   (0x0003) MISSED
-    FAISenseAffiliationFilter                          DetectionByAffiliation;                                     // 0x005C   (0x0004) 
+    class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
+    float                                              HearingRange;                                               // 0x0050   (0x0004)
+    float                                              LoSHearingRange;                                            // 0x0054   (0x0004)
+    bool                                               bUseLoSHearing : 1;                                         // 0x0058:0 (0x0001)
+    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0059   (0x0003) MISSED
+    FAISenseAffiliationFilter                          DetectionByAffiliation;                                     // 0x005C   (0x0004)
 };
 
 /// Class /Script/AIModule.AISenseConfig_Prediction
-/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align 8 MaxSize: 0x0048
 class UAISenseConfig_Prediction : public UAISenseConfig
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseConfig_Sight
-/// Size: 0x0070 (112 bytes) (0x000048 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000048 - 0x000070) align 8 MaxSize: 0x0070
 class UAISenseConfig_Sight : public UAISenseConfig
 { 
 public:
-    class UClass*                                      Implementation;                                             // 0x0048   (0x0008) 
-    float                                              SightRadius;                                                // 0x0050   (0x0004) 
-    float                                              LoseSightRadius;                                            // 0x0054   (0x0004) 
-    float                                              PeripheralVisionAngleDegrees;                               // 0x0058   (0x0004) 
-    FAISenseAffiliationFilter                          DetectionByAffiliation;                                     // 0x005C   (0x0004) 
-    float                                              AutoSuccessRangeFromLastSeenLocation;                       // 0x0060   (0x0004) 
-    float                                              PointOfViewBackwardOffset;                                  // 0x0064   (0x0004) 
-    float                                              NearClippingRadius;                                         // 0x0068   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x006C   (0x0004) MISSED
+    class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
+    float                                              SightRadius;                                                // 0x0050   (0x0004)
+    float                                              LoseSightRadius;                                            // 0x0054   (0x0004)
+    float                                              PeripheralVisionAngleDegrees;                               // 0x0058   (0x0004)
+    FAISenseAffiliationFilter                          DetectionByAffiliation;                                     // 0x005C   (0x0004)
+    float                                              AutoSuccessRangeFromLastSeenLocation;                       // 0x0060   (0x0004)
+    float                                              PointOfViewBackwardOffset;                                  // 0x0064   (0x0004)
+    float                                              NearClippingRadius;                                         // 0x0068   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x006C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.AISenseConfig_Team
-/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align 8 MaxSize: 0x0048
 class UAISenseConfig_Team : public UAISenseConfig
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseConfig_Touch
-/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align 8 MaxSize: 0x0048
 class UAISenseConfig_Touch : public UAISenseConfig
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseEvent
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UAISenseEvent : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseEvent_Damage
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
 class UAISenseEvent_Damage : public UAISenseEvent
 { 
 public:
-    FAIDamageEvent                                     Event;                                                      // 0x0028   (0x0030) 
+    FAIDamageEvent                                     Event;                                                      // 0x0028   (0x0030)
 };
 
 /// Class /Script/AIModule.AISenseEvent_Hearing
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
 class UAISenseEvent_Hearing : public UAISenseEvent
 { 
 public:
-    FAINoiseEvent                                      Event;                                                      // 0x0028   (0x0030) 
+    FAINoiseEvent                                      Event;                                                      // 0x0028   (0x0030)
 };
 
 /// Class /Script/AIModule.AISightTargetInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UAISightTargetInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISystem
-/// Size: 0x0130 (304 bytes) (0x000058 - 0x000130) align n/a MaxSize: 0x0130
+/// Size: 0x0130 (304 bytes) (0x000058 - 0x000130) align 8 MaxSize: 0x0130
 class UAISystem : public UAISystemBase
 { 
 public:
-    FSoftClassPath                                     PerceptionSystemClassName;                                  // 0x0058   (0x0018) 
-    FSoftClassPath                                     HotSpotManagerClassName;                                    // 0x0070   (0x0018) 
-    float                                              AcceptanceRadius;                                           // 0x0088   (0x0004) 
-    float                                              PathfollowingRegularPathPointAcceptanceRadius;              // 0x008C   (0x0004) 
-    float                                              PathfollowingNavLinkAcceptanceRadius;                       // 0x0090   (0x0004) 
-    bool                                               bFinishMoveOnGoalOverlap;                                   // 0x0094   (0x0001) 
-    bool                                               bAcceptPartialPaths;                                        // 0x0095   (0x0001) 
-    bool                                               bAllowStrafing;                                             // 0x0096   (0x0001) 
-    bool                                               bEnableBTAITasks;                                           // 0x0097   (0x0001) 
-    bool                                               bAllowControllersAsEQSQuerier;                              // 0x0098   (0x0001) 
-    bool                                               bEnableDebuggerPlugin;                                      // 0x0099   (0x0001) 
-    bool                                               bForgetStaleActors;                                         // 0x009A   (0x0001) 
-    bool                                               bAddBlackboardSelfKey;                                      // 0x009B   (0x0001) 
-    TEnumAsByte<ECollisionChannel>                     DefaultSightCollisionChannel;                               // 0x009C   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x009D   (0x0003) MISSED
-    class UBehaviorTreeManager*                        BehaviorTreeManager;                                        // 0x00A0   (0x0008) 
-    class UEnvQueryManager*                            EnvironmentQueryManager;                                    // 0x00A8   (0x0008) 
-    class UAIPerceptionSystem*                         PerceptionSystem;                                           // 0x00B0   (0x0008) 
-    TArray<class UAIAsyncTaskBlueprintProxy*>          AllProxyObjects;                                            // 0x00B8   (0x0010) 
-    class UAIHotSpotManager*                           HotSpotManager;                                             // 0x00C8   (0x0008) 
-    class UNavLocalGridManager*                        NavLocalGrids;                                              // 0x00D0   (0x0008) 
-    unsigned char                                      UnknownData03_7[0x58];                                      // 0x00D8   (0x0058) MISSED
+    FSoftClassPath                                     PerceptionSystemClassName;                                  // 0x0058   (0x0018)
+    FSoftClassPath                                     HotSpotManagerClassName;                                    // 0x0070   (0x0018)
+    float                                              AcceptanceRadius;                                           // 0x0088   (0x0004)
+    float                                              PathfollowingRegularPathPointAcceptanceRadius;              // 0x008C   (0x0004)
+    float                                              PathfollowingNavLinkAcceptanceRadius;                       // 0x0090   (0x0004)
+    bool                                               bFinishMoveOnGoalOverlap;                                   // 0x0094   (0x0001)
+    bool                                               bAcceptPartialPaths;                                        // 0x0095   (0x0001)
+    bool                                               bAllowStrafing;                                             // 0x0096   (0x0001)
+    bool                                               bEnableBTAITasks;                                           // 0x0097   (0x0001)
+    bool                                               bAllowControllersAsEQSQuerier;                              // 0x0098   (0x0001)
+    bool                                               bEnableDebuggerPlugin;                                      // 0x0099   (0x0001)
+    bool                                               bForgetStaleActors;                                         // 0x009A   (0x0001)
+    bool                                               bAddBlackboardSelfKey;                                      // 0x009B   (0x0001)
+    TEnumAsByte<ECollisionChannel>                     DefaultSightCollisionChannel;                               // 0x009C   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x009D   (0x0003) MISSED
+    class UBehaviorTreeManager*                        BehaviorTreeManager;                                        // 0x00A0   (0x0008)
+    class UEnvQueryManager*                            EnvironmentQueryManager;                                    // 0x00A8   (0x0008)
+    class UAIPerceptionSystem*                         PerceptionSystem;                                           // 0x00B0   (0x0008)
+    TArray<class UAIAsyncTaskBlueprintProxy*>          AllProxyObjects;                                            // 0x00B8   (0x0010)
+    class UAIHotSpotManager*                           HotSpotManager;                                             // 0x00C8   (0x0008)
+    class UNavLocalGridManager*                        NavLocalGrids;                                              // 0x00D0   (0x0008)
+    unsigned char                                      UnknownData01_7[0x58];                                      // 0x00D8   (0x0058) MISSED
 
     /// Functions
     // Function /Script/AIModule.AISystem.AILoggingVerbose
-    constexpr static const FunctionPointer<UAISystem, void> AILoggingVerbose = { 0x3816f70, 0 };
+    constexpr static const FunctionPointer<UAISystem, void> AILoggingVerbose = { 0x3826de0, 0 };
     // Function /Script/AIModule.AISystem.AIIgnorePlayers
-    constexpr static const FunctionPointer<UAISystem, void> AIIgnorePlayers = { 0x3f063d0, 1 };
+    constexpr static const FunctionPointer<UAISystem, void> AIIgnorePlayers = { 0x3f17e40, 1 };
 };
 
 /// Class /Script/AIModule.AITask
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
 class UAITask : public UGameplayTask
 { 
 public:
-    class AAIController*                               OwnerController;                                            // 0x0068   (0x0008) 
+    class AAIController*                               OwnerController;                                            // 0x0068   (0x0008)
 };
 
 /// Class /Script/AIModule.AITask_LockLogic
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UAITask_LockLogic : public UAITask
 { 
 public:
 };
 
 /// Struct /Script/AIModule.AIMoveRequest
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
 struct FAIMoveRequest
 { 
-    class AActor*                                      GoalActor;                                                  // 0x0000   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x40];                                      // 0x0008   (0x0040) MISSED
+    class AActor*                                      GoalActor;                                                  // 0x0000   (0x0008)
+    unsigned char                                      UnknownData00_7[0x40];                                      // 0x0008   (0x0040) MISSED
 };
 
 /// Class /Script/AIModule.AITask_MoveTo
-/// Size: 0x0118 (280 bytes) (0x000070 - 0x000118) align n/a MaxSize: 0x0118
+/// Size: 0x0118 (280 bytes) (0x000070 - 0x000118) align 8 MaxSize: 0x0118
 class UAITask_MoveTo : public UAITask
 { 
 public:
-    FMulticastInlineDelegate                           OnRequestFailed;                                            // 0x0070   (0x0010) 
-    FMulticastInlineDelegate                           OnMoveFinished;                                             // 0x0080   (0x0010) 
-    FAIMoveRequest                                     MoveRequest;                                                // 0x0090   (0x0048) 
-    unsigned char                                      UnknownData01_7[0x40];                                      // 0x00D8   (0x0040) MISSED
+    FMulticastInlineDelegate                           OnRequestFailed;                                            // 0x0070   (0x0010)
+    FMulticastInlineDelegate                           OnMoveFinished;                                             // 0x0080   (0x0010)
+    FAIMoveRequest                                     MoveRequest;                                                // 0x0090   (0x0048)
+    unsigned char                                      UnknownData00_7[0x40];                                      // 0x00D8   (0x0040) MISSED
 
     /// Functions
     // Function /Script/AIModule.AITask_MoveTo.AIMoveTo
@@ -1365,633 +1367,633 @@ public:
     // [7] bLockAILogic : const bool
     // [8] bUseContinuosGoalTracking : const bool
     // [9] ProjectGoalOnNavigation : const TEnumAsByte<EAIOptionFlag>
-    constexpr static const FunctionPointer<UAITask_MoveTo, UAITask_MoveTo*, const AAIController*, const FVector, const AActor*, const float, const TEnumAsByte<EAIOptionFlag>, const TEnumAsByte<EAIOptionFlag>, const bool, const bool, const bool, const TEnumAsByte<EAIOptionFlag>> AIMoveTo = { 0x4be8fb0, 0 };
+    constexpr static const FunctionPointer<UAITask_MoveTo, UAITask_MoveTo*, const AAIController*, const FVector, const AActor*, const float, const TEnumAsByte<EAIOptionFlag>, const TEnumAsByte<EAIOptionFlag>, const bool, const bool, const bool, const TEnumAsByte<EAIOptionFlag>> AIMoveTo = { 0x4bfe570, 0 };
 };
 
 /// Class /Script/AIModule.AITask_RunEQS
-/// Size: 0x00E8 (232 bytes) (0x000070 - 0x0000E8) align n/a MaxSize: 0x00E8
+/// Size: 0x00E8 (232 bytes) (0x000070 - 0x0000E8) align 8 MaxSize: 0x00E8
 class UAITask_RunEQS : public UAITask
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x78];                                      // 0x0070   (0x0078) MISSED
+    unsigned char                                      UnknownData00_1[0x78];                                      // 0x0070   (0x0078) MISSED
 
     /// Functions
     // Function /Script/AIModule.AITask_RunEQS.RunEQS
     // [0] Controller : const AAIController*
     // [1] QueryTemplate : const UEnvQuery*
-    constexpr static const FunctionPointer<UAITask_RunEQS, UAITask_RunEQS*, const AAIController*, const UEnvQuery*> RunEQS = { 0x4be9ac0, 0 };
+    constexpr static const FunctionPointer<UAITask_RunEQS, UAITask_RunEQS*, const AAIController*, const UEnvQuery*> RunEQS = { 0x4bff080, 0 };
 };
 
 /// Struct /Script/AIModule.BTDecoratorLogic
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 2 MaxSize: 0x0004
 struct FBTDecoratorLogic
 { 
-    TEnumAsByte<EBTDecoratorLogic>                     Operation;                                                  // 0x0000   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x1];                                       // 0x0001   (0x0001) MISSED
-    uint16_t                                           Number;                                                     // 0x0002   (0x0002) 
+    TEnumAsByte<EBTDecoratorLogic>                     Operation;                                                  // 0x0000   (0x0001)
+    unsigned char                                      UnknownData00_6[0x1];                                       // 0x0001   (0x0001) MISSED
+    uint16_t                                           Number;                                                     // 0x0002   (0x0002)
 };
 
 /// Class /Script/AIModule.BehaviorTree
-/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align n/a MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align 8 MaxSize: 0x0068
 class UBehaviorTree : public UObject
 { 
 public:
-    unsigned char                                      UnknownData02_8[0x8];                                       // 0x0028   (0x0008) MISSED
-    class UBTCompositeNode*                            RootNode;                                                   // 0x0030   (0x0008) 
-    class UBlackboardData*                             BlackboardAsset;                                            // 0x0038   (0x0008) 
-    TArray<class UBTDecorator*>                        RootDecorators;                                             // 0x0040   (0x0010) 
-    TArray<FBTDecoratorLogic>                          RootDecoratorOps;                                           // 0x0050   (0x0010) 
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x0060   (0x0008) MISSED
+    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    class UBTCompositeNode*                            RootNode;                                                   // 0x0030   (0x0008)
+    class UBlackboardData*                             BlackboardAsset;                                            // 0x0038   (0x0008)
+    TArray<class UBTDecorator*>                        RootDecorators;                                             // 0x0040   (0x0010)
+    TArray<FBTDecoratorLogic>                          RootDecoratorOps;                                           // 0x0050   (0x0010)
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0060   (0x0008) MISSED
 };
 
 /// Struct /Script/AIModule.BehaviorTreeTemplateInfo
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FBehaviorTreeTemplateInfo
 { 
-    class UBehaviorTree*                               Asset;                                                      // 0x0000   (0x0008) 
-    class UBTCompositeNode*                            Template;                                                   // 0x0008   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0010   (0x0008) MISSED
+    class UBehaviorTree*                               Asset;                                                      // 0x0000   (0x0008)
+    class UBTCompositeNode*                            Template;                                                   // 0x0008   (0x0008)
+    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0010   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BehaviorTreeManager
-/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align 8 MaxSize: 0x0050
 class UBehaviorTreeManager : public UObject
 { 
 public:
-    int32_t                                            MaxDebuggerSteps;                                           // 0x0028   (0x0004) 
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x002C   (0x0004) MISSED
-    TArray<FBehaviorTreeTemplateInfo>                  LoadedTemplates;                                            // 0x0030   (0x0010) 
-    TArray<class UBehaviorTreeComponent*>              ActiveComponents;                                           // 0x0040   (0x0010) 
+    int32_t                                            MaxDebuggerSteps;                                           // 0x0028   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x002C   (0x0004) MISSED
+    TArray<FBehaviorTreeTemplateInfo>                  LoadedTemplates;                                            // 0x0030   (0x0010)
+    TArray<class UBehaviorTreeComponent*>              ActiveComponents;                                           // 0x0040   (0x0010)
 };
 
 /// Class /Script/AIModule.BehaviorTreeTypes
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UBehaviorTreeTypes : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardAssetProvider
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UBlackboardAssetProvider : public UInterface
 { 
 public:
 
     /// Functions
     // Function /Script/AIModule.BlackboardAssetProvider.GetBlackboardAsset
-    constexpr static const FunctionPointer<UBlackboardAssetProvider, UBlackboardData*> GetBlackboardAsset = { 0x4bece00, 0 };
+    constexpr static const FunctionPointer<UBlackboardAssetProvider, UBlackboardData*> GetBlackboardAsset = { 0x4c023c0, 0 };
 };
 
 /// Class /Script/AIModule.BlackboardComponent
-/// Size: 0x01C8 (456 bytes) (0x0000C0 - 0x0001C8) align n/a MaxSize: 0x01C8
+/// Size: 0x01C8 (456 bytes) (0x0000C0 - 0x0001C8) align 8 MaxSize: 0x01C8
 class UBlackboardComponent : public UActorComponent
 { 
 public:
-    class UBrainComponent*                             BrainComp;                                                  // 0x00C0   (0x0008) 
-    class UBlackboardData*                             DefaultBlackboardAsset;                                     // 0x00C8   (0x0008) 
-    class UBlackboardData*                             BlackboardAsset;                                            // 0x00D0   (0x0008) 
-    unsigned char                                      UnknownData02_6[0x20];                                      // 0x00D8   (0x0020) MISSED
-    TArray<class UBlackboardKeyType*>                  KeyInstances;                                               // 0x00F8   (0x0010) 
-    unsigned char                                      UnknownData03_7[0xC0];                                      // 0x0108   (0x00C0) MISSED
+    class UBrainComponent*                             BrainComp;                                                  // 0x00C0   (0x0008)
+    class UBlackboardData*                             DefaultBlackboardAsset;                                     // 0x00C8   (0x0008)
+    class UBlackboardData*                             BlackboardAsset;                                            // 0x00D0   (0x0008)
+    unsigned char                                      UnknownData00_6[0x20];                                      // 0x00D8   (0x0020) MISSED
+    TArray<class UBlackboardKeyType*>                  KeyInstances;                                               // 0x00F8   (0x0010)
+    unsigned char                                      UnknownData01_7[0xC0];                                      // 0x0108   (0x00C0) MISSED
 
     /// Functions
     // Function /Script/AIModule.BlackboardComponent.SetValueAsVector
     // [0] KeyName : const FName&
     // [1] VectorValue : const FVector
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FVector> SetValueAsVector = { 0x4bed9e0, 0 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FVector> SetValueAsVector = { 0x4c02fa0, 0 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsString
     // [0] KeyName : const FName&
     // [1] StringValue : const FString
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FString> SetValueAsString = { 0x4bedd40, 1 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FString> SetValueAsString = { 0x4c03300, 1 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsRotator
     // [0] KeyName : const FName&
     // [1] VectorValue : const FRotator
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FRotator> SetValueAsRotator = { 0x4bed7f0, 2 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FRotator> SetValueAsRotator = { 0x4c02db0, 2 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsObject
     // [0] KeyName : const FName&
     // [1] ObjectValue : const UObject*
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const UObject*> SetValueAsObject = { 0x4bee7f0, 3 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const UObject*> SetValueAsObject = { 0x4c03db0, 3 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsName
     // [0] KeyName : const FName&
     // [1] NameValue : const FName
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FName> SetValueAsName = { 0x4bedb70, 4 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FName> SetValueAsName = { 0x4c03130, 4 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsInt
     // [0] KeyName : const FName&
     // [1] IntValue : const int32_t
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const int32_t> SetValueAsInt = { 0x4bee2e0, 5 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const int32_t> SetValueAsInt = { 0x4c038a0, 5 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsFloat
     // [0] KeyName : const FName&
     // [1] FloatValue : const float
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const float> SetValueAsFloat = { 0x4bee160, 6 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const float> SetValueAsFloat = { 0x4c03720, 6 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsEnum
     // [0] KeyName : const FName&
     // [1] EnumValue : const char
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const char> SetValueAsEnum = { 0x4bee450, 7 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const char> SetValueAsEnum = { 0x4c03a10, 7 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsClass
     // [0] KeyName : const FName&
     // [1] ClassValue : const UClass*
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const UClass*> SetValueAsClass = { 0x4bee620, 8 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const UClass*> SetValueAsClass = { 0x4c03be0, 8 };
     // Function /Script/AIModule.BlackboardComponent.SetValueAsBool
     // [0] KeyName : const FName&
     // [1] BoolValue : const bool
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const bool> SetValueAsBool = { 0x4bedf80, 9 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const bool> SetValueAsBool = { 0x4c03540, 9 };
     // Function /Script/AIModule.BlackboardComponent.IsVectorValueSet
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&> IsVectorValueSet = { 0x4bed670, 10 };
+    constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&> IsVectorValueSet = { 0x4c02c30, 10 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsVector
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, FVector, const FName&> GetValueAsVector = { 0x4beeb20, 11 };
+    constexpr static const FunctionPointer<UBlackboardComponent, FVector, const FName&> GetValueAsVector = { 0x4c040e0, 11 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsString
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, FString, const FName&> GetValueAsString = { 0x4beed70, 12 };
+    constexpr static const FunctionPointer<UBlackboardComponent, FString, const FName&> GetValueAsString = { 0x4c04330, 12 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsRotator
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, FRotator, const FName&> GetValueAsRotator = { 0x4bee9c0, 13 };
+    constexpr static const FunctionPointer<UBlackboardComponent, FRotator, const FName&> GetValueAsRotator = { 0x4c03f80, 13 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsObject
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, UObject*, const FName&> GetValueAsObject = { 0x4bef3c0, 14 };
+    constexpr static const FunctionPointer<UBlackboardComponent, UObject*, const FName&> GetValueAsObject = { 0x4c04980, 14 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsName
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, FName, const FName&> GetValueAsName = { 0x4beec80, 15 };
+    constexpr static const FunctionPointer<UBlackboardComponent, FName, const FName&> GetValueAsName = { 0x4c04240, 15 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsInt
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, int32_t, const FName&> GetValueAsInt = { 0x4bef0f0, 16 };
+    constexpr static const FunctionPointer<UBlackboardComponent, int32_t, const FName&> GetValueAsInt = { 0x4c046b0, 16 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsFloat
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, float, const FName&> GetValueAsFloat = { 0x4bef000, 17 };
+    constexpr static const FunctionPointer<UBlackboardComponent, float, const FName&> GetValueAsFloat = { 0x4c045c0, 17 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsEnum
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, char, const FName&> GetValueAsEnum = { 0x4bef1e0, 18 };
+    constexpr static const FunctionPointer<UBlackboardComponent, char, const FName&> GetValueAsEnum = { 0x4c047a0, 18 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsClass
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, UClass*, const FName&> GetValueAsClass = { 0x4bef2d0, 19 };
+    constexpr static const FunctionPointer<UBlackboardComponent, UClass*, const FName&> GetValueAsClass = { 0x4c04890, 19 };
     // Function /Script/AIModule.BlackboardComponent.GetValueAsBool
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&> GetValueAsBool = { 0x4beef10, 20 };
+    constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&> GetValueAsBool = { 0x4c044d0, 20 };
     // Function /Script/AIModule.BlackboardComponent.GetRotationFromEntry
     // [0] KeyName : const FName&
     // [1] ResultRotation : const FRotator&
-    constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&, const FRotator&> GetRotationFromEntry = { 0x4bed290, 21 };
+    constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&, const FRotator&> GetRotationFromEntry = { 0x4c02850, 21 };
     // Function /Script/AIModule.BlackboardComponent.GetLocationFromEntry
     // [0] KeyName : const FName&
     // [1] ResultLocation : const FVector&
-    constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&, const FVector&> GetLocationFromEntry = { 0x4bed480, 22 };
+    constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&, const FVector&> GetLocationFromEntry = { 0x4c02a40, 22 };
     // Function /Script/AIModule.BlackboardComponent.ClearValue
     // [0] KeyName : const FName&
-    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&> ClearValue = { 0x4bed1b0, 23 };
+    constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&> ClearValue = { 0x4c02770, 23 };
 };
 
 /// Struct /Script/AIModule.BlackboardEntry
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FBlackboardEntry
 { 
-    FName                                              EntryName;                                                  // 0x0000   (0x0008) 
-    class UBlackboardKeyType*                          KeyType;                                                    // 0x0008   (0x0008) 
-    bool                                               bInstanceSynced : 1;                                        // 0x0010:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
+    FName                                              EntryName;                                                  // 0x0000   (0x0008)
+    class UBlackboardKeyType*                          KeyType;                                                    // 0x0008   (0x0008)
+    bool                                               bInstanceSynced : 1;                                        // 0x0010:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BlackboardData
-/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align 8 MaxSize: 0x0050
 class UBlackboardData : public UDataAsset
 { 
 public:
-    class UBlackboardData*                             Parent;                                                     // 0x0030   (0x0008) 
-    TArray<FBlackboardEntry>                           Keys;                                                       // 0x0038   (0x0010) 
-    bool                                               bHasSynchronizedKeys : 1;                                   // 0x0048:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    class UBlackboardData*                             Parent;                                                     // 0x0030   (0x0008)
+    TArray<FBlackboardEntry>                           Keys;                                                       // 0x0038   (0x0010)
+    bool                                               bHasSynchronizedKeys : 1;                                   // 0x0048:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BlackboardKeyType
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
 class UBlackboardKeyType : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Bool
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UBlackboardKeyType_Bool : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Class
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
 class UBlackboardKeyType_Class : public UBlackboardKeyType
 { 
 public:
-    class UClass*                                      BaseClass;                                                  // 0x0030   (0x0008) 
+    class UClass*                                      BaseClass;                                                  // 0x0030   (0x0008)
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Enum
-/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align 8 MaxSize: 0x0050
 class UBlackboardKeyType_Enum : public UBlackboardKeyType
 { 
 public:
-    class UEnum*                                       EnumType;                                                   // 0x0030   (0x0008) 
-    FString                                            EnumName;                                                   // 0x0038   (0x0010) 
-    bool                                               bIsEnumNameValid : 1;                                       // 0x0048:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    class UEnum*                                       EnumType;                                                   // 0x0030   (0x0008)
+    FString                                            EnumName;                                                   // 0x0038   (0x0010)
+    bool                                               bIsEnumNameValid : 1;                                       // 0x0048:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Float
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UBlackboardKeyType_Float : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Int
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UBlackboardKeyType_Int : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Name
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UBlackboardKeyType_Name : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_NativeEnum
-/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align 8 MaxSize: 0x0048
 class UBlackboardKeyType_NativeEnum : public UBlackboardKeyType
 { 
 public:
-    FString                                            EnumName;                                                   // 0x0030   (0x0010) 
-    class UEnum*                                       EnumType;                                                   // 0x0040   (0x0008) 
+    FString                                            EnumName;                                                   // 0x0030   (0x0010)
+    class UEnum*                                       EnumType;                                                   // 0x0040   (0x0008)
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Object
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
 class UBlackboardKeyType_Object : public UBlackboardKeyType
 { 
 public:
-    class UClass*                                      BaseClass;                                                  // 0x0030   (0x0008) 
+    class UClass*                                      BaseClass;                                                  // 0x0030   (0x0008)
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Rotator
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UBlackboardKeyType_Rotator : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_String
-/// Size: 0x0040 (64 bytes) (0x000030 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000030 - 0x000040) align 8 MaxSize: 0x0040
 class UBlackboardKeyType_String : public UBlackboardKeyType
 { 
 public:
-    FString                                            StringValue;                                                // 0x0030   (0x0010) 
+    FString                                            StringValue;                                                // 0x0030   (0x0010)
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Vector
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UBlackboardKeyType_Vector : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Struct /Script/AIModule.BTCompositeChild
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
 struct FBTCompositeChild
 { 
-    class UBTCompositeNode*                            ChildComposite;                                             // 0x0000   (0x0008) 
-    class UBTTaskNode*                                 ChildTask;                                                  // 0x0008   (0x0008) 
-    TArray<class UBTDecorator*>                        Decorators;                                                 // 0x0010   (0x0010) 
-    TArray<FBTDecoratorLogic>                          DecoratorOps;                                               // 0x0020   (0x0010) 
+    class UBTCompositeNode*                            ChildComposite;                                             // 0x0000   (0x0008)
+    class UBTTaskNode*                                 ChildTask;                                                  // 0x0008   (0x0008)
+    TArray<class UBTDecorator*>                        Decorators;                                                 // 0x0010   (0x0010)
+    TArray<FBTDecoratorLogic>                          DecoratorOps;                                               // 0x0020   (0x0010)
 };
 
 /// Class /Script/AIModule.BTCompositeNode
-/// Size: 0x0090 (144 bytes) (0x000058 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000058 - 0x000090) align 8 MaxSize: 0x0090
 class UBTCompositeNode : public UBTNode
 { 
 public:
-    TArray<FBTCompositeChild>                          Children;                                                   // 0x0058   (0x0010) 
-    TArray<class UBTService*>                          Services;                                                   // 0x0068   (0x0010) 
-    unsigned char                                      UnknownData02_6[0x10];                                      // 0x0078   (0x0010) MISSED
-    bool                                               bApplyDecoratorScope : 1;                                   // 0x0088:0 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x7];                                       // 0x0089   (0x0007) MISSED
+    TArray<FBTCompositeChild>                          Children;                                                   // 0x0058   (0x0010)
+    TArray<class UBTService*>                          Services;                                                   // 0x0068   (0x0010)
+    unsigned char                                      UnknownData00_6[0x10];                                      // 0x0078   (0x0010) MISSED
+    bool                                               bApplyDecoratorScope : 1;                                   // 0x0088:0 (0x0001)
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0089   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTComposite_Selector
-/// Size: 0x0090 (144 bytes) (0x000090 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000090 - 0x000090) align 8 MaxSize: 0x0090
 class UBTComposite_Selector : public UBTCompositeNode
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTComposite_Sequence
-/// Size: 0x0090 (144 bytes) (0x000090 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000090 - 0x000090) align 8 MaxSize: 0x0090
 class UBTComposite_Sequence : public UBTCompositeNode
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTComposite_SimpleParallel
-/// Size: 0x0098 (152 bytes) (0x000090 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000090 - 0x000098) align 8 MaxSize: 0x0098
 class UBTComposite_SimpleParallel : public UBTCompositeNode
 { 
 public:
-    TEnumAsByte<EBTParallelMode>                       FinishMode;                                                 // 0x0090   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0091   (0x0007) MISSED
+    TEnumAsByte<EBTParallelMode>                       FinishMode;                                                 // 0x0090   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0091   (0x0007) MISSED
 };
 
 /// Struct /Script/AIModule.BlackboardKeySelector
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
 struct FBlackboardKeySelector
 { 
-    TArray<class UBlackboardKeyType*>                  AllowedTypes;                                               // 0x0000   (0x0010) 
-    FName                                              SelectedKeyName;                                            // 0x0010   (0x0008) 
-    class UClass*                                      SelectedKeyType;                                            // 0x0018   (0x0008) 
-    char                                               SelectedKeyID;                                              // 0x0020   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0021   (0x0003) MISSED
-    bool                                               bNoneIsAllowedValue : 1;                                    // 0x0024:0 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x3];                                       // 0x0025   (0x0003) MISSED
+    TArray<class UBlackboardKeyType*>                  AllowedTypes;                                               // 0x0000   (0x0010)
+    FName                                              SelectedKeyName;                                            // 0x0010   (0x0008)
+    class UClass*                                      SelectedKeyType;                                            // 0x0018   (0x0008)
+    char                                               SelectedKeyID;                                              // 0x0020   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0021   (0x0003) MISSED
+    bool                                               bNoneIsAllowedValue : 1;                                    // 0x0024:0 (0x0001)
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0025   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_BlackboardBase
-/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align 8 MaxSize: 0x0090
 class UBTDecorator_BlackboardBase : public UBTDecorator
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0068   (0x0028) 
+    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0068   (0x0028)
 };
 
 /// Class /Script/AIModule.BTDecorator_Blackboard
-/// Size: 0x00C0 (192 bytes) (0x000090 - 0x0000C0) align n/a MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000090 - 0x0000C0) align 8 MaxSize: 0x00C0
 class UBTDecorator_Blackboard : public UBTDecorator_BlackboardBase
 { 
 public:
-    int32_t                                            IntValue;                                                   // 0x0090   (0x0004) 
-    float                                              FloatValue;                                                 // 0x0094   (0x0004) 
-    FString                                            StringValue;                                                // 0x0098   (0x0010) 
-    FString                                            CachedDescription;                                          // 0x00A8   (0x0010) 
-    char                                               OperationType;                                              // 0x00B8   (0x0001) 
-    TEnumAsByte<EBTBlackboardRestart>                  NotifyObserver;                                             // 0x00B9   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x6];                                       // 0x00BA   (0x0006) MISSED
+    int32_t                                            IntValue;                                                   // 0x0090   (0x0004)
+    float                                              FloatValue;                                                 // 0x0094   (0x0004)
+    FString                                            StringValue;                                                // 0x0098   (0x0010)
+    FString                                            CachedDescription;                                          // 0x00A8   (0x0010)
+    char                                               OperationType;                                              // 0x00B8   (0x0001)
+    TEnumAsByte<EBTBlackboardRestart>                  NotifyObserver;                                             // 0x00B9   (0x0001)
+    unsigned char                                      UnknownData00_7[0x6];                                       // 0x00BA   (0x0006) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_BlueprintBase
-/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align n/a MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align 8 MaxSize: 0x00A0
 class UBTDecorator_BlueprintBase : public UBTDecorator
 { 
 public:
-    class AAIController*                               AIOwner;                                                    // 0x0068   (0x0008) 
-    class AActor*                                      ActorOwner;                                                 // 0x0070   (0x0008) 
-    TArray<FName>                                      ObservedKeyNames;                                           // 0x0078   (0x0010) 
-    unsigned char                                      UnknownData02_6[0x10];                                      // 0x0088   (0x0010) MISSED
-    bool                                               bShowPropertyDetails : 1;                                   // 0x0098:0 (0x0001) 
-    bool                                               bCheckConditionOnlyBlackBoardChanges : 1;                   // 0x0098:1 (0x0001) 
-    bool                                               bIsObservingBB : 1;                                         // 0x0098:2 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x7];                                       // 0x0099   (0x0007) MISSED
+    class AAIController*                               AIOwner;                                                    // 0x0068   (0x0008)
+    class AActor*                                      ActorOwner;                                                 // 0x0070   (0x0008)
+    TArray<FName>                                      ObservedKeyNames;                                           // 0x0078   (0x0010)
+    unsigned char                                      UnknownData00_6[0x10];                                      // 0x0088   (0x0010) MISSED
+    bool                                               bShowPropertyDetails : 1;                                   // 0x0098:0 (0x0001)
+    bool                                               bCheckConditionOnlyBlackBoardChanges : 1;                   // 0x0098:1 (0x0001)
+    bool                                               bIsObservingBB : 1;                                         // 0x0098:2 (0x0001)
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0099   (0x0007) MISSED
 
     /// Functions
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
     // [2] DeltaSeconds : const float
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bbb090, 0 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bc7620, 0 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveTick
     // [0] OwnerActor : const AActor*
     // [1] DeltaSeconds : const float
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bbb090, 1 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bc7620, 1 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveObserverDeactivatedAI = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveObserverDeactivatedAI = { 0x2bc7620, 2 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveObserverDeactivated = { 0x2bbb090, 3 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveObserverDeactivated = { 0x2bc7620, 3 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveObserverActivatedAI = { 0x2bbb090, 4 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveObserverActivatedAI = { 0x2bc7620, 4 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveObserverActivated = { 0x2bbb090, 5 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveObserverActivated = { 0x2bc7620, 5 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveExecutionStartAI = { 0x2bbb090, 6 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveExecutionStartAI = { 0x2bc7620, 6 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveExecutionStart = { 0x2bbb090, 7 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveExecutionStart = { 0x2bc7620, 7 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
     // [2] NodeResult : const TEnumAsByte<EBTNodeResult>
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*, const TEnumAsByte<EBTNodeResult>> ReceiveExecutionFinishAI = { 0x2bbb090, 8 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*, const TEnumAsByte<EBTNodeResult>> ReceiveExecutionFinishAI = { 0x2bc7620, 8 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish
     // [0] OwnerActor : const AActor*
     // [1] NodeResult : const TEnumAsByte<EBTNodeResult>
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*, const TEnumAsByte<EBTNodeResult>> ReceiveExecutionFinish = { 0x2bbb090, 9 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*, const TEnumAsByte<EBTNodeResult>> ReceiveExecutionFinish = { 0x2bc7620, 9 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool, const AAIController*, const APawn*> PerformConditionCheckAI = { 0x2bbb090, 10 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool, const AAIController*, const APawn*> PerformConditionCheckAI = { 0x2bc7620, 10 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.PerformConditionCheck
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool, const AActor*> PerformConditionCheck = { 0x2bbb090, 11 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool, const AActor*> PerformConditionCheck = { 0x2bc7620, 11 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool> IsDecoratorObserverActive = { 0x4bf4ec0, 12 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool> IsDecoratorObserverActive = { 0x4c0a480, 12 };
     // Function /Script/AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
-    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool> IsDecoratorExecutionActive = { 0x4bf4f50, 13 };
+    constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool> IsDecoratorExecutionActive = { 0x4c0a510, 13 };
 };
 
 /// Class /Script/AIModule.BTDecorator_CheckGameplayTagsOnActor
-/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align n/a MaxSize: 0x00C8
+/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align 8 MaxSize: 0x00C8
 class UBTDecorator_CheckGameplayTagsOnActor : public UBTDecorator
 { 
 public:
-    FBlackboardKeySelector                             ActorToCheck;                                               // 0x0068   (0x0028) 
-    EGameplayContainerMatchType                        TagsToMatch;                                                // 0x0090   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0091   (0x0007) MISSED
-    FGameplayTagContainer                              GameplayTags;                                               // 0x0098   (0x0020) 
-    FString                                            CachedDescription;                                          // 0x00B8   (0x0010) 
+    FBlackboardKeySelector                             ActorToCheck;                                               // 0x0068   (0x0028)
+    EGameplayContainerMatchType                        TagsToMatch;                                                // 0x0090   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0091   (0x0007) MISSED
+    FGameplayTagContainer                              GameplayTags;                                               // 0x0098   (0x0020)
+    FString                                            CachedDescription;                                          // 0x00B8   (0x0010)
 };
 
 /// Class /Script/AIModule.BTDecorator_CompareBBEntries
-/// Size: 0x00C0 (192 bytes) (0x000068 - 0x0000C0) align n/a MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000068 - 0x0000C0) align 8 MaxSize: 0x00C0
 class UBTDecorator_CompareBBEntries : public UBTDecorator
 { 
 public:
-    TEnumAsByte<EBlackBoardEntryComparison>            Operator;                                                   // 0x0068   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0069   (0x0007) MISSED
-    FBlackboardKeySelector                             BlackboardKeyA;                                             // 0x0070   (0x0028) 
-    FBlackboardKeySelector                             BlackboardKeyB;                                             // 0x0098   (0x0028) 
+    TEnumAsByte<EBlackBoardEntryComparison>            Operator;                                                   // 0x0068   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0069   (0x0007) MISSED
+    FBlackboardKeySelector                             BlackboardKeyA;                                             // 0x0070   (0x0028)
+    FBlackboardKeySelector                             BlackboardKeyB;                                             // 0x0098   (0x0028)
 };
 
 /// Class /Script/AIModule.BTDecorator_ConditionalLoop
-/// Size: 0x00C0 (192 bytes) (0x0000C0 - 0x0000C0) align n/a MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x0000C0 - 0x0000C0) align 8 MaxSize: 0x00C0
 class UBTDecorator_ConditionalLoop : public UBTDecorator_Blackboard
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTDecorator_ConeCheck
-/// Size: 0x00F0 (240 bytes) (0x000068 - 0x0000F0) align n/a MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000068 - 0x0000F0) align 8 MaxSize: 0x00F0
 class UBTDecorator_ConeCheck : public UBTDecorator
 { 
 public:
-    float                                              ConeHalfAngle;                                              // 0x0068   (0x0004) 
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x006C   (0x0004) MISSED
-    FBlackboardKeySelector                             ConeOrigin;                                                 // 0x0070   (0x0028) 
-    FBlackboardKeySelector                             ConeDirection;                                              // 0x0098   (0x0028) 
-    FBlackboardKeySelector                             Observed;                                                   // 0x00C0   (0x0028) 
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x00E8   (0x0008) MISSED
+    float                                              ConeHalfAngle;                                              // 0x0068   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x006C   (0x0004) MISSED
+    FBlackboardKeySelector                             ConeOrigin;                                                 // 0x0070   (0x0028)
+    FBlackboardKeySelector                             ConeDirection;                                              // 0x0098   (0x0028)
+    FBlackboardKeySelector                             Observed;                                                   // 0x00C0   (0x0028)
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x00E8   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_Cooldown
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
 class UBTDecorator_Cooldown : public UBTDecorator
 { 
 public:
-    float                                              CoolDownTime;                                               // 0x0068   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x006C   (0x0004) MISSED
+    float                                              CoolDownTime;                                               // 0x0068   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x006C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_DoesPathExist
-/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align n/a MaxSize: 0x00C8
+/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align 8 MaxSize: 0x00C8
 class UBTDecorator_DoesPathExist : public UBTDecorator
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKeyA;                                             // 0x0068   (0x0028) 
-    FBlackboardKeySelector                             BlackboardKeyB;                                             // 0x0090   (0x0028) 
-    bool                                               bUseSelf : 1;                                               // 0x00B8:0 (0x0001) 
-    unsigned char                                      UnknownData02_5[0x3];                                       // 0x00B9   (0x0003) MISSED
-    TEnumAsByte<EPathExistanceQueryType>               PathQueryType;                                              // 0x00BC   (0x0001) 
-    unsigned char                                      UnknownData03_6[0x3];                                       // 0x00BD   (0x0003) MISSED
-    class UClass*                                      FilterClass;                                                // 0x00C0   (0x0008) 
+    FBlackboardKeySelector                             BlackboardKeyA;                                             // 0x0068   (0x0028)
+    FBlackboardKeySelector                             BlackboardKeyB;                                             // 0x0090   (0x0028)
+    bool                                               bUseSelf : 1;                                               // 0x00B8:0 (0x0001)
+    unsigned char                                      UnknownData00_5[0x3];                                       // 0x00B9   (0x0003) MISSED
+    TEnumAsByte<EPathExistanceQueryType>               PathQueryType;                                              // 0x00BC   (0x0001)
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00BD   (0x0003) MISSED
+    class UClass*                                      FilterClass;                                                // 0x00C0   (0x0008)
 };
 
 /// Class /Script/AIModule.BTDecorator_ForceSuccess
-/// Size: 0x0068 (104 bytes) (0x000068 - 0x000068) align n/a MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000068 - 0x000068) align 8 MaxSize: 0x0068
 class UBTDecorator_ForceSuccess : public UBTDecorator
 { 
 public:
 };
 
 /// Struct /Script/AIModule.AIDataProviderValue
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FAIDataProviderValue
 { 
-    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    class UAIDataProvider*                             DataBinding;                                                // 0x0010   (0x0008) 
-    FName                                              DataField;                                                  // 0x0018   (0x0008) 
+    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    class UAIDataProvider*                             DataBinding;                                                // 0x0010   (0x0008)
+    FName                                              DataField;                                                  // 0x0018   (0x0008)
 };
 
 /// Struct /Script/AIModule.AIDataProviderTypedValue
-/// Size: 0x0030 (48 bytes) (0x000020 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000020 - 0x000030) align 8 MaxSize: 0x0030
 struct FAIDataProviderTypedValue : FAIDataProviderValue
 { 
-    class UClass*                                      PropertyType;                                               // 0x0020   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0028   (0x0008) MISSED
+    class UClass*                                      PropertyType;                                               // 0x0020   (0x0008)
+    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Struct /Script/AIModule.AIDataProviderFloatValue
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
 struct FAIDataProviderFloatValue : FAIDataProviderTypedValue
 { 
-    float                                              DefaultValue;                                               // 0x0030   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    float                                              DefaultValue;                                               // 0x0030   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_IsAtLocation
-/// Size: 0x00D8 (216 bytes) (0x000090 - 0x0000D8) align n/a MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x000090 - 0x0000D8) align 8 MaxSize: 0x00D8
 class UBTDecorator_IsAtLocation : public UBTDecorator_BlackboardBase
 { 
 public:
-    float                                              AcceptableRadius;                                           // 0x0090   (0x0004) 
-    unsigned char                                      UnknownData03_6[0x4];                                       // 0x0094   (0x0004) MISSED
-    FAIDataProviderFloatValue                          ParametrizedAcceptableRadius;                               // 0x0098   (0x0038) 
-    FAIDistanceType                                    GeometricDistanceType;                                      // 0x00D0   (0x0001) 
-    unsigned char                                      UnknownData04_6[0x3];                                       // 0x00D1   (0x0003) MISSED
-    bool                                               bUseParametrizedRadius : 1;                                 // 0x00D4:0 (0x0001) 
-    bool                                               bUseNavAgentGoalLocation : 1;                               // 0x00D4:1 (0x0001) 
-    bool                                               bPathFindingBasedTest : 1;                                  // 0x00D4:2 (0x0001) 
-    unsigned char                                      UnknownData05_7[0x3];                                       // 0x00D5   (0x0003) MISSED
+    float                                              AcceptableRadius;                                           // 0x0090   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0094   (0x0004) MISSED
+    FAIDataProviderFloatValue                          ParametrizedAcceptableRadius;                               // 0x0098   (0x0038)
+    FAIDistanceType                                    GeometricDistanceType;                                      // 0x00D0   (0x0001)
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00D1   (0x0003) MISSED
+    bool                                               bUseParametrizedRadius : 1;                                 // 0x00D4:0 (0x0001)
+    bool                                               bUseNavAgentGoalLocation : 1;                               // 0x00D4:1 (0x0001)
+    bool                                               bPathFindingBasedTest : 1;                                  // 0x00D4:2 (0x0001)
+    unsigned char                                      UnknownData02_7[0x3];                                       // 0x00D5   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_IsBBEntryOfClass
-/// Size: 0x0098 (152 bytes) (0x000090 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000090 - 0x000098) align 8 MaxSize: 0x0098
 class UBTDecorator_IsBBEntryOfClass : public UBTDecorator_BlackboardBase
 { 
 public:
-    class UClass*                                      TestClass;                                                  // 0x0090   (0x0008) 
+    class UClass*                                      TestClass;                                                  // 0x0090   (0x0008)
 };
 
 /// Class /Script/AIModule.BTDecorator_KeepInCone
-/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align n/a MaxSize: 0x00C8
+/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align 8 MaxSize: 0x00C8
 class UBTDecorator_KeepInCone : public UBTDecorator
 { 
 public:
-    float                                              ConeHalfAngle;                                              // 0x0068   (0x0004) 
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x006C   (0x0004) MISSED
-    FBlackboardKeySelector                             ConeOrigin;                                                 // 0x0070   (0x0028) 
-    FBlackboardKeySelector                             Observed;                                                   // 0x0098   (0x0028) 
-    bool                                               bUseSelfAsOrigin : 1;                                       // 0x00C0:0 (0x0001) 
-    bool                                               bUseSelfAsObserved : 1;                                     // 0x00C0:1 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x7];                                       // 0x00C1   (0x0007) MISSED
+    float                                              ConeHalfAngle;                                              // 0x0068   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x006C   (0x0004) MISSED
+    FBlackboardKeySelector                             ConeOrigin;                                                 // 0x0070   (0x0028)
+    FBlackboardKeySelector                             Observed;                                                   // 0x0098   (0x0028)
+    bool                                               bUseSelfAsOrigin : 1;                                       // 0x00C0:0 (0x0001)
+    bool                                               bUseSelfAsObserved : 1;                                     // 0x00C0:1 (0x0001)
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x00C1   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_Loop
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
 class UBTDecorator_Loop : public UBTDecorator
 { 
 public:
-    int32_t                                            NumLoops;                                                   // 0x0068   (0x0004) 
-    bool                                               bInfiniteLoop;                                              // 0x006C   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x006D   (0x0003) MISSED
-    float                                              InfiniteLoopTimeoutTime;                                    // 0x0070   (0x0004) 
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0074   (0x0004) MISSED
+    int32_t                                            NumLoops;                                                   // 0x0068   (0x0004)
+    bool                                               bInfiniteLoop;                                              // 0x006C   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x006D   (0x0003) MISSED
+    float                                              InfiniteLoopTimeoutTime;                                    // 0x0070   (0x0004)
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0074   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_ReachedMoveGoal
-/// Size: 0x0068 (104 bytes) (0x000068 - 0x000068) align n/a MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000068 - 0x000068) align 8 MaxSize: 0x0068
 class UBTDecorator_ReachedMoveGoal : public UBTDecorator
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTDecorator_SetTagCooldown
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
 class UBTDecorator_SetTagCooldown : public UBTDecorator
 { 
 public:
-    FGameplayTag                                       CooldownTag;                                                // 0x0068   (0x0008) 
-    float                                              CooldownDuration;                                           // 0x0070   (0x0004) 
-    bool                                               bAddToExistingDuration;                                     // 0x0074   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0075   (0x0003) MISSED
+    FGameplayTag                                       CooldownTag;                                                // 0x0068   (0x0008)
+    float                                              CooldownDuration;                                           // 0x0070   (0x0004)
+    bool                                               bAddToExistingDuration;                                     // 0x0074   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0075   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_TagCooldown
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
 class UBTDecorator_TagCooldown : public UBTDecorator
 { 
 public:
-    FGameplayTag                                       CooldownTag;                                                // 0x0068   (0x0008) 
-    float                                              CooldownDuration;                                           // 0x0070   (0x0004) 
-    bool                                               bAddToExistingDuration;                                     // 0x0074   (0x0001) 
-    bool                                               bActivatesCooldown;                                         // 0x0075   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x2];                                       // 0x0076   (0x0002) MISSED
+    FGameplayTag                                       CooldownTag;                                                // 0x0068   (0x0008)
+    float                                              CooldownDuration;                                           // 0x0070   (0x0004)
+    bool                                               bAddToExistingDuration;                                     // 0x0074   (0x0001)
+    bool                                               bActivatesCooldown;                                         // 0x0075   (0x0001)
+    unsigned char                                      UnknownData00_7[0x2];                                       // 0x0076   (0x0002) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_TimeLimit
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
 class UBTDecorator_TimeLimit : public UBTDecorator
 { 
 public:
-    float                                              TimeLimit;                                                  // 0x0068   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x006C   (0x0004) MISSED
+    float                                              TimeLimit;                                                  // 0x0068   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x006C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UBTFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -1999,968 +2001,968 @@ public:
     /// Functions
     // Function /Script/AIModule.BTFunctionLibrary.StopUsingExternalEvent
     // [0] NodeOwner : const UBTNode*
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*> StopUsingExternalEvent = { 0x17a7aa0, 0 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*> StopUsingExternalEvent = { 0x17adab0, 0 };
     // Function /Script/AIModule.BTFunctionLibrary.StartUsingExternalEvent
     // [0] NodeOwner : const UBTNode*
     // [1] OwningActor : const AActor*
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const AActor*> StartUsingExternalEvent = { 0x267feb0, 1 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const AActor*> StartUsingExternalEvent = { 0x268a940, 1 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsVector
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const FVector
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FVector> SetBlackboardValueAsVector = { 0x4bf9980, 2 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FVector> SetBlackboardValueAsVector = { 0x4c0ef40, 2 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsString
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const FString
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FString> SetBlackboardValueAsString = { 0x4bf9f60, 3 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FString> SetBlackboardValueAsString = { 0x4c0f520, 3 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsRotator
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const FRotator
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FRotator> SetBlackboardValueAsRotator = { 0x4bf9690, 4 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FRotator> SetBlackboardValueAsRotator = { 0x4c0ec50, 4 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsObject
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const UObject*
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const UObject*> SetBlackboardValueAsObject = { 0x4bfb1b0, 5 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const UObject*> SetBlackboardValueAsObject = { 0x4c10770, 5 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsName
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const FName
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FName> SetBlackboardValueAsName = { 0x4bf9c70, 6 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FName> SetBlackboardValueAsName = { 0x4c0f230, 6 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsInt
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const int32_t
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const int32_t> SetBlackboardValueAsInt = { 0x4bfa8e0, 7 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const int32_t> SetBlackboardValueAsInt = { 0x4c0fea0, 7 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsFloat
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const float
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const float> SetBlackboardValueAsFloat = { 0x4bfa5c0, 8 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const float> SetBlackboardValueAsFloat = { 0x4c0fb80, 8 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsEnum
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const char
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const char> SetBlackboardValueAsEnum = { 0x4bfabd0, 9 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const char> SetBlackboardValueAsEnum = { 0x4c10190, 9 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsClass
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const UClass*
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const UClass*> SetBlackboardValueAsClass = { 0x4bfaec0, 10 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const UClass*> SetBlackboardValueAsClass = { 0x4c10480, 10 };
     // Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsBool
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
     // [2] Value : const bool
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const bool> SetBlackboardValueAsBool = { 0x4bfa2d0, 11 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const bool> SetBlackboardValueAsBool = { 0x4c0f890, 11 };
     // Function /Script/AIModule.BTFunctionLibrary.GetOwnersBlackboard
     // [0] NodeOwner : const UBTNode*
-    constexpr static const FunctionPointer<UBTFunctionLibrary, UBlackboardComponent*, const UBTNode*> GetOwnersBlackboard = { 0x4bfceb0, 12 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, UBlackboardComponent*, const UBTNode*> GetOwnersBlackboard = { 0x4c12470, 12 };
     // Function /Script/AIModule.BTFunctionLibrary.GetOwnerComponent
     // [0] NodeOwner : const UBTNode*
-    constexpr static const FunctionPointer<UBTFunctionLibrary, UBehaviorTreeComponent*, const UBTNode*> GetOwnerComponent = { 0x4bfcd80, 13 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, UBehaviorTreeComponent*, const UBTNode*> GetOwnerComponent = { 0x4c12340, 13 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsVector
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, FVector, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsVector = { 0x4bfb760, 14 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, FVector, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsVector = { 0x4c10d20, 14 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsString
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, FString, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsString = { 0x4bfbc40, 15 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, FString, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsString = { 0x4c11200, 15 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsRotator
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, FRotator, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsRotator = { 0x4bfb4a0, 16 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, FRotator, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsRotator = { 0x4c10a60, 16 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsObject
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, UObject*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsObject = { 0x4bfcb80, 17 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, UObject*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsObject = { 0x4c12140, 17 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsName
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, FName, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsName = { 0x4bfba20, 18 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, FName, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsName = { 0x4c10fe0, 18 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsInt
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, int32_t, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsInt = { 0x4bfc350, 19 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, int32_t, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsInt = { 0x4c11910, 19 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsFloat
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, float, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsFloat = { 0x4bfc140, 20 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, float, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsFloat = { 0x4c11700, 20 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsEnum
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, char, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsEnum = { 0x4bfc550, 21 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, char, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsEnum = { 0x4c11b10, 21 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsClass
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, UClass*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsClass = { 0x4bfc750, 22 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, UClass*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsClass = { 0x4c11d10, 22 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsBool
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, bool, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsBool = { 0x4bfbf40, 23 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, bool, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsBool = { 0x4c11500, 23 };
     // Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsActor
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, AActor*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsActor = { 0x4bfc950, 24 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, AActor*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsActor = { 0x4c11f10, 24 };
     // Function /Script/AIModule.BTFunctionLibrary.ClearBlackboardValueAsVector
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&> ClearBlackboardValueAsVector = { 0x4bf9490, 25 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&> ClearBlackboardValueAsVector = { 0x4c0ea50, 25 };
     // Function /Script/AIModule.BTFunctionLibrary.ClearBlackboardValue
     // [0] NodeOwner : const UBTNode*
     // [1] Key : const FBlackboardKeySelector&
-    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&> ClearBlackboardValue = { 0x4bf9490, 26 };
+    constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&> ClearBlackboardValue = { 0x4c0ea50, 26 };
 };
 
 /// Class /Script/AIModule.BTService
-/// Size: 0x0070 (112 bytes) (0x000060 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000060 - 0x000070) align 8 MaxSize: 0x0070
 class UBTService : public UBTAuxiliaryNode
 { 
 public:
-    float                                              Interval;                                                   // 0x0060   (0x0004) 
-    float                                              RandomDeviation;                                            // 0x0064   (0x0004) 
-    bool                                               bCallTickOnSearchStart : 1;                                 // 0x0068:0 (0x0001) 
-    bool                                               bRestartTimerOnEachActivation : 1;                          // 0x0068:1 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0069   (0x0007) MISSED
+    float                                              Interval;                                                   // 0x0060   (0x0004)
+    float                                              RandomDeviation;                                            // 0x0064   (0x0004)
+    bool                                               bCallTickOnSearchStart : 1;                                 // 0x0068:0 (0x0001)
+    bool                                               bRestartTimerOnEachActivation : 1;                          // 0x0068:1 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0069   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTService_BlackboardBase
-/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align 8 MaxSize: 0x0098
 class UBTService_BlackboardBase : public UBTService
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0070   (0x0028) 
+    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0070   (0x0028)
 };
 
 /// Class /Script/AIModule.BTService_BlueprintBase
-/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align 8 MaxSize: 0x0098
 class UBTService_BlueprintBase : public UBTService
 { 
 public:
-    class AAIController*                               AIOwner;                                                    // 0x0070   (0x0008) 
-    class AActor*                                      ActorOwner;                                                 // 0x0078   (0x0008) 
-    unsigned char                                      UnknownData02_6[0x10];                                      // 0x0080   (0x0010) MISSED
-    bool                                               bShowPropertyDetails : 1;                                   // 0x0090:0 (0x0001) 
-    bool                                               bShowEventDetails : 1;                                      // 0x0090:1 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x7];                                       // 0x0091   (0x0007) MISSED
+    class AAIController*                               AIOwner;                                                    // 0x0070   (0x0008)
+    class AActor*                                      ActorOwner;                                                 // 0x0078   (0x0008)
+    unsigned char                                      UnknownData00_6[0x10];                                      // 0x0080   (0x0010) MISSED
+    bool                                               bShowPropertyDetails : 1;                                   // 0x0090:0 (0x0001)
+    bool                                               bShowEventDetails : 1;                                      // 0x0090:1 (0x0001)
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0091   (0x0007) MISSED
 
     /// Functions
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveTickAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
     // [2] DeltaSeconds : const float
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bbb090, 0 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bc7620, 0 };
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveTick
     // [0] OwnerActor : const AActor*
     // [1] DeltaSeconds : const float
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bbb090, 1 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bc7620, 1 };
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveSearchStartAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveSearchStartAI = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveSearchStartAI = { 0x2bc7620, 2 };
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveSearchStart
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveSearchStart = { 0x2bbb090, 3 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveSearchStart = { 0x2bc7620, 3 };
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveDeactivationAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveDeactivationAI = { 0x2bbb090, 4 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveDeactivationAI = { 0x2bc7620, 4 };
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveDeactivation
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveDeactivation = { 0x2bbb090, 5 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveDeactivation = { 0x2bc7620, 5 };
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveActivationAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveActivationAI = { 0x2bbb090, 6 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveActivationAI = { 0x2bc7620, 6 };
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveActivation
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveActivation = { 0x2bbb090, 7 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveActivation = { 0x2bc7620, 7 };
     // Function /Script/AIModule.BTService_BlueprintBase.IsServiceActive
-    constexpr static const FunctionPointer<UBTService_BlueprintBase, bool> IsServiceActive = { 0x4bfe1f0, 8 };
+    constexpr static const FunctionPointer<UBTService_BlueprintBase, bool> IsServiceActive = { 0x4c137b0, 8 };
 };
 
 /// Class /Script/AIModule.BTService_DefaultFocus
-/// Size: 0x00A0 (160 bytes) (0x000098 - 0x0000A0) align n/a MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000098 - 0x0000A0) align 8 MaxSize: 0x00A0
 class UBTService_DefaultFocus : public UBTService_BlackboardBase
 { 
 public:
-    char                                               FocusPriority;                                              // 0x0098   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0099   (0x0007) MISSED
+    char                                               FocusPriority;                                              // 0x0098   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0099   (0x0007) MISSED
 };
 
 /// Struct /Script/AIModule.AIDynamicParam
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
 struct FAIDynamicParam
 { 
-    FName                                              ParamName;                                                  // 0x0000   (0x0008) 
-    EAIParamType                                       ParamType;                                                  // 0x0008   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0009   (0x0003) MISSED
-    float                                              Value;                                                      // 0x000C   (0x0004) 
-    FBlackboardKeySelector                             BBKey;                                                      // 0x0010   (0x0028) 
+    FName                                              ParamName;                                                  // 0x0000   (0x0008)
+    EAIParamType                                       ParamType;                                                  // 0x0008   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0009   (0x0003) MISSED
+    float                                              Value;                                                      // 0x000C   (0x0004)
+    FBlackboardKeySelector                             BBKey;                                                      // 0x0010   (0x0028)
 };
 
 /// Struct /Script/AIModule.EQSParametrizedQueryExecutionRequest
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
 struct FEQSParametrizedQueryExecutionRequest
 { 
-    class UEnvQuery*                                   QueryTemplate;                                              // 0x0000   (0x0008) 
-    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x0008   (0x0010) 
-    FBlackboardKeySelector                             EQSQueryBlackboardKey;                                      // 0x0018   (0x0028) 
-    TEnumAsByte<EEnvQueryRunMode>                      RunMode;                                                    // 0x0040   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0041   (0x0003) MISSED
-    bool                                               bUseBBKeyForQueryTemplate : 1;                              // 0x0044:0 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x3];                                       // 0x0045   (0x0003) MISSED
+    class UEnvQuery*                                   QueryTemplate;                                              // 0x0000   (0x0008)
+    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x0008   (0x0010)
+    FBlackboardKeySelector                             EQSQueryBlackboardKey;                                      // 0x0018   (0x0028)
+    TEnumAsByte<EEnvQueryRunMode>                      RunMode;                                                    // 0x0040   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0041   (0x0003) MISSED
+    bool                                               bUseBBKeyForQueryTemplate : 1;                              // 0x0044:0 (0x0001)
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0045   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTService_RunEQS
-/// Size: 0x00F0 (240 bytes) (0x000098 - 0x0000F0) align n/a MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000098 - 0x0000F0) align 8 MaxSize: 0x00F0
 class UBTService_RunEQS : public UBTService_BlackboardBase
 { 
 public:
-    FEQSParametrizedQueryExecutionRequest              EQSRequest;                                                 // 0x0098   (0x0048) 
-    unsigned char                                      UnknownData01_7[0x10];                                      // 0x00E0   (0x0010) MISSED
+    FEQSParametrizedQueryExecutionRequest              EQSRequest;                                                 // 0x0098   (0x0048)
+    unsigned char                                      UnknownData00_7[0x10];                                      // 0x00E0   (0x0010) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_BlackboardBase
-/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align 8 MaxSize: 0x0098
 class UBTTask_BlackboardBase : public UBTTaskNode
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0070   (0x0028) 
+    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0070   (0x0028)
 };
 
 /// Struct /Script/AIModule.IntervalCountdown
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FIntervalCountdown
 { 
-    float                                              Interval;                                                   // 0x0000   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0004   (0x0004) MISSED
+    float                                              Interval;                                                   // 0x0000   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0004   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_BlueprintBase
-/// Size: 0x00A8 (168 bytes) (0x000070 - 0x0000A8) align n/a MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000070 - 0x0000A8) align 8 MaxSize: 0x00A8
 class UBTTask_BlueprintBase : public UBTTaskNode
 { 
 public:
-    class AAIController*                               AIOwner;                                                    // 0x0070   (0x0008) 
-    class AActor*                                      ActorOwner;                                                 // 0x0078   (0x0008) 
-    FIntervalCountdown                                 TickInterval;                                               // 0x0080   (0x0008) 
-    unsigned char                                      UnknownData02_6[0x18];                                      // 0x0088   (0x0018) MISSED
-    bool                                               bShowPropertyDetails : 1;                                   // 0x00A0:0 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x7];                                       // 0x00A1   (0x0007) MISSED
+    class AAIController*                               AIOwner;                                                    // 0x0070   (0x0008)
+    class AActor*                                      ActorOwner;                                                 // 0x0078   (0x0008)
+    FIntervalCountdown                                 TickInterval;                                               // 0x0080   (0x0008)
+    unsigned char                                      UnknownData00_6[0x18];                                      // 0x0088   (0x0018) MISSED
+    bool                                               bShowPropertyDetails : 1;                                   // 0x00A0:0 (0x0001)
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x00A1   (0x0007) MISSED
 
     /// Functions
     // Function /Script/AIModule.BTTask_BlueprintBase.SetFinishOnMessageWithId
     // [0] MessageName : const FName
     // [1] RequestID : const int32_t
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const FName, const int32_t> SetFinishOnMessageWithId = { 0x4bff1e0, 0 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const FName, const int32_t> SetFinishOnMessageWithId = { 0x4c147a0, 0 };
     // Function /Script/AIModule.BTTask_BlueprintBase.SetFinishOnMessage
     // [0] MessageName : const FName
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const FName> SetFinishOnMessage = { 0x4bff380, 1 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const FName> SetFinishOnMessage = { 0x4c14940, 1 };
     // Function /Script/AIModule.BTTask_BlueprintBase.ReceiveTickAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
     // [2] DeltaSeconds : const float
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bc7620, 2 };
     // Function /Script/AIModule.BTTask_BlueprintBase.ReceiveTick
     // [0] OwnerActor : const AActor*
     // [1] DeltaSeconds : const float
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bbb090, 3 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bc7620, 3 };
     // Function /Script/AIModule.BTTask_BlueprintBase.ReceiveExecuteAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*> ReceiveExecuteAI = { 0x2bbb090, 4 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*> ReceiveExecuteAI = { 0x2bc7620, 4 };
     // Function /Script/AIModule.BTTask_BlueprintBase.ReceiveExecute
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*> ReceiveExecute = { 0x2bbb090, 5 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*> ReceiveExecute = { 0x2bc7620, 5 };
     // Function /Script/AIModule.BTTask_BlueprintBase.ReceiveAbortAI
     // [0] OwnerController : const AAIController*
     // [1] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*> ReceiveAbortAI = { 0x2bbb090, 6 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*> ReceiveAbortAI = { 0x2bc7620, 6 };
     // Function /Script/AIModule.BTTask_BlueprintBase.ReceiveAbort
     // [0] OwnerActor : const AActor*
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*> ReceiveAbort = { 0x2bbb090, 7 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*> ReceiveAbort = { 0x2bc7620, 7 };
     // Function /Script/AIModule.BTTask_BlueprintBase.IsTaskExecuting
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, bool> IsTaskExecuting = { 0x4bff160, 8 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, bool> IsTaskExecuting = { 0x4c14720, 8 };
     // Function /Script/AIModule.BTTask_BlueprintBase.IsTaskAborting
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, bool> IsTaskAborting = { 0x4bff130, 9 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, bool> IsTaskAborting = { 0x4c146f0, 9 };
     // Function /Script/AIModule.BTTask_BlueprintBase.FinishExecute
     // [0] bSuccess : const bool
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const bool> FinishExecute = { 0x4bff530, 10 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const bool> FinishExecute = { 0x4c14af0, 10 };
     // Function /Script/AIModule.BTTask_BlueprintBase.FinishAbort
-    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void> FinishAbort = { 0x4bff490, 11 };
+    constexpr static const FunctionPointer<UBTTask_BlueprintBase, void> FinishAbort = { 0x4c14a50, 11 };
 };
 
 /// Class /Script/AIModule.BTTask_FinishWithResult
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UBTTask_FinishWithResult : public UBTTaskNode
 { 
 public:
-    TEnumAsByte<EBTNodeResult>                         Result;                                                     // 0x0070   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0071   (0x0007) MISSED
+    TEnumAsByte<EBTNodeResult>                         Result;                                                     // 0x0070   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0071   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_GameplayTaskBase
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UBTTask_GameplayTaskBase : public UBTTaskNode
 { 
 public:
-    bool                                               bWaitForGameplayTask : 1;                                   // 0x0070:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0071   (0x0007) MISSED
+    bool                                               bWaitForGameplayTask : 1;                                   // 0x0070:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0071   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_MakeNoise
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UBTTask_MakeNoise : public UBTTaskNode
 { 
 public:
-    float                                              Loudnes;                                                    // 0x0070   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0074   (0x0004) MISSED
+    float                                              Loudnes;                                                    // 0x0070   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0074   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_MoveTo
-/// Size: 0x00B0 (176 bytes) (0x000098 - 0x0000B0) align n/a MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000098 - 0x0000B0) align 8 MaxSize: 0x00B0
 class UBTTask_MoveTo : public UBTTask_BlackboardBase
 { 
 public:
-    float                                              AcceptableRadius;                                           // 0x0098   (0x0004) 
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x009C   (0x0004) MISSED
-    class UClass*                                      FilterClass;                                                // 0x00A0   (0x0008) 
-    float                                              ObservedBlackboardValueTolerance;                           // 0x00A8   (0x0004) 
-    bool                                               bObserveBlackboardValue : 1;                                // 0x00AC:0 (0x0001) 
-    bool                                               bAllowStrafe : 1;                                           // 0x00AC:1 (0x0001) 
-    bool                                               bAllowPartialPath : 1;                                      // 0x00AC:2 (0x0001) 
-    bool                                               bTrackMovingGoal : 1;                                       // 0x00AC:3 (0x0001) 
-    bool                                               bProjectGoalLocation : 1;                                   // 0x00AC:4 (0x0001) 
-    bool                                               bReachTestIncludesAgentRadius : 1;                          // 0x00AC:5 (0x0001) 
-    bool                                               bReachTestIncludesGoalRadius : 1;                           // 0x00AC:6 (0x0001) 
-    bool                                               bStopOnOverlap : 1;                                         // 0x00AC:7 (0x0001) 
-    bool                                               bStopOnOverlapNeedsUpdate : 1;                              // 0x00AD:0 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x2];                                       // 0x00AE   (0x0002) MISSED
+    float                                              AcceptableRadius;                                           // 0x0098   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x009C   (0x0004) MISSED
+    class UClass*                                      FilterClass;                                                // 0x00A0   (0x0008)
+    float                                              ObservedBlackboardValueTolerance;                           // 0x00A8   (0x0004)
+    bool                                               bObserveBlackboardValue : 1;                                // 0x00AC:0 (0x0001)
+    bool                                               bAllowStrafe : 1;                                           // 0x00AC:1 (0x0001)
+    bool                                               bAllowPartialPath : 1;                                      // 0x00AC:2 (0x0001)
+    bool                                               bTrackMovingGoal : 1;                                       // 0x00AC:3 (0x0001)
+    bool                                               bProjectGoalLocation : 1;                                   // 0x00AC:4 (0x0001)
+    bool                                               bReachTestIncludesAgentRadius : 1;                          // 0x00AC:5 (0x0001)
+    bool                                               bReachTestIncludesGoalRadius : 1;                           // 0x00AC:6 (0x0001)
+    bool                                               bStopOnOverlap : 1;                                         // 0x00AC:7 (0x0001)
+    bool                                               bStopOnOverlapNeedsUpdate : 1;                              // 0x00AD:0 (0x0001)
+    unsigned char                                      UnknownData01_7[0x2];                                       // 0x00AE   (0x0002) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_MoveDirectlyToward
-/// Size: 0x00B8 (184 bytes) (0x0000B0 - 0x0000B8) align n/a MaxSize: 0x00B8
+/// Size: 0x00B8 (184 bytes) (0x0000B0 - 0x0000B8) align 8 MaxSize: 0x00B8
 class UBTTask_MoveDirectlyToward : public UBTTask_MoveTo
 { 
 public:
-    bool                                               bDisablePathUpdateOnGoalLocationChange : 1;                 // 0x00B0:0 (0x0001) 
-    bool                                               bProjectVectorGoalToNavigation : 1;                         // 0x00B0:1 (0x0001) 
-    bool                                               bUpdatedDeprecatedProperties : 1;                           // 0x00B0:2 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x00B1   (0x0007) MISSED
+    bool                                               bDisablePathUpdateOnGoalLocationChange : 1;                 // 0x00B0:0 (0x0001)
+    bool                                               bProjectVectorGoalToNavigation : 1;                         // 0x00B0:1 (0x0001)
+    bool                                               bUpdatedDeprecatedProperties : 1;                           // 0x00B0:2 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x00B1   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_PawnActionBase
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UBTTask_PawnActionBase : public UBTTaskNode
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTTask_PlayAnimation
-/// Size: 0x00B0 (176 bytes) (0x000070 - 0x0000B0) align n/a MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000070 - 0x0000B0) align 8 MaxSize: 0x00B0
 class UBTTask_PlayAnimation : public UBTTaskNode
 { 
 public:
-    class UAnimationAsset*                             AnimationToPlay;                                            // 0x0070   (0x0008) 
-    bool                                               bLooping : 1;                                               // 0x0078:0 (0x0001) 
-    bool                                               bNonBlocking : 1;                                           // 0x0078:1 (0x0001) 
-    unsigned char                                      UnknownData02_5[0x7];                                       // 0x0079   (0x0007) MISSED
-    class UBehaviorTreeComponent*                      MyOwnerComp;                                                // 0x0080   (0x0008) 
-    class USkeletalMeshComponent*                      CachedSkelMesh;                                             // 0x0088   (0x0008) 
-    unsigned char                                      UnknownData03_7[0x20];                                      // 0x0090   (0x0020) MISSED
+    class UAnimationAsset*                             AnimationToPlay;                                            // 0x0070   (0x0008)
+    bool                                               bLooping : 1;                                               // 0x0078:0 (0x0001)
+    bool                                               bNonBlocking : 1;                                           // 0x0078:1 (0x0001)
+    unsigned char                                      UnknownData00_5[0x7];                                       // 0x0079   (0x0007) MISSED
+    class UBehaviorTreeComponent*                      MyOwnerComp;                                                // 0x0080   (0x0008)
+    class USkeletalMeshComponent*                      CachedSkelMesh;                                             // 0x0088   (0x0008)
+    unsigned char                                      UnknownData01_7[0x20];                                      // 0x0090   (0x0020) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_PlaySound
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UBTTask_PlaySound : public UBTTaskNode
 { 
 public:
-    class USoundCue*                                   SoundToPlay;                                                // 0x0070   (0x0008) 
+    class USoundCue*                                   SoundToPlay;                                                // 0x0070   (0x0008)
 };
 
 /// Class /Script/AIModule.BTTask_PushPawnAction
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UBTTask_PushPawnAction : public UBTTask_PawnActionBase
 { 
 public:
-    class UPawnAction*                                 Action;                                                     // 0x0070   (0x0008) 
+    class UPawnAction*                                 Action;                                                     // 0x0070   (0x0008)
 };
 
 /// Class /Script/AIModule.BTTask_RotateToFaceBBEntry
-/// Size: 0x00A0 (160 bytes) (0x000098 - 0x0000A0) align n/a MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000098 - 0x0000A0) align 8 MaxSize: 0x00A0
 class UBTTask_RotateToFaceBBEntry : public UBTTask_BlackboardBase
 { 
 public:
-    float                                              Precision;                                                  // 0x0098   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x009C   (0x0004) MISSED
+    float                                              Precision;                                                  // 0x0098   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x009C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_RunBehavior
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UBTTask_RunBehavior : public UBTTaskNode
 { 
 public:
-    class UBehaviorTree*                               BehaviorAsset;                                              // 0x0070   (0x0008) 
+    class UBehaviorTree*                               BehaviorAsset;                                              // 0x0070   (0x0008)
 };
 
 /// Class /Script/AIModule.BTTask_RunBehaviorDynamic
-/// Size: 0x0088 (136 bytes) (0x000070 - 0x000088) align n/a MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000070 - 0x000088) align 8 MaxSize: 0x0088
 class UBTTask_RunBehaviorDynamic : public UBTTaskNode
 { 
 public:
-    FGameplayTag                                       InjectionTag;                                               // 0x0070   (0x0008) 
-    class UBehaviorTree*                               DefaultBehaviorAsset;                                       // 0x0078   (0x0008) 
-    class UBehaviorTree*                               BehaviorAsset;                                              // 0x0080   (0x0008) 
+    FGameplayTag                                       InjectionTag;                                               // 0x0070   (0x0008)
+    class UBehaviorTree*                               DefaultBehaviorAsset;                                       // 0x0078   (0x0008)
+    class UBehaviorTree*                               BehaviorAsset;                                              // 0x0080   (0x0008)
 };
 
 /// Struct /Script/AIModule.EnvNamedValue
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FEnvNamedValue
 { 
-    FName                                              ParamName;                                                  // 0x0000   (0x0008) 
-    EAIParamType                                       ParamType;                                                  // 0x0008   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0009   (0x0003) MISSED
-    float                                              Value;                                                      // 0x000C   (0x0004) 
+    FName                                              ParamName;                                                  // 0x0000   (0x0008)
+    EAIParamType                                       ParamType;                                                  // 0x0008   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0009   (0x0003) MISSED
+    float                                              Value;                                                      // 0x000C   (0x0004)
 };
 
 /// Class /Script/AIModule.BTTask_RunEQSQuery
-/// Size: 0x0150 (336 bytes) (0x000098 - 0x000150) align n/a MaxSize: 0x0150
+/// Size: 0x0150 (336 bytes) (0x000098 - 0x000150) align 8 MaxSize: 0x0150
 class UBTTask_RunEQSQuery : public UBTTask_BlackboardBase
 { 
 public:
-    class UEnvQuery*                                   QueryTemplate;                                              // 0x0098   (0x0008) 
-    TArray<FEnvNamedValue>                             QueryParams;                                                // 0x00A0   (0x0010) 
-    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x00B0   (0x0010) 
-    TEnumAsByte<EEnvQueryRunMode>                      RunMode;                                                    // 0x00C0   (0x0001) 
-    unsigned char                                      UnknownData03_6[0x7];                                       // 0x00C1   (0x0007) MISSED
-    FBlackboardKeySelector                             EQSQueryBlackboardKey;                                      // 0x00C8   (0x0028) 
-    bool                                               bUseBBKey;                                                  // 0x00F0   (0x0001) 
-    unsigned char                                      UnknownData04_6[0x7];                                       // 0x00F1   (0x0007) MISSED
-    FEQSParametrizedQueryExecutionRequest              EQSRequest;                                                 // 0x00F8   (0x0048) 
-    unsigned char                                      UnknownData05_7[0x10];                                      // 0x0140   (0x0010) MISSED
+    class UEnvQuery*                                   QueryTemplate;                                              // 0x0098   (0x0008)
+    TArray<FEnvNamedValue>                             QueryParams;                                                // 0x00A0   (0x0010)
+    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x00B0   (0x0010)
+    TEnumAsByte<EEnvQueryRunMode>                      RunMode;                                                    // 0x00C0   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x00C1   (0x0007) MISSED
+    FBlackboardKeySelector                             EQSQueryBlackboardKey;                                      // 0x00C8   (0x0028)
+    bool                                               bUseBBKey;                                                  // 0x00F0   (0x0001)
+    unsigned char                                      UnknownData01_6[0x7];                                       // 0x00F1   (0x0007) MISSED
+    FEQSParametrizedQueryExecutionRequest              EQSRequest;                                                 // 0x00F8   (0x0048)
+    unsigned char                                      UnknownData02_7[0x10];                                      // 0x0140   (0x0010) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_SetTagCooldown
-/// Size: 0x0080 (128 bytes) (0x000070 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000070 - 0x000080) align 8 MaxSize: 0x0080
 class UBTTask_SetTagCooldown : public UBTTaskNode
 { 
 public:
-    FGameplayTag                                       CooldownTag;                                                // 0x0070   (0x0008) 
-    bool                                               bAddToExistingDuration;                                     // 0x0078   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0079   (0x0003) MISSED
-    float                                              CooldownDuration;                                           // 0x007C   (0x0004) 
+    FGameplayTag                                       CooldownTag;                                                // 0x0070   (0x0008)
+    bool                                               bAddToExistingDuration;                                     // 0x0078   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0079   (0x0003) MISSED
+    float                                              CooldownDuration;                                           // 0x007C   (0x0004)
 };
 
 /// Class /Script/AIModule.BTTask_Wait
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UBTTask_Wait : public UBTTaskNode
 { 
 public:
-    float                                              WaitTime;                                                   // 0x0070   (0x0004) 
-    float                                              RandomDeviation;                                            // 0x0074   (0x0004) 
+    float                                              WaitTime;                                                   // 0x0070   (0x0004)
+    float                                              RandomDeviation;                                            // 0x0074   (0x0004)
 };
 
 /// Class /Script/AIModule.BTTask_WaitBlackboardTime
-/// Size: 0x00A0 (160 bytes) (0x000078 - 0x0000A0) align n/a MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000078 - 0x0000A0) align 8 MaxSize: 0x00A0
 class UBTTask_WaitBlackboardTime : public UBTTask_Wait
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0078   (0x0028) 
+    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0078   (0x0028)
 };
 
 /// Class /Script/AIModule.CrowdAgentInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UCrowdAgentInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.PathFollowingComponent
-/// Size: 0x0260 (608 bytes) (0x0000C0 - 0x000260) align n/a MaxSize: 0x0260
+/// Size: 0x0260 (608 bytes) (0x0000C0 - 0x000260) align 8 MaxSize: 0x0260
 class UPathFollowingComponent : public UActorComponent
 { 
 public:
-    unsigned char                                      UnknownData03_8[0x38];                                      // 0x00C0   (0x0038) MISSED
-    class UNavMovementComponent*                       MovementComp;                                               // 0x00F8   (0x0008) 
-    unsigned char                                      UnknownData04_6[0x8];                                       // 0x0100   (0x0008) MISSED
-    class ANavigationData*                             MyNavData;                                                  // 0x0108   (0x0008) 
-    unsigned char                                      UnknownData05_7[0x150];                                     // 0x0110   (0x0150) MISSED
+    unsigned char                                      UnknownData00_8[0x38];                                      // 0x00C0   (0x0038) MISSED
+    class UNavMovementComponent*                       MovementComp;                                               // 0x00F8   (0x0008)
+    unsigned char                                      UnknownData01_6[0x8];                                       // 0x0100   (0x0008) MISSED
+    class ANavigationData*                             MyNavData;                                                  // 0x0108   (0x0008)
+    unsigned char                                      UnknownData02_7[0x150];                                     // 0x0110   (0x0150) MISSED
 
     /// Functions
     // Function /Script/AIModule.PathFollowingComponent.OnNavDataRegistered
     // [0] NavData : const ANavigationData*
-    constexpr static const FunctionPointer<UPathFollowingComponent, void, const ANavigationData*> OnNavDataRegistered = { 0x4c16730, 0 };
+    constexpr static const FunctionPointer<UPathFollowingComponent, void, const ANavigationData*> OnNavDataRegistered = { 0x4c2bcf0, 0 };
     // Function /Script/AIModule.PathFollowingComponent.OnActorBump
     // [0] SelfActor : const AActor*
     // [1] OtherActor : const AActor*
     // [2] NormalImpulse : const FVector
     // [3] Hit : const FHitResult&
-    constexpr static const FunctionPointer<UPathFollowingComponent, void, const AActor*, const AActor*, const FVector, const FHitResult&> OnActorBump = { 0x4c169b0, 1 };
+    constexpr static const FunctionPointer<UPathFollowingComponent, void, const AActor*, const AActor*, const FVector, const FHitResult&> OnActorBump = { 0x4c2bf70, 1 };
     // Function /Script/AIModule.PathFollowingComponent.GetPathDestination
-    constexpr static const FunctionPointer<UPathFollowingComponent, FVector> GetPathDestination = { 0x4c16870, 2 };
+    constexpr static const FunctionPointer<UPathFollowingComponent, FVector> GetPathDestination = { 0x4c2be30, 2 };
     // Function /Script/AIModule.PathFollowingComponent.GetPathActionType
-    constexpr static const FunctionPointer<UPathFollowingComponent, TEnumAsByte<EPathFollowingAction>> GetPathActionType = { 0x4c16910, 3 };
+    constexpr static const FunctionPointer<UPathFollowingComponent, TEnumAsByte<EPathFollowingAction>> GetPathActionType = { 0x4c2bed0, 3 };
 };
 
 /// Class /Script/AIModule.CrowdFollowingComponent
-/// Size: 0x02C0 (704 bytes) (0x000260 - 0x0002C0) align n/a MaxSize: 0x02C0
+/// Size: 0x02C0 (704 bytes) (0x000260 - 0x0002C0) align 8 MaxSize: 0x02C0
 class UCrowdFollowingComponent : public UPathFollowingComponent
 { 
 public:
-    unsigned char                                      UnknownData03_8[0x18];                                      // 0x0260   (0x0018) MISSED
-    FVector                                            CrowdAgentMoveDirection;                                    // 0x0278   (0x000C) 
-    unsigned char                                      UnknownData04_6[0x20];                                      // 0x0284   (0x0020) MISSED
-    FVector                                            PrevVelocity;                                               // 0x02A4   (0x000C) 
-    float                                              VelocityLerpPower;                                          // 0x02B0   (0x0004) 
-    float                                              VelocityNearLerpPower;                                      // 0x02B4   (0x0004) 
-    float                                              VelocityLerpAngle;                                          // 0x02B8   (0x0004) 
-    unsigned char                                      UnknownData05_7[0x4];                                       // 0x02BC   (0x0004) MISSED
+    unsigned char                                      UnknownData00_8[0x18];                                      // 0x0260   (0x0018) MISSED
+    FVector                                            CrowdAgentMoveDirection;                                    // 0x0278   (0x000C)
+    unsigned char                                      UnknownData01_6[0x20];                                      // 0x0284   (0x0020) MISSED
+    FVector                                            PrevVelocity;                                               // 0x02A4   (0x000C)
+    float                                              VelocityLerpPower;                                          // 0x02B0   (0x0004)
+    float                                              VelocityNearLerpPower;                                      // 0x02B4   (0x0004)
+    float                                              VelocityLerpAngle;                                          // 0x02B8   (0x0004)
+    unsigned char                                      UnknownData02_7[0x4];                                       // 0x02BC   (0x0004) MISSED
 
     /// Functions
     // Function /Script/AIModule.CrowdFollowingComponent.SuspendCrowdSteering
     // [0] bSuspend : const bool
-    constexpr static const FunctionPointer<UCrowdFollowingComponent, void, const bool> SuspendCrowdSteering = { 0x4c045f0, 0 };
+    constexpr static const FunctionPointer<UCrowdFollowingComponent, void, const bool> SuspendCrowdSteering = { 0x4c19bb0, 0 };
 };
 
 /// Struct /Script/AIModule.CrowdAvoidanceConfig
-/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
+/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align 4 MaxSize: 0x001C
 struct FCrowdAvoidanceConfig
 { 
-    float                                              VelocityBias;                                               // 0x0000   (0x0004) 
-    float                                              DesiredVelocityWeight;                                      // 0x0004   (0x0004) 
-    float                                              CurrentVelocityWeight;                                      // 0x0008   (0x0004) 
-    float                                              SideBiasWeight;                                             // 0x000C   (0x0004) 
-    float                                              ImpactTimeWeight;                                           // 0x0010   (0x0004) 
-    float                                              ImpactTimeRange;                                            // 0x0014   (0x0004) 
-    char                                               CustomPatternIdx;                                           // 0x0018   (0x0001) 
-    char                                               AdaptiveDivisions;                                          // 0x0019   (0x0001) 
-    char                                               AdaptiveRings;                                              // 0x001A   (0x0001) 
-    char                                               AdaptiveDepth;                                              // 0x001B   (0x0001) 
+    float                                              VelocityBias;                                               // 0x0000   (0x0004)
+    float                                              DesiredVelocityWeight;                                      // 0x0004   (0x0004)
+    float                                              CurrentVelocityWeight;                                      // 0x0008   (0x0004)
+    float                                              SideBiasWeight;                                             // 0x000C   (0x0004)
+    float                                              ImpactTimeWeight;                                           // 0x0010   (0x0004)
+    float                                              ImpactTimeRange;                                            // 0x0014   (0x0004)
+    char                                               CustomPatternIdx;                                           // 0x0018   (0x0001)
+    char                                               AdaptiveDivisions;                                          // 0x0019   (0x0001)
+    char                                               AdaptiveRings;                                              // 0x001A   (0x0001)
+    char                                               AdaptiveDepth;                                              // 0x001B   (0x0001)
 };
 
 /// Struct /Script/AIModule.CrowdAvoidanceSamplingPattern
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FCrowdAvoidanceSamplingPattern
 { 
-    TArray<float>                                      Angles;                                                     // 0x0000   (0x0010) 
-    TArray<float>                                      Radii;                                                      // 0x0010   (0x0010) 
+    TArray<float>                                      Angles;                                                     // 0x0000   (0x0010)
+    TArray<float>                                      Radii;                                                      // 0x0010   (0x0010)
 };
 
 /// Class /Script/AIModule.CrowdManager
-/// Size: 0x00F0 (240 bytes) (0x000028 - 0x0000F0) align n/a MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000028 - 0x0000F0) align 8 MaxSize: 0x00F0
 class UCrowdManager : public UCrowdManagerBase
 { 
 public:
-    class ANavigationData*                             MyNavData;                                                  // 0x0028   (0x0008) 
-    TArray<FCrowdAvoidanceConfig>                      AvoidanceConfig;                                            // 0x0030   (0x0010) 
-    TArray<FCrowdAvoidanceSamplingPattern>             SamplingPatterns;                                           // 0x0040   (0x0010) 
-    int32_t                                            MaxAgents;                                                  // 0x0050   (0x0004) 
-    float                                              MaxAgentRadius;                                             // 0x0054   (0x0004) 
-    int32_t                                            MaxAvoidedAgents;                                           // 0x0058   (0x0004) 
-    int32_t                                            MaxAvoidedWalls;                                            // 0x005C   (0x0004) 
-    float                                              NavmeshCheckInterval;                                       // 0x0060   (0x0004) 
-    float                                              PathOptimizationInterval;                                   // 0x0064   (0x0004) 
-    float                                              SeparationDirClamp;                                         // 0x0068   (0x0004) 
-    float                                              PathOffsetRadiusMultiplier;                                 // 0x006C   (0x0004) 
-    unsigned char                                      UnknownBit05 : 1;                                           // 0x0070:0 (0x0001) MISSED
-    unsigned char                                      UnknownBit06 : 1;                                           // 0x0070:1 (0x0001) MISSED
-    unsigned char                                      UnknownBit07 : 1;                                           // 0x0070:2 (0x0001) MISSED
-    unsigned char                                      UnknownBit08 : 1;                                           // 0x0070:3 (0x0001) MISSED
-    bool                                               bResolveCollisions : 1;                                     // 0x0070:4 (0x0001) 
-    unsigned char                                      UnknownData09_7[0x7F];                                      // 0x0071   (0x007F) MISSED
+    class ANavigationData*                             MyNavData;                                                  // 0x0028   (0x0008)
+    TArray<FCrowdAvoidanceConfig>                      AvoidanceConfig;                                            // 0x0030   (0x0010)
+    TArray<FCrowdAvoidanceSamplingPattern>             SamplingPatterns;                                           // 0x0040   (0x0010)
+    int32_t                                            MaxAgents;                                                  // 0x0050   (0x0004)
+    float                                              MaxAgentRadius;                                             // 0x0054   (0x0004)
+    int32_t                                            MaxAvoidedAgents;                                           // 0x0058   (0x0004)
+    int32_t                                            MaxAvoidedWalls;                                            // 0x005C   (0x0004)
+    float                                              NavmeshCheckInterval;                                       // 0x0060   (0x0004)
+    float                                              PathOptimizationInterval;                                   // 0x0064   (0x0004)
+    float                                              SeparationDirClamp;                                         // 0x0068   (0x0004)
+    float                                              PathOffsetRadiusMultiplier;                                 // 0x006C   (0x0004)
+    unsigned char                                      UnknownBit00 : 1;                                           // 0x0070:0 (0x0001) MISSED
+    unsigned char                                      UnknownBit01 : 1;                                           // 0x0070:1 (0x0001) MISSED
+    unsigned char                                      UnknownBit02 : 1;                                           // 0x0070:2 (0x0001) MISSED
+    unsigned char                                      UnknownBit03 : 1;                                           // 0x0070:3 (0x0001) MISSED
+    bool                                               bResolveCollisions : 1;                                     // 0x0070:4 (0x0001)
+    unsigned char                                      UnknownData04_7[0x7F];                                      // 0x0071   (0x007F) MISSED
 };
 
 /// Class /Script/AIModule.DetourCrowdAIController
-/// Size: 0x03D0 (976 bytes) (0x0003D0 - 0x0003D0) align n/a MaxSize: 0x03D0
+/// Size: 0x03D0 (976 bytes) (0x0003D0 - 0x0003D0) align 8 MaxSize: 0x03D0
 class ADetourCrowdAIController : public AAIController
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQuery
-/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align 8 MaxSize: 0x0048
 class UEnvQuery : public UDataAsset
 { 
 public:
-    FName                                              QueryName;                                                  // 0x0030   (0x0008) 
-    TArray<class UEnvQueryOption*>                     OPTIONS;                                                    // 0x0038   (0x0010) 
+    FName                                              QueryName;                                                  // 0x0030   (0x0008)
+    TArray<class UEnvQueryOption*>                     OPTIONS;                                                    // 0x0038   (0x0010)
 };
 
 /// Class /Script/AIModule.EnvQueryContext
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UEnvQueryContext : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryContext_BlueprintBase
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
 class UEnvQueryContext_BlueprintBase : public UEnvQueryContext
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
     // [0] QuerierObject : const UObject*
     // [1] QuerierActor : const AActor*
     // [2] ResultingLocation : const FVector&
-    constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const FVector&> ProvideSingleLocation = { 0x2bbb090, 0 };
+    constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const FVector&> ProvideSingleLocation = { 0x2bc7620, 0 };
     // Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
     // [0] QuerierObject : const UObject*
     // [1] QuerierActor : const AActor*
     // [2] ResultingActor : const AActor*&
-    constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const AActor*&> ProvideSingleActor = { 0x2bbb090, 1 };
+    constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const AActor*&> ProvideSingleActor = { 0x2bc7620, 1 };
     // Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
     // [0] QuerierObject : const UObject*
     // [1] QuerierActor : const AActor*
     // [2] ResultingLocationSet : const TArray<FVector>&
-    constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const TArray<FVector>&> ProvideLocationsSet = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const TArray<FVector>&> ProvideLocationsSet = { 0x2bc7620, 2 };
     // Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
     // [0] QuerierObject : const UObject*
     // [1] QuerierActor : const AActor*
     // [2] ResultingActorsSet : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const TArray<AActor*>&> ProvideActorsSet = { 0x2bbb090, 3 };
+    constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const TArray<AActor*>&> ProvideActorsSet = { 0x2bc7620, 3 };
 };
 
 /// Class /Script/AIModule.EnvQueryContext_Item
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UEnvQueryContext_Item : public UEnvQueryContext
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryContext_Querier
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UEnvQueryContext_Querier : public UEnvQueryContext
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryDebugHelpers
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UEnvQueryDebugHelpers : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryNode
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
 class UEnvQueryNode : public UObject
 { 
 public:
-    int32_t                                            VerNum;                                                     // 0x0028   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004) MISSED
+    int32_t                                            VerNum;                                                     // 0x0028   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator
-/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align 8 MaxSize: 0x0050
 class UEnvQueryGenerator : public UEnvQueryNode
 { 
 public:
-    FString                                            OptionName;                                                 // 0x0030   (0x0010) 
-    class UClass*                                      ItemType;                                                   // 0x0040   (0x0008) 
-    bool                                               bAutoSortTests : 1;                                         // 0x0048:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    FString                                            OptionName;                                                 // 0x0030   (0x0010)
+    class UClass*                                      ItemType;                                                   // 0x0040   (0x0008)
+    bool                                               bAutoSortTests : 1;                                         // 0x0048:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Struct /Script/AIModule.AIDataProviderBoolValue
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
 struct FAIDataProviderBoolValue : FAIDataProviderTypedValue
 { 
-    bool                                               DefaultValue;                                               // 0x0030   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0031   (0x0007) MISSED
+    bool                                               DefaultValue;                                               // 0x0030   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0031   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_ActorsOfClass
-/// Size: 0x00D0 (208 bytes) (0x000050 - 0x0000D0) align n/a MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000050 - 0x0000D0) align 8 MaxSize: 0x00D0
 class UEnvQueryGenerator_ActorsOfClass : public UEnvQueryGenerator
 { 
 public:
-    class UClass*                                      SearchedActorClass;                                         // 0x0050   (0x0008) 
-    FAIDataProviderBoolValue                           GenerateOnlyActorsInRadius;                                 // 0x0058   (0x0038) 
-    FAIDataProviderFloatValue                          SearchRadius;                                               // 0x0090   (0x0038) 
-    class UClass*                                      SearchCenter;                                               // 0x00C8   (0x0008) 
+    class UClass*                                      SearchedActorClass;                                         // 0x0050   (0x0008)
+    FAIDataProviderBoolValue                           GenerateOnlyActorsInRadius;                                 // 0x0058   (0x0038)
+    FAIDataProviderFloatValue                          SearchRadius;                                               // 0x0090   (0x0038)
+    class UClass*                                      SearchCenter;                                               // 0x00C8   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_BlueprintBase
-/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align 8 MaxSize: 0x0080
 class UEnvQueryGenerator_BlueprintBase : public UEnvQueryGenerator
 { 
 public:
-    FText                                              GeneratorsActionDescription;                                // 0x0050   (0x0018) 
-    class UClass*                                      Context;                                                    // 0x0068   (0x0008) 
-    class UClass*                                      GeneratedItemType;                                          // 0x0070   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0078   (0x0008) MISSED
+    FText                                              GeneratorsActionDescription;                                // 0x0050   (0x0018)
+    class UClass*                                      Context;                                                    // 0x0068   (0x0008)
+    class UClass*                                      GeneratedItemType;                                          // 0x0070   (0x0008)
+    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0078   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier
-    constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, UObject*> GetQuerier = { 0x4c06ce0, 0 };
+    constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, UObject*> GetQuerier = { 0x4c1c2a0, 0 };
     // Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration
     // [0] ContextLocations : const TArray<FVector>&
-    constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const TArray<FVector>&> DoItemGeneration = { 0x2bbb090, 1 };
+    constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const TArray<FVector>&> DoItemGeneration = { 0x2bc7620, 1 };
     // Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector
     // [0] GeneratedVector : const FVector
-    constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const FVector> AddGeneratedVector = { 0x4c07000, 2 };
+    constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const FVector> AddGeneratedVector = { 0x4c1c5c0, 2 };
     // Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
     // [0] GeneratedActor : const AActor*
-    constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const AActor*> AddGeneratedActor = { 0x4c06d20, 3 };
+    constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const AActor*> AddGeneratedActor = { 0x4c1c2e0, 3 };
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Composite
-/// Size: 0x0070 (112 bytes) (0x000050 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000050 - 0x000070) align 8 MaxSize: 0x0070
 class UEnvQueryGenerator_Composite : public UEnvQueryGenerator
 { 
 public:
-    TArray<class UEnvQueryGenerator*>                  Generators;                                                 // 0x0050   (0x0010) 
-    bool                                               bAllowDifferentItemTypes : 1;                               // 0x0060:0 (0x0001) 
-    bool                                               bHasMatchingItemType : 1;                                   // 0x0060:1 (0x0001) 
-    unsigned char                                      UnknownData01_5[0x7];                                       // 0x0061   (0x0007) MISSED
-    class UClass*                                      ForcedItemType;                                             // 0x0068   (0x0008) 
+    TArray<class UEnvQueryGenerator*>                  Generators;                                                 // 0x0050   (0x0010)
+    bool                                               bAllowDifferentItemTypes : 1;                               // 0x0060:0 (0x0001)
+    bool                                               bHasMatchingItemType : 1;                                   // 0x0060:1 (0x0001)
+    unsigned char                                      UnknownData00_5[0x7];                                       // 0x0061   (0x0007) MISSED
+    class UClass*                                      ForcedItemType;                                             // 0x0068   (0x0008)
 };
 
 /// Struct /Script/AIModule.EnvTraceData
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
 struct FEnvTraceData
 { 
-    int32_t                                            VersionNum;                                                 // 0x0000   (0x0004) 
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    class UClass*                                      NavigationFilter;                                           // 0x0008   (0x0008) 
-    float                                              ProjectDown;                                                // 0x0010   (0x0004) 
-    float                                              ProjectUp;                                                  // 0x0014   (0x0004) 
-    float                                              ExtentX;                                                    // 0x0018   (0x0004) 
-    float                                              ExtentY;                                                    // 0x001C   (0x0004) 
-    float                                              ExtentZ;                                                    // 0x0020   (0x0004) 
-    float                                              PostProjectionVerticalOffset;                               // 0x0024   (0x0004) 
-    TEnumAsByte<ETraceTypeQuery>                       TraceChannel;                                               // 0x0028   (0x0001) 
-    TEnumAsByte<ECollisionChannel>                     SerializedChannel;                                          // 0x0029   (0x0001) 
-    TEnumAsByte<EEnvTraceShape>                        TraceShape;                                                 // 0x002A   (0x0001) 
-    TEnumAsByte<EEnvQueryTrace>                        TraceMode;                                                  // 0x002B   (0x0001) 
-    bool                                               bTraceComplex : 1;                                          // 0x002C:0 (0x0001) 
-    bool                                               bOnlyBlockingHits : 1;                                      // 0x002C:1 (0x0001) 
-    bool                                               bCanTraceOnNavMesh : 1;                                     // 0x002C:2 (0x0001) 
-    bool                                               bCanTraceOnGeometry : 1;                                    // 0x002C:3 (0x0001) 
-    bool                                               bCanDisableTrace : 1;                                       // 0x002C:4 (0x0001) 
-    bool                                               bCanProjectDown : 1;                                        // 0x002C:5 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x3];                                       // 0x002D   (0x0003) MISSED
+    int32_t                                            VersionNum;                                                 // 0x0000   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    class UClass*                                      NavigationFilter;                                           // 0x0008   (0x0008)
+    float                                              ProjectDown;                                                // 0x0010   (0x0004)
+    float                                              ProjectUp;                                                  // 0x0014   (0x0004)
+    float                                              ExtentX;                                                    // 0x0018   (0x0004)
+    float                                              ExtentY;                                                    // 0x001C   (0x0004)
+    float                                              ExtentZ;                                                    // 0x0020   (0x0004)
+    float                                              PostProjectionVerticalOffset;                               // 0x0024   (0x0004)
+    TEnumAsByte<ETraceTypeQuery>                       TraceChannel;                                               // 0x0028   (0x0001)
+    TEnumAsByte<ECollisionChannel>                     SerializedChannel;                                          // 0x0029   (0x0001)
+    TEnumAsByte<EEnvTraceShape>                        TraceShape;                                                 // 0x002A   (0x0001)
+    TEnumAsByte<EEnvQueryTrace>                        TraceMode;                                                  // 0x002B   (0x0001)
+    bool                                               bTraceComplex : 1;                                          // 0x002C:0 (0x0001)
+    bool                                               bOnlyBlockingHits : 1;                                      // 0x002C:1 (0x0001)
+    bool                                               bCanTraceOnNavMesh : 1;                                     // 0x002C:2 (0x0001)
+    bool                                               bCanTraceOnGeometry : 1;                                    // 0x002C:3 (0x0001)
+    bool                                               bCanDisableTrace : 1;                                       // 0x002C:4 (0x0001)
+    bool                                               bCanProjectDown : 1;                                        // 0x002C:5 (0x0001)
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x002D   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_ProjectedPoints
-/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align 8 MaxSize: 0x0080
 class UEnvQueryGenerator_ProjectedPoints : public UEnvQueryGenerator
 { 
 public:
-    FEnvTraceData                                      ProjectionData;                                             // 0x0050   (0x0030) 
+    FEnvTraceData                                      ProjectionData;                                             // 0x0050   (0x0030)
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Cone
-/// Size: 0x0170 (368 bytes) (0x000080 - 0x000170) align n/a MaxSize: 0x0170
+/// Size: 0x0170 (368 bytes) (0x000080 - 0x000170) align 8 MaxSize: 0x0170
 class UEnvQueryGenerator_Cone : public UEnvQueryGenerator_ProjectedPoints
 { 
 public:
-    FAIDataProviderFloatValue                          AlignedPointsDistance;                                      // 0x0080   (0x0038) 
-    FAIDataProviderFloatValue                          ConeDegrees;                                                // 0x00B8   (0x0038) 
-    FAIDataProviderFloatValue                          AngleStep;                                                  // 0x00F0   (0x0038) 
-    FAIDataProviderFloatValue                          Range;                                                      // 0x0128   (0x0038) 
-    class UClass*                                      CenterActor;                                                // 0x0160   (0x0008) 
-    bool                                               bIncludeContextLocation : 1;                                // 0x0168:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0169   (0x0007) MISSED
+    FAIDataProviderFloatValue                          AlignedPointsDistance;                                      // 0x0080   (0x0038)
+    FAIDataProviderFloatValue                          ConeDegrees;                                                // 0x00B8   (0x0038)
+    FAIDataProviderFloatValue                          AngleStep;                                                  // 0x00F0   (0x0038)
+    FAIDataProviderFloatValue                          Range;                                                      // 0x0128   (0x0038)
+    class UClass*                                      CenterActor;                                                // 0x0160   (0x0008)
+    bool                                               bIncludeContextLocation : 1;                                // 0x0168:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0169   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_CurrentLocation
-/// Size: 0x0058 (88 bytes) (0x000050 - 0x000058) align n/a MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000050 - 0x000058) align 8 MaxSize: 0x0058
 class UEnvQueryGenerator_CurrentLocation : public UEnvQueryGenerator
 { 
 public:
-    class UClass*                                      QueryContext;                                               // 0x0050   (0x0008) 
+    class UClass*                                      QueryContext;                                               // 0x0050   (0x0008)
 };
 
 /// Struct /Script/AIModule.AIDataProviderIntValue
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
 struct FAIDataProviderIntValue : FAIDataProviderTypedValue
 { 
-    int32_t                                            DefaultValue;                                               // 0x0030   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    int32_t                                            DefaultValue;                                               // 0x0030   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 /// Struct /Script/AIModule.EnvDirection
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FEnvDirection
 { 
-    class UClass*                                      LineFrom;                                                   // 0x0000   (0x0008) 
-    class UClass*                                      LineTo;                                                     // 0x0008   (0x0008) 
-    class UClass*                                      Rotation;                                                   // 0x0010   (0x0008) 
-    TEnumAsByte<EEnvDirection>                         DirMode;                                                    // 0x0018   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0019   (0x0007) MISSED
+    class UClass*                                      LineFrom;                                                   // 0x0000   (0x0008)
+    class UClass*                                      LineTo;                                                     // 0x0008   (0x0008)
+    class UClass*                                      Rotation;                                                   // 0x0010   (0x0008)
+    TEnumAsByte<EEnvDirection>                         DirMode;                                                    // 0x0018   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0019   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Donut
-/// Size: 0x01D0 (464 bytes) (0x000080 - 0x0001D0) align n/a MaxSize: 0x01D0
+/// Size: 0x01D0 (464 bytes) (0x000080 - 0x0001D0) align 8 MaxSize: 0x01D0
 class UEnvQueryGenerator_Donut : public UEnvQueryGenerator_ProjectedPoints
 { 
 public:
-    FAIDataProviderFloatValue                          InnerRadius;                                                // 0x0080   (0x0038) 
-    FAIDataProviderFloatValue                          OuterRadius;                                                // 0x00B8   (0x0038) 
-    FAIDataProviderIntValue                            NumberOfRings;                                              // 0x00F0   (0x0038) 
-    FAIDataProviderIntValue                            PointsPerRing;                                              // 0x0128   (0x0038) 
-    FEnvDirection                                      ArcDirection;                                               // 0x0160   (0x0020) 
-    FAIDataProviderFloatValue                          ArcAngle;                                                   // 0x0180   (0x0038) 
-    bool                                               bUseSpiralPattern;                                          // 0x01B8   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x01B9   (0x0007) MISSED
-    class UClass*                                      Center;                                                     // 0x01C0   (0x0008) 
-    bool                                               bDefineArc : 1;                                             // 0x01C8:0 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x7];                                       // 0x01C9   (0x0007) MISSED
+    FAIDataProviderFloatValue                          InnerRadius;                                                // 0x0080   (0x0038)
+    FAIDataProviderFloatValue                          OuterRadius;                                                // 0x00B8   (0x0038)
+    FAIDataProviderIntValue                            NumberOfRings;                                              // 0x00F0   (0x0038)
+    FAIDataProviderIntValue                            PointsPerRing;                                              // 0x0128   (0x0038)
+    FEnvDirection                                      ArcDirection;                                               // 0x0160   (0x0020)
+    FAIDataProviderFloatValue                          ArcAngle;                                                   // 0x0180   (0x0038)
+    bool                                               bUseSpiralPattern;                                          // 0x01B8   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x01B9   (0x0007) MISSED
+    class UClass*                                      Center;                                                     // 0x01C0   (0x0008)
+    bool                                               bDefineArc : 1;                                             // 0x01C8:0 (0x0001)
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x01C9   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_OnCircle
-/// Size: 0x0210 (528 bytes) (0x000080 - 0x000210) align n/a MaxSize: 0x0210
+/// Size: 0x0210 (528 bytes) (0x000080 - 0x000210) align 8 MaxSize: 0x0210
 class UEnvQueryGenerator_OnCircle : public UEnvQueryGenerator_ProjectedPoints
 { 
 public:
-    FAIDataProviderFloatValue                          CircleRadius;                                               // 0x0080   (0x0038) 
-    FAIDataProviderFloatValue                          SpaceBetween;                                               // 0x00B8   (0x0038) 
-    FAIDataProviderIntValue                            NumberOfPoints;                                             // 0x00F0   (0x0038) 
-    EPointOnCircleSpacingMethod                        PointOnCircleSpacingMethod;                                 // 0x0128   (0x0001) 
-    unsigned char                                      UnknownData04_6[0x7];                                       // 0x0129   (0x0007) MISSED
-    FEnvDirection                                      ArcDirection;                                               // 0x0130   (0x0020) 
-    FAIDataProviderFloatValue                          ArcAngle;                                                   // 0x0150   (0x0038) 
-    float                                              AngleRadians;                                               // 0x0188   (0x0004) 
-    unsigned char                                      UnknownData05_6[0x4];                                       // 0x018C   (0x0004) MISSED
-    class UClass*                                      CircleCenter;                                               // 0x0190   (0x0008) 
-    bool                                               bIgnoreAnyContextActorsWhenGeneratingCircle;                // 0x0198   (0x0001) 
-    unsigned char                                      UnknownData06_6[0x7];                                       // 0x0199   (0x0007) MISSED
-    FAIDataProviderFloatValue                          CircleCenterZOffset;                                        // 0x01A0   (0x0038) 
-    FEnvTraceData                                      TraceData;                                                  // 0x01D8   (0x0030) 
-    bool                                               bDefineArc : 1;                                             // 0x0208:0 (0x0001) 
-    unsigned char                                      UnknownData07_7[0x7];                                       // 0x0209   (0x0007) MISSED
+    FAIDataProviderFloatValue                          CircleRadius;                                               // 0x0080   (0x0038)
+    FAIDataProviderFloatValue                          SpaceBetween;                                               // 0x00B8   (0x0038)
+    FAIDataProviderIntValue                            NumberOfPoints;                                             // 0x00F0   (0x0038)
+    EPointOnCircleSpacingMethod                        PointOnCircleSpacingMethod;                                 // 0x0128   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0129   (0x0007) MISSED
+    FEnvDirection                                      ArcDirection;                                               // 0x0130   (0x0020)
+    FAIDataProviderFloatValue                          ArcAngle;                                                   // 0x0150   (0x0038)
+    float                                              AngleRadians;                                               // 0x0188   (0x0004)
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x018C   (0x0004) MISSED
+    class UClass*                                      CircleCenter;                                               // 0x0190   (0x0008)
+    bool                                               bIgnoreAnyContextActorsWhenGeneratingCircle;                // 0x0198   (0x0001)
+    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0199   (0x0007) MISSED
+    FAIDataProviderFloatValue                          CircleCenterZOffset;                                        // 0x01A0   (0x0038)
+    FEnvTraceData                                      TraceData;                                                  // 0x01D8   (0x0030)
+    bool                                               bDefineArc : 1;                                             // 0x0208:0 (0x0001)
+    unsigned char                                      UnknownData03_7[0x7];                                       // 0x0209   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_SimpleGrid
-/// Size: 0x00F8 (248 bytes) (0x000080 - 0x0000F8) align n/a MaxSize: 0x00F8
+/// Size: 0x00F8 (248 bytes) (0x000080 - 0x0000F8) align 8 MaxSize: 0x00F8
 class UEnvQueryGenerator_SimpleGrid : public UEnvQueryGenerator_ProjectedPoints
 { 
 public:
-    FAIDataProviderFloatValue                          GridSize;                                                   // 0x0080   (0x0038) 
-    FAIDataProviderFloatValue                          SpaceBetween;                                               // 0x00B8   (0x0038) 
-    class UClass*                                      GenerateAround;                                             // 0x00F0   (0x0008) 
+    FAIDataProviderFloatValue                          GridSize;                                                   // 0x0080   (0x0038)
+    FAIDataProviderFloatValue                          SpaceBetween;                                               // 0x00B8   (0x0038)
+    class UClass*                                      GenerateAround;                                             // 0x00F0   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_PathingGrid
-/// Size: 0x0170 (368 bytes) (0x0000F8 - 0x000170) align n/a MaxSize: 0x0170
+/// Size: 0x0170 (368 bytes) (0x0000F8 - 0x000170) align 8 MaxSize: 0x0170
 class UEnvQueryGenerator_PathingGrid : public UEnvQueryGenerator_SimpleGrid
 { 
 public:
-    FAIDataProviderBoolValue                           PathToItem;                                                 // 0x00F8   (0x0038) 
-    class UClass*                                      NavigationFilter;                                           // 0x0130   (0x0008) 
-    FAIDataProviderFloatValue                          ScanRangeMultiplier;                                        // 0x0138   (0x0038) 
+    FAIDataProviderBoolValue                           PathToItem;                                                 // 0x00F8   (0x0038)
+    class UClass*                                      NavigationFilter;                                           // 0x0130   (0x0008)
+    FAIDataProviderFloatValue                          ScanRangeMultiplier;                                        // 0x0138   (0x0038)
 };
 
 /// Class /Script/AIModule.EnvQueryInstanceBlueprintWrapper
-/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align 8 MaxSize: 0x0078
 class UEnvQueryInstanceBlueprintWrapper : public UObject
 { 
 public:
-    unsigned char                                      UnknownData03_8[0x8];                                       // 0x0028   (0x0008) MISSED
-    int32_t                                            QueryID;                                                    // 0x0030   (0x0004) 
-    unsigned char                                      UnknownData04_6[0x24];                                      // 0x0034   (0x0024) MISSED
-    class UClass*                                      ItemType;                                                   // 0x0058   (0x0008) 
-    int32_t                                            OptionIndex;                                                // 0x0060   (0x0004) 
-    unsigned char                                      UnknownData05_6[0x4];                                       // 0x0064   (0x0004) MISSED
-    FMulticastInlineDelegate                           OnQueryFinishedEvent;                                       // 0x0068   (0x0010) 
+    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    int32_t                                            QueryID;                                                    // 0x0030   (0x0004)
+    unsigned char                                      UnknownData01_6[0x24];                                      // 0x0034   (0x0024) MISSED
+    class UClass*                                      ItemType;                                                   // 0x0058   (0x0008)
+    int32_t                                            OptionIndex;                                                // 0x0060   (0x0004)
+    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0064   (0x0004) MISSED
+    FMulticastInlineDelegate                           OnQueryFinishedEvent;                                       // 0x0068   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.SetNamedParam
     // [0] ParamName : const FName
     // [1] Value : const float
-    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, void, const FName, const float> SetNamedParam = { 0x4c0a540, 0 };
+    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, void, const FName, const float> SetNamedParam = { 0x4c1fb00, 0 };
     // Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsLocations
-    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, TArray<FVector>> GetResultsAsLocations = { 0x4c0a720, 1 };
+    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, TArray<FVector>> GetResultsAsLocations = { 0x4c1fce0, 1 };
     // Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsActors
-    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, TArray<AActor*>> GetResultsAsActors = { 0x4c0a800, 2 };
+    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, TArray<AActor*>> GetResultsAsActors = { 0x4c1fdc0, 2 };
     // Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsLocations
     // [0] ResultLocations : const TArray<FVector>&
-    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, bool, const TArray<FVector>&> GetQueryResultsAsLocations = { 0x4c0a880, 3 };
+    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, bool, const TArray<FVector>&> GetQueryResultsAsLocations = { 0x4c1fe40, 3 };
     // Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsActors
     // [0] ResultActors : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, bool, const TArray<AActor*>&> GetQueryResultsAsActors = { 0x4c0aa00, 4 };
+    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, bool, const TArray<AActor*>&> GetQueryResultsAsActors = { 0x4c1ffc0, 4 };
     // Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetItemScore
     // [0] ItemIndex : const int32_t
-    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, float, const int32_t> GetItemScore = { 0x4c0ab00, 5 };
+    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, float, const int32_t> GetItemScore = { 0x4c200c0, 5 };
     // Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.EQSQueryDoneSignature__DelegateSignature
     // [0] QueryInstance : const UEnvQueryInstanceBlueprintWrapper*
     // [1] QueryStatus : const TEnumAsByte<EEnvQueryStatus>
-    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, void, const UEnvQueryInstanceBlueprintWrapper*, const TEnumAsByte<EEnvQueryStatus>> EQSQueryDoneSignature__DelegateSignature = { 0x2bbb090, 6 };
+    constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, void, const UEnvQueryInstanceBlueprintWrapper*, const TEnumAsByte<EEnvQueryStatus>> EQSQueryDoneSignature__DelegateSignature = { 0x2bc7620, 6 };
 };
 
 /// Class /Script/AIModule.EnvQueryItemType
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
 class UEnvQueryItemType : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_VectorBase
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UEnvQueryItemType_VectorBase : public UEnvQueryItemType
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_ActorBase
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UEnvQueryItemType_ActorBase : public UEnvQueryItemType_VectorBase
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_Actor
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UEnvQueryItemType_Actor : public UEnvQueryItemType_ActorBase
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_Direction
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UEnvQueryItemType_Direction : public UEnvQueryItemType_VectorBase
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_Point
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UEnvQueryItemType_Point : public UEnvQueryItemType_VectorBase
 { 
 public:
 };
 
 /// Struct /Script/AIModule.EnvQueryInstanceCache
-/// Size: 0x0178 (376 bytes) (0x000000 - 0x000178) align n/a MaxSize: 0x0178
+/// Size: 0x0178 (376 bytes) (0x000000 - 0x000178) align 8 MaxSize: 0x0178
 struct FEnvQueryInstanceCache
 { 
-    class UEnvQuery*                                   Template;                                                   // 0x0000   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x170];                                     // 0x0008   (0x0170) MISSED
+    class UEnvQuery*                                   Template;                                                   // 0x0000   (0x0008)
+    unsigned char                                      UnknownData00_7[0x170];                                     // 0x0008   (0x0170) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryManager
-/// Size: 0x0140 (320 bytes) (0x000038 - 0x000140) align n/a MaxSize: 0x0140
+/// Size: 0x0140 (320 bytes) (0x000038 - 0x000140) align 8 MaxSize: 0x0140
 class UEnvQueryManager : public UAISubsystem
 { 
 public:
-    unsigned char                                      UnknownData03_8[0x70];                                      // 0x0038   (0x0070) MISSED
-    TArray<FEnvQueryInstanceCache>                     InstanceCache;                                              // 0x00A8   (0x0010) 
-    TArray<class UEnvQueryContext*>                    LocalContexts;                                              // 0x00B8   (0x0010) 
-    TArray<class UEnvQueryInstanceBlueprintWrapper*>   GCShieldedWrappers;                                         // 0x00C8   (0x0010) 
-    unsigned char                                      UnknownData04_6[0x54];                                      // 0x00D8   (0x0054) MISSED
-    float                                              MaxAllowedTestingTime;                                      // 0x012C   (0x0004) 
-    bool                                               bTestQueriesUsingBreadth;                                   // 0x0130   (0x0001) 
-    unsigned char                                      UnknownData05_6[0x3];                                       // 0x0131   (0x0003) MISSED
-    int32_t                                            QueryCountWarningThreshold;                                 // 0x0134   (0x0004) 
-    double                                             QueryCountWarningInterval;                                  // 0x0138   (0x0008) 
+    unsigned char                                      UnknownData00_8[0x70];                                      // 0x0038   (0x0070) MISSED
+    TArray<FEnvQueryInstanceCache>                     InstanceCache;                                              // 0x00A8   (0x0010)
+    TArray<class UEnvQueryContext*>                    LocalContexts;                                              // 0x00B8   (0x0010)
+    TArray<class UEnvQueryInstanceBlueprintWrapper*>   GCShieldedWrappers;                                         // 0x00C8   (0x0010)
+    unsigned char                                      UnknownData01_6[0x54];                                      // 0x00D8   (0x0054) MISSED
+    float                                              MaxAllowedTestingTime;                                      // 0x012C   (0x0004)
+    bool                                               bTestQueriesUsingBreadth;                                   // 0x0130   (0x0001)
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0131   (0x0003) MISSED
+    int32_t                                            QueryCountWarningThreshold;                                 // 0x0134   (0x0004)
+    double                                             QueryCountWarningInterval;                                  // 0x0138   (0x0008)
 
     /// Functions
     // Function /Script/AIModule.EnvQueryManager.RunEQSQuery
@@ -2969,312 +2971,312 @@ public:
     // [2] Querier : const UObject*
     // [3] RunMode : const TEnumAsByte<EEnvQueryRunMode>
     // [4] WrapperClass : const UClass*
-    constexpr static const FunctionPointer<UEnvQueryManager, UEnvQueryInstanceBlueprintWrapper*, const UObject*, const UEnvQuery*, const UObject*, const TEnumAsByte<EEnvQueryRunMode>, const UClass*> RunEQSQuery = { 0x4c0c580, 0 };
+    constexpr static const FunctionPointer<UEnvQueryManager, UEnvQueryInstanceBlueprintWrapper*, const UObject*, const UEnvQuery*, const UObject*, const TEnumAsByte<EEnvQueryRunMode>, const UClass*> RunEQSQuery = { 0x4c21b40, 0 };
 };
 
 /// Class /Script/AIModule.EnvQueryOption
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
 class UEnvQueryOption : public UObject
 { 
 public:
-    class UEnvQueryGenerator*                          Generator;                                                  // 0x0028   (0x0008) 
-    TArray<class UEnvQueryTest*>                       Tests;                                                      // 0x0030   (0x0010) 
+    class UEnvQueryGenerator*                          Generator;                                                  // 0x0028   (0x0008)
+    TArray<class UEnvQueryTest*>                       Tests;                                                      // 0x0030   (0x0010)
 };
 
 /// Class /Script/AIModule.EnvQueryTest
-/// Size: 0x01F8 (504 bytes) (0x000030 - 0x0001F8) align n/a MaxSize: 0x01F8
+/// Size: 0x01F8 (504 bytes) (0x000030 - 0x0001F8) align 8 MaxSize: 0x01F8
 class UEnvQueryTest : public UEnvQueryNode
 { 
 public:
-    int32_t                                            TestOrder;                                                  // 0x0030   (0x0004) 
-    TEnumAsByte<EEnvTestPurpose>                       TestPurpose;                                                // 0x0034   (0x0001) 
-    unsigned char                                      UnknownData06_6[0x3];                                       // 0x0035   (0x0003) MISSED
-    FString                                            TestComment;                                                // 0x0038   (0x0010) 
-    TEnumAsByte<EEnvTestFilterOperator>                MultipleContextFilterOp;                                    // 0x0048   (0x0001) 
-    TEnumAsByte<EEnvTestScoreOperator>                 MultipleContextScoreOp;                                     // 0x0049   (0x0001) 
-    TEnumAsByte<EEnvTestFilterType>                    FilterType;                                                 // 0x004A   (0x0001) 
-    unsigned char                                      UnknownData07_6[0x5];                                       // 0x004B   (0x0005) MISSED
-    FAIDataProviderBoolValue                           BoolValue;                                                  // 0x0050   (0x0038) 
-    FAIDataProviderFloatValue                          FloatValueMin;                                              // 0x0088   (0x0038) 
-    FAIDataProviderFloatValue                          FloatValueMax;                                              // 0x00C0   (0x0038) 
-    unsigned char                                      UnknownData08_6[0x1];                                       // 0x00F8   (0x0001) MISSED
-    TEnumAsByte<EEnvTestScoreEquation>                 ScoringEquation;                                            // 0x00F9   (0x0001) 
-    TEnumAsByte<EEnvQueryTestClamping>                 ClampMinType;                                               // 0x00FA   (0x0001) 
-    TEnumAsByte<EEnvQueryTestClamping>                 ClampMaxType;                                               // 0x00FB   (0x0001) 
-    EEQSNormalizationType                              NormalizationType;                                          // 0x00FC   (0x0001) 
-    unsigned char                                      UnknownData09_6[0x3];                                       // 0x00FD   (0x0003) MISSED
-    FAIDataProviderFloatValue                          ScoreClampMin;                                              // 0x0100   (0x0038) 
-    FAIDataProviderFloatValue                          ScoreClampMax;                                              // 0x0138   (0x0038) 
-    FAIDataProviderFloatValue                          ScoringFactor;                                              // 0x0170   (0x0038) 
-    FAIDataProviderFloatValue                          ReferenceValue;                                             // 0x01A8   (0x0038) 
-    bool                                               bDefineReferenceValue;                                      // 0x01E0   (0x0001) 
-    unsigned char                                      UnknownData10_6[0xF];                                       // 0x01E1   (0x000F) MISSED
-    bool                                               bWorkOnFloatValues : 1;                                     // 0x01F0:0 (0x0001) 
-    unsigned char                                      UnknownData11_7[0x7];                                       // 0x01F1   (0x0007) MISSED
+    int32_t                                            TestOrder;                                                  // 0x0030   (0x0004)
+    TEnumAsByte<EEnvTestPurpose>                       TestPurpose;                                                // 0x0034   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0035   (0x0003) MISSED
+    FString                                            TestComment;                                                // 0x0038   (0x0010)
+    TEnumAsByte<EEnvTestFilterOperator>                MultipleContextFilterOp;                                    // 0x0048   (0x0001)
+    TEnumAsByte<EEnvTestScoreOperator>                 MultipleContextScoreOp;                                     // 0x0049   (0x0001)
+    TEnumAsByte<EEnvTestFilterType>                    FilterType;                                                 // 0x004A   (0x0001)
+    unsigned char                                      UnknownData01_6[0x5];                                       // 0x004B   (0x0005) MISSED
+    FAIDataProviderBoolValue                           BoolValue;                                                  // 0x0050   (0x0038)
+    FAIDataProviderFloatValue                          FloatValueMin;                                              // 0x0088   (0x0038)
+    FAIDataProviderFloatValue                          FloatValueMax;                                              // 0x00C0   (0x0038)
+    unsigned char                                      UnknownData02_6[0x1];                                       // 0x00F8   (0x0001) MISSED
+    TEnumAsByte<EEnvTestScoreEquation>                 ScoringEquation;                                            // 0x00F9   (0x0001)
+    TEnumAsByte<EEnvQueryTestClamping>                 ClampMinType;                                               // 0x00FA   (0x0001)
+    TEnumAsByte<EEnvQueryTestClamping>                 ClampMaxType;                                               // 0x00FB   (0x0001)
+    EEQSNormalizationType                              NormalizationType;                                          // 0x00FC   (0x0001)
+    unsigned char                                      UnknownData03_6[0x3];                                       // 0x00FD   (0x0003) MISSED
+    FAIDataProviderFloatValue                          ScoreClampMin;                                              // 0x0100   (0x0038)
+    FAIDataProviderFloatValue                          ScoreClampMax;                                              // 0x0138   (0x0038)
+    FAIDataProviderFloatValue                          ScoringFactor;                                              // 0x0170   (0x0038)
+    FAIDataProviderFloatValue                          ReferenceValue;                                             // 0x01A8   (0x0038)
+    bool                                               bDefineReferenceValue;                                      // 0x01E0   (0x0001)
+    unsigned char                                      UnknownData04_6[0xF];                                       // 0x01E1   (0x000F) MISSED
+    bool                                               bWorkOnFloatValues : 1;                                     // 0x01F0:0 (0x0001)
+    unsigned char                                      UnknownData05_7[0x7];                                       // 0x01F1   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Distance
-/// Size: 0x0208 (520 bytes) (0x0001F8 - 0x000208) align n/a MaxSize: 0x0208
+/// Size: 0x0208 (520 bytes) (0x0001F8 - 0x000208) align 8 MaxSize: 0x0208
 class UEnvQueryTest_Distance : public UEnvQueryTest
 { 
 public:
-    TEnumAsByte<EEnvTestDistance>                      TestMode;                                                   // 0x01F8   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x01F9   (0x0007) MISSED
-    class UClass*                                      DistanceTo;                                                 // 0x0200   (0x0008) 
+    TEnumAsByte<EEnvTestDistance>                      TestMode;                                                   // 0x01F8   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x01F9   (0x0007) MISSED
+    class UClass*                                      DistanceTo;                                                 // 0x0200   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Dot
-/// Size: 0x0240 (576 bytes) (0x0001F8 - 0x000240) align n/a MaxSize: 0x0240
+/// Size: 0x0240 (576 bytes) (0x0001F8 - 0x000240) align 8 MaxSize: 0x0240
 class UEnvQueryTest_Dot : public UEnvQueryTest
 { 
 public:
-    FEnvDirection                                      LineA;                                                      // 0x01F8   (0x0020) 
-    FEnvDirection                                      LineB;                                                      // 0x0218   (0x0020) 
-    EEnvTestDot                                        TestMode;                                                   // 0x0238   (0x0001) 
-    bool                                               bAbsoluteValue;                                             // 0x0239   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x6];                                       // 0x023A   (0x0006) MISSED
+    FEnvDirection                                      LineA;                                                      // 0x01F8   (0x0020)
+    FEnvDirection                                      LineB;                                                      // 0x0218   (0x0020)
+    EEnvTestDot                                        TestMode;                                                   // 0x0238   (0x0001)
+    bool                                               bAbsoluteValue;                                             // 0x0239   (0x0001)
+    unsigned char                                      UnknownData00_7[0x6];                                       // 0x023A   (0x0006) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryTest_GameplayTags
-/// Size: 0x0268 (616 bytes) (0x0001F8 - 0x000268) align n/a MaxSize: 0x0268
+/// Size: 0x0268 (616 bytes) (0x0001F8 - 0x000268) align 8 MaxSize: 0x0268
 class UEnvQueryTest_GameplayTags : public UEnvQueryTest
 { 
 public:
-    FGameplayTagQuery                                  TagQueryToMatch;                                            // 0x01F8   (0x0048) 
-    bool                                               bUpdatedToUseQuery;                                         // 0x0240   (0x0001) 
-    EGameplayContainerMatchType                        TagsToMatch;                                                // 0x0241   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x6];                                       // 0x0242   (0x0006) MISSED
-    FGameplayTagContainer                              GameplayTags;                                               // 0x0248   (0x0020) 
+    FGameplayTagQuery                                  TagQueryToMatch;                                            // 0x01F8   (0x0048)
+    bool                                               bUpdatedToUseQuery;                                         // 0x0240   (0x0001)
+    EGameplayContainerMatchType                        TagsToMatch;                                                // 0x0241   (0x0001)
+    unsigned char                                      UnknownData00_6[0x6];                                       // 0x0242   (0x0006) MISSED
+    FGameplayTagContainer                              GameplayTags;                                               // 0x0248   (0x0020)
 };
 
 /// Struct /Script/AIModule.EnvOverlapData
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 4 MaxSize: 0x0020
 struct FEnvOverlapData
 { 
-    float                                              ExtentX;                                                    // 0x0000   (0x0004) 
-    float                                              ExtentY;                                                    // 0x0004   (0x0004) 
-    float                                              ExtentZ;                                                    // 0x0008   (0x0004) 
-    FVector                                            ShapeOffset;                                                // 0x000C   (0x000C) 
-    TEnumAsByte<ECollisionChannel>                     OverlapChannel;                                             // 0x0018   (0x0001) 
-    TEnumAsByte<EEnvOverlapShape>                      OverlapShape;                                               // 0x0019   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x2];                                       // 0x001A   (0x0002) MISSED
-    bool                                               bOnlyBlockingHits : 1;                                      // 0x001C:0 (0x0001) 
-    bool                                               bOverlapComplex : 1;                                        // 0x001C:1 (0x0001) 
-    bool                                               bSkipOverlapQuerier : 1;                                    // 0x001C:2 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x3];                                       // 0x001D   (0x0003) MISSED
+    float                                              ExtentX;                                                    // 0x0000   (0x0004)
+    float                                              ExtentY;                                                    // 0x0004   (0x0004)
+    float                                              ExtentZ;                                                    // 0x0008   (0x0004)
+    FVector                                            ShapeOffset;                                                // 0x000C   (0x000C)
+    TEnumAsByte<ECollisionChannel>                     OverlapChannel;                                             // 0x0018   (0x0001)
+    TEnumAsByte<EEnvOverlapShape>                      OverlapShape;                                               // 0x0019   (0x0001)
+    unsigned char                                      UnknownData00_6[0x2];                                       // 0x001A   (0x0002) MISSED
+    bool                                               bOnlyBlockingHits : 1;                                      // 0x001C:0 (0x0001)
+    bool                                               bOverlapComplex : 1;                                        // 0x001C:1 (0x0001)
+    bool                                               bSkipOverlapQuerier : 1;                                    // 0x001C:2 (0x0001)
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x001D   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Overlap
-/// Size: 0x0218 (536 bytes) (0x0001F8 - 0x000218) align n/a MaxSize: 0x0218
+/// Size: 0x0218 (536 bytes) (0x0001F8 - 0x000218) align 8 MaxSize: 0x0218
 class UEnvQueryTest_Overlap : public UEnvQueryTest
 { 
 public:
-    FEnvOverlapData                                    OverlapData;                                                // 0x01F8   (0x0020) 
+    FEnvOverlapData                                    OverlapData;                                                // 0x01F8   (0x0020)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Pathfinding
-/// Size: 0x0280 (640 bytes) (0x0001F8 - 0x000280) align n/a MaxSize: 0x0280
+/// Size: 0x0280 (640 bytes) (0x0001F8 - 0x000280) align 8 MaxSize: 0x0280
 class UEnvQueryTest_Pathfinding : public UEnvQueryTest
 { 
 public:
-    TEnumAsByte<EEnvTestPathfinding>                   TestMode;                                                   // 0x01F8   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x01F9   (0x0007) MISSED
-    class UClass*                                      Context;                                                    // 0x0200   (0x0008) 
-    FAIDataProviderBoolValue                           PathFromContext;                                            // 0x0208   (0x0038) 
-    FAIDataProviderBoolValue                           SkipUnreachable;                                            // 0x0240   (0x0038) 
-    class UClass*                                      FilterClass;                                                // 0x0278   (0x0008) 
+    TEnumAsByte<EEnvTestPathfinding>                   TestMode;                                                   // 0x01F8   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x01F9   (0x0007) MISSED
+    class UClass*                                      Context;                                                    // 0x0200   (0x0008)
+    FAIDataProviderBoolValue                           PathFromContext;                                            // 0x0208   (0x0038)
+    FAIDataProviderBoolValue                           SkipUnreachable;                                            // 0x0240   (0x0038)
+    class UClass*                                      FilterClass;                                                // 0x0278   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_PathfindingBatch
-/// Size: 0x02B8 (696 bytes) (0x000280 - 0x0002B8) align n/a MaxSize: 0x02B8
+/// Size: 0x02B8 (696 bytes) (0x000280 - 0x0002B8) align 8 MaxSize: 0x02B8
 class UEnvQueryTest_PathfindingBatch : public UEnvQueryTest_Pathfinding
 { 
 public:
-    FAIDataProviderFloatValue                          ScanRangeMultiplier;                                        // 0x0280   (0x0038) 
+    FAIDataProviderFloatValue                          ScanRangeMultiplier;                                        // 0x0280   (0x0038)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Project
-/// Size: 0x0228 (552 bytes) (0x0001F8 - 0x000228) align n/a MaxSize: 0x0228
+/// Size: 0x0228 (552 bytes) (0x0001F8 - 0x000228) align 8 MaxSize: 0x0228
 class UEnvQueryTest_Project : public UEnvQueryTest
 { 
 public:
-    FEnvTraceData                                      ProjectionData;                                             // 0x01F8   (0x0030) 
+    FEnvTraceData                                      ProjectionData;                                             // 0x01F8   (0x0030)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Random
-/// Size: 0x01F8 (504 bytes) (0x0001F8 - 0x0001F8) align n/a MaxSize: 0x01F8
+/// Size: 0x01F8 (504 bytes) (0x0001F8 - 0x0001F8) align 8 MaxSize: 0x01F8
 class UEnvQueryTest_Random : public UEnvQueryTest
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Trace
-/// Size: 0x02D8 (728 bytes) (0x0001F8 - 0x0002D8) align n/a MaxSize: 0x02D8
+/// Size: 0x02D8 (728 bytes) (0x0001F8 - 0x0002D8) align 8 MaxSize: 0x02D8
 class UEnvQueryTest_Trace : public UEnvQueryTest
 { 
 public:
-    FEnvTraceData                                      TraceData;                                                  // 0x01F8   (0x0030) 
-    FAIDataProviderBoolValue                           TraceFromContext;                                           // 0x0228   (0x0038) 
-    FAIDataProviderFloatValue                          ItemHeightOffset;                                           // 0x0260   (0x0038) 
-    FAIDataProviderFloatValue                          ContextHeightOffset;                                        // 0x0298   (0x0038) 
-    class UClass*                                      Context;                                                    // 0x02D0   (0x0008) 
+    FEnvTraceData                                      TraceData;                                                  // 0x01F8   (0x0030)
+    FAIDataProviderBoolValue                           TraceFromContext;                                           // 0x0228   (0x0038)
+    FAIDataProviderFloatValue                          ItemHeightOffset;                                           // 0x0260   (0x0038)
+    FAIDataProviderFloatValue                          ContextHeightOffset;                                        // 0x0298   (0x0038)
+    class UClass*                                      Context;                                                    // 0x02D0   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Volume
-/// Size: 0x0210 (528 bytes) (0x0001F8 - 0x000210) align n/a MaxSize: 0x0210
+/// Size: 0x0210 (528 bytes) (0x0001F8 - 0x000210) align 8 MaxSize: 0x0210
 class UEnvQueryTest_Volume : public UEnvQueryTest
 { 
 public:
-    class UClass*                                      VolumeContext;                                              // 0x01F8   (0x0008) 
-    class UClass*                                      VolumeClass;                                                // 0x0200   (0x0008) 
-    bool                                               bDoComplexVolumeTest : 1;                                   // 0x0208:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0209   (0x0007) MISSED
+    class UClass*                                      VolumeContext;                                              // 0x01F8   (0x0008)
+    class UClass*                                      VolumeClass;                                                // 0x0200   (0x0008)
+    bool                                               bDoComplexVolumeTest : 1;                                   // 0x0208:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0209   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryTypes
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UEnvQueryTypes : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.EQSQueryResultSourceInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UEQSQueryResultSourceInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.EQSRenderingComponent
-/// Size: 0x0570 (1392 bytes) (0x000538 - 0x000570) align n/a MaxSize: 0x0570
+/// Size: 0x0570 (1392 bytes) (0x000538 - 0x000570) align 16 MaxSize: 0x0570
 class UEQSRenderingComponent : public UPrimitiveComponent
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x38];                                      // 0x0538   (0x0038) MISSED
+    unsigned char                                      UnknownData00_1[0x38];                                      // 0x0538   (0x0038) MISSED
 };
 
 /// Class /Script/AIModule.EQSTestingPawn
-/// Size: 0x05F0 (1520 bytes) (0x000558 - 0x0005F0) align n/a MaxSize: 0x05F0
+/// Size: 0x05F0 (1520 bytes) (0x000558 - 0x0005F0) align 16 MaxSize: 0x05F0
 class AEQSTestingPawn : public ACharacter
 { 
 public:
-    unsigned char                                      UnknownData05_8[0x8];                                       // 0x0558   (0x0008) MISSED
-    class UEnvQuery*                                   QueryTemplate;                                              // 0x0560   (0x0008) 
-    TArray<FEnvNamedValue>                             QueryParams;                                                // 0x0568   (0x0010) 
-    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x0578   (0x0010) 
-    float                                              TimeLimitPerStep;                                           // 0x0588   (0x0004) 
-    int32_t                                            StepToDebugDraw;                                            // 0x058C   (0x0004) 
-    EEnvQueryHightlightMode                            HighlightMode;                                              // 0x0590   (0x0001) 
-    unsigned char                                      UnknownData06_6[0x3];                                       // 0x0591   (0x0003) MISSED
-    bool                                               bDrawLabels : 1;                                            // 0x0594:0 (0x0001) 
-    bool                                               bDrawFailedItems : 1;                                       // 0x0594:1 (0x0001) 
-    bool                                               bReRunQueryOnlyOnFinishedMove : 1;                          // 0x0594:2 (0x0001) 
-    bool                                               bShouldBeVisibleInGame : 1;                                 // 0x0594:3 (0x0001) 
-    bool                                               bTickDuringGame : 1;                                        // 0x0594:4 (0x0001) 
-    unsigned char                                      UnknownData07_5[0x3];                                       // 0x0595   (0x0003) MISSED
-    TEnumAsByte<EEnvQueryRunMode>                      QueryingMode;                                               // 0x0598   (0x0001) 
-    unsigned char                                      UnknownData08_6[0x7];                                       // 0x0599   (0x0007) MISSED
-    FNavAgentProperties                                NavAgentProperties;                                         // 0x05A0   (0x0030) 
-    unsigned char                                      UnknownData09_7[0x20];                                      // 0x05D0   (0x0020) MISSED
+    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0558   (0x0008) MISSED
+    class UEnvQuery*                                   QueryTemplate;                                              // 0x0560   (0x0008)
+    TArray<FEnvNamedValue>                             QueryParams;                                                // 0x0568   (0x0010)
+    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x0578   (0x0010)
+    float                                              TimeLimitPerStep;                                           // 0x0588   (0x0004)
+    int32_t                                            StepToDebugDraw;                                            // 0x058C   (0x0004)
+    EEnvQueryHightlightMode                            HighlightMode;                                              // 0x0590   (0x0001)
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0591   (0x0003) MISSED
+    bool                                               bDrawLabels : 1;                                            // 0x0594:0 (0x0001)
+    bool                                               bDrawFailedItems : 1;                                       // 0x0594:1 (0x0001)
+    bool                                               bReRunQueryOnlyOnFinishedMove : 1;                          // 0x0594:2 (0x0001)
+    bool                                               bShouldBeVisibleInGame : 1;                                 // 0x0594:3 (0x0001)
+    bool                                               bTickDuringGame : 1;                                        // 0x0594:4 (0x0001)
+    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0595   (0x0003) MISSED
+    TEnumAsByte<EEnvQueryRunMode>                      QueryingMode;                                               // 0x0598   (0x0001)
+    unsigned char                                      UnknownData03_6[0x7];                                       // 0x0599   (0x0007) MISSED
+    FNavAgentProperties                                NavAgentProperties;                                         // 0x05A0   (0x0030)
+    unsigned char                                      UnknownData04_7[0x20];                                      // 0x05D0   (0x0020) MISSED
 };
 
 /// Class /Script/AIModule.GenericTeamAgentInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UGenericTeamAgentInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.GridPathAIController
-/// Size: 0x03D0 (976 bytes) (0x0003D0 - 0x0003D0) align n/a MaxSize: 0x03D0
+/// Size: 0x03D0 (976 bytes) (0x0003D0 - 0x0003D0) align 8 MaxSize: 0x03D0
 class AGridPathAIController : public AAIController
 { 
 public:
 };
 
 /// Class /Script/AIModule.GridPathFollowingComponent
-/// Size: 0x0290 (656 bytes) (0x000260 - 0x000290) align n/a MaxSize: 0x0290
+/// Size: 0x0290 (656 bytes) (0x000260 - 0x000290) align 8 MaxSize: 0x0290
 class UGridPathFollowingComponent : public UPathFollowingComponent
 { 
 public:
-    class UNavLocalGridManager*                        GridManager;                                                // 0x0260   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0268   (0x0028) MISSED
+    class UNavLocalGridManager*                        GridManager;                                                // 0x0260   (0x0008)
+    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0268   (0x0028) MISSED
 };
 
 /// Class /Script/AIModule.NavFilter_AIControllerDefault
-/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align 8 MaxSize: 0x0048
 class UNavFilter_AIControllerDefault : public UNavigationQueryFilter
 { 
 public:
 };
 
 /// Class /Script/AIModule.NavLinkProxy
-/// Size: 0x0318 (792 bytes) (0x0002C8 - 0x000318) align n/a MaxSize: 0x0318
+/// Size: 0x0318 (792 bytes) (0x0002C8 - 0x000318) align 8 MaxSize: 0x0318
 class ANavLinkProxy : public AActor
 { 
 public:
-    unsigned char                                      UnknownData02_8[0x10];                                      // 0x02C8   (0x0010) MISSED
-    TArray<FNavigationLink>                            PointLinks;                                                 // 0x02D8   (0x0010) 
-    TArray<FNavigationSegmentLink>                     SegmentLinks;                                               // 0x02E8   (0x0010) 
-    class UNavLinkCustomComponent*                     SmartLinkComp;                                              // 0x02F8   (0x0008) 
-    bool                                               bSmartLinkIsRelevant;                                       // 0x0300   (0x0001) 
-    unsigned char                                      UnknownData03_6[0x7];                                       // 0x0301   (0x0007) MISSED
-    FMulticastInlineDelegate                           OnSmartLinkReached;                                         // 0x0308   (0x0010) 
+    unsigned char                                      UnknownData00_8[0x10];                                      // 0x02C8   (0x0010) MISSED
+    TArray<FNavigationLink>                            PointLinks;                                                 // 0x02D8   (0x0010)
+    TArray<FNavigationSegmentLink>                     SegmentLinks;                                               // 0x02E8   (0x0010)
+    class UNavLinkCustomComponent*                     SmartLinkComp;                                              // 0x02F8   (0x0008)
+    bool                                               bSmartLinkIsRelevant;                                       // 0x0300   (0x0001)
+    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0301   (0x0007) MISSED
+    FMulticastInlineDelegate                           OnSmartLinkReached;                                         // 0x0308   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.NavLinkProxy.SetSmartLinkEnabled
     // [0] bEnabled : const bool
-    constexpr static const FunctionPointer<ANavLinkProxy, void, const bool> SetSmartLinkEnabled = { 0x4c13ee0, 0 };
+    constexpr static const FunctionPointer<ANavLinkProxy, void, const bool> SetSmartLinkEnabled = { 0x4c294a0, 0 };
     // Function /Script/AIModule.NavLinkProxy.ResumePathFollowing
     // [0] Agent : const AActor*
-    constexpr static const FunctionPointer<ANavLinkProxy, void, const AActor*> ResumePathFollowing = { 0x4c13ff0, 1 };
+    constexpr static const FunctionPointer<ANavLinkProxy, void, const AActor*> ResumePathFollowing = { 0x4c295b0, 1 };
     // Function /Script/AIModule.NavLinkProxy.ReceiveSmartLinkReached
     // [0] Agent : const AActor*
     // [1] Destination : const FVector&
-    constexpr static const FunctionPointer<ANavLinkProxy, void, const AActor*, const FVector&> ReceiveSmartLinkReached = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<ANavLinkProxy, void, const AActor*, const FVector&> ReceiveSmartLinkReached = { 0x2bc7620, 2 };
     // Function /Script/AIModule.NavLinkProxy.IsSmartLinkEnabled
-    constexpr static const FunctionPointer<ANavLinkProxy, bool> IsSmartLinkEnabled = { 0x4c13fc0, 3 };
+    constexpr static const FunctionPointer<ANavLinkProxy, bool> IsSmartLinkEnabled = { 0x4c29580, 3 };
     // Function /Script/AIModule.NavLinkProxy.HasMovingAgents
-    constexpr static const FunctionPointer<ANavLinkProxy, bool> HasMovingAgents = { 0x4c13e70, 4 };
+    constexpr static const FunctionPointer<ANavLinkProxy, bool> HasMovingAgents = { 0x4c29430, 4 };
 };
 
 /// Class /Script/AIModule.NavLocalGridManager
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
 class UNavLocalGridManager : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x30];                                      // 0x0028   (0x0030) MISSED
+    unsigned char                                      UnknownData00_1[0x30];                                      // 0x0028   (0x0030) MISSED
 
     /// Functions
     // Function /Script/AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
     // [0] WorldContextObject : const UObject*
     // [1] CellSize : const float
-    constexpr static const FunctionPointer<UNavLocalGridManager, bool, const UObject*, const float> SetLocalNavigationGridDensity = { 0x4c15d10, 0 };
+    constexpr static const FunctionPointer<UNavLocalGridManager, bool, const UObject*, const float> SetLocalNavigationGridDensity = { 0x4c2b2d0, 0 };
     // Function /Script/AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
     // [0] WorldContextObject : const UObject*
     // [1] GridId : const int32_t
     // [2] bRebuildGrids : const bool
-    constexpr static const FunctionPointer<UNavLocalGridManager, void, const UObject*, const int32_t, const bool> RemoveLocalNavigationGrid = { 0x4c14580, 1 };
+    constexpr static const FunctionPointer<UNavLocalGridManager, void, const UObject*, const int32_t, const bool> RemoveLocalNavigationGrid = { 0x4c29b40, 1 };
     // Function /Script/AIModule.NavLocalGridManager.FindLocalNavigationGridPath
     // [0] WorldContextObject : const UObject*
     // [1] Start : const FVector&
     // [2] End : const FVector&
     // [3] PathPoints : const TArray<FVector>&
-    constexpr static const FunctionPointer<UNavLocalGridManager, bool, const UObject*, const FVector&, const FVector&, const TArray<FVector>&> FindLocalNavigationGridPath = { 0x4c142b0, 2 };
+    constexpr static const FunctionPointer<UNavLocalGridManager, bool, const UObject*, const FVector&, const FVector&, const TArray<FVector>&> FindLocalNavigationGridPath = { 0x4c29870, 2 };
     // Function /Script/AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
     // [0] WorldContextObject : const UObject*
     // [1] Locations : const TArray<FVector>&
     // [2] Radius2D : const int32_t
     // [3] Height : const float
     // [4] bRebuildGrids : const bool
-    constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const TArray<FVector>&, const int32_t, const float, const bool> AddLocalNavigationGridForPoints = { 0x4c15440, 3 };
+    constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const TArray<FVector>&, const int32_t, const float, const bool> AddLocalNavigationGridForPoints = { 0x4c2aa00, 3 };
     // Function /Script/AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
     // [0] WorldContextObject : const UObject*
     // [1] Location : const FVector&
     // [2] Radius2D : const int32_t
     // [3] Height : const float
     // [4] bRebuildGrids : const bool
-    constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const int32_t, const float, const bool> AddLocalNavigationGridForPoint = { 0x4c15920, 4 };
+    constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const int32_t, const float, const bool> AddLocalNavigationGridForPoint = { 0x4c2aee0, 4 };
     // Function /Script/AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
     // [0] WorldContextObject : const UObject*
     // [1] Location : const FVector&
@@ -3283,7 +3285,7 @@ public:
     // [4] Radius2D : const int32_t
     // [5] Height : const float
     // [6] bRebuildGrids : const bool
-    constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const float, const float, const int32_t, const float, const bool> AddLocalNavigationGridForCapsule = { 0x4c147a0, 5 };
+    constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const float, const float, const int32_t, const float, const bool> AddLocalNavigationGridForCapsule = { 0x4c29d60, 5 };
     // Function /Script/AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
     // [0] WorldContextObject : const UObject*
     // [1] Location : const FVector&
@@ -3292,47 +3294,47 @@ public:
     // [4] Radius2D : const int32_t
     // [5] Height : const float
     // [6] bRebuildGrids : const bool
-    constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const FVector, const FRotator, const int32_t, const float, const bool> AddLocalNavigationGridForBox = { 0x4c14d60, 6 };
+    constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const FVector, const FRotator, const int32_t, const float, const bool> AddLocalNavigationGridForBox = { 0x4c2a320, 6 };
 };
 
 /// Class /Script/AIModule.PathFollowingManager
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UPathFollowingManager : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.PawnAction
-/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align 8 MaxSize: 0x0098
 class UPawnAction : public UObject
 { 
 public:
-    class UPawnAction*                                 ChildAction;                                                // 0x0028   (0x0008) 
-    class UPawnAction*                                 ParentAction;                                               // 0x0030   (0x0008) 
-    class UPawnActionsComponent*                       OwnerComponent;                                             // 0x0038   (0x0008) 
-    class UObject*                                     Instigator;                                                 // 0x0040   (0x0008) 
-    class UBrainComponent*                             BrainComp;                                                  // 0x0048   (0x0008) 
-    unsigned char                                      UnknownData02_6[0x30];                                      // 0x0050   (0x0030) MISSED
-    bool                                               bAllowNewSameClassInstance : 1;                             // 0x0080:0 (0x0001) 
-    bool                                               bReplaceActiveSameClassInstance : 1;                        // 0x0080:1 (0x0001) 
-    bool                                               bShouldPauseMovement : 1;                                   // 0x0080:2 (0x0001) 
-    bool                                               bAlwaysNotifyOnFinished : 1;                                // 0x0080:3 (0x0001) 
-    unsigned char                                      UnknownData03_7[0x17];                                      // 0x0081   (0x0017) MISSED
+    class UPawnAction*                                 ChildAction;                                                // 0x0028   (0x0008)
+    class UPawnAction*                                 ParentAction;                                               // 0x0030   (0x0008)
+    class UPawnActionsComponent*                       OwnerComponent;                                             // 0x0038   (0x0008)
+    class UObject*                                     Instigator;                                                 // 0x0040   (0x0008)
+    class UBrainComponent*                             BrainComp;                                                  // 0x0048   (0x0008)
+    unsigned char                                      UnknownData00_6[0x30];                                      // 0x0050   (0x0030) MISSED
+    bool                                               bAllowNewSameClassInstance : 1;                             // 0x0080:0 (0x0001)
+    bool                                               bReplaceActiveSameClassInstance : 1;                        // 0x0080:1 (0x0001)
+    bool                                               bShouldPauseMovement : 1;                                   // 0x0080:2 (0x0001)
+    bool                                               bAlwaysNotifyOnFinished : 1;                                // 0x0080:3 (0x0001)
+    unsigned char                                      UnknownData01_7[0x17];                                      // 0x0081   (0x0017) MISSED
 
     /// Functions
     // Function /Script/AIModule.PawnAction.GetActionPriority
-    constexpr static const FunctionPointer<UPawnAction, TEnumAsByte<EAIRequestPriority>> GetActionPriority = { 0x4c178d0, 0 };
+    constexpr static const FunctionPointer<UPawnAction, TEnumAsByte<EAIRequestPriority>> GetActionPriority = { 0x4c2ce90, 0 };
     // Function /Script/AIModule.PawnAction.Finish
     // [0] WithResult : const TEnumAsByte<EPawnActionResult>
-    constexpr static const FunctionPointer<UPawnAction, void, const TEnumAsByte<EPawnActionResult>> Finish = { 0x4c175a0, 1 };
+    constexpr static const FunctionPointer<UPawnAction, void, const TEnumAsByte<EPawnActionResult>> Finish = { 0x4c2cb60, 1 };
     // Function /Script/AIModule.PawnAction.CreateActionInstance
     // [0] WorldContextObject : const UObject*
     // [1] ActionClass : const UClass*
-    constexpr static const FunctionPointer<UPawnAction, UPawnAction*, const UObject*, const UClass*> CreateActionInstance = { 0x4c17670, 2 };
+    constexpr static const FunctionPointer<UPawnAction, UPawnAction*, const UObject*, const UClass*> CreateActionInstance = { 0x4c2cc30, 2 };
 };
 
 /// Class /Script/AIModule.PawnAction_BlueprintBase
-/// Size: 0x0098 (152 bytes) (0x000098 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000098 - 0x000098) align 8 MaxSize: 0x0098
 class UPawnAction_BlueprintBase : public UPawnAction
 { 
 public:
@@ -3341,254 +3343,254 @@ public:
     // Function /Script/AIModule.PawnAction_BlueprintBase.ActionTick
     // [0] ControlledPawn : const APawn*
     // [1] DeltaSeconds : const float
-    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*, const float> ActionTick = { 0x2bbb090, 0 };
+    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*, const float> ActionTick = { 0x2bc7620, 0 };
     // Function /Script/AIModule.PawnAction_BlueprintBase.ActionStart
     // [0] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionStart = { 0x2bbb090, 1 };
+    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionStart = { 0x2bc7620, 1 };
     // Function /Script/AIModule.PawnAction_BlueprintBase.ActionResume
     // [0] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionResume = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionResume = { 0x2bc7620, 2 };
     // Function /Script/AIModule.PawnAction_BlueprintBase.ActionPause
     // [0] ControlledPawn : const APawn*
-    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionPause = { 0x2bbb090, 3 };
+    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionPause = { 0x2bc7620, 3 };
     // Function /Script/AIModule.PawnAction_BlueprintBase.ActionFinished
     // [0] ControlledPawn : const APawn*
     // [1] WithResult : const TEnumAsByte<EPawnActionResult>
-    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*, const TEnumAsByte<EPawnActionResult>> ActionFinished = { 0x2bbb090, 4 };
+    constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*, const TEnumAsByte<EPawnActionResult>> ActionFinished = { 0x2bc7620, 4 };
 };
 
 /// Class /Script/AIModule.PawnAction_Move
-/// Size: 0x00E8 (232 bytes) (0x000098 - 0x0000E8) align n/a MaxSize: 0x00E8
+/// Size: 0x00E8 (232 bytes) (0x000098 - 0x0000E8) align 8 MaxSize: 0x00E8
 class UPawnAction_Move : public UPawnAction
 { 
 public:
-    class AActor*                                      GoalActor;                                                  // 0x0098   (0x0008) 
-    FVector                                            GoalLocation;                                               // 0x00A0   (0x000C) 
-    float                                              AcceptableRadius;                                           // 0x00AC   (0x0004) 
-    class UClass*                                      FilterClass;                                                // 0x00B0   (0x0008) 
-    bool                                               bAllowStrafe : 1;                                           // 0x00B8:0 (0x0001) 
-    bool                                               bFinishOnOverlap : 1;                                       // 0x00B8:1 (0x0001) 
-    bool                                               bUsePathfinding : 1;                                        // 0x00B8:2 (0x0001) 
-    bool                                               bAllowPartialPath : 1;                                      // 0x00B8:3 (0x0001) 
-    bool                                               bProjectGoalToNavigation : 1;                               // 0x00B8:4 (0x0001) 
-    bool                                               bUpdatePathToGoal : 1;                                      // 0x00B8:5 (0x0001) 
-    bool                                               bAbortChildActionOnPathChange : 1;                          // 0x00B8:6 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x2F];                                      // 0x00B9   (0x002F) MISSED
+    class AActor*                                      GoalActor;                                                  // 0x0098   (0x0008)
+    FVector                                            GoalLocation;                                               // 0x00A0   (0x000C)
+    float                                              AcceptableRadius;                                           // 0x00AC   (0x0004)
+    class UClass*                                      FilterClass;                                                // 0x00B0   (0x0008)
+    bool                                               bAllowStrafe : 1;                                           // 0x00B8:0 (0x0001)
+    bool                                               bFinishOnOverlap : 1;                                       // 0x00B8:1 (0x0001)
+    bool                                               bUsePathfinding : 1;                                        // 0x00B8:2 (0x0001)
+    bool                                               bAllowPartialPath : 1;                                      // 0x00B8:3 (0x0001)
+    bool                                               bProjectGoalToNavigation : 1;                               // 0x00B8:4 (0x0001)
+    bool                                               bUpdatePathToGoal : 1;                                      // 0x00B8:5 (0x0001)
+    bool                                               bAbortChildActionOnPathChange : 1;                          // 0x00B8:6 (0x0001)
+    unsigned char                                      UnknownData00_7[0x2F];                                      // 0x00B9   (0x002F) MISSED
 };
 
 /// Class /Script/AIModule.PawnAction_Repeat
-/// Size: 0x00B8 (184 bytes) (0x000098 - 0x0000B8) align n/a MaxSize: 0x00B8
+/// Size: 0x00B8 (184 bytes) (0x000098 - 0x0000B8) align 8 MaxSize: 0x00B8
 class UPawnAction_Repeat : public UPawnAction
 { 
 public:
-    class UPawnAction*                                 ActionToRepeat;                                             // 0x0098   (0x0008) 
-    class UPawnAction*                                 RecentActionCopy;                                           // 0x00A0   (0x0008) 
-    TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                   // 0x00A8   (0x0001) 
-    unsigned char                                      UnknownData01_7[0xF];                                       // 0x00A9   (0x000F) MISSED
+    class UPawnAction*                                 ActionToRepeat;                                             // 0x0098   (0x0008)
+    class UPawnAction*                                 RecentActionCopy;                                           // 0x00A0   (0x0008)
+    TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                   // 0x00A8   (0x0001)
+    unsigned char                                      UnknownData00_7[0xF];                                       // 0x00A9   (0x000F) MISSED
 };
 
 /// Class /Script/AIModule.PawnAction_Sequence
-/// Size: 0x00C0 (192 bytes) (0x000098 - 0x0000C0) align n/a MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000098 - 0x0000C0) align 8 MaxSize: 0x00C0
 class UPawnAction_Sequence : public UPawnAction
 { 
 public:
-    TArray<class UPawnAction*>                         ActionSequence;                                             // 0x0098   (0x0010) 
-    TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                   // 0x00A8   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x00A9   (0x0007) MISSED
-    class UPawnAction*                                 RecentActionCopy;                                           // 0x00B0   (0x0008) 
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x00B8   (0x0008) MISSED
+    TArray<class UPawnAction*>                         ActionSequence;                                             // 0x0098   (0x0010)
+    TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                   // 0x00A8   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x00A9   (0x0007) MISSED
+    class UPawnAction*                                 RecentActionCopy;                                           // 0x00B0   (0x0008)
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x00B8   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.PawnAction_Wait
-/// Size: 0x00A8 (168 bytes) (0x000098 - 0x0000A8) align n/a MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000098 - 0x0000A8) align 8 MaxSize: 0x00A8
 class UPawnAction_Wait : public UPawnAction
 { 
 public:
-    float                                              TimeToWait;                                                 // 0x0098   (0x0004) 
-    unsigned char                                      UnknownData01_7[0xC];                                       // 0x009C   (0x000C) MISSED
+    float                                              TimeToWait;                                                 // 0x0098   (0x0004)
+    unsigned char                                      UnknownData00_7[0xC];                                       // 0x009C   (0x000C) MISSED
 };
 
 /// Struct /Script/AIModule.PawnActionStack
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 8 MaxSize: 0x0008
 struct FPawnActionStack
 { 
-    class UPawnAction*                                 TopAction;                                                  // 0x0000   (0x0008) 
+    class UPawnAction*                                 TopAction;                                                  // 0x0000   (0x0008)
 };
 
 /// Struct /Script/AIModule.PawnActionEvent
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FPawnActionEvent
 { 
-    class UPawnAction*                                 Action;                                                     // 0x0000   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0008   (0x0010) MISSED
+    class UPawnAction*                                 Action;                                                     // 0x0000   (0x0008)
+    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0008   (0x0010) MISSED
 };
 
 /// Class /Script/AIModule.PawnActionsComponent
-/// Size: 0x00F8 (248 bytes) (0x0000C0 - 0x0000F8) align n/a MaxSize: 0x00F8
+/// Size: 0x00F8 (248 bytes) (0x0000C0 - 0x0000F8) align 8 MaxSize: 0x00F8
 class UPawnActionsComponent : public UActorComponent
 { 
 public:
-    class APawn*                                       ControlledPawn;                                             // 0x00C0   (0x0008) 
-    TArray<FPawnActionStack>                           ActionStacks;                                               // 0x00C8   (0x0010) 
-    TArray<FPawnActionEvent>                           ActionEvents;                                               // 0x00D8   (0x0010) 
-    class UPawnAction*                                 CurrentAction;                                              // 0x00E8   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x00F0   (0x0008) MISSED
+    class APawn*                                       ControlledPawn;                                             // 0x00C0   (0x0008)
+    TArray<FPawnActionStack>                           ActionStacks;                                               // 0x00C8   (0x0010)
+    TArray<FPawnActionEvent>                           ActionEvents;                                               // 0x00D8   (0x0010)
+    class UPawnAction*                                 CurrentAction;                                              // 0x00E8   (0x0008)
+    unsigned char                                      UnknownData00_7[0x8];                                       // 0x00F0   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AIModule.PawnActionsComponent.K2_PushAction
     // [0] NewAction : const UPawnAction*
     // [1] Priority : const TEnumAsByte<EAIRequestPriority>
     // [2] Instigator : const UObject*
-    constexpr static const FunctionPointer<UPawnActionsComponent, bool, const UPawnAction*, const TEnumAsByte<EAIRequestPriority>, const UObject*> K2_PushAction = { 0x4c19290, 0 };
+    constexpr static const FunctionPointer<UPawnActionsComponent, bool, const UPawnAction*, const TEnumAsByte<EAIRequestPriority>, const UObject*> K2_PushAction = { 0x4c2e850, 0 };
     // Function /Script/AIModule.PawnActionsComponent.K2_PerformAction
     // [0] Pawn : const APawn*
     // [1] Action : const UPawnAction*
     // [2] Priority : const TEnumAsByte<EAIRequestPriority>
-    constexpr static const FunctionPointer<UPawnActionsComponent, bool, const APawn*, const UPawnAction*, const TEnumAsByte<EAIRequestPriority>> K2_PerformAction = { 0x4c194b0, 1 };
+    constexpr static const FunctionPointer<UPawnActionsComponent, bool, const APawn*, const UPawnAction*, const TEnumAsByte<EAIRequestPriority>> K2_PerformAction = { 0x4c2ea70, 1 };
     // Function /Script/AIModule.PawnActionsComponent.K2_ForceAbortAction
     // [0] ActionToAbort : const UPawnAction*
-    constexpr static const FunctionPointer<UPawnActionsComponent, TEnumAsByte<EPawnActionAbortState>, const UPawnAction*> K2_ForceAbortAction = { 0x4c19050, 2 };
+    constexpr static const FunctionPointer<UPawnActionsComponent, TEnumAsByte<EPawnActionAbortState>, const UPawnAction*> K2_ForceAbortAction = { 0x4c2e610, 2 };
     // Function /Script/AIModule.PawnActionsComponent.K2_AbortAction
     // [0] ActionToAbort : const UPawnAction*
-    constexpr static const FunctionPointer<UPawnActionsComponent, TEnumAsByte<EPawnActionAbortState>, const UPawnAction*> K2_AbortAction = { 0x4c19190, 3 };
+    constexpr static const FunctionPointer<UPawnActionsComponent, TEnumAsByte<EPawnActionAbortState>, const UPawnAction*> K2_AbortAction = { 0x4c2e750, 3 };
 };
 
 /// Class /Script/AIModule.PawnSensingComponent
-/// Size: 0x0108 (264 bytes) (0x0000C0 - 0x000108) align n/a MaxSize: 0x0108
+/// Size: 0x0108 (264 bytes) (0x0000C0 - 0x000108) align 8 MaxSize: 0x0108
 class UPawnSensingComponent : public UActorComponent
 { 
 public:
-    float                                              HearingThreshold;                                           // 0x00C0   (0x0004) 
-    float                                              LOSHearingThreshold;                                        // 0x00C4   (0x0004) 
-    float                                              SightRadius;                                                // 0x00C8   (0x0004) 
-    float                                              SensingInterval;                                            // 0x00CC   (0x0004) 
-    float                                              HearingMaxSoundAge;                                         // 0x00D0   (0x0004) 
-    bool                                               bEnableSensingUpdates : 1;                                  // 0x00D4:0 (0x0001) 
-    bool                                               bOnlySensePlayers : 1;                                      // 0x00D4:1 (0x0001) 
-    bool                                               bSeePawns : 1;                                              // 0x00D4:2 (0x0001) 
-    bool                                               bHearNoises : 1;                                            // 0x00D4:3 (0x0001) 
-    unsigned char                                      UnknownData01_5[0xB];                                       // 0x00D5   (0x000B) MISSED
-    FMulticastInlineDelegate                           OnSeePawn;                                                  // 0x00E0   (0x0010) 
-    FMulticastInlineDelegate                           OnHearNoise;                                                // 0x00F0   (0x0010) 
-    float                                              PeripheralVisionAngle;                                      // 0x0100   (0x0004) 
-    float                                              PeripheralVisionCosine;                                     // 0x0104   (0x0004) 
+    float                                              HearingThreshold;                                           // 0x00C0   (0x0004)
+    float                                              LOSHearingThreshold;                                        // 0x00C4   (0x0004)
+    float                                              SightRadius;                                                // 0x00C8   (0x0004)
+    float                                              SensingInterval;                                            // 0x00CC   (0x0004)
+    float                                              HearingMaxSoundAge;                                         // 0x00D0   (0x0004)
+    bool                                               bEnableSensingUpdates : 1;                                  // 0x00D4:0 (0x0001)
+    bool                                               bOnlySensePlayers : 1;                                      // 0x00D4:1 (0x0001)
+    bool                                               bSeePawns : 1;                                              // 0x00D4:2 (0x0001)
+    bool                                               bHearNoises : 1;                                            // 0x00D4:3 (0x0001)
+    unsigned char                                      UnknownData00_5[0xB];                                       // 0x00D5   (0x000B) MISSED
+    FMulticastInlineDelegate                           OnSeePawn;                                                  // 0x00E0   (0x0010)
+    FMulticastInlineDelegate                           OnHearNoise;                                                // 0x00F0   (0x0010)
+    float                                              PeripheralVisionAngle;                                      // 0x0100   (0x0004)
+    float                                              PeripheralVisionCosine;                                     // 0x0104   (0x0004)
 
     /// Functions
     // Function /Script/AIModule.PawnSensingComponent.SetSensingUpdatesEnabled
     // [0] bEnabled : const bool
-    constexpr static const FunctionPointer<UPawnSensingComponent, void, const bool> SetSensingUpdatesEnabled = { 0x4c19c60, 0 };
+    constexpr static const FunctionPointer<UPawnSensingComponent, void, const bool> SetSensingUpdatesEnabled = { 0x4c2f220, 0 };
     // Function /Script/AIModule.PawnSensingComponent.SetSensingInterval
     // [0] NewSensingInterval : const float
-    constexpr static const FunctionPointer<UPawnSensingComponent, void, const float> SetSensingInterval = { 0x4c19d40, 1 };
+    constexpr static const FunctionPointer<UPawnSensingComponent, void, const float> SetSensingInterval = { 0x4c2f300, 1 };
     // Function /Script/AIModule.PawnSensingComponent.SetPeripheralVisionAngle
     // [0] NewPeripheralVisionAngle : const float
-    constexpr static const FunctionPointer<UPawnSensingComponent, void, const float> SetPeripheralVisionAngle = { 0x4c19b90, 2 };
+    constexpr static const FunctionPointer<UPawnSensingComponent, void, const float> SetPeripheralVisionAngle = { 0x4c2f150, 2 };
     // Function /Script/AIModule.PawnSensingComponent.SeePawnDelegate__DelegateSignature
     // [0] Pawn : const APawn*
-    constexpr static const FunctionPointer<UPawnSensingComponent, void, const APawn*> SeePawnDelegate__DelegateSignature = { 0x2bbb090, 3 };
+    constexpr static const FunctionPointer<UPawnSensingComponent, void, const APawn*> SeePawnDelegate__DelegateSignature = { 0x2bc7620, 3 };
     // Function /Script/AIModule.PawnSensingComponent.HearNoiseDelegate__DelegateSignature
     // [0] Instigator : const APawn*
     // [1] Location : const FVector&
     // [2] Volume : const float
-    constexpr static const FunctionPointer<UPawnSensingComponent, void, const APawn*, const FVector&, const float> HearNoiseDelegate__DelegateSignature = { 0x2bbb090, 4 };
+    constexpr static const FunctionPointer<UPawnSensingComponent, void, const APawn*, const FVector&, const float> HearNoiseDelegate__DelegateSignature = { 0x2bc7620, 4 };
     // Function /Script/AIModule.PawnSensingComponent.GetPeripheralVisionCosine
-    constexpr static const FunctionPointer<UPawnSensingComponent, float> GetPeripheralVisionCosine = { 0x4c19b70, 5 };
+    constexpr static const FunctionPointer<UPawnSensingComponent, float> GetPeripheralVisionCosine = { 0x4c2f130, 5 };
     // Function /Script/AIModule.PawnSensingComponent.GetPeripheralVisionAngle
-    constexpr static const FunctionPointer<UPawnSensingComponent, float> GetPeripheralVisionAngle = { 0x384a730, 6 };
+    constexpr static const FunctionPointer<UPawnSensingComponent, float> GetPeripheralVisionAngle = { 0x385a5a0, 6 };
 };
 
 /// Class /Script/AIModule.VisualLoggerExtension
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UVisualLoggerExtension : public UObject
 { 
 public:
 };
 
 /// Struct /Script/AIModule.AIRequestID
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
 struct FAIRequestID
 { 
-    uint32_t                                           RequestID;                                                  // 0x0000   (0x0004) 
+    uint32_t                                           RequestID;                                                  // 0x0000   (0x0004)
 };
 
 /// Struct /Script/AIModule.AIStimulus
-/// Size: 0x003C (60 bytes) (0x000000 - 0x00003C) align n/a MaxSize: 0x003C
+/// Size: 0x003C (60 bytes) (0x000000 - 0x00003C) align 4 MaxSize: 0x003C
 struct FAIStimulus
 { 
-    float                                              Age;                                                        // 0x0000   (0x0004) 
-    float                                              ExpirationAge;                                              // 0x0004   (0x0004) 
-    float                                              Strength;                                                   // 0x0008   (0x0004) 
-    FVector                                            StimulusLocation;                                           // 0x000C   (0x000C) 
-    FVector                                            ReceiverLocation;                                           // 0x0018   (0x000C) 
-    FName                                              Tag;                                                        // 0x0024   (0x0008) 
-    unsigned char                                      UnknownData03_6[0xC];                                       // 0x002C   (0x000C) MISSED
-    unsigned char                                      UnknownBit04 : 1;                                           // 0x0038:0 (0x0001) MISSED
-    bool                                               bSuccessfullySensed : 1;                                    // 0x0038:1 (0x0001) 
-    unsigned char                                      UnknownData05_7[0x3];                                       // 0x0039   (0x0003) MISSED
+    float                                              Age;                                                        // 0x0000   (0x0004)
+    float                                              ExpirationAge;                                              // 0x0004   (0x0004)
+    float                                              Strength;                                                   // 0x0008   (0x0004)
+    FVector                                            StimulusLocation;                                           // 0x000C   (0x000C)
+    FVector                                            ReceiverLocation;                                           // 0x0018   (0x000C)
+    FName                                              Tag;                                                        // 0x0024   (0x0008)
+    unsigned char                                      UnknownData00_6[0xC];                                       // 0x002C   (0x000C) MISSED
+    unsigned char                                      UnknownBit01 : 1;                                           // 0x0038:0 (0x0001) MISSED
+    bool                                               bSuccessfullySensed : 1;                                    // 0x0038:1 (0x0001)
+    unsigned char                                      UnknownData02_7[0x3];                                       // 0x0039   (0x0003) MISSED
 };
 
 /// Struct /Script/AIModule.ActorPerceptionUpdateInfo
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 4 MaxSize: 0x0048
 struct FActorPerceptionUpdateInfo
 { 
-    int32_t                                            TargetId;                                                   // 0x0000   (0x0004) 
-    TWeakObjectPtr<class AActor*>                      Target;                                                     // 0x0004   (0x0008) 
-    FAIStimulus                                        Stimulus;                                                   // 0x000C   (0x003C) 
+    int32_t                                            TargetId;                                                   // 0x0000   (0x0004)
+    TWeakObjectPtr<class AActor*>                      Target;                                                     // 0x0004   (0x0008)
+    FAIStimulus                                        Stimulus;                                                   // 0x000C   (0x003C)
 };
 
 /// Struct /Script/AIModule.AIDataProviderStructValue
-/// Size: 0x0030 (48 bytes) (0x000020 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000020 - 0x000030) align 8 MaxSize: 0x0030
 struct FAIDataProviderStructValue : FAIDataProviderValue
 { 
-    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0020   (0x0010) MISSED
+    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0020   (0x0010) MISSED
 };
 
 /// Struct /Script/AIModule.ActorPerceptionBlueprintInfo
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FActorPerceptionBlueprintInfo
 { 
-    class AActor*                                      Target;                                                     // 0x0000   (0x0008) 
-    TArray<FAIStimulus>                                LastSensedStimuli;                                          // 0x0008   (0x0010) 
-    bool                                               bIsHostile : 1;                                             // 0x0018:0 (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0019   (0x0007) MISSED
+    class AActor*                                      Target;                                                     // 0x0000   (0x0008)
+    TArray<FAIStimulus>                                LastSensedStimuli;                                          // 0x0008   (0x0010)
+    bool                                               bIsHostile : 1;                                             // 0x0018:0 (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0019   (0x0007) MISSED
 };
 
 /// Struct /Script/AIModule.AISightEvent
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FAISightEvent
 { 
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0000   (0x0008) MISSED
-    class AActor*                                      SeenActor;                                                  // 0x0008   (0x0008) 
-    class AActor*                                      Observer;                                                   // 0x0010   (0x0008) 
+    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0000   (0x0008) MISSED
+    class AActor*                                      SeenActor;                                                  // 0x0008   (0x0008)
+    class AActor*                                      Observer;                                                   // 0x0010   (0x0008)
 };
 
 /// Struct /Script/AIModule.EnvQueryRequest
-/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align n/a MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align 8 MaxSize: 0x0068
 struct FEnvQueryRequest
 { 
-    class UEnvQuery*                                   QueryTemplate;                                              // 0x0000   (0x0008) 
-    class UObject*                                     Owner;                                                      // 0x0008   (0x0008) 
-    class UWorld*                                      World;                                                      // 0x0010   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x50];                                      // 0x0018   (0x0050) MISSED
+    class UEnvQuery*                                   QueryTemplate;                                              // 0x0000   (0x0008)
+    class UObject*                                     Owner;                                                      // 0x0008   (0x0008)
+    class UWorld*                                      World;                                                      // 0x0010   (0x0008)
+    unsigned char                                      UnknownData00_7[0x50];                                      // 0x0018   (0x0050) MISSED
 };
 
 /// Struct /Script/AIModule.EnvQueryResult
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
 struct FEnvQueryResult
 { 
-    unsigned char                                      UnknownData03_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    class UClass*                                      ItemType;                                                   // 0x0010   (0x0008) 
-    unsigned char                                      UnknownData04_6[0x14];                                      // 0x0018   (0x0014) MISSED
-    int32_t                                            OptionIndex;                                                // 0x002C   (0x0004) 
-    int32_t                                            QueryID;                                                    // 0x0030   (0x0004) 
-    unsigned char                                      UnknownData05_7[0xC];                                       // 0x0034   (0x000C) MISSED
+    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    class UClass*                                      ItemType;                                                   // 0x0010   (0x0008)
+    unsigned char                                      UnknownData01_6[0x14];                                      // 0x0018   (0x0014) MISSED
+    int32_t                                            OptionIndex;                                                // 0x002C   (0x0004)
+    int32_t                                            QueryID;                                                    // 0x0030   (0x0004)
+    unsigned char                                      UnknownData02_7[0xC];                                       // 0x0034   (0x000C) MISSED
 };
 
 /// Struct /Script/AIModule.GenericTeamId
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
 struct FGenericTeamId
 { 
-    char                                               TeamID;                                                     // 0x0000   (0x0001) 
+    char                                               TeamID;                                                     // 0x0000   (0x0001)
 };
 
 #pragma pack(pop)

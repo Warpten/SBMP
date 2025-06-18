@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -67,55 +69,55 @@ enum class EFFXFSR3QualityMode : uint32_t
 };
 
 /// Class /Script/FFXFSR3Settings.FFXFSR3Settings
-/// Size: 0x00B0 (176 bytes) (0x000038 - 0x0000B0) align n/a MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000038 - 0x0000B0) align 8 MaxSize: 0x00B0
 class UFFXFSR3Settings : public UDeveloperSettings
 { 
 public:
-    bool                                               bEnabled;                                                   // 0x0038   (0x0001) 
-    bool                                               bAutoExposure;                                              // 0x0039   (0x0001) 
-    bool                                               bEnabledInEditorViewport;                                   // 0x003A   (0x0001) 
-    bool                                               bUseSSRExperimentalDenoiser;                                // 0x003B   (0x0001) 
-    bool                                               bRHIBackend;                                                // 0x003C   (0x0001) 
-    bool                                               bD3D12Backend;                                              // 0x003D   (0x0001) 
-    bool                                               bFrameGenEnabled;                                           // 0x003E   (0x0001) 
-    bool                                               bCaptureDebugUI;                                            // 0x003F   (0x0001) 
-    bool                                               bUpdateGlobalFrameTime;                                     // 0x0040   (0x0001) 
-    bool                                               bModifySlateDeltaTime;                                      // 0x0041   (0x0001) 
-    unsigned char                                      UnknownData07_6[0x2];                                       // 0x0042   (0x0002) MISSED
-    EFFXFSR3FrameGenUIMode                             UIMode;                                                     // 0x0044   (0x0004) 
-    bool                                               bD3D12AsyncInterpolation;                                   // 0x0048   (0x0001) 
-    bool                                               bD3D12AsyncPresent;                                         // 0x0049   (0x0001) 
-    unsigned char                                      UnknownData08_6[0x2];                                       // 0x004A   (0x0002) MISSED
-    EFFXFSR3PaceRHIFrameMode                           PaceMode;                                                   // 0x004C   (0x0004) 
-    EFFXFSR3QualityMode                                QualityMode;                                                // 0x0050   (0x0004) 
-    EFFXFSR3HistoryFormat                              HistoryFormat;                                              // 0x0054   (0x0004) 
-    EFFXFSR3DeDitherMode                               DeDither;                                                   // 0x0058   (0x0004) 
-    float                                              Sharpness;                                                  // 0x005C   (0x0004) 
-    bool                                               bAdjustMipBias;                                             // 0x0060   (0x0001) 
-    bool                                               bForceVertexDeformationOutputsVelocity;                     // 0x0061   (0x0001) 
-    unsigned char                                      UnknownData09_6[0x2];                                       // 0x0062   (0x0002) MISSED
-    EFFXFSR3LandscapeHISMMode                          ForceLandscapeHISMMobility;                                 // 0x0064   (0x0004) 
-    float                                              VelocityFactor;                                             // 0x0068   (0x0004) 
-    bool                                               bReactiveMask;                                              // 0x006C   (0x0001) 
-    unsigned char                                      UnknownData10_6[0x3];                                       // 0x006D   (0x0003) MISSED
-    float                                              ReflectionScale;                                            // 0x0070   (0x0004) 
-    float                                              ReflectionLuminanceBias;                                    // 0x0074   (0x0004) 
-    float                                              RoughnessScale;                                             // 0x0078   (0x0004) 
-    float                                              RoughnessBias;                                              // 0x007C   (0x0004) 
-    float                                              RoughnessMaxDistance;                                       // 0x0080   (0x0004) 
-    bool                                               bReactiveMaskRoughnessForceMaxDistance;                     // 0x0084   (0x0001) 
-    unsigned char                                      UnknownData11_6[0x3];                                       // 0x0085   (0x0003) MISSED
-    float                                              TranslucencyBias;                                           // 0x0088   (0x0004) 
-    float                                              TranslucencyLuminanceBias;                                  // 0x008C   (0x0004) 
-    float                                              TranslucencyMaxDistance;                                    // 0x0090   (0x0004) 
-    TEnumAsByte<EMaterialShadingModel>                 ReactiveShadingModelID;                                     // 0x0094   (0x0001) 
-    unsigned char                                      UnknownData12_6[0x3];                                       // 0x0095   (0x0003) MISSED
-    float                                              ForceReactiveMaterialValue;                                 // 0x0098   (0x0004) 
-    float                                              ReactiveHistoryTranslucencyBias;                            // 0x009C   (0x0004) 
-    float                                              ReactiveHistoryTranslucencyLumaBias;                        // 0x00A0   (0x0004) 
-    float                                              PreDOFTranslucencyScale;                                    // 0x00A4   (0x0004) 
-    bool                                               bPreDOFTranslucencyMax;                                     // 0x00A8   (0x0001) 
-    unsigned char                                      UnknownData13_7[0x7];                                       // 0x00A9   (0x0007) MISSED
+    bool                                               bEnabled;                                                   // 0x0038   (0x0001)
+    bool                                               bAutoExposure;                                              // 0x0039   (0x0001)
+    bool                                               bEnabledInEditorViewport;                                   // 0x003A   (0x0001)
+    bool                                               bUseSSRExperimentalDenoiser;                                // 0x003B   (0x0001)
+    bool                                               bRHIBackend;                                                // 0x003C   (0x0001)
+    bool                                               bD3D12Backend;                                              // 0x003D   (0x0001)
+    bool                                               bFrameGenEnabled;                                           // 0x003E   (0x0001)
+    bool                                               bCaptureDebugUI;                                            // 0x003F   (0x0001)
+    bool                                               bUpdateGlobalFrameTime;                                     // 0x0040   (0x0001)
+    bool                                               bModifySlateDeltaTime;                                      // 0x0041   (0x0001)
+    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0042   (0x0002) MISSED
+    EFFXFSR3FrameGenUIMode                             UIMode;                                                     // 0x0044   (0x0004)
+    bool                                               bD3D12AsyncInterpolation;                                   // 0x0048   (0x0001)
+    bool                                               bD3D12AsyncPresent;                                         // 0x0049   (0x0001)
+    unsigned char                                      UnknownData01_6[0x2];                                       // 0x004A   (0x0002) MISSED
+    EFFXFSR3PaceRHIFrameMode                           PaceMode;                                                   // 0x004C   (0x0004)
+    EFFXFSR3QualityMode                                QualityMode;                                                // 0x0050   (0x0004)
+    EFFXFSR3HistoryFormat                              HistoryFormat;                                              // 0x0054   (0x0004)
+    EFFXFSR3DeDitherMode                               DeDither;                                                   // 0x0058   (0x0004)
+    float                                              Sharpness;                                                  // 0x005C   (0x0004)
+    bool                                               bAdjustMipBias;                                             // 0x0060   (0x0001)
+    bool                                               bForceVertexDeformationOutputsVelocity;                     // 0x0061   (0x0001)
+    unsigned char                                      UnknownData02_6[0x2];                                       // 0x0062   (0x0002) MISSED
+    EFFXFSR3LandscapeHISMMode                          ForceLandscapeHISMMobility;                                 // 0x0064   (0x0004)
+    float                                              VelocityFactor;                                             // 0x0068   (0x0004)
+    bool                                               bReactiveMask;                                              // 0x006C   (0x0001)
+    unsigned char                                      UnknownData03_6[0x3];                                       // 0x006D   (0x0003) MISSED
+    float                                              ReflectionScale;                                            // 0x0070   (0x0004)
+    float                                              ReflectionLuminanceBias;                                    // 0x0074   (0x0004)
+    float                                              RoughnessScale;                                             // 0x0078   (0x0004)
+    float                                              RoughnessBias;                                              // 0x007C   (0x0004)
+    float                                              RoughnessMaxDistance;                                       // 0x0080   (0x0004)
+    bool                                               bReactiveMaskRoughnessForceMaxDistance;                     // 0x0084   (0x0001)
+    unsigned char                                      UnknownData04_6[0x3];                                       // 0x0085   (0x0003) MISSED
+    float                                              TranslucencyBias;                                           // 0x0088   (0x0004)
+    float                                              TranslucencyLuminanceBias;                                  // 0x008C   (0x0004)
+    float                                              TranslucencyMaxDistance;                                    // 0x0090   (0x0004)
+    TEnumAsByte<EMaterialShadingModel>                 ReactiveShadingModelID;                                     // 0x0094   (0x0001)
+    unsigned char                                      UnknownData05_6[0x3];                                       // 0x0095   (0x0003) MISSED
+    float                                              ForceReactiveMaterialValue;                                 // 0x0098   (0x0004)
+    float                                              ReactiveHistoryTranslucencyBias;                            // 0x009C   (0x0004)
+    float                                              ReactiveHistoryTranslucencyLumaBias;                        // 0x00A0   (0x0004)
+    float                                              PreDOFTranslucencyScale;                                    // 0x00A4   (0x0004)
+    bool                                               bPreDOFTranslucencyMax;                                     // 0x00A8   (0x0001)
+    unsigned char                                      UnknownData06_7[0x7];                                       // 0x00A9   (0x0007) MISSED
 };
 
 #pragma pack(pop)

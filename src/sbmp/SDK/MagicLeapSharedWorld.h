@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,101 +16,101 @@
 #pragma pack(push, 0x1)
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldSharedData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FMagicLeapSharedWorldSharedData
 { 
-    TArray<FGuid>                                      PinIDs;                                                     // 0x0000   (0x0010) 
+    TArray<FGuid>                                      PinIDs;                                                     // 0x0000   (0x0010)
 };
 
 /// Class /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode
-/// Size: 0x0480 (1152 bytes) (0x0003B0 - 0x000480) align n/a MaxSize: 0x0480
+/// Size: 0x0480 (1152 bytes) (0x0003B0 - 0x000480) align 8 MaxSize: 0x0480
 class AMagicLeapSharedWorldGameMode : public AGameMode
 { 
 public:
-    FMagicLeapSharedWorldSharedData                    SharedWorldData;                                            // 0x03B0   (0x0010) 
-    FMulticastInlineDelegate                           OnNewLocalDataFromClients;                                  // 0x03C0   (0x0010) 
-    float                                              PinSelectionConfidenceThreshold;                            // 0x03D0   (0x0004) 
-    unsigned char                                      UnknownData01_6[0xA4];                                      // 0x03D4   (0x00A4) MISSED
-    class AMagicLeapSharedWorldPlayerController*       ChosenOne;                                                  // 0x0478   (0x0008) 
+    FMagicLeapSharedWorldSharedData                    SharedWorldData;                                            // 0x03B0   (0x0010)
+    FMulticastInlineDelegate                           OnNewLocalDataFromClients;                                  // 0x03C0   (0x0010)
+    float                                              PinSelectionConfidenceThreshold;                            // 0x03D0   (0x0004)
+    unsigned char                                      UnknownData00_6[0xA4];                                      // 0x03D4   (0x00A4) MISSED
+    class AMagicLeapSharedWorldPlayerController*       ChosenOne;                                                  // 0x0478   (0x0008)
 
     /// Functions
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SendSharedWorldDataToClients
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, bool> SendSharedWorldDataToClients = { 0x18d1fe0, 0 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, bool> SendSharedWorldDataToClients = { 0x18d8bb0, 0 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SelectChosenOne
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void> SelectChosenOne = { 0x18d2030, 1 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void> SelectChosenOne = { 0x18d8c00, 1 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.MagicLeapOnNewLocalDataFromClients__DelegateSignature
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void> MagicLeapOnNewLocalDataFromClients__DelegateSignature = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void> MagicLeapOnNewLocalDataFromClients__DelegateSignature = { 0x2bc7620, 2 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.DetermineSharedWorldData
     // [0] NewSharedWorldData : const FMagicLeapSharedWorldSharedData&
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void, const FMagicLeapSharedWorldSharedData&> DetermineSharedWorldData = { 0x18d2050, 3 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void, const FMagicLeapSharedWorldSharedData&> DetermineSharedWorldData = { 0x18d8c20, 3 };
 };
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldAlignmentTransforms
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FMagicLeapSharedWorldAlignmentTransforms
 { 
-    TArray<FTransform>                                 AlignmentTransforms;                                        // 0x0000   (0x0010) 
+    TArray<FTransform>                                 AlignmentTransforms;                                        // 0x0000   (0x0010)
 };
 
 /// Class /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState
-/// Size: 0x0378 (888 bytes) (0x000338 - 0x000378) align n/a MaxSize: 0x0378
+/// Size: 0x0378 (888 bytes) (0x000338 - 0x000378) align 8 MaxSize: 0x0378
 class AMagicLeapSharedWorldGameState : public AGameState
 { 
 public:
-    FMagicLeapSharedWorldSharedData                    SharedWorldData;                                            // 0x0338   (0x0010) 
-    FMagicLeapSharedWorldAlignmentTransforms           AlignmentTransforms;                                        // 0x0348   (0x0010) 
-    FMulticastInlineDelegate                           OnSharedWorldDataUpdated;                                   // 0x0358   (0x0010) 
-    FMulticastInlineDelegate                           OnAlignmentTransformsUpdated;                               // 0x0368   (0x0010) 
+    FMagicLeapSharedWorldSharedData                    SharedWorldData;                                            // 0x0338   (0x0010)
+    FMagicLeapSharedWorldAlignmentTransforms           AlignmentTransforms;                                        // 0x0348   (0x0010)
+    FMulticastInlineDelegate                           OnSharedWorldDataUpdated;                                   // 0x0358   (0x0010)
+    FMulticastInlineDelegate                           OnAlignmentTransformsUpdated;                               // 0x0368   (0x0010)
 
     /// Functions
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_SharedWorldData
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> OnReplicate_SharedWorldData = { 0x18d2350, 0 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> OnReplicate_SharedWorldData = { 0x18d8f20, 0 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_AlignmentTransforms
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> OnReplicate_AlignmentTransforms = { 0x18d2320, 1 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> OnReplicate_AlignmentTransforms = { 0x18d8ef0, 1 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.MagicLeapSharedWorldEvent__DelegateSignature
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> MagicLeapSharedWorldEvent__DelegateSignature = { 0x2bbb090, 2 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> MagicLeapSharedWorldEvent__DelegateSignature = { 0x2bc7620, 2 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.CalculateXRCameraRootTransform
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, FTransform> CalculateXRCameraRootTransform = { 0x18d2380, 3 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, FTransform> CalculateXRCameraRootTransform = { 0x18d8f50, 3 };
 };
 
 /// Class /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController
-/// Size: 0x0680 (1664 bytes) (0x000668 - 0x000680) align n/a MaxSize: 0x0680
+/// Size: 0x0680 (1664 bytes) (0x000668 - 0x000680) align 8 MaxSize: 0x0680
 class AMagicLeapSharedWorldPlayerController : public APlayerController
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x18];                                      // 0x0668   (0x0018) MISSED
+    unsigned char                                      UnknownData00_1[0x18];                                      // 0x0668   (0x0018) MISSED
 
     /// Functions
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetLocalWorldData
     // [0] LocalWorldReplicationData : const FMagicLeapSharedWorldLocalData
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const FMagicLeapSharedWorldLocalData> ServerSetLocalWorldData = { 0x18d28e0, 0 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const FMagicLeapSharedWorldLocalData> ServerSetLocalWorldData = { 0x18d94b0, 0 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetAlignmentTransforms
     // [0] InAlignmentTransforms : const FMagicLeapSharedWorldAlignmentTransforms
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const FMagicLeapSharedWorldAlignmentTransforms> ServerSetAlignmentTransforms = { 0x18d26b0, 1 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const FMagicLeapSharedWorldAlignmentTransforms> ServerSetAlignmentTransforms = { 0x18d9280, 1 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.IsChosenOne
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, bool> IsChosenOne = { 0x18d27c0, 2 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, bool> IsChosenOne = { 0x18d9390, 2 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ClientSetChosenOne
     // [0] bChosenOne : const bool
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const bool> ClientSetChosenOne = { 0x18d27e0, 3 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const bool> ClientSetChosenOne = { 0x18d93b0, 3 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ClientMarkReadyForSendingLocalData
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void> ClientMarkReadyForSendingLocalData = { 0x18d28c0, 4 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void> ClientMarkReadyForSendingLocalData = { 0x18d9490, 4 };
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.CanSendLocalDataToServer
-    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, bool> CanSendLocalDataToServer = { 0x18d27a0, 5 };
+    constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, bool> CanSendLocalDataToServer = { 0x18d9370, 5 };
 };
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPinData
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
 struct FMagicLeapSharedWorldPinData
 { 
-    FGuid                                              PinId;                                                      // 0x0000   (0x0010) 
-    FMagicLeapARPinState                               PinState;                                                   // 0x0010   (0x0014) 
+    FGuid                                              PinId;                                                      // 0x0000   (0x0010)
+    FMagicLeapARPinState                               PinState;                                                   // 0x0010   (0x0014)
 };
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldLocalData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FMagicLeapSharedWorldLocalData
 { 
-    TArray<FMagicLeapSharedWorldPinData>               LocalPins;                                                  // 0x0000   (0x0010) 
+    TArray<FMagicLeapSharedWorldPinData>               LocalPins;                                                  // 0x0000   (0x0010)
 };
 
 #pragma pack(pop)

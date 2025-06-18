@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 
@@ -311,32 +313,32 @@ enum class ESearchCase : uint8_t
 class UObject
 { 
 public:
-    uint64_t                                           vtable;                                                     // 0x0000   (0x0008) 
-    EObjectFlags                                       ObjectFlags;                                                // 0x0008   (0x0004) 
-    int                                                InternalIndex;                                              // 0x000C   (0x0004) 
-    class UClass*                                      ClassPrivate;                                               // 0x0010   (0x0008) 
-    FName                                              NamePrivate;                                                // 0x0018   (0x0008) 
-    class UObject*                                     OuterPrivate;                                               // 0x0020   (0x0008) 
+    uint64_t                                           vtable;                                                     // 0x0000   (0x0008)
+    EObjectFlags                                       ObjectFlags;                                                // 0x0008   (0x0004)
+    int                                                InternalIndex;                                              // 0x000C   (0x0004)
+    class UClass*                                      ClassPrivate;                                               // 0x0010   (0x0008)
+    FName                                              NamePrivate;                                                // 0x0018   (0x0008)
+    class UObject*                                     OuterPrivate;                                               // 0x0020   (0x0008)
 
     /// Functions
     // Function /Script/CoreUObject.Object.ExecuteUbergraph
     // [0] EntryPoint : const int32_t
-    constexpr static const FunctionPointer<UObject, void, const int32_t> ExecuteUbergraph = { 0x2bbb090, 0 };
+    constexpr static const FunctionPointer<UObject, void, const int32_t> ExecuteUbergraph = { 0x2bc7620, 0 };
 };
 
 /// Class /Script/CoreUObject.Interface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UInterface : public UObject
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.Package
-/// Size: 0x00A0 (160 bytes) (0x000028 - 0x0000A0) align n/a MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000028 - 0x0000A0) align 8 MaxSize: 0x00A0
 class UPackage : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x78];                                      // 0x0028   (0x0078) MISSED
+    unsigned char                                      UnknownData00_1[0x78];                                      // 0x0028   (0x0078) MISSED
 };
 
 /// Class /Script/CoreUObject.Field
@@ -344,1000 +346,1000 @@ public:
 class UField : public UObject
 { 
 public:
-    class UField*                                      Next;                                                       // 0x0028   (0x0008) 
+    class UField*                                      Next;                                                       // 0x0028   (0x0008)
 };
 
 /// Class /Script/CoreUObject.struct
-/// Size: 0x00B0 (176 bytes) (0x000030 - 0x0000B0) align n/a MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000030 - 0x0000B0) align 8 MaxSize: 0x00B0
 class Ustruct : public UField
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x80];                                      // 0x0030   (0x0080) MISSED
+    unsigned char                                      UnknownData00_1[0x80];                                      // 0x0030   (0x0080) MISSED
 };
 
 /// Class /Script/CoreUObject.Class
-/// Size: 0x0230 (560 bytes) (0x0000B0 - 0x000230) align n/a MaxSize: 0x0230
+/// Size: 0x0230 (560 bytes) (0x0000B0 - 0x000230) align 8 MaxSize: 0x0230
 class UClass : public Ustruct
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x180];                                     // 0x00B0   (0x0180) MISSED
+    unsigned char                                      UnknownData00_1[0x180];                                     // 0x00B0   (0x0180) MISSED
 };
 
 /// Class /Script/CoreUObject.GCObjectReferencer
-/// Size: 0x0070 (112 bytes) (0x000028 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000028 - 0x000070) align 8 MaxSize: 0x0070
 class UGCObjectReferencer : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x48];                                      // 0x0028   (0x0048) MISSED
+    unsigned char                                      UnknownData00_1[0x48];                                      // 0x0028   (0x0048) MISSED
 };
 
 /// Class /Script/CoreUObject.TextBuffer
-/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align 8 MaxSize: 0x0050
 class UTextBuffer : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x28];                                      // 0x0028   (0x0028) MISSED
+    unsigned char                                      UnknownData00_1[0x28];                                      // 0x0028   (0x0028) MISSED
 };
 
 /// Class /Script/CoreUObject.ScriptStruct
-/// Size: 0x00C0 (192 bytes) (0x0000B0 - 0x0000C0) align n/a MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x0000B0 - 0x0000C0) align 8 MaxSize: 0x00C0
 class UScriptStruct : public Ustruct
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x10];                                      // 0x00B0   (0x0010) MISSED
+    unsigned char                                      UnknownData00_1[0x10];                                      // 0x00B0   (0x0010) MISSED
 };
 
 /// Class /Script/CoreUObject.Function
-/// Size: 0x00E0 (224 bytes) (0x0000B0 - 0x0000E0) align n/a MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000B0 - 0x0000E0) align 8 MaxSize: 0x00E0
 class UFunction : public Ustruct
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x30];                                      // 0x00B0   (0x0030) MISSED
+    unsigned char                                      UnknownData00_1[0x30];                                      // 0x00B0   (0x0030) MISSED
 };
 
 /// Class /Script/CoreUObject.DelegateFunction
-/// Size: 0x00E0 (224 bytes) (0x0000E0 - 0x0000E0) align n/a MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000E0 - 0x0000E0) align 8 MaxSize: 0x00E0
 class UDelegateFunction : public UFunction
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.SparseDelegateFunction
-/// Size: 0x00F0 (240 bytes) (0x0000E0 - 0x0000F0) align n/a MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x0000E0 - 0x0000F0) align 8 MaxSize: 0x00F0
 class USparseDelegateFunction : public UDelegateFunction
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x10];                                      // 0x00E0   (0x0010) MISSED
+    unsigned char                                      UnknownData00_1[0x10];                                      // 0x00E0   (0x0010) MISSED
 };
 
 /// Class /Script/CoreUObject.DynamicClass
-/// Size: 0x02B0 (688 bytes) (0x000230 - 0x0002B0) align n/a MaxSize: 0x02B0
+/// Size: 0x02B0 (688 bytes) (0x000230 - 0x0002B0) align 8 MaxSize: 0x02B0
 class UDynamicClass : public UClass
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x80];                                      // 0x0230   (0x0080) MISSED
+    unsigned char                                      UnknownData00_1[0x80];                                      // 0x0230   (0x0080) MISSED
 };
 
 /// Class /Script/CoreUObject.PackageMap
-/// Size: 0x00E0 (224 bytes) (0x000028 - 0x0000E0) align n/a MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x000028 - 0x0000E0) align 8 MaxSize: 0x00E0
 class UPackageMap : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0xB8];                                      // 0x0028   (0x00B8) MISSED
+    unsigned char                                      UnknownData00_1[0xB8];                                      // 0x0028   (0x00B8) MISSED
 };
 
 /// Class /Script/CoreUObject.Enum
-/// Size: 0x0060 (96 bytes) (0x000030 - 0x000060) align n/a MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000030 - 0x000060) align 8 MaxSize: 0x0060
 class UEnum : public UField
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x30];                                      // 0x0030   (0x0030) MISSED
+    unsigned char                                      UnknownData00_1[0x30];                                      // 0x0030   (0x0030) MISSED
 };
 
 /// Class /Script/CoreUObject.LinkerPlaceholderClass
-/// Size: 0x03E8 (1000 bytes) (0x000230 - 0x0003E8) align n/a MaxSize: 0x03E8
+/// Size: 0x03E8 (1000 bytes) (0x000230 - 0x0003E8) align 8 MaxSize: 0x03E8
 class ULinkerPlaceholderClass : public UClass
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x1B8];                                     // 0x0230   (0x01B8) MISSED
+    unsigned char                                      UnknownData00_1[0x1B8];                                     // 0x0230   (0x01B8) MISSED
 };
 
 /// Class /Script/CoreUObject.LinkerPlaceholderExportObject
-/// Size: 0x00F0 (240 bytes) (0x000028 - 0x0000F0) align n/a MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000028 - 0x0000F0) align 8 MaxSize: 0x00F0
 class ULinkerPlaceholderExportObject : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0xC8];                                      // 0x0028   (0x00C8) MISSED
+    unsigned char                                      UnknownData00_1[0xC8];                                      // 0x0028   (0x00C8) MISSED
 };
 
 /// Class /Script/CoreUObject.LinkerPlaceholderFunction
-/// Size: 0x0298 (664 bytes) (0x0000E0 - 0x000298) align n/a MaxSize: 0x0298
+/// Size: 0x0298 (664 bytes) (0x0000E0 - 0x000298) align 8 MaxSize: 0x0298
 class ULinkerPlaceholderFunction : public UFunction
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x1B8];                                     // 0x00E0   (0x01B8) MISSED
+    unsigned char                                      UnknownData00_1[0x1B8];                                     // 0x00E0   (0x01B8) MISSED
 };
 
 /// Class /Script/CoreUObject.MetaData
-/// Size: 0x00C8 (200 bytes) (0x000028 - 0x0000C8) align n/a MaxSize: 0x00C8
+/// Size: 0x00C8 (200 bytes) (0x000028 - 0x0000C8) align 8 MaxSize: 0x00C8
 class UMetaData : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0xA0];                                      // 0x0028   (0x00A0) MISSED
+    unsigned char                                      UnknownData00_1[0xA0];                                      // 0x0028   (0x00A0) MISSED
 };
 
 /// Class /Script/CoreUObject.ObjectRedirector
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
 class UObjectRedirector : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.Property
-/// Size: 0x0070 (112 bytes) (0x000030 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000030 - 0x000070) align 8 MaxSize: 0x0070
 class UProperty : public UField
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x40];                                      // 0x0030   (0x0040) MISSED
+    unsigned char                                      UnknownData00_1[0x40];                                      // 0x0030   (0x0040) MISSED
 };
 
 /// Class /Script/CoreUObject.EnumProperty
-/// Size: 0x0080 (128 bytes) (0x000070 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000070 - 0x000080) align 8 MaxSize: 0x0080
 class UEnumProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0070   (0x0010) MISSED
+    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0070   (0x0010) MISSED
 };
 
 /// Class /Script/CoreUObject.ArrayProperty
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UArrayProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.ObjectPropertyBase
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UObjectPropertyBase : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.BoolProperty
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UBoolProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.NumericProperty
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UNumericProperty : public UProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.ByteProperty
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UByteProperty : public UNumericProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.ObjectProperty
-/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align 8 MaxSize: 0x0078
 class UObjectProperty : public UObjectPropertyBase
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.ClassProperty
-/// Size: 0x0080 (128 bytes) (0x000078 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000078 - 0x000080) align 8 MaxSize: 0x0080
 class UClassProperty : public UObjectProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0078   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0078   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.DelegateProperty
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UDelegateProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.DoubleProperty
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UDoubleProperty : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.FloatProperty
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UFloatProperty : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.IntProperty
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UIntProperty : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.Int8Property
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UInt8Property : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.Int16Property
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UInt16Property : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.Int64Property
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UInt64Property : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.InterfaceProperty
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UInterfaceProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.LazyObjectProperty
-/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align 8 MaxSize: 0x0078
 class ULazyObjectProperty : public UObjectPropertyBase
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.MapProperty
-/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align 8 MaxSize: 0x0098
 class UMapProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x28];                                      // 0x0070   (0x0028) MISSED
+    unsigned char                                      UnknownData00_1[0x28];                                      // 0x0070   (0x0028) MISSED
 };
 
 /// Class /Script/CoreUObject.MulticastDelegateProperty
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UMulticastDelegateProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.MulticastInlineDelegateProperty
-/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align 8 MaxSize: 0x0078
 class UMulticastInlineDelegateProperty : public UMulticastDelegateProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.MulticastSparseDelegateProperty
-/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align 8 MaxSize: 0x0078
 class UMulticastSparseDelegateProperty : public UMulticastDelegateProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.NameProperty
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UNameProperty : public UProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.SetProperty
-/// Size: 0x0090 (144 bytes) (0x000070 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000070 - 0x000090) align 8 MaxSize: 0x0090
 class USetProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x20];                                      // 0x0070   (0x0020) MISSED
+    unsigned char                                      UnknownData00_1[0x20];                                      // 0x0070   (0x0020) MISSED
 };
 
 /// Class /Script/CoreUObject.SoftObjectProperty
-/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align 8 MaxSize: 0x0078
 class USoftObjectProperty : public UObjectPropertyBase
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.SoftClassProperty
-/// Size: 0x0080 (128 bytes) (0x000078 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000078 - 0x000080) align 8 MaxSize: 0x0080
 class USoftClassProperty : public USoftObjectProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0078   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0078   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.StrProperty
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UStrProperty : public UProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.StructProperty
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
 class UStructProperty : public UProperty
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.UInt16Property
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UUInt16Property : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.UInt32Property
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UUInt32Property : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.UInt64Property
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UUInt64Property : public UNumericProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.WeakObjectProperty
-/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000078 - 0x000078) align 8 MaxSize: 0x0078
 class UWeakObjectProperty : public UObjectPropertyBase
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.TextProperty
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
 class UTextProperty : public UProperty
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.PropertyWrapper
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
 class UPropertyWrapper : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.MulticastDelegatePropertyWrapper
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UMulticastDelegatePropertyWrapper : public UPropertyWrapper
 { 
 public:
 };
 
 /// Class /Script/CoreUObject.MulticastInlineDelegatePropertyWrapper
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
 class UMulticastInlineDelegatePropertyWrapper : public UMulticastDelegatePropertyWrapper
 { 
 public:
 };
 
 /// Struct /Script/CoreUObject.JoinabilitySettings
-/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
+/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align 4 MaxSize: 0x0014
 struct FJoinabilitySettings
 { 
-    FName                                              SessionName;                                                // 0x0000   (0x0008) 
-    bool                                               bPublicSearchable;                                          // 0x0008   (0x0001) 
-    bool                                               bAllowInvites;                                              // 0x0009   (0x0001) 
-    bool                                               bJoinViaPresence;                                           // 0x000A   (0x0001) 
-    bool                                               bJoinViaPresenceFriendsOnly;                                // 0x000B   (0x0001) 
-    int32_t                                            MaxPlayers;                                                 // 0x000C   (0x0004) 
-    int32_t                                            MaxPartySize;                                               // 0x0010   (0x0004) 
+    FName                                              SessionName;                                                // 0x0000   (0x0008)
+    bool                                               bPublicSearchable;                                          // 0x0008   (0x0001)
+    bool                                               bAllowInvites;                                              // 0x0009   (0x0001)
+    bool                                               bJoinViaPresence;                                           // 0x000A   (0x0001)
+    bool                                               bJoinViaPresenceFriendsOnly;                                // 0x000B   (0x0001)
+    int32_t                                            MaxPlayers;                                                 // 0x000C   (0x0004)
+    int32_t                                            MaxPartySize;                                               // 0x0010   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.UniqueNetIdWrapper
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
 struct FUniqueNetIdWrapper
 { 
-    unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/CoreUObject.Guid
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FGuid
 { 
-    int32_t                                            A;                                                          // 0x0000   (0x0004) 
-    int32_t                                            B;                                                          // 0x0004   (0x0004) 
-    int32_t                                            C;                                                          // 0x0008   (0x0004) 
-    int32_t                                            D;                                                          // 0x000C   (0x0004) 
+    int32_t                                            A;                                                          // 0x0000   (0x0004)
+    int32_t                                            B;                                                          // 0x0004   (0x0004)
+    int32_t                                            C;                                                          // 0x0008   (0x0004)
+    int32_t                                            D;                                                          // 0x000C   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Vector
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
 struct FVector
 { 
-    float                                              X;                                                          // 0x0000   (0x0004) 
-    float                                              Y;                                                          // 0x0004   (0x0004) 
-    float                                              Z;                                                          // 0x0008   (0x0004) 
+    float                                              X;                                                          // 0x0000   (0x0004)
+    float                                              Y;                                                          // 0x0004   (0x0004)
+    float                                              Z;                                                          // 0x0008   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Vector4
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 16 MaxSize: 0x0010
 struct FVector4
 { 
-    float                                              X;                                                          // 0x0000   (0x0004) 
-    float                                              Y;                                                          // 0x0004   (0x0004) 
-    float                                              Z;                                                          // 0x0008   (0x0004) 
-    float                                              W;                                                          // 0x000C   (0x0004) 
+    float                                              X;                                                          // 0x0000   (0x0004)
+    float                                              Y;                                                          // 0x0004   (0x0004)
+    float                                              Z;                                                          // 0x0008   (0x0004)
+    float                                              W;                                                          // 0x000C   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Vector2D
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FVector2D
 { 
-    float                                              X;                                                          // 0x0000   (0x0004) 
-    float                                              Y;                                                          // 0x0004   (0x0004) 
+    float                                              X;                                                          // 0x0000   (0x0004)
+    float                                              Y;                                                          // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.TwoVectors
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 4 MaxSize: 0x0018
 struct FTwoVectors
 { 
-    FVector                                            v1;                                                         // 0x0000   (0x000C) 
-    FVector                                            v2;                                                         // 0x000C   (0x000C) 
+    FVector                                            v1;                                                         // 0x0000   (0x000C)
+    FVector                                            v2;                                                         // 0x000C   (0x000C)
 };
 
 /// Struct /Script/CoreUObject.Plane
-/// Size: 0x0010 (16 bytes) (0x00000C - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x00000C - 0x000010) align 16 MaxSize: 0x0010
 struct FPlane : FVector
 { 
-    float                                              W;                                                          // 0x000C   (0x0004) 
+    float                                              W;                                                          // 0x000C   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Rotator
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
 struct FRotator
 { 
-    float                                              Pitch;                                                      // 0x0000   (0x0004) 
-    float                                              Yaw;                                                        // 0x0004   (0x0004) 
-    float                                              Roll;                                                       // 0x0008   (0x0004) 
+    float                                              Pitch;                                                      // 0x0000   (0x0004)
+    float                                              Yaw;                                                        // 0x0004   (0x0004)
+    float                                              Roll;                                                       // 0x0008   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Quat
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 16 MaxSize: 0x0010
 struct FQuat
 { 
-    float                                              X;                                                          // 0x0000   (0x0004) 
-    float                                              Y;                                                          // 0x0004   (0x0004) 
-    float                                              Z;                                                          // 0x0008   (0x0004) 
-    float                                              W;                                                          // 0x000C   (0x0004) 
+    float                                              X;                                                          // 0x0000   (0x0004)
+    float                                              Y;                                                          // 0x0004   (0x0004)
+    float                                              Z;                                                          // 0x0008   (0x0004)
+    float                                              W;                                                          // 0x000C   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.PackedNormal
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 1 MaxSize: 0x0004
 struct FPackedNormal
 { 
-    char                                               X;                                                          // 0x0000   (0x0001) 
-    char                                               Y;                                                          // 0x0001   (0x0001) 
-    char                                               Z;                                                          // 0x0002   (0x0001) 
-    char                                               W;                                                          // 0x0003   (0x0001) 
+    char                                               X;                                                          // 0x0000   (0x0001)
+    char                                               Y;                                                          // 0x0001   (0x0001)
+    char                                               Z;                                                          // 0x0002   (0x0001)
+    char                                               W;                                                          // 0x0003   (0x0001)
 };
 
 /// Struct /Script/CoreUObject.PackedRGB10A2N
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
 struct FPackedRGB10A2N
 { 
-    int32_t                                            Packed;                                                     // 0x0000   (0x0004) 
+    int32_t                                            Packed;                                                     // 0x0000   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.PackedRGBA16N
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FPackedRGBA16N
 { 
-    int32_t                                            XY;                                                         // 0x0000   (0x0004) 
-    int32_t                                            ZW;                                                         // 0x0004   (0x0004) 
+    int32_t                                            XY;                                                         // 0x0000   (0x0004)
+    int32_t                                            ZW;                                                         // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.IntPoint
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FIntPoint
 { 
-    int32_t                                            X;                                                          // 0x0000   (0x0004) 
-    int32_t                                            Y;                                                          // 0x0004   (0x0004) 
+    int32_t                                            X;                                                          // 0x0000   (0x0004)
+    int32_t                                            Y;                                                          // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.IntVector
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
 struct FIntVector
 { 
-    int32_t                                            X;                                                          // 0x0000   (0x0004) 
-    int32_t                                            Y;                                                          // 0x0004   (0x0004) 
-    int32_t                                            Z;                                                          // 0x0008   (0x0004) 
+    int32_t                                            X;                                                          // 0x0000   (0x0004)
+    int32_t                                            Y;                                                          // 0x0004   (0x0004)
+    int32_t                                            Z;                                                          // 0x0008   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Color
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
 struct FColor
 { 
-    char                                               B;                                                          // 0x0000   (0x0001) 
-    char                                               G;                                                          // 0x0001   (0x0001) 
-    char                                               R;                                                          // 0x0002   (0x0001) 
-    char                                               A;                                                          // 0x0003   (0x0001) 
+    char                                               B;                                                          // 0x0000   (0x0001)
+    char                                               G;                                                          // 0x0001   (0x0001)
+    char                                               R;                                                          // 0x0002   (0x0001)
+    char                                               A;                                                          // 0x0003   (0x0001)
 };
 
 /// Struct /Script/CoreUObject.LinearColor
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FLinearColor
 { 
-    float                                              R;                                                          // 0x0000   (0x0004) 
-    float                                              G;                                                          // 0x0004   (0x0004) 
-    float                                              B;                                                          // 0x0008   (0x0004) 
-    float                                              A;                                                          // 0x000C   (0x0004) 
+    float                                              R;                                                          // 0x0000   (0x0004)
+    float                                              G;                                                          // 0x0004   (0x0004)
+    float                                              B;                                                          // 0x0008   (0x0004)
+    float                                              A;                                                          // 0x000C   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Box
-/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
+/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align 4 MaxSize: 0x001C
 struct FBox
 { 
-    FVector                                            Min;                                                        // 0x0000   (0x000C) 
-    FVector                                            Max;                                                        // 0x000C   (0x000C) 
-    char                                               IsValid;                                                    // 0x0018   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0019   (0x0003) MISSED
+    FVector                                            Min;                                                        // 0x0000   (0x000C)
+    FVector                                            Max;                                                        // 0x000C   (0x000C)
+    char                                               IsValid;                                                    // 0x0018   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0019   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.Box2D
-/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
+/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align 4 MaxSize: 0x0014
 struct FBox2D
 { 
-    FVector2D                                          Min;                                                        // 0x0000   (0x0008) 
-    FVector2D                                          Max;                                                        // 0x0008   (0x0008) 
-    char                                               bIsValid;                                                   // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003) MISSED
+    FVector2D                                          Min;                                                        // 0x0000   (0x0008)
+    FVector2D                                          Max;                                                        // 0x0008   (0x0008)
+    char                                               bIsValid;                                                   // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0011   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.BoxSphereBounds
-/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
+/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align 4 MaxSize: 0x001C
 struct FBoxSphereBounds
 { 
-    FVector                                            Origin;                                                     // 0x0000   (0x000C) 
-    FVector                                            BoxExtent;                                                  // 0x000C   (0x000C) 
-    float                                              SphereRadius;                                               // 0x0018   (0x0004) 
+    FVector                                            Origin;                                                     // 0x0000   (0x000C)
+    FVector                                            BoxExtent;                                                  // 0x000C   (0x000C)
+    float                                              SphereRadius;                                               // 0x0018   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.OrientedBox
-/// Size: 0x003C (60 bytes) (0x000000 - 0x00003C) align n/a MaxSize: 0x003C
+/// Size: 0x003C (60 bytes) (0x000000 - 0x00003C) align 4 MaxSize: 0x003C
 struct FOrientedBox
 { 
-    FVector                                            Center;                                                     // 0x0000   (0x000C) 
-    FVector                                            AxisX;                                                      // 0x000C   (0x000C) 
-    FVector                                            AxisY;                                                      // 0x0018   (0x000C) 
-    FVector                                            AxisZ;                                                      // 0x0024   (0x000C) 
-    float                                              ExtentX;                                                    // 0x0030   (0x0004) 
-    float                                              ExtentY;                                                    // 0x0034   (0x0004) 
-    float                                              ExtentZ;                                                    // 0x0038   (0x0004) 
+    FVector                                            Center;                                                     // 0x0000   (0x000C)
+    FVector                                            AxisX;                                                      // 0x000C   (0x000C)
+    FVector                                            AxisY;                                                      // 0x0018   (0x000C)
+    FVector                                            AxisZ;                                                      // 0x0024   (0x000C)
+    float                                              ExtentX;                                                    // 0x0030   (0x0004)
+    float                                              ExtentY;                                                    // 0x0034   (0x0004)
+    float                                              ExtentZ;                                                    // 0x0038   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Matrix
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 16 MaxSize: 0x0040
 struct FMatrix
 { 
-    FPlane                                             XPlane;                                                     // 0x0000   (0x0010) 
-    FPlane                                             YPlane;                                                     // 0x0010   (0x0010) 
-    FPlane                                             ZPlane;                                                     // 0x0020   (0x0010) 
-    FPlane                                             WPlane;                                                     // 0x0030   (0x0010) 
+    FPlane                                             XPlane;                                                     // 0x0000   (0x0010)
+    FPlane                                             YPlane;                                                     // 0x0010   (0x0010)
+    FPlane                                             ZPlane;                                                     // 0x0020   (0x0010)
+    FPlane                                             WPlane;                                                     // 0x0030   (0x0010)
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointFloat
-/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
+/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align 4 MaxSize: 0x0014
 struct FInterpCurvePointFloat
 { 
-    float                                              InVal;                                                      // 0x0000   (0x0004) 
-    float                                              OutVal;                                                     // 0x0004   (0x0004) 
-    float                                              ArriveTangent;                                              // 0x0008   (0x0004) 
-    float                                              LeaveTangent;                                               // 0x000C   (0x0004) 
-    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004)
+    float                                              OutVal;                                                     // 0x0004   (0x0004)
+    float                                              ArriveTangent;                                              // 0x0008   (0x0004)
+    float                                              LeaveTangent;                                               // 0x000C   (0x0004)
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0011   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveFloat
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FInterpCurveFloat
 { 
-    TArray<FInterpCurvePointFloat>                     Points;                                                     // 0x0000   (0x0010) 
-    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
+    TArray<FInterpCurvePointFloat>                     Points;                                                     // 0x0000   (0x0010)
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointVector2D
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 4 MaxSize: 0x0020
 struct FInterpCurvePointVector2D
 { 
-    float                                              InVal;                                                      // 0x0000   (0x0004) 
-    FVector2D                                          OutVal;                                                     // 0x0004   (0x0008) 
-    FVector2D                                          ArriveTangent;                                              // 0x000C   (0x0008) 
-    FVector2D                                          LeaveTangent;                                               // 0x0014   (0x0008) 
-    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x001C   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x001D   (0x0003) MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004)
+    FVector2D                                          OutVal;                                                     // 0x0004   (0x0008)
+    FVector2D                                          ArriveTangent;                                              // 0x000C   (0x0008)
+    FVector2D                                          LeaveTangent;                                               // 0x0014   (0x0008)
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x001C   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x001D   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveVector2D
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FInterpCurveVector2D
 { 
-    TArray<FInterpCurvePointVector2D>                  Points;                                                     // 0x0000   (0x0010) 
-    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
+    TArray<FInterpCurvePointVector2D>                  Points;                                                     // 0x0000   (0x0010)
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointVector
-/// Size: 0x002C (44 bytes) (0x000000 - 0x00002C) align n/a MaxSize: 0x002C
+/// Size: 0x002C (44 bytes) (0x000000 - 0x00002C) align 4 MaxSize: 0x002C
 struct FInterpCurvePointVector
 { 
-    float                                              InVal;                                                      // 0x0000   (0x0004) 
-    FVector                                            OutVal;                                                     // 0x0004   (0x000C) 
-    FVector                                            ArriveTangent;                                              // 0x0010   (0x000C) 
-    FVector                                            LeaveTangent;                                               // 0x001C   (0x000C) 
-    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0028   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0029   (0x0003) MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004)
+    FVector                                            OutVal;                                                     // 0x0004   (0x000C)
+    FVector                                            ArriveTangent;                                              // 0x0010   (0x000C)
+    FVector                                            LeaveTangent;                                               // 0x001C   (0x000C)
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0028   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0029   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveVector
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FInterpCurveVector
 { 
-    TArray<FInterpCurvePointVector>                    Points;                                                     // 0x0000   (0x0010) 
-    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
+    TArray<FInterpCurvePointVector>                    Points;                                                     // 0x0000   (0x0010)
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointQuat
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 16 MaxSize: 0x0050
 struct FInterpCurvePointQuat
 { 
-    float                                              InVal;                                                      // 0x0000   (0x0004) 
-    unsigned char                                      UnknownData02_6[0xC];                                       // 0x0004   (0x000C) MISSED
-    FQuat                                              OutVal;                                                     // 0x0010   (0x0010) 
-    FQuat                                              ArriveTangent;                                              // 0x0020   (0x0010) 
-    FQuat                                              LeaveTangent;                                               // 0x0030   (0x0010) 
-    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0040   (0x0001) 
-    unsigned char                                      UnknownData03_7[0xF];                                       // 0x0041   (0x000F) MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004)
+    unsigned char                                      UnknownData00_6[0xC];                                       // 0x0004   (0x000C) MISSED
+    FQuat                                              OutVal;                                                     // 0x0010   (0x0010)
+    FQuat                                              ArriveTangent;                                              // 0x0020   (0x0010)
+    FQuat                                              LeaveTangent;                                               // 0x0030   (0x0010)
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0040   (0x0001)
+    unsigned char                                      UnknownData01_7[0xF];                                       // 0x0041   (0x000F) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveQuat
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FInterpCurveQuat
 { 
-    TArray<FInterpCurvePointQuat>                      Points;                                                     // 0x0000   (0x0010) 
-    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
+    TArray<FInterpCurvePointQuat>                      Points;                                                     // 0x0000   (0x0010)
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointTwoVectors
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 4 MaxSize: 0x0050
 struct FInterpCurvePointTwoVectors
 { 
-    float                                              InVal;                                                      // 0x0000   (0x0004) 
-    FTwoVectors                                        OutVal;                                                     // 0x0004   (0x0018) 
-    FTwoVectors                                        ArriveTangent;                                              // 0x001C   (0x0018) 
-    FTwoVectors                                        LeaveTangent;                                               // 0x0034   (0x0018) 
-    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x004C   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x004D   (0x0003) MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004)
+    FTwoVectors                                        OutVal;                                                     // 0x0004   (0x0018)
+    FTwoVectors                                        ArriveTangent;                                              // 0x001C   (0x0018)
+    FTwoVectors                                        LeaveTangent;                                               // 0x0034   (0x0018)
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x004C   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x004D   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveTwoVectors
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FInterpCurveTwoVectors
 { 
-    TArray<FInterpCurvePointTwoVectors>                Points;                                                     // 0x0000   (0x0010) 
-    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
+    TArray<FInterpCurvePointTwoVectors>                Points;                                                     // 0x0000   (0x0010)
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointLinearColor
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 4 MaxSize: 0x0038
 struct FInterpCurvePointLinearColor
 { 
-    float                                              InVal;                                                      // 0x0000   (0x0004) 
-    FLinearColor                                       OutVal;                                                     // 0x0004   (0x0010) 
-    FLinearColor                                       ArriveTangent;                                              // 0x0014   (0x0010) 
-    FLinearColor                                       LeaveTangent;                                               // 0x0024   (0x0010) 
-    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0034   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0035   (0x0003) MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004)
+    FLinearColor                                       OutVal;                                                     // 0x0004   (0x0010)
+    FLinearColor                                       ArriveTangent;                                              // 0x0014   (0x0010)
+    FLinearColor                                       LeaveTangent;                                               // 0x0024   (0x0010)
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0034   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0035   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveLinearColor
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FInterpCurveLinearColor
 { 
-    TArray<FInterpCurvePointLinearColor>               Points;                                                     // 0x0000   (0x0010) 
-    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
+    TArray<FInterpCurvePointLinearColor>               Points;                                                     // 0x0000   (0x0010)
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Transform
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 16 MaxSize: 0x0030
 struct FTransform
 { 
-    FQuat                                              Rotation;                                                   // 0x0000   (0x0010) 
-    FVector                                            Translation;                                                // 0x0010   (0x000C) 
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x001C   (0x0004) MISSED
-    FVector                                            Scale3D;                                                    // 0x0020   (0x000C) 
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x002C   (0x0004) MISSED
+    FQuat                                              Rotation;                                                   // 0x0000   (0x0010)
+    FVector                                            Translation;                                                // 0x0010   (0x000C)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x001C   (0x0004) MISSED
+    FVector                                            Scale3D;                                                    // 0x0020   (0x000C)
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Struct /Script/CoreUObject.RandomStream
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FRandomStream
 { 
-    int32_t                                            InitialSeed;                                                // 0x0000   (0x0004) 
-    int32_t                                            Seed;                                                       // 0x0004   (0x0004) 
+    int32_t                                            InitialSeed;                                                // 0x0000   (0x0004)
+    int32_t                                            Seed;                                                       // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.DateTime
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 8 MaxSize: 0x0008
 struct FDateTime
 { 
-    unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008) MISSED
+    unsigned char                                      UnknownData00_2[0x8];                                       // 0x0000   (0x0008) MISSED
 };
 
 /// Struct /Script/CoreUObject.FrameNumber
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
 struct FFrameNumber
 { 
-    int32_t                                            Value;                                                      // 0x0000   (0x0004) 
+    int32_t                                            Value;                                                      // 0x0000   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.FrameRate
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FFrameRate
 { 
-    int32_t                                            Numerator;                                                  // 0x0000   (0x0004) 
-    int32_t                                            Denominator;                                                // 0x0004   (0x0004) 
+    int32_t                                            Numerator;                                                  // 0x0000   (0x0004)
+    int32_t                                            Denominator;                                                // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.FrameTime
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FFrameTime
 { 
-    FFrameNumber                                       FrameNumber;                                                // 0x0000   (0x0004) 
-    float                                              SubFrame;                                                   // 0x0004   (0x0004) 
+    FFrameNumber                                       FrameNumber;                                                // 0x0000   (0x0004)
+    float                                              SubFrame;                                                   // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.QualifiedFrameTime
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FQualifiedFrameTime
 { 
-    FFrameTime                                         Time;                                                       // 0x0000   (0x0008) 
-    FFrameRate                                         Rate;                                                       // 0x0008   (0x0008) 
+    FFrameTime                                         Time;                                                       // 0x0000   (0x0008)
+    FFrameRate                                         Rate;                                                       // 0x0008   (0x0008)
 };
 
 /// Struct /Script/CoreUObject.Timecode
-/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
+/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align 4 MaxSize: 0x0014
 struct FTimecode
 { 
-    int32_t                                            Hours;                                                      // 0x0000   (0x0004) 
-    int32_t                                            Minutes;                                                    // 0x0004   (0x0004) 
-    int32_t                                            Seconds;                                                    // 0x0008   (0x0004) 
-    int32_t                                            Frames;                                                     // 0x000C   (0x0004) 
-    bool                                               bDropFrameFormat;                                           // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003) MISSED
+    int32_t                                            Hours;                                                      // 0x0000   (0x0004)
+    int32_t                                            Minutes;                                                    // 0x0004   (0x0004)
+    int32_t                                            Seconds;                                                    // 0x0008   (0x0004)
+    int32_t                                            Frames;                                                     // 0x000C   (0x0004)
+    bool                                               bDropFrameFormat;                                           // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0011   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.Timespan
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 8 MaxSize: 0x0008
 struct FTimespan
 { 
-    unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008) MISSED
+    unsigned char                                      UnknownData00_2[0x8];                                       // 0x0000   (0x0008) MISSED
 };
 
 /// Struct /Script/CoreUObject.SoftObjectPath
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FSoftObjectPath
 { 
-    FName                                              AssetPathName;                                              // 0x0000   (0x0008) 
-    FString                                            SubPathString;                                              // 0x0008   (0x0010) 
+    FName                                              AssetPathName;                                              // 0x0000   (0x0008)
+    FString                                            SubPathString;                                              // 0x0008   (0x0010)
 };
 
 /// Struct /Script/CoreUObject.SoftClassPath
-/// Size: 0x0018 (24 bytes) (0x000018 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000018 - 0x000018) align 8 MaxSize: 0x0018
 struct FSoftClassPath : FSoftObjectPath
 { 
 };
 
 /// Struct /Script/CoreUObject.PrimaryAssetType
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FPrimaryAssetType
 { 
-    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    FName                                              Name;                                                       // 0x0000   (0x0008)
 };
 
 /// Struct /Script/CoreUObject.PrimaryAssetId
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FPrimaryAssetId
 { 
-    FPrimaryAssetType                                  PrimaryAssetType;                                           // 0x0000   (0x0008) 
-    FName                                              PrimaryAssetName;                                           // 0x0008   (0x0008) 
+    FPrimaryAssetType                                  PrimaryAssetType;                                           // 0x0000   (0x0008)
+    FName                                              PrimaryAssetName;                                           // 0x0008   (0x0008)
 };
 
 /// Struct /Script/CoreUObject.FallbackStruct
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
 struct FFallbackStruct
 { 
-    unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/CoreUObject.FloatRangeBound
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FFloatRangeBound
 { 
-    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    float                                              Value;                                                      // 0x0004   (0x0004) 
+    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    float                                              Value;                                                      // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.FloatRange
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FFloatRange
 { 
-    FFloatRangeBound                                   LowerBound;                                                 // 0x0000   (0x0008) 
-    FFloatRangeBound                                   UpperBound;                                                 // 0x0008   (0x0008) 
+    FFloatRangeBound                                   LowerBound;                                                 // 0x0000   (0x0008)
+    FFloatRangeBound                                   UpperBound;                                                 // 0x0008   (0x0008)
 };
 
 /// Struct /Script/CoreUObject.Int32RangeBound
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FInt32RangeBound
 { 
-    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    int32_t                                            Value;                                                      // 0x0004   (0x0004) 
+    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    int32_t                                            Value;                                                      // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Int32Range
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FInt32Range
 { 
-    FInt32RangeBound                                   LowerBound;                                                 // 0x0000   (0x0008) 
-    FInt32RangeBound                                   UpperBound;                                                 // 0x0008   (0x0008) 
+    FInt32RangeBound                                   LowerBound;                                                 // 0x0000   (0x0008)
+    FInt32RangeBound                                   UpperBound;                                                 // 0x0008   (0x0008)
 };
 
 /// Struct /Script/CoreUObject.FrameNumberRangeBound
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FFrameNumberRangeBound
 { 
-    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    FFrameNumber                                       Value;                                                      // 0x0004   (0x0004) 
+    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    FFrameNumber                                       Value;                                                      // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.FrameNumberRange
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FFrameNumberRange
 { 
-    FFrameNumberRangeBound                             LowerBound;                                                 // 0x0000   (0x0008) 
-    FFrameNumberRangeBound                             UpperBound;                                                 // 0x0008   (0x0008) 
+    FFrameNumberRangeBound                             LowerBound;                                                 // 0x0000   (0x0008)
+    FFrameNumberRangeBound                             UpperBound;                                                 // 0x0008   (0x0008)
 };
 
 /// Struct /Script/CoreUObject.FloatInterval
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FFloatInterval
 { 
-    float                                              Min;                                                        // 0x0000   (0x0004) 
-    float                                              Max;                                                        // 0x0004   (0x0004) 
+    float                                              Min;                                                        // 0x0000   (0x0004)
+    float                                              Max;                                                        // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.Int32Interval
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FInt32Interval
 { 
-    int32_t                                            Min;                                                        // 0x0000   (0x0004) 
-    int32_t                                            Max;                                                        // 0x0004   (0x0004) 
+    int32_t                                            Min;                                                        // 0x0000   (0x0004)
+    int32_t                                            Max;                                                        // 0x0004   (0x0004)
 };
 
 /// Struct /Script/CoreUObject.PolyglotTextData
-/// Size: 0x00B8 (184 bytes) (0x000000 - 0x0000B8) align n/a MaxSize: 0x00B8
+/// Size: 0x00B8 (184 bytes) (0x000000 - 0x0000B8) align 8 MaxSize: 0x00B8
 struct FPolyglotTextData
 { 
-    ELocalizedTextSourceCategory                       Category;                                                   // 0x0000   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0001   (0x0007) MISSED
-    FString                                            NativeCulture;                                              // 0x0008   (0x0010) 
-    FString                                            Namespace;                                                  // 0x0018   (0x0010) 
-    FString                                            Key;                                                        // 0x0028   (0x0010) 
-    FString                                            NativeString;                                               // 0x0038   (0x0010) 
-    TMap<FString, FString>                             LocalizedStrings;                                           // 0x0048   (0x0050) 
-    bool                                               bIsMinimalPatch;                                            // 0x0098   (0x0001) 
-    unsigned char                                      UnknownData03_6[0x7];                                       // 0x0099   (0x0007) MISSED
-    FText                                              CachedText;                                                 // 0x00A0   (0x0018) 
+    ELocalizedTextSourceCategory                       Category;                                                   // 0x0000   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    FString                                            NativeCulture;                                              // 0x0008   (0x0010)
+    FString                                            Namespace;                                                  // 0x0018   (0x0010)
+    FString                                            Key;                                                        // 0x0028   (0x0010)
+    FString                                            NativeString;                                               // 0x0038   (0x0010)
+    TMap<FString, FString>                             LocalizedStrings;                                           // 0x0048   (0x0050)
+    bool                                               bIsMinimalPatch;                                            // 0x0098   (0x0001)
+    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0099   (0x0007) MISSED
+    FText                                              CachedText;                                                 // 0x00A0   (0x0018)
 };
 
 /// Struct /Script/CoreUObject.AutomationEvent
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
 struct FAutomationEvent
 { 
-    EAutomationEventType                               Type;                                                       // 0x0000   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0001   (0x0007) MISSED
-    FString                                            Message;                                                    // 0x0008   (0x0010) 
-    FString                                            Context;                                                    // 0x0018   (0x0010) 
-    FGuid                                              Artifact;                                                   // 0x0028   (0x0010) 
+    EAutomationEventType                               Type;                                                       // 0x0000   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    FString                                            Message;                                                    // 0x0008   (0x0010)
+    FString                                            Context;                                                    // 0x0018   (0x0010)
+    FGuid                                              Artifact;                                                   // 0x0028   (0x0010)
 };
 
 /// Struct /Script/CoreUObject.AutomationExecutionEntry
-/// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align n/a MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align 8 MaxSize: 0x0058
 struct FAutomationExecutionEntry
 { 
-    FAutomationEvent                                   Event;                                                      // 0x0000   (0x0038) 
-    FString                                            Filename;                                                   // 0x0038   (0x0010) 
-    int32_t                                            LineNumber;                                                 // 0x0048   (0x0004) 
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x004C   (0x0004) MISSED
-    FDateTime                                          Timestamp;                                                  // 0x0050   (0x0008) 
+    FAutomationEvent                                   Event;                                                      // 0x0000   (0x0038)
+    FString                                            Filename;                                                   // 0x0038   (0x0010)
+    int32_t                                            LineNumber;                                                 // 0x0048   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x004C   (0x0004) MISSED
+    FDateTime                                          Timestamp;                                                  // 0x0050   (0x0008)
 };
 
 /// Struct /Script/CoreUObject.ARFilter
-/// Size: 0x00F0 (240 bytes) (0x000000 - 0x0000F0) align n/a MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000000 - 0x0000F0) align 8 MaxSize: 0x00F0
 struct FARFilter
 { 
-    TArray<FName>                                      PackageNames;                                               // 0x0000   (0x0010) 
-    TArray<FName>                                      PackagePaths;                                               // 0x0010   (0x0010) 
-    TArray<FName>                                      ObjectPaths;                                                // 0x0020   (0x0010) 
-    TArray<FName>                                      ClassNames;                                                 // 0x0030   (0x0010) 
-    unsigned char                                      UnknownData02_6[0x50];                                      // 0x0040   (0x0050) MISSED
-    TSet<FName>                                        RecursiveClassesExclusionSet;                               // 0x0090   (0x0050) 
-    bool                                               bRecursivePaths;                                            // 0x00E0   (0x0001) 
-    bool                                               bRecursiveClasses;                                          // 0x00E1   (0x0001) 
-    bool                                               bIncludeOnlyOnDiskAssets;                                   // 0x00E2   (0x0001) 
-    unsigned char                                      UnknownData03_7[0xD];                                       // 0x00E3   (0x000D) MISSED
+    TArray<FName>                                      PackageNames;                                               // 0x0000   (0x0010)
+    TArray<FName>                                      PackagePaths;                                               // 0x0010   (0x0010)
+    TArray<FName>                                      ObjectPaths;                                                // 0x0020   (0x0010)
+    TArray<FName>                                      ClassNames;                                                 // 0x0030   (0x0010)
+    unsigned char                                      UnknownData00_6[0x50];                                      // 0x0040   (0x0050) MISSED
+    TSet<FName>                                        RecursiveClassesExclusionSet;                               // 0x0090   (0x0050)
+    bool                                               bRecursivePaths;                                            // 0x00E0   (0x0001)
+    bool                                               bRecursiveClasses;                                          // 0x00E1   (0x0001)
+    bool                                               bIncludeOnlyOnDiskAssets;                                   // 0x00E2   (0x0001)
+    unsigned char                                      UnknownData01_7[0xD];                                       // 0x00E3   (0x000D) MISSED
 };
 
 /// Struct /Script/CoreUObject.AssetBundleEntry
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
 struct FAssetBundleEntry
 { 
-    FPrimaryAssetId                                    BundleScope;                                                // 0x0000   (0x0010) 
-    FName                                              BundleName;                                                 // 0x0010   (0x0008) 
-    TArray<FSoftObjectPath>                            BundleAssets;                                               // 0x0018   (0x0010) 
+    FPrimaryAssetId                                    BundleScope;                                                // 0x0000   (0x0010)
+    FName                                              BundleName;                                                 // 0x0010   (0x0008)
+    TArray<FSoftObjectPath>                            BundleAssets;                                               // 0x0018   (0x0010)
 };
 
 /// Struct /Script/CoreUObject.AssetBundleData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FAssetBundleData
 { 
-    TArray<FAssetBundleEntry>                          Bundles;                                                    // 0x0000   (0x0010) 
+    TArray<FAssetBundleEntry>                          Bundles;                                                    // 0x0000   (0x0010)
 };
 
 /// Struct /Script/CoreUObject.AssetData
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
 struct FAssetData
 { 
-    FName                                              ObjectPath;                                                 // 0x0000   (0x0008) 
-    FName                                              PackageName;                                                // 0x0008   (0x0008) 
-    FName                                              PackagePath;                                                // 0x0010   (0x0008) 
-    FName                                              AssetName;                                                  // 0x0018   (0x0008) 
-    FName                                              AssetClass;                                                 // 0x0020   (0x0008) 
-    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0028   (0x0028) MISSED
+    FName                                              ObjectPath;                                                 // 0x0000   (0x0008)
+    FName                                              PackageName;                                                // 0x0008   (0x0008)
+    FName                                              PackagePath;                                                // 0x0010   (0x0008)
+    FName                                              AssetName;                                                  // 0x0018   (0x0008)
+    FName                                              AssetClass;                                                 // 0x0020   (0x0008)
+    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0028   (0x0028) MISSED
 };
 
 #pragma pack(pop)

@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -31,7 +33,7 @@ enum class EProcMeshVertexType : uint8_t
 };
 
 /// Class /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UKismetProceduralMeshLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -51,7 +53,7 @@ public:
     // [10] OutOtherSideBound : const FBoxSphereBounds&
     // [11] bSuccessMakeCap : const bool&
     // [12] bIsMakedConvexHullCap : const bool&
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UProceduralMeshComponent*, const FVector, const FVector, const bool, const UProceduralMeshComponent*&, const EProcMeshSliceCapOption, const UMaterialInterface*, const bool, const FBoxSphereBounds&, const FBoxSphereBounds&, const FBoxSphereBounds&, const bool&, const bool&> SliceProceduralMeshExtraInfo = { 0x1434bd0, 0 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UProceduralMeshComponent*, const FVector, const FVector, const bool, const UProceduralMeshComponent*&, const EProcMeshSliceCapOption, const UMaterialInterface*, const bool, const FBoxSphereBounds&, const FBoxSphereBounds&, const FBoxSphereBounds&, const bool&, const bool&> SliceProceduralMeshExtraInfo = { 0x1438fd0, 0 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.SliceProceduralMesh
     // [0] InProcMesh : const UProceduralMeshComponent*
     // [1] PlanePosition : const FVector
@@ -60,7 +62,7 @@ public:
     // [4] OutOtherHalfProcMesh : const UProceduralMeshComponent*&
     // [5] CapOption : const EProcMeshSliceCapOption
     // [6] CapMaterial : const UMaterialInterface*
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UProceduralMeshComponent*, const FVector, const FVector, const bool, const UProceduralMeshComponent*&, const EProcMeshSliceCapOption, const UMaterialInterface*> SliceProceduralMesh = { 0x1435380, 1 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UProceduralMeshComponent*, const FVector, const FVector, const bool, const UProceduralMeshComponent*&, const EProcMeshSliceCapOption, const UMaterialInterface*> SliceProceduralMesh = { 0x1439780, 1 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.GetSectionFromStaticMesh
     // [0] InMesh : const UStaticMesh*
     // [1] LODIndex : const int32_t
@@ -70,7 +72,7 @@ public:
     // [5] Normals : const TArray<FVector>&
     // [6] UVs : const TArray<FVector2D>&
     // [7] Tangents : const TArray<FProcMeshTangent>&
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UStaticMesh*, const int32_t, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FProcMeshTangent>&> GetSectionFromStaticMesh = { 0x14362d0, 2 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UStaticMesh*, const int32_t, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FProcMeshTangent>&> GetSectionFromStaticMesh = { 0x143a6d0, 2 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.GetSectionFromProceduralMesh
     // [0] InProcMesh : const UProceduralMeshComponent*
     // [1] SectionIndex : const int32_t
@@ -79,7 +81,7 @@ public:
     // [4] Normals : const TArray<FVector>&
     // [5] UVs : const TArray<FVector2D>&
     // [6] Tangents : const TArray<FProcMeshTangent>&
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UProceduralMeshComponent*, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FProcMeshTangent>&> GetSectionFromProceduralMesh = { 0x14357b0, 3 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UProceduralMeshComponent*, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FProcMeshTangent>&> GetSectionFromProceduralMesh = { 0x1439bb0, 3 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.GenerateBoxMesh
     // [0] BoxRadius : const FVector
     // [1] Vertices : const TArray<FVector>&
@@ -87,12 +89,12 @@ public:
     // [3] Normals : const TArray<FVector>&
     // [4] UVs : const TArray<FVector2D>&
     // [5] Tangents : const TArray<FProcMeshTangent>&
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const FVector, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FProcMeshTangent>&> GenerateBoxMesh = { 0x1438400, 4 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const FVector, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FProcMeshTangent>&> GenerateBoxMesh = { 0x143c800, 4 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.CreateStaticMeshFromProceduralMesh
     // [0] InProcMesh : const UProceduralMeshComponent*
     // [1] InMakedPackagePath : const FString
     // [2] InMakedMeshName : const FString
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, bool, const UProceduralMeshComponent*, const FString, const FString> CreateStaticMeshFromProceduralMesh = { 0x14349b0, 5 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, bool, const UProceduralMeshComponent*, const FString, const FString> CreateStaticMeshFromProceduralMesh = { 0x1438db0, 5 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.CreateGridMeshWelded
     // [0] NumX : const int32_t
     // [1] NumY : const int32_t
@@ -100,13 +102,13 @@ public:
     // [3] Vertices : const TArray<FVector>&
     // [4] UVs : const TArray<FVector2D>&
     // [5] GridSpacing : const float
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const int32_t, const int32_t, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const float> CreateGridMeshWelded = { 0x1437230, 6 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const int32_t, const int32_t, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const float> CreateGridMeshWelded = { 0x143b630, 6 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.CreateGridMeshTriangles
     // [0] NumX : const int32_t
     // [1] NumY : const int32_t
     // [2] bWinding : const bool
     // [3] Triangles : const TArray<int32_t>&
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const int32_t, const int32_t, const bool, const TArray<int32_t>&> CreateGridMeshTriangles = { 0x1437960, 7 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const int32_t, const int32_t, const bool, const TArray<int32_t>&> CreateGridMeshTriangles = { 0x143bd60, 7 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.CreateGridMeshSplit
     // [0] NumX : const int32_t
     // [1] NumY : const int32_t
@@ -115,88 +117,88 @@ public:
     // [4] UVs : const TArray<FVector2D>&
     // [5] UV1s : const TArray<FVector2D>&
     // [6] GridSpacing : const float
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const int32_t, const int32_t, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const float> CreateGridMeshSplit = { 0x1436820, 8 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const int32_t, const int32_t, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const float> CreateGridMeshSplit = { 0x143ac20, 8 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.CopyProceduralMeshFromStaticMeshComponent
     // [0] StaticMeshComponent : const UStaticMeshComponent*
     // [1] LODIndex : const int32_t
     // [2] ProcMeshComponent : const UProceduralMeshComponent*
     // [3] bCreateCollision : const bool
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UStaticMeshComponent*, const int32_t, const UProceduralMeshComponent*, const bool> CopyProceduralMeshFromStaticMeshComponent = { 0x1435de0, 9 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const UStaticMeshComponent*, const int32_t, const UProceduralMeshComponent*, const bool> CopyProceduralMeshFromStaticMeshComponent = { 0x143a1e0, 9 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.ConvertQuadToTriangles
     // [0] Triangles : const TArray<int32_t>&
     // [1] Vert0 : const int32_t
     // [2] Vert1 : const int32_t
     // [3] Vert2 : const int32_t
     // [4] Vert3 : const int32_t
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const TArray<int32_t>&, const int32_t, const int32_t, const int32_t, const int32_t> ConvertQuadToTriangles = { 0x1437d20, 10 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const TArray<int32_t>&, const int32_t, const int32_t, const int32_t, const int32_t> ConvertQuadToTriangles = { 0x143c120, 10 };
     // Function /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary.CalculateTangentsForMesh
     // [0] Vertices : const TArray<FVector>&
     // [1] Triangles : const TArray<int32_t>&
     // [2] UVs : const TArray<FVector2D>&
     // [3] Normals : const TArray<FVector>&
     // [4] Tangents : const TArray<FProcMeshTangent>&
-    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector2D>&, const TArray<FVector>&, const TArray<FProcMeshTangent>&> CalculateTangentsForMesh = { 0x1438040, 11 };
+    constexpr static const FunctionPointer<UKismetProceduralMeshLibrary, void, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector2D>&, const TArray<FVector>&, const TArray<FProcMeshTangent>&> CalculateTangentsForMesh = { 0x143c440, 11 };
 };
 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshTangent
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FProcMeshTangent
 { 
-    FVector                                            TangentX;                                                   // 0x0000   (0x000C) 
-    bool                                               bFlipTangentY;                                              // 0x000C   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x000D   (0x0003) MISSED
+    FVector                                            TangentX;                                                   // 0x0000   (0x000C)
+    bool                                               bFlipTangentY;                                              // 0x000C   (0x0001)
+    unsigned char                                      UnknownData00_7[0x3];                                       // 0x000D   (0x0003) MISSED
 };
 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshVertex
-/// Size: 0x0080 (128 bytes) (0x000000 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000000 - 0x000080) align 4 MaxSize: 0x0080
 struct FProcMeshVertex
 { 
-    FVector                                            position;                                                   // 0x0000   (0x000C) 
-    int32_t                                            VertexIndex;                                                // 0x000C   (0x0004) 
-    float                                              SkinWeight;                                                 // 0x0010   (0x0004) 
-    FVector                                            OrigPosition;                                               // 0x0014   (0x000C) 
-    TEnumAsByte<EProcMeshVertexType>                   VertexType;                                                 // 0x0020   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0021   (0x0003) MISSED
-    FVector                                            Normal;                                                     // 0x0024   (0x000C) 
-    FProcMeshTangent                                   Tangent;                                                    // 0x0030   (0x0010) 
-    FVector                                            OrigNormal;                                                 // 0x0040   (0x000C) 
-    FProcMeshTangent                                   OrigTangent;                                                // 0x004C   (0x0010) 
-    FColor                                             Color;                                                      // 0x005C   (0x0004) 
-    FVector2D                                          UV0;                                                        // 0x0060   (0x0008) 
-    FVector2D                                          UV1;                                                        // 0x0068   (0x0008) 
-    FVector2D                                          UV2;                                                        // 0x0070   (0x0008) 
-    FVector2D                                          UV3;                                                        // 0x0078   (0x0008) 
+    FVector                                            position;                                                   // 0x0000   (0x000C)
+    int32_t                                            VertexIndex;                                                // 0x000C   (0x0004)
+    float                                              SkinWeight;                                                 // 0x0010   (0x0004)
+    FVector                                            OrigPosition;                                               // 0x0014   (0x000C)
+    TEnumAsByte<EProcMeshVertexType>                   VertexType;                                                 // 0x0020   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0021   (0x0003) MISSED
+    FVector                                            Normal;                                                     // 0x0024   (0x000C)
+    FProcMeshTangent                                   Tangent;                                                    // 0x0030   (0x0010)
+    FVector                                            OrigNormal;                                                 // 0x0040   (0x000C)
+    FProcMeshTangent                                   OrigTangent;                                                // 0x004C   (0x0010)
+    FColor                                             Color;                                                      // 0x005C   (0x0004)
+    FVector2D                                          UV0;                                                        // 0x0060   (0x0008)
+    FVector2D                                          UV1;                                                        // 0x0068   (0x0008)
+    FVector2D                                          UV2;                                                        // 0x0070   (0x0008)
+    FVector2D                                          UV3;                                                        // 0x0078   (0x0008)
 };
 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshSection
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
 struct FProcMeshSection
 { 
-    TArray<FProcMeshVertex>                            ProcVertexBuffer;                                           // 0x0000   (0x0010) 
-    TArray<uint32_t>                                   ProcIndexBuffer;                                            // 0x0010   (0x0010) 
-    FBox                                               SectionLocalBox;                                            // 0x0020   (0x001C) 
-    bool                                               bEnableCollision;                                           // 0x003C   (0x0001) 
-    bool                                               bSectionVisible;                                            // 0x003D   (0x0001) 
-    bool                                               bIsCap;                                                     // 0x003E   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x1];                                       // 0x003F   (0x0001) MISSED
+    TArray<FProcMeshVertex>                            ProcVertexBuffer;                                           // 0x0000   (0x0010)
+    TArray<uint32_t>                                   ProcIndexBuffer;                                            // 0x0010   (0x0010)
+    FBox                                               SectionLocalBox;                                            // 0x0020   (0x001C)
+    bool                                               bEnableCollision;                                           // 0x003C   (0x0001)
+    bool                                               bSectionVisible;                                            // 0x003D   (0x0001)
+    bool                                               bIsCap;                                                     // 0x003E   (0x0001)
+    unsigned char                                      UnknownData00_7[0x1];                                       // 0x003F   (0x0001) MISSED
 };
 
 /// Class /Script/ProceduralMeshComponent.ProceduralMeshComponent
-/// Size: 0x05D0 (1488 bytes) (0x000560 - 0x0005D0) align n/a MaxSize: 0x05D0
+/// Size: 0x05D0 (1488 bytes) (0x000560 - 0x0005D0) align 16 MaxSize: 0x05D0
 class UProceduralMeshComponent : public UMeshComponent
 { 
 public:
-    unsigned char                                      UnknownData04_8[0x8];                                       // 0x0560   (0x0008) MISSED
-    bool                                               bUseComplexAsSimpleCollision;                               // 0x0568   (0x0001) 
-    bool                                               bUseAsyncCooking;                                           // 0x0569   (0x0001) 
-    unsigned char                                      UnknownData05_6[0x6];                                       // 0x056A   (0x0006) MISSED
-    class UBodySetup*                                  ProcMeshBodySetup;                                          // 0x0570   (0x0008) 
-    TArray<FProcMeshSection>                           ProcMeshSections;                                           // 0x0578   (0x0010) 
-    TArray<FKConvexElem>                               CollisionConvexElems;                                       // 0x0588   (0x0010) 
-    FBoxSphereBounds                                   LocalBounds;                                                // 0x0598   (0x001C) 
-    unsigned char                                      UnknownData06_6[0x4];                                       // 0x05B4   (0x0004) MISSED
-    TArray<class UBodySetup*>                          AsyncBodySetupQueue;                                        // 0x05B8   (0x0010) 
-    unsigned char                                      UnknownData07_7[0x8];                                       // 0x05C8   (0x0008) MISSED
+    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0560   (0x0008) MISSED
+    bool                                               bUseComplexAsSimpleCollision;                               // 0x0568   (0x0001)
+    bool                                               bUseAsyncCooking;                                           // 0x0569   (0x0001)
+    unsigned char                                      UnknownData01_6[0x6];                                       // 0x056A   (0x0006) MISSED
+    class UBodySetup*                                  ProcMeshBodySetup;                                          // 0x0570   (0x0008)
+    TArray<FProcMeshSection>                           ProcMeshSections;                                           // 0x0578   (0x0010)
+    TArray<FKConvexElem>                               CollisionConvexElems;                                       // 0x0588   (0x0010)
+    FBoxSphereBounds                                   LocalBounds;                                                // 0x0598   (0x001C)
+    unsigned char                                      UnknownData02_6[0x4];                                       // 0x05B4   (0x0004) MISSED
+    TArray<class UBodySetup*>                          AsyncBodySetupQueue;                                        // 0x05B8   (0x0010)
+    unsigned char                                      UnknownData03_7[0x8];                                       // 0x05C8   (0x0008) MISSED
 
     /// Functions
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection_LinearColor
@@ -209,7 +211,7 @@ public:
     // [6] UV3 : const TArray<FVector2D>&
     // [7] VertexColors : const TArray<FLinearColor>&
     // [8] Tangents : const TArray<FProcMeshTangent>&
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const TArray<FVector>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FLinearColor>&, const TArray<FProcMeshTangent>&> UpdateMeshSection_LinearColor = { 0x1439e80, 0 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const TArray<FVector>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FLinearColor>&, const TArray<FProcMeshTangent>&> UpdateMeshSection_LinearColor = { 0x143e280, 0 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection
     // [0] SectionIndex : const int32_t
     // [1] Vertices : const TArray<FVector>&
@@ -217,16 +219,16 @@ public:
     // [3] UV0 : const TArray<FVector2D>&
     // [4] VertexColors : const TArray<FColor>&
     // [5] Tangents : const TArray<FProcMeshTangent>&
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const TArray<FVector>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FColor>&, const TArray<FProcMeshTangent>&> UpdateMeshSection = { 0x143a540, 1 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const TArray<FVector>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FColor>&, const TArray<FProcMeshTangent>&> UpdateMeshSection = { 0x143e940, 1 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.SetMeshSectionVisible
     // [0] SectionIndex : const int32_t
     // [1] bNewVisibility : const bool
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const bool> SetMeshSectionVisible = { 0x1439ac0, 2 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const bool> SetMeshSectionVisible = { 0x143dec0, 2 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.IsMeshSectionVisible
     // [0] SectionIndex : const int32_t
-    constexpr static const FunctionPointer<UProceduralMeshComponent, bool, const int32_t> IsMeshSectionVisible = { 0x14399c0, 3 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, bool, const int32_t> IsMeshSectionVisible = { 0x143ddc0, 3 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.GetNumSections
-    constexpr static const FunctionPointer<UProceduralMeshComponent, int32_t> GetNumSections = { 0x14399a0, 4 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, int32_t> GetNumSections = { 0x143dda0, 4 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.CreateMeshSection_LinearColor
     // [0] SectionIndex : const int32_t
     // [1] Vertices : const TArray<FVector>&
@@ -239,7 +241,7 @@ public:
     // [8] VertexColors : const TArray<FLinearColor>&
     // [9] Tangents : const TArray<FProcMeshTangent>&
     // [10] bCreateCollision : const bool
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FLinearColor>&, const TArray<FProcMeshTangent>&, const bool> CreateMeshSection_LinearColor = { 0x143a9c0, 5 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FVector2D>&, const TArray<FLinearColor>&, const TArray<FProcMeshTangent>&, const bool> CreateMeshSection_LinearColor = { 0x143edc0, 5 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.CreateMeshSection
     // [0] SectionIndex : const int32_t
     // [1] Vertices : const TArray<FVector>&
@@ -249,17 +251,17 @@ public:
     // [5] VertexColors : const TArray<FColor>&
     // [6] Tangents : const TArray<FProcMeshTangent>&
     // [7] bCreateCollision : const bool
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FColor>&, const TArray<FProcMeshTangent>&, const bool> CreateMeshSection = { 0x143b130, 6 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<FVector2D>&, const TArray<FColor>&, const TArray<FProcMeshTangent>&, const bool> CreateMeshSection = { 0x143f530, 6 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.ClearMeshSection
     // [0] SectionIndex : const int32_t
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t> ClearMeshSection = { 0x1439d80, 7 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const int32_t> ClearMeshSection = { 0x143e180, 7 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.ClearCollisionConvexMeshes
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void> ClearCollisionConvexMeshes = { 0x14391e0, 8 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void> ClearCollisionConvexMeshes = { 0x143d5e0, 8 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.ClearAllMeshSections
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void> ClearAllMeshSections = { 0x1439d60, 9 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void> ClearAllMeshSections = { 0x143e160, 9 };
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.AddCollisionConvexMesh
     // [0] ConvexVerts : const TArray<FVector>
-    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const TArray<FVector>> AddCollisionConvexMesh = { 0x1439220, 10 };
+    constexpr static const FunctionPointer<UProceduralMeshComponent, void, const TArray<FVector>> AddCollisionConvexMesh = { 0x143d620, 10 };
 };
 
 #pragma pack(pop)

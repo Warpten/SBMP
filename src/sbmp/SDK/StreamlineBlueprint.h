@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -79,7 +81,7 @@ enum class EStreamlineReflexMode : uint8_t
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UStreamlineLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -87,13 +89,13 @@ public:
     /// Functions
     // Function /Script/StreamlineBlueprint.StreamlineLibrary.QueryStreamlineFeatureSupport
     // [0] Feature : const EStreamlineFeature
-    constexpr static const FunctionPointer<UStreamlineLibrary, EStreamlineFeatureSupport, const EStreamlineFeature> QueryStreamlineFeatureSupport = { 0x1578490, 0 };
+    constexpr static const FunctionPointer<UStreamlineLibrary, EStreamlineFeatureSupport, const EStreamlineFeature> QueryStreamlineFeatureSupport = { 0x157d0f0, 0 };
     // Function /Script/StreamlineBlueprint.StreamlineLibrary.IsStreamlineFeatureSupported
     // [0] Feature : const EStreamlineFeature
-    constexpr static const FunctionPointer<UStreamlineLibrary, bool, const EStreamlineFeature> IsStreamlineFeatureSupported = { 0x15785a0, 1 };
+    constexpr static const FunctionPointer<UStreamlineLibrary, bool, const EStreamlineFeature> IsStreamlineFeatureSupported = { 0x157d200, 1 };
     // Function /Script/StreamlineBlueprint.StreamlineLibrary.GetStreamlineFeatureInformation
     // [0] Feature : const EStreamlineFeature
-    constexpr static const FunctionPointer<UStreamlineLibrary, FStreamlineFeatureRequirements, const EStreamlineFeature> GetStreamlineFeatureInformation = { 0x1578b30, 2 };
+    constexpr static const FunctionPointer<UStreamlineLibrary, FStreamlineFeatureRequirements, const EStreamlineFeature> GetStreamlineFeatureInformation = { 0x157d790, 2 };
     // Function /Script/StreamlineBlueprint.StreamlineLibrary.BreakStreamlineFeatureRequirements
     // [0] Requirements : const EStreamlineFeatureRequirementsFlags
     // [1] D3D11Supported : const bool&
@@ -101,11 +103,11 @@ public:
     // [3] VulkanSupported : const bool&
     // [4] VSyncOffRequired : const bool&
     // [5] HardwareSchedulingRequired : const bool&
-    constexpr static const FunctionPointer<UStreamlineLibrary, void, const EStreamlineFeatureRequirementsFlags, const bool&, const bool&, const bool&, const bool&, const bool&> BreakStreamlineFeatureRequirements = { 0x15786f0, 3 };
+    constexpr static const FunctionPointer<UStreamlineLibrary, void, const EStreamlineFeatureRequirementsFlags, const bool&, const bool&, const bool&, const bool&, const bool&> BreakStreamlineFeatureRequirements = { 0x157d350, 3 };
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UStreamlineLibraryDeepDVC : public UBlueprintFunctionLibrary
 { 
 public:
@@ -113,34 +115,34 @@ public:
     /// Functions
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.SetDeepDVCSaturationBoost
     // [0] Intensity : const float
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, void, const float> SetDeepDVCSaturationBoost = { 0x15792e0, 0 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, void, const float> SetDeepDVCSaturationBoost = { 0x157df40, 0 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.SetDeepDVCMode
     // [0] DeepDVCMode : const EStreamlineDeepDVCMode
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, void, const EStreamlineDeepDVCMode> SetDeepDVCMode = { 0x1579830, 1 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, void, const EStreamlineDeepDVCMode> SetDeepDVCMode = { 0x157e490, 1 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.SetDeepDVCIntensity
     // [0] Intensity : const float
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, void, const float> SetDeepDVCIntensity = { 0x1579560, 2 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, void, const float> SetDeepDVCIntensity = { 0x157e1c0, 2 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.QueryDeepDVCSupport
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, EStreamlineFeatureSupport> QueryDeepDVCSupport = { 0x1579c30, 3 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, EStreamlineFeatureSupport> QueryDeepDVCSupport = { 0x157e890, 3 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.IsDeepDVCSupported
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, bool> IsDeepDVCSupported = { 0x1579c70, 4 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, bool> IsDeepDVCSupported = { 0x157e8d0, 4 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.IsDeepDVCModeSupported
     // [0] DeepDVCMode : const EStreamlineDeepDVCMode
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, bool, const EStreamlineDeepDVCMode> IsDeepDVCModeSupported = { 0x1579b20, 5 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, bool, const EStreamlineDeepDVCMode> IsDeepDVCModeSupported = { 0x157e780, 5 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.GetSupportedDeepDVCModes
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, TArray<EStreamlineDeepDVCMode>> GetSupportedDeepDVCModes = { 0x15799c0, 6 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, TArray<EStreamlineDeepDVCMode>> GetSupportedDeepDVCModes = { 0x157e620, 6 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.GetDefaultDeepDVCMode
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, EStreamlineDeepDVCMode> GetDefaultDeepDVCMode = { 0x1579710, 7 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, EStreamlineDeepDVCMode> GetDefaultDeepDVCMode = { 0x157e370, 7 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.GetDeepDVCSaturationBoost
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, float> GetDeepDVCSaturationBoost = { 0x1579210, 8 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, float> GetDeepDVCSaturationBoost = { 0x157de70, 8 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.GetDeepDVCMode
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, EStreamlineDeepDVCMode> GetDeepDVCMode = { 0x1579750, 9 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, EStreamlineDeepDVCMode> GetDeepDVCMode = { 0x157e3b0, 9 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC.GetDeepDVCIntensity
-    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, float> GetDeepDVCIntensity = { 0x1579490, 10 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDeepDVC, float> GetDeepDVCIntensity = { 0x157e0f0, 10 };
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibraryDLSSG
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UStreamlineLibraryDLSSG : public UBlueprintFunctionLibrary
 { 
 public:
@@ -148,28 +150,28 @@ public:
     /// Functions
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDLSSG.SetDLSSGMode
     // [0] DLSSGMode : const EStreamlineDLSSGMode
-    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, void, const EStreamlineDLSSGMode> SetDLSSGMode = { 0x157a780, 0 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, void, const EStreamlineDLSSGMode> SetDLSSGMode = { 0x157f3e0, 0 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDLSSG.QueryDLSSGSupport
-    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, EStreamlineFeatureSupport> QueryDLSSGSupport = { 0x157aae0, 1 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, EStreamlineFeatureSupport> QueryDLSSGSupport = { 0x157f740, 1 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDLSSG.IsDLSSGSupported
-    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, bool> IsDLSSGSupported = { 0x157ab20, 2 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, bool> IsDLSSGSupported = { 0x157f780, 2 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDLSSG.IsDLSSGModeSupported
     // [0] DLSSGMode : const EStreamlineDLSSGMode
-    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, bool, const EStreamlineDLSSGMode> IsDLSSGModeSupported = { 0x157a970, 3 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, bool, const EStreamlineDLSSGMode> IsDLSSGModeSupported = { 0x157f5d0, 3 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDLSSG.GetSupportedDLSSGModes
-    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, TArray<EStreamlineDLSSGMode>> GetSupportedDLSSGModes = { 0x157a840, 4 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, TArray<EStreamlineDLSSGMode>> GetSupportedDLSSGModes = { 0x157f4a0, 4 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDLSSG.GetDLSSGMode
-    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, EStreamlineDLSSGMode> GetDLSSGMode = { 0x157a5b0, 5 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, EStreamlineDLSSGMode> GetDLSSGMode = { 0x157f210, 5 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDLSSG.GetDLSSGFrameTiming
     // [0] FrameRateInHertz : const float&
     // [1] FramesPresented : const int32_t&
-    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, void, const float&, const int32_t&> GetDLSSGFrameTiming = { 0x157a380, 6 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, void, const float&, const int32_t&> GetDLSSGFrameTiming = { 0x157efe0, 6 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryDLSSG.GetDefaultDLSSGMode
-    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, EStreamlineDLSSGMode> GetDefaultDLSSGMode = { 0x157a510, 7 };
+    constexpr static const FunctionPointer<UStreamlineLibraryDLSSG, EStreamlineDLSSGMode> GetDefaultDLSSGMode = { 0x157f170, 7 };
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibraryReflex
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UStreamlineLibraryReflex : public UBlueprintFunctionLibrary
 { 
 public:
@@ -177,48 +179,48 @@ public:
     /// Functions
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.SetReflexMode
     // [0] Mode : const EStreamlineReflexMode
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, void, const EStreamlineReflexMode> SetReflexMode = { 0x157b800, 0 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, void, const EStreamlineReflexMode> SetReflexMode = { 0x1580460, 0 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.QueryReflexSupport
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, EStreamlineFeatureSupport> QueryReflexSupport = { 0x157b970, 1 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, EStreamlineFeatureSupport> QueryReflexSupport = { 0x15805d0, 1 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.IsReflexSupported
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, bool> IsReflexSupported = { 0x157b9a0, 2 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, bool> IsReflexSupported = { 0x1580600, 2 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.IsReflexModeSupported
     // [0] ReflexMode : const EStreamlineReflexMode
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, bool, const EStreamlineReflexMode> IsReflexModeSupported = { 0x157b600, 3 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, bool, const EStreamlineReflexMode> IsReflexModeSupported = { 0x1580260, 3 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.GetSupportedReflexModes
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, TArray<EStreamlineReflexMode>> GetSupportedReflexModes = { 0x157b450, 4 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, TArray<EStreamlineReflexMode>> GetSupportedReflexModes = { 0x15800b0, 4 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.GetRenderLatencyInMs
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, float> GetRenderLatencyInMs = { 0x157b1a0, 5 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, float> GetRenderLatencyInMs = { 0x157fe00, 5 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.GetReflexMode
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, EStreamlineReflexMode> GetReflexMode = { 0x157b730, 6 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, EStreamlineReflexMode> GetReflexMode = { 0x1580390, 6 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.GetGameToRenderLatencyInMs
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, float> GetGameToRenderLatencyInMs = { 0x157b300, 7 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, float> GetGameToRenderLatencyInMs = { 0x157ff60, 7 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.GetGameLatencyInMs
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, float> GetGameLatencyInMs = { 0x157b250, 8 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, float> GetGameLatencyInMs = { 0x157feb0, 8 };
     // Function /Script/StreamlineBlueprint.StreamlineLibraryReflex.GetDefaultReflexMode
-    constexpr static const FunctionPointer<UStreamlineLibraryReflex, EStreamlineReflexMode> GetDefaultReflexMode = { 0x157b3b0, 9 };
+    constexpr static const FunctionPointer<UStreamlineLibraryReflex, EStreamlineReflexMode> GetDefaultReflexMode = { 0x1580010, 9 };
 };
 
 /// Struct /Script/StreamlineBlueprint.StreamlineVersion
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
 struct FStreamlineVersion
 { 
-    int32_t                                            Major;                                                      // 0x0000   (0x0004) 
-    int32_t                                            Minor;                                                      // 0x0004   (0x0004) 
-    int32_t                                            Build;                                                      // 0x0008   (0x0004) 
+    int32_t                                            Major;                                                      // 0x0000   (0x0004)
+    int32_t                                            Minor;                                                      // 0x0004   (0x0004)
+    int32_t                                            Build;                                                      // 0x0008   (0x0004)
 };
 
 /// Struct /Script/StreamlineBlueprint.StreamlineFeatureRequirements
-/// Size: 0x0034 (52 bytes) (0x000000 - 0x000034) align n/a MaxSize: 0x0034
+/// Size: 0x0034 (52 bytes) (0x000000 - 0x000034) align 4 MaxSize: 0x0034
 struct FStreamlineFeatureRequirements
 { 
-    EStreamlineFeatureSupport                          Support;                                                    // 0x0000   (0x0001) 
-    EStreamlineFeatureRequirementsFlags                Requirements;                                               // 0x0001   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x2];                                       // 0x0002   (0x0002) MISSED
-    FStreamlineVersion                                 RequiredOperatingSystemVersion;                             // 0x0004   (0x000C) 
-    FStreamlineVersion                                 DetectedOperatingSystemVersion;                             // 0x0010   (0x000C) 
-    FStreamlineVersion                                 RequiredDriverVersion;                                      // 0x001C   (0x000C) 
-    FStreamlineVersion                                 DetectedDriverVersion;                                      // 0x0028   (0x000C) 
+    EStreamlineFeatureSupport                          Support;                                                    // 0x0000   (0x0001)
+    EStreamlineFeatureRequirementsFlags                Requirements;                                               // 0x0001   (0x0001)
+    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0002   (0x0002) MISSED
+    FStreamlineVersion                                 RequiredOperatingSystemVersion;                             // 0x0004   (0x000C)
+    FStreamlineVersion                                 DetectedOperatingSystemVersion;                             // 0x0010   (0x000C)
+    FStreamlineVersion                                 RequiredDriverVersion;                                      // 0x001C   (0x000C)
+    FStreamlineVersion                                 DetectedDriverVersion;                                      // 0x0028   (0x000C)
 };
 
 #pragma pack(pop)

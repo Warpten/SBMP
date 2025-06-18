@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -35,355 +37,355 @@ enum class ERemoteControlHttpVerbs : uint16_t
 };
 
 /// Class /Script/WebRemoteControl.WebRemoteControlSettings
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
 class UWebRemoteControlSettings : public UObject
 { 
 public:
-    bool                                               bAutoStartWebServer;                                        // 0x0028   (0x0001) 
-    bool                                               bAutoStartWebSocketServer;                                  // 0x0029   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x2];                                       // 0x002A   (0x0002) MISSED
-    uint32_t                                           RemoteControlHttpServerPort;                                // 0x002C   (0x0004) 
-    uint32_t                                           RemoteControlWebSocketServerPort;                           // 0x0030   (0x0004) 
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    bool                                               bAutoStartWebServer;                                        // 0x0028   (0x0001)
+    bool                                               bAutoStartWebSocketServer;                                  // 0x0029   (0x0001)
+    unsigned char                                      UnknownData00_6[0x2];                                       // 0x002A   (0x0002) MISSED
+    uint32_t                                           RemoteControlHttpServerPort;                                // 0x002C   (0x0004)
+    uint32_t                                           RemoteControlWebSocketServerPort;                           // 0x0030   (0x0004)
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.RCAssetFilter
-/// Size: 0x0088 (136 bytes) (0x000000 - 0x000088) align n/a MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000000 - 0x000088) align 8 MaxSize: 0x0088
 struct FRCAssetFilter
 { 
-    TArray<FName>                                      PackageNames;                                               // 0x0000   (0x0010) 
-    TArray<FName>                                      PackagePaths;                                               // 0x0010   (0x0010) 
-    TArray<FName>                                      ClassNames;                                                 // 0x0020   (0x0010) 
-    TSet<FName>                                        RecursiveClassesExclusionSet;                               // 0x0030   (0x0050) 
-    bool                                               RecursiveClasses;                                           // 0x0080   (0x0001) 
-    bool                                               RecursivePaths;                                             // 0x0081   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x6];                                       // 0x0082   (0x0006) MISSED
+    TArray<FName>                                      PackageNames;                                               // 0x0000   (0x0010)
+    TArray<FName>                                      PackagePaths;                                               // 0x0010   (0x0010)
+    TArray<FName>                                      ClassNames;                                                 // 0x0020   (0x0010)
+    TSet<FName>                                        RecursiveClassesExclusionSet;                               // 0x0030   (0x0050)
+    bool                                               RecursiveClasses;                                           // 0x0080   (0x0001)
+    bool                                               RecursivePaths;                                             // 0x0081   (0x0001)
+    unsigned char                                      UnknownData00_7[0x6];                                       // 0x0082   (0x0006) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.RCPresetFieldRenamed
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FRCPresetFieldRenamed
 { 
-    FName                                              OldFieldLabel;                                              // 0x0000   (0x0008) 
-    FName                                              NewFieldLabel;                                              // 0x0008   (0x0008) 
+    FName                                              OldFieldLabel;                                              // 0x0000   (0x0008)
+    FName                                              NewFieldLabel;                                              // 0x0008   (0x0008)
 };
 
 /// Struct /Script/WebRemoteControl.RCObjectDescription
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FRCObjectDescription
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010) 
-    FString                                            Path;                                                       // 0x0010   (0x0010) 
+    FString                                            Name;                                                       // 0x0000   (0x0010)
+    FString                                            Path;                                                       // 0x0010   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCActorDescription
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FRCActorDescription
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010) 
-    FString                                            Path;                                                       // 0x0010   (0x0010) 
+    FString                                            Name;                                                       // 0x0000   (0x0010)
+    FString                                            Path;                                                       // 0x0010   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCAssetDescription
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 4 MaxSize: 0x0018
 struct FRCAssetDescription
 { 
-    FName                                              Name;                                                       // 0x0000   (0x0008) 
-    FName                                              Class;                                                      // 0x0008   (0x0008) 
-    FName                                              Path;                                                       // 0x0010   (0x0008) 
+    FName                                              Name;                                                       // 0x0000   (0x0008)
+    FName                                              Class;                                                      // 0x0008   (0x0008)
+    FName                                              Path;                                                       // 0x0010   (0x0008)
 };
 
 /// Struct /Script/WebRemoteControl.RCShortPresetDescription
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FRCShortPresetDescription
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010) 
-    FString                                            Path;                                                       // 0x0010   (0x0010) 
+    FString                                            Name;                                                       // 0x0000   (0x0010)
+    FString                                            Path;                                                       // 0x0010   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCPropertyDescription
-/// Size: 0x00A0 (160 bytes) (0x000000 - 0x0000A0) align n/a MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000000 - 0x0000A0) align 8 MaxSize: 0x00A0
 struct FRCPropertyDescription
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010) 
-    FString                                            Description;                                                // 0x0010   (0x0010) 
-    FString                                            Type;                                                       // 0x0020   (0x0010) 
-    FString                                            ContainerType;                                              // 0x0030   (0x0010) 
-    FString                                            KeyType;                                                    // 0x0040   (0x0010) 
-    TMap<FName, FString>                               MetaData;                                                   // 0x0050   (0x0050) 
+    FString                                            Name;                                                       // 0x0000   (0x0010)
+    FString                                            Description;                                                // 0x0010   (0x0010)
+    FString                                            Type;                                                       // 0x0020   (0x0010)
+    FString                                            ContainerType;                                              // 0x0030   (0x0010)
+    FString                                            KeyType;                                                    // 0x0040   (0x0010)
+    TMap<FName, FString>                               MetaData;                                                   // 0x0050   (0x0050)
 };
 
 /// Struct /Script/WebRemoteControl.RCExposedPropertyDescription
-/// Size: 0x00A8 (168 bytes) (0x000000 - 0x0000A8) align n/a MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000000 - 0x0000A8) align 8 MaxSize: 0x00A8
 struct FRCExposedPropertyDescription
 { 
-    FName                                              DisplayName;                                                // 0x0000   (0x0008) 
-    FRCPropertyDescription                             UnderlyingProperty;                                         // 0x0008   (0x00A0) 
+    FName                                              DisplayName;                                                // 0x0000   (0x0008)
+    FRCPropertyDescription                             UnderlyingProperty;                                         // 0x0008   (0x00A0)
 };
 
 /// Struct /Script/WebRemoteControl.RCFunctionDescription
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
 struct FRCFunctionDescription
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010) 
-    FString                                            Description;                                                // 0x0010   (0x0010) 
-    TArray<FRCPropertyDescription>                     Arguments;                                                  // 0x0020   (0x0010) 
+    FString                                            Name;                                                       // 0x0000   (0x0010)
+    FString                                            Description;                                                // 0x0010   (0x0010)
+    TArray<FRCPropertyDescription>                     Arguments;                                                  // 0x0020   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCExposedFunctionDescription
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
 struct FRCExposedFunctionDescription
 { 
-    FName                                              DisplayName;                                                // 0x0000   (0x0008) 
-    FRCFunctionDescription                             UnderlyingFunction;                                         // 0x0008   (0x0030) 
+    FName                                              DisplayName;                                                // 0x0000   (0x0008)
+    FRCFunctionDescription                             UnderlyingFunction;                                         // 0x0008   (0x0030)
 };
 
 /// Struct /Script/WebRemoteControl.RCPresetLayoutGroupDescription
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
 struct FRCPresetLayoutGroupDescription
 { 
-    FName                                              Name;                                                       // 0x0000   (0x0008) 
-    TArray<FRCExposedPropertyDescription>              ExposedProperties;                                          // 0x0008   (0x0010) 
-    TArray<FRCExposedFunctionDescription>              ExposedFunctions;                                           // 0x0018   (0x0010) 
+    FName                                              Name;                                                       // 0x0000   (0x0008)
+    TArray<FRCExposedPropertyDescription>              ExposedProperties;                                          // 0x0008   (0x0010)
+    TArray<FRCExposedFunctionDescription>              ExposedFunctions;                                           // 0x0018   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCPresetDescription
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
 struct FRCPresetDescription
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010) 
-    FString                                            Path;                                                       // 0x0010   (0x0010) 
-    TArray<FRCPresetLayoutGroupDescription>            Groups;                                                     // 0x0020   (0x0010) 
+    FString                                            Name;                                                       // 0x0000   (0x0010)
+    FString                                            Path;                                                       // 0x0010   (0x0010)
+    TArray<FRCPresetLayoutGroupDescription>            Groups;                                                     // 0x0020   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCRequest
-/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align n/a MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align 8 MaxSize: 0x0068
 struct FRCRequest
 { 
-    unsigned char                                      UnknownData01_2[0x68];                                      // 0x0000   (0x0068) MISSED
+    unsigned char                                      UnknownData00_2[0x68];                                      // 0x0000   (0x0068) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.RCWebSocketPresetRegisterBody
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
 struct FRCWebSocketPresetRegisterBody : FRCRequest
 { 
-    FString                                            PresetName;                                                 // 0x0068   (0x0010) 
+    FString                                            PresetName;                                                 // 0x0068   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCWebSocketRequest
-/// Size: 0x0080 (128 bytes) (0x000068 - 0x000080) align n/a MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000068 - 0x000080) align 8 MaxSize: 0x0080
 struct FRCWebSocketRequest : FRCRequest
 { 
-    FString                                            MessageName;                                                // 0x0068   (0x0010) 
-    int32_t                                            ID;                                                         // 0x0078   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x007C   (0x0004) MISSED
+    FString                                            MessageName;                                                // 0x0068   (0x0010)
+    int32_t                                            ID;                                                         // 0x0078   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x007C   (0x0004) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.GetObjectThumbnailRequest
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
 struct FGetObjectThumbnailRequest : FRCRequest
 { 
-    FString                                            ObjectPath;                                                 // 0x0068   (0x0010) 
+    FString                                            ObjectPath;                                                 // 0x0068   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.SetPresetMetadataRequest
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
 struct FSetPresetMetadataRequest : FRCRequest
 { 
-    FString                                            Value;                                                      // 0x0068   (0x0010) 
+    FString                                            Value;                                                      // 0x0068   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.SearchObjectRequest
-/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align n/a MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align 8 MaxSize: 0x00A0
 struct FSearchObjectRequest : FRCRequest
 { 
-    FString                                            Query;                                                      // 0x0068   (0x0010) 
-    FString                                            Class;                                                      // 0x0078   (0x0010) 
-    FString                                            Outer;                                                      // 0x0088   (0x0010) 
-    int32_t                                            Limit;                                                      // 0x0098   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x009C   (0x0004) MISSED
+    FString                                            Query;                                                      // 0x0068   (0x0010)
+    FString                                            Class;                                                      // 0x0078   (0x0010)
+    FString                                            Outer;                                                      // 0x0088   (0x0010)
+    int32_t                                            Limit;                                                      // 0x0098   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x009C   (0x0004) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.SearchActorRequest
-/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align 8 MaxSize: 0x0090
 struct FSearchActorRequest : FRCRequest
 { 
-    FString                                            Query;                                                      // 0x0068   (0x0010) 
-    FString                                            Class;                                                      // 0x0078   (0x0010) 
-    int32_t                                            Limit;                                                      // 0x0088   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x008C   (0x0004) MISSED
+    FString                                            Query;                                                      // 0x0068   (0x0010)
+    FString                                            Class;                                                      // 0x0078   (0x0010)
+    int32_t                                            Limit;                                                      // 0x0088   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x008C   (0x0004) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.SearchAssetRequest
-/// Size: 0x0108 (264 bytes) (0x000068 - 0x000108) align n/a MaxSize: 0x0108
+/// Size: 0x0108 (264 bytes) (0x000068 - 0x000108) align 8 MaxSize: 0x0108
 struct FSearchAssetRequest : FRCRequest
 { 
-    FString                                            Query;                                                      // 0x0068   (0x0010) 
-    FRCAssetFilter                                     Filter;                                                     // 0x0078   (0x0088) 
-    int32_t                                            Limit;                                                      // 0x0100   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0104   (0x0004) MISSED
+    FString                                            Query;                                                      // 0x0068   (0x0010)
+    FRCAssetFilter                                     Filter;                                                     // 0x0078   (0x0088)
+    int32_t                                            Limit;                                                      // 0x0100   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0104   (0x0004) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.DescribeObjectRequest
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
 struct FDescribeObjectRequest : FRCRequest
 { 
-    FString                                            ObjectPath;                                                 // 0x0068   (0x0010) 
+    FString                                            ObjectPath;                                                 // 0x0068   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCPresetCallRequest
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
 struct FRCPresetCallRequest : FRCRequest
 { 
-    bool                                               GenerateTransaction;                                        // 0x0068   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0069   (0x0007) MISSED
+    bool                                               GenerateTransaction;                                        // 0x0068   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0069   (0x0007) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.RCPresetSetPropertyRequest
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
 struct FRCPresetSetPropertyRequest : FRCRequest
 { 
-    bool                                               GenerateTransaction;                                        // 0x0068   (0x0001) 
-    bool                                               ResetToDefault;                                             // 0x0069   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x6];                                       // 0x006A   (0x0006) MISSED
+    bool                                               GenerateTransaction;                                        // 0x0068   (0x0001)
+    bool                                               ResetToDefault;                                             // 0x0069   (0x0001)
+    unsigned char                                      UnknownData00_7[0x6];                                       // 0x006A   (0x0006) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.RCObjectRequest
-/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align 8 MaxSize: 0x0090
 struct FRCObjectRequest : FRCRequest
 { 
-    FString                                            ObjectPath;                                                 // 0x0068   (0x0010) 
-    FString                                            PropertyName;                                               // 0x0078   (0x0010) 
-    bool                                               ResetToDefault;                                             // 0x0088   (0x0001) 
-    bool                                               GenerateTransaction;                                        // 0x0089   (0x0001) 
-    ERCAccess                                          Access;                                                     // 0x008A   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x5];                                       // 0x008B   (0x0005) MISSED
+    FString                                            ObjectPath;                                                 // 0x0068   (0x0010)
+    FString                                            PropertyName;                                               // 0x0078   (0x0010)
+    bool                                               ResetToDefault;                                             // 0x0088   (0x0001)
+    bool                                               GenerateTransaction;                                        // 0x0089   (0x0001)
+    ERCAccess                                          Access;                                                     // 0x008A   (0x0001)
+    unsigned char                                      UnknownData00_7[0x5];                                       // 0x008B   (0x0005) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.RCCallRequest
-/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align 8 MaxSize: 0x0090
 struct FRCCallRequest : FRCRequest
 { 
-    FString                                            ObjectPath;                                                 // 0x0068   (0x0010) 
-    FString                                            FunctionName;                                               // 0x0078   (0x0010) 
-    bool                                               GenerateTransaction;                                        // 0x0088   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0089   (0x0007) MISSED
+    FString                                            ObjectPath;                                                 // 0x0068   (0x0010)
+    FString                                            FunctionName;                                               // 0x0078   (0x0010)
+    bool                                               GenerateTransaction;                                        // 0x0088   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0089   (0x0007) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.RemoteControlObjectEventHookRequest
-/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align 8 MaxSize: 0x0090
 struct FRemoteControlObjectEventHookRequest : FRCRequest
 { 
-    ERemoteControlEvent                                EventType;                                                  // 0x0068   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0069   (0x0007) MISSED
-    FString                                            ObjectPath;                                                 // 0x0070   (0x0010) 
-    FString                                            PropertyName;                                               // 0x0080   (0x0010) 
+    ERemoteControlEvent                                EventType;                                                  // 0x0068   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0069   (0x0007) MISSED
+    FString                                            ObjectPath;                                                 // 0x0070   (0x0010)
+    FString                                            PropertyName;                                               // 0x0080   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCRequestWrapper
-/// Size: 0x0088 (136 bytes) (0x000068 - 0x000088) align n/a MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000068 - 0x000088) align 8 MaxSize: 0x0088
 struct FRCRequestWrapper : FRCRequest
 { 
-    FString                                            URL;                                                        // 0x0068   (0x0010) 
-    FName                                              Verb;                                                       // 0x0078   (0x0008) 
-    int32_t                                            RequestID;                                                  // 0x0080   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0084   (0x0004) MISSED
+    FString                                            URL;                                                        // 0x0068   (0x0010)
+    FName                                              Verb;                                                       // 0x0078   (0x0008)
+    int32_t                                            RequestID;                                                  // 0x0080   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0084   (0x0004) MISSED
 };
 
 /// Struct /Script/WebRemoteControl.RCBatchRequest
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
 struct FRCBatchRequest : FRCRequest
 { 
-    TArray<FRCRequestWrapper>                          Requests;                                                   // 0x0068   (0x0010) 
+    TArray<FRCRequestWrapper>                          Requests;                                                   // 0x0068   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCPresetFieldsAddedEvent
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
 struct FRCPresetFieldsAddedEvent
 { 
-    FString                                            Type;                                                       // 0x0000   (0x0010) 
-    FName                                              PresetName;                                                 // 0x0010   (0x0008) 
-    FRCPresetDescription                               Description;                                                // 0x0018   (0x0030) 
+    FString                                            Type;                                                       // 0x0000   (0x0010)
+    FName                                              PresetName;                                                 // 0x0010   (0x0008)
+    FRCPresetDescription                               Description;                                                // 0x0018   (0x0030)
 };
 
 /// Struct /Script/WebRemoteControl.RCPresetFieldsRemovedEvent
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
 struct FRCPresetFieldsRemovedEvent
 { 
-    FString                                            Type;                                                       // 0x0000   (0x0010) 
-    FName                                              PresetName;                                                 // 0x0010   (0x0008) 
-    TArray<FName>                                      RemovedFields;                                              // 0x0018   (0x0010) 
+    FString                                            Type;                                                       // 0x0000   (0x0010)
+    FName                                              PresetName;                                                 // 0x0010   (0x0008)
+    TArray<FName>                                      RemovedFields;                                              // 0x0018   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RCPresetFieldsRenamedEvent
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
 struct FRCPresetFieldsRenamedEvent
 { 
-    FString                                            Type;                                                       // 0x0000   (0x0010) 
-    FName                                              PresetName;                                                 // 0x0010   (0x0008) 
-    TArray<FRCPresetFieldRenamed>                      RenamedFields;                                              // 0x0018   (0x0010) 
+    FString                                            Type;                                                       // 0x0000   (0x0010)
+    FName                                              PresetName;                                                 // 0x0010   (0x0008)
+    TArray<FRCPresetFieldRenamed>                      RenamedFields;                                              // 0x0018   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.GetMetadataResponse
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
 struct FGetMetadataResponse
 { 
-    TMap<FString, FString>                             MetaData;                                                   // 0x0000   (0x0050) 
+    TMap<FString, FString>                             MetaData;                                                   // 0x0000   (0x0050)
 };
 
 /// Struct /Script/WebRemoteControl.GetMetadataFieldResponse
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FGetMetadataFieldResponse
 { 
-    FString                                            Value;                                                      // 0x0000   (0x0010) 
+    FString                                            Value;                                                      // 0x0000   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.SearchActorResponse
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FSearchActorResponse
 { 
-    TArray<FRCActorDescription>                        Actors;                                                     // 0x0000   (0x0010) 
+    TArray<FRCActorDescription>                        Actors;                                                     // 0x0000   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.SearchAssetResponse
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FSearchAssetResponse
 { 
-    TArray<FRCAssetDescription>                        Assets;                                                     // 0x0000   (0x0010) 
+    TArray<FRCAssetDescription>                        Assets;                                                     // 0x0000   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.DescribeObjectResponse
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
 struct FDescribeObjectResponse
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010) 
-    class UClass*                                      Class;                                                      // 0x0010   (0x0008) 
-    TArray<FRCPropertyDescription>                     Properties;                                                 // 0x0018   (0x0010) 
-    TArray<FRCFunctionDescription>                     Functions;                                                  // 0x0028   (0x0010) 
+    FString                                            Name;                                                       // 0x0000   (0x0010)
+    class UClass*                                      Class;                                                      // 0x0010   (0x0008)
+    TArray<FRCPropertyDescription>                     Properties;                                                 // 0x0018   (0x0010)
+    TArray<FRCFunctionDescription>                     Functions;                                                  // 0x0028   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.GetPresetResponse
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
 struct FGetPresetResponse
 { 
-    FRCPresetDescription                               Preset;                                                     // 0x0000   (0x0030) 
+    FRCPresetDescription                               Preset;                                                     // 0x0000   (0x0030)
 };
 
 /// Struct /Script/WebRemoteControl.ListPresetsResponse
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FListPresetsResponse
 { 
-    TArray<FRCShortPresetDescription>                  Presets;                                                    // 0x0000   (0x0010) 
+    TArray<FRCShortPresetDescription>                  Presets;                                                    // 0x0000   (0x0010)
 };
 
 /// Struct /Script/WebRemoteControl.RemoteControlRouteDescription
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
 struct FRemoteControlRouteDescription
 { 
-    FString                                            Path;                                                       // 0x0000   (0x0010) 
-    ERemoteControlHttpVerbs                            Verb;                                                       // 0x0010   (0x0002) 
-    unsigned char                                      UnknownData01_6[0x6];                                       // 0x0012   (0x0006) MISSED
-    FString                                            Description;                                                // 0x0018   (0x0010) 
+    FString                                            Path;                                                       // 0x0000   (0x0010)
+    ERemoteControlHttpVerbs                            Verb;                                                       // 0x0010   (0x0002)
+    unsigned char                                      UnknownData00_6[0x6];                                       // 0x0012   (0x0006) MISSED
+    FString                                            Description;                                                // 0x0018   (0x0010)
 };
 
 #pragma pack(pop)

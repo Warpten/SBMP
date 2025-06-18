@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -59,15 +61,15 @@ enum class ACLVisualFidelity : uint8_t
 };
 
 /// Class /Script/ACLPlugin.AnimationCompressionLibraryDatabase
-/// Size: 0x0160 (352 bytes) (0x000028 - 0x000160) align n/a MaxSize: 0x0160
+/// Size: 0x0160 (352 bytes) (0x000028 - 0x000160) align 8 MaxSize: 0x0160
 class UAnimationCompressionLibraryDatabase : public UObject
 { 
 public:
-    TArray<char>                                       CookedCompressedBytes;                                      // 0x0028   (0x0010) 
-    TArray<uint64_t>                                   CookedAnimSequenceMappings;                                 // 0x0038   (0x0010) 
-    unsigned char                                      UnknownData02_6[0x110];                                     // 0x0048   (0x0110) MISSED
-    uint32_t                                           MaxStreamRequestSizeKB;                                     // 0x0158   (0x0004) 
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x015C   (0x0004) MISSED
+    TArray<char>                                       CookedCompressedBytes;                                      // 0x0028   (0x0010)
+    TArray<uint64_t>                                   CookedAnimSequenceMappings;                                 // 0x0038   (0x0010)
+    unsigned char                                      UnknownData00_6[0x110];                                     // 0x0048   (0x0110) MISSED
+    uint32_t                                           MaxStreamRequestSizeKB;                                     // 0x0158   (0x0004)
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x015C   (0x0004) MISSED
 
     /// Functions
     // Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.SetVisualFidelity
@@ -76,51 +78,51 @@ public:
     // [2] DatabaseAsset : const UAnimationCompressionLibraryDatabase*
     // [3] Result : const ACLVisualFidelityChangeResult&
     // [4] VisualFidelity : const ACLVisualFidelity
-    constexpr static const FunctionPointer<UAnimationCompressionLibraryDatabase, void, const UObject*, const FLatentActionInfo, const UAnimationCompressionLibraryDatabase*, const ACLVisualFidelityChangeResult&, const ACLVisualFidelity> SetVisualFidelity = { 0x153adb0, 0 };
+    constexpr static const FunctionPointer<UAnimationCompressionLibraryDatabase, void, const UObject*, const FLatentActionInfo, const UAnimationCompressionLibraryDatabase*, const ACLVisualFidelityChangeResult&, const ACLVisualFidelity> SetVisualFidelity = { 0x153f8c0, 0 };
     // Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.GetVisualFidelity
     // [0] DatabaseAsset : const UAnimationCompressionLibraryDatabase*
-    constexpr static const FunctionPointer<UAnimationCompressionLibraryDatabase, ACLVisualFidelity, const UAnimationCompressionLibraryDatabase*> GetVisualFidelity = { 0x153acc0, 1 };
+    constexpr static const FunctionPointer<UAnimationCompressionLibraryDatabase, ACLVisualFidelity, const UAnimationCompressionLibraryDatabase*> GetVisualFidelity = { 0x153f7d0, 1 };
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLBase
-/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align 8 MaxSize: 0x0038
 class UAnimBoneCompressionCodec_ACLBase : public UAnimBoneCompressionCodec
 { 
 public:
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACL
-/// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align 8 MaxSize: 0x0040
 class UAnimBoneCompressionCodec_ACL : public UAnimBoneCompressionCodec_ACLBase
 { 
 public:
-    class UAnimBoneCompressionCodec*                   SafetyFallbackCodec;                                        // 0x0038   (0x0008) 
+    class UAnimBoneCompressionCodec*                   SafetyFallbackCodec;                                        // 0x0038   (0x0008)
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLCustom
-/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align 8 MaxSize: 0x0038
 class UAnimBoneCompressionCodec_ACLCustom : public UAnimBoneCompressionCodec_ACLBase
 { 
 public:
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLDatabase
-/// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align 8 MaxSize: 0x0040
 class UAnimBoneCompressionCodec_ACLDatabase : public UAnimBoneCompressionCodec_ACLBase
 { 
 public:
-    class UAnimationCompressionLibraryDatabase*        DatabaseAsset;                                              // 0x0038   (0x0008) 
+    class UAnimationCompressionLibraryDatabase*        DatabaseAsset;                                              // 0x0038   (0x0008)
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLSafe
-/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align 8 MaxSize: 0x0038
 class UAnimBoneCompressionCodec_ACLSafe : public UAnimBoneCompressionCodec_ACLBase
 { 
 public:
 };
 
 /// Class /Script/ACLPlugin.AnimCurveCompressionCodec_ACL
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UAnimCurveCompressionCodec_ACL : public UAnimCurveCompressionCodec
 { 
 public:

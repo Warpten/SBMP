@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "AugmentedReality.h"
@@ -38,7 +40,7 @@ enum class ELuminARTrackingState : uint8_t
 };
 
 /// Class /Script/MagicLeapAR.LuminARSessionFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class ULuminARSessionFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -48,11 +50,11 @@ public:
     // [0] WorldContextObject : const UObject*
     // [1] LatentInfo : const FLatentActionInfo
     // [2] Configuration : const ULuminARSessionConfig*
-    constexpr static const FunctionPointer<ULuminARSessionFunctionLibrary, void, const UObject*, const FLatentActionInfo, const ULuminARSessionConfig*> StartLuminARSession = { 0x18e1010, 0 };
+    constexpr static const FunctionPointer<ULuminARSessionFunctionLibrary, void, const UObject*, const FLatentActionInfo, const ULuminARSessionConfig*> StartLuminARSession = { 0x18e7f70, 0 };
 };
 
 /// Class /Script/MagicLeapAR.LuminARFrameFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class ULuminARFrameFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -63,13 +65,13 @@ public:
     // [1] ScreenPosition : const FVector2D&
     // [2] TraceChannels : const TSet<ELuminARLineTraceChannel>
     // [3] OutHitResults : const TArray<FARTraceResult>&
-    constexpr static const FunctionPointer<ULuminARFrameFunctionLibrary, bool, const UObject*, const FVector2D&, const TSet<ELuminARLineTraceChannel>, const TArray<FARTraceResult>&> LuminARLineTrace = { 0x18e15b0, 0 };
+    constexpr static const FunctionPointer<ULuminARFrameFunctionLibrary, bool, const UObject*, const FVector2D&, const TSet<ELuminARLineTraceChannel>, const TArray<FARTraceResult>&> LuminARLineTrace = { 0x18e8510, 0 };
     // Function /Script/MagicLeapAR.LuminARFrameFunctionLibrary.GetTrackingState
-    constexpr static const FunctionPointer<ULuminARFrameFunctionLibrary, ELuminARTrackingState> GetTrackingState = { 0x18e1a90, 1 };
+    constexpr static const FunctionPointer<ULuminARFrameFunctionLibrary, ELuminARTrackingState> GetTrackingState = { 0x18e89f0, 1 };
 };
 
 /// Class /Script/MagicLeapAR.LuminARImageTrackingFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class ULuminARImageTrackingFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -83,7 +85,7 @@ public:
     // [4] bUseUnreliablePose : const bool
     // [5] bImageIsStationary : const bool
     // [6] InAxisOrientation : const EMagicLeapImageTargetOrientation
-    constexpr static const FunctionPointer<ULuminARImageTrackingFunctionLibrary, ULuminARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float, const bool, const bool, const EMagicLeapImageTargetOrientation> AddLuminRuntimeCandidateImageEx = { 0x18e1f30, 0 };
+    constexpr static const FunctionPointer<ULuminARImageTrackingFunctionLibrary, ULuminARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float, const bool, const bool, const EMagicLeapImageTargetOrientation> AddLuminRuntimeCandidateImageEx = { 0x18e8e90, 0 };
     // Function /Script/MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImage
     // [0] SessionConfig : const UARSessionConfig*
     // [1] CandidateTexture : const UTexture2D*
@@ -91,66 +93,66 @@ public:
     // [3] PhysicalWidth : const float
     // [4] bUseUnreliablePose : const bool
     // [5] bImageIsStationary : const bool
-    constexpr static const FunctionPointer<ULuminARImageTrackingFunctionLibrary, ULuminARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float, const bool, const bool> AddLuminRuntimeCandidateImage = { 0x18e2390, 1 };
+    constexpr static const FunctionPointer<ULuminARImageTrackingFunctionLibrary, ULuminARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float, const bool, const bool> AddLuminRuntimeCandidateImage = { 0x18e92f0, 1 };
 };
 
 /// Class /Script/MagicLeapAR.LuminAROrigin
-/// Size: 0x0388 (904 bytes) (0x0002C8 - 0x000388) align n/a MaxSize: 0x0388
+/// Size: 0x0388 (904 bytes) (0x0002C8 - 0x000388) align 8 MaxSize: 0x0388
 class ALuminAROrigin : public AAROriginActor
 { 
 public:
-    class UMRMeshComponent*                            MRMeshComponent;                                            // 0x02C8   (0x0008) 
-    class UMaterialInterface*                          PlaneSurfaceMaterial;                                       // 0x02D0   (0x0008) 
-    class UMaterialInterface*                          WireframeMaterial;                                          // 0x02D8   (0x0008) 
-    unsigned char                                      UnknownData01_7[0xA8];                                      // 0x02E0   (0x00A8) MISSED
+    class UMRMeshComponent*                            MRMeshComponent;                                            // 0x02C8   (0x0008)
+    class UMaterialInterface*                          PlaneSurfaceMaterial;                                       // 0x02D0   (0x0008)
+    class UMaterialInterface*                          WireframeMaterial;                                          // 0x02D8   (0x0008)
+    unsigned char                                      UnknownData00_7[0xA8];                                      // 0x02E0   (0x00A8) MISSED
 };
 
 /// Class /Script/MagicLeapAR.LuminARSessionConfig
-/// Size: 0x01A0 (416 bytes) (0x000110 - 0x0001A0) align n/a MaxSize: 0x01A0
+/// Size: 0x01A0 (416 bytes) (0x000110 - 0x0001A0) align 16 MaxSize: 0x01A0
 class ULuminARSessionConfig : public UARSessionConfig
 { 
 public:
-    FMagicLeapPlanesQuery                              PlanesQuery;                                                // 0x0110   (0x0060) 
-    int32_t                                            MaxPlaneQueryResults;                                       // 0x0170   (0x0004) 
-    int32_t                                            MinPlaneArea;                                               // 0x0174   (0x0004) 
-    bool                                               bArbitraryOrientationPlaneDetection;                        // 0x0178   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0179   (0x0003) MISSED
-    FVector                                            PlaneSearchExtents;                                         // 0x017C   (0x000C) 
-    TArray<EMagicLeapPlaneQueryFlags>                  PlaneQueryFlags;                                            // 0x0188   (0x0010) 
-    bool                                               bDiscardZeroExtentPlanes;                                   // 0x0198   (0x0001) 
-    bool                                               bDefaultUseUnreliablePose;                                  // 0x0199   (0x0001) 
-    unsigned char                                      UnknownData03_7[0x6];                                       // 0x019A   (0x0006) MISSED
+    FMagicLeapPlanesQuery                              PlanesQuery;                                                // 0x0110   (0x0060)
+    int32_t                                            MaxPlaneQueryResults;                                       // 0x0170   (0x0004)
+    int32_t                                            MinPlaneArea;                                               // 0x0174   (0x0004)
+    bool                                               bArbitraryOrientationPlaneDetection;                        // 0x0178   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0179   (0x0003) MISSED
+    FVector                                            PlaneSearchExtents;                                         // 0x017C   (0x000C)
+    TArray<EMagicLeapPlaneQueryFlags>                  PlaneQueryFlags;                                            // 0x0188   (0x0010)
+    bool                                               bDiscardZeroExtentPlanes;                                   // 0x0198   (0x0001)
+    bool                                               bDefaultUseUnreliablePose;                                  // 0x0199   (0x0001)
+    unsigned char                                      UnknownData01_7[0x6];                                       // 0x019A   (0x0006) MISSED
 };
 
 /// Class /Script/MagicLeapAR.LuminARLightEstimate
-/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align 8 MaxSize: 0x0050
 class ULuminARLightEstimate : public UARBasicLightEstimate
 { 
 public:
-    TArray<float>                                      AmbientIntensityNits;                                       // 0x0040   (0x0010) 
+    TArray<float>                                      AmbientIntensityNits;                                       // 0x0040   (0x0010)
 
     /// Functions
     // Function /Script/MagicLeapAR.LuminARLightEstimate.GetAmbientIntensityNits
-    constexpr static const FunctionPointer<ULuminARLightEstimate, TArray<float>> GetAmbientIntensityNits = { 0x18e33d0, 0 };
+    constexpr static const FunctionPointer<ULuminARLightEstimate, TArray<float>> GetAmbientIntensityNits = { 0x18ea330, 0 };
 };
 
 /// Class /Script/MagicLeapAR.LuminARCandidateImage
-/// Size: 0x0060 (96 bytes) (0x000058 - 0x000060) align n/a MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000058 - 0x000060) align 8 MaxSize: 0x0060
 class ULuminARCandidateImage : public UARCandidateImage
 { 
 public:
-    bool                                               bUseUnreliablePose;                                         // 0x0058   (0x0001) 
-    bool                                               bImageIsStationary;                                         // 0x0059   (0x0001) 
-    EMagicLeapImageTargetOrientation                   AxisOrientation;                                            // 0x005A   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x5];                                       // 0x005B   (0x0005) MISSED
+    bool                                               bUseUnreliablePose;                                         // 0x0058   (0x0001)
+    bool                                               bImageIsStationary;                                         // 0x0059   (0x0001)
+    EMagicLeapImageTargetOrientation                   AxisOrientation;                                            // 0x005A   (0x0001)
+    unsigned char                                      UnknownData00_7[0x5];                                       // 0x005B   (0x0005) MISSED
 
     /// Functions
     // Function /Script/MagicLeapAR.LuminARCandidateImage.GetUseUnreliablePose
-    constexpr static const FunctionPointer<ULuminARCandidateImage, bool> GetUseUnreliablePose = { 0x18e3850, 0 };
+    constexpr static const FunctionPointer<ULuminARCandidateImage, bool> GetUseUnreliablePose = { 0x18ea7b0, 0 };
     // Function /Script/MagicLeapAR.LuminARCandidateImage.GetImageIsStationary
-    constexpr static const FunctionPointer<ULuminARCandidateImage, bool> GetImageIsStationary = { 0x18e3830, 1 };
+    constexpr static const FunctionPointer<ULuminARCandidateImage, bool> GetImageIsStationary = { 0x18ea790, 1 };
     // Function /Script/MagicLeapAR.LuminARCandidateImage.GetAxisOrientation
-    constexpr static const FunctionPointer<ULuminARCandidateImage, EMagicLeapImageTargetOrientation> GetAxisOrientation = { 0x18e3810, 2 };
+    constexpr static const FunctionPointer<ULuminARCandidateImage, EMagicLeapImageTargetOrientation> GetAxisOrientation = { 0x18ea770, 2 };
 };
 
 #pragma pack(pop)

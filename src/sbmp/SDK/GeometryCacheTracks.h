@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,52 +16,52 @@
 #pragma pack(push, 0x1)
 
 /// Struct /Script/GeometryCacheTracks.MovieSceneGeometryCacheParams
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
 struct FMovieSceneGeometryCacheParams
 { 
-    class UGeometryCache*                              GeometryCacheAsset;                                         // 0x0000   (0x0008) 
-    FFrameNumber                                       FirstLoopStartFrameOffset;                                  // 0x0008   (0x0004) 
-    FFrameNumber                                       StartFrameOffset;                                           // 0x000C   (0x0004) 
-    FFrameNumber                                       EndFrameOffset;                                             // 0x0010   (0x0004) 
-    float                                              PlayRate;                                                   // 0x0014   (0x0004) 
-    bool                                               bReverse : 1;                                               // 0x0018:0 (0x0001) 
-    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0019   (0x0003) MISSED
-    float                                              StartOffset;                                                // 0x001C   (0x0004) 
-    float                                              EndOffset;                                                  // 0x0020   (0x0004) 
-    unsigned char                                      UnknownData03_6[0x4];                                       // 0x0024   (0x0004) MISSED
-    FSoftObjectPath                                    GeometryCache;                                              // 0x0028   (0x0018) 
+    class UGeometryCache*                              GeometryCacheAsset;                                         // 0x0000   (0x0008)
+    FFrameNumber                                       FirstLoopStartFrameOffset;                                  // 0x0008   (0x0004)
+    FFrameNumber                                       StartFrameOffset;                                           // 0x000C   (0x0004)
+    FFrameNumber                                       EndFrameOffset;                                             // 0x0010   (0x0004)
+    float                                              PlayRate;                                                   // 0x0014   (0x0004)
+    bool                                               bReverse : 1;                                               // 0x0018:0 (0x0001)
+    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0019   (0x0003) MISSED
+    float                                              StartOffset;                                                // 0x001C   (0x0004)
+    float                                              EndOffset;                                                  // 0x0020   (0x0004)
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0024   (0x0004) MISSED
+    FSoftObjectPath                                    GeometryCache;                                              // 0x0028   (0x0018)
 };
 
 /// Class /Script/GeometryCacheTracks.MovieSceneGeometryCacheSection
-/// Size: 0x0128 (296 bytes) (0x0000E8 - 0x000128) align n/a MaxSize: 0x0128
+/// Size: 0x0128 (296 bytes) (0x0000E8 - 0x000128) align 8 MaxSize: 0x0128
 class UMovieSceneGeometryCacheSection : public UMovieSceneSection
 { 
 public:
-    FMovieSceneGeometryCacheParams                     Params;                                                     // 0x00E8   (0x0040) 
+    FMovieSceneGeometryCacheParams                     Params;                                                     // 0x00E8   (0x0040)
 };
 
 /// Class /Script/GeometryCacheTracks.MovieSceneGeometryCacheTrack
-/// Size: 0x0090 (144 bytes) (0x000078 - 0x000090) align n/a MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000078 - 0x000090) align 8 MaxSize: 0x0090
 class UMovieSceneGeometryCacheTrack : public UMovieSceneNameableTrack
 { 
 public:
-    unsigned char                                      UnknownData01_8[0x8];                                       // 0x0078   (0x0008) MISSED
-    TArray<class UMovieSceneSection*>                  AnimationSections;                                          // 0x0080   (0x0010) 
+    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0078   (0x0008) MISSED
+    TArray<class UMovieSceneSection*>                  AnimationSections;                                          // 0x0080   (0x0010)
 };
 
 /// Struct /Script/GeometryCacheTracks.MovieSceneGeometryCacheSectionTemplateParameters
-/// Size: 0x0048 (72 bytes) (0x000040 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000040 - 0x000048) align 8 MaxSize: 0x0048
 struct FMovieSceneGeometryCacheSectionTemplateParameters : FMovieSceneGeometryCacheParams
 { 
-    FFrameNumber                                       SectionStartTime;                                           // 0x0040   (0x0004) 
-    FFrameNumber                                       SectionEndTime;                                             // 0x0044   (0x0004) 
+    FFrameNumber                                       SectionStartTime;                                           // 0x0040   (0x0004)
+    FFrameNumber                                       SectionEndTime;                                             // 0x0044   (0x0004)
 };
 
 /// Struct /Script/GeometryCacheTracks.MovieSceneGeometryCacheSectionTemplate
-/// Size: 0x0068 (104 bytes) (0x000020 - 0x000068) align n/a MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000020 - 0x000068) align 8 MaxSize: 0x0068
 struct FMovieSceneGeometryCacheSectionTemplate : FMovieSceneEvalTemplate
 { 
-    FMovieSceneGeometryCacheSectionTemplateParameters  Params;                                                     // 0x0020   (0x0048) 
+    FMovieSceneGeometryCacheSectionTemplateParameters  Params;                                                     // 0x0020   (0x0048)
 };
 
 #pragma pack(pop)

@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "CoreUObject.h"
 #include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
@@ -57,7 +59,7 @@ enum class EMagicLeapPrivilege : uint8_t
 };
 
 /// Class /Script/MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UMagicLeapPrivilegesFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -66,13 +68,13 @@ public:
     // Function /Script/MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary.RequestPrivilegeAsync
     // [0] Privilege : const EMagicLeapPrivilege
     // [1] ResultDelegate : const FDelegateProperty&
-    constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege, const FDelegateProperty&> RequestPrivilegeAsync = { 0x1905850, 0 };
+    constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege, const FDelegateProperty&> RequestPrivilegeAsync = { 0x190c8c0, 0 };
     // Function /Script/MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary.RequestPrivilege
     // [0] Privilege : const EMagicLeapPrivilege
-    constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege> RequestPrivilege = { 0x19059c0, 1 };
+    constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege> RequestPrivilege = { 0x190ca30, 1 };
     // Function /Script/MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary.CheckPrivilege
     // [0] Privilege : const EMagicLeapPrivilege
-    constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege> CheckPrivilege = { 0x19059c0, 2 };
+    constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege> CheckPrivilege = { 0x190ca30, 2 };
 };
 
 #pragma pack(pop)

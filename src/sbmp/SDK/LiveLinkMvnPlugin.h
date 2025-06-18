@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -89,48 +91,48 @@ enum class EXsensMapping : uint8_t
 };
 
 /// Class /Script/LiveLinkMvnPlugin.LiveLinkGameInstance
-/// Size: 0x01C0 (448 bytes) (0x0001A8 - 0x0001C0) align n/a MaxSize: 0x01C0
+/// Size: 0x01C0 (448 bytes) (0x0001A8 - 0x0001C0) align 8 MaxSize: 0x01C0
 class ULiveLinkGameInstance : public UGameInstance
 { 
 public:
-    uint16_t                                           PortNumber;                                                 // 0x01A8   (0x0002) 
-    unsigned char                                      UnknownData01_7[0x16];                                      // 0x01AA   (0x0016) MISSED
+    uint16_t                                           PortNumber;                                                 // 0x01A8   (0x0002)
+    unsigned char                                      UnknownData00_7[0x16];                                      // 0x01AA   (0x0016) MISSED
 };
 
 /// Struct /Script/LiveLinkMvnPlugin.RemappingRowHandle
-/// Size: 0x0020 (32 bytes) (0x000010 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000010 - 0x000020) align 8 MaxSize: 0x0020
 struct FRemappingRowHandle : FDataTableRowHandle
 { 
-    EXsensMapping                                      XsensRemapId;                                               // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    FName                                              RemapId;                                                    // 0x0014   (0x0008) 
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x001C   (0x0004) MISSED
+    EXsensMapping                                      XsensRemapId;                                               // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    FName                                              RemapId;                                                    // 0x0014   (0x0008)
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x001C   (0x0004) MISSED
 };
 
 /// Class /Script/LiveLinkMvnPlugin.LiveLinkMvnRetargetAsset
-/// Size: 0x0170 (368 bytes) (0x000028 - 0x000170) align n/a MaxSize: 0x0170
+/// Size: 0x0170 (368 bytes) (0x000028 - 0x000170) align 8 MaxSize: 0x0170
 class ULiveLinkMvnRetargetAsset : public ULiveLinkRetargetAsset
 { 
 public:
-    class UDataTable*                                  m_remapping_table;                                          // 0x0028   (0x0008) 
-    TMap<EXsensMapping, FRemappingRowHandle>           m_remapping_rows;                                           // 0x0030   (0x0050) 
-    class USkeletalMesh*                               m_skeletal_mesh;                                            // 0x0080   (0x0008) 
-    unsigned char                                      UnknownData02_6[0xD8];                                      // 0x0088   (0x00D8) MISSED
-    class UAnimSequence*                               TPoseAnimation;                                             // 0x0160   (0x0008) 
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x0168   (0x0008) MISSED
+    class UDataTable*                                  m_remapping_table;                                          // 0x0028   (0x0008)
+    TMap<EXsensMapping, FRemappingRowHandle>           m_remapping_rows;                                           // 0x0030   (0x0050)
+    class USkeletalMesh*                               m_skeletal_mesh;                                            // 0x0080   (0x0008)
+    unsigned char                                      UnknownData00_6[0xD8];                                      // 0x0088   (0x00D8) MISSED
+    class UAnimSequence*                               TPoseAnimation;                                             // 0x0160   (0x0008)
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0168   (0x0008) MISSED
 };
 
 /// Class /Script/LiveLinkMvnPlugin.LiveLinkMvnTransformController
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
 class ULiveLinkMvnTransformController : public ULiveLinkControllerBase
 { 
 public:
-    int32_t                                            SegmentIndex;                                               // 0x0030   (0x0004) 
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    int32_t                                            SegmentIndex;                                               // 0x0030   (0x0004)
+    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 /// Struct /Script/LiveLinkMvnPlugin.RemappingRow
-/// Size: 0x0008 (8 bytes) (0x000008 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000008 - 0x000008) align 8 MaxSize: 0x0008
 struct FRemappingRow : FTableRowBase
 { 
 };

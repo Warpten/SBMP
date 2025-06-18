@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -23,52 +25,52 @@ enum class EActorSequenceObjectReferenceType : uint8_t
 };
 
 /// Struct /Script/ActorSequence.ActorSequenceObjectReference
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
 struct FActorSequenceObjectReference
 { 
-    EActorSequenceObjectReferenceType                  Type;                                                       // 0x0000   (0x0001) 
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    FGuid                                              ActorId;                                                    // 0x0004   (0x0010) 
-    unsigned char                                      UnknownData03_6[0x4];                                       // 0x0014   (0x0004) MISSED
-    FString                                            PathToComponent;                                            // 0x0018   (0x0010) 
+    EActorSequenceObjectReferenceType                  Type;                                                       // 0x0000   (0x0001)
+    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    FGuid                                              ActorId;                                                    // 0x0004   (0x0010)
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0014   (0x0004) MISSED
+    FString                                            PathToComponent;                                            // 0x0018   (0x0010)
 };
 
 /// Struct /Script/ActorSequence.ActorSequenceObjectReferences
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FActorSequenceObjectReferences
 { 
-    TArray<FActorSequenceObjectReference>              Array;                                                      // 0x0000   (0x0010) 
+    TArray<FActorSequenceObjectReference>              Array;                                                      // 0x0000   (0x0010)
 };
 
 /// Struct /Script/ActorSequence.ActorSequenceObjectReferenceMap
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FActorSequenceObjectReferenceMap
 { 
-    TArray<FGuid>                                      BindingIds;                                                 // 0x0000   (0x0010) 
-    TArray<FActorSequenceObjectReferences>             References;                                                 // 0x0010   (0x0010) 
+    TArray<FGuid>                                      BindingIds;                                                 // 0x0000   (0x0010)
+    TArray<FActorSequenceObjectReferences>             References;                                                 // 0x0010   (0x0010)
 };
 
 /// Class /Script/ActorSequence.ActorSequence
-/// Size: 0x0088 (136 bytes) (0x000060 - 0x000088) align n/a MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000060 - 0x000088) align 8 MaxSize: 0x0088
 class UActorSequence : public UMovieSceneSequence
 { 
 public:
-    class UMovieScene*                                 MovieScene;                                                 // 0x0060   (0x0008) 
-    FActorSequenceObjectReferenceMap                   ObjectReferences;                                           // 0x0068   (0x0020) 
+    class UMovieScene*                                 MovieScene;                                                 // 0x0060   (0x0008)
+    FActorSequenceObjectReferenceMap                   ObjectReferences;                                           // 0x0068   (0x0020)
 };
 
 /// Class /Script/ActorSequence.ActorSequenceComponent
-/// Size: 0x0138 (312 bytes) (0x0000C0 - 0x000138) align n/a MaxSize: 0x0138
+/// Size: 0x0138 (312 bytes) (0x0000C0 - 0x000138) align 8 MaxSize: 0x0138
 class UActorSequenceComponent : public UActorComponent
 { 
 public:
-    FMovieSceneSequencePlaybackSettings                PlaybackSettings;                                           // 0x00C0   (0x0068) 
-    class UActorSequence*                              Sequence;                                                   // 0x0128   (0x0008) 
-    class UActorSequencePlayer*                        SequencePlayer;                                             // 0x0130   (0x0008) 
+    FMovieSceneSequencePlaybackSettings                PlaybackSettings;                                           // 0x00C0   (0x0068)
+    class UActorSequence*                              Sequence;                                                   // 0x0128   (0x0008)
+    class UActorSequencePlayer*                        SequencePlayer;                                             // 0x0130   (0x0008)
 };
 
 /// Class /Script/ActorSequence.ActorSequencePlayer
-/// Size: 0x06D8 (1752 bytes) (0x0006D8 - 0x0006D8) align n/a MaxSize: 0x06D8
+/// Size: 0x06D8 (1752 bytes) (0x0006D8 - 0x0006D8) align 8 MaxSize: 0x06D8
 class UActorSequencePlayer : public UMovieSceneSequencePlayer
 { 
 public:

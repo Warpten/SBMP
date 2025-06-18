@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -13,30 +15,30 @@
 #pragma pack(push, 0x1)
 
 /// Class /Script/CustomMeshComponent.CustomMeshComponent
-/// Size: 0x0570 (1392 bytes) (0x000560 - 0x000570) align n/a MaxSize: 0x0570
+/// Size: 0x0570 (1392 bytes) (0x000560 - 0x000570) align 16 MaxSize: 0x0570
 class UCustomMeshComponent : public UMeshComponent
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0560   (0x0010) MISSED
+    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0560   (0x0010) MISSED
 
     /// Functions
     // Function /Script/CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
     // [0] Triangles : const TArray<FCustomMeshTriangle>&
-    constexpr static const FunctionPointer<UCustomMeshComponent, bool, const TArray<FCustomMeshTriangle>&> SetCustomMeshTriangles = { 0x198db30, 0 };
+    constexpr static const FunctionPointer<UCustomMeshComponent, bool, const TArray<FCustomMeshTriangle>&> SetCustomMeshTriangles = { 0x19954b0, 0 };
     // Function /Script/CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles
-    constexpr static const FunctionPointer<UCustomMeshComponent, void> ClearCustomMeshTriangles = { 0x198d980, 1 };
+    constexpr static const FunctionPointer<UCustomMeshComponent, void> ClearCustomMeshTriangles = { 0x1995300, 1 };
     // Function /Script/CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles
     // [0] Triangles : const TArray<FCustomMeshTriangle>&
-    constexpr static const FunctionPointer<UCustomMeshComponent, void, const TArray<FCustomMeshTriangle>&> AddCustomMeshTriangles = { 0x198d9e0, 2 };
+    constexpr static const FunctionPointer<UCustomMeshComponent, void, const TArray<FCustomMeshTriangle>&> AddCustomMeshTriangles = { 0x1995360, 2 };
 };
 
 /// Struct /Script/CustomMeshComponent.CustomMeshTriangle
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
 struct FCustomMeshTriangle
 { 
-    FVector                                            Vertex0;                                                    // 0x0000   (0x000C) 
-    FVector                                            Vertex1;                                                    // 0x000C   (0x000C) 
-    FVector                                            Vertex2;                                                    // 0x0018   (0x000C) 
+    FVector                                            Vertex0;                                                    // 0x0000   (0x000C)
+    FVector                                            Vertex1;                                                    // 0x000C   (0x000C)
+    FVector                                            Vertex2;                                                    // 0x0018   (0x000C)
 };
 
 #pragma pack(pop)

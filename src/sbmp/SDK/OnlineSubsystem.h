@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -42,33 +44,33 @@ enum class EMPMatchOutcome : uint8_t
 };
 
 /// Struct /Script/OnlineSubsystem.NamedInterface
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FNamedInterface
 { 
-    FName                                              InterfaceName;                                              // 0x0000   (0x0008) 
-    class UObject*                                     InterfaceObject;                                            // 0x0008   (0x0008) 
+    FName                                              InterfaceName;                                              // 0x0000   (0x0008)
+    class UObject*                                     InterfaceObject;                                            // 0x0008   (0x0008)
 };
 
 /// Struct /Script/OnlineSubsystem.NamedInterfaceDef
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FNamedInterfaceDef
 { 
-    FName                                              InterfaceName;                                              // 0x0000   (0x0008) 
-    FString                                            InterfaceClassName;                                         // 0x0008   (0x0010) 
+    FName                                              InterfaceName;                                              // 0x0000   (0x0008)
+    FString                                            InterfaceClassName;                                         // 0x0008   (0x0010)
 };
 
 /// Class /Script/OnlineSubsystem.NamedInterfaces
-/// Size: 0x0060 (96 bytes) (0x000028 - 0x000060) align n/a MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000028 - 0x000060) align 8 MaxSize: 0x0060
 class UNamedInterfaces : public UObject
 { 
 public:
-    TArray<FNamedInterface>                            NamedInterfaces;                                            // 0x0028   (0x0010) 
-    TArray<FNamedInterfaceDef>                         NamedInterfaceDefs;                                         // 0x0038   (0x0010) 
-    unsigned char                                      UnknownData01_7[0x18];                                      // 0x0048   (0x0018) MISSED
+    TArray<FNamedInterface>                            NamedInterfaces;                                            // 0x0028   (0x0010)
+    TArray<FNamedInterfaceDef>                         NamedInterfaceDefs;                                         // 0x0038   (0x0010)
+    unsigned char                                      UnknownData00_7[0x18];                                      // 0x0048   (0x0018) MISSED
 };
 
 /// Class /Script/OnlineSubsystem.TurnBasedMatchInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UTurnBasedMatchInterface : public UInterface
 { 
 public:
@@ -77,46 +79,46 @@ public:
     // Function /Script/OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
     // [0] Match : const FString
     // [1] bDidBecomeActive : const bool
-    constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString, const bool> OnMatchReceivedTurn = { 0x2bbb090, 0 };
+    constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString, const bool> OnMatchReceivedTurn = { 0x2bc7620, 0 };
     // Function /Script/OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
     // [0] Match : const FString
-    constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString> OnMatchEnded = { 0x2bbb090, 1 };
+    constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString> OnMatchEnded = { 0x2bc7620, 1 };
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseProductInfo
-/// Size: 0x00A8 (168 bytes) (0x000000 - 0x0000A8) align n/a MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000000 - 0x0000A8) align 8 MaxSize: 0x00A8
 struct FInAppPurchaseProductInfo
 { 
-    FString                                            Identifier;                                                 // 0x0000   (0x0010) 
-    FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010) 
-    FString                                            DisplayName;                                                // 0x0020   (0x0010) 
-    FString                                            DisplayDescription;                                         // 0x0030   (0x0010) 
-    FString                                            DisplayPrice;                                               // 0x0040   (0x0010) 
-    float                                              RawPrice;                                                   // 0x0050   (0x0004) 
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0054   (0x0004) MISSED
-    FString                                            CurrencyCode;                                               // 0x0058   (0x0010) 
-    FString                                            CurrencySymbol;                                             // 0x0068   (0x0010) 
-    FString                                            DecimalSeparator;                                           // 0x0078   (0x0010) 
-    FString                                            GroupingSeparator;                                          // 0x0088   (0x0010) 
-    FString                                            ReceiptData;                                                // 0x0098   (0x0010) 
+    FString                                            Identifier;                                                 // 0x0000   (0x0010)
+    FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010)
+    FString                                            DisplayName;                                                // 0x0020   (0x0010)
+    FString                                            DisplayDescription;                                         // 0x0030   (0x0010)
+    FString                                            DisplayPrice;                                               // 0x0040   (0x0010)
+    float                                              RawPrice;                                                   // 0x0050   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0054   (0x0004) MISSED
+    FString                                            CurrencyCode;                                               // 0x0058   (0x0010)
+    FString                                            CurrencySymbol;                                             // 0x0068   (0x0010)
+    FString                                            DecimalSeparator;                                           // 0x0078   (0x0010)
+    FString                                            GroupingSeparator;                                          // 0x0088   (0x0010)
+    FString                                            ReceiptData;                                                // 0x0098   (0x0010)
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseRestoreInfo
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
 struct FInAppPurchaseRestoreInfo
 { 
-    FString                                            Identifier;                                                 // 0x0000   (0x0010) 
-    FString                                            ReceiptData;                                                // 0x0010   (0x0010) 
-    FString                                            TransactionIdentifier;                                      // 0x0020   (0x0010) 
+    FString                                            Identifier;                                                 // 0x0000   (0x0010)
+    FString                                            ReceiptData;                                                // 0x0010   (0x0010)
+    FString                                            TransactionIdentifier;                                      // 0x0020   (0x0010)
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseProductRequest
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FInAppPurchaseProductRequest
 { 
-    FString                                            ProductIdentifier;                                          // 0x0000   (0x0010) 
-    bool                                               bIsConsumable;                                              // 0x0010   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
+    FString                                            ProductIdentifier;                                          // 0x0000   (0x0010)
+    bool                                               bIsConsumable;                                              // 0x0010   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 #pragma pack(pop)

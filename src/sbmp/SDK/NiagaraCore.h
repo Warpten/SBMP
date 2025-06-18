@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -12,24 +14,24 @@
 #pragma pack(push, 0x1)
 
 /// Class /Script/NiagaraCore.NiagaraMergeable
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UNiagaraMergeable : public UObject
 { 
 public:
 };
 
 /// Class /Script/NiagaraCore.NiagaraDataInterfaceBase
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UNiagaraDataInterfaceBase : public UNiagaraMergeable
 { 
 public:
 };
 
 /// Struct /Script/NiagaraCore.NiagaraCompileHash
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FNiagaraCompileHash
 { 
-    TArray<char>                                       DataHash;                                                   // 0x0000   (0x0010) 
+    TArray<char>                                       DataHash;                                                   // 0x0000   (0x0010)
 };
 
 #pragma pack(pop)

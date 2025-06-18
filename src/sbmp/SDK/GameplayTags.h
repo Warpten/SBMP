@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -65,7 +67,7 @@ enum class EGameplayTagSourceType : uint8_t
 };
 
 /// Class /Script/GameplayTags.BlueprintGameplayTagLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UBlueprintGameplayTagLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -74,123 +76,123 @@ public:
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.RemoveGameplayTag
     // [0] TagContainer : const FGameplayTagContainer&
     // [1] Tag : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTag> RemoveGameplayTag = { 0x3ea89e0, 0 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTag> RemoveGameplayTag = { 0x3eba270, 0 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.NotEqual_TagTag
     // [0] A : const FGameplayTag
     // [1] B : const FString
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FString> NotEqual_TagTag = { 0x3ea7190, 1 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FString> NotEqual_TagTag = { 0x3eb8a20, 1 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.NotEqual_TagContainerTagContainer
     // [0] A : const FGameplayTagContainer
     // [1] B : const FString
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer, const FString> NotEqual_TagContainerTagContainer = { 0x3ea6ef0, 2 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer, const FString> NotEqual_TagContainerTagContainer = { 0x3eb8780, 2 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.NotEqual_GameplayTagContainer
     // [0] A : const FGameplayTagContainer&
     // [1] B : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&> NotEqual_GameplayTagContainer = { 0x3ea8320, 3 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&> NotEqual_GameplayTagContainer = { 0x3eb9bb0, 3 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.NotEqual_GameplayTag
     // [0] A : const FGameplayTag
     // [1] B : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag> NotEqual_GameplayTag = { 0x3eaa2e0, 4 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag> NotEqual_GameplayTag = { 0x3ebbb70, 4 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MatchesTag
     // [0] TagOne : const FGameplayTag
     // [1] TagTwo : const FGameplayTag
     // [2] bExactMatch : const bool
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag, const bool> MatchesTag = { 0x3eaa850, 5 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag, const bool> MatchesTag = { 0x3ebc0e0, 5 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MatchesAnyTags
     // [0] TagOne : const FGameplayTag
     // [1] OtherContainer : const FGameplayTagContainer&
     // [2] bExactMatch : const bool
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTagContainer&, const bool> MatchesAnyTags = { 0x3eaa5c0, 6 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTagContainer&, const bool> MatchesAnyTags = { 0x3ebbe50, 6 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeLiteralGameplayTagContainer
     // [0] Value : const FGameplayTagContainer
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const FGameplayTagContainer> MakeLiteralGameplayTagContainer = { 0x3ea80d0, 7 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const FGameplayTagContainer> MakeLiteralGameplayTagContainer = { 0x3eb9960, 7 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeLiteralGameplayTag
     // [0] Value : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTag, const FGameplayTag> MakeLiteralGameplayTag = { 0x3eaa040, 8 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTag, const FGameplayTag> MakeLiteralGameplayTag = { 0x3ebb8d0, 8 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagQuery
     // [0] TagQuery : const FGameplayTagQuery
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagQuery, const FGameplayTagQuery> MakeGameplayTagQuery = { 0x3ea78a0, 9 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagQuery, const FGameplayTagQuery> MakeGameplayTagQuery = { 0x3eb9130, 9 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromTag
     // [0] SingleTag : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const FGameplayTag> MakeGameplayTagContainerFromTag = { 0x3ea7d80, 10 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const FGameplayTag> MakeGameplayTagContainerFromTag = { 0x3eb9610, 10 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromArray
     // [0] GameplayTags : const TArray<FGameplayTag>&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const TArray<FGameplayTag>&> MakeGameplayTagContainerFromArray = { 0x3ea7f00, 11 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const TArray<FGameplayTag>&> MakeGameplayTagContainerFromArray = { 0x3eb9790, 11 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.IsTagQueryEmpty
     // [0] TagQuery : const FGameplayTagQuery&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagQuery&> IsTagQueryEmpty = { 0x3ea94d0, 12 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagQuery&> IsTagQueryEmpty = { 0x3ebad60, 12 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.IsGameplayTagValid
     // [0] GameplayTag : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag> IsGameplayTagValid = { 0x3eaa1f0, 13 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag> IsGameplayTagValid = { 0x3ebba80, 13 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.HasTag
     // [0] TagContainer : const FGameplayTagContainer&
     // [1] Tag : const FGameplayTag
     // [2] bExactMatch : const bool
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTag, const bool> HasTag = { 0x3ea9c70, 14 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTag, const bool> HasTag = { 0x3ebb500, 14 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.HasAnyTags
     // [0] TagContainer : const FGameplayTagContainer&
     // [1] OtherContainer : const FGameplayTagContainer&
     // [2] bExactMatch : const bool
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&, const bool> HasAnyTags = { 0x3ea9940, 15 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&, const bool> HasAnyTags = { 0x3ebb1d0, 15 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.HasAllTags
     // [0] TagContainer : const FGameplayTagContainer&
     // [1] OtherContainer : const FGameplayTagContainer&
     // [2] bExactMatch : const bool
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&, const bool> HasAllTags = { 0x3ea9610, 16 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&, const bool> HasAllTags = { 0x3ebaea0, 16 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.HasAllMatchingGameplayTags
     // [0] TagContainerInterface : const TScriptInterface<Class>
     // [1] OtherContainer : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const TScriptInterface<Class>, const FGameplayTagContainer&> HasAllMatchingGameplayTags = { 0x3ea7620, 17 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const TScriptInterface<Class>, const FGameplayTagContainer&> HasAllMatchingGameplayTags = { 0x3eb8eb0, 17 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetTagName
     // [0] GameplayTag : const FGameplayTag&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FName, const FGameplayTag&> GetTagName = { 0x3eaa110, 18 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FName, const FGameplayTag&> GetTagName = { 0x3ebb9a0, 18 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetNumGameplayTagsInContainer
     // [0] TagContainer : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, int32_t, const FGameplayTagContainer&> GetNumGameplayTagsInContainer = { 0x3ea9f30, 19 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, int32_t, const FGameplayTagContainer&> GetNumGameplayTagsInContainer = { 0x3ebb7c0, 19 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetDebugStringFromGameplayTagContainer
     // [0] TagContainer : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FString, const FGameplayTagContainer&> GetDebugStringFromGameplayTagContainer = { 0x3ea6da0, 20 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FString, const FGameplayTagContainer&> GetDebugStringFromGameplayTagContainer = { 0x3eb8630, 20 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetDebugStringFromGameplayTag
     // [0] GameplayTag : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FString, const FGameplayTag> GetDebugStringFromGameplayTag = { 0x3ea6c10, 21 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FString, const FGameplayTag> GetDebugStringFromGameplayTag = { 0x3eb84a0, 21 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetAllActorsOfClassMatchingTagQuery
     // [0] WorldContextObject : const UObject*
     // [1] ActorClass : const UClass*
     // [2] GameplayTagQuery : const FGameplayTagQuery&
     // [3] OutActors : const TArray<AActor*>&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const UObject*, const UClass*, const FGameplayTagQuery&, const TArray<AActor*>&> GetAllActorsOfClassMatchingTagQuery = { 0x3ea8da0, 22 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const UObject*, const UClass*, const FGameplayTagQuery&, const TArray<AActor*>&> GetAllActorsOfClassMatchingTagQuery = { 0x3eba630, 22 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.EqualEqual_GameplayTagContainer
     // [0] A : const FGameplayTagContainer&
     // [1] B : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&> EqualEqual_GameplayTagContainer = { 0x3ea8560, 23 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&> EqualEqual_GameplayTagContainer = { 0x3eb9df0, 23 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.EqualEqual_GameplayTag
     // [0] A : const FGameplayTag
     // [1] B : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag> EqualEqual_GameplayTag = { 0x3eaa450, 24 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag> EqualEqual_GameplayTag = { 0x3ebbce0, 24 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.DoesTagAssetInterfaceHaveTag
     // [0] TagContainerInterface : const TScriptInterface<Class>
     // [1] Tag : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const TScriptInterface<Class>, const FGameplayTag> DoesTagAssetInterfaceHaveTag = { 0x3ea73d0, 25 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const TScriptInterface<Class>, const FGameplayTag> DoesTagAssetInterfaceHaveTag = { 0x3eb8c60, 25 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.DoesContainerMatchTagQuery
     // [0] TagContainer : const FGameplayTagContainer&
     // [1] TagQuery : const FGameplayTagQuery&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagQuery&> DoesContainerMatchTagQuery = { 0x3ea92a0, 26 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagQuery&> DoesContainerMatchTagQuery = { 0x3ebab30, 26 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.BreakGameplayTagContainer
     // [0] GameplayTagContainer : const FGameplayTagContainer&
     // [1] GameplayTags : const TArray<FGameplayTag>&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const TArray<FGameplayTag>&> BreakGameplayTagContainer = { 0x3ea7bb0, 27 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const TArray<FGameplayTag>&> BreakGameplayTagContainer = { 0x3eb9440, 27 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.AppendGameplayTagContainers
     // [0] InOutTagContainer : const FGameplayTagContainer&
     // [1] InTagContainer : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const FGameplayTagContainer&> AppendGameplayTagContainers = { 0x3ea87a0, 28 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const FGameplayTagContainer&> AppendGameplayTagContainers = { 0x3eba030, 28 };
     // Function /Script/GameplayTags.BlueprintGameplayTagLibrary.AddGameplayTag
     // [0] TagContainer : const FGameplayTagContainer&
     // [1] Tag : const FGameplayTag
-    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const FGameplayTag> AddGameplayTag = { 0x3ea8be0, 29 };
+    constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const FGameplayTag> AddGameplayTag = { 0x3eba470, 29 };
 };
 
 /// Class /Script/GameplayTags.GameplayTagAssetInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UGameplayTagAssetInterface : public UInterface
 { 
 public:
@@ -198,239 +200,239 @@ public:
     /// Functions
     // Function /Script/GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
     // [0] TagToCheck : const FGameplayTag
-    constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTag> HasMatchingGameplayTag = { 0x3eab5d0, 0 };
+    constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTag> HasMatchingGameplayTag = { 0x3ebce60, 0 };
     // Function /Script/GameplayTags.GameplayTagAssetInterface.HasAnyMatchingGameplayTags
     // [0] TagContainer : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTagContainer&> HasAnyMatchingGameplayTags = { 0x3eab390, 1 };
+    constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTagContainer&> HasAnyMatchingGameplayTags = { 0x3ebcc20, 1 };
     // Function /Script/GameplayTags.GameplayTagAssetInterface.HasAllMatchingGameplayTags
     // [0] TagContainer : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTagContainer&> HasAllMatchingGameplayTags = { 0x3eab4b0, 2 };
+    constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTagContainer&> HasAllMatchingGameplayTags = { 0x3ebcd40, 2 };
     // Function /Script/GameplayTags.GameplayTagAssetInterface.GetOwnedGameplayTags
     // [0] TagContainer : const FGameplayTagContainer&
-    constexpr static const FunctionPointer<UGameplayTagAssetInterface, void, const FGameplayTagContainer&> GetOwnedGameplayTags = { 0x3eab6c0, 3 };
+    constexpr static const FunctionPointer<UGameplayTagAssetInterface, void, const FGameplayTagContainer&> GetOwnedGameplayTags = { 0x3ebcf50, 3 };
 };
 
 /// Struct /Script/GameplayTags.GameplayTag
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
 struct FGameplayTag
 { 
-    FName                                              TagName;                                                    // 0x0000   (0x0008) 
+    FName                                              TagName;                                                    // 0x0000   (0x0008)
 };
 
 /// Struct /Script/GameplayTags.GameplayTagQuery
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
 struct FGameplayTagQuery
 { 
-    int32_t                                            TokenStreamVersion;                                         // 0x0000   (0x0004) 
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<FGameplayTag>                               TagDictionary;                                              // 0x0008   (0x0010) 
-    TArray<char>                                       QueryTokenStream;                                           // 0x0018   (0x0010) 
-    FString                                            UserDescription;                                            // 0x0028   (0x0010) 
-    FString                                            AutoDescription;                                            // 0x0038   (0x0010) 
+    int32_t                                            TokenStreamVersion;                                         // 0x0000   (0x0004)
+    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    TArray<FGameplayTag>                               TagDictionary;                                              // 0x0008   (0x0010)
+    TArray<char>                                       QueryTokenStream;                                           // 0x0018   (0x0010)
+    FString                                            UserDescription;                                            // 0x0028   (0x0010)
+    FString                                            AutoDescription;                                            // 0x0038   (0x0010)
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQuery
-/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align n/a MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align 8 MaxSize: 0x0098
 class UEditableGameplayTagQuery : public UObject
 { 
 public:
-    FString                                            UserDescription;                                            // 0x0028   (0x0010) 
-    unsigned char                                      UnknownData01_6[0x10];                                      // 0x0038   (0x0010) MISSED
-    class UEditableGameplayTagQueryExpression*         RootExpression;                                             // 0x0048   (0x0008) 
-    FGameplayTagQuery                                  TagQueryExportText_Helper;                                  // 0x0050   (0x0048) 
+    FString                                            UserDescription;                                            // 0x0028   (0x0010)
+    unsigned char                                      UnknownData00_6[0x10];                                      // 0x0038   (0x0010) MISSED
+    class UEditableGameplayTagQueryExpression*         RootExpression;                                             // 0x0048   (0x0008)
+    FGameplayTagQuery                                  TagQueryExportText_Helper;                                  // 0x0050   (0x0048)
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
 class UEditableGameplayTagQueryExpression : public UObject
 { 
 public:
 };
 
 /// Struct /Script/GameplayTags.GameplayTagContainer
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FGameplayTagContainer
 { 
-    TArray<FGameplayTag>                               GameplayTags;                                               // 0x0000   (0x0010) 
-    TArray<FGameplayTag>                               ParentTags;                                                 // 0x0010   (0x0010) 
+    TArray<FGameplayTag>                               GameplayTags;                                               // 0x0000   (0x0010)
+    TArray<FGameplayTag>                               ParentTags;                                                 // 0x0010   (0x0010)
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
 class UEditableGameplayTagQueryExpression_AnyTagsMatch : public UEditableGameplayTagQueryExpression
 { 
 public:
-    FGameplayTagContainer                              Tags;                                                       // 0x0028   (0x0020) 
+    FGameplayTagContainer                              Tags;                                                       // 0x0028   (0x0020)
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
 class UEditableGameplayTagQueryExpression_AllTagsMatch : public UEditableGameplayTagQueryExpression
 { 
 public:
-    FGameplayTagContainer                              Tags;                                                       // 0x0028   (0x0020) 
+    FGameplayTagContainer                              Tags;                                                       // 0x0028   (0x0020)
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
 class UEditableGameplayTagQueryExpression_NoTagsMatch : public UEditableGameplayTagQueryExpression
 { 
 public:
-    FGameplayTagContainer                              Tags;                                                       // 0x0028   (0x0020) 
+    FGameplayTagContainer                              Tags;                                                       // 0x0028   (0x0020)
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
 class UEditableGameplayTagQueryExpression_AnyExprMatch : public UEditableGameplayTagQueryExpression
 { 
 public:
-    TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                                // 0x0028   (0x0010) 
+    TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                                // 0x0028   (0x0010)
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
 class UEditableGameplayTagQueryExpression_AllExprMatch : public UEditableGameplayTagQueryExpression
 { 
 public:
-    TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                                // 0x0028   (0x0010) 
+    TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                                // 0x0028   (0x0010)
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
 class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression
 { 
 public:
-    TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                                // 0x0028   (0x0010) 
+    TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                                // 0x0028   (0x0010)
 };
 
 /// Struct /Script/GameplayTags.GameplayTagSource
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FGameplayTagSource
 { 
-    FName                                              SourceName;                                                 // 0x0000   (0x0008) 
-    EGameplayTagSourceType                             SourceType;                                                 // 0x0008   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0009   (0x0007) MISSED
-    class UGameplayTagsList*                           SourceTagList;                                              // 0x0010   (0x0008) 
-    class URestrictedGameplayTagsList*                 SourceRestrictedTagList;                                    // 0x0018   (0x0008) 
+    FName                                              SourceName;                                                 // 0x0000   (0x0008)
+    EGameplayTagSourceType                             SourceType;                                                 // 0x0008   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0009   (0x0007) MISSED
+    class UGameplayTagsList*                           SourceTagList;                                              // 0x0010   (0x0008)
+    class URestrictedGameplayTagsList*                 SourceRestrictedTagList;                                    // 0x0018   (0x0008)
 };
 
 /// Class /Script/GameplayTags.GameplayTagsManager
-/// Size: 0x0210 (528 bytes) (0x000028 - 0x000210) align n/a MaxSize: 0x0210
+/// Size: 0x0210 (528 bytes) (0x000028 - 0x000210) align 8 MaxSize: 0x0210
 class UGameplayTagsManager : public UObject
 { 
 public:
-    unsigned char                                      UnknownData03_8[0x98];                                      // 0x0028   (0x0098) MISSED
-    TArray<FGameplayTagSource>                         TagSources;                                                 // 0x00C0   (0x0010) 
-    unsigned char                                      UnknownData04_6[0xE0];                                      // 0x00D0   (0x00E0) MISSED
-    TArray<class UDataTable*>                          GameplayTagTables;                                          // 0x01B0   (0x0010) 
-    unsigned char                                      UnknownData05_7[0x50];                                      // 0x01C0   (0x0050) MISSED
+    unsigned char                                      UnknownData00_8[0x98];                                      // 0x0028   (0x0098) MISSED
+    TArray<FGameplayTagSource>                         TagSources;                                                 // 0x00C0   (0x0010)
+    unsigned char                                      UnknownData01_6[0xE0];                                      // 0x00D0   (0x00E0) MISSED
+    TArray<class UDataTable*>                          GameplayTagTables;                                          // 0x01B0   (0x0010)
+    unsigned char                                      UnknownData02_7[0x50];                                      // 0x01C0   (0x0050) MISSED
 };
 
 /// Struct /Script/GameplayTags.GameplayTagTableRow
-/// Size: 0x0020 (32 bytes) (0x000008 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000008 - 0x000020) align 8 MaxSize: 0x0020
 struct FGameplayTagTableRow : FTableRowBase
 { 
-    FName                                              Tag;                                                        // 0x0008   (0x0008) 
-    FString                                            DevComment;                                                 // 0x0010   (0x0010) 
+    FName                                              Tag;                                                        // 0x0008   (0x0008)
+    FString                                            DevComment;                                                 // 0x0010   (0x0010)
 };
 
 /// Class /Script/GameplayTags.GameplayTagsList
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
 class UGameplayTagsList : public UObject
 { 
 public:
-    FString                                            ConfigFileName;                                             // 0x0028   (0x0010) 
-    TArray<FGameplayTagTableRow>                       GameplayTagList;                                            // 0x0038   (0x0010) 
+    FString                                            ConfigFileName;                                             // 0x0028   (0x0010)
+    TArray<FGameplayTagTableRow>                       GameplayTagList;                                            // 0x0038   (0x0010)
 };
 
 /// Struct /Script/GameplayTags.RestrictedGameplayTagTableRow
-/// Size: 0x0028 (40 bytes) (0x000020 - 0x000028) align n/a MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000020 - 0x000028) align 8 MaxSize: 0x0028
 struct FRestrictedGameplayTagTableRow : FGameplayTagTableRow
 { 
-    bool                                               bAllowNonRestrictedChildren;                                // 0x0020   (0x0001) 
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0021   (0x0007) MISSED
+    bool                                               bAllowNonRestrictedChildren;                                // 0x0020   (0x0001)
+    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0021   (0x0007) MISSED
 };
 
 /// Class /Script/GameplayTags.RestrictedGameplayTagsList
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
 class URestrictedGameplayTagsList : public UObject
 { 
 public:
-    FString                                            ConfigFileName;                                             // 0x0028   (0x0010) 
-    TArray<FRestrictedGameplayTagTableRow>             RestrictedGameplayTagList;                                  // 0x0038   (0x0010) 
+    FString                                            ConfigFileName;                                             // 0x0028   (0x0010)
+    TArray<FRestrictedGameplayTagTableRow>             RestrictedGameplayTagList;                                  // 0x0038   (0x0010)
 };
 
 /// Struct /Script/GameplayTags.GameplayTagCategoryRemap
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FGameplayTagCategoryRemap
 { 
-    FString                                            BaseCategory;                                               // 0x0000   (0x0010) 
-    TArray<FString>                                    RemapCategories;                                            // 0x0010   (0x0010) 
+    FString                                            BaseCategory;                                               // 0x0000   (0x0010)
+    TArray<FString>                                    RemapCategories;                                            // 0x0010   (0x0010)
 };
 
 /// Struct /Script/GameplayTags.GameplayTagRedirect
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
 struct FGameplayTagRedirect
 { 
-    FName                                              OldTagName;                                                 // 0x0000   (0x0008) 
-    FName                                              NewTagName;                                                 // 0x0008   (0x0008) 
+    FName                                              OldTagName;                                                 // 0x0000   (0x0008)
+    FName                                              NewTagName;                                                 // 0x0008   (0x0008)
 };
 
 /// Struct /Script/GameplayTags.RestrictedConfigInfo
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
 struct FRestrictedConfigInfo
 { 
-    FString                                            RestrictedConfigName;                                       // 0x0000   (0x0010) 
-    TArray<FString>                                    Owners;                                                     // 0x0010   (0x0010) 
+    FString                                            RestrictedConfigName;                                       // 0x0000   (0x0010)
+    TArray<FString>                                    Owners;                                                     // 0x0010   (0x0010)
 };
 
 /// Class /Script/GameplayTags.GameplayTagsSettings
-/// Size: 0x00B8 (184 bytes) (0x000048 - 0x0000B8) align n/a MaxSize: 0x00B8
+/// Size: 0x00B8 (184 bytes) (0x000048 - 0x0000B8) align 8 MaxSize: 0x00B8
 class UGameplayTagsSettings : public UGameplayTagsList
 { 
 public:
-    bool                                               ImportTagsFromConfig;                                       // 0x0048   (0x0001) 
-    bool                                               WarnOnInvalidTags;                                          // 0x0049   (0x0001) 
-    bool                                               FastReplication;                                            // 0x004A   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x5];                                       // 0x004B   (0x0005) MISSED
-    FString                                            InvalidTagCharacters;                                       // 0x0050   (0x0010) 
-    TArray<FGameplayTagCategoryRemap>                  CategoryRemapping;                                          // 0x0060   (0x0010) 
-    TArray<FSoftObjectPath>                            GameplayTagTableList;                                       // 0x0070   (0x0010) 
-    TArray<FGameplayTagRedirect>                       GameplayTagRedirects;                                       // 0x0080   (0x0010) 
-    TArray<FName>                                      CommonlyReplicatedTags;                                     // 0x0090   (0x0010) 
-    int32_t                                            NumBitsForContainerSize;                                    // 0x00A0   (0x0004) 
-    int32_t                                            NetIndexFirstBitSegment;                                    // 0x00A4   (0x0004) 
-    TArray<FRestrictedConfigInfo>                      RestrictedConfigFiles;                                      // 0x00A8   (0x0010) 
+    bool                                               ImportTagsFromConfig;                                       // 0x0048   (0x0001)
+    bool                                               WarnOnInvalidTags;                                          // 0x0049   (0x0001)
+    bool                                               FastReplication;                                            // 0x004A   (0x0001)
+    unsigned char                                      UnknownData00_6[0x5];                                       // 0x004B   (0x0005) MISSED
+    FString                                            InvalidTagCharacters;                                       // 0x0050   (0x0010)
+    TArray<FGameplayTagCategoryRemap>                  CategoryRemapping;                                          // 0x0060   (0x0010)
+    TArray<FSoftObjectPath>                            GameplayTagTableList;                                       // 0x0070   (0x0010)
+    TArray<FGameplayTagRedirect>                       GameplayTagRedirects;                                       // 0x0080   (0x0010)
+    TArray<FName>                                      CommonlyReplicatedTags;                                     // 0x0090   (0x0010)
+    int32_t                                            NumBitsForContainerSize;                                    // 0x00A0   (0x0004)
+    int32_t                                            NetIndexFirstBitSegment;                                    // 0x00A4   (0x0004)
+    TArray<FRestrictedConfigInfo>                      RestrictedConfigFiles;                                      // 0x00A8   (0x0010)
 };
 
 /// Class /Script/GameplayTags.GameplayTagsDeveloperSettings
-/// Size: 0x0050 (80 bytes) (0x000038 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000038 - 0x000050) align 8 MaxSize: 0x0050
 class UGameplayTagsDeveloperSettings : public UDeveloperSettings
 { 
 public:
-    FString                                            DeveloperConfigName;                                        // 0x0038   (0x0010) 
-    FName                                              FavoriteTagSource;                                          // 0x0048   (0x0008) 
+    FString                                            DeveloperConfigName;                                        // 0x0038   (0x0010)
+    FName                                              FavoriteTagSource;                                          // 0x0048   (0x0008)
 };
 
 /// Struct /Script/GameplayTags.GameplayTagCreationWidgetHelper
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
 struct FGameplayTagCreationWidgetHelper
 { 
-    unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/GameplayTags.GameplayTagReferenceHelper
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
 struct FGameplayTagReferenceHelper
 { 
-    unsigned char                                      UnknownData01_2[0x10];                                      // 0x0000   (0x0010) MISSED
+    unsigned char                                      UnknownData00_2[0x10];                                      // 0x0000   (0x0010) MISSED
 };
 
 /// Struct /Script/GameplayTags.GameplayTagNode
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
 struct FGameplayTagNode
 { 
-    unsigned char                                      UnknownData01_2[0x50];                                      // 0x0000   (0x0050) MISSED
+    unsigned char                                      UnknownData00_2[0x50];                                      // 0x0000   (0x0050) MISSED
 };
 
 #pragma pack(pop)

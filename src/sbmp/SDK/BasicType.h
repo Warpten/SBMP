@@ -8,6 +8,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 /// This file contains all definitions of structs that werent defined automatically.
 
 

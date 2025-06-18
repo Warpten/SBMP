@@ -5,6 +5,8 @@
 *                                                       *
 ********************************************************/
 
+#define UFUNCTION(...)
+#define UPROPERTY(...)
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -50,48 +52,48 @@ enum class EMagicLeapIdentityError : uint8_t
 };
 
 /// Class /Script/MagicLeapIdentity.MagicLeapIdentity
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
 class UMagicLeapIdentity : public UObject
 { 
 public:
-    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010) MISSED
+    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0028   (0x0010) MISSED
 
     /// Functions
     // Function /Script/MagicLeapIdentity.MagicLeapIdentity.RequestIdentityAttributeValueDelegate__DelegateSignature
     // [0] ResultCode : const EMagicLeapIdentityError
     // [1] AttributeValue : const TArray<FMagicLeapIdentityAttribute>&
-    constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<FMagicLeapIdentityAttribute>&> RequestIdentityAttributeValueDelegate__DelegateSignature = { 0x2bbb090, 0 };
+    constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<FMagicLeapIdentityAttribute>&> RequestIdentityAttributeValueDelegate__DelegateSignature = { 0x2bc7620, 0 };
     // Function /Script/MagicLeapIdentity.MagicLeapIdentity.RequestAttributeValueAsync
     // [0] RequestedAttributeList : const TArray<EMagicLeapIdentityKey>&
     // [1] ResultDelegate : const FDelegateProperty&
-    constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&, const FDelegateProperty&> RequestAttributeValueAsync = { 0x18fd280, 1 };
+    constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&, const FDelegateProperty&> RequestAttributeValueAsync = { 0x19041e0, 1 };
     // Function /Script/MagicLeapIdentity.MagicLeapIdentity.RequestAttributeValue
     // [0] RequestedAttributeList : const TArray<EMagicLeapIdentityKey>&
     // [1] RequestedAttributeValues : const TArray<FMagicLeapIdentityAttribute>&
-    constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&, const TArray<FMagicLeapIdentityAttribute>&> RequestAttributeValue = { 0x18fd3e0, 2 };
+    constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&, const TArray<FMagicLeapIdentityAttribute>&> RequestAttributeValue = { 0x1904340, 2 };
     // Function /Script/MagicLeapIdentity.MagicLeapIdentity.ModifyIdentityAttributeValueDelegate__DelegateSignature
     // [0] ResultCode : const EMagicLeapIdentityError
     // [1] AttributesUpdatedSuccessfully : const TArray<EMagicLeapIdentityKey>&
-    constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> ModifyIdentityAttributeValueDelegate__DelegateSignature = { 0x2bbb090, 3 };
+    constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> ModifyIdentityAttributeValueDelegate__DelegateSignature = { 0x2bc7620, 3 };
     // Function /Script/MagicLeapIdentity.MagicLeapIdentity.GetAllAvailableAttributesAsync
     // [0] ResultDelegate : const FDelegateProperty&
-    constexpr static const FunctionPointer<UMagicLeapIdentity, void, const FDelegateProperty&> GetAllAvailableAttributesAsync = { 0x18fd580, 4 };
+    constexpr static const FunctionPointer<UMagicLeapIdentity, void, const FDelegateProperty&> GetAllAvailableAttributesAsync = { 0x19044e0, 4 };
     // Function /Script/MagicLeapIdentity.MagicLeapIdentity.GetAllAvailableAttributes
     // [0] AvailableAttributes : const TArray<EMagicLeapIdentityKey>&
-    constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> GetAllAvailableAttributes = { 0x18fd640, 5 };
+    constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> GetAllAvailableAttributes = { 0x19045a0, 5 };
     // Function /Script/MagicLeapIdentity.MagicLeapIdentity.AvailableIdentityAttributesDelegate__DelegateSignature
     // [0] ResultCode : const EMagicLeapIdentityError
     // [1] AvailableAttributes : const TArray<EMagicLeapIdentityKey>&
-    constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> AvailableIdentityAttributesDelegate__DelegateSignature = { 0x2bbb090, 6 };
+    constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> AvailableIdentityAttributesDelegate__DelegateSignature = { 0x2bc7620, 6 };
 };
 
 /// Struct /Script/MagicLeapIdentity.MagicLeapIdentityAttribute
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
 struct FMagicLeapIdentityAttribute
 { 
-    EMagicLeapIdentityKey                              Attribute;                                                  // 0x0000   (0x0001) 
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0001   (0x0007) MISSED
-    FString                                            Value;                                                      // 0x0008   (0x0010) 
+    EMagicLeapIdentityKey                              Attribute;                                                  // 0x0000   (0x0001)
+    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    FString                                            Value;                                                      // 0x0008   (0x0010)
 };
 
 #pragma pack(pop)
