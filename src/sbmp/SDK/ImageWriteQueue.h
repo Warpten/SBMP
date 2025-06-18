@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,10 +16,10 @@
 /// Size: 0x01 (1 bytes)
 enum class EDesiredImageFormat : uint8_t
 {
-	PNG                                                                              = 0,
-	JPG                                                                              = 1,
-	BMP                                                                              = 2,
-	EXR                                                                              = 3
+    PNG                                                                              = 0,
+    JPG                                                                              = 1,
+    BMP                                                                              = 2,
+    EXR                                                                              = 3
 };
 
 /// Class /Script/ImageWriteQueue.ImageWriteBlueprintLibrary
@@ -28,22 +28,25 @@ class UImageWriteBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/ImageWriteQueue.ImageWriteBlueprintLibrary.ExportToDisk
-	constexpr static const FunctionPointer<UImageWriteBlueprintLibrary, void, const UTexture*, const FString, const FImageWriteOptions&> ExportToDisk = { 0x2f37d10, 0 }; 
+    /// Functions
+    // Function /Script/ImageWriteQueue.ImageWriteBlueprintLibrary.ExportToDisk
+    // [0] Texture : const UTexture*
+    // [1] Filename : const FString
+    // [2] OPTIONS : const FImageWriteOptions&
+    constexpr static const FunctionPointer<UImageWriteBlueprintLibrary, void, const UTexture*, const FString, const FImageWriteOptions&> ExportToDisk = { 0x2f37d10, 0 };
 };
 
 /// Struct /Script/ImageWriteQueue.ImageWriteOptions
 /// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FImageWriteOptions
 { 
-	EDesiredImageFormat                                Format;                                                     // 0x0000   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003)  MISSED
-	FDelegateProperty                                  OnComplete;                                                 // 0x0004   (0x0010)  
-	int32_t                                            CompressionQuality;                                         // 0x0014   (0x0004)  
-	bool                                               bOverwriteFile;                                             // 0x0018   (0x0001)  
-	bool                                               bAsync;                                                     // 0x0019   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x46];                                      // 0x001A   (0x0046)  MISSED
+    EDesiredImageFormat                                Format;                                                     // 0x0000   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    FDelegateProperty                                  OnComplete;                                                 // 0x0004   (0x0010) 
+    int32_t                                            CompressionQuality;                                         // 0x0014   (0x0004) 
+    bool                                               bOverwriteFile;                                             // 0x0018   (0x0001) 
+    bool                                               bAsync;                                                     // 0x0019   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x46];                                      // 0x001A   (0x0046) MISSED
 };
 
 #pragma pack(pop)

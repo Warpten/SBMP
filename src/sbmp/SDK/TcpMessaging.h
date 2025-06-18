@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
+#include "BasicType.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,13 +16,13 @@
 class UTcpMessagingSettings : public UObject
 { 
 public:
-	bool                                               EnableTransport;                                            // 0x0028   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x7];                                       // 0x0029   (0x0007)  MISSED
-	FString                                            ListenEndpoint;                                             // 0x0030   (0x0010)  
-	TArray<FString>                                    ConnectToEndpoints;                                         // 0x0040   (0x0010)  
-	int32_t                                            ConnectionRetryDelay;                                       // 0x0050   (0x0004)  
-	bool                                               bStopServiceWhenAppDeactivates;                             // 0x0054   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x3];                                       // 0x0055   (0x0003)  MISSED
+    bool                                               EnableTransport;                                            // 0x0028   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0029   (0x0007) MISSED
+    FString                                            ListenEndpoint;                                             // 0x0030   (0x0010) 
+    TArray<FString>                                    ConnectToEndpoints;                                         // 0x0040   (0x0010) 
+    int32_t                                            ConnectionRetryDelay;                                       // 0x0050   (0x0004) 
+    bool                                               bStopServiceWhenAppDeactivates;                             // 0x0054   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x3];                                       // 0x0055   (0x0003) MISSED
 };
 
 #pragma pack(pop)

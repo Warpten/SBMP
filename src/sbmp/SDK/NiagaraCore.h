@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
+#include "BasicType.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -29,7 +29,7 @@ public:
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraCompileHash
 { 
-	TArray<char>                                       DataHash;                                                   // 0x0000   (0x0010)  
+    TArray<char>                                       DataHash;                                                   // 0x0000   (0x0010) 
 };
 
 #pragma pack(pop)

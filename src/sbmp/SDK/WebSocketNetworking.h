@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,7 +16,7 @@
 class UWebSocketConnection : public UNetConnection
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x1AF0   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x1AF0   (0x0010) MISSED
 };
 
 /// Class /Script/WebSocketNetworking.WebSocketNetDriver
@@ -24,8 +24,8 @@ public:
 class UWebSocketNetDriver : public UNetDriver
 { 
 public:
-	int32_t                                            WebSocketPort;                                              // 0x0748   (0x0004)  
-	unsigned char                                      UnknownData01_7[0xC];                                       // 0x074C   (0x000C)  MISSED
+    int32_t                                            WebSocketPort;                                              // 0x0748   (0x0004) 
+    unsigned char                                      UnknownData01_7[0xC];                                       // 0x074C   (0x000C) MISSED
 };
 
 #pragma pack(pop)

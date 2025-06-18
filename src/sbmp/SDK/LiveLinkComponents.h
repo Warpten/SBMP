@@ -6,10 +6,10 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
-/// dependency: LiveLinkInterface
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "LiveLinkInterface.h"
 
 #pragma pack(push, 0x1)
 
@@ -18,7 +18,7 @@
 class ULiveLinkControllerBase : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkCameraController
@@ -33,15 +33,15 @@ public:
 class ULiveLinkComponentController : public UActorComponent
 { 
 public:
-	FLiveLinkSubjectRepresentation                     SubjectRepresentation;                                      // 0x00C0   (0x0010)  
-	TMap<class UClass*, class ULiveLinkControllerBase*> ControllerMap;                                             // 0x00D0   (0x0050)  
-	bool                                               bUpdateInEditor;                                            // 0x0120   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x7];                                       // 0x0121   (0x0007)  MISSED
-	FMulticastInlineDelegate                           OnLiveLinkUpdated;                                          // 0x0128   (0x0010)  
-	FComponentReference                                ComponentToControl;                                         // 0x0138   (0x0028)  
-	bool                                               bDisableEvaluateLiveLinkWhenSpawnable;                      // 0x0160   (0x0001)  
-	bool                                               bEvaluateLiveLink;                                          // 0x0161   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x6];                                       // 0x0162   (0x0006)  MISSED
+    FLiveLinkSubjectRepresentation                     SubjectRepresentation;                                      // 0x00C0   (0x0010) 
+    TMap<class UClass*, class ULiveLinkControllerBase*> ControllerMap;                                             // 0x00D0   (0x0050) 
+    bool                                               bUpdateInEditor;                                            // 0x0120   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0121   (0x0007) MISSED
+    FMulticastInlineDelegate                           OnLiveLinkUpdated;                                          // 0x0128   (0x0010) 
+    FComponentReference                                ComponentToControl;                                         // 0x0138   (0x0028) 
+    bool                                               bDisableEvaluateLiveLinkWhenSpawnable;                      // 0x0160   (0x0001) 
+    bool                                               bEvaluateLiveLink;                                          // 0x0161   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x6];                                       // 0x0162   (0x0006) MISSED
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkComponentSettings
@@ -49,7 +49,7 @@ public:
 class ULiveLinkComponentSettings : public UObject
 { 
 public:
-	TMap<class UClass*, class UClass*>                 DefaultControllerForRole;                                   // 0x0028   (0x0050)  
+    TMap<class UClass*, class UClass*>                 DefaultControllerForRole;                                   // 0x0028   (0x0050) 
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkLightController
@@ -63,10 +63,10 @@ public:
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FLiveLinkTransformControllerData
 { 
-	bool                                               bWorldTransform;                                            // 0x0000   (0x0001)  
-	bool                                               bUseScale;                                                  // 0x0001   (0x0001)  
-	bool                                               bSweep;                                                     // 0x0002   (0x0001)  
-	bool                                               bTeleport;                                                  // 0x0003   (0x0001)  
+    bool                                               bWorldTransform;                                            // 0x0000   (0x0001) 
+    bool                                               bUseScale;                                                  // 0x0001   (0x0001) 
+    bool                                               bSweep;                                                     // 0x0002   (0x0001) 
+    bool                                               bTeleport;                                                  // 0x0003   (0x0001) 
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkTransformController
@@ -74,8 +74,8 @@ struct FLiveLinkTransformControllerData
 class ULiveLinkTransformController : public ULiveLinkControllerBase
 { 
 public:
-	FLiveLinkTransformControllerData                   TransformData;                                              // 0x0030   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004)  MISSED
+    FLiveLinkTransformControllerData                   TransformData;                                              // 0x0030   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 #pragma pack(pop)

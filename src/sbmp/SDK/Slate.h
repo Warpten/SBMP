@@ -6,10 +6,10 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: InputCore
-/// dependency: SlateCore
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "InputCore.h"
+#include "SlateCore.h"
 
 #pragma pack(push, 0x1)
 
@@ -17,202 +17,202 @@
 /// Size: 0x01 (1 bytes)
 enum class ETextJustify : uint8_t
 {
-	Left                                                                             = 0,
-	Center                                                                           = 1,
-	Right                                                                            = 2
+    Left                                                                             = 0,
+    Center                                                                           = 1,
+    Right                                                                            = 2
 };
 
 /// Enum /Script/Slate.ETextFlowDirection
 /// Size: 0x01 (1 bytes)
 enum class ETextFlowDirection : uint8_t
 {
-	Auto                                                                             = 0,
-	LeftToRight                                                                      = 1,
-	RightToLeft                                                                      = 2
+    Auto                                                                             = 0,
+    LeftToRight                                                                      = 1,
+    RightToLeft                                                                      = 2
 };
 
 /// Enum /Script/Slate.EVirtualKeyboardDismissAction
 /// Size: 0x01 (1 bytes)
 enum class EVirtualKeyboardDismissAction : uint8_t
 {
-	TextChangeOnDismiss                                                              = 0,
-	TextCommitOnAccept                                                               = 1,
-	TextCommitOnDismiss                                                              = 2
+    TextChangeOnDismiss                                                              = 0,
+    TextCommitOnAccept                                                               = 1,
+    TextCommitOnDismiss                                                              = 2
 };
 
 /// Enum /Script/Slate.EVirtualKeyboardTrigger
 /// Size: 0x01 (1 bytes)
 enum class EVirtualKeyboardTrigger : uint8_t
 {
-	OnFocusByPointer                                                                 = 0,
-	OnAllFocusEvents                                                                 = 1
+    OnFocusByPointer                                                                 = 0,
+    OnAllFocusEvents                                                                 = 1
 };
 
 /// Enum /Script/Slate.ETextWrappingPolicy
 /// Size: 0x01 (1 bytes)
 enum class ETextWrappingPolicy : uint8_t
 {
-	DefaultWrapping                                                                  = 0,
-	AllowPerCharacterWrapping                                                        = 1
+    DefaultWrapping                                                                  = 0,
+    AllowPerCharacterWrapping                                                        = 1
 };
 
 /// Enum /Script/Slate.ETableViewMode
 /// Size: 0x01 (1 bytes)
 enum class ETableViewMode : uint8_t
 {
-	List                                                                             = 0,
-	Tile                                                                             = 1,
-	Tree                                                                             = 2
+    List                                                                             = 0,
+    Tile                                                                             = 1,
+    Tree                                                                             = 2
 };
 
 /// Enum /Script/Slate.ESelectionMode
 /// Size: 0x01 (1 bytes)
 enum class ESelectionMode : uint8_t
 {
-	None                                                                             = 0,
-	Single                                                                           = 1,
-	SingleToggle                                                                     = 2,
-	Multi                                                                            = 3
+    None                                                                             = 0,
+    Single                                                                           = 1,
+    SingleToggle                                                                     = 2,
+    Multi                                                                            = 3
 };
 
 /// Enum /Script/Slate.EMultiBlockType
 /// Size: 0x01 (1 bytes)
 enum class EMultiBlockType : uint8_t
 {
-	None                                                                             = 0,
-	ButtonRow                                                                        = 1,
-	EditableText                                                                     = 2,
-	Heading                                                                          = 3,
-	MenuEntry                                                                        = 4,
-	Separator                                                                        = 5,
-	ToolBarButton                                                                    = 6,
-	ToolBarComboButton                                                               = 7,
-	Widget                                                                           = 8
+    None                                                                             = 0,
+    ButtonRow                                                                        = 1,
+    EditableText                                                                     = 2,
+    Heading                                                                          = 3,
+    MenuEntry                                                                        = 4,
+    Separator                                                                        = 5,
+    ToolBarButton                                                                    = 6,
+    ToolBarComboButton                                                               = 7,
+    Widget                                                                           = 8
 };
 
 /// Enum /Script/Slate.EMultiBoxType
 /// Size: 0x01 (1 bytes)
 enum class EMultiBoxType : uint8_t
 {
-	MenuBar                                                                          = 0,
-	ToolBar                                                                          = 1,
-	VerticalToolBar                                                                  = 2,
-	UniformToolBar                                                                   = 3,
-	Menu                                                                             = 4,
-	ButtonRow                                                                        = 5
+    MenuBar                                                                          = 0,
+    ToolBar                                                                          = 1,
+    VerticalToolBar                                                                  = 2,
+    UniformToolBar                                                                   = 3,
+    Menu                                                                             = 4,
+    ButtonRow                                                                        = 5
 };
 
 /// Enum /Script/Slate.EProgressBarFillType
 /// Size: 0x01 (1 bytes)
 enum class EProgressBarFillType : uint8_t
 {
-	LeftToRight                                                                      = 0,
-	RightToLeft                                                                      = 1,
-	FillFromCenter                                                                   = 2,
-	TopToBottom                                                                      = 3,
-	BottomToTop                                                                      = 4
+    LeftToRight                                                                      = 0,
+    RightToLeft                                                                      = 1,
+    FillFromCenter                                                                   = 2,
+    TopToBottom                                                                      = 3,
+    BottomToTop                                                                      = 4
 };
 
 /// Enum /Script/Slate.EStretch
 /// Size: 0x01 (1 bytes)
 enum class EStretch : uint8_t
 {
-	None                                                                             = 0,
-	Fill                                                                             = 1,
-	ScaleToFit                                                                       = 2,
-	ScaleToFitX                                                                      = 3,
-	ScaleToFitY                                                                      = 4,
-	ScaleToFill                                                                      = 5,
-	ScaleBySafeZone                                                                  = 6,
-	UserSpecified                                                                    = 7
+    None                                                                             = 0,
+    Fill                                                                             = 1,
+    ScaleToFit                                                                       = 2,
+    ScaleToFitX                                                                      = 3,
+    ScaleToFitY                                                                      = 4,
+    ScaleToFill                                                                      = 5,
+    ScaleBySafeZone                                                                  = 6,
+    UserSpecified                                                                    = 7
 };
 
 /// Enum /Script/Slate.EStretchDirection
 /// Size: 0x01 (1 bytes)
 enum class EStretchDirection : uint8_t
 {
-	Both                                                                             = 0,
-	DownOnly                                                                         = 1,
-	UpOnly                                                                           = 2
+    Both                                                                             = 0,
+    DownOnly                                                                         = 1,
+    UpOnly                                                                           = 2
 };
 
 /// Enum /Script/Slate.EScrollWhenFocusChanges
 /// Size: 0x01 (1 bytes)
 enum class EScrollWhenFocusChanges : uint8_t
 {
-	NoScroll                                                                         = 0,
-	InstantScroll                                                                    = 1,
-	AnimatedScroll                                                                   = 2
+    NoScroll                                                                         = 0,
+    InstantScroll                                                                    = 1,
+    AnimatedScroll                                                                   = 2
 };
 
 /// Enum /Script/Slate.EDescendantScrollDestination
 /// Size: 0x01 (1 bytes)
 enum class EDescendantScrollDestination : uint8_t
 {
-	IntoView                                                                         = 0,
-	TopOrLeft                                                                        = 1,
-	Center                                                                           = 2
+    IntoView                                                                         = 0,
+    TopOrLeft                                                                        = 1,
+    Center                                                                           = 2
 };
 
 /// Enum /Script/Slate.EListItemAlignment
 /// Size: 0x01 (1 bytes)
 enum class EListItemAlignment : uint8_t
 {
-	EvenlyDistributed                                                                = 0,
-	EvenlySize                                                                       = 1,
-	EvenlyWide                                                                       = 2,
-	LeftAligned                                                                      = 3,
-	RightAligned                                                                     = 4,
-	CenterAligned                                                                    = 5,
-	Fill                                                                             = 6
+    EvenlyDistributed                                                                = 0,
+    EvenlySize                                                                       = 1,
+    EvenlyWide                                                                       = 2,
+    LeftAligned                                                                      = 3,
+    RightAligned                                                                     = 4,
+    CenterAligned                                                                    = 5,
+    Fill                                                                             = 6
 };
 
 /// Enum /Script/Slate.ETextTransformPolicy
 /// Size: 0x01 (1 bytes)
 enum class ETextTransformPolicy : uint8_t
 {
-	None                                                                             = 0,
-	ToLower                                                                          = 1,
-	ToUpper                                                                          = 2
+    None                                                                             = 0,
+    ToLower                                                                          = 1,
+    ToUpper                                                                          = 2
 };
 
 /// Enum /Script/Slate.ETextVerticalJustify
 /// Size: 0x01 (1 bytes)
 enum class ETextVerticalJustify : uint8_t
 {
-	Bottom                                                                           = 0,
-	Center                                                                           = 1,
-	Top                                                                              = 2
+    Bottom                                                                           = 0,
+    Center                                                                           = 1,
+    Top                                                                              = 2
 };
 
 /// Enum /Script/Slate.ECustomizedToolMenuVisibility
 /// Size: 0x04 (4 bytes)
 enum class ECustomizedToolMenuVisibility : uint32_t
 {
-	None                                                                             = 0,
-	Visible                                                                          = 1,
-	Hidden                                                                           = 2
+    None                                                                             = 0,
+    Visible                                                                          = 1,
+    Hidden                                                                           = 2
 };
 
 /// Enum /Script/Slate.EMultipleKeyBindingIndex
 /// Size: 0x01 (1 bytes)
 enum class EMultipleKeyBindingIndex : uint8_t
 {
-	Primary                                                                          = 0,
-	Secondary                                                                        = 1,
-	NumChords                                                                        = 2
+    Primary                                                                          = 0,
+    Secondary                                                                        = 1,
+    NumChords                                                                        = 2
 };
 
 /// Enum /Script/Slate.EUserInterfaceActionType
 /// Size: 0x01 (1 bytes)
 enum class EUserInterfaceActionType : uint8_t
 {
-	None                                                                             = 0,
-	Button                                                                           = 1,
-	ToggleButton                                                                     = 2,
-	RadioButton                                                                      = 3,
-	Check                                                                            = 4,
-	CollapsedButton                                                                  = 5
+    None                                                                             = 0,
+    Button                                                                           = 1,
+    ToggleButton                                                                     = 2,
+    RadioButton                                                                      = 3,
+    Check                                                                            = 4,
+    CollapsedButton                                                                  = 5
 };
 
 /// Class /Script/Slate.ButtonWidgetStyle
@@ -220,7 +220,7 @@ enum class EUserInterfaceActionType : uint8_t
 class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FButtonStyle                                       ButtonStyle;                                                // 0x0030   (0x0298)  
+    FButtonStyle                                       ButtonStyle;                                                // 0x0030   (0x0298) 
 };
 
 /// Class /Script/Slate.CheckBoxWidgetStyle
@@ -228,7 +228,7 @@ public:
 class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FCheckBoxStyle                                     CheckBoxStyle;                                              // 0x0030   (0x05C8)  
+    FCheckBoxStyle                                     CheckBoxStyle;                                              // 0x0030   (0x05C8) 
 };
 
 /// Class /Script/Slate.ComboBoxWidgetStyle
@@ -236,7 +236,7 @@ public:
 class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FComboBoxStyle                                     ComboBoxStyle;                                              // 0x0030   (0x0420)  
+    FComboBoxStyle                                     ComboBoxStyle;                                              // 0x0030   (0x0420) 
 };
 
 /// Class /Script/Slate.ComboButtonWidgetStyle
@@ -244,7 +244,7 @@ public:
 class UComboButtonWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FComboButtonStyle                                  ComboButtonStyle;                                           // 0x0030   (0x03E8)  
+    FComboButtonStyle                                  ComboButtonStyle;                                           // 0x0030   (0x03E8) 
 };
 
 /// Class /Script/Slate.EditableTextBoxWidgetStyle
@@ -252,7 +252,7 @@ public:
 class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FEditableTextBoxStyle                              EditableTextBoxStyle;                                       // 0x0030   (0x0868)  
+    FEditableTextBoxStyle                              EditableTextBoxStyle;                                       // 0x0030   (0x0868) 
 };
 
 /// Class /Script/Slate.EditableTextWidgetStyle
@@ -260,7 +260,7 @@ public:
 class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FEditableTextStyle                                 EditableTextStyle;                                          // 0x0030   (0x0240)  
+    FEditableTextStyle                                 EditableTextStyle;                                          // 0x0030   (0x0240) 
 };
 
 /// Class /Script/Slate.ProgressWidgetStyle
@@ -268,7 +268,7 @@ public:
 class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FProgressBarStyle                                  ProgressBarStyle;                                           // 0x0030   (0x01B8)  
+    FProgressBarStyle                                  ProgressBarStyle;                                           // 0x0030   (0x01B8) 
 };
 
 /// Class /Script/Slate.ScrollBarWidgetStyle
@@ -276,7 +276,7 @@ public:
 class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FScrollBarStyle                                    ScrollBarStyle;                                             // 0x0030   (0x0518)  
+    FScrollBarStyle                                    ScrollBarStyle;                                             // 0x0030   (0x0518) 
 };
 
 /// Class /Script/Slate.ScrollBoxWidgetStyle
@@ -284,7 +284,7 @@ public:
 class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FScrollBoxStyle                                    ScrollBoxStyle;                                             // 0x0030   (0x0248)  
+    FScrollBoxStyle                                    ScrollBoxStyle;                                             // 0x0030   (0x0248) 
 };
 
 /// Class /Script/Slate.SlateSettings
@@ -292,8 +292,8 @@ public:
 class USlateSettings : public UObject
 { 
 public:
-	bool                                               bExplicitCanvasChildZOrder;                                 // 0x0028   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0029   (0x0007)  MISSED
+    bool                                               bExplicitCanvasChildZOrder;                                 // 0x0028   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0029   (0x0007) MISSED
 };
 
 /// Class /Script/Slate.SpinBoxWidgetStyle
@@ -301,7 +301,7 @@ public:
 class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FSpinBoxStyle                                      SpinBoxStyle;                                               // 0x0030   (0x0310)  
+    FSpinBoxStyle                                      SpinBoxStyle;                                               // 0x0030   (0x0310) 
 };
 
 /// Class /Script/Slate.TextBlockWidgetStyle
@@ -309,7 +309,7 @@ public:
 class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-	FTextBlockStyle                                    TextBlockStyle;                                             // 0x0030   (0x0290)  
+    FTextBlockStyle                                    TextBlockStyle;                                             // 0x0030   (0x0290) 
 };
 
 /// Class /Script/Slate.ToolMenuBase
@@ -323,60 +323,60 @@ public:
 /// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FVirtualKeyboardOptions
 { 
-	bool                                               bEnableAutocorrect;                                         // 0x0000   (0x0001)  
+    bool                                               bEnableAutocorrect;                                         // 0x0000   (0x0001) 
 };
 
 /// Struct /Script/Slate.InputChord
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FInputChord
 { 
-	FKey                                               Key;                                                        // 0x0000   (0x0018)  
-	bool                                               bShift : 1;                                                 // 0x0018:0 (0x0001)  
-	bool                                               bCtrl : 1;                                                  // 0x0018:1 (0x0001)  
-	bool                                               bAlt : 1;                                                   // 0x0018:2 (0x0001)  
-	bool                                               bCmd : 1;                                                   // 0x0018:3 (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0019   (0x0007)  MISSED
+    FKey                                               Key;                                                        // 0x0000   (0x0018) 
+    bool                                               bShift : 1;                                                 // 0x0018:0 (0x0001) 
+    bool                                               bCtrl : 1;                                                  // 0x0018:1 (0x0001) 
+    bool                                               bAlt : 1;                                                   // 0x0018:2 (0x0001) 
+    bool                                               bCmd : 1;                                                   // 0x0018:3 (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0019   (0x0007) MISSED
 };
 
 /// Struct /Script/Slate.Anchors
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FAnchors
 { 
-	FVector2D                                          Minimum;                                                    // 0x0000   (0x0008)  
-	FVector2D                                          Maximum;                                                    // 0x0008   (0x0008)  
+    FVector2D                                          Minimum;                                                    // 0x0000   (0x0008) 
+    FVector2D                                          Maximum;                                                    // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuEntry
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FCustomizedToolMenuEntry
 { 
-	ECustomizedToolMenuVisibility                      Visibility;                                                 // 0x0000   (0x0004)  
+    ECustomizedToolMenuVisibility                      Visibility;                                                 // 0x0000   (0x0004) 
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuSection
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FCustomizedToolMenuSection
 { 
-	ECustomizedToolMenuVisibility                      Visibility;                                                 // 0x0000   (0x0004)  
+    ECustomizedToolMenuVisibility                      Visibility;                                                 // 0x0000   (0x0004) 
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuNameArray
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FCustomizedToolMenuNameArray
 { 
-	TArray<FName>                                      Names;                                                      // 0x0000   (0x0010)  
+    TArray<FName>                                      Names;                                                      // 0x0000   (0x0010) 
 };
 
 /// Struct /Script/Slate.CustomizedToolMenu
 /// Size: 0x01E8 (488 bytes) (0x000000 - 0x0001E8) align n/a MaxSize: 0x01E8
 struct FCustomizedToolMenu
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
-	TMap<FName, FCustomizedToolMenuEntry>              Entries;                                                    // 0x0008   (0x0050)  
-	TMap<FName, FCustomizedToolMenuSection>            Sections;                                                   // 0x0058   (0x0050)  
-	TMap<FName, FCustomizedToolMenuNameArray>          EntryOrder;                                                 // 0x00A8   (0x0050)  
-	TArray<FName>                                      SectionOrder;                                               // 0x00F8   (0x0010)  
-	unsigned char                                      UnknownData01_7[0xE0];                                      // 0x0108   (0x00E0)  MISSED
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    TMap<FName, FCustomizedToolMenuEntry>              Entries;                                                    // 0x0008   (0x0050) 
+    TMap<FName, FCustomizedToolMenuSection>            Sections;                                                   // 0x0058   (0x0050) 
+    TMap<FName, FCustomizedToolMenuNameArray>          EntryOrder;                                                 // 0x00A8   (0x0050) 
+    TArray<FName>                                      SectionOrder;                                               // 0x00F8   (0x0010) 
+    unsigned char                                      UnknownData01_7[0xE0];                                      // 0x0108   (0x00E0) MISSED
 };
 
 #pragma pack(pop)

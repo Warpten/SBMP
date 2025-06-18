@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
+#include "BasicType.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -15,10 +15,10 @@
 /// Size: 0x01 (1 bytes)
 enum class EMobileShadowQuality : uint8_t
 {
-	NoFiltering                                                                      = 0,
-	PCF_1x1                                                                          = 1,
-	PCF_2x2                                                                          = 2,
-	PCF_3x3                                                                          = 3
+    NoFiltering                                                                      = 0,
+    PCF_1x1                                                                          = 1,
+    PCF_2x2                                                                          = 2,
+    PCF_3x3                                                                          = 3
 };
 
 /// Class /Script/MaterialShaderQualitySettings.MaterialShaderQualitySettings
@@ -26,22 +26,22 @@ enum class EMobileShadowQuality : uint8_t
 class UMaterialShaderQualitySettings : public UObject
 { 
 public:
-	TMap<FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                          // 0x0028   (0x0050)  
+    TMap<FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                          // 0x0028   (0x0050) 
 };
 
 /// Struct /Script/MaterialShaderQualitySettings.MaterialQualityOverrides
 /// Size: 0x0009 (9 bytes) (0x000000 - 0x000009) align n/a MaxSize: 0x0009
 struct FMaterialQualityOverrides
 { 
-	bool                                               bDiscardQualityDuringCook;                                  // 0x0000   (0x0001)  
-	bool                                               bEnableOverride;                                            // 0x0001   (0x0001)  
-	bool                                               bForceFullyRough;                                           // 0x0002   (0x0001)  
-	bool                                               bForceNonMetal;                                             // 0x0003   (0x0001)  
-	bool                                               bForceDisableLMDirectionality;                              // 0x0004   (0x0001)  
-	bool                                               bForceLQReflections;                                        // 0x0005   (0x0001)  
-	bool                                               bForceDisablePreintegratedGF;                               // 0x0006   (0x0001)  
-	bool                                               bDisableMaterialNormalCalculation;                          // 0x0007   (0x0001)  
-	EMobileShadowQuality                               MobileShadowQuality;                                        // 0x0008   (0x0001)  
+    bool                                               bDiscardQualityDuringCook;                                  // 0x0000   (0x0001) 
+    bool                                               bEnableOverride;                                            // 0x0001   (0x0001) 
+    bool                                               bForceFullyRough;                                           // 0x0002   (0x0001) 
+    bool                                               bForceNonMetal;                                             // 0x0003   (0x0001) 
+    bool                                               bForceDisableLMDirectionality;                              // 0x0004   (0x0001) 
+    bool                                               bForceLQReflections;                                        // 0x0005   (0x0001) 
+    bool                                               bForceDisablePreintegratedGF;                               // 0x0006   (0x0001) 
+    bool                                               bDisableMaterialNormalCalculation;                          // 0x0007   (0x0001) 
+    EMobileShadowQuality                               MobileShadowQuality;                                        // 0x0008   (0x0001) 
 };
 
 /// Class /Script/MaterialShaderQualitySettings.ShaderPlatformQualitySettings
@@ -49,8 +49,8 @@ struct FMaterialQualityOverrides
 class UShaderPlatformQualitySettings : public UObject
 { 
 public:
-	FMaterialQualityOverrides                          QualityOverrides[4];                                        // 0x0028   (0x0024)  
-	unsigned char                                      UnknownData01_7[0x14];                                      // 0x004C   (0x0014)  MISSED
+    FMaterialQualityOverrides                          QualityOverrides[4];                                        // 0x0028   (0x0024) 
+    unsigned char                                      UnknownData01_7[0x14];                                      // 0x004C   (0x0014) MISSED
 };
 
 #pragma pack(pop)

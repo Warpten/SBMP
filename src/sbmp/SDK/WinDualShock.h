@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: AudioExtensions
-/// dependency: CoreUObject
+#include "AudioExtensions.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,8 +16,8 @@
 class UDualShockExternalEndpointSettings : public UAudioEndpointSettingsBase
 { 
 public:
-	int32_t                                            ControllerIndex;                                            // 0x0028   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004)  MISSED
+    int32_t                                            ControllerIndex;                                            // 0x0028   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Class /Script/WinDualShock.DualShockSoundfieldEndpointSettings
@@ -25,8 +25,8 @@ public:
 class UDualShockSoundfieldEndpointSettings : public USoundfieldEndpointSettingsBase
 { 
 public:
-	int32_t                                            ControllerIndex;                                            // 0x0028   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004)  MISSED
+    int32_t                                            ControllerIndex;                                            // 0x0028   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Class /Script/WinDualShock.DualShockSpatializationSettings
@@ -34,10 +34,10 @@ public:
 class UDualShockSpatializationSettings : public USoundfieldEncodingSettingsBase
 { 
 public:
-	float                                              Spread;                                                     // 0x0028   (0x0004)  
-	int32_t                                            Priority;                                                   // 0x002C   (0x0004)  
-	bool                                               Passthrough;                                                // 0x0030   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0031   (0x0007)  MISSED
+    float                                              Spread;                                                     // 0x0028   (0x0004) 
+    int32_t                                            Priority;                                                   // 0x002C   (0x0004) 
+    bool                                               Passthrough;                                                // 0x0030   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0031   (0x0007) MISSED
 };
 
 #pragma pack(pop)

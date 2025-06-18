@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: AudioExtensions
-/// dependency: CoreUObject
+#include "AudioExtensions.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,8 +16,8 @@
 class UAmbisonicsEncodingSettings : public USoundfieldEncodingSettingsBase
 { 
 public:
-	int32_t                                            AmbisonicsOrder;                                            // 0x0028   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004)  MISSED
+    int32_t                                            AmbisonicsOrder;                                            // 0x0028   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 #pragma pack(pop)

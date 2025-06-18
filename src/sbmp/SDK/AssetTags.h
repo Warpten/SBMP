@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,9 +16,9 @@
 /// Size: 0x01 (1 bytes)
 enum class ECollectionScriptingShareType : uint8_t
 {
-	Local                                                                            = 0,
-	Private                                                                          = 1,
-	Shared                                                                           = 2
+    Local                                                                            = 0,
+    Private                                                                          = 1,
+    Shared                                                                           = 2
 };
 
 /// Class /Script/AssetTags.AssetTagsSubsystem
@@ -27,19 +27,24 @@ class UAssetTagsSubsystem : public UEngineSubsystem
 { 
 public:
 
-	/// Functions
-	// Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetPtr
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const UObject*> GetCollectionsContainingAssetPtr = { 0x1978460, 0 }; 
-	// Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetData
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const FAssetData&> GetCollectionsContainingAssetData = { 0x1978880, 1 }; 
-	// Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAsset
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const FName> GetCollectionsContainingAsset = { 0x1978a20, 2 }; 
-	// Function /Script/AssetTags.AssetTagsSubsystem.GetCollections
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>> GetCollections = { 0x1978cd0, 3 }; 
-	// Function /Script/AssetTags.AssetTagsSubsystem.GetAssetsInCollection
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FAssetData>, const FName> GetAssetsInCollection = { 0x1978b40, 4 }; 
-	// Function /Script/AssetTags.AssetTagsSubsystem.CollectionExists
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, bool, const FName> CollectionExists = { 0x1978d50, 5 }; 
+    /// Functions
+    // Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetPtr
+    // [0] AssetPtr : const UObject*
+    constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const UObject*> GetCollectionsContainingAssetPtr = { 0x1978460, 0 };
+    // Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetData
+    // [0] AssetData : const FAssetData&
+    constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const FAssetData&> GetCollectionsContainingAssetData = { 0x1978880, 1 };
+    // Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAsset
+    // [0] AssetPathName : const FName
+    constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const FName> GetCollectionsContainingAsset = { 0x1978a20, 2 };
+    // Function /Script/AssetTags.AssetTagsSubsystem.GetCollections
+    constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>> GetCollections = { 0x1978cd0, 3 };
+    // Function /Script/AssetTags.AssetTagsSubsystem.GetAssetsInCollection
+    // [0] Name : const FName
+    constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FAssetData>, const FName> GetAssetsInCollection = { 0x1978b40, 4 };
+    // Function /Script/AssetTags.AssetTagsSubsystem.CollectionExists
+    // [0] Name : const FName
+    constexpr static const FunctionPointer<UAssetTagsSubsystem, bool, const FName> CollectionExists = { 0x1978d50, 5 };
 };
 
 #pragma pack(pop)

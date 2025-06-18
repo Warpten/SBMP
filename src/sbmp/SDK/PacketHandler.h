@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
+#include "BasicType.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -23,7 +23,7 @@ public:
 class UPacketHandlerProfileConfig : public UObject
 { 
 public:
-	TArray<FString>                                    Components;                                                 // 0x0028   (0x0010)  
+    TArray<FString>                                    Components;                                                 // 0x0028   (0x0010) 
 };
 
 #pragma pack(pop)

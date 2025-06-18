@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
+#include "BasicType.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -15,46 +15,46 @@
 /// Size: 0x01 (1 bytes)
 enum class EInAppPurchaseState : uint8_t
 {
-	Unknown                                                                          = 0,
-	Success                                                                          = 1,
-	Failed                                                                           = 2,
-	Cancelled                                                                        = 3,
-	Invalid                                                                          = 4,
-	NotAllowed                                                                       = 5,
-	Restored                                                                         = 6,
-	AlreadyOwned                                                                     = 7
+    Unknown                                                                          = 0,
+    Success                                                                          = 1,
+    Failed                                                                           = 2,
+    Cancelled                                                                        = 3,
+    Invalid                                                                          = 4,
+    NotAllowed                                                                       = 5,
+    Restored                                                                         = 6,
+    AlreadyOwned                                                                     = 7
 };
 
 /// Enum /Script/OnlineSubsystem.EMPMatchOutcome
 /// Size: 0x01 (1 bytes)
 enum class EMPMatchOutcome : uint8_t
 {
-	None                                                                             = 0,
-	Quit                                                                             = 1,
-	Won                                                                              = 2,
-	Lost                                                                             = 3,
-	Tied                                                                             = 4,
-	TimeExpired                                                                      = 5,
-	First                                                                            = 6,
-	Second                                                                           = 7,
-	Third                                                                            = 8,
-	Fourth                                                                           = 9
+    None                                                                             = 0,
+    Quit                                                                             = 1,
+    Won                                                                              = 2,
+    Lost                                                                             = 3,
+    Tied                                                                             = 4,
+    TimeExpired                                                                      = 5,
+    First                                                                            = 6,
+    Second                                                                           = 7,
+    Third                                                                            = 8,
+    Fourth                                                                           = 9
 };
 
 /// Struct /Script/OnlineSubsystem.NamedInterface
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNamedInterface
 { 
-	FName                                              InterfaceName;                                              // 0x0000   (0x0008)  
-	class UObject*                                     InterfaceObject;                                            // 0x0008   (0x0008)  
+    FName                                              InterfaceName;                                              // 0x0000   (0x0008) 
+    class UObject*                                     InterfaceObject;                                            // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/OnlineSubsystem.NamedInterfaceDef
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FNamedInterfaceDef
 { 
-	FName                                              InterfaceName;                                              // 0x0000   (0x0008)  
-	FString                                            InterfaceClassName;                                         // 0x0008   (0x0010)  
+    FName                                              InterfaceName;                                              // 0x0000   (0x0008) 
+    FString                                            InterfaceClassName;                                         // 0x0008   (0x0010) 
 };
 
 /// Class /Script/OnlineSubsystem.NamedInterfaces
@@ -62,9 +62,9 @@ struct FNamedInterfaceDef
 class UNamedInterfaces : public UObject
 { 
 public:
-	TArray<FNamedInterface>                            NamedInterfaces;                                            // 0x0028   (0x0010)  
-	TArray<FNamedInterfaceDef>                         NamedInterfaceDefs;                                         // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x18];                                      // 0x0048   (0x0018)  MISSED
+    TArray<FNamedInterface>                            NamedInterfaces;                                            // 0x0028   (0x0010) 
+    TArray<FNamedInterfaceDef>                         NamedInterfaceDefs;                                         // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x18];                                      // 0x0048   (0x0018) MISSED
 };
 
 /// Class /Script/OnlineSubsystem.TurnBasedMatchInterface
@@ -73,47 +73,50 @@ class UTurnBasedMatchInterface : public UInterface
 { 
 public:
 
-	/// Functions
-	// Function /Script/OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
-	constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString, const bool> OnMatchReceivedTurn = { 0x2bbb090, 0 }; 
-	// Function /Script/OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
-	constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString> OnMatchEnded = { 0x2bbb090, 1 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
+    // [0] Match : const FString
+    // [1] bDidBecomeActive : const bool
+    constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString, const bool> OnMatchReceivedTurn = { 0x2bbb090, 0 };
+    // Function /Script/OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
+    // [0] Match : const FString
+    constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString> OnMatchEnded = { 0x2bbb090, 1 };
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseProductInfo
 /// Size: 0x00A8 (168 bytes) (0x000000 - 0x0000A8) align n/a MaxSize: 0x00A8
 struct FInAppPurchaseProductInfo
 { 
-	FString                                            Identifier;                                                 // 0x0000   (0x0010)  
-	FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010)  
-	FString                                            DisplayName;                                                // 0x0020   (0x0010)  
-	FString                                            DisplayDescription;                                         // 0x0030   (0x0010)  
-	FString                                            DisplayPrice;                                               // 0x0040   (0x0010)  
-	float                                              RawPrice;                                                   // 0x0050   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x0054   (0x0004)  MISSED
-	FString                                            CurrencyCode;                                               // 0x0058   (0x0010)  
-	FString                                            CurrencySymbol;                                             // 0x0068   (0x0010)  
-	FString                                            DecimalSeparator;                                           // 0x0078   (0x0010)  
-	FString                                            GroupingSeparator;                                          // 0x0088   (0x0010)  
-	FString                                            ReceiptData;                                                // 0x0098   (0x0010)  
+    FString                                            Identifier;                                                 // 0x0000   (0x0010) 
+    FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010) 
+    FString                                            DisplayName;                                                // 0x0020   (0x0010) 
+    FString                                            DisplayDescription;                                         // 0x0030   (0x0010) 
+    FString                                            DisplayPrice;                                               // 0x0040   (0x0010) 
+    float                                              RawPrice;                                                   // 0x0050   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0054   (0x0004) MISSED
+    FString                                            CurrencyCode;                                               // 0x0058   (0x0010) 
+    FString                                            CurrencySymbol;                                             // 0x0068   (0x0010) 
+    FString                                            DecimalSeparator;                                           // 0x0078   (0x0010) 
+    FString                                            GroupingSeparator;                                          // 0x0088   (0x0010) 
+    FString                                            ReceiptData;                                                // 0x0098   (0x0010) 
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseRestoreInfo
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FInAppPurchaseRestoreInfo
 { 
-	FString                                            Identifier;                                                 // 0x0000   (0x0010)  
-	FString                                            ReceiptData;                                                // 0x0010   (0x0010)  
-	FString                                            TransactionIdentifier;                                      // 0x0020   (0x0010)  
+    FString                                            Identifier;                                                 // 0x0000   (0x0010) 
+    FString                                            ReceiptData;                                                // 0x0010   (0x0010) 
+    FString                                            TransactionIdentifier;                                      // 0x0020   (0x0010) 
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseProductRequest
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInAppPurchaseProductRequest
 { 
-	FString                                            ProductIdentifier;                                          // 0x0000   (0x0010)  
-	bool                                               bIsConsumable;                                              // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007)  MISSED
+    FString                                            ProductIdentifier;                                          // 0x0000   (0x0010) 
+    bool                                               bIsConsumable;                                              // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 #pragma pack(pop)

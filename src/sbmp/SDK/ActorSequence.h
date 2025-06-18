@@ -6,10 +6,10 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
-/// dependency: MovieScene
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -17,35 +17,35 @@
 /// Size: 0x01 (1 bytes)
 enum class EActorSequenceObjectReferenceType : uint8_t
 {
-	ContextActor                                                                     = 0,
-	ExternalActor                                                                    = 1,
-	Component                                                                        = 2
+    ContextActor                                                                     = 0,
+    ExternalActor                                                                    = 1,
+    Component                                                                        = 2
 };
 
 /// Struct /Script/ActorSequence.ActorSequenceObjectReference
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FActorSequenceObjectReference
 { 
-	EActorSequenceObjectReferenceType                  Type;                                                       // 0x0000   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003)  MISSED
-	FGuid                                              ActorId;                                                    // 0x0004   (0x0010)  
-	unsigned char                                      UnknownData03_6[0x4];                                       // 0x0014   (0x0004)  MISSED
-	FString                                            PathToComponent;                                            // 0x0018   (0x0010)  
+    EActorSequenceObjectReferenceType                  Type;                                                       // 0x0000   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    FGuid                                              ActorId;                                                    // 0x0004   (0x0010) 
+    unsigned char                                      UnknownData03_6[0x4];                                       // 0x0014   (0x0004) MISSED
+    FString                                            PathToComponent;                                            // 0x0018   (0x0010) 
 };
 
 /// Struct /Script/ActorSequence.ActorSequenceObjectReferences
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FActorSequenceObjectReferences
 { 
-	TArray<FActorSequenceObjectReference>              Array;                                                      // 0x0000   (0x0010)  
+    TArray<FActorSequenceObjectReference>              Array;                                                      // 0x0000   (0x0010) 
 };
 
 /// Struct /Script/ActorSequence.ActorSequenceObjectReferenceMap
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FActorSequenceObjectReferenceMap
 { 
-	TArray<FGuid>                                      BindingIds;                                                 // 0x0000   (0x0010)  
-	TArray<FActorSequenceObjectReferences>             References;                                                 // 0x0010   (0x0010)  
+    TArray<FGuid>                                      BindingIds;                                                 // 0x0000   (0x0010) 
+    TArray<FActorSequenceObjectReferences>             References;                                                 // 0x0010   (0x0010) 
 };
 
 /// Class /Script/ActorSequence.ActorSequence
@@ -53,8 +53,8 @@ struct FActorSequenceObjectReferenceMap
 class UActorSequence : public UMovieSceneSequence
 { 
 public:
-	class UMovieScene*                                 MovieScene;                                                 // 0x0060   (0x0008)  
-	FActorSequenceObjectReferenceMap                   ObjectReferences;                                           // 0x0068   (0x0020)  
+    class UMovieScene*                                 MovieScene;                                                 // 0x0060   (0x0008) 
+    FActorSequenceObjectReferenceMap                   ObjectReferences;                                           // 0x0068   (0x0020) 
 };
 
 /// Class /Script/ActorSequence.ActorSequenceComponent
@@ -62,9 +62,9 @@ public:
 class UActorSequenceComponent : public UActorComponent
 { 
 public:
-	FMovieSceneSequencePlaybackSettings                PlaybackSettings;                                           // 0x00C0   (0x0068)  
-	class UActorSequence*                              Sequence;                                                   // 0x0128   (0x0008)  
-	class UActorSequencePlayer*                        SequencePlayer;                                             // 0x0130   (0x0008)  
+    FMovieSceneSequencePlaybackSettings                PlaybackSettings;                                           // 0x00C0   (0x0068) 
+    class UActorSequence*                              Sequence;                                                   // 0x0128   (0x0008) 
+    class UActorSequencePlayer*                        SequencePlayer;                                             // 0x0130   (0x0008) 
 };
 
 /// Class /Script/ActorSequence.ActorSequencePlayer

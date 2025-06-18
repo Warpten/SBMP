@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -18,9 +18,13 @@ class UAutomationUtilsBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/AutomationUtils.AutomationUtilsBlueprintLibrary.TakeGameplayAutomationScreenshot
-	constexpr static const FunctionPointer<UAutomationUtilsBlueprintLibrary, void, const FString, const float, const float, const FString> TakeGameplayAutomationScreenshot = { 0x17db150, 0 }; 
+    /// Functions
+    // Function /Script/AutomationUtils.AutomationUtilsBlueprintLibrary.TakeGameplayAutomationScreenshot
+    // [0] ScreenshotName : const FString
+    // [1] MaxGlobalError : const float
+    // [2] MaxLocalError : const float
+    // [3] MapNameOverride : const FString
+    constexpr static const FunctionPointer<UAutomationUtilsBlueprintLibrary, void, const FString, const float, const float, const FString> TakeGameplayAutomationScreenshot = { 0x17db150, 0 };
 };
 
 #pragma pack(pop)

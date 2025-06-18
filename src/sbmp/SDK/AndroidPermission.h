@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -17,8 +17,8 @@
 class UAndroidPermissionCallbackProxy : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnPermissionsGrantedDynamicDelegate;                        // 0x0028   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x10];                                      // 0x0038   (0x0010)  MISSED
+    FMulticastInlineDelegate                           OnPermissionsGrantedDynamicDelegate;                        // 0x0028   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0038   (0x0010) MISSED
 };
 
 /// Class /Script/AndroidPermission.AndroidPermissionFunctionLibrary
@@ -27,11 +27,13 @@ class UAndroidPermissionFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission
-	constexpr static const FunctionPointer<UAndroidPermissionFunctionLibrary, bool, const FString> CheckPermission = { 0x19067c0, 0 }; 
-	// Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions
-	constexpr static const FunctionPointer<UAndroidPermissionFunctionLibrary, UAndroidPermissionCallbackProxy*, const TArray<FString>&> AcquirePermissions = { 0x1970c10, 1 }; 
+    /// Functions
+    // Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission
+    // [0] permission : const FString
+    constexpr static const FunctionPointer<UAndroidPermissionFunctionLibrary, bool, const FString> CheckPermission = { 0x19067c0, 0 };
+    // Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions
+    // [0] Permissions : const TArray<FString>&
+    constexpr static const FunctionPointer<UAndroidPermissionFunctionLibrary, UAndroidPermissionCallbackProxy*, const TArray<FString>&> AcquirePermissions = { 0x1970c10, 1 };
 };
 
 #pragma pack(pop)

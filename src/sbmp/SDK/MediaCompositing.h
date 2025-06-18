@@ -6,11 +6,11 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: MediaAssets
-/// dependency: MovieScene
-/// dependency: MovieSceneTracks
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "MediaAssets.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -19,9 +19,9 @@
 class UMovieSceneMediaPlayerPropertySection : public UMovieSceneSection
 { 
 public:
-	class UMediaSource*                                MediaSource;                                                // 0x00E8   (0x0008)  
-	bool                                               bLoop;                                                      // 0x00F0   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x00F1   (0x0007)  MISSED
+    class UMediaSource*                                MediaSource;                                                // 0x00E8   (0x0008) 
+    bool                                               bLoop;                                                      // 0x00F0   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x00F1   (0x0007) MISSED
 };
 
 /// Class /Script/MediaCompositing.MovieSceneMediaPlayerPropertyTrack
@@ -29,7 +29,7 @@ public:
 class UMovieSceneMediaPlayerPropertyTrack : public UMovieScenePropertyTrack
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008) MISSED
 };
 
 /// Class /Script/MediaCompositing.MovieSceneMediaSection
@@ -37,15 +37,15 @@ public:
 class UMovieSceneMediaSection : public UMovieSceneSection
 { 
 public:
-	class UMediaSource*                                MediaSource;                                                // 0x00E8   (0x0008)  
-	bool                                               bLooping;                                                   // 0x00F0   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x00F1   (0x0003)  MISSED
-	FFrameNumber                                       StartFrameOffset;                                           // 0x00F4   (0x0004)  
-	class UMediaTexture*                               MediaTexture;                                               // 0x00F8   (0x0008)  
-	class UMediaSoundComponent*                        MediaSoundComponent;                                        // 0x0100   (0x0008)  
-	bool                                               bUseExternalMediaPlayer;                                    // 0x0108   (0x0001)  
-	unsigned char                                      UnknownData03_6[0x7];                                       // 0x0109   (0x0007)  MISSED
-	class UMediaPlayer*                                ExternalMediaPlayer;                                        // 0x0110   (0x0008)  
+    class UMediaSource*                                MediaSource;                                                // 0x00E8   (0x0008) 
+    bool                                               bLooping;                                                   // 0x00F0   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x00F1   (0x0003) MISSED
+    FFrameNumber                                       StartFrameOffset;                                           // 0x00F4   (0x0004) 
+    class UMediaTexture*                               MediaTexture;                                               // 0x00F8   (0x0008) 
+    class UMediaSoundComponent*                        MediaSoundComponent;                                        // 0x0100   (0x0008) 
+    bool                                               bUseExternalMediaPlayer;                                    // 0x0108   (0x0001) 
+    unsigned char                                      UnknownData03_6[0x7];                                       // 0x0109   (0x0007) MISSED
+    class UMediaPlayer*                                ExternalMediaPlayer;                                        // 0x0110   (0x0008) 
 };
 
 /// Class /Script/MediaCompositing.MovieSceneMediaTrack
@@ -53,40 +53,40 @@ public:
 class UMovieSceneMediaTrack : public UMovieSceneNameableTrack
 { 
 public:
-	unsigned char                                      UnknownData01_8[0x8];                                       // 0x0078   (0x0008)  MISSED
-	TArray<class UMovieSceneSection*>                  MediaSections;                                              // 0x0080   (0x0010)  
+    unsigned char                                      UnknownData01_8[0x8];                                       // 0x0078   (0x0008) MISSED
+    TArray<class UMovieSceneSection*>                  MediaSections;                                              // 0x0080   (0x0010) 
 };
 
 /// Struct /Script/MediaCompositing.MovieSceneMediaPlayerPropertySectionTemplate
 /// Size: 0x0048 (72 bytes) (0x000038 - 0x000048) align n/a MaxSize: 0x0048
 struct FMovieSceneMediaPlayerPropertySectionTemplate : FMovieScenePropertySectionTemplate
 { 
-	class UMediaSource*                                MediaSource;                                                // 0x0038   (0x0008)  
-	FFrameNumber                                       SectionStartFrame;                                          // 0x0040   (0x0004)  
-	bool                                               bLoop;                                                      // 0x0044   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0045   (0x0003)  MISSED
+    class UMediaSource*                                MediaSource;                                                // 0x0038   (0x0008) 
+    FFrameNumber                                       SectionStartFrame;                                          // 0x0040   (0x0004) 
+    bool                                               bLoop;                                                      // 0x0044   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0045   (0x0003) MISSED
 };
 
 /// Struct /Script/MediaCompositing.MovieSceneMediaSectionParams
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FMovieSceneMediaSectionParams
 { 
-	class UMediaSoundComponent*                        MediaSoundComponent;                                        // 0x0000   (0x0008)  
-	class UMediaSource*                                MediaSource;                                                // 0x0008   (0x0008)  
-	class UMediaTexture*                               MediaTexture;                                               // 0x0010   (0x0008)  
-	class UMediaPlayer*                                MediaPlayer;                                                // 0x0018   (0x0008)  
-	FFrameNumber                                       SectionStartFrame;                                          // 0x0020   (0x0004)  
-	FFrameNumber                                       SectionEndFrame;                                            // 0x0024   (0x0004)  
-	bool                                               bLooping;                                                   // 0x0028   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0029   (0x0003)  MISSED
-	FFrameNumber                                       StartFrameOffset;                                           // 0x002C   (0x0004)  
+    class UMediaSoundComponent*                        MediaSoundComponent;                                        // 0x0000   (0x0008) 
+    class UMediaSource*                                MediaSource;                                                // 0x0008   (0x0008) 
+    class UMediaTexture*                               MediaTexture;                                               // 0x0010   (0x0008) 
+    class UMediaPlayer*                                MediaPlayer;                                                // 0x0018   (0x0008) 
+    FFrameNumber                                       SectionStartFrame;                                          // 0x0020   (0x0004) 
+    FFrameNumber                                       SectionEndFrame;                                            // 0x0024   (0x0004) 
+    bool                                               bLooping;                                                   // 0x0028   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    FFrameNumber                                       StartFrameOffset;                                           // 0x002C   (0x0004) 
 };
 
 /// Struct /Script/MediaCompositing.MovieSceneMediaSectionTemplate
 /// Size: 0x0050 (80 bytes) (0x000020 - 0x000050) align n/a MaxSize: 0x0050
 struct FMovieSceneMediaSectionTemplate : FMovieSceneEvalTemplate
 { 
-	FMovieSceneMediaSectionParams                      Params;                                                     // 0x0020   (0x0030)  
+    FMovieSceneMediaSectionParams                      Params;                                                     // 0x0020   (0x0030) 
 };
 
 #pragma pack(pop)

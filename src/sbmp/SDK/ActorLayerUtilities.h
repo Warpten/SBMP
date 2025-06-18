@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -18,20 +18,26 @@ class ULayersBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.RemoveActorFromLayer
-	constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> RemoveActorFromLayer = { 0x196fba0, 0 }; 
-	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.GetActors
-	constexpr static const FunctionPointer<ULayersBlueprintLibrary, TArray<AActor*>, const UObject*, const FActorLayer&> GetActors = { 0x196fee0, 1 }; 
-	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.AddActorToLayer
-	constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> AddActorToLayer = { 0x196fd40, 2 }; 
+    /// Functions
+    // Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.RemoveActorFromLayer
+    // [0] InActor : const AActor*
+    // [1] Layer : const FActorLayer&
+    constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> RemoveActorFromLayer = { 0x196fba0, 0 };
+    // Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.GetActors
+    // [0] WorldContextObject : const UObject*
+    // [1] ActorLayer : const FActorLayer&
+    constexpr static const FunctionPointer<ULayersBlueprintLibrary, TArray<AActor*>, const UObject*, const FActorLayer&> GetActors = { 0x196fee0, 1 };
+    // Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.AddActorToLayer
+    // [0] InActor : const AActor*
+    // [1] Layer : const FActorLayer&
+    constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> AddActorToLayer = { 0x196fd40, 2 };
 };
 
 /// Struct /Script/ActorLayerUtilities.ActorLayer
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FActorLayer
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
 };
 
 #pragma pack(pop)

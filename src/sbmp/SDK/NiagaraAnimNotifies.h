@@ -6,10 +6,10 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
-/// dependency: Niagara
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "Niagara.h"
 
 #pragma pack(push, 0x1)
 
@@ -18,20 +18,20 @@
 class UAnimNotify_PlayNiagaraEffect : public UAnimNotify
 { 
 public:
-	class UNiagaraSystem*                              Template;                                                   // 0x0038   (0x0008)  
-	FVector                                            LocationOffset;                                             // 0x0040   (0x000C)  
-	FRotator                                           RotationOffset;                                             // 0x004C   (0x000C)  
-	FVector                                            Scale;                                                      // 0x0058   (0x000C)  
-	bool                                               bAbsoluteScale;                                             // 0x0064   (0x0001)  
-	unsigned char                                      UnknownData03_6[0x1B];                                      // 0x0065   (0x001B)  MISSED
-	bool                                               Attached : 1;                                               // 0x0080:0 (0x0001)  
-	unsigned char                                      UnknownData04_5[0x3];                                       // 0x0081   (0x0003)  MISSED
-	FName                                              SocketName;                                                 // 0x0084   (0x0008)  
-	unsigned char                                      UnknownData05_7[0x4];                                       // 0x008C   (0x0004)  MISSED
+    class UNiagaraSystem*                              Template;                                                   // 0x0038   (0x0008) 
+    FVector                                            LocationOffset;                                             // 0x0040   (0x000C) 
+    FRotator                                           RotationOffset;                                             // 0x004C   (0x000C) 
+    FVector                                            Scale;                                                      // 0x0058   (0x000C) 
+    bool                                               bAbsoluteScale;                                             // 0x0064   (0x0001) 
+    unsigned char                                      UnknownData03_6[0x1B];                                      // 0x0065   (0x001B) MISSED
+    bool                                               Attached : 1;                                               // 0x0080:0 (0x0001) 
+    unsigned char                                      UnknownData04_5[0x3];                                       // 0x0081   (0x0003) MISSED
+    FName                                              SocketName;                                                 // 0x0084   (0x0008) 
+    unsigned char                                      UnknownData05_7[0x4];                                       // 0x008C   (0x0004) MISSED
 
-	/// Functions
-	// Function /Script/NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect
-	constexpr static const FunctionPointer<UAnimNotify_PlayNiagaraEffect, UFXSystemComponent*> GetSpawnedEffect = { 0x1168fc0, 0 }; 
+    /// Functions
+    // Function /Script/NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect
+    constexpr static const FunctionPointer<UAnimNotify_PlayNiagaraEffect, UFXSystemComponent*> GetSpawnedEffect = { 0x1168fc0, 0 };
 };
 
 /// Class /Script/NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffect
@@ -39,12 +39,12 @@ public:
 class UAnimNotifyState_TimedNiagaraEffect : public UAnimNotifyState
 { 
 public:
-	class UNiagaraSystem*                              Template;                                                   // 0x0030   (0x0008)  
-	FName                                              SocketName;                                                 // 0x0038   (0x0008)  
-	FVector                                            LocationOffset;                                             // 0x0040   (0x000C)  
-	FRotator                                           RotationOffset;                                             // 0x004C   (0x000C)  
-	bool                                               bDestroyAtEnd;                                              // 0x0058   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0059   (0x0007)  MISSED
+    class UNiagaraSystem*                              Template;                                                   // 0x0030   (0x0008) 
+    FName                                              SocketName;                                                 // 0x0038   (0x0008) 
+    FVector                                            LocationOffset;                                             // 0x0040   (0x000C) 
+    FRotator                                           RotationOffset;                                             // 0x004C   (0x000C) 
+    bool                                               bDestroyAtEnd;                                              // 0x0058   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0059   (0x0007) MISSED
 };
 
 #pragma pack(pop)

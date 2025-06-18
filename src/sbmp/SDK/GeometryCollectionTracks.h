@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: MovieScene
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,12 +16,12 @@
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FMovieSceneGeometryCollectionParams
 { 
-	unsigned char                                      UnknownData02_7[0x8];                                       // 0x0000   (0x0008)  MISSED
-	FSoftObjectPath                                    GeometryCollectionCache;                                    // 0x0008   (0x0018)  
-	FFrameNumber                                       StartFrameOffset;                                           // 0x0020   (0x0004)  
-	FFrameNumber                                       EndFrameOffset;                                             // 0x0024   (0x0004)  
-	float                                              PlayRate;                                                   // 0x0028   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x002C   (0x0004)  MISSED
+    unsigned char                                      UnknownData02_7[0x8];                                       // 0x0000   (0x0008) MISSED
+    FSoftObjectPath                                    GeometryCollectionCache;                                    // 0x0008   (0x0018) 
+    FFrameNumber                                       StartFrameOffset;                                           // 0x0020   (0x0004) 
+    FFrameNumber                                       EndFrameOffset;                                             // 0x0024   (0x0004) 
+    float                                              PlayRate;                                                   // 0x0028   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Class /Script/GeometryCollectionTracks.MovieSceneGeometryCollectionSection
@@ -29,7 +29,7 @@ struct FMovieSceneGeometryCollectionParams
 class UMovieSceneGeometryCollectionSection : public UMovieSceneSection
 { 
 public:
-	FMovieSceneGeometryCollectionParams                Params;                                                     // 0x00E8   (0x0030)  
+    FMovieSceneGeometryCollectionParams                Params;                                                     // 0x00E8   (0x0030) 
 };
 
 /// Class /Script/GeometryCollectionTracks.MovieSceneGeometryCollectionTrack
@@ -37,23 +37,23 @@ public:
 class UMovieSceneGeometryCollectionTrack : public UMovieSceneNameableTrack
 { 
 public:
-	unsigned char                                      UnknownData01_8[0x8];                                       // 0x0078   (0x0008)  MISSED
-	TArray<class UMovieSceneSection*>                  AnimationSections;                                          // 0x0080   (0x0010)  
+    unsigned char                                      UnknownData01_8[0x8];                                       // 0x0078   (0x0008) MISSED
+    TArray<class UMovieSceneSection*>                  AnimationSections;                                          // 0x0080   (0x0010) 
 };
 
 /// Struct /Script/GeometryCollectionTracks.MovieSceneGeometryCollectionSectionTemplateParameters
 /// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
 struct FMovieSceneGeometryCollectionSectionTemplateParameters : FMovieSceneGeometryCollectionParams
 { 
-	FFrameNumber                                       SectionStartTime;                                           // 0x0030   (0x0004)  
-	FFrameNumber                                       SectionEndTime;                                             // 0x0034   (0x0004)  
+    FFrameNumber                                       SectionStartTime;                                           // 0x0030   (0x0004) 
+    FFrameNumber                                       SectionEndTime;                                             // 0x0034   (0x0004) 
 };
 
 /// Struct /Script/GeometryCollectionTracks.MovieSceneGeometryCollectionSectionTemplate
 /// Size: 0x0058 (88 bytes) (0x000020 - 0x000058) align n/a MaxSize: 0x0058
 struct FMovieSceneGeometryCollectionSectionTemplate : FMovieSceneEvalTemplate
 { 
-	FMovieSceneGeometryCollectionSectionTemplateParameters Params;                                                 // 0x0020   (0x0038)  
+    FMovieSceneGeometryCollectionSectionTemplateParameters Params;                                                 // 0x0020   (0x0038) 
 };
 
 #pragma pack(pop)

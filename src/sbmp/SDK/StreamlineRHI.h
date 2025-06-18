@@ -6,7 +6,7 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -14,9 +14,9 @@
 /// Size: 0x01 (1 bytes)
 enum class EStreamlineSettingOverride : uint8_t
 {
-	Enabled                                                                          = 0,
-	Disabled                                                                         = 1,
-	UseProjectSettings                                                               = 2
+    Enabled                                                                          = 0,
+    Disabled                                                                         = 1,
+    UseProjectSettings                                                               = 2
 };
 
 /// Class /Script/StreamlineRHI.StreamlineOverrideSettings
@@ -24,9 +24,9 @@ enum class EStreamlineSettingOverride : uint8_t
 class UStreamlineOverrideSettings : public UObject
 { 
 public:
-	EStreamlineSettingOverride                         EnableDLSSFGInPlayInEditorViewportsOverride;                // 0x0028   (0x0001)  
-	EStreamlineSettingOverride                         LoadDebugOverlayOverride;                                   // 0x0029   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x6];                                       // 0x002A   (0x0006)  MISSED
+    EStreamlineSettingOverride                         EnableDLSSFGInPlayInEditorViewportsOverride;                // 0x0028   (0x0001) 
+    EStreamlineSettingOverride                         LoadDebugOverlayOverride;                                   // 0x0029   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x6];                                       // 0x002A   (0x0006) MISSED
 };
 
 /// Class /Script/StreamlineRHI.StreamlineSettings
@@ -34,14 +34,14 @@ public:
 class UStreamlineSettings : public UObject
 { 
 public:
-	bool                                               bEnableStreamlineD3D12;                                     // 0x0028   (0x0001)  
-	bool                                               bEnableStreamlineD3D11;                                     // 0x0029   (0x0001)  
-	bool                                               bEnableDLSSFGInPlayInEditorViewports;                       // 0x002A   (0x0001)  
-	bool                                               bLoadDebugOverlay;                                          // 0x002B   (0x0001)  
-	bool                                               bAllowOTAUpdate;                                            // 0x002C   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x002D   (0x0003)  MISSED
-	int32_t                                            NVIDIANGXApplicationId;                                     // 0x0030   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x0034   (0x0004)  MISSED
+    bool                                               bEnableStreamlineD3D12;                                     // 0x0028   (0x0001) 
+    bool                                               bEnableStreamlineD3D11;                                     // 0x0029   (0x0001) 
+    bool                                               bEnableDLSSFGInPlayInEditorViewports;                       // 0x002A   (0x0001) 
+    bool                                               bLoadDebugOverlay;                                          // 0x002B   (0x0001) 
+    bool                                               bAllowOTAUpdate;                                            // 0x002C   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x002D   (0x0003) MISSED
+    int32_t                                            NVIDIANGXApplicationId;                                     // 0x0030   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 #pragma pack(pop)

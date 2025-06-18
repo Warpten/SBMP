@@ -6,7 +6,7 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -15,7 +15,7 @@
 class UDeveloperSettings : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010) MISSED
 };
 
 #pragma pack(pop)

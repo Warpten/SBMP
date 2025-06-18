@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -17,14 +17,14 @@
 class AArchVisCharacter : public ACharacter
 { 
 public:
-	FString                                            LookUpAxisName;                                             // 0x0558   (0x0010)  
-	FString                                            LookUpAtRateAxisName;                                       // 0x0568   (0x0010)  
-	FString                                            TurnAxisName;                                               // 0x0578   (0x0010)  
-	FString                                            TurnAtRateAxisName;                                         // 0x0588   (0x0010)  
-	FString                                            MoveForwardAxisName;                                        // 0x0598   (0x0010)  
-	FString                                            MoveRightAxisName;                                          // 0x05A8   (0x0010)  
-	float                                              MouseSensitivityScale_Pitch;                                // 0x05B8   (0x0004)  
-	float                                              MouseSensitivityScale_Yaw;                                  // 0x05BC   (0x0004)  
+    FString                                            LookUpAxisName;                                             // 0x0558   (0x0010) 
+    FString                                            LookUpAtRateAxisName;                                       // 0x0568   (0x0010) 
+    FString                                            TurnAxisName;                                               // 0x0578   (0x0010) 
+    FString                                            TurnAtRateAxisName;                                         // 0x0588   (0x0010) 
+    FString                                            MoveForwardAxisName;                                        // 0x0598   (0x0010) 
+    FString                                            MoveRightAxisName;                                          // 0x05A8   (0x0010) 
+    float                                              MouseSensitivityScale_Pitch;                                // 0x05B8   (0x0004) 
+    float                                              MouseSensitivityScale_Yaw;                                  // 0x05BC   (0x0004) 
 };
 
 /// Class /Script/ArchVisCharacter.ArchVisCharMovementComponent
@@ -32,15 +32,15 @@ public:
 class UArchVisCharMovementComponent : public UCharacterMovementComponent
 { 
 public:
-	FRotator                                           RotationalAcceleration;                                     // 0x0B50   (0x000C)  
-	FRotator                                           RotationalDeceleration;                                     // 0x0B5C   (0x000C)  
-	FRotator                                           MaxRotationalVelocity;                                      // 0x0B68   (0x000C)  
-	float                                              MinPitch;                                                   // 0x0B74   (0x0004)  
-	float                                              MaxPitch;                                                   // 0x0B78   (0x0004)  
-	float                                              WalkingFriction;                                            // 0x0B7C   (0x0004)  
-	float                                              WalkingSpeed;                                               // 0x0B80   (0x0004)  
-	float                                              WalkingAcceleration;                                        // 0x0B84   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x18];                                      // 0x0B88   (0x0018)  MISSED
+    FRotator                                           RotationalAcceleration;                                     // 0x0B50   (0x000C) 
+    FRotator                                           RotationalDeceleration;                                     // 0x0B5C   (0x000C) 
+    FRotator                                           MaxRotationalVelocity;                                      // 0x0B68   (0x000C) 
+    float                                              MinPitch;                                                   // 0x0B74   (0x0004) 
+    float                                              MaxPitch;                                                   // 0x0B78   (0x0004) 
+    float                                              WalkingFriction;                                            // 0x0B7C   (0x0004) 
+    float                                              WalkingSpeed;                                               // 0x0B80   (0x0004) 
+    float                                              WalkingAcceleration;                                        // 0x0B84   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x18];                                      // 0x0B88   (0x0018) MISSED
 };
 
 #pragma pack(pop)

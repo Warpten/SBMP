@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,17 +16,17 @@
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapImageTargetOrientation : uint8_t
 {
-	ForwardAxisAsNormal                                                              = 0,
-	UpAxisAsNormal                                                                   = 1
+    ForwardAxisAsNormal                                                              = 0,
+    UpAxisAsNormal                                                                   = 1
 };
 
 /// Enum /Script/MagicLeapImageTracker.EMagicLeapImageTargetStatus
 /// Size: 0x01 (1 bytes)
 enum class EMagicLeapImageTargetStatus : uint8_t
 {
-	Tracked                                                                          = 0,
-	Unreliable                                                                       = 1,
-	NotTracked                                                                       = 2
+    Tracked                                                                          = 0,
+    Unreliable                                                                       = 1,
+    NotTracked                                                                       = 2
 };
 
 /// Class /Script/MagicLeapImageTracker.MagicLeapImageTrackerComponent
@@ -34,25 +34,26 @@ enum class EMagicLeapImageTargetStatus : uint8_t
 class UMagicLeapImageTrackerComponent : public USceneComponent
 { 
 public:
-	class UTexture2D*                                  TargetImageTexture;                                         // 0x0260   (0x0008)  
-	FString                                            Name;                                                       // 0x0268   (0x0010)  
-	float                                              LongerDimension;                                            // 0x0278   (0x0004)  
-	bool                                               bIsStationary;                                              // 0x027C   (0x0001)  
-	bool                                               bUseUnreliablePose;                                         // 0x027D   (0x0001)  
-	EMagicLeapImageTargetOrientation                   AxisOrientation;                                            // 0x027E   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x1];                                       // 0x027F   (0x0001)  MISSED
-	FMulticastInlineDelegate                           OnSetImageTargetSucceeded;                                  // 0x0280   (0x0010)  
-	FMulticastInlineDelegate                           OnSetImageTargetFailed;                                     // 0x0290   (0x0010)  
-	FMulticastInlineDelegate                           OnImageTargetFound;                                         // 0x02A0   (0x0010)  
-	FMulticastInlineDelegate                           OnImageTargetLost;                                          // 0x02B0   (0x0010)  
-	FMulticastInlineDelegate                           OnImageTargetUnreliableTracking;                            // 0x02C0   (0x0010)  
-	unsigned char                                      UnknownData03_7[0x10];                                      // 0x02D0   (0x0010)  MISSED
+    class UTexture2D*                                  TargetImageTexture;                                         // 0x0260   (0x0008) 
+    FString                                            Name;                                                       // 0x0268   (0x0010) 
+    float                                              LongerDimension;                                            // 0x0278   (0x0004) 
+    bool                                               bIsStationary;                                              // 0x027C   (0x0001) 
+    bool                                               bUseUnreliablePose;                                         // 0x027D   (0x0001) 
+    EMagicLeapImageTargetOrientation                   AxisOrientation;                                            // 0x027E   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x1];                                       // 0x027F   (0x0001) MISSED
+    FMulticastInlineDelegate                           OnSetImageTargetSucceeded;                                  // 0x0280   (0x0010) 
+    FMulticastInlineDelegate                           OnSetImageTargetFailed;                                     // 0x0290   (0x0010) 
+    FMulticastInlineDelegate                           OnImageTargetFound;                                         // 0x02A0   (0x0010) 
+    FMulticastInlineDelegate                           OnImageTargetLost;                                          // 0x02B0   (0x0010) 
+    FMulticastInlineDelegate                           OnImageTargetUnreliableTracking;                            // 0x02C0   (0x0010) 
+    unsigned char                                      UnknownData03_7[0x10];                                      // 0x02D0   (0x0010) MISSED
 
-	/// Functions
-	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerComponent.SetTargetAsync
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerComponent, bool, const UTexture2D*> SetTargetAsync = { 0x1900af0, 0 }; 
-	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerComponent.RemoveTargetAsync
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerComponent, bool> RemoveTargetAsync = { 0x1900a90, 1 }; 
+    /// Functions
+    // Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerComponent.SetTargetAsync
+    // [0] ImageTarget : const UTexture2D*
+    constexpr static const FunctionPointer<UMagicLeapImageTrackerComponent, bool, const UTexture2D*> SetTargetAsync = { 0x1900af0, 0 };
+    // Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerComponent.RemoveTargetAsync
+    constexpr static const FunctionPointer<UMagicLeapImageTrackerComponent, bool> RemoveTargetAsync = { 0x1900a90, 1 };
 };
 
 /// Class /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary
@@ -61,37 +62,39 @@ class UMagicLeapImageTrackerFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.SetMaxSimultaneousTargets
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, void, const int32_t> SetMaxSimultaneousTargets = { 0x1901290, 0 }; 
-	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.IsImageTrackingEnabled
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, bool> IsImageTrackingEnabled = { 0x1901140, 1 }; 
-	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.GetMaxSimultaneousTargets
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, int32_t> GetMaxSimultaneousTargets = { 0x1901260, 2 }; 
-	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.EnableImageTracking
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, void, const bool> EnableImageTracking = { 0x1901180, 3 }; 
+    /// Functions
+    // Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.SetMaxSimultaneousTargets
+    // [0] MaxSimultaneousTargets : const int32_t
+    constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, void, const int32_t> SetMaxSimultaneousTargets = { 0x1901290, 0 };
+    // Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.IsImageTrackingEnabled
+    constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, bool> IsImageTrackingEnabled = { 0x1901140, 1 };
+    // Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.GetMaxSimultaneousTargets
+    constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, int32_t> GetMaxSimultaneousTargets = { 0x1901260, 2 };
+    // Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.EnableImageTracking
+    // [0] bEnable : const bool
+    constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, void, const bool> EnableImageTracking = { 0x1901180, 3 };
 };
 
 /// Struct /Script/MagicLeapImageTracker.MagicLeapImageTargetState
 /// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
 struct FMagicLeapImageTargetState
 { 
-	EMagicLeapImageTargetStatus                        TrackingStatus;                                             // 0x0000   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003)  MISSED
-	FVector                                            Location;                                                   // 0x0004   (0x000C)  
-	FRotator                                           Rotation;                                                   // 0x0010   (0x000C)  
+    EMagicLeapImageTargetStatus                        TrackingStatus;                                             // 0x0000   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    FVector                                            Location;                                                   // 0x0004   (0x000C) 
+    FRotator                                           Rotation;                                                   // 0x0010   (0x000C) 
 };
 
 /// Struct /Script/MagicLeapImageTracker.MagicLeapImageTargetSettings
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FMagicLeapImageTargetSettings
 { 
-	class UTexture2D*                                  ImageTexture;                                               // 0x0000   (0x0008)  
-	FString                                            Name;                                                       // 0x0008   (0x0010)  
-	float                                              LongerDimension;                                            // 0x0018   (0x0004)  
-	bool                                               bIsStationary;                                              // 0x001C   (0x0001)  
-	bool                                               bIsEnabled;                                                 // 0x001D   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x2];                                       // 0x001E   (0x0002)  MISSED
+    class UTexture2D*                                  ImageTexture;                                               // 0x0000   (0x0008) 
+    FString                                            Name;                                                       // 0x0008   (0x0010) 
+    float                                              LongerDimension;                                            // 0x0018   (0x0004) 
+    bool                                               bIsStationary;                                              // 0x001C   (0x0001) 
+    bool                                               bIsEnabled;                                                 // 0x001D   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x2];                                       // 0x001E   (0x0002) MISSED
 };
 
 #pragma pack(pop)

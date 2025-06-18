@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
+#include "BasicType.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -22,8 +22,8 @@ public:
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FJsonObjectWrapper
 { 
-	FString                                            JsonString;                                                 // 0x0000   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x10];                                      // 0x0010   (0x0010)  MISSED
+    FString                                            JsonString;                                                 // 0x0000   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0010   (0x0010) MISSED
 };
 
 #pragma pack(pop)

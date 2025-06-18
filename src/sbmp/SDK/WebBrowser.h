@@ -13,7 +13,7 @@
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FWebJSCallbackBase
 { 
-	unsigned char                                      UnknownData01_2[0x20];                                      // 0x0000   (0x0020)  MISSED
+    unsigned char                                      UnknownData01_2[0x20];                                      // 0x0000   (0x0020) MISSED
 };
 
 /// Struct /Script/WebBrowser.WebJSResponse

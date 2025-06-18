@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
-/// dependency: Engine
-/// dependency: UMG
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -17,18 +17,21 @@
 class UParticleSystemWidget : public UWidget
 { 
 public:
-	class UParticleSystem*                             ParticleSystemTemplate;                                     // 0x0108   (0x0008)  
-	bool                                               bReactivate;                                                // 0x0110   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x7];                                       // 0x0111   (0x0007)  MISSED
-	class UParticleSystemComponent*                    WorldParticleComponent;                                     // 0x0118   (0x0008)  
-	class AActor*                                      WorldParticleActor;                                         // 0x0120   (0x0008)  
-	unsigned char                                      UnknownData03_7[0x10];                                      // 0x0128   (0x0010)  MISSED
+    class UParticleSystem*                             ParticleSystemTemplate;                                     // 0x0108   (0x0008) 
+    bool                                               bReactivate;                                                // 0x0110   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0111   (0x0007) MISSED
+    class UParticleSystemComponent*                    WorldParticleComponent;                                     // 0x0118   (0x0008) 
+    class AActor*                                      WorldParticleActor;                                         // 0x0120   (0x0008) 
+    unsigned char                                      UnknownData03_7[0x10];                                      // 0x0128   (0x0010) MISSED
 
-	/// Functions
-	// Function /Script/UIParticleSystem.ParticleSystemWidget.SetReactivate
-	constexpr static const FunctionPointer<UParticleSystemWidget, void, const bool> SetReactivate = { 0x13f2b70, 0 }; 
-	// Function /Script/UIParticleSystem.ParticleSystemWidget.ActivateParticles
-	constexpr static const FunctionPointer<UParticleSystemWidget, void, const bool, const bool> ActivateParticles = { 0x13f2c90, 1 }; 
+    /// Functions
+    // Function /Script/UIParticleSystem.ParticleSystemWidget.SetReactivate
+    // [0] bActivateAndReset : const bool
+    constexpr static const FunctionPointer<UParticleSystemWidget, void, const bool> SetReactivate = { 0x13f2b70, 0 };
+    // Function /Script/UIParticleSystem.ParticleSystemWidget.ActivateParticles
+    // [0] bActive : const bool
+    // [1] bReset : const bool
+    constexpr static const FunctionPointer<UParticleSystemWidget, void, const bool, const bool> ActivateParticles = { 0x13f2c90, 1 };
 };
 
 /// Class /Script/UIParticleSystem.UIParticleComponent

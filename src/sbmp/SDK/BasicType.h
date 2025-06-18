@@ -15,36 +15,36 @@
 
 template <typename T, typename R, typename... Args>
 struct FunctionPointer final {
-	constexpr FunctionPointer(size_t offset, size_t vtableIndex)
+    constexpr FunctionPointer(size_t offset, size_t vtableIndex)
         : _offset(offset), _vtableIndex(vtableIndex)
     { }
 
-	std::function<R(Args...)> Bind(T* instance) {
-		return [=, idx = _offset](Args&&... args) {
-			auto callable = reinterpret_cast<R(*)(T*, Args...)>(_offset);
-			return callable(instance, std::forward<Args&&>(args)...);
-		};
-	}
+    std::function<R(Args...)> Bind(T* instance) {
+        return [=, idx = _offset](Args&&... args) {
+            auto callable = reinterpret_cast<R(*)(T*, Args...)>(_offset);
+            return callable(instance, std::forward<Args&&>(args)...);
+        };
+    }
 
-	std::function<R(Args...)> BindVirtual(T* instance) {
-		return [=, idx = _vtableIndex](Args&&... args) {
-			uintptr_t* vftbl = reinterpret_cast<uintptr_t*>(*reinterpret_cast<uintptr_t*>(instance));
+    std::function<R(Args...)> BindVirtual(T* instance) {
+        return [=, idx = _vtableIndex](Args&&... args) {
+            uintptr_t* vftbl = reinterpret_cast<uintptr_t*>(*reinterpret_cast<uintptr_t*>(instance));
 
-			auto callable = reinterpret_cast<R(*)(T*, Args...)>(vftbl[idx]);
-			return callable(instance, std::forward<Args&&>(args)...);
-		};
-	}
+            auto callable = reinterpret_cast<R(*)(T*, Args...)>(vftbl[idx]);
+            return callable(instance, std::forward<Args&&>(args)...);
+        };
+    }
 
-	R operator () (T* self, Args&&... args) const {
+    R operator () (T* self, Args&&... args) const {
         uintptr_t* vftbl = reinterpret_cast<uintptr_t*>(*reinterpret_cast<uintptr_t*>(self));
         auto callable = reinterpret_cast<R(*)(T*, Args...)>(vftbl[_vtableIndex]);
 
-		return callable(self, std::forward<Args&&>(args)...);
-	}
+        return callable(self, std::forward<Args&&>(args)...);
+    }
 
 private:
-	size_t _offset;
-	size_t _vtableIndex;
+    size_t _offset;
+    size_t _vtableIndex;
 };
     ///
 /// THERE ARE MISSING STRUCTS!! This will result in members having the SDK_UNDEFINED pragma!!!

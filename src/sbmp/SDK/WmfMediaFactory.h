@@ -6,7 +6,7 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -15,11 +15,11 @@
 class UWmfMediaSettings : public UObject
 { 
 public:
-	bool                                               AllowNonStandardCodecs;                                     // 0x0028   (0x0001)  
-	bool                                               LowLatency;                                                 // 0x0029   (0x0001)  
-	bool                                               NativeAudioOut;                                             // 0x002A   (0x0001)  
-	bool                                               HardwareAcceleratedVideoDecoding;                           // 0x002B   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004)  MISSED
+    bool                                               AllowNonStandardCodecs;                                     // 0x0028   (0x0001) 
+    bool                                               LowLatency;                                                 // 0x0029   (0x0001) 
+    bool                                               NativeAudioOut;                                             // 0x002A   (0x0001) 
+    bool                                               HardwareAcceleratedVideoDecoding;                           // 0x002B   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 #pragma pack(pop)

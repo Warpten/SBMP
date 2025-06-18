@@ -6,7 +6,7 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -78,7 +78,7 @@ public:
 class USoundfieldEffectBase : public UObject
 { 
 public:
-	class USoundfieldEffectSettingsBase*               Settings;                                                   // 0x0028   (0x0008)  
+    class USoundfieldEffectSettingsBase*               Settings;                                                   // 0x0028   (0x0008) 
 };
 
 #pragma pack(pop)

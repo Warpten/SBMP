@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
-/// dependency: Renderer
+#include "CoreUObject.h"
+#include "Renderer.h"
 
 #pragma pack(push, 0x1)
 
@@ -16,10 +16,10 @@
 class ULightPropagationVolumeBlendable : public UObject
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x8];                                       // 0x0028   (0x0008)  MISSED
-	FLightPropagationVolumeSettings                    Settings;                                                   // 0x0030   (0x0040)  
-	float                                              BlendWeight;                                                // 0x0070   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x0074   (0x0004)  MISSED
+    unsigned char                                      UnknownData02_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    FLightPropagationVolumeSettings                    Settings;                                                   // 0x0030   (0x0040) 
+    float                                              BlendWeight;                                                // 0x0070   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0074   (0x0004) MISSED
 };
 
 #pragma pack(pop)

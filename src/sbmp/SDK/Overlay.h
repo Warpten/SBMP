@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
+#include "BasicType.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -22,10 +22,10 @@ public:
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FOverlayItem
 { 
-	FTimespan                                          StartTime;                                                  // 0x0000   (0x0008)  
-	FTimespan                                          EndTime;                                                    // 0x0008   (0x0008)  
-	FString                                            text;                                                       // 0x0010   (0x0010)  
-	FVector2D                                          position;                                                   // 0x0020   (0x0008)  
+    FTimespan                                          StartTime;                                                  // 0x0000   (0x0008) 
+    FTimespan                                          EndTime;                                                    // 0x0008   (0x0008) 
+    FString                                            text;                                                       // 0x0010   (0x0010) 
+    FVector2D                                          position;                                                   // 0x0020   (0x0008) 
 };
 
 /// Class /Script/Overlay.BasicOverlays
@@ -33,7 +33,7 @@ struct FOverlayItem
 class UBasicOverlays : public UOverlays
 { 
 public:
-	TArray<FOverlayItem>                               Overlays;                                                   // 0x0028   (0x0010)  
+    TArray<FOverlayItem>                               Overlays;                                                   // 0x0028   (0x0010) 
 };
 
 /// Class /Script/Overlay.LocalizedOverlays
@@ -41,8 +41,8 @@ public:
 class ULocalizedOverlays : public UOverlays
 { 
 public:
-	class UBasicOverlays*                              DefaultOverlays;                                            // 0x0028   (0x0008)  
-	TMap<FString, class UBasicOverlays*>               LocaleToOverlaysMap;                                        // 0x0030   (0x0050)  
+    class UBasicOverlays*                              DefaultOverlays;                                            // 0x0028   (0x0008) 
+    TMap<FString, class UBasicOverlays*>               LocaleToOverlaysMap;                                        // 0x0030   (0x0050) 
 };
 
 #pragma pack(pop)

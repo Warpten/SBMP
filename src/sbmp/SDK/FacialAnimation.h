@@ -6,9 +6,9 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -17,10 +17,10 @@
 class UAudioCurveSourceComponent : public UAudioComponent
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x8];                                       // 0x08E8   (0x0008)  MISSED
-	FName                                              CurveSourceBindingName;                                     // 0x08F0   (0x0008)  
-	float                                              CurveSyncOffset;                                            // 0x08F8   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x34];                                      // 0x08FC   (0x0034)  MISSED
+    unsigned char                                      UnknownData02_8[0x8];                                       // 0x08E8   (0x0008) MISSED
+    FName                                              CurveSourceBindingName;                                     // 0x08F0   (0x0008) 
+    float                                              CurveSyncOffset;                                            // 0x08F8   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x34];                                      // 0x08FC   (0x0034) MISSED
 };
 
 #pragma pack(pop)

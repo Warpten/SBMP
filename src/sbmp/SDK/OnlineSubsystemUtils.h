@@ -6,12 +6,12 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: AudioMixer
-/// dependency: CoreUObject
-/// dependency: DeveloperSettings
-/// dependency: Engine
-/// dependency: OnlineSubsystem
+#include "BasicType.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "CoreUObject.h"
+#include "DeveloperSettings.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "OnlineSubsystem.h"
 
 #pragma pack(push, 0x1)
 
@@ -19,101 +19,101 @@
 /// Size: 0x01 (1 bytes)
 enum class EInAppPurchaseStatus : uint8_t
 {
-	Invalid                                                                          = 0,
-	Failed                                                                           = 1,
-	Deferred                                                                         = 2,
-	Canceled                                                                         = 3,
-	Purchased                                                                        = 4,
-	Restored                                                                         = 5
+    Invalid                                                                          = 0,
+    Failed                                                                           = 1,
+    Deferred                                                                         = 2,
+    Canceled                                                                         = 3,
+    Purchased                                                                        = 4,
+    Restored                                                                         = 5
 };
 
 /// Enum /Script/OnlineSubsystemUtils.EOnlineProxyStoreOfferDiscountType
 /// Size: 0x01 (1 bytes)
 enum class EOnlineProxyStoreOfferDiscountType : uint8_t
 {
-	NotOnSale                                                                        = 0,
-	Percentage                                                                       = 1,
-	DiscountAmount                                                                   = 2,
-	PayAmount                                                                        = 3
+    NotOnSale                                                                        = 0,
+    Percentage                                                                       = 1,
+    DiscountAmount                                                                   = 2,
+    PayAmount                                                                        = 3
 };
 
 /// Enum /Script/OnlineSubsystemUtils.EBeaconConnectionState
 /// Size: 0x01 (1 bytes)
 enum class EBeaconConnectionState : uint8_t
 {
-	Invalid                                                                          = 0,
-	Closed                                                                           = 1,
-	Pending                                                                          = 2,
-	Open                                                                             = 3
+    Invalid                                                                          = 0,
+    Closed                                                                           = 1,
+    Pending                                                                          = 2,
+    Open                                                                             = 3
 };
 
 /// Enum /Script/OnlineSubsystemUtils.EClientRequestType
 /// Size: 0x01 (1 bytes)
 enum class EClientRequestType : uint8_t
 {
-	NonePending                                                                      = 0,
-	ExistingSessionReservation                                                       = 1,
-	ReservationUpdate                                                                = 2,
-	EmptyServerReservation                                                           = 3,
-	Reconnect                                                                        = 4,
-	Abandon                                                                          = 5,
-	ReservationRemoveMembers                                                         = 6
+    NonePending                                                                      = 0,
+    ExistingSessionReservation                                                       = 1,
+    ReservationUpdate                                                                = 2,
+    EmptyServerReservation                                                           = 3,
+    Reconnect                                                                        = 4,
+    Abandon                                                                          = 5,
+    ReservationRemoveMembers                                                         = 6
 };
 
 /// Enum /Script/OnlineSubsystemUtils.EPartyReservationResult
 /// Size: 0x01 (1 bytes)
 enum class EPartyReservationResult : uint8_t
 {
-	NoResult                                                                         = 0,
-	RequestPending                                                                   = 1,
-	GeneralError                                                                     = 2,
-	PartyLimitReached                                                                = 3,
-	IncorrectPlayerCount                                                             = 4,
-	RequestTimedOut                                                                  = 5,
-	ReservationDuplicate                                                             = 6,
-	ReservationNotFound                                                              = 7,
-	ReservationAccepted                                                              = 8,
-	ReservationDenied                                                                = 9,
-	ReservationDenied_CrossPlayRestriction                                           = 10,
-	ReservationDenied_Banned                                                         = 11,
-	ReservationRequestCanceled                                                       = 12,
-	ReservationInvalid                                                               = 13,
-	BadSessionId                                                                     = 14,
-	ReservationDenied_ContainsExistingPlayers                                        = 15
+    NoResult                                                                         = 0,
+    RequestPending                                                                   = 1,
+    GeneralError                                                                     = 2,
+    PartyLimitReached                                                                = 3,
+    IncorrectPlayerCount                                                             = 4,
+    RequestTimedOut                                                                  = 5,
+    ReservationDuplicate                                                             = 6,
+    ReservationNotFound                                                              = 7,
+    ReservationAccepted                                                              = 8,
+    ReservationDenied                                                                = 9,
+    ReservationDenied_CrossPlayRestriction                                           = 10,
+    ReservationDenied_Banned                                                         = 11,
+    ReservationRequestCanceled                                                       = 12,
+    ReservationInvalid                                                               = 13,
+    BadSessionId                                                                     = 14,
+    ReservationDenied_ContainsExistingPlayers                                        = 15
 };
 
 /// Enum /Script/OnlineSubsystemUtils.ESpectatorClientRequestType
 /// Size: 0x01 (1 bytes)
 enum class ESpectatorClientRequestType : uint8_t
 {
-	NonePending                                                                      = 0,
-	ExistingSessionReservation                                                       = 1,
-	ReservationUpdate                                                                = 2,
-	EmptyServerReservation                                                           = 3,
-	Reconnect                                                                        = 4,
-	Abandon                                                                          = 5
+    NonePending                                                                      = 0,
+    ExistingSessionReservation                                                       = 1,
+    ReservationUpdate                                                                = 2,
+    EmptyServerReservation                                                           = 3,
+    Reconnect                                                                        = 4,
+    Abandon                                                                          = 5
 };
 
 /// Enum /Script/OnlineSubsystemUtils.ESpectatorReservationResult
 /// Size: 0x01 (1 bytes)
 enum class ESpectatorReservationResult : uint8_t
 {
-	NoResult                                                                         = 0,
-	RequestPending                                                                   = 1,
-	GeneralError                                                                     = 2,
-	SpectatorLimitReached                                                            = 3,
-	IncorrectPlayerCount                                                             = 4,
-	RequestTimedOut                                                                  = 5,
-	ReservationDuplicate                                                             = 6,
-	ReservationNotFound                                                              = 7,
-	ReservationAccepted                                                              = 8,
-	ReservationDenied                                                                = 9,
-	ReservationDenied_CrossPlayRestriction                                           = 10,
-	ReservationDenied_Banned                                                         = 11,
-	ReservationRequestCanceled                                                       = 12,
-	ReservationInvalid                                                               = 13,
-	BadSessionId                                                                     = 14,
-	ReservationDenied_ContainsExistingPlayers                                        = 15
+    NoResult                                                                         = 0,
+    RequestPending                                                                   = 1,
+    GeneralError                                                                     = 2,
+    SpectatorLimitReached                                                            = 3,
+    IncorrectPlayerCount                                                             = 4,
+    RequestTimedOut                                                                  = 5,
+    ReservationDuplicate                                                             = 6,
+    ReservationNotFound                                                              = 7,
+    ReservationAccepted                                                              = 8,
+    ReservationDenied                                                                = 9,
+    ReservationDenied_CrossPlayRestriction                                           = 10,
+    ReservationDenied_Banned                                                         = 11,
+    ReservationRequestCanceled                                                       = 12,
+    ReservationInvalid                                                               = 13,
+    BadSessionId                                                                     = 14,
+    ReservationDenied_ContainsExistingPlayers                                        = 15
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementBlueprintLibrary
@@ -122,11 +122,24 @@ class UAchievementBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress
-	constexpr static const FunctionPointer<UAchievementBlueprintLibrary, void, const UObject*, const APlayerController*, const FName, const bool&, const float&> GetCachedAchievementProgress = { 0x14a3850, 0 }; 
-	// Function /Script/OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription
-	constexpr static const FunctionPointer<UAchievementBlueprintLibrary, void, const UObject*, const APlayerController*, const FName, const bool&, const FText&, const FText&, const FText&, const bool&> GetCachedAchievementDescription = { 0x14a3290, 1 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] AchievementID : const FName
+    // [3] bFoundID : const bool&
+    // [4] Progress : const float&
+    constexpr static const FunctionPointer<UAchievementBlueprintLibrary, void, const UObject*, const APlayerController*, const FName, const bool&, const float&> GetCachedAchievementProgress = { 0x14a3850, 0 };
+    // Function /Script/OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] AchievementID : const FName
+    // [3] bFoundID : const bool&
+    // [4] title : const FText&
+    // [5] LockedDescription : const FText&
+    // [6] UnlockedDescription : const FText&
+    // [7] bHidden : const bool&
+    constexpr static const FunctionPointer<UAchievementBlueprintLibrary, void, const UObject*, const APlayerController*, const FName, const bool&, const FText&, const FText&, const FText&, const bool&> GetCachedAchievementDescription = { 0x14a3290, 1 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy
@@ -134,15 +147,19 @@ public:
 class UAchievementQueryCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x18];                                      // 0x0050   (0x0018)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x18];                                      // 0x0050   (0x0018) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
-	constexpr static const FunctionPointer<UAchievementQueryCallbackProxy, UAchievementQueryCallbackProxy*, const UObject*, const APlayerController*> CacheAchievements = { 0x14a41b0, 0 }; 
-	// Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
-	constexpr static const FunctionPointer<UAchievementQueryCallbackProxy, UAchievementQueryCallbackProxy*, const UObject*, const APlayerController*> CacheAchievementDescriptions = { 0x14a3f30, 1 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UAchievementQueryCallbackProxy, UAchievementQueryCallbackProxy*, const UObject*, const APlayerController*> CacheAchievements = { 0x14a41b0, 0 };
+    // Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UAchievementQueryCallbackProxy, UAchievementQueryCallbackProxy*, const UObject*, const APlayerController*> CacheAchievementDescriptions = { 0x14a3f30, 1 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy
@@ -150,13 +167,18 @@ public:
 class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x30];                                      // 0x0050   (0x0030)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x30];                                      // 0x0050   (0x0030) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
-	constexpr static const FunctionPointer<UAchievementWriteCallbackProxy, UAchievementWriteCallbackProxy*, const UObject*, const APlayerController*, const FName, const float, const int32_t> WriteAchievementProgress = { 0x14a4810, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] AchievementName : const FName
+    // [3] Progress : const float
+    // [4] UserTag : const int32_t
+    constexpr static const FunctionPointer<UAchievementWriteCallbackProxy, UAchievementWriteCallbackProxy*, const UObject*, const APlayerController*, const FName, const float, const int32_t> WriteAchievementProgress = { 0x14a4810, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.ConnectionCallbackProxy
@@ -164,13 +186,15 @@ public:
 class UConnectionCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
-	constexpr static const FunctionPointer<UConnectionCallbackProxy, UConnectionCallbackProxy*, const UObject*, const APlayerController*> ConnectToService = { 0x14a4ec0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UConnectionCallbackProxy, UConnectionCallbackProxy*, const UObject*, const APlayerController*> ConnectToService = { 0x14a4ec0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy
@@ -178,13 +202,17 @@ public:
 class UCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x48];                                      // 0x0050   (0x0048)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x48];                                      // 0x0050   (0x0048) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession
-	constexpr static const FunctionPointer<UCreateSessionCallbackProxy, UCreateSessionCallbackProxy*, const UObject*, const APlayerController*, const int32_t, const bool> CreateSession = { 0x14a54b0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] PublicConnections : const int32_t
+    // [3] bUseLAN : const bool
+    constexpr static const FunctionPointer<UCreateSessionCallbackProxy, UCreateSessionCallbackProxy*, const UObject*, const APlayerController*, const int32_t, const bool> CreateSession = { 0x14a54b0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy
@@ -192,13 +220,15 @@ public:
 class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
-	constexpr static const FunctionPointer<UDestroySessionCallbackProxy, UDestroySessionCallbackProxy*, const UObject*, const APlayerController*> DestroySession = { 0x14a5bb0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UDestroySessionCallbackProxy, UDestroySessionCallbackProxy*, const UObject*, const APlayerController*> DestroySession = { 0x14a5bb0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.EndMatchCallbackProxy
@@ -206,13 +236,19 @@ public:
 class UEndMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x30];                                      // 0x0050   (0x0030)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x30];                                      // 0x0050   (0x0030) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch
-	constexpr static const FunctionPointer<UEndMatchCallbackProxy, UEndMatchCallbackProxy*, const UObject*, const APlayerController*, const TScriptInterface<Class>, const FString, const TEnumAsByte<EMPMatchOutcome>, const TEnumAsByte<EMPMatchOutcome>> EndMatch = { 0x14a61a0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] MatchActor : const TScriptInterface<Class>
+    // [3] MatchID : const FString
+    // [4] LocalPlayerOutcome : const TEnumAsByte<EMPMatchOutcome>
+    // [5] OtherPlayersOutcome : const TEnumAsByte<EMPMatchOutcome>
+    constexpr static const FunctionPointer<UEndMatchCallbackProxy, UEndMatchCallbackProxy*, const UObject*, const APlayerController*, const TScriptInterface<Class>, const FString, const TEnumAsByte<EMPMatchOutcome>, const TEnumAsByte<EMPMatchOutcome>> EndMatch = { 0x14a61a0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.EndTurnCallbackProxy
@@ -220,13 +256,17 @@ public:
 class UEndTurnCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
-	constexpr static const FunctionPointer<UEndTurnCallbackProxy, UEndTurnCallbackProxy*, const UObject*, const APlayerController*, const FString, const TScriptInterface<Class>> EndTurn = { 0x14a6a10, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] MatchID : const FString
+    // [3] TurnBasedMatchInterface : const TScriptInterface<Class>
+    constexpr static const FunctionPointer<UEndTurnCallbackProxy, UEndTurnCallbackProxy*, const UObject*, const APlayerController*, const FString, const TScriptInterface<Class>> EndTurn = { 0x14a6a10, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy
@@ -234,21 +274,29 @@ public:
 class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x40];                                      // 0x0050   (0x0040)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x40];                                      // 0x0050   (0x0040) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, FString, const FBlueprintSessionResult&> GetServerName = { 0x14a74c0, 0 }; 
-	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetPingInMs = { 0x14a7650, 1 }; 
-	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetMaxPlayers = { 0x14a7280, 2 }; 
-	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetCurrentPlayers = { 0x14a73a0, 3 }; 
-	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, UFindSessionsCallbackProxy*, const UObject*, const APlayerController*, const int32_t, const bool> FindSessions = { 0x14a7770, 4 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName
+    // [0] Result : const FBlueprintSessionResult&
+    constexpr static const FunctionPointer<UFindSessionsCallbackProxy, FString, const FBlueprintSessionResult&> GetServerName = { 0x14a74c0, 0 };
+    // Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs
+    // [0] Result : const FBlueprintSessionResult&
+    constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetPingInMs = { 0x14a7650, 1 };
+    // Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers
+    // [0] Result : const FBlueprintSessionResult&
+    constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetMaxPlayers = { 0x14a7280, 2 };
+    // Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers
+    // [0] Result : const FBlueprintSessionResult&
+    constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetCurrentPlayers = { 0x14a73a0, 3 };
+    // Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] MaxResults : const int32_t
+    // [3] bUseLAN : const bool
+    constexpr static const FunctionPointer<UFindSessionsCallbackProxy, UFindSessionsCallbackProxy*, const UObject*, const APlayerController*, const int32_t, const bool> FindSessions = { 0x14a7770, 4 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
@@ -256,13 +304,20 @@ public:
 class UFindTurnBasedMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x38];                                      // 0x0050   (0x0038)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x38];                                      // 0x0050   (0x0038) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
-	constexpr static const FunctionPointer<UFindTurnBasedMatchCallbackProxy, UFindTurnBasedMatchCallbackProxy*, const UObject*, const APlayerController*, const TScriptInterface<Class>, const int32_t, const int32_t, const int32_t, const bool> FindTurnBasedMatch = { 0x14a7f60, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] MatchActor : const TScriptInterface<Class>
+    // [3] MinPlayers : const int32_t
+    // [4] MaxPlayers : const int32_t
+    // [5] PlayerGroup : const int32_t
+    // [6] ShowExistingMatches : const bool
+    constexpr static const FunctionPointer<UFindTurnBasedMatchCallbackProxy, UFindTurnBasedMatchCallbackProxy*, const UObject*, const APlayerController*, const TScriptInterface<Class>, const int32_t, const int32_t, const int32_t, const bool> FindTurnBasedMatch = { 0x14a7f60, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy
@@ -270,13 +325,15 @@ public:
 class UInAppPurchaseCallbackProxy : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x38];                                      // 0x0048   (0x0038)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x38];                                      // 0x0048   (0x0038) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase
-	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy, UInAppPurchaseCallbackProxy*, const APlayerController*, const FInAppPurchaseProductRequest&> CreateProxyObjectForInAppPurchase = { 0x14a88d0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase
+    // [0] PlayerController : const APlayerController*
+    // [1] ProductRequest : const FInAppPurchaseProductRequest&
+    constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy, UInAppPurchaseCallbackProxy*, const APlayerController*, const FInAppPurchaseProductRequest&> CreateProxyObjectForInAppPurchase = { 0x14a88d0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2
@@ -284,17 +341,21 @@ public:
 class UInAppPurchaseCallbackProxy2 : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x60];                                      // 0x0048   (0x0060)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x60];                                      // 0x0048   (0x0060) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases
-	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*> CreateProxyObjectForInAppPurchaseUnprocessedPurchases = { 0x14a9660, 0 }; 
-	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseQueryOwned
-	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*> CreateProxyObjectForInAppPurchaseQueryOwned = { 0x14a9170, 1 }; 
-	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchase
-	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*, const FInAppPurchaseProductRequest2&> CreateProxyObjectForInAppPurchase = { 0x14a9af0, 2 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases
+    // [0] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*> CreateProxyObjectForInAppPurchaseUnprocessedPurchases = { 0x14a9660, 0 };
+    // Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseQueryOwned
+    // [0] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*> CreateProxyObjectForInAppPurchaseQueryOwned = { 0x14a9170, 1 };
+    // Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchase
+    // [0] PlayerController : const APlayerController*
+    // [1] ProductRequest : const FInAppPurchaseProductRequest2&
+    constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*, const FInAppPurchaseProductRequest2&> CreateProxyObjectForInAppPurchase = { 0x14a9af0, 2 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy
@@ -302,13 +363,15 @@ public:
 class UInAppPurchaseQueryCallbackProxy : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x48];                                      // 0x0048   (0x0048)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x48];                                      // 0x0048   (0x0048) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
-	constexpr static const FunctionPointer<UInAppPurchaseQueryCallbackProxy, UInAppPurchaseQueryCallbackProxy*, const APlayerController*, const TArray<FString>&> CreateProxyObjectForInAppPurchaseQuery = { 0x14aa0f0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
+    // [0] PlayerController : const APlayerController*
+    // [1] ProductIdentifiers : const TArray<FString>&
+    constexpr static const FunctionPointer<UInAppPurchaseQueryCallbackProxy, UInAppPurchaseQueryCallbackProxy*, const APlayerController*, const TArray<FString>&> CreateProxyObjectForInAppPurchaseQuery = { 0x14aa0f0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2
@@ -316,13 +379,15 @@ public:
 class UInAppPurchaseQueryCallbackProxy2 : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
-	constexpr static const FunctionPointer<UInAppPurchaseQueryCallbackProxy2, UInAppPurchaseQueryCallbackProxy2*, const APlayerController*, const TArray<FString>&> CreateProxyObjectForInAppPurchaseQuery = { 0x14aacd0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
+    // [0] PlayerController : const APlayerController*
+    // [1] ProductIdentifiers : const TArray<FString>&
+    constexpr static const FunctionPointer<UInAppPurchaseQueryCallbackProxy2, UInAppPurchaseQueryCallbackProxy2*, const APlayerController*, const TArray<FString>&> CreateProxyObjectForInAppPurchaseQuery = { 0x14aacd0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy
@@ -330,13 +395,15 @@ public:
 class UInAppPurchaseRestoreCallbackProxy : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x48];                                      // 0x0048   (0x0048)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x48];                                      // 0x0048   (0x0048) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore
-	constexpr static const FunctionPointer<UInAppPurchaseRestoreCallbackProxy, UInAppPurchaseRestoreCallbackProxy*, const TArray<FInAppPurchaseProductRequest>&, const APlayerController*> CreateProxyObjectForInAppPurchaseRestore = { 0x14ab4d0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore
+    // [0] ConsumableProductFlags : const TArray<FInAppPurchaseProductRequest>&
+    // [1] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UInAppPurchaseRestoreCallbackProxy, UInAppPurchaseRestoreCallbackProxy*, const TArray<FInAppPurchaseProductRequest>&, const APlayerController*> CreateProxyObjectForInAppPurchaseRestore = { 0x14ab4d0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2
@@ -344,13 +411,15 @@ public:
 class UInAppPurchaseRestoreCallbackProxy2 : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x60];                                      // 0x0048   (0x0060)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x60];                                      // 0x0048   (0x0060) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore
-	constexpr static const FunctionPointer<UInAppPurchaseRestoreCallbackProxy2, UInAppPurchaseRestoreCallbackProxy2*, const TArray<FInAppPurchaseProductRequest2>&, const APlayerController*> CreateProxyObjectForInAppPurchaseRestore = { 0x14abf60, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore
+    // [0] ConsumableProductFlags : const TArray<FInAppPurchaseProductRequest2>&
+    // [1] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UInAppPurchaseRestoreCallbackProxy2, UInAppPurchaseRestoreCallbackProxy2*, const TArray<FInAppPurchaseProductRequest2>&, const APlayerController*> CreateProxyObjectForInAppPurchaseRestore = { 0x14abf60, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.IpConnection
@@ -358,9 +427,9 @@ public:
 class UIpConnection : public UNetConnection
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x50];                                      // 0x1AF0   (0x0050)  MISSED
-	float                                              SocketErrorDisconnectDelay;                                 // 0x1B40   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x4C];                                      // 0x1B44   (0x004C)  MISSED
+    unsigned char                                      UnknownData02_8[0x50];                                      // 0x1AF0   (0x0050) MISSED
+    float                                              SocketErrorDisconnectDelay;                                 // 0x1B40   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x4C];                                      // 0x1B44   (0x004C) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.IpNetDriver
@@ -368,20 +437,20 @@ public:
 class UIpNetDriver : public UNetDriver
 { 
 public:
-	bool                                               LogPortUnreach : 1;                                         // 0x0748:0 (0x0001)  
-	bool                                               AllowPlayerPortUnreach : 1;                                 // 0x0748:1 (0x0001)  
-	unsigned char                                      UnknownData04_5[0x3];                                       // 0x0749   (0x0003)  MISSED
-	uint32_t                                           MaxPortCountToTry;                                          // 0x074C   (0x0004)  
-	unsigned char                                      UnknownData05_6[0xC];                                       // 0x0750   (0x000C)  MISSED
-	uint32_t                                           ServerDesiredSocketReceiveBufferBytes;                      // 0x075C   (0x0004)  
-	uint32_t                                           ServerDesiredSocketSendBufferBytes;                         // 0x0760   (0x0004)  
-	uint32_t                                           ClientDesiredSocketReceiveBufferBytes;                      // 0x0764   (0x0004)  
-	uint32_t                                           ClientDesiredSocketSendBufferBytes;                         // 0x0768   (0x0004)  
-	unsigned char                                      UnknownData06_6[0x4];                                       // 0x076C   (0x0004)  MISSED
-	double                                             MaxSecondsInReceive;                                        // 0x0770   (0x0008)  
-	int32_t                                            NbPacketsBetweenReceiveTimeTest;                            // 0x0778   (0x0004)  
-	float                                              ResolutionConnectionTimeout;                                // 0x077C   (0x0004)  
-	unsigned char                                      UnknownData07_7[0x38];                                      // 0x0780   (0x0038)  MISSED
+    bool                                               LogPortUnreach : 1;                                         // 0x0748:0 (0x0001) 
+    bool                                               AllowPlayerPortUnreach : 1;                                 // 0x0748:1 (0x0001) 
+    unsigned char                                      UnknownData04_5[0x3];                                       // 0x0749   (0x0003) MISSED
+    uint32_t                                           MaxPortCountToTry;                                          // 0x074C   (0x0004) 
+    unsigned char                                      UnknownData05_6[0xC];                                       // 0x0750   (0x000C) MISSED
+    uint32_t                                           ServerDesiredSocketReceiveBufferBytes;                      // 0x075C   (0x0004) 
+    uint32_t                                           ServerDesiredSocketSendBufferBytes;                         // 0x0760   (0x0004) 
+    uint32_t                                           ClientDesiredSocketReceiveBufferBytes;                      // 0x0764   (0x0004) 
+    uint32_t                                           ClientDesiredSocketSendBufferBytes;                         // 0x0768   (0x0004) 
+    unsigned char                                      UnknownData06_6[0x4];                                       // 0x076C   (0x0004) MISSED
+    double                                             MaxSecondsInReceive;                                        // 0x0770   (0x0008) 
+    int32_t                                            NbPacketsBetweenReceiveTimeTest;                            // 0x0778   (0x0004) 
+    float                                              ResolutionConnectionTimeout;                                // 0x077C   (0x0004) 
+    unsigned char                                      UnknownData07_7[0x38];                                      // 0x0780   (0x0038) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.JoinSessionCallbackProxy
@@ -389,13 +458,16 @@ public:
 class UJoinSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x130];                                     // 0x0050   (0x0130)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x130];                                     // 0x0050   (0x0130) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
-	constexpr static const FunctionPointer<UJoinSessionCallbackProxy, UJoinSessionCallbackProxy*, const UObject*, const APlayerController*, const FBlueprintSessionResult&> JoinSession = { 0x14adce0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] SearchResult : const FBlueprintSessionResult&
+    constexpr static const FunctionPointer<UJoinSessionCallbackProxy, UJoinSessionCallbackProxy*, const UObject*, const APlayerController*, const FBlueprintSessionResult&> JoinSession = { 0x14adce0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardBlueprintLibrary
@@ -404,9 +476,12 @@ class ULeaderboardBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
-	constexpr static const FunctionPointer<ULeaderboardBlueprintLibrary, bool, const APlayerController*, const FName, const int32_t> WriteLeaderboardInteger = { 0x14ae3c0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
+    // [0] PlayerController : const APlayerController*
+    // [1] StatName : const FName
+    // [2] StatValue : const int32_t
+    constexpr static const FunctionPointer<ULeaderboardBlueprintLibrary, bool, const APlayerController*, const FName, const int32_t> WriteLeaderboardInteger = { 0x14ae3c0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy
@@ -414,13 +489,15 @@ public:
 class ULeaderboardFlushCallbackProxy : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
-	constexpr static const FunctionPointer<ULeaderboardFlushCallbackProxy, ULeaderboardFlushCallbackProxy*, const APlayerController*, const FName> CreateProxyObjectForFlush = { 0x14aec60, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
+    // [0] PlayerController : const APlayerController*
+    // [1] SessionName : const FName
+    constexpr static const FunctionPointer<ULeaderboardFlushCallbackProxy, ULeaderboardFlushCallbackProxy*, const APlayerController*, const FName> CreateProxyObjectForFlush = { 0x14aec60, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
@@ -428,13 +505,15 @@ public:
 class ULeaderboardQueryCallbackProxy : public UObject
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x50];                                      // 0x0048   (0x0050)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x50];                                      // 0x0048   (0x0050) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
-	constexpr static const FunctionPointer<ULeaderboardQueryCallbackProxy, ULeaderboardQueryCallbackProxy*, const APlayerController*, const FName> CreateProxyObjectForIntQuery = { 0x14af4f0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
+    // [0] PlayerController : const APlayerController*
+    // [1] StatName : const FName
+    constexpr static const FunctionPointer<ULeaderboardQueryCallbackProxy, ULeaderboardQueryCallbackProxy*, const APlayerController*, const FName> CreateProxyObjectForIntQuery = { 0x14af4f0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.LogoutCallbackProxy
@@ -442,13 +521,15 @@ public:
 class ULogoutCallbackProxy : public UBlueprintAsyncActionBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x18];                                      // 0x0050   (0x0018)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x18];                                      // 0x0050   (0x0018) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.LogoutCallbackProxy.Logout
-	constexpr static const FunctionPointer<ULogoutCallbackProxy, ULogoutCallbackProxy*, const UObject*, const APlayerController*> Logout = { 0x14aff20, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.LogoutCallbackProxy.Logout
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    constexpr static const FunctionPointer<ULogoutCallbackProxy, ULogoutCallbackProxy*, const UObject*, const APlayerController*> Logout = { 0x14aff20, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeacon
@@ -456,11 +537,11 @@ public:
 class AOnlineBeacon : public AActor
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x8];                                       // 0x02C8   (0x0008)  MISSED
-	float                                              BeaconConnectionInitialTimeout;                             // 0x02D0   (0x0004)  
-	float                                              BeaconConnectionTimeout;                                    // 0x02D4   (0x0004)  
-	class UNetDriver*                                  NetDriver;                                                  // 0x02D8   (0x0008)  
-	unsigned char                                      UnknownData03_7[0x18];                                      // 0x02E0   (0x0018)  MISSED
+    unsigned char                                      UnknownData02_8[0x8];                                       // 0x02C8   (0x0008) MISSED
+    float                                              BeaconConnectionInitialTimeout;                             // 0x02D0   (0x0004) 
+    float                                              BeaconConnectionTimeout;                                    // 0x02D4   (0x0004) 
+    class UNetDriver*                                  NetDriver;                                                  // 0x02D8   (0x0008) 
+    unsigned char                                      UnknownData03_7[0x18];                                      // 0x02E0   (0x0018) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconClient
@@ -468,14 +549,14 @@ public:
 class AOnlineBeaconClient : public AOnlineBeacon
 { 
 public:
-	class AOnlineBeaconHostObject*                     BeaconOwner;                                                // 0x02F8   (0x0008)  
-	class UNetConnection*                              BeaconConnection;                                           // 0x0300   (0x0008)  
-	EBeaconConnectionState                             ConnectionState;                                            // 0x0308   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x4F];                                      // 0x0309   (0x004F)  MISSED
+    class AOnlineBeaconHostObject*                     BeaconOwner;                                                // 0x02F8   (0x0008) 
+    class UNetConnection*                              BeaconConnection;                                           // 0x0300   (0x0008) 
+    EBeaconConnectionState                             ConnectionState;                                            // 0x0308   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x4F];                                      // 0x0309   (0x004F) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
-	constexpr static const FunctionPointer<AOnlineBeaconClient, void> ClientOnConnected = { 0x14b0940, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
+    constexpr static const FunctionPointer<AOnlineBeaconClient, void> ClientOnConnected = { 0x14b0940, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconHost
@@ -483,10 +564,10 @@ public:
 class AOnlineBeaconHost : public AOnlineBeacon
 { 
 public:
-	int32_t                                            ListenPort;                                                 // 0x02F8   (0x0004)  
-	unsigned char                                      UnknownData02_6[0x4];                                       // 0x02FC   (0x0004)  MISSED
-	TArray<class AOnlineBeaconClient*>                 ClientActors;                                               // 0x0300   (0x0010)  
-	unsigned char                                      UnknownData03_7[0xA0];                                      // 0x0310   (0x00A0)  MISSED
+    int32_t                                            ListenPort;                                                 // 0x02F8   (0x0004) 
+    unsigned char                                      UnknownData02_6[0x4];                                       // 0x02FC   (0x0004) MISSED
+    TArray<class AOnlineBeaconClient*>                 ClientActors;                                               // 0x0300   (0x0010) 
+    unsigned char                                      UnknownData03_7[0xA0];                                      // 0x0310   (0x00A0) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconHostObject
@@ -494,9 +575,9 @@ public:
 class AOnlineBeaconHostObject : public AActor
 { 
 public:
-	FString                                            BeaconTypeName;                                             // 0x02C8   (0x0010)  
-	class UClass*                                      ClientBeaconActorClass;                                     // 0x02D8   (0x0008)  
-	TArray<class AOnlineBeaconClient*>                 ClientActors;                                               // 0x02E0   (0x0010)  
+    FString                                            BeaconTypeName;                                             // 0x02C8   (0x0010) 
+    class UClass*                                      ClientBeaconActorClass;                                     // 0x02D8   (0x0008) 
+    TArray<class AOnlineBeaconClient*>                 ClientActors;                                               // 0x02E0   (0x0010) 
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineEngineInterfaceImpl
@@ -504,20 +585,20 @@ public:
 class UOnlineEngineInterfaceImpl : public UOnlineEngineInterface
 { 
 public:
-	TMap<FName, FName>                                 MappedUniqueNetIdTypes;                                     // 0x0028   (0x0050)  
-	TArray<FName>                                      CompatibleUniqueNetIdTypes;                                 // 0x0078   (0x0010)  
-	FName                                              VoiceSubsystemNameOverride;                                 // 0x0088   (0x0008)  
-	unsigned char                                      UnknownData01_7[0xF8];                                      // 0x0090   (0x00F8)  MISSED
+    TMap<FName, FName>                                 MappedUniqueNetIdTypes;                                     // 0x0028   (0x0050) 
+    TArray<FName>                                      CompatibleUniqueNetIdTypes;                                 // 0x0078   (0x0010) 
+    FName                                              VoiceSubsystemNameOverride;                                 // 0x0088   (0x0008) 
+    unsigned char                                      UnknownData01_7[0xF8];                                      // 0x0090   (0x00F8) MISSED
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PIELoginSettingsInternal
 /// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FPIELoginSettingsInternal
 { 
-	FString                                            ID;                                                         // 0x0000   (0x0010)  
-	FString                                            Token;                                                      // 0x0010   (0x0010)  
-	FString                                            Type;                                                       // 0x0020   (0x0010)  
-	TArray<char>                                       TokenBytes;                                                 // 0x0030   (0x0010)  
+    FString                                            ID;                                                         // 0x0000   (0x0010) 
+    FString                                            Token;                                                      // 0x0010   (0x0010) 
+    FString                                            Type;                                                       // 0x0020   (0x0010) 
+    TArray<char>                                       TokenBytes;                                                 // 0x0030   (0x0010) 
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlinePIESettings
@@ -525,9 +606,9 @@ struct FPIELoginSettingsInternal
 class UOnlinePIESettings : public UDeveloperSettings
 { 
 public:
-	bool                                               bOnlinePIEEnabled;                                          // 0x0038   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x7];                                       // 0x0039   (0x0007)  MISSED
-	TArray<FPIELoginSettingsInternal>                  Logins;                                                     // 0x0040   (0x0010)  
+    bool                                               bOnlinePIEEnabled;                                          // 0x0038   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0039   (0x0007) MISSED
+    TArray<FPIELoginSettingsInternal>                  Logins;                                                     // 0x0040   (0x0010) 
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineSessionClient
@@ -535,33 +616,33 @@ public:
 class UOnlineSessionClient : public UOnlineSession
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x1B0];                                     // 0x0028   (0x01B0)  MISSED
-	bool                                               bIsFromInvite;                                              // 0x01D8   (0x0001)  
-	bool                                               bHandlingDisconnect;                                        // 0x01D9   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x6];                                       // 0x01DA   (0x0006)  MISSED
+    unsigned char                                      UnknownData02_8[0x1B0];                                     // 0x0028   (0x01B0) MISSED
+    bool                                               bIsFromInvite;                                              // 0x01D8   (0x0001) 
+    bool                                               bHandlingDisconnect;                                        // 0x01D9   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x6];                                       // 0x01DA   (0x0006) MISSED
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PlayerReservation
 /// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FPlayerReservation
 { 
-	FUniqueNetIdRepl                                   UniqueId;                                                   // 0x0000   (0x0028)  
-	FString                                            ValidationStr;                                              // 0x0028   (0x0010)  
-	FString                                            Platform;                                                   // 0x0038   (0x0010)  
-	bool                                               bAllowCrossplay;                                            // 0x0048   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0049   (0x0003)  MISSED
-	float                                              ElapsedTime;                                                // 0x004C   (0x0004)  
+    FUniqueNetIdRepl                                   UniqueId;                                                   // 0x0000   (0x0028) 
+    FString                                            ValidationStr;                                              // 0x0028   (0x0010) 
+    FString                                            Platform;                                                   // 0x0038   (0x0010) 
+    bool                                               bAllowCrossplay;                                            // 0x0048   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0049   (0x0003) MISSED
+    float                                              ElapsedTime;                                                // 0x004C   (0x0004) 
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PartyReservation
 /// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FPartyReservation
 { 
-	int32_t                                            TeamNum;                                                    // 0x0000   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004)  MISSED
-	FUniqueNetIdRepl                                   PartyLeader;                                                // 0x0008   (0x0028)  
-	TArray<FPlayerReservation>                         PartyMembers;                                               // 0x0030   (0x0010)  
-	TArray<FPlayerReservation>                         RemovedPartyMembers;                                        // 0x0040   (0x0010)  
+    int32_t                                            TeamNum;                                                    // 0x0000   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    FUniqueNetIdRepl                                   PartyLeader;                                                // 0x0008   (0x0028) 
+    TArray<FPlayerReservation>                         PartyMembers;                                               // 0x0030   (0x0010) 
+    TArray<FPlayerReservation>                         RemovedPartyMembers;                                        // 0x0040   (0x0010) 
 };
 
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconClient
@@ -569,31 +650,41 @@ struct FPartyReservation
 class APartyBeaconClient : public AOnlineBeaconClient
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x30];                                      // 0x0358   (0x0030)  MISSED
-	FString                                            DestSessionId;                                              // 0x0388   (0x0010)  
-	FPartyReservation                                  PendingReservation;                                         // 0x0398   (0x0050)  
-	EClientRequestType                                 RequestType;                                                // 0x03E8   (0x0001)  
-	bool                                               bPendingReservationSent;                                    // 0x03E9   (0x0001)  
-	bool                                               bCancelReservation;                                         // 0x03EA   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x2D];                                      // 0x03EB   (0x002D)  MISSED
+    unsigned char                                      UnknownData02_8[0x30];                                      // 0x0358   (0x0030) MISSED
+    FString                                            DestSessionId;                                              // 0x0388   (0x0010) 
+    FPartyReservation                                  PendingReservation;                                         // 0x0398   (0x0050) 
+    EClientRequestType                                 RequestType;                                                // 0x03E8   (0x0001) 
+    bool                                               bPendingReservationSent;                                    // 0x03E9   (0x0001) 
+    bool                                               bCancelReservation;                                         // 0x03EA   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x2D];                                      // 0x03EB   (0x002D) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerUpdateReservationRequest = { 0x14b21d0, 0 }; 
-	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerReservationRequest = { 0x14b24d0, 1 }; 
-	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerRemoveMemberFromReservationRequest = { 0x14b1ed0, 2 }; 
-	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const FUniqueNetIdRepl> ServerCancelReservationRequest = { 0x14b1d60, 3 }; 
-	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const int32_t> ClientSendReservationUpdates = { 0x14b27f0, 4 }; 
-	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
-	constexpr static const FunctionPointer<APartyBeaconClient, void> ClientSendReservationFull = { 0x14b27d0, 5 }; 
-	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const TEnumAsByte<EPartyReservationResult>> ClientReservationResponse = { 0x14b29a0, 6 }; 
-	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const TEnumAsByte<EPartyReservationResult>> ClientCancelReservationResponse = { 0x14b28d0, 7 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
+    // [0] SessionId : const FString
+    // [1] ReservationUpdate : const FPartyReservation
+    constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerUpdateReservationRequest = { 0x14b21d0, 0 };
+    // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
+    // [0] SessionId : const FString
+    // [1] Reservation : const FPartyReservation
+    constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerReservationRequest = { 0x14b24d0, 1 };
+    // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest
+    // [0] SessionId : const FString
+    // [1] ReservationUpdate : const FPartyReservation
+    constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerRemoveMemberFromReservationRequest = { 0x14b1ed0, 2 };
+    // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
+    // [0] PartyLeader : const FUniqueNetIdRepl
+    constexpr static const FunctionPointer<APartyBeaconClient, void, const FUniqueNetIdRepl> ServerCancelReservationRequest = { 0x14b1d60, 3 };
+    // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
+    // [0] NumRemainingReservations : const int32_t
+    constexpr static const FunctionPointer<APartyBeaconClient, void, const int32_t> ClientSendReservationUpdates = { 0x14b27f0, 4 };
+    // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
+    constexpr static const FunctionPointer<APartyBeaconClient, void> ClientSendReservationFull = { 0x14b27d0, 5 };
+    // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
+    // [0] ReservationResponse : const TEnumAsByte<EPartyReservationResult>
+    constexpr static const FunctionPointer<APartyBeaconClient, void, const TEnumAsByte<EPartyReservationResult>> ClientReservationResponse = { 0x14b29a0, 6 };
+    // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
+    // [0] ReservationResponse : const TEnumAsByte<EPartyReservationResult>
+    constexpr static const FunctionPointer<APartyBeaconClient, void, const TEnumAsByte<EPartyReservationResult>> ClientCancelReservationResponse = { 0x14b28d0, 7 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconHost
@@ -601,13 +692,13 @@ public:
 class APartyBeaconHost : public AOnlineBeaconHostObject
 { 
 public:
-	class UPartyBeaconState*                           State;                                                      // 0x02F0   (0x0008)  
-	unsigned char                                      UnknownData03_6[0x60];                                      // 0x02F8   (0x0060)  MISSED
-	bool                                               bLogoutOnSessionTimeout;                                    // 0x0358   (0x0001)  
-	unsigned char                                      UnknownData04_6[0x3];                                       // 0x0359   (0x0003)  MISSED
-	float                                              SessionTimeoutSecs;                                         // 0x035C   (0x0004)  
-	float                                              TravelSessionTimeoutSecs;                                   // 0x0360   (0x0004)  
-	unsigned char                                      UnknownData05_7[0x4];                                       // 0x0364   (0x0004)  MISSED
+    class UPartyBeaconState*                           State;                                                      // 0x02F0   (0x0008) 
+    unsigned char                                      UnknownData03_6[0x60];                                      // 0x02F8   (0x0060) MISSED
+    bool                                               bLogoutOnSessionTimeout;                                    // 0x0358   (0x0001) 
+    unsigned char                                      UnknownData04_6[0x3];                                       // 0x0359   (0x0003) MISSED
+    float                                              SessionTimeoutSecs;                                         // 0x035C   (0x0004) 
+    float                                              TravelSessionTimeoutSecs;                                   // 0x0360   (0x0004) 
+    unsigned char                                      UnknownData05_7[0x4];                                       // 0x0364   (0x0004) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconState
@@ -615,19 +706,19 @@ public:
 class UPartyBeaconState : public UObject
 { 
 public:
-	FName                                              SessionName;                                                // 0x0028   (0x0008)  
-	int32_t                                            NumConsumedReservations;                                    // 0x0030   (0x0004)  
-	int32_t                                            MaxReservations;                                            // 0x0034   (0x0004)  
-	int32_t                                            NumTeams;                                                   // 0x0038   (0x0004)  
-	int32_t                                            NumPlayersPerTeam;                                          // 0x003C   (0x0004)  
-	FName                                              TeamAssignmentMethod;                                       // 0x0040   (0x0008)  
-	int32_t                                            ReservedHostTeamNum;                                        // 0x0048   (0x0004)  
-	int32_t                                            ForceTeamNum;                                               // 0x004C   (0x0004)  
-	bool                                               bRestrictCrossConsole;                                      // 0x0050   (0x0001)  
-	bool                                               bEnableRemovalRequests;                                     // 0x0051   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x6];                                       // 0x0052   (0x0006)  MISSED
-	TArray<FPartyReservation>                          Reservations;                                               // 0x0058   (0x0010)  
-	unsigned char                                      UnknownData03_7[0x10];                                      // 0x0068   (0x0010)  MISSED
+    FName                                              SessionName;                                                // 0x0028   (0x0008) 
+    int32_t                                            NumConsumedReservations;                                    // 0x0030   (0x0004) 
+    int32_t                                            MaxReservations;                                            // 0x0034   (0x0004) 
+    int32_t                                            NumTeams;                                                   // 0x0038   (0x0004) 
+    int32_t                                            NumPlayersPerTeam;                                          // 0x003C   (0x0004) 
+    FName                                              TeamAssignmentMethod;                                       // 0x0040   (0x0008) 
+    int32_t                                            ReservedHostTeamNum;                                        // 0x0048   (0x0004) 
+    int32_t                                            ForceTeamNum;                                               // 0x004C   (0x0004) 
+    bool                                               bRestrictCrossConsole;                                      // 0x0050   (0x0001) 
+    bool                                               bEnableRemovalRequests;                                     // 0x0051   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x6];                                       // 0x0052   (0x0006) MISSED
+    TArray<FPartyReservation>                          Reservations;                                               // 0x0058   (0x0010) 
+    unsigned char                                      UnknownData03_7[0x10];                                      // 0x0068   (0x0010) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.QuitMatchCallbackProxy
@@ -635,13 +726,18 @@ public:
 class UQuitMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
-	constexpr static const FunctionPointer<UQuitMatchCallbackProxy, UQuitMatchCallbackProxy*, const UObject*, const APlayerController*, const FString, const TEnumAsByte<EMPMatchOutcome>, const int32_t> QuitMatch = { 0x14b3ee0, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] MatchID : const FString
+    // [3] Outcome : const TEnumAsByte<EMPMatchOutcome>
+    // [4] TurnTimeoutInSeconds : const int32_t
+    constexpr static const FunctionPointer<UQuitMatchCallbackProxy, UQuitMatchCallbackProxy*, const UObject*, const APlayerController*, const FString, const TEnumAsByte<EMPMatchOutcome>, const int32_t> QuitMatch = { 0x14b3ee0, 0 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy
@@ -649,21 +745,23 @@ public:
 class UShowLoginUICallbackProxy : public UBlueprintAsyncActionBase
 { 
 public:
-	FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)  
-	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x10];                                      // 0x0050   (0x0010)  MISSED
+    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010) 
+    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0050   (0x0010) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
-	constexpr static const FunctionPointer<UShowLoginUICallbackProxy, UShowLoginUICallbackProxy*, const UObject*, const APlayerController*> ShowExternalLoginUI = { 0x14b4700, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
+    // [0] WorldContextObject : const UObject*
+    // [1] InPlayerController : const APlayerController*
+    constexpr static const FunctionPointer<UShowLoginUICallbackProxy, UShowLoginUICallbackProxy*, const UObject*, const APlayerController*> ShowExternalLoginUI = { 0x14b4700, 0 };
 };
 
 /// Struct /Script/OnlineSubsystemUtils.SpectatorReservation
 /// Size: 0x0078 (120 bytes) (0x000000 - 0x000078) align n/a MaxSize: 0x0078
 struct FSpectatorReservation
 { 
-	FUniqueNetIdRepl                                   SpectatorId;                                                // 0x0000   (0x0028)  
-	FPlayerReservation                                 Spectator;                                                  // 0x0028   (0x0050)  
+    FUniqueNetIdRepl                                   SpectatorId;                                                // 0x0000   (0x0028) 
+    FPlayerReservation                                 Spectator;                                                  // 0x0028   (0x0050) 
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconClient
@@ -671,27 +769,33 @@ struct FSpectatorReservation
 class ASpectatorBeaconClient : public AOnlineBeaconClient
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x30];                                      // 0x0358   (0x0030)  MISSED
-	FString                                            DestSessionId;                                              // 0x0388   (0x0010)  
-	FSpectatorReservation                              PendingReservation;                                         // 0x0398   (0x0078)  
-	ESpectatorClientRequestType                        RequestType;                                                // 0x0410   (0x0001)  
-	bool                                               bPendingReservationSent;                                    // 0x0411   (0x0001)  
-	bool                                               bCancelReservation;                                         // 0x0412   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x2D];                                      // 0x0413   (0x002D)  MISSED
+    unsigned char                                      UnknownData02_8[0x30];                                      // 0x0358   (0x0030) MISSED
+    FString                                            DestSessionId;                                              // 0x0388   (0x0010) 
+    FSpectatorReservation                              PendingReservation;                                         // 0x0398   (0x0078) 
+    ESpectatorClientRequestType                        RequestType;                                                // 0x0410   (0x0001) 
+    bool                                               bPendingReservationSent;                                    // 0x0411   (0x0001) 
+    bool                                               bCancelReservation;                                         // 0x0412   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x2D];                                      // 0x0413   (0x002D) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const FString, const FSpectatorReservation> ServerReservationRequest = { 0x14b4de0, 0 }; 
-	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerCancelReservationRequest
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const FUniqueNetIdRepl> ServerCancelReservationRequest = { 0x14b1d60, 1 }; 
-	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationUpdates
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const int32_t> ClientSendReservationUpdates = { 0x14b50c0, 2 }; 
-	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationFull
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void> ClientSendReservationFull = { 0x14b50a0, 3 }; 
-	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientReservationResponse
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const TEnumAsByte<ESpectatorReservationResult>> ClientReservationResponse = { 0x14b5270, 4 }; 
-	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const TEnumAsByte<ESpectatorReservationResult>> ClientCancelReservationResponse = { 0x14b51a0, 5 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest
+    // [0] SessionId : const FString
+    // [1] Reservation : const FSpectatorReservation
+    constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const FString, const FSpectatorReservation> ServerReservationRequest = { 0x14b4de0, 0 };
+    // Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerCancelReservationRequest
+    // [0] Spectator : const FUniqueNetIdRepl
+    constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const FUniqueNetIdRepl> ServerCancelReservationRequest = { 0x14b1d60, 1 };
+    // Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationUpdates
+    // [0] NumRemainingReservations : const int32_t
+    constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const int32_t> ClientSendReservationUpdates = { 0x14b50c0, 2 };
+    // Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationFull
+    constexpr static const FunctionPointer<ASpectatorBeaconClient, void> ClientSendReservationFull = { 0x14b50a0, 3 };
+    // Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientReservationResponse
+    // [0] ReservationResponse : const TEnumAsByte<ESpectatorReservationResult>
+    constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const TEnumAsByte<ESpectatorReservationResult>> ClientReservationResponse = { 0x14b5270, 4 };
+    // Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse
+    // [0] ReservationResponse : const TEnumAsByte<ESpectatorReservationResult>
+    constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const TEnumAsByte<ESpectatorReservationResult>> ClientCancelReservationResponse = { 0x14b51a0, 5 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconHost
@@ -699,13 +803,13 @@ public:
 class ASpectatorBeaconHost : public AOnlineBeaconHostObject
 { 
 public:
-	class USpectatorBeaconState*                       State;                                                      // 0x02F0   (0x0008)  
-	unsigned char                                      UnknownData03_6[0x60];                                      // 0x02F8   (0x0060)  MISSED
-	bool                                               bLogoutOnSessionTimeout;                                    // 0x0358   (0x0001)  
-	unsigned char                                      UnknownData04_6[0x3];                                       // 0x0359   (0x0003)  MISSED
-	float                                              SessionTimeoutSecs;                                         // 0x035C   (0x0004)  
-	float                                              TravelSessionTimeoutSecs;                                   // 0x0360   (0x0004)  
-	unsigned char                                      UnknownData05_7[0x4];                                       // 0x0364   (0x0004)  MISSED
+    class USpectatorBeaconState*                       State;                                                      // 0x02F0   (0x0008) 
+    unsigned char                                      UnknownData03_6[0x60];                                      // 0x02F8   (0x0060) MISSED
+    bool                                               bLogoutOnSessionTimeout;                                    // 0x0358   (0x0001) 
+    unsigned char                                      UnknownData04_6[0x3];                                       // 0x0359   (0x0003) MISSED
+    float                                              SessionTimeoutSecs;                                         // 0x035C   (0x0004) 
+    float                                              TravelSessionTimeoutSecs;                                   // 0x0360   (0x0004) 
+    unsigned char                                      UnknownData05_7[0x4];                                       // 0x0364   (0x0004) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconState
@@ -713,13 +817,13 @@ public:
 class USpectatorBeaconState : public UObject
 { 
 public:
-	FName                                              SessionName;                                                // 0x0028   (0x0008)  
-	int32_t                                            NumConsumedReservations;                                    // 0x0030   (0x0004)  
-	int32_t                                            MaxReservations;                                            // 0x0034   (0x0004)  
-	bool                                               bRestrictCrossConsole;                                      // 0x0038   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x7];                                       // 0x0039   (0x0007)  MISSED
-	TArray<FSpectatorReservation>                      Reservations;                                               // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData03_7[0x10];                                      // 0x0050   (0x0010)  MISSED
+    FName                                              SessionName;                                                // 0x0028   (0x0008) 
+    int32_t                                            NumConsumedReservations;                                    // 0x0030   (0x0004) 
+    int32_t                                            MaxReservations;                                            // 0x0034   (0x0004) 
+    bool                                               bRestrictCrossConsole;                                      // 0x0038   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0039   (0x0007) MISSED
+    TArray<FSpectatorReservation>                      Reservations;                                               // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData03_7[0x10];                                      // 0x0050   (0x0010) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.TestBeaconClient
@@ -728,11 +832,11 @@ class ATestBeaconClient : public AOnlineBeaconClient
 { 
 public:
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.TestBeaconClient.ServerPong
-	constexpr static const FunctionPointer<ATestBeaconClient, void> ServerPong = { 0x14b70a0, 0 }; 
-	// Function /Script/OnlineSubsystemUtils.TestBeaconClient.ClientPing
-	constexpr static const FunctionPointer<ATestBeaconClient, void> ClientPing = { 0x14b7100, 1 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.TestBeaconClient.ServerPong
+    constexpr static const FunctionPointer<ATestBeaconClient, void> ServerPong = { 0x14b70a0, 0 };
+    // Function /Script/OnlineSubsystemUtils.TestBeaconClient.ClientPing
+    constexpr static const FunctionPointer<ATestBeaconClient, void> ClientPing = { 0x14b7100, 1 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.TestBeaconHost
@@ -748,15 +852,31 @@ class UTurnBasedBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
-	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const UObject*> RegisterTurnBasedMatchInterfaceObject = { 0x14b7910, 0 }; 
-	// Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName
-	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const int32_t, const FString&> GetPlayerDisplayName = { 0x14b75b0, 1 }; 
-	// Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex
-	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const int32_t&> GetMyPlayerIndex = { 0x14b7af0, 2 }; 
-	// Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn
-	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const bool&> GetIsMyTurn = { 0x14b7db0, 3 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] Object : const UObject*
+    constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const UObject*> RegisterTurnBasedMatchInterfaceObject = { 0x14b7910, 0 };
+    // Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] MatchID : const FString
+    // [3] PlayerIndex : const int32_t
+    // [4] PlayerDisplayName : const FString&
+    constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const int32_t, const FString&> GetPlayerDisplayName = { 0x14b75b0, 1 };
+    // Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] MatchID : const FString
+    // [3] PlayerIndex : const int32_t&
+    constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const int32_t&> GetMyPlayerIndex = { 0x14b7af0, 2 };
+    // Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn
+    // [0] WorldContextObject : const UObject*
+    // [1] PlayerController : const APlayerController*
+    // [2] MatchID : const FString
+    // [3] bIsMyTurn : const bool&
+    constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const bool&> GetIsMyTurn = { 0x14b7db0, 3 };
 };
 
 /// Class /Script/OnlineSubsystemUtils.VoipListenerSynthComponent
@@ -764,95 +884,95 @@ public:
 class UVoipListenerSynthComponent : public USynthComponent
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x60];                                      // 0x0730   (0x0060)  MISSED
+    unsigned char                                      UnknownData01_1[0x60];                                      // 0x0730   (0x0060) MISSED
 
-	/// Functions
-	// Function /Script/OnlineSubsystemUtils.VoipListenerSynthComponent.IsIdling
-	constexpr static const FunctionPointer<UVoipListenerSynthComponent, bool> IsIdling = { 0x14b8490, 0 }; 
+    /// Functions
+    // Function /Script/OnlineSubsystemUtils.VoipListenerSynthComponent.IsIdling
+    constexpr static const FunctionPointer<UVoipListenerSynthComponent, bool> IsIdling = { 0x14b8490, 0 };
 };
 
 /// Struct /Script/OnlineSubsystemUtils.BlueprintSessionResult
 /// Size: 0x0108 (264 bytes) (0x000000 - 0x000108) align n/a MaxSize: 0x0108
 struct FBlueprintSessionResult
 { 
-	unsigned char                                      UnknownData01_2[0x108];                                     // 0x0000   (0x0108)  MISSED
+    unsigned char                                      UnknownData01_2[0x108];                                     // 0x0000   (0x0108) MISSED
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseReceiptInfo2
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FInAppPurchaseReceiptInfo2
 { 
-	FString                                            ItemName;                                                   // 0x0000   (0x0010)  
-	FString                                            ItemId;                                                     // 0x0010   (0x0010)  
-	FString                                            ValidationInfo;                                             // 0x0020   (0x0010)  
+    FString                                            ItemName;                                                   // 0x0000   (0x0010) 
+    FString                                            ItemId;                                                     // 0x0010   (0x0010) 
+    FString                                            ValidationInfo;                                             // 0x0020   (0x0010) 
 };
 
 /// Struct /Script/OnlineSubsystemUtils.OnlineProxyStoreOffer
 /// Size: 0x0110 (272 bytes) (0x000000 - 0x000110) align n/a MaxSize: 0x0110
 struct FOnlineProxyStoreOffer
 { 
-	FString                                            OfferId;                                                    // 0x0000   (0x0010)  
-	FText                                              title;                                                      // 0x0010   (0x0018)  
-	FText                                              Description;                                                // 0x0028   (0x0018)  
-	FText                                              LongDescription;                                            // 0x0040   (0x0018)  
-	FText                                              RegularPriceText;                                           // 0x0058   (0x0018)  
-	int32_t                                            RegularPrice;                                               // 0x0070   (0x0004)  
-	unsigned char                                      UnknownData03_6[0x4];                                       // 0x0074   (0x0004)  MISSED
-	FText                                              PriceText;                                                  // 0x0078   (0x0018)  
-	int32_t                                            NumericPrice;                                               // 0x0090   (0x0004)  
-	unsigned char                                      UnknownData04_6[0x4];                                       // 0x0094   (0x0004)  MISSED
-	FString                                            CurrencyCode;                                               // 0x0098   (0x0010)  
-	FDateTime                                          ReleaseDate;                                                // 0x00A8   (0x0008)  
-	FDateTime                                          ExpirationDate;                                             // 0x00B0   (0x0008)  
-	EOnlineProxyStoreOfferDiscountType                 DiscountType;                                               // 0x00B8   (0x0001)  
-	unsigned char                                      UnknownData05_6[0x7];                                       // 0x00B9   (0x0007)  MISSED
-	TMap<FString, FString>                             DynamicFields;                                              // 0x00C0   (0x0050)  
+    FString                                            OfferId;                                                    // 0x0000   (0x0010) 
+    FText                                              title;                                                      // 0x0010   (0x0018) 
+    FText                                              Description;                                                // 0x0028   (0x0018) 
+    FText                                              LongDescription;                                            // 0x0040   (0x0018) 
+    FText                                              RegularPriceText;                                           // 0x0058   (0x0018) 
+    int32_t                                            RegularPrice;                                               // 0x0070   (0x0004) 
+    unsigned char                                      UnknownData03_6[0x4];                                       // 0x0074   (0x0004) MISSED
+    FText                                              PriceText;                                                  // 0x0078   (0x0018) 
+    int32_t                                            NumericPrice;                                               // 0x0090   (0x0004) 
+    unsigned char                                      UnknownData04_6[0x4];                                       // 0x0094   (0x0004) MISSED
+    FString                                            CurrencyCode;                                               // 0x0098   (0x0010) 
+    FDateTime                                          ReleaseDate;                                                // 0x00A8   (0x0008) 
+    FDateTime                                          ExpirationDate;                                             // 0x00B0   (0x0008) 
+    EOnlineProxyStoreOfferDiscountType                 DiscountType;                                               // 0x00B8   (0x0001) 
+    unsigned char                                      UnknownData05_6[0x7];                                       // 0x00B9   (0x0007) MISSED
+    TMap<FString, FString>                             DynamicFields;                                              // 0x00C0   (0x0050) 
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseRestoreInfo2
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FInAppPurchaseRestoreInfo2
 { 
-	FString                                            ItemName;                                                   // 0x0000   (0x0010)  
-	FString                                            ItemId;                                                     // 0x0010   (0x0010)  
-	FString                                            ValidationInfo;                                             // 0x0020   (0x0010)  
+    FString                                            ItemName;                                                   // 0x0000   (0x0010) 
+    FString                                            ItemId;                                                     // 0x0010   (0x0010) 
+    FString                                            ValidationInfo;                                             // 0x0020   (0x0010) 
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseReceiptInfo
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FInAppPurchaseReceiptInfo
 { 
-	FString                                            ItemName;                                                   // 0x0000   (0x0010)  
-	FString                                            ItemId;                                                     // 0x0010   (0x0010)  
-	FString                                            ValidationInfo;                                             // 0x0020   (0x0010)  
+    FString                                            ItemName;                                                   // 0x0000   (0x0010) 
+    FString                                            ItemId;                                                     // 0x0010   (0x0010) 
+    FString                                            ValidationInfo;                                             // 0x0020   (0x0010) 
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseProductInfo2
 /// Size: 0x00F8 (248 bytes) (0x000000 - 0x0000F8) align n/a MaxSize: 0x00F8
 struct FInAppPurchaseProductInfo2
 { 
-	FString                                            Identifier;                                                 // 0x0000   (0x0010)  
-	FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010)  
-	FString                                            DisplayName;                                                // 0x0020   (0x0010)  
-	FString                                            DisplayDescription;                                         // 0x0030   (0x0010)  
-	FString                                            DisplayPrice;                                               // 0x0040   (0x0010)  
-	float                                              RawPrice;                                                   // 0x0050   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x0054   (0x0004)  MISSED
-	FString                                            CurrencyCode;                                               // 0x0058   (0x0010)  
-	FString                                            CurrencySymbol;                                             // 0x0068   (0x0010)  
-	FString                                            DecimalSeparator;                                           // 0x0078   (0x0010)  
-	FString                                            GroupingSeparator;                                          // 0x0088   (0x0010)  
-	FString                                            ReceiptData;                                                // 0x0098   (0x0010)  
-	TMap<FString, FString>                             DynamicFields;                                              // 0x00A8   (0x0050)  
+    FString                                            Identifier;                                                 // 0x0000   (0x0010) 
+    FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010) 
+    FString                                            DisplayName;                                                // 0x0020   (0x0010) 
+    FString                                            DisplayDescription;                                         // 0x0030   (0x0010) 
+    FString                                            DisplayPrice;                                               // 0x0040   (0x0010) 
+    float                                              RawPrice;                                                   // 0x0050   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0054   (0x0004) MISSED
+    FString                                            CurrencyCode;                                               // 0x0058   (0x0010) 
+    FString                                            CurrencySymbol;                                             // 0x0068   (0x0010) 
+    FString                                            DecimalSeparator;                                           // 0x0078   (0x0010) 
+    FString                                            GroupingSeparator;                                          // 0x0088   (0x0010) 
+    FString                                            ReceiptData;                                                // 0x0098   (0x0010) 
+    TMap<FString, FString>                             DynamicFields;                                              // 0x00A8   (0x0050) 
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseProductRequest2
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInAppPurchaseProductRequest2
 { 
-	FString                                            ProductIdentifier;                                          // 0x0000   (0x0010)  
-	bool                                               bIsConsumable;                                              // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007)  MISSED
+    FString                                            ProductIdentifier;                                          // 0x0000   (0x0010) 
+    bool                                               bIsConsumable;                                              // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 #pragma pack(pop)

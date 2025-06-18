@@ -6,13 +6,13 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: DeveloperSettings
-/// dependency: Engine
-/// dependency: MovieScene
-/// dependency: NiagaraCore
-/// dependency: NiagaraShader
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "DeveloperSettings.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "NiagaraCore.h"
+#include "NiagaraShader.h"
 
 #pragma pack(push, 0x1)
 
@@ -20,594 +20,594 @@
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraSystemSpawnSectionEndBehavior : uint32_t
 {
-	SetSystemInactive                                                                = 0,
-	Deactivate                                                                       = 1,
-	None                                                                             = 2
+    SetSystemInactive                                                                = 0,
+    Deactivate                                                                       = 1,
+    None                                                                             = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraSystemSpawnSectionEvaluateBehavior
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraSystemSpawnSectionEvaluateBehavior : uint32_t
 {
-	ActivateIfInactive                                                               = 0,
-	None                                                                             = 1
+    ActivateIfInactive                                                               = 0,
+    None                                                                             = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraSystemSpawnSectionStartBehavior
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraSystemSpawnSectionStartBehavior : uint32_t
 {
-	Activate                                                                         = 0
+    Activate                                                                         = 0
 };
 
 /// Enum /Script/Niagara.ENiagaraSystemSpawnSectionBehavior
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSystemSpawnSectionBehavior : uint8_t
 {
-	None                                                                             = 0,
-	Activate                                                                         = 1,
-	ActivateIfInactive                                                               = 2,
-	SetSystemInactive                                                                = 3,
-	Deactivate                                                                       = 4
+    None                                                                             = 0,
+    Activate                                                                         = 1,
+    ActivateIfInactive                                                               = 2,
+    SetSystemInactive                                                                = 3,
+    Deactivate                                                                       = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraCollisionMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraCollisionMode : uint8_t
 {
-	None                                                                             = 0,
-	SceneGeometry                                                                    = 1,
-	DepthBuffer                                                                      = 2,
-	DistanceField                                                                    = 3
+    None                                                                             = 0,
+    SceneGeometry                                                                    = 1,
+    DepthBuffer                                                                      = 2,
+    DistanceField                                                                    = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraLegacyTrailWidthMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraLegacyTrailWidthMode : uint8_t
 {
-	FromCentre                                                                       = 0,
-	FromFirst                                                                        = 1,
-	FromSecond                                                                       = 2
+    FromCentre                                                                       = 0,
+    FromFirst                                                                        = 1,
+    FromSecond                                                                       = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraRendererSourceDataMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRendererSourceDataMode : uint8_t
 {
-	Particles                                                                        = 0,
-	Emitter                                                                          = 1
+    Particles                                                                        = 0,
+    Emitter                                                                          = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraBindingSource
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraBindingSource : uint8_t
 {
-	ImplicitFromSource                                                               = 0,
-	ExplicitParticles                                                                = 1,
-	ExplicitEmitter                                                                  = 2,
-	ExplicitSystem                                                                   = 3,
-	ExplicitUser                                                                     = 4,
-	MaxBindingSource                                                                 = 5
+    ImplicitFromSource                                                               = 0,
+    ExplicitParticles                                                                = 1,
+    ExplicitEmitter                                                                  = 2,
+    ExplicitSystem                                                                   = 3,
+    ExplicitUser                                                                     = 4,
+    MaxBindingSource                                                                 = 5
 };
 
 /// Enum /Script/Niagara.ENiagaraIterationSource
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraIterationSource : uint8_t
 {
-	Particles                                                                        = 0,
-	DataInterface                                                                    = 1
+    Particles                                                                        = 0,
+    DataInterface                                                                    = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptGroup
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptGroup : uint8_t
 {
-	Particle                                                                         = 0,
-	Emitter                                                                          = 1,
-	System                                                                           = 2,
-	Max                                                                              = 3
+    Particle                                                                         = 0,
+    Emitter                                                                          = 1,
+    System                                                                           = 2,
+    Max                                                                              = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptContextStaticSwitch
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptContextStaticSwitch : uint8_t
 {
-	System                                                                           = 0,
-	Emitter                                                                          = 1,
-	Particle                                                                         = 2
+    System                                                                           = 0,
+    Emitter                                                                          = 1,
+    Particle                                                                         = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraCompileUsageStaticSwitch
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraCompileUsageStaticSwitch : uint8_t
 {
-	Spawn                                                                            = 0,
-	Update                                                                           = 1,
-	Event                                                                            = 2,
-	SimulationStage                                                                  = 3,
-	Default                                                                          = 4
+    Spawn                                                                            = 0,
+    Update                                                                           = 1,
+    Event                                                                            = 2,
+    SimulationStage                                                                  = 3,
+    Default                                                                          = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptUsage
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptUsage : uint8_t
 {
-	Function                                                                         = 0,
-	Module                                                                           = 1,
-	DynamicInput                                                                     = 2,
-	ParticleSpawnScript                                                              = 3,
-	ParticleSpawnScriptInterpolated                                                  = 4,
-	ParticleUpdateScript                                                             = 5,
-	ParticleEventScript                                                              = 6,
-	ParticleSimulationStageScript                                                    = 7,
-	ParticleGPUComputeScript                                                         = 8,
-	EmitterSpawnScript                                                               = 9,
-	EmitterUpdateScript                                                              = 10,
-	SystemSpawnScript                                                                = 11,
-	SystemUpdateScript                                                               = 12
+    Function                                                                         = 0,
+    Module                                                                           = 1,
+    DynamicInput                                                                     = 2,
+    ParticleSpawnScript                                                              = 3,
+    ParticleSpawnScriptInterpolated                                                  = 4,
+    ParticleUpdateScript                                                             = 5,
+    ParticleEventScript                                                              = 6,
+    ParticleSimulationStageScript                                                    = 7,
+    ParticleGPUComputeScript                                                         = 8,
+    EmitterSpawnScript                                                               = 9,
+    EmitterUpdateScript                                                              = 10,
+    SystemSpawnScript                                                                = 11,
+    SystemUpdateScript                                                               = 12
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptCompileStatus
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptCompileStatus : uint8_t
 {
-	NCS_Unknown                                                                      = 0,
-	NCS_Dirty                                                                        = 1,
-	NCS_Error                                                                        = 2,
-	NCS_UpToDate                                                                     = 3,
-	NCS_BeingCreated                                                                 = 4,
-	NCS_UpToDateWithWarnings                                                         = 5,
-	NCS_ComputeUpToDateWithWarnings                                                  = 6
+    NCS_Unknown                                                                      = 0,
+    NCS_Dirty                                                                        = 1,
+    NCS_Error                                                                        = 2,
+    NCS_UpToDate                                                                     = 3,
+    NCS_BeingCreated                                                                 = 4,
+    NCS_UpToDateWithWarnings                                                         = 5,
+    NCS_ComputeUpToDateWithWarnings                                                  = 6
 };
 
 /// Enum /Script/Niagara.ENiagaraInputNodeUsage
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraInputNodeUsage : uint8_t
 {
-	Undefined                                                                        = 0,
-	Parameter                                                                        = 1,
-	Attribute                                                                        = 2,
-	SystemConstant                                                                   = 3,
-	TranslatorConstant                                                               = 4,
-	RapidIterationParameter                                                          = 5
+    Undefined                                                                        = 0,
+    Parameter                                                                        = 1,
+    Attribute                                                                        = 2,
+    SystemConstant                                                                   = 3,
+    TranslatorConstant                                                               = 4,
+    RapidIterationParameter                                                          = 5
 };
 
 /// Enum /Script/Niagara.ENiagaraDataSetType
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraDataSetType : uint8_t
 {
-	ParticleData                                                                     = 0,
-	Shared                                                                           = 1,
-	Event                                                                            = 2
+    ParticleData                                                                     = 0,
+    Shared                                                                           = 1,
+    Event                                                                            = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraStatDisplayMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraStatDisplayMode : uint8_t
 {
-	Percent                                                                          = 0,
-	Absolute                                                                         = 1
+    Percent                                                                          = 0,
+    Absolute                                                                         = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraStatEvaluationType
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraStatEvaluationType : uint8_t
 {
-	Average                                                                          = 0,
-	Maximum                                                                          = 1
+    Average                                                                          = 0,
+    Maximum                                                                          = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraAgeUpdateMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraAgeUpdateMode : uint8_t
 {
-	TickDeltaTime                                                                    = 0,
-	DesiredAge                                                                       = 1,
-	DesiredAgeNoSeek                                                                 = 2
+    TickDeltaTime                                                                    = 0,
+    DesiredAge                                                                       = 1,
+    DesiredAgeNoSeek                                                                 = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraSimTarget
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSimTarget : uint8_t
 {
-	CPUSim                                                                           = 0,
-	GPUComputeSim                                                                    = 1
+    CPUSim                                                                           = 0,
+    GPUComputeSim                                                                    = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraDefaultMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraDefaultMode : uint8_t
 {
-	Value                                                                            = 0,
-	Binding                                                                          = 1,
-	Custom                                                                           = 2
+    Value                                                                            = 0,
+    Binding                                                                          = 1,
+    Custom                                                                           = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraGpuBufferFormat
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraGpuBufferFormat : uint8_t
 {
-	Float                                                                            = 0,
-	HalfFloat                                                                        = 1,
-	UnsignedNormalizedByte                                                           = 2,
-	Max                                                                              = 3
+    Float                                                                            = 0,
+    HalfFloat                                                                        = 1,
+    UnsignedNormalizedByte                                                           = 2,
+    Max                                                                              = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraTickBehavior
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraTickBehavior : uint8_t
 {
-	UsePrereqs                                                                       = 0,
-	UseComponentTickGroup                                                            = 1,
-	ForceTickFirst                                                                   = 2,
-	ForceTickLast                                                                    = 3
+    UsePrereqs                                                                       = 0,
+    UseComponentTickGroup                                                            = 1,
+    ForceTickFirst                                                                   = 2,
+    ForceTickLast                                                                    = 3
 };
 
 /// Enum /Script/Niagara.ENCPoolMethod
 /// Size: 0x01 (1 bytes)
 enum class ENCPoolMethod : uint8_t
 {
-	None                                                                             = 0,
-	AutoRelease                                                                      = 1,
-	ManualRelease                                                                    = 2,
-	ManualRelease_OnComplete                                                         = 3,
-	FreeInPool                                                                       = 4
+    None                                                                             = 0,
+    AutoRelease                                                                      = 1,
+    ManualRelease                                                                    = 2,
+    ManualRelease_OnComplete                                                         = 3,
+    FreeInPool                                                                       = 4
 };
 
 /// Enum /Script/Niagara.ENDIExport_GPUAllocationMode
 /// Size: 0x01 (1 bytes)
 enum class ENDIExport_GPUAllocationMode : uint8_t
 {
-	FixedSize                                                                        = 0,
-	PerParticle                                                                      = 1
+    FixedSize                                                                        = 0,
+    PerParticle                                                                      = 1
 };
 
 /// Enum /Script/Niagara.ESetResolutionMethod
 /// Size: 0x04 (4 bytes)
 enum class ESetResolutionMethod : uint32_t
 {
-	Independent                                                                      = 0,
-	MaxAxis                                                                          = 1,
-	CellSize                                                                         = 2
+    Independent                                                                      = 0,
+    MaxAxis                                                                          = 1,
+    CellSize                                                                         = 2
 };
 
 /// Enum /Script/Niagara.ENDISkeletalMesh_SkinningMode
 /// Size: 0x01 (1 bytes)
 enum class ENDISkeletalMesh_SkinningMode : uint8_t
 {
-	Invalid                                                                          = 255,
-	None                                                                             = 0,
-	SkinOnTheFly                                                                     = 1,
-	PreSkin                                                                          = 2
+    Invalid                                                                          = 255,
+    None                                                                             = 0,
+    SkinOnTheFly                                                                     = 1,
+    PreSkin                                                                          = 2
 };
 
 /// Enum /Script/Niagara.ENDISkeletalMesh_SourceMode
 /// Size: 0x01 (1 bytes)
 enum class ENDISkeletalMesh_SourceMode : uint8_t
 {
-	Default                                                                          = 0,
-	Source                                                                           = 1,
-	AttachParent                                                                     = 2
+    Default                                                                          = 0,
+    Source                                                                           = 1,
+    AttachParent                                                                     = 2
 };
 
 /// Enum /Script/Niagara.ENDIStaticMesh_SourceMode
 /// Size: 0x01 (1 bytes)
 enum class ENDIStaticMesh_SourceMode : uint8_t
 {
-	Default                                                                          = 0,
-	Source                                                                           = 1,
-	AttachParent                                                                     = 2,
-	DefaultMeshOnly                                                                  = 3
+    Default                                                                          = 0,
+    Source                                                                           = 1,
+    AttachParent                                                                     = 2,
+    DefaultMeshOnly                                                                  = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraScalabilityUpdateFrequency
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraScalabilityUpdateFrequency : uint32_t
 {
-	SpawnOnly                                                                        = 0,
-	Low                                                                              = 1,
-	Medium                                                                           = 2,
-	High                                                                             = 3,
-	Continuous                                                                       = 4
+    SpawnOnly                                                                        = 0,
+    Low                                                                              = 1,
+    Medium                                                                           = 2,
+    High                                                                             = 3,
+    Continuous                                                                       = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraCullReaction
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraCullReaction : uint32_t
 {
-	Deactivate                                                                       = 0,
-	DeactivateImmediate                                                              = 1,
-	DeactivateResume                                                                 = 2,
-	DeactivateImmediateResume                                                        = 3
+    Deactivate                                                                       = 0,
+    DeactivateImmediate                                                              = 1,
+    DeactivateResume                                                                 = 2,
+    DeactivateImmediateResume                                                        = 3
 };
 
 /// Enum /Script/Niagara.EParticleAllocationMode
 /// Size: 0x01 (1 bytes)
 enum class EParticleAllocationMode : uint8_t
 {
-	AutomaticEstimate                                                                = 0,
-	ManualEstimate                                                                   = 1
+    AutomaticEstimate                                                                = 0,
+    ManualEstimate                                                                   = 1
 };
 
 /// Enum /Script/Niagara.EScriptExecutionMode
 /// Size: 0x01 (1 bytes)
 enum class EScriptExecutionMode : uint8_t
 {
-	EveryParticle                                                                    = 0,
-	SpawnedParticles                                                                 = 1,
-	SingleParticle                                                                   = 2
+    EveryParticle                                                                    = 0,
+    SpawnedParticles                                                                 = 1,
+    SingleParticle                                                                   = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraSortMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSortMode : uint8_t
 {
-	None                                                                             = 0,
-	ViewDepth                                                                        = 1,
-	ViewDistance                                                                     = 2,
-	CustomAscending                                                                  = 3,
-	CustomDecending                                                                  = 4
+    None                                                                             = 0,
+    ViewDepth                                                                        = 1,
+    ViewDistance                                                                     = 2,
+    CustomAscending                                                                  = 3,
+    CustomDecending                                                                  = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraMeshLockedAxisSpace
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraMeshLockedAxisSpace : uint8_t
 {
-	Simulation                                                                       = 0,
-	World                                                                            = 1,
-	Local                                                                            = 2
+    Simulation                                                                       = 0,
+    World                                                                            = 1,
+    Local                                                                            = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraMeshPivotOffsetSpace
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraMeshPivotOffsetSpace : uint8_t
 {
-	Mesh                                                                             = 0,
-	Simulation                                                                       = 1,
-	World                                                                            = 2,
-	Local                                                                            = 3
+    Mesh                                                                             = 0,
+    Simulation                                                                       = 1,
+    World                                                                            = 2,
+    Local                                                                            = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraMeshFacingMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraMeshFacingMode : uint8_t
 {
-	Default                                                                          = 0,
-	Velocity                                                                         = 1,
-	CameraPosition                                                                   = 2,
-	CameraPlane                                                                      = 3
+    Default                                                                          = 0,
+    Velocity                                                                         = 1,
+    CameraPosition                                                                   = 2,
+    CameraPlane                                                                      = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraPlatformSetState
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraPlatformSetState : uint8_t
 {
-	Disabled                                                                         = 0,
-	Enabled                                                                          = 1,
-	Active                                                                           = 2,
-	Unknown                                                                          = 3
+    Disabled                                                                         = 0,
+    Enabled                                                                          = 1,
+    Active                                                                           = 2,
+    Unknown                                                                          = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraPlatformSelectionState
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraPlatformSelectionState : uint8_t
 {
-	Default                                                                          = 0,
-	Enabled                                                                          = 1,
-	Disabled                                                                         = 2
+    Default                                                                          = 0,
+    Enabled                                                                          = 1,
+    Disabled                                                                         = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraPreviewGridResetMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraPreviewGridResetMode : uint8_t
 {
-	Never                                                                            = 0,
-	Individual                                                                       = 1,
-	All                                                                              = 2
+    Never                                                                            = 0,
+    Individual                                                                       = 1,
+    All                                                                              = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonUVDistributionMode
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraRibbonUVDistributionMode : uint32_t
 {
-	ScaledUniformly                                                                  = 0,
-	ScaledUsingRibbonSegmentLength                                                   = 1,
-	TiledOverRibbonLength                                                            = 2
+    ScaledUniformly                                                                  = 0,
+    ScaledUsingRibbonSegmentLength                                                   = 1,
+    TiledOverRibbonLength                                                            = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonUVEdgeMode
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraRibbonUVEdgeMode : uint32_t
 {
-	SmoothTransition                                                                 = 0,
-	Locked                                                                           = 1
+    SmoothTransition                                                                 = 0,
+    Locked                                                                           = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonTessellationMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRibbonTessellationMode : uint8_t
 {
-	Automatic                                                                        = 0,
-	Custom                                                                           = 1,
-	Disabled                                                                         = 2
+    Automatic                                                                        = 0,
+    Custom                                                                           = 1,
+    Disabled                                                                         = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonDrawDirection
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRibbonDrawDirection : uint8_t
 {
-	FrontToBack                                                                      = 0,
-	BackToFront                                                                      = 1
+    FrontToBack                                                                      = 0,
+    BackToFront                                                                      = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonAgeOffsetMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRibbonAgeOffsetMode : uint8_t
 {
-	Scale                                                                            = 0,
-	Clip                                                                             = 1
+    Scale                                                                            = 0,
+    Clip                                                                             = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraRibbonFacingMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraRibbonFacingMode : uint8_t
 {
-	Screen                                                                           = 0,
-	Custom                                                                           = 1,
-	CustomSideVector                                                                 = 2
+    Screen                                                                           = 0,
+    Custom                                                                           = 1,
+    CustomSideVector                                                                 = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptLibraryVisibility
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraScriptLibraryVisibility : uint8_t
 {
-	Invalid                                                                          = 0,
-	Unexposed                                                                        = 1,
-	Library                                                                          = 2,
-	Hidden                                                                           = 3
+    Invalid                                                                          = 0,
+    Unexposed                                                                        = 1,
+    Library                                                                          = 2,
+    Hidden                                                                           = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraModuleDependencyScriptConstraint
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraModuleDependencyScriptConstraint : uint8_t
 {
-	SameScript                                                                       = 0,
-	AllScripts                                                                       = 1
+    SameScript                                                                       = 0,
+    AllScripts                                                                       = 1
 };
 
 /// Enum /Script/Niagara.ENiagaraModuleDependencyType
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraModuleDependencyType : uint8_t
 {
-	PreDependency                                                                    = 0,
-	PostDependency                                                                   = 1
+    PreDependency                                                                    = 0,
+    PostDependency                                                                   = 1
 };
 
 /// Enum /Script/Niagara.EUnusedAttributeBehaviour
 /// Size: 0x01 (1 bytes)
 enum class EUnusedAttributeBehaviour : uint8_t
 {
-	Copy                                                                             = 0,
-	Zero                                                                             = 1,
-	None                                                                             = 2,
-	MarkInvalid                                                                      = 3,
-	PassThrough                                                                      = 4
+    Copy                                                                             = 0,
+    Zero                                                                             = 1,
+    None                                                                             = 2,
+    MarkInvalid                                                                      = 3,
+    PassThrough                                                                      = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraSpriteFacingMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSpriteFacingMode : uint8_t
 {
-	FaceCamera                                                                       = 0,
-	FaceCameraPlane                                                                  = 1,
-	CustomFacingVector                                                               = 2,
-	FaceCameraPosition                                                               = 3,
-	FaceCameraDistanceBlend                                                          = 4
+    FaceCamera                                                                       = 0,
+    FaceCameraPlane                                                                  = 1,
+    CustomFacingVector                                                               = 2,
+    FaceCameraPosition                                                               = 3,
+    FaceCameraDistanceBlend                                                          = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraSpriteAlignment
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraSpriteAlignment : uint8_t
 {
-	Unaligned                                                                        = 0,
-	VelocityAligned                                                                  = 1,
-	CustomAlignment                                                                  = 2
+    Unaligned                                                                        = 0,
+    VelocityAligned                                                                  = 1,
+    CustomAlignment                                                                  = 2
 };
 
 /// Enum /Script/Niagara.ENiagaraParameterPanelCategory
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraParameterPanelCategory : uint8_t
 {
-	Input                                                                            = 0,
-	Attributes                                                                       = 1,
-	Output                                                                           = 2,
-	Local                                                                            = 3,
-	User                                                                             = 4,
-	Engine                                                                           = 5,
-	Owner                                                                            = 6,
-	System                                                                           = 7,
-	Emitter                                                                          = 8,
-	Particles                                                                        = 9,
-	ScriptTransient                                                                  = 10,
-	StaticSwitch                                                                     = 11,
-	None                                                                             = 12,
-	Num                                                                              = 13
+    Input                                                                            = 0,
+    Attributes                                                                       = 1,
+    Output                                                                           = 2,
+    Local                                                                            = 3,
+    User                                                                             = 4,
+    Engine                                                                           = 5,
+    Owner                                                                            = 6,
+    System                                                                           = 7,
+    Emitter                                                                          = 8,
+    Particles                                                                        = 9,
+    ScriptTransient                                                                  = 10,
+    StaticSwitch                                                                     = 11,
+    None                                                                             = 12,
+    Num                                                                              = 13
 };
 
 /// Enum /Script/Niagara.ENiagaraScriptParameterUsage
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraScriptParameterUsage : uint32_t
 {
-	Input                                                                            = 0,
-	Output                                                                           = 1,
-	Local                                                                            = 2,
-	InputOutput                                                                      = 3,
-	InitialValueInput                                                                = 4,
-	None                                                                             = 5,
-	Num                                                                              = 6
+    Input                                                                            = 0,
+    Output                                                                           = 1,
+    Local                                                                            = 2,
+    InputOutput                                                                      = 3,
+    InitialValueInput                                                                = 4,
+    None                                                                             = 5,
+    Num                                                                              = 6
 };
 
 /// Enum /Script/Niagara.ENiagaraParameterScope
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraParameterScope : uint32_t
 {
-	Input                                                                            = 0,
-	User                                                                             = 1,
-	Engine                                                                           = 2,
-	Owner                                                                            = 3,
-	System                                                                           = 4,
-	Emitter                                                                          = 5,
-	Particles                                                                        = 6,
-	ScriptPersistent                                                                 = 7,
-	ScriptTransient                                                                  = 8,
-	Local                                                                            = 9,
-	Custom                                                                           = 10,
-	DISPLAY_ONLY_StaticSwitch                                                        = 11,
-	Output                                                                           = 12,
-	None                                                                             = 13,
-	Num                                                                              = 14
+    Input                                                                            = 0,
+    User                                                                             = 1,
+    Engine                                                                           = 2,
+    Owner                                                                            = 3,
+    System                                                                           = 4,
+    Emitter                                                                          = 5,
+    Particles                                                                        = 6,
+    ScriptPersistent                                                                 = 7,
+    ScriptTransient                                                                  = 8,
+    Local                                                                            = 9,
+    Custom                                                                           = 10,
+    DISPLAY_ONLY_StaticSwitch                                                        = 11,
+    Output                                                                           = 12,
+    None                                                                             = 13,
+    Num                                                                              = 14
 };
 
 /// Enum /Script/Niagara.ENiagaraExecutionState
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraExecutionState : uint8_t
 {
-	Active                                                                           = 0,
-	Inactive                                                                         = 1,
-	InactiveClear                                                                    = 2,
-	Complete                                                                         = 3,
-	Disabled                                                                         = 4,
-	Num                                                                              = 5
+    Active                                                                           = 0,
+    Inactive                                                                         = 1,
+    InactiveClear                                                                    = 2,
+    Complete                                                                         = 3,
+    Disabled                                                                         = 4,
+    Num                                                                              = 5
 };
 
 /// Enum /Script/Niagara.ENiagaraExecutionStateSource
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraExecutionStateSource : uint8_t
 {
-	Scalability                                                                      = 0,
-	Internal                                                                         = 1,
-	Owner                                                                            = 2,
-	InternalCompletion                                                               = 3
+    Scalability                                                                      = 0,
+    Internal                                                                         = 1,
+    Owner                                                                            = 2,
+    InternalCompletion                                                               = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraNumericOutputTypeSelectionMode
 /// Size: 0x01 (1 bytes)
 enum class ENiagaraNumericOutputTypeSelectionMode : uint8_t
 {
-	None                                                                             = 0,
-	Largest                                                                          = 1,
-	Smallest                                                                         = 2,
-	Scalar                                                                           = 3
+    None                                                                             = 0,
+    Largest                                                                          = 1,
+    Smallest                                                                         = 2,
+    Scalar                                                                           = 3
 };
 
 /// Enum /Script/Niagara.ENiagaraVariantMode
 /// Size: 0x04 (4 bytes)
 enum class ENiagaraVariantMode : uint32_t
 {
-	None                                                                             = 0,
-	Object                                                                           = 1,
-	DataInterface                                                                    = 2,
-	Bytes                                                                            = 3
+    None                                                                             = 0,
+    Object                                                                           = 1,
+    DataInterface                                                                    = 2,
+    Bytes                                                                            = 3
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraTrack
@@ -615,30 +615,30 @@ enum class ENiagaraVariantMode : uint32_t
 class UMovieSceneNiagaraTrack : public UMovieSceneNameableTrack
 { 
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                   // 0x0078   (0x0010)  
+    TArray<class UMovieSceneSection*>                  Sections;                                                   // 0x0078   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraTypeDefinitionHandle
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FNiagaraTypeDefinitionHandle
 { 
-	int32_t                                            RegisteredTypeIndex;                                        // 0x0000   (0x0004)  
+    int32_t                                            RegisteredTypeIndex;                                        // 0x0000   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraVariableBase
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FNiagaraVariableBase
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
-	FNiagaraTypeDefinitionHandle                       TypeDefHandle;                                              // 0x0008   (0x0004)  
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    FNiagaraTypeDefinitionHandle                       TypeDefHandle;                                              // 0x0008   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraVariable
 /// Size: 0x0020 (32 bytes) (0x00000C - 0x000020) align n/a MaxSize: 0x0020
 struct FNiagaraVariable : FNiagaraVariableBase
 { 
-	unsigned char                                      UnknownData01_8[0x4];                                       // 0x000C   (0x0004)  MISSED
-	TArray<char>                                       VarData;                                                    // 0x0010   (0x0010)  
+    unsigned char                                      UnknownData01_8[0x4];                                       // 0x000C   (0x0004) MISSED
+    TArray<char>                                       VarData;                                                    // 0x0010   (0x0010) 
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraParameterTrack
@@ -646,7 +646,7 @@ struct FNiagaraVariable : FNiagaraVariableBase
 class UMovieSceneNiagaraParameterTrack : public UMovieSceneNiagaraTrack
 { 
 public:
-	FNiagaraVariable                                   Parameter;                                                  // 0x0088   (0x0020)  
+    FNiagaraVariable                                   Parameter;                                                  // 0x0088   (0x0020) 
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraBoolParameterTrack
@@ -654,7 +654,7 @@ public:
 class UMovieSceneNiagaraBoolParameterTrack : public UMovieSceneNiagaraParameterTrack
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraColorParameterTrack
@@ -662,7 +662,7 @@ public:
 class UMovieSceneNiagaraColorParameterTrack : public UMovieSceneNiagaraParameterTrack
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraFloatParameterTrack
@@ -670,7 +670,7 @@ public:
 class UMovieSceneNiagaraFloatParameterTrack : public UMovieSceneNiagaraParameterTrack
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraIntegerParameterTrack
@@ -678,7 +678,7 @@ public:
 class UMovieSceneNiagaraIntegerParameterTrack : public UMovieSceneNiagaraParameterTrack
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraSystemSpawnSection
@@ -686,11 +686,11 @@ public:
 class UMovieSceneNiagaraSystemSpawnSection : public UMovieSceneSection
 { 
 public:
-	ENiagaraSystemSpawnSectionStartBehavior            SectionStartBehavior;                                       // 0x00E8   (0x0004)  
-	ENiagaraSystemSpawnSectionEvaluateBehavior         SectionEvaluateBehavior;                                    // 0x00EC   (0x0004)  
-	ENiagaraSystemSpawnSectionEndBehavior              SectionEndBehavior;                                         // 0x00F0   (0x0004)  
-	ENiagaraAgeUpdateMode                              AgeUpdateMode;                                              // 0x00F4   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x00F5   (0x0003)  MISSED
+    ENiagaraSystemSpawnSectionStartBehavior            SectionStartBehavior;                                       // 0x00E8   (0x0004) 
+    ENiagaraSystemSpawnSectionEvaluateBehavior         SectionEvaluateBehavior;                                    // 0x00EC   (0x0004) 
+    ENiagaraSystemSpawnSectionEndBehavior              SectionEndBehavior;                                         // 0x00F0   (0x0004) 
+    ENiagaraAgeUpdateMode                              AgeUpdateMode;                                              // 0x00F4   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x00F5   (0x0003) MISSED
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraSystemTrack
@@ -698,7 +698,7 @@ public:
 class UMovieSceneNiagaraSystemTrack : public UMovieSceneNiagaraTrack
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0088   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0088   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraVectorParameterTrack
@@ -706,9 +706,9 @@ public:
 class UMovieSceneNiagaraVectorParameterTrack : public UMovieSceneNiagaraParameterTrack
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x8];                                       // 0x00A8   (0x0008)  MISSED
-	int32_t                                            ChannelsUsed;                                               // 0x00B0   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x00B4   (0x0004)  MISSED
+    unsigned char                                      UnknownData02_8[0x8];                                       // 0x00A8   (0x0008) MISSED
+    int32_t                                            ChannelsUsed;                                               // 0x00B0   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x00B4   (0x0004) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraActor
@@ -716,52 +716,54 @@ public:
 class ANiagaraActor : public AActor
 { 
 public:
-	class UNiagaraComponent*                           NiagaraComponent;                                           // 0x02C8   (0x0008)  
-	bool                                               bDestroyOnSystemFinish : 1;                                 // 0x02D0:0 (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x02D1   (0x0007)  MISSED
+    class UNiagaraComponent*                           NiagaraComponent;                                           // 0x02C8   (0x0008) 
+    bool                                               bDestroyOnSystemFinish : 1;                                 // 0x02D0:0 (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x02D1   (0x0007) MISSED
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraActor.SetDestroyOnSystemFinish
-	constexpr static const FunctionPointer<ANiagaraActor, void, const bool> SetDestroyOnSystemFinish = { 0x11378a0, 0 }; 
-	// Function /Script/Niagara.NiagaraActor.OnNiagaraSystemFinished
-	constexpr static const FunctionPointer<ANiagaraActor, void, const UNiagaraComponent*> OnNiagaraSystemFinished = { 0x11377b0, 1 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraActor.SetDestroyOnSystemFinish
+    // [0] bShouldDestroyOnSystemFinish : const bool
+    constexpr static const FunctionPointer<ANiagaraActor, void, const bool> SetDestroyOnSystemFinish = { 0x11378a0, 0 };
+    // Function /Script/Niagara.NiagaraActor.OnNiagaraSystemFinished
+    // [0] FinishedComponent : const UNiagaraComponent*
+    constexpr static const FunctionPointer<ANiagaraActor, void, const UNiagaraComponent*> OnNiagaraSystemFinished = { 0x11377b0, 1 };
 };
 
 /// Struct /Script/Niagara.NiagaraVariableWithOffset
 /// Size: 0x0010 (16 bytes) (0x00000C - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraVariableWithOffset : FNiagaraVariableBase
 { 
-	int32_t                                            Offset;                                                     // 0x000C   (0x0004)  
+    int32_t                                            Offset;                                                     // 0x000C   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraParameterStore
 /// Size: 0x0078 (120 bytes) (0x000000 - 0x000078) align n/a MaxSize: 0x0078
 struct FNiagaraParameterStore
 { 
-	unsigned char                                      UnknownData02_7[0x8];                                       // 0x0000   (0x0008)  MISSED
-	class UObject*                                     Owner;                                                      // 0x0008   (0x0008)  
-	TArray<FNiagaraVariableWithOffset>                 SortedParameterOffsets;                                     // 0x0010   (0x0010)  
-	TArray<char>                                       ParameterData;                                              // 0x0020   (0x0010)  
-	TArray<class UNiagaraDataInterface*>               DataInterfaces;                                             // 0x0030   (0x0010)  
-	TArray<class UObject*>                             UObjects;                                                   // 0x0040   (0x0010)  
-	unsigned char                                      UnknownData03_7[0x28];                                      // 0x0050   (0x0028)  MISSED
+    unsigned char                                      UnknownData02_7[0x8];                                       // 0x0000   (0x0008) MISSED
+    class UObject*                                     Owner;                                                      // 0x0008   (0x0008) 
+    TArray<FNiagaraVariableWithOffset>                 SortedParameterOffsets;                                     // 0x0010   (0x0010) 
+    TArray<char>                                       ParameterData;                                              // 0x0020   (0x0010) 
+    TArray<class UNiagaraDataInterface*>               DataInterfaces;                                             // 0x0030   (0x0010) 
+    TArray<class UObject*>                             UObjects;                                                   // 0x0040   (0x0010) 
+    unsigned char                                      UnknownData03_7[0x28];                                      // 0x0050   (0x0028) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraUserRedirectionParameterStore
 /// Size: 0x00C8 (200 bytes) (0x000078 - 0x0000C8) align n/a MaxSize: 0x00C8
 struct FNiagaraUserRedirectionParameterStore : FNiagaraParameterStore
 { 
-	TMap<FNiagaraVariable, FNiagaraVariable>           UserParameterRedirects;                                     // 0x0078   (0x0050)  
+    TMap<FNiagaraVariable, FNiagaraVariable>           UserParameterRedirects;                                     // 0x0078   (0x0050) 
 };
 
 /// Struct /Script/Niagara.NiagaraMaterialOverride
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FNiagaraMaterialOverride
 { 
-	class UMaterialInterface*                          Material;                                                   // 0x0000   (0x0008)  
-	uint32_t                                           MaterialSubIndex;                                           // 0x0008   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004)  MISSED
-	class UNiagaraRendererProperties*                  EmitterRendererProperty;                                    // 0x0010   (0x0008)  
+    class UMaterialInterface*                          Material;                                                   // 0x0000   (0x0008) 
+    uint32_t                                           MaterialSubIndex;                                           // 0x0008   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    class UNiagaraRendererProperties*                  EmitterRendererProperty;                                    // 0x0010   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraComponent
@@ -769,166 +771,236 @@ struct FNiagaraMaterialOverride
 class UNiagaraComponent : public UFXSystemComponent
 { 
 public:
-	class UNiagaraSystem*                              Asset;                                                      // 0x0578   (0x0008)  
-	class UNiagaraEffectType*                          AssetEffectType;                                            // 0x0580   (0x0008)  
-	ENiagaraTickBehavior                               TickBehavior;                                               // 0x0588   (0x0001)  
-	unsigned char                                      UnknownData08_6[0x7];                                       // 0x0589   (0x0007)  MISSED
-	FNiagaraUserRedirectionParameterStore              OverrideParameters;                                         // 0x0590   (0x00C8)  
-	bool                                               bForceSolo : 1;                                             // 0x0658:0 (0x0001)  
-	bool                                               bEnableGpuComputeDebug : 1;                                 // 0x0658:1 (0x0001)  
-	unsigned char                                      UnknownData09_3[0x33];                                      // 0x0659   (0x0033)  MISSED
-	bool                                               bAutoDestroy : 1;                                           // 0x068C:0 (0x0001)  
-	bool                                               bRenderingEnabled : 1;                                      // 0x068C:1 (0x0001)  
-	bool                                               bManualCleanup : 1;                                         // 0x068C:2 (0x0001)  
-	unsigned char                                      UnknownData10_5[0x3];                                       // 0x068D   (0x0003)  MISSED
-	uint32_t                                           AutoDestroyComponentCount;                                  // 0x0690   (0x0004)  
-	bool                                               bAutoManageAttachment : 1;                                  // 0x0694:0 (0x0001)  
-	bool                                               bAutoAttachWeldSimulatedBodies : 1;                         // 0x0694:1 (0x0001)  
-	unsigned char                                      UnknownData11_5[0x3];                                       // 0x0695   (0x0003)  MISSED
-	float                                              MaxTimeBeforeForceUpdateTransform;                          // 0x0698   (0x0004)  
-	unsigned char                                      UnknownData12_6[0x4];                                       // 0x069C   (0x0004)  MISSED
-	TArray<FNiagaraMaterialOverride>                   EmitterMaterials;                                           // 0x06A0   (0x0010)  
-	unsigned char                                      UnknownData13_6[0x8];                                       // 0x06B0   (0x0008)  MISSED
-	FMulticastInlineDelegate                           OnSystemFinished;                                           // 0x06B8   (0x0010)  
-	float                                              CustomTimeDilation;                                         // 0x06C8   (0x0004)  
-	bool                                               bEnableCullingViewFrustum;                                  // 0x06CC   (0x0001)  
-	unsigned char                                      UnknownData14_6[0x3];                                       // 0x06CD   (0x0003)  MISSED
-	TWeakObjectPtr<class USceneComponent*>             AutoAttachParent;                                           // 0x06D0   (0x0008)  
-	FName                                              AutoAttachSocketName;                                       // 0x06D8   (0x0008)  
-	EAttachmentRule                                    AutoAttachLocationRule;                                     // 0x06E0   (0x0001)  
-	EAttachmentRule                                    AutoAttachRotationRule;                                     // 0x06E1   (0x0001)  
-	EAttachmentRule                                    AutoAttachScaleRule;                                        // 0x06E2   (0x0001)  
-	unsigned char                                      UnknownData15_7[0x5D];                                      // 0x06E3   (0x005D)  MISSED
+    class UNiagaraSystem*                              Asset;                                                      // 0x0578   (0x0008) 
+    class UNiagaraEffectType*                          AssetEffectType;                                            // 0x0580   (0x0008) 
+    ENiagaraTickBehavior                               TickBehavior;                                               // 0x0588   (0x0001) 
+    unsigned char                                      UnknownData08_6[0x7];                                       // 0x0589   (0x0007) MISSED
+    FNiagaraUserRedirectionParameterStore              OverrideParameters;                                         // 0x0590   (0x00C8) 
+    bool                                               bForceSolo : 1;                                             // 0x0658:0 (0x0001) 
+    bool                                               bEnableGpuComputeDebug : 1;                                 // 0x0658:1 (0x0001) 
+    unsigned char                                      UnknownData09_3[0x33];                                      // 0x0659   (0x0033) MISSED
+    bool                                               bAutoDestroy : 1;                                           // 0x068C:0 (0x0001) 
+    bool                                               bRenderingEnabled : 1;                                      // 0x068C:1 (0x0001) 
+    bool                                               bManualCleanup : 1;                                         // 0x068C:2 (0x0001) 
+    unsigned char                                      UnknownData10_5[0x3];                                       // 0x068D   (0x0003) MISSED
+    uint32_t                                           AutoDestroyComponentCount;                                  // 0x0690   (0x0004) 
+    bool                                               bAutoManageAttachment : 1;                                  // 0x0694:0 (0x0001) 
+    bool                                               bAutoAttachWeldSimulatedBodies : 1;                         // 0x0694:1 (0x0001) 
+    unsigned char                                      UnknownData11_5[0x3];                                       // 0x0695   (0x0003) MISSED
+    float                                              MaxTimeBeforeForceUpdateTransform;                          // 0x0698   (0x0004) 
+    unsigned char                                      UnknownData12_6[0x4];                                       // 0x069C   (0x0004) MISSED
+    TArray<FNiagaraMaterialOverride>                   EmitterMaterials;                                           // 0x06A0   (0x0010) 
+    unsigned char                                      UnknownData13_6[0x8];                                       // 0x06B0   (0x0008) MISSED
+    FMulticastInlineDelegate                           OnSystemFinished;                                           // 0x06B8   (0x0010) 
+    float                                              CustomTimeDilation;                                         // 0x06C8   (0x0004) 
+    bool                                               bEnableCullingViewFrustum;                                  // 0x06CC   (0x0001) 
+    unsigned char                                      UnknownData14_6[0x3];                                       // 0x06CD   (0x0003) MISSED
+    TWeakObjectPtr<class USceneComponent*>             AutoAttachParent;                                           // 0x06D0   (0x0008) 
+    FName                                              AutoAttachSocketName;                                       // 0x06D8   (0x0008) 
+    EAttachmentRule                                    AutoAttachLocationRule;                                     // 0x06E0   (0x0001) 
+    EAttachmentRule                                    AutoAttachRotationRule;                                     // 0x06E1   (0x0001) 
+    EAttachmentRule                                    AutoAttachScaleRule;                                        // 0x06E2   (0x0001) 
+    unsigned char                                      UnknownData15_7[0x5D];                                      // 0x06E3   (0x005D) MISSED
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraComponent.SetVariableVec4
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector4&> SetVariableVec4 = { 0x113e4a0, 0 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableVec3
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector> SetVariableVec3 = { 0x113dd60, 1 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableVec2
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector2D> SetVariableVec2 = { 0x113d9e0, 2 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableTextureRenderTarget
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UTextureRenderTarget*> SetVariableTextureRenderTarget = { 0x113c7c0, 3 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableQuat
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FQuat&> SetVariableQuat = { 0x113e100, 4 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableObject
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UObject*> SetVariableObject = { 0x113cbc0, 5 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableMaterial
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UMaterialInterface*> SetVariableMaterial = { 0x113c9a0, 6 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableLinearColor
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FLinearColor&> SetVariableLinearColor = { 0x113e860, 7 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableInt
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const int32_t> SetVariableInt = { 0x113d2d0, 8 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableFloat
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const float> SetVariableFloat = { 0x113d650, 9 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableBool
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const bool> SetVariableBool = { 0x113cf40, 10 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetVariableActor
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const AActor*> SetVariableActor = { 0x113cbc0, 11 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetTickBehavior
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const ENiagaraTickBehavior> SetTickBehavior = { 0x113ec20, 12 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetSeekDelta
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetSeekDelta = { 0x113ef10, 13 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetRenderingEnabled
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetRenderingEnabled = { 0x113c0f0, 14 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetPreviewLODDistance
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool, const float> SetPreviewLODDistance = { 0x113b880, 15 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetPaused
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetPaused = { 0x113bbf0, 16 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec4
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector4&> SetNiagaraVariableVec4 = { 0x113e620, 17 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec3
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector> SetNiagaraVariableVec3 = { 0x113ded0, 18 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec2
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector2D> SetNiagaraVariableVec2 = { 0x113db40, 19 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableQuat
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FQuat&> SetNiagaraVariableQuat = { 0x113e270, 20 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableObject
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const UObject*> SetNiagaraVariableObject = { 0x113cd30, 21 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableLinearColor
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FLinearColor&> SetNiagaraVariableLinearColor = { 0x113e9d0, 22 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableInt
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const int32_t> SetNiagaraVariableInt = { 0x113d440, 23 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableFloat
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const float> SetNiagaraVariableFloat = { 0x113d7c0, 24 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableBool
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const bool> SetNiagaraVariableBool = { 0x113d0b0, 25 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableActor
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const AActor*> SetNiagaraVariableActor = { 0x113cd30, 26 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetMaxSimTime
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetMaxSimTime = { 0x113ee20, 27 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetGpuComputeDebug
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetGpuComputeDebug = { 0x113f3b0, 28 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetForceSolo
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetForceSolo = { 0x113f4d0, 29 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetDesiredAge
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetDesiredAge = { 0x113f1c0, 30 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetCanRenderWhileSeeking
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetCanRenderWhileSeeking = { 0x113f000, 31 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetAutoDestroy
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetAutoDestroy = { 0x113ed30, 32 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetAsset
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const UNiagaraSystem*> SetAsset = { 0x113f610, 33 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetAllowScalability
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetAllowScalability = { 0x113b750, 34 }; 
-	// Function /Script/Niagara.NiagaraComponent.SetAgeUpdateMode
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const ENiagaraAgeUpdateMode> SetAgeUpdateMode = { 0x113f2c0, 35 }; 
-	// Function /Script/Niagara.NiagaraComponent.SeekToDesiredAge
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SeekToDesiredAge = { 0x113f0e0, 36 }; 
-	// Function /Script/Niagara.NiagaraComponent.ResetSystem
-	constexpr static const FunctionPointer<UNiagaraComponent, void> ResetSystem = { 0x113c210, 37 }; 
-	// Function /Script/Niagara.NiagaraComponent.ReinitializeSystem
-	constexpr static const FunctionPointer<UNiagaraComponent, void> ReinitializeSystem = { 0x113c1d0, 38 }; 
-	// Function /Script/Niagara.NiagaraComponent.IsPaused
-	constexpr static const FunctionPointer<UNiagaraComponent, bool> IsPaused = { 0x113bbb0, 39 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetTickBehavior
-	constexpr static const FunctionPointer<UNiagaraComponent, ENiagaraTickBehavior> GetTickBehavior = { 0x113ec00, 40 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetSeekDelta
-	constexpr static const FunctionPointer<UNiagaraComponent, float> GetSeekDelta = { 0x113efe0, 41 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled
-	constexpr static const FunctionPointer<UNiagaraComponent, bool> GetPreviewLODDistanceEnabled = { 0x113b860, 42 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistance
-	constexpr static const FunctionPointer<UNiagaraComponent, int32_t> GetPreviewLODDistance = { 0x113b840, 43 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly
-	constexpr static const FunctionPointer<UNiagaraComponent, TArray<FVector>, const FString, const FString> GetNiagaraParticleValueVec3_DebugOnly = { 0x113c240, 44 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly
-	constexpr static const FunctionPointer<UNiagaraComponent, TArray<float>, const FString, const FString> GetNiagaraParticleValues_DebugOnly = { 0x113c430, 45 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly
-	constexpr static const FunctionPointer<UNiagaraComponent, TArray<FVector>, const FString> GetNiagaraParticlePositions_DebugOnly = { 0x113c620, 46 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetMaxSimTime
-	constexpr static const FunctionPointer<UNiagaraComponent, float> GetMaxSimTime = { 0x113eef0, 47 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetForceSolo
-	constexpr static const FunctionPointer<UNiagaraComponent, bool> GetForceSolo = { 0x113f4a0, 48 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetDesiredAge
-	constexpr static const FunctionPointer<UNiagaraComponent, float> GetDesiredAge = { 0x113f2a0, 49 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetDataInterface
-	constexpr static const FunctionPointer<UNiagaraComponent, UNiagaraDataInterface*, const FString> GetDataInterface = { 0x113b9c0, 50 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetAsset
-	constexpr static const FunctionPointer<UNiagaraComponent, UNiagaraSystem*> GetAsset = { 0x113f5f0, 51 }; 
-	// Function /Script/Niagara.NiagaraComponent.GetAgeUpdateMode
-	constexpr static const FunctionPointer<UNiagaraComponent, ENiagaraAgeUpdateMode> GetAgeUpdateMode = { 0x113f390, 52 }; 
-	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulationByTime
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float, const float> AdvanceSimulationByTime = { 0x113bcd0, 53 }; 
-	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulation
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const int32_t, const float> AdvanceSimulation = { 0x113be60, 54 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraComponent.SetVariableVec4
+    // [0] InVariableName : const FName
+    // [1] InValue : const FVector4&
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector4&> SetVariableVec4 = { 0x113e4a0, 0 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableVec3
+    // [0] InVariableName : const FName
+    // [1] InValue : const FVector
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector> SetVariableVec3 = { 0x113dd60, 1 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableVec2
+    // [0] InVariableName : const FName
+    // [1] InValue : const FVector2D
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector2D> SetVariableVec2 = { 0x113d9e0, 2 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableTextureRenderTarget
+    // [0] InVariableName : const FName
+    // [1] TextureRenderTarget : const UTextureRenderTarget*
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UTextureRenderTarget*> SetVariableTextureRenderTarget = { 0x113c7c0, 3 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableQuat
+    // [0] InVariableName : const FName
+    // [1] InValue : const FQuat&
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FQuat&> SetVariableQuat = { 0x113e100, 4 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableObject
+    // [0] InVariableName : const FName
+    // [1] Object : const UObject*
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UObject*> SetVariableObject = { 0x113cbc0, 5 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableMaterial
+    // [0] InVariableName : const FName
+    // [1] Object : const UMaterialInterface*
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UMaterialInterface*> SetVariableMaterial = { 0x113c9a0, 6 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableLinearColor
+    // [0] InVariableName : const FName
+    // [1] InValue : const FLinearColor&
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FLinearColor&> SetVariableLinearColor = { 0x113e860, 7 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableInt
+    // [0] InVariableName : const FName
+    // [1] InValue : const int32_t
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const int32_t> SetVariableInt = { 0x113d2d0, 8 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableFloat
+    // [0] InVariableName : const FName
+    // [1] InValue : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const float> SetVariableFloat = { 0x113d650, 9 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableBool
+    // [0] InVariableName : const FName
+    // [1] InValue : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const bool> SetVariableBool = { 0x113cf40, 10 };
+    // Function /Script/Niagara.NiagaraComponent.SetVariableActor
+    // [0] InVariableName : const FName
+    // [1] Actor : const AActor*
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const AActor*> SetVariableActor = { 0x113cbc0, 11 };
+    // Function /Script/Niagara.NiagaraComponent.SetTickBehavior
+    // [0] NewTickBehavior : const ENiagaraTickBehavior
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const ENiagaraTickBehavior> SetTickBehavior = { 0x113ec20, 12 };
+    // Function /Script/Niagara.NiagaraComponent.SetSeekDelta
+    // [0] InSeekDelta : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetSeekDelta = { 0x113ef10, 13 };
+    // Function /Script/Niagara.NiagaraComponent.SetRenderingEnabled
+    // [0] bInRenderingEnabled : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetRenderingEnabled = { 0x113c0f0, 14 };
+    // Function /Script/Niagara.NiagaraComponent.SetPreviewLODDistance
+    // [0] bEnablePreviewLODDistance : const bool
+    // [1] PreviewLODDistance : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const bool, const float> SetPreviewLODDistance = { 0x113b880, 15 };
+    // Function /Script/Niagara.NiagaraComponent.SetPaused
+    // [0] bInPaused : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetPaused = { 0x113bbf0, 16 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec4
+    // [0] InVariableName : const FString
+    // [1] InValue : const FVector4&
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector4&> SetNiagaraVariableVec4 = { 0x113e620, 17 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec3
+    // [0] InVariableName : const FString
+    // [1] InValue : const FVector
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector> SetNiagaraVariableVec3 = { 0x113ded0, 18 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec2
+    // [0] InVariableName : const FString
+    // [1] InValue : const FVector2D
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector2D> SetNiagaraVariableVec2 = { 0x113db40, 19 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableQuat
+    // [0] InVariableName : const FString
+    // [1] InValue : const FQuat&
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FQuat&> SetNiagaraVariableQuat = { 0x113e270, 20 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableObject
+    // [0] InVariableName : const FString
+    // [1] Object : const UObject*
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const UObject*> SetNiagaraVariableObject = { 0x113cd30, 21 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableLinearColor
+    // [0] InVariableName : const FString
+    // [1] InValue : const FLinearColor&
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FLinearColor&> SetNiagaraVariableLinearColor = { 0x113e9d0, 22 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableInt
+    // [0] InVariableName : const FString
+    // [1] InValue : const int32_t
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const int32_t> SetNiagaraVariableInt = { 0x113d440, 23 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableFloat
+    // [0] InVariableName : const FString
+    // [1] InValue : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const float> SetNiagaraVariableFloat = { 0x113d7c0, 24 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableBool
+    // [0] InVariableName : const FString
+    // [1] InValue : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const bool> SetNiagaraVariableBool = { 0x113d0b0, 25 };
+    // Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableActor
+    // [0] InVariableName : const FString
+    // [1] Actor : const AActor*
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const AActor*> SetNiagaraVariableActor = { 0x113cd30, 26 };
+    // Function /Script/Niagara.NiagaraComponent.SetMaxSimTime
+    // [0] InMaxTime : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetMaxSimTime = { 0x113ee20, 27 };
+    // Function /Script/Niagara.NiagaraComponent.SetGpuComputeDebug
+    // [0] bEnableDebug : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetGpuComputeDebug = { 0x113f3b0, 28 };
+    // Function /Script/Niagara.NiagaraComponent.SetForceSolo
+    // [0] bInForceSolo : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetForceSolo = { 0x113f4d0, 29 };
+    // Function /Script/Niagara.NiagaraComponent.SetDesiredAge
+    // [0] InDesiredAge : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetDesiredAge = { 0x113f1c0, 30 };
+    // Function /Script/Niagara.NiagaraComponent.SetCanRenderWhileSeeking
+    // [0] bInCanRenderWhileSeeking : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetCanRenderWhileSeeking = { 0x113f000, 31 };
+    // Function /Script/Niagara.NiagaraComponent.SetAutoDestroy
+    // [0] bInAutoDestroy : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetAutoDestroy = { 0x113ed30, 32 };
+    // Function /Script/Niagara.NiagaraComponent.SetAsset
+    // [0] InAsset : const UNiagaraSystem*
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const UNiagaraSystem*> SetAsset = { 0x113f610, 33 };
+    // Function /Script/Niagara.NiagaraComponent.SetAllowScalability
+    // [0] bAllow : const bool
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetAllowScalability = { 0x113b750, 34 };
+    // Function /Script/Niagara.NiagaraComponent.SetAgeUpdateMode
+    // [0] InAgeUpdateMode : const ENiagaraAgeUpdateMode
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const ENiagaraAgeUpdateMode> SetAgeUpdateMode = { 0x113f2c0, 35 };
+    // Function /Script/Niagara.NiagaraComponent.SeekToDesiredAge
+    // [0] InDesiredAge : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SeekToDesiredAge = { 0x113f0e0, 36 };
+    // Function /Script/Niagara.NiagaraComponent.ResetSystem
+    constexpr static const FunctionPointer<UNiagaraComponent, void> ResetSystem = { 0x113c210, 37 };
+    // Function /Script/Niagara.NiagaraComponent.ReinitializeSystem
+    constexpr static const FunctionPointer<UNiagaraComponent, void> ReinitializeSystem = { 0x113c1d0, 38 };
+    // Function /Script/Niagara.NiagaraComponent.IsPaused
+    constexpr static const FunctionPointer<UNiagaraComponent, bool> IsPaused = { 0x113bbb0, 39 };
+    // Function /Script/Niagara.NiagaraComponent.GetTickBehavior
+    constexpr static const FunctionPointer<UNiagaraComponent, ENiagaraTickBehavior> GetTickBehavior = { 0x113ec00, 40 };
+    // Function /Script/Niagara.NiagaraComponent.GetSeekDelta
+    constexpr static const FunctionPointer<UNiagaraComponent, float> GetSeekDelta = { 0x113efe0, 41 };
+    // Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled
+    constexpr static const FunctionPointer<UNiagaraComponent, bool> GetPreviewLODDistanceEnabled = { 0x113b860, 42 };
+    // Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistance
+    constexpr static const FunctionPointer<UNiagaraComponent, int32_t> GetPreviewLODDistance = { 0x113b840, 43 };
+    // Function /Script/Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly
+    // [0] InEmitterName : const FString
+    // [1] InValueName : const FString
+    constexpr static const FunctionPointer<UNiagaraComponent, TArray<FVector>, const FString, const FString> GetNiagaraParticleValueVec3_DebugOnly = { 0x113c240, 44 };
+    // Function /Script/Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly
+    // [0] InEmitterName : const FString
+    // [1] InValueName : const FString
+    constexpr static const FunctionPointer<UNiagaraComponent, TArray<float>, const FString, const FString> GetNiagaraParticleValues_DebugOnly = { 0x113c430, 45 };
+    // Function /Script/Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly
+    // [0] InEmitterName : const FString
+    constexpr static const FunctionPointer<UNiagaraComponent, TArray<FVector>, const FString> GetNiagaraParticlePositions_DebugOnly = { 0x113c620, 46 };
+    // Function /Script/Niagara.NiagaraComponent.GetMaxSimTime
+    constexpr static const FunctionPointer<UNiagaraComponent, float> GetMaxSimTime = { 0x113eef0, 47 };
+    // Function /Script/Niagara.NiagaraComponent.GetForceSolo
+    constexpr static const FunctionPointer<UNiagaraComponent, bool> GetForceSolo = { 0x113f4a0, 48 };
+    // Function /Script/Niagara.NiagaraComponent.GetDesiredAge
+    constexpr static const FunctionPointer<UNiagaraComponent, float> GetDesiredAge = { 0x113f2a0, 49 };
+    // Function /Script/Niagara.NiagaraComponent.GetDataInterface
+    // [0] Name : const FString
+    constexpr static const FunctionPointer<UNiagaraComponent, UNiagaraDataInterface*, const FString> GetDataInterface = { 0x113b9c0, 50 };
+    // Function /Script/Niagara.NiagaraComponent.GetAsset
+    constexpr static const FunctionPointer<UNiagaraComponent, UNiagaraSystem*> GetAsset = { 0x113f5f0, 51 };
+    // Function /Script/Niagara.NiagaraComponent.GetAgeUpdateMode
+    constexpr static const FunctionPointer<UNiagaraComponent, ENiagaraAgeUpdateMode> GetAgeUpdateMode = { 0x113f390, 52 };
+    // Function /Script/Niagara.NiagaraComponent.AdvanceSimulationByTime
+    // [0] SimulateTime : const float
+    // [1] TickDeltaSeconds : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const float, const float> AdvanceSimulationByTime = { 0x113bcd0, 53 };
+    // Function /Script/Niagara.NiagaraComponent.AdvanceSimulation
+    // [0] TickCount : const int32_t
+    // [1] TickDeltaSeconds : const float
+    constexpr static const FunctionPointer<UNiagaraComponent, void, const int32_t, const float> AdvanceSimulation = { 0x113be60, 54 };
 };
 
 /// Struct /Script/Niagara.NCPoolElement
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNCPoolElement
 { 
-	class UNiagaraComponent*                           Component;                                                  // 0x0000   (0x0008)  
-	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0008   (0x0008)  MISSED
+    class UNiagaraComponent*                           Component;                                                  // 0x0000   (0x0008) 
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0008   (0x0008) MISSED
 };
 
 /// Struct /Script/Niagara.NCPool
 /// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FNCPool
 { 
-	TArray<FNCPoolElement>                             FreeElements;                                               // 0x0000   (0x0010)  
-	TArray<class UNiagaraComponent*>                   InUseComponents_Auto;                                       // 0x0010   (0x0010)  
-	TArray<class UNiagaraComponent*>                   InUseComponents_Manual;                                     // 0x0020   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0030   (0x0008)  MISSED
+    TArray<FNCPoolElement>                             FreeElements;                                               // 0x0000   (0x0010) 
+    TArray<class UNiagaraComponent*>                   InUseComponents_Auto;                                       // 0x0010   (0x0010) 
+    TArray<class UNiagaraComponent*>                   InUseComponents_Manual;                                     // 0x0020   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0030   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraComponentPool
@@ -936,46 +1008,46 @@ struct FNCPool
 class UNiagaraComponentPool : public UObject
 { 
 public:
-	TMap<class UNiagaraSystem*, FNCPool>               WorldParticleSystemPools;                                   // 0x0028   (0x0050)  
-	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0078   (0x0008)  MISSED
+    TMap<class UNiagaraSystem*, FNCPool>               WorldParticleSystemPools;                                   // 0x0028   (0x0050) 
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0078   (0x0008) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraDeviceProfileStateEntry
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraDeviceProfileStateEntry
 { 
-	FName                                              ProfileName;                                                // 0x0000   (0x0008)  
-	uint32_t                                           QualityLevelMask;                                           // 0x0008   (0x0004)  
-	uint32_t                                           SetQualityLevelMask;                                        // 0x000C   (0x0004)  
+    FName                                              ProfileName;                                                // 0x0000   (0x0008) 
+    uint32_t                                           QualityLevelMask;                                           // 0x0008   (0x0004) 
+    uint32_t                                           SetQualityLevelMask;                                        // 0x000C   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraPlatformSetCVarCondition
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FNiagaraPlatformSetCVarCondition
 { 
-	FName                                              CVarName;                                                   // 0x0000   (0x0008)  
-	bool                                               Value;                                                      // 0x0008   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0009   (0x0003)  MISSED
-	int32_t                                            MinInt;                                                     // 0x000C   (0x0004)  
-	int32_t                                            MaxInt;                                                     // 0x0010   (0x0004)  
-	float                                              MinFloat;                                                   // 0x0014   (0x0004)  
-	float                                              MaxFloat;                                                   // 0x0018   (0x0004)  
-	bool                                               bUseMinInt : 1;                                             // 0x001C:0 (0x0001)  
-	bool                                               bUseMaxInt : 1;                                             // 0x001C:1 (0x0001)  
-	bool                                               bUseMinFloat : 1;                                           // 0x001C:2 (0x0001)  
-	bool                                               bUseMaxFloat : 1;                                           // 0x001C:3 (0x0001)  
-	unsigned char                                      UnknownData03_7[0xB];                                       // 0x001D   (0x000B)  MISSED
+    FName                                              CVarName;                                                   // 0x0000   (0x0008) 
+    bool                                               Value;                                                      // 0x0008   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0009   (0x0003) MISSED
+    int32_t                                            MinInt;                                                     // 0x000C   (0x0004) 
+    int32_t                                            MaxInt;                                                     // 0x0010   (0x0004) 
+    float                                              MinFloat;                                                   // 0x0014   (0x0004) 
+    float                                              MaxFloat;                                                   // 0x0018   (0x0004) 
+    bool                                               bUseMinInt : 1;                                             // 0x001C:0 (0x0001) 
+    bool                                               bUseMaxInt : 1;                                             // 0x001C:1 (0x0001) 
+    bool                                               bUseMinFloat : 1;                                           // 0x001C:2 (0x0001) 
+    bool                                               bUseMaxFloat : 1;                                           // 0x001C:3 (0x0001) 
+    unsigned char                                      UnknownData03_7[0xB];                                       // 0x001D   (0x000B) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraPlatformSet
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FNiagaraPlatformSet
 { 
-	int32_t                                            QualityLevelMask;                                           // 0x0000   (0x0004)  
-	unsigned char                                      UnknownData02_6[0x4];                                       // 0x0004   (0x0004)  MISSED
-	TArray<FNiagaraDeviceProfileStateEntry>            DeviceProfileStates;                                        // 0x0008   (0x0010)  
-	TArray<FNiagaraPlatformSetCVarCondition>           CVarConditions;                                             // 0x0018   (0x0010)  
-	unsigned char                                      UnknownData03_7[0x8];                                       // 0x0028   (0x0008)  MISSED
+    int32_t                                            QualityLevelMask;                                           // 0x0000   (0x0004) 
+    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    TArray<FNiagaraDeviceProfileStateEntry>            DeviceProfileStates;                                        // 0x0008   (0x0010) 
+    TArray<FNiagaraPlatformSetCVarCondition>           CVarConditions;                                             // 0x0018   (0x0010) 
+    unsigned char                                      UnknownData03_7[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraRendererProperties
@@ -983,47 +1055,47 @@ struct FNiagaraPlatformSet
 class UNiagaraRendererProperties : public UNiagaraMergeable
 { 
 public:
-	FNiagaraPlatformSet                                Platforms;                                                  // 0x0028   (0x0030)  
-	int32_t                                            SortOrderHint;                                              // 0x0058   (0x0004)  
-	bool                                               bIsEnabled;                                                 // 0x005C   (0x0001)  
-	bool                                               bMotionBlurEnabled;                                         // 0x005D   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x22];                                      // 0x005E   (0x0022)  MISSED
+    FNiagaraPlatformSet                                Platforms;                                                  // 0x0028   (0x0030) 
+    int32_t                                            SortOrderHint;                                              // 0x0058   (0x0004) 
+    bool                                               bIsEnabled;                                                 // 0x005C   (0x0001) 
+    bool                                               bMotionBlurEnabled;                                         // 0x005D   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x22];                                      // 0x005E   (0x0022) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraVariableAttributeBinding
 /// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align n/a MaxSize: 0x0058
 struct FNiagaraVariableAttributeBinding
 { 
-	FNiagaraVariable                                   DataSetVariable;                                            // 0x0000   (0x0020)  
-	FNiagaraVariableBase                               ParamMapVariable;                                           // 0x0020   (0x000C)  
-	unsigned char                                      UnknownData03_6[0x4];                                       // 0x002C   (0x0004)  MISSED
-	FNiagaraVariable                                   RootVariable;                                               // 0x0030   (0x0020)  
-	TEnumAsByte<ENiagaraBindingSource>                 BindingSourceMode;                                          // 0x0050   (0x0001)  
-	unsigned char                                      UnknownData04_6[0x3];                                       // 0x0051   (0x0003)  MISSED
-	bool                                               bBindingExistsOnSource : 1;                                 // 0x0054:0 (0x0001)  
-	bool                                               bIsCachedParticleValue : 1;                                 // 0x0054:1 (0x0001)  
-	unsigned char                                      UnknownData05_7[0x3];                                       // 0x0055   (0x0003)  MISSED
+    FNiagaraVariable                                   DataSetVariable;                                            // 0x0000   (0x0020) 
+    FNiagaraVariableBase                               ParamMapVariable;                                           // 0x0020   (0x000C) 
+    unsigned char                                      UnknownData03_6[0x4];                                       // 0x002C   (0x0004) MISSED
+    FNiagaraVariable                                   RootVariable;                                               // 0x0030   (0x0020) 
+    TEnumAsByte<ENiagaraBindingSource>                 BindingSourceMode;                                          // 0x0050   (0x0001) 
+    unsigned char                                      UnknownData04_6[0x3];                                       // 0x0051   (0x0003) MISSED
+    bool                                               bBindingExistsOnSource : 1;                                 // 0x0054:0 (0x0001) 
+    bool                                               bIsCachedParticleValue : 1;                                 // 0x0054:1 (0x0001) 
+    unsigned char                                      UnknownData05_7[0x3];                                       // 0x0055   (0x0003) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraTypeDefinition
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraTypeDefinition
 { 
-	class UObject*                                     ClassStructOrEnum;                                          // 0x0000   (0x0008)  
-	uint16_t                                           UnderlyingType;                                             // 0x0008   (0x0002)  
-	unsigned char                                      UnknownData01_7[0x6];                                       // 0x000A   (0x0006)  MISSED
+    class UObject*                                     ClassStructOrEnum;                                          // 0x0000   (0x0008) 
+    uint16_t                                           UnderlyingType;                                             // 0x0008   (0x0002) 
+    unsigned char                                      UnknownData01_7[0x6];                                       // 0x000A   (0x0006) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraComponentPropertyBinding
 /// Size: 0x00A0 (160 bytes) (0x000000 - 0x0000A0) align n/a MaxSize: 0x00A0
 struct FNiagaraComponentPropertyBinding
 { 
-	FNiagaraVariableAttributeBinding                   AttributeBinding;                                           // 0x0000   (0x0058)  
-	FName                                              PropertyName;                                               // 0x0058   (0x0008)  
-	FNiagaraTypeDefinition                             PropertyType;                                               // 0x0060   (0x0010)  
-	FName                                              MetadataSetterName;                                         // 0x0070   (0x0008)  
-	FNiagaraVariable                                   WritableValue;                                              // 0x0078   (0x0020)  
-	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0098   (0x0008)  MISSED
+    FNiagaraVariableAttributeBinding                   AttributeBinding;                                           // 0x0000   (0x0058) 
+    FName                                              PropertyName;                                               // 0x0058   (0x0008) 
+    FNiagaraTypeDefinition                             PropertyType;                                               // 0x0060   (0x0010) 
+    FName                                              MetadataSetterName;                                         // 0x0070   (0x0008) 
+    FNiagaraVariable                                   WritableValue;                                              // 0x0078   (0x0020) 
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0098   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraComponentRendererProperties
@@ -1031,16 +1103,16 @@ struct FNiagaraComponentPropertyBinding
 class UNiagaraComponentRendererProperties : public UNiagaraRendererProperties
 { 
 public:
-	class UClass*                                      ComponentType;                                              // 0x0080   (0x0008)  
-	uint32_t                                           ComponentCountLimit;                                        // 0x0088   (0x0004)  
-	unsigned char                                      UnknownData03_6[0x4];                                       // 0x008C   (0x0004)  MISSED
-	FNiagaraVariableAttributeBinding                   EnabledBinding;                                             // 0x0090   (0x0058)  
-	bool                                               bAssignComponentsOnParticleID;                              // 0x00E8   (0x0001)  
-	bool                                               bOnlyCreateComponentsOnParticleSpawn;                       // 0x00E9   (0x0001)  
-	unsigned char                                      UnknownData04_6[0x6];                                       // 0x00EA   (0x0006)  MISSED
-	class USceneComponent*                             TemplateComponent;                                          // 0x00F0   (0x0008)  
-	TArray<FNiagaraComponentPropertyBinding>           PropertyBindings;                                           // 0x00F8   (0x0010)  
-	unsigned char                                      UnknownData05_7[0x58];                                      // 0x0108   (0x0058)  MISSED
+    class UClass*                                      ComponentType;                                              // 0x0080   (0x0008) 
+    uint32_t                                           ComponentCountLimit;                                        // 0x0088   (0x0004) 
+    unsigned char                                      UnknownData03_6[0x4];                                       // 0x008C   (0x0004) MISSED
+    FNiagaraVariableAttributeBinding                   EnabledBinding;                                             // 0x0090   (0x0058) 
+    bool                                               bAssignComponentsOnParticleID;                              // 0x00E8   (0x0001) 
+    bool                                               bOnlyCreateComponentsOnParticleSpawn;                       // 0x00E9   (0x0001) 
+    unsigned char                                      UnknownData04_6[0x6];                                       // 0x00EA   (0x0006) MISSED
+    class USceneComponent*                             TemplateComponent;                                          // 0x00F0   (0x0008) 
+    TArray<FNiagaraComponentPropertyBinding>           PropertyBindings;                                           // 0x00F8   (0x0010) 
+    unsigned char                                      UnknownData05_7[0x58];                                      // 0x0108   (0x0058) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraComponentSettings
@@ -1048,9 +1120,9 @@ public:
 class UNiagaraComponentSettings : public UObject
 { 
 public:
-	TSet<FName>                                        SuppressActivationList;                                     // 0x0028   (0x0050)  
-	TSet<FName>                                        ForceAutoPooolingList;                                      // 0x0078   (0x0050)  
-	TSet<FNiagaraEmitterNameSettingsRef>               SuppressEmitterList;                                        // 0x00C8   (0x0050)  
+    TSet<FName>                                        SuppressActivationList;                                     // 0x0028   (0x0050) 
+    TSet<FName>                                        ForceAutoPooolingList;                                      // 0x0078   (0x0050) 
+    TSet<FNiagaraEmitterNameSettingsRef>               SuppressEmitterList;                                        // 0x00C8   (0x0050) 
 };
 
 /// Class /Script/Niagara.NiagaraConvertInPlaceUtilityBase
@@ -1065,7 +1137,7 @@ public:
 class UNiagaraDataInterface : public UNiagaraDataInterfaceBase
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterface2DArrayTexture
@@ -1073,7 +1145,7 @@ public:
 class UNiagaraDataInterface2DArrayTexture : public UNiagaraDataInterface
 { 
 public:
-	class UTexture2DArray*                             Texture;                                                    // 0x0038   (0x0008)  
+    class UTexture2DArray*                             Texture;                                                    // 0x0038   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArray
@@ -1081,9 +1153,9 @@ public:
 class UNiagaraDataInterfaceArray : public UNiagaraDataInterface
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x8];                                       // 0x0038   (0x0008)  MISSED
-	int32_t                                            MaxElements;                                                // 0x0040   (0x0004)  
-	unsigned char                                      UnknownData03_7[0xC];                                       // 0x0044   (0x000C)  MISSED
+    unsigned char                                      UnknownData02_8[0x8];                                       // 0x0038   (0x0008) MISSED
+    int32_t                                            MaxElements;                                                // 0x0040   (0x0004) 
+    unsigned char                                      UnknownData03_7[0xC];                                       // 0x0044   (0x000C) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayFloat
@@ -1091,7 +1163,7 @@ public:
 class UNiagaraDataInterfaceArrayFloat : public UNiagaraDataInterfaceArray
 { 
 public:
-	TArray<float>                                      FloatData;                                                  // 0x0050   (0x0010)  
+    TArray<float>                                      FloatData;                                                  // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayFloat2
@@ -1099,7 +1171,7 @@ public:
 class UNiagaraDataInterfaceArrayFloat2 : public UNiagaraDataInterfaceArray
 { 
 public:
-	TArray<FVector2D>                                  FloatData;                                                  // 0x0050   (0x0010)  
+    TArray<FVector2D>                                  FloatData;                                                  // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayFloat3
@@ -1107,7 +1179,7 @@ public:
 class UNiagaraDataInterfaceArrayFloat3 : public UNiagaraDataInterfaceArray
 { 
 public:
-	TArray<FVector>                                    FloatData;                                                  // 0x0050   (0x0010)  
+    TArray<FVector>                                    FloatData;                                                  // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayFloat4
@@ -1115,7 +1187,7 @@ public:
 class UNiagaraDataInterfaceArrayFloat4 : public UNiagaraDataInterfaceArray
 { 
 public:
-	TArray<FVector4>                                   FloatData;                                                  // 0x0050   (0x0010)  
+    TArray<FVector4>                                   FloatData;                                                  // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayColor
@@ -1123,7 +1195,7 @@ public:
 class UNiagaraDataInterfaceArrayColor : public UNiagaraDataInterfaceArray
 { 
 public:
-	TArray<FLinearColor>                               ColorData;                                                  // 0x0050   (0x0010)  
+    TArray<FLinearColor>                               ColorData;                                                  // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayQuat
@@ -1131,7 +1203,7 @@ public:
 class UNiagaraDataInterfaceArrayQuat : public UNiagaraDataInterfaceArray
 { 
 public:
-	TArray<FQuat>                                      QuatData;                                                   // 0x0050   (0x0010)  
+    TArray<FQuat>                                      QuatData;                                                   // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary
@@ -1140,39 +1212,79 @@ class UNiagaraDataInterfaceArrayFunctionLibrary : public UBlueprintFunctionLibra
 { 
 public:
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector4>&> SetNiagaraArrayVector4 = { 0x1145b90, 0 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2D
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector2D>&> SetNiagaraArrayVector2D = { 0x1146150, 1 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector>&> SetNiagaraArrayVector = { 0x1145e70, 2 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuat
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FQuat>&> SetNiagaraArrayQuat = { 0x11455d0, 3 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<int32_t>&> SetNiagaraArrayInt32 = { 0x11452f0, 4 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloat
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<float>&> SetNiagaraArrayFloat = { 0x1146430, 5 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColor
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FLinearColor>&> SetNiagaraArrayColor = { 0x11458b0, 6 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBool
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<bool>&> SetNiagaraArrayBool = { 0x1145010, 7 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector4>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector4 = { 0x1144590, 8 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2D
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector2D>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector2D = { 0x1144ad0, 9 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector = { 0x1144830, 10 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuat
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FQuat>, const UNiagaraComponent*, const FName> GetNiagaraArrayQuat = { 0x1144050, 11 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<int32_t>, const UNiagaraComponent*, const FName> GetNiagaraArrayInt32 = { 0x1143db0, 12 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloat
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<float>, const UNiagaraComponent*, const FName> GetNiagaraArrayFloat = { 0x1144d70, 13 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColor
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FLinearColor>, const UNiagaraComponent*, const FName> GetNiagaraArrayColor = { 0x11442f0, 14 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<bool>, const UNiagaraComponent*, const FName> GetNiagaraArrayBool = { 0x1143b10, 15 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    // [2] ArrayData : const TArray<FVector4>&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector4>&> SetNiagaraArrayVector4 = { 0x1145b90, 0 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2D
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    // [2] ArrayData : const TArray<FVector2D>&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector2D>&> SetNiagaraArrayVector2D = { 0x1146150, 1 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    // [2] ArrayData : const TArray<FVector>&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector>&> SetNiagaraArrayVector = { 0x1145e70, 2 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuat
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    // [2] ArrayData : const TArray<FQuat>&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FQuat>&> SetNiagaraArrayQuat = { 0x11455d0, 3 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    // [2] ArrayData : const TArray<int32_t>&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<int32_t>&> SetNiagaraArrayInt32 = { 0x11452f0, 4 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloat
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    // [2] ArrayData : const TArray<float>&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<float>&> SetNiagaraArrayFloat = { 0x1146430, 5 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColor
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    // [2] ArrayData : const TArray<FLinearColor>&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FLinearColor>&> SetNiagaraArrayColor = { 0x11458b0, 6 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBool
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    // [2] ArrayData : const TArray<bool>&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<bool>&> SetNiagaraArrayBool = { 0x1145010, 7 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector4>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector4 = { 0x1144590, 8 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2D
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector2D>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector2D = { 0x1144ad0, 9 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector = { 0x1144830, 10 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuat
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FQuat>, const UNiagaraComponent*, const FName> GetNiagaraArrayQuat = { 0x1144050, 11 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<int32_t>, const UNiagaraComponent*, const FName> GetNiagaraArrayInt32 = { 0x1143db0, 12 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloat
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<float>, const UNiagaraComponent*, const FName> GetNiagaraArrayFloat = { 0x1144d70, 13 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColor
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FLinearColor>, const UNiagaraComponent*, const FName> GetNiagaraArrayColor = { 0x11442f0, 14 };
+    // Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FName
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<bool>, const UNiagaraComponent*, const FName> GetNiagaraArrayBool = { 0x1143b10, 15 };
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayInt32
@@ -1180,7 +1292,7 @@ public:
 class UNiagaraDataInterfaceArrayInt32 : public UNiagaraDataInterfaceArray
 { 
 public:
-	TArray<int32_t>                                    IntData;                                                    // 0x0050   (0x0010)  
+    TArray<int32_t>                                    IntData;                                                    // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayBool
@@ -1188,7 +1300,7 @@ public:
 class UNiagaraDataInterfaceArrayBool : public UNiagaraDataInterfaceArray
 { 
 public:
-	TArray<bool>                                       BoolData;                                                   // 0x0050   (0x0010)  
+    TArray<bool>                                       BoolData;                                                   // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceAudioSubmix
@@ -1196,7 +1308,7 @@ public:
 class UNiagaraDataInterfaceAudioSubmix : public UNiagaraDataInterface
 { 
 public:
-	class USoundSubmix*                                Submix;                                                     // 0x0038   (0x0008)  
+    class USoundSubmix*                                Submix;                                                     // 0x0038   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceAudioOscilloscope
@@ -1204,9 +1316,9 @@ public:
 class UNiagaraDataInterfaceAudioOscilloscope : public UNiagaraDataInterface
 { 
 public:
-	class USoundSubmix*                                Submix;                                                     // 0x0038   (0x0008)  
-	int32_t                                            Resolution;                                                 // 0x0040   (0x0004)  
-	float                                              ScopeInMilliseconds;                                        // 0x0044   (0x0004)  
+    class USoundSubmix*                                Submix;                                                     // 0x0038   (0x0008) 
+    int32_t                                            Resolution;                                                 // 0x0040   (0x0004) 
+    float                                              ScopeInMilliseconds;                                        // 0x0044   (0x0004) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceAudioPlayer
@@ -1214,15 +1326,15 @@ public:
 class UNiagaraDataInterfaceAudioPlayer : public UNiagaraDataInterface
 { 
 public:
-	class USoundBase*                                  SoundToPlay;                                                // 0x0038   (0x0008)  
-	class USoundAttenuation*                           Attenuation;                                                // 0x0040   (0x0008)  
-	class USoundConcurrency*                           Concurrency;                                                // 0x0048   (0x0008)  
-	TArray<FName>                                      ParameterNames;                                             // 0x0050   (0x0010)  
-	bool                                               bLimitPlaysPerTick;                                         // 0x0060   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0061   (0x0003)  MISSED
-	int32_t                                            MaxPlaysPerTick;                                            // 0x0064   (0x0004)  
-	bool                                               bStopWhenComponentIsDestroyed;                              // 0x0068   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x7];                                       // 0x0069   (0x0007)  MISSED
+    class USoundBase*                                  SoundToPlay;                                                // 0x0038   (0x0008) 
+    class USoundAttenuation*                           Attenuation;                                                // 0x0040   (0x0008) 
+    class USoundConcurrency*                           Concurrency;                                                // 0x0048   (0x0008) 
+    TArray<FName>                                      ParameterNames;                                             // 0x0050   (0x0010) 
+    bool                                               bLimitPlaysPerTick;                                         // 0x0060   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0061   (0x0003) MISSED
+    int32_t                                            MaxPlaysPerTick;                                            // 0x0064   (0x0004) 
+    bool                                               bStopWhenComponentIsDestroyed;                              // 0x0068   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x7];                                       // 0x0069   (0x0007) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceAudioSpectrum
@@ -1230,10 +1342,10 @@ public:
 class UNiagaraDataInterfaceAudioSpectrum : public UNiagaraDataInterfaceAudioSubmix
 { 
 public:
-	int32_t                                            Resolution;                                                 // 0x0040   (0x0004)  
-	float                                              MinimumFrequency;                                           // 0x0044   (0x0004)  
-	float                                              MaximumFrequency;                                           // 0x0048   (0x0004)  
-	float                                              NoiseFloorDb;                                               // 0x004C   (0x0004)  
+    int32_t                                            Resolution;                                                 // 0x0040   (0x0004) 
+    float                                              MinimumFrequency;                                           // 0x0044   (0x0004) 
+    float                                              MaximumFrequency;                                           // 0x0048   (0x0004) 
+    float                                              NoiseFloorDb;                                               // 0x004C   (0x0004) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceCamera
@@ -1241,9 +1353,9 @@ public:
 class UNiagaraDataInterfaceCamera : public UNiagaraDataInterface
 { 
 public:
-	int32_t                                            PlayerControllerIndex;                                      // 0x0038   (0x0004)  
-	bool                                               bRequireCurrentFrameData;                                   // 0x003C   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x003D   (0x0003)  MISSED
+    int32_t                                            PlayerControllerIndex;                                      // 0x0038   (0x0004) 
+    bool                                               bRequireCurrentFrameData;                                   // 0x003C   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x003D   (0x0003) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceCollisionQuery
@@ -1251,7 +1363,7 @@ public:
 class UNiagaraDataInterfaceCollisionQuery : public UNiagaraDataInterface
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0038   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0038   (0x0010) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceCurveBase
@@ -1259,17 +1371,17 @@ public:
 class UNiagaraDataInterfaceCurveBase : public UNiagaraDataInterface
 { 
 public:
-	TArray<float>                                      ShaderLUT;                                                  // 0x0038   (0x0010)  
-	float                                              LUTMinTime;                                                 // 0x0048   (0x0004)  
-	float                                              LUTMaxTime;                                                 // 0x004C   (0x0004)  
-	float                                              LUTInvTimeRange;                                            // 0x0050   (0x0004)  
-	float                                              LUTNumSamplesMinusOne;                                      // 0x0054   (0x0004)  
-	bool                                               bUseLUT : 1;                                                // 0x0058:0 (0x0001)  
-	bool                                               bExposeCurve : 1;                                           // 0x0058:1 (0x0001)  
-	unsigned char                                      UnknownData02_5[0x3];                                       // 0x0059   (0x0003)  MISSED
-	FName                                              ExposedName;                                                // 0x005C   (0x0008)  
-	unsigned char                                      UnknownData03_6[0x4];                                       // 0x0064   (0x0004)  MISSED
-	class UTexture2D*                                  ExposedTexture;                                             // 0x0068   (0x0008)  
+    TArray<float>                                      ShaderLUT;                                                  // 0x0038   (0x0010) 
+    float                                              LUTMinTime;                                                 // 0x0048   (0x0004) 
+    float                                              LUTMaxTime;                                                 // 0x004C   (0x0004) 
+    float                                              LUTInvTimeRange;                                            // 0x0050   (0x0004) 
+    float                                              LUTNumSamplesMinusOne;                                      // 0x0054   (0x0004) 
+    bool                                               bUseLUT : 1;                                                // 0x0058:0 (0x0001) 
+    bool                                               bExposeCurve : 1;                                           // 0x0058:1 (0x0001) 
+    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0059   (0x0003) MISSED
+    FName                                              ExposedName;                                                // 0x005C   (0x0008) 
+    unsigned char                                      UnknownData03_6[0x4];                                       // 0x0064   (0x0004) MISSED
+    class UTexture2D*                                  ExposedTexture;                                             // 0x0068   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceColorCurve
@@ -1277,10 +1389,10 @@ public:
 class UNiagaraDataInterfaceColorCurve : public UNiagaraDataInterfaceCurveBase
 { 
 public:
-	FRichCurve                                         RedCurve;                                                   // 0x0070   (0x0080)  
-	FRichCurve                                         GreenCurve;                                                 // 0x00F0   (0x0080)  
-	FRichCurve                                         BlueCurve;                                                  // 0x0170   (0x0080)  
-	FRichCurve                                         AlphaCurve;                                                 // 0x01F0   (0x0080)  
+    FRichCurve                                         RedCurve;                                                   // 0x0070   (0x0080) 
+    FRichCurve                                         GreenCurve;                                                 // 0x00F0   (0x0080) 
+    FRichCurve                                         BlueCurve;                                                  // 0x0170   (0x0080) 
+    FRichCurve                                         AlphaCurve;                                                 // 0x01F0   (0x0080) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceCurlNoise
@@ -1288,8 +1400,8 @@ public:
 class UNiagaraDataInterfaceCurlNoise : public UNiagaraDataInterface
 { 
 public:
-	uint32_t                                           Seed;                                                       // 0x0038   (0x0004)  
-	unsigned char                                      UnknownData01_7[0xC];                                       // 0x003C   (0x000C)  MISSED
+    uint32_t                                           Seed;                                                       // 0x0038   (0x0004) 
+    unsigned char                                      UnknownData01_7[0xC];                                       // 0x003C   (0x000C) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceCurve
@@ -1297,7 +1409,7 @@ public:
 class UNiagaraDataInterfaceCurve : public UNiagaraDataInterfaceCurveBase
 { 
 public:
-	FRichCurve                                         Curve;                                                      // 0x0070   (0x0080)  
+    FRichCurve                                         Curve;                                                      // 0x0070   (0x0080) 
 };
 
 /// Class /Script/Niagara.NiagaraParticleCallbackHandler
@@ -1306,16 +1418,18 @@ class UNiagaraParticleCallbackHandler : public UInterface
 { 
 public:
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraParticleCallbackHandler.ReceiveParticleData
-	constexpr static const FunctionPointer<UNiagaraParticleCallbackHandler, void, const TArray<FBasicParticleData>&, const UNiagaraSystem*> ReceiveParticleData = { 0x11496a0, 0 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraParticleCallbackHandler.ReceiveParticleData
+    // [0] Data : const TArray<FBasicParticleData>&
+    // [1] NiagaraSystem : const UNiagaraSystem*
+    constexpr static const FunctionPointer<UNiagaraParticleCallbackHandler, void, const TArray<FBasicParticleData>&, const UNiagaraSystem*> ReceiveParticleData = { 0x11496a0, 0 };
 };
 
 /// Struct /Script/Niagara.NiagaraUserParameterBinding
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FNiagaraUserParameterBinding
 { 
-	FNiagaraVariable                                   Parameter;                                                  // 0x0000   (0x0020)  
+    FNiagaraVariable                                   Parameter;                                                  // 0x0000   (0x0020) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceExport
@@ -1323,12 +1437,12 @@ struct FNiagaraUserParameterBinding
 class UNiagaraDataInterfaceExport : public UNiagaraDataInterface
 { 
 public:
-	FNiagaraUserParameterBinding                       CallbackHandlerParameter;                                   // 0x0038   (0x0020)  
-	ENDIExport_GPUAllocationMode                       GPUAllocationMode;                                          // 0x0058   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0059   (0x0003)  MISSED
-	int32_t                                            GPUAllocationFixedSize;                                     // 0x005C   (0x0004)  
-	float                                              GPUAllocationPerParticleSize;                               // 0x0060   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x0064   (0x0004)  MISSED
+    FNiagaraUserParameterBinding                       CallbackHandlerParameter;                                   // 0x0038   (0x0020) 
+    ENDIExport_GPUAllocationMode                       GPUAllocationMode;                                          // 0x0058   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0059   (0x0003) MISSED
+    int32_t                                            GPUAllocationFixedSize;                                     // 0x005C   (0x0004) 
+    float                                              GPUAllocationPerParticleSize;                               // 0x0060   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0064   (0x0004) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGBuffer
@@ -1343,8 +1457,8 @@ public:
 class UNiagaraDataInterfaceRWBase : public UNiagaraDataInterface
 { 
 public:
-	TSet<int32_t>                                      OutputShaderStages;                                         // 0x0038   (0x0050)  
-	TSet<int32_t>                                      IterationShaderStages;                                      // 0x0088   (0x0050)  
+    TSet<int32_t>                                      OutputShaderStages;                                         // 0x0038   (0x0050) 
+    TSet<int32_t>                                      IterationShaderStages;                                      // 0x0088   (0x0050) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid2D
@@ -1352,14 +1466,14 @@ public:
 class UNiagaraDataInterfaceGrid2D : public UNiagaraDataInterfaceRWBase
 { 
 public:
-	int32_t                                            NumCellsX;                                                  // 0x00D8   (0x0004)  
-	int32_t                                            NumCellsY;                                                  // 0x00DC   (0x0004)  
-	int32_t                                            NumCellsMaxAxis;                                            // 0x00E0   (0x0004)  
-	int32_t                                            NumAttributes;                                              // 0x00E4   (0x0004)  
-	bool                                               SetGridFromMaxAxis;                                         // 0x00E8   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x00E9   (0x0003)  MISSED
-	FVector2D                                          WorldBBoxSize;                                              // 0x00EC   (0x0008)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x00F4   (0x0004)  MISSED
+    int32_t                                            NumCellsX;                                                  // 0x00D8   (0x0004) 
+    int32_t                                            NumCellsY;                                                  // 0x00DC   (0x0004) 
+    int32_t                                            NumCellsMaxAxis;                                            // 0x00E0   (0x0004) 
+    int32_t                                            NumAttributes;                                              // 0x00E4   (0x0004) 
+    bool                                               SetGridFromMaxAxis;                                         // 0x00E8   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x00E9   (0x0003) MISSED
+    FVector2D                                          WorldBBoxSize;                                              // 0x00EC   (0x0008) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x00F4   (0x0004) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid2DCollection
@@ -1367,21 +1481,34 @@ public:
 class UNiagaraDataInterfaceGrid2DCollection : public UNiagaraDataInterfaceGrid2D
 { 
 public:
-	FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x00F8   (0x0020)  
-	ENiagaraGpuBufferFormat                            OverrideBufferFormat;                                       // 0x0118   (0x0001)  
-	bool                                               bOverrideFormat : 1;                                        // 0x0119:0 (0x0001)  
-	unsigned char                                      UnknownData01_5[0x56];                                      // 0x011A   (0x0056)  MISSED
-	TMap<uint64_t, class UTextureRenderTarget2DArray*> ManagedRenderTargets;                                       // 0x0170   (0x0050)  
+    FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x00F8   (0x0020) 
+    ENiagaraGpuBufferFormat                            OverrideBufferFormat;                                       // 0x0118   (0x0001) 
+    bool                                               bOverrideFormat : 1;                                        // 0x0119:0 (0x0001) 
+    unsigned char                                      UnknownData01_5[0x56];                                      // 0x011A   (0x0056) MISSED
+    TMap<uint64_t, class UTextureRenderTarget2DArray*> ManagedRenderTargets;                                       // 0x0170   (0x0050) 
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&> GetTextureSize = { 0x114a3d0, 0 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&> GetRawTextureSize = { 0x114a5e0, 1 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, bool, const UNiagaraComponent*, const UTextureRenderTarget2D*, const int32_t> FillTexture2D = { 0x114aaa0, 2 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, bool, const UNiagaraComponent*, const UTextureRenderTarget2D*, const int32_t&, const int32_t&> FillRawTexture2D = { 0x114a7f0, 3 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize
+    // [0] Component : const UNiagaraComponent*
+    // [1] SizeX : const int32_t&
+    // [2] SizeY : const int32_t&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&> GetTextureSize = { 0x114a3d0, 0 };
+    // Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize
+    // [0] Component : const UNiagaraComponent*
+    // [1] SizeX : const int32_t&
+    // [2] SizeY : const int32_t&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&> GetRawTextureSize = { 0x114a5e0, 1 };
+    // Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D
+    // [0] Component : const UNiagaraComponent*
+    // [1] Dest : const UTextureRenderTarget2D*
+    // [2] AttributeIndex : const int32_t
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, bool, const UNiagaraComponent*, const UTextureRenderTarget2D*, const int32_t> FillTexture2D = { 0x114aaa0, 2 };
+    // Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D
+    // [0] Component : const UNiagaraComponent*
+    // [1] Dest : const UTextureRenderTarget2D*
+    // [2] TilesX : const int32_t&
+    // [3] TilesY : const int32_t&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, bool, const UNiagaraComponent*, const UTextureRenderTarget2D*, const int32_t&, const int32_t&> FillRawTexture2D = { 0x114a7f0, 3 };
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid2DCollectionReader
@@ -1389,9 +1516,9 @@ public:
 class UNiagaraDataInterfaceGrid2DCollectionReader : public UNiagaraDataInterfaceGrid2D
 { 
 public:
-	FString                                            EmitterName;                                                // 0x00F8   (0x0010)  
-	FString                                            DIName;                                                     // 0x0108   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x50];                                      // 0x0118   (0x0050)  MISSED
+    FString                                            EmitterName;                                                // 0x00F8   (0x0010) 
+    FString                                            DIName;                                                     // 0x0108   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x50];                                      // 0x0118   (0x0050) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid3D
@@ -1399,12 +1526,12 @@ public:
 class UNiagaraDataInterfaceGrid3D : public UNiagaraDataInterfaceRWBase
 { 
 public:
-	FIntVector                                         NumCells;                                                   // 0x00D8   (0x000C)  
-	float                                              CellSize;                                                   // 0x00E4   (0x0004)  
-	int32_t                                            NumCellsMaxAxis;                                            // 0x00E8   (0x0004)  
-	ESetResolutionMethod                               SetResolutionMethod;                                        // 0x00EC   (0x0004)  
-	FVector                                            WorldBBoxSize;                                              // 0x00F0   (0x000C)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x00FC   (0x0004)  MISSED
+    FIntVector                                         NumCells;                                                   // 0x00D8   (0x000C) 
+    float                                              CellSize;                                                   // 0x00E4   (0x0004) 
+    int32_t                                            NumCellsMaxAxis;                                            // 0x00E8   (0x0004) 
+    ESetResolutionMethod                               SetResolutionMethod;                                        // 0x00EC   (0x0004) 
+    FVector                                            WorldBBoxSize;                                              // 0x00F0   (0x000C) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x00FC   (0x0004) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid3DCollection
@@ -1412,21 +1539,37 @@ public:
 class UNiagaraDataInterfaceGrid3DCollection : public UNiagaraDataInterfaceGrid3D
 { 
 public:
-	int32_t                                            NumAttributes;                                              // 0x0100   (0x0004)  
-	unsigned char                                      UnknownData02_6[0x4];                                       // 0x0104   (0x0004)  MISSED
-	FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x0108   (0x0020)  
-	ENiagaraGpuBufferFormat                            BufferFormat;                                               // 0x0128   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x57];                                      // 0x0129   (0x0057)  MISSED
+    int32_t                                            NumAttributes;                                              // 0x0100   (0x0004) 
+    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0104   (0x0004) MISSED
+    FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x0108   (0x0020) 
+    ENiagaraGpuBufferFormat                            BufferFormat;                                               // 0x0128   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x57];                                      // 0x0129   (0x0057) MISSED
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&, const int32_t&> GetTextureSize = { 0x114b410, 0 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&, const int32_t&> GetRawTextureSize = { 0x114b6c0, 1 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, bool, const UNiagaraComponent*, const UVolumeTexture*, const int32_t> FillVolumeTexture = { 0x114aaa0, 2 }; 
-	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, bool, const UNiagaraComponent*, const UVolumeTexture*, const int32_t&, const int32_t&, const int32_t&> FillRawVolumeTexture = { 0x114b970, 3 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize
+    // [0] Component : const UNiagaraComponent*
+    // [1] SizeX : const int32_t&
+    // [2] SizeY : const int32_t&
+    // [3] SizeZ : const int32_t&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&, const int32_t&> GetTextureSize = { 0x114b410, 0 };
+    // Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize
+    // [0] Component : const UNiagaraComponent*
+    // [1] SizeX : const int32_t&
+    // [2] SizeY : const int32_t&
+    // [3] SizeZ : const int32_t&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&, const int32_t&> GetRawTextureSize = { 0x114b6c0, 1 };
+    // Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture
+    // [0] Component : const UNiagaraComponent*
+    // [1] Dest : const UVolumeTexture*
+    // [2] AttributeIndex : const int32_t
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, bool, const UNiagaraComponent*, const UVolumeTexture*, const int32_t> FillVolumeTexture = { 0x114aaa0, 2 };
+    // Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture
+    // [0] Component : const UNiagaraComponent*
+    // [1] Dest : const UVolumeTexture*
+    // [2] TilesX : const int32_t&
+    // [3] TilesY : const int32_t&
+    // [4] TileZ : const int32_t&
+    constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, bool, const UNiagaraComponent*, const UVolumeTexture*, const int32_t&, const int32_t&, const int32_t&> FillRawVolumeTexture = { 0x114b970, 3 };
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceLandscape
@@ -1434,7 +1577,7 @@ public:
 class UNiagaraDataInterfaceLandscape : public UNiagaraDataInterface
 { 
 public:
-	class AActor*                                      SourceLandscape;                                            // 0x0038   (0x0008)  
+    class AActor*                                      SourceLandscape;                                            // 0x0038   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceNeighborGrid3D
@@ -1442,8 +1585,8 @@ public:
 class UNiagaraDataInterfaceNeighborGrid3D : public UNiagaraDataInterfaceGrid3D
 { 
 public:
-	uint32_t                                           MaxNeighborsPerCell;                                        // 0x0100   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x0104   (0x0004)  MISSED
+    uint32_t                                           MaxNeighborsPerCell;                                        // 0x0100   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0104   (0x0004) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceOcclusion
@@ -1458,7 +1601,7 @@ public:
 class UNiagaraDataInterfaceParticleRead : public UNiagaraDataInterfaceRWBase
 { 
 public:
-	FString                                            EmitterName;                                                // 0x00D8   (0x0010)  
+    FString                                            EmitterName;                                                // 0x00D8   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfacePlatformSet
@@ -1466,7 +1609,7 @@ public:
 class UNiagaraDataInterfacePlatformSet : public UNiagaraDataInterface
 { 
 public:
-	FNiagaraPlatformSet                                Platforms;                                                  // 0x0038   (0x0030)  
+    FNiagaraPlatformSet                                Platforms;                                                  // 0x0038   (0x0030) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceRenderTarget2D
@@ -1474,12 +1617,12 @@ public:
 class UNiagaraDataInterfaceRenderTarget2D : public UNiagaraDataInterfaceRWBase
 { 
 public:
-	FIntPoint                                          Size;                                                       // 0x00D8   (0x0008)  
-	TEnumAsByte<ETextureRenderTargetFormat>            OverrideRenderTargetFormat;                                 // 0x00E0   (0x0001)  
-	bool                                               bOverrideFormat : 1;                                        // 0x00E1:0 (0x0001)  
-	unsigned char                                      UnknownData01_5[0x6];                                       // 0x00E2   (0x0006)  MISSED
-	FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x00E8   (0x0020)  
-	TMap<uint64_t, class UTextureRenderTarget2D*>      ManagedRenderTargets;                                       // 0x0108   (0x0050)  
+    FIntPoint                                          Size;                                                       // 0x00D8   (0x0008) 
+    TEnumAsByte<ETextureRenderTargetFormat>            OverrideRenderTargetFormat;                                 // 0x00E0   (0x0001) 
+    bool                                               bOverrideFormat : 1;                                        // 0x00E1:0 (0x0001) 
+    unsigned char                                      UnknownData01_5[0x6];                                       // 0x00E2   (0x0006) MISSED
+    FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x00E8   (0x0020) 
+    TMap<uint64_t, class UTextureRenderTarget2D*>      ManagedRenderTargets;                                       // 0x0108   (0x0050) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceRenderTarget2DArray
@@ -1487,12 +1630,12 @@ public:
 class UNiagaraDataInterfaceRenderTarget2DArray : public UNiagaraDataInterfaceRWBase
 { 
 public:
-	FIntVector                                         Size;                                                       // 0x00D8   (0x000C)  
-	TEnumAsByte<ETextureRenderTargetFormat>            OverrideRenderTargetFormat;                                 // 0x00E4   (0x0001)  
-	bool                                               bOverrideFormat : 1;                                        // 0x00E5:0 (0x0001)  
-	unsigned char                                      UnknownData01_5[0x2];                                       // 0x00E6   (0x0002)  MISSED
-	FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x00E8   (0x0020)  
-	TMap<uint64_t, class UTextureRenderTarget2DArray*> ManagedRenderTargets;                                       // 0x0108   (0x0050)  
+    FIntVector                                         Size;                                                       // 0x00D8   (0x000C) 
+    TEnumAsByte<ETextureRenderTargetFormat>            OverrideRenderTargetFormat;                                 // 0x00E4   (0x0001) 
+    bool                                               bOverrideFormat : 1;                                        // 0x00E5:0 (0x0001) 
+    unsigned char                                      UnknownData01_5[0x2];                                       // 0x00E6   (0x0002) MISSED
+    FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x00E8   (0x0020) 
+    TMap<uint64_t, class UTextureRenderTarget2DArray*> ManagedRenderTargets;                                       // 0x0108   (0x0050) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceRenderTargetVolume
@@ -1500,12 +1643,12 @@ public:
 class UNiagaraDataInterfaceRenderTargetVolume : public UNiagaraDataInterfaceRWBase
 { 
 public:
-	FIntVector                                         Size;                                                       // 0x00D8   (0x000C)  
-	TEnumAsByte<ETextureRenderTargetFormat>            OverrideRenderTargetFormat;                                 // 0x00E4   (0x0001)  
-	bool                                               bOverrideFormat : 1;                                        // 0x00E5:0 (0x0001)  
-	unsigned char                                      UnknownData01_5[0x2];                                       // 0x00E6   (0x0002)  MISSED
-	FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x00E8   (0x0020)  
-	TMap<uint64_t, class UTextureRenderTargetVolume*>  ManagedRenderTargets;                                       // 0x0108   (0x0050)  
+    FIntVector                                         Size;                                                       // 0x00D8   (0x000C) 
+    TEnumAsByte<ETextureRenderTargetFormat>            OverrideRenderTargetFormat;                                 // 0x00E4   (0x0001) 
+    bool                                               bOverrideFormat : 1;                                        // 0x00E5:0 (0x0001) 
+    unsigned char                                      UnknownData01_5[0x2];                                       // 0x00E6   (0x0002) MISSED
+    FNiagaraUserParameterBinding                       RenderTargetUserParameter;                                  // 0x00E8   (0x0020) 
+    TMap<uint64_t, class UTextureRenderTargetVolume*>  ManagedRenderTargets;                                       // 0x0108   (0x0050) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSimpleCounter
@@ -1520,22 +1663,22 @@ public:
 class UNiagaraDataInterfaceSkeletalMesh : public UNiagaraDataInterface
 { 
 public:
-	ENDISkeletalMesh_SourceMode                        SourceMode;                                                 // 0x0038   (0x0001)  
-	unsigned char                                      UnknownData04_6[0x7];                                       // 0x0039   (0x0007)  MISSED
-	class AActor*                                      Source;                                                     // 0x0040   (0x0008)  
-	FNiagaraUserParameterBinding                       MeshUserParameter;                                          // 0x0048   (0x0020)  
-	class USkeletalMeshComponent*                      SourceComponent;                                            // 0x0068   (0x0008)  
-	ENDISkeletalMesh_SkinningMode                      SkinningMode;                                               // 0x0070   (0x0001)  
-	unsigned char                                      UnknownData05_6[0x7];                                       // 0x0071   (0x0007)  MISSED
-	TArray<FName>                                      SamplingRegions;                                            // 0x0078   (0x0010)  
-	int32_t                                            WholeMeshLOD;                                               // 0x0088   (0x0004)  
-	unsigned char                                      UnknownData06_6[0x4];                                       // 0x008C   (0x0004)  MISSED
-	TArray<FName>                                      FilteredBones;                                              // 0x0090   (0x0010)  
-	TArray<FName>                                      FilteredSockets;                                            // 0x00A0   (0x0010)  
-	FName                                              ExcludeBoneName;                                            // 0x00B0   (0x0008)  
-	bool                                               bExcludeBone : 1;                                           // 0x00B8:0 (0x0001)  
-	bool                                               bRequireCurrentFrameData;                                   // 0x00B9   (0x0001)  
-	unsigned char                                      UnknownData07_7[0x6];                                       // 0x00BA   (0x0006)  MISSED
+    ENDISkeletalMesh_SourceMode                        SourceMode;                                                 // 0x0038   (0x0001) 
+    unsigned char                                      UnknownData04_6[0x7];                                       // 0x0039   (0x0007) MISSED
+    class AActor*                                      Source;                                                     // 0x0040   (0x0008) 
+    FNiagaraUserParameterBinding                       MeshUserParameter;                                          // 0x0048   (0x0020) 
+    class USkeletalMeshComponent*                      SourceComponent;                                            // 0x0068   (0x0008) 
+    ENDISkeletalMesh_SkinningMode                      SkinningMode;                                               // 0x0070   (0x0001) 
+    unsigned char                                      UnknownData05_6[0x7];                                       // 0x0071   (0x0007) MISSED
+    TArray<FName>                                      SamplingRegions;                                            // 0x0078   (0x0010) 
+    int32_t                                            WholeMeshLOD;                                               // 0x0088   (0x0004) 
+    unsigned char                                      UnknownData06_6[0x4];                                       // 0x008C   (0x0004) MISSED
+    TArray<FName>                                      FilteredBones;                                              // 0x0090   (0x0010) 
+    TArray<FName>                                      FilteredSockets;                                            // 0x00A0   (0x0010) 
+    FName                                              ExcludeBoneName;                                            // 0x00B0   (0x0008) 
+    bool                                               bExcludeBone : 1;                                           // 0x00B8:0 (0x0001) 
+    bool                                               bRequireCurrentFrameData;                                   // 0x00B9   (0x0001) 
+    unsigned char                                      UnknownData07_7[0x6];                                       // 0x00BA   (0x0006) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSpline
@@ -1543,14 +1686,14 @@ public:
 class UNiagaraDataInterfaceSpline : public UNiagaraDataInterface
 { 
 public:
-	class AActor*                                      Source;                                                     // 0x0038   (0x0008)  
+    class AActor*                                      Source;                                                     // 0x0038   (0x0008) 
 };
 
 /// Struct /Script/Niagara.NDIStaticMeshSectionFilter
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNDIStaticMeshSectionFilter
 { 
-	TArray<int32_t>                                    AllowedMaterialSlots;                                       // 0x0000   (0x0010)  
+    TArray<int32_t>                                    AllowedMaterialSlots;                                       // 0x0000   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceStaticMesh
@@ -1558,16 +1701,16 @@ struct FNDIStaticMeshSectionFilter
 class UNiagaraDataInterfaceStaticMesh : public UNiagaraDataInterface
 { 
 public:
-	ENDIStaticMesh_SourceMode                          SourceMode;                                                 // 0x0038   (0x0001)  
-	unsigned char                                      UnknownData03_6[0x7];                                       // 0x0039   (0x0007)  MISSED
-	class UStaticMesh*                                 DefaultMesh;                                                // 0x0040   (0x0008)  
-	class AActor*                                      Source;                                                     // 0x0048   (0x0008)  
-	class UStaticMeshComponent*                        SourceComponent;                                            // 0x0050   (0x0008)  
-	FNDIStaticMeshSectionFilter                        SectionFilter;                                              // 0x0058   (0x0010)  
-	bool                                               bUsePhysicsBodyVelocity;                                    // 0x0068   (0x0001)  
-	unsigned char                                      UnknownData04_6[0x7];                                       // 0x0069   (0x0007)  MISSED
-	TArray<FName>                                      FilteredSockets;                                            // 0x0070   (0x0010)  
-	unsigned char                                      UnknownData05_7[0x8];                                       // 0x0080   (0x0008)  MISSED
+    ENDIStaticMesh_SourceMode                          SourceMode;                                                 // 0x0038   (0x0001) 
+    unsigned char                                      UnknownData03_6[0x7];                                       // 0x0039   (0x0007) MISSED
+    class UStaticMesh*                                 DefaultMesh;                                                // 0x0040   (0x0008) 
+    class AActor*                                      Source;                                                     // 0x0048   (0x0008) 
+    class UStaticMeshComponent*                        SourceComponent;                                            // 0x0050   (0x0008) 
+    FNDIStaticMeshSectionFilter                        SectionFilter;                                              // 0x0058   (0x0010) 
+    bool                                               bUsePhysicsBodyVelocity;                                    // 0x0068   (0x0001) 
+    unsigned char                                      UnknownData04_6[0x7];                                       // 0x0069   (0x0007) MISSED
+    TArray<FName>                                      FilteredSockets;                                            // 0x0070   (0x0010) 
+    unsigned char                                      UnknownData05_7[0x8];                                       // 0x0080   (0x0008) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceTexture
@@ -1575,7 +1718,7 @@ public:
 class UNiagaraDataInterfaceTexture : public UNiagaraDataInterface
 { 
 public:
-	class UTexture*                                    Texture;                                                    // 0x0038   (0x0008)  
+    class UTexture*                                    Texture;                                                    // 0x0038   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVector2DCurve
@@ -1583,8 +1726,8 @@ public:
 class UNiagaraDataInterfaceVector2DCurve : public UNiagaraDataInterfaceCurveBase
 { 
 public:
-	FRichCurve                                         XCurve;                                                     // 0x0070   (0x0080)  
-	FRichCurve                                         YCurve;                                                     // 0x00F0   (0x0080)  
+    FRichCurve                                         XCurve;                                                     // 0x0070   (0x0080) 
+    FRichCurve                                         YCurve;                                                     // 0x00F0   (0x0080) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVector4Curve
@@ -1592,10 +1735,10 @@ public:
 class UNiagaraDataInterfaceVector4Curve : public UNiagaraDataInterfaceCurveBase
 { 
 public:
-	FRichCurve                                         XCurve;                                                     // 0x0070   (0x0080)  
-	FRichCurve                                         YCurve;                                                     // 0x00F0   (0x0080)  
-	FRichCurve                                         ZCurve;                                                     // 0x0170   (0x0080)  
-	FRichCurve                                         WCurve;                                                     // 0x01F0   (0x0080)  
+    FRichCurve                                         XCurve;                                                     // 0x0070   (0x0080) 
+    FRichCurve                                         YCurve;                                                     // 0x00F0   (0x0080) 
+    FRichCurve                                         ZCurve;                                                     // 0x0170   (0x0080) 
+    FRichCurve                                         WCurve;                                                     // 0x01F0   (0x0080) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVectorCurve
@@ -1603,9 +1746,9 @@ public:
 class UNiagaraDataInterfaceVectorCurve : public UNiagaraDataInterfaceCurveBase
 { 
 public:
-	FRichCurve                                         XCurve;                                                     // 0x0070   (0x0080)  
-	FRichCurve                                         YCurve;                                                     // 0x00F0   (0x0080)  
-	FRichCurve                                         ZCurve;                                                     // 0x0170   (0x0080)  
+    FRichCurve                                         XCurve;                                                     // 0x0070   (0x0080) 
+    FRichCurve                                         YCurve;                                                     // 0x00F0   (0x0080) 
+    FRichCurve                                         ZCurve;                                                     // 0x0170   (0x0080) 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVectorField
@@ -1613,11 +1756,11 @@ public:
 class UNiagaraDataInterfaceVectorField : public UNiagaraDataInterface
 { 
 public:
-	class UVectorField*                                Field;                                                      // 0x0038   (0x0008)  
-	bool                                               bTileX;                                                     // 0x0040   (0x0001)  
-	bool                                               bTileY;                                                     // 0x0041   (0x0001)  
-	bool                                               bTileZ;                                                     // 0x0042   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x5];                                       // 0x0043   (0x0005)  MISSED
+    class UVectorField*                                Field;                                                      // 0x0038   (0x0008) 
+    bool                                               bTileX;                                                     // 0x0040   (0x0001) 
+    bool                                               bTileY;                                                     // 0x0041   (0x0001) 
+    bool                                               bTileZ;                                                     // 0x0042   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x5];                                       // 0x0043   (0x0005) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVolumeTexture
@@ -1625,7 +1768,7 @@ public:
 class UNiagaraDataInterfaceVolumeTexture : public UNiagaraDataInterface
 { 
 public:
-	class UVolumeTexture*                              Texture;                                                    // 0x0038   (0x0008)  
+    class UVolumeTexture*                              Texture;                                                    // 0x0038   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraEditorDataBase
@@ -1660,41 +1803,41 @@ public:
 /// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FNiagaraSystemScalabilitySettings
 { 
-	FNiagaraPlatformSet                                Platforms;                                                  // 0x0000   (0x0030)  
-	bool                                               bCullByDistance : 1;                                        // 0x0030:0 (0x0001)  
-	bool                                               bCullMaxInstanceCount : 1;                                  // 0x0030:1 (0x0001)  
-	bool                                               bCullPerSystemMaxInstanceCount : 1;                         // 0x0030:2 (0x0001)  
-	bool                                               bCullByMaxTimeWithoutRender : 1;                            // 0x0030:3 (0x0001)  
-	unsigned char                                      UnknownData02_5[0x3];                                       // 0x0031   (0x0003)  MISSED
-	float                                              MaxDistance;                                                // 0x0034   (0x0004)  
-	int32_t                                            MaxInstances;                                               // 0x0038   (0x0004)  
-	int32_t                                            MaxSystemInstances;                                         // 0x003C   (0x0004)  
-	float                                              MaxTimeWithoutRender;                                       // 0x0040   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x0044   (0x0004)  MISSED
+    FNiagaraPlatformSet                                Platforms;                                                  // 0x0000   (0x0030) 
+    bool                                               bCullByDistance : 1;                                        // 0x0030:0 (0x0001) 
+    bool                                               bCullMaxInstanceCount : 1;                                  // 0x0030:1 (0x0001) 
+    bool                                               bCullPerSystemMaxInstanceCount : 1;                         // 0x0030:2 (0x0001) 
+    bool                                               bCullByMaxTimeWithoutRender : 1;                            // 0x0030:3 (0x0001) 
+    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0031   (0x0003) MISSED
+    float                                              MaxDistance;                                                // 0x0034   (0x0004) 
+    int32_t                                            MaxInstances;                                               // 0x0038   (0x0004) 
+    int32_t                                            MaxSystemInstances;                                         // 0x003C   (0x0004) 
+    float                                              MaxTimeWithoutRender;                                       // 0x0040   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0044   (0x0004) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraSystemScalabilitySettingsArray
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraSystemScalabilitySettingsArray
 { 
-	TArray<FNiagaraSystemScalabilitySettings>          Settings;                                                   // 0x0000   (0x0010)  
+    TArray<FNiagaraSystemScalabilitySettings>          Settings;                                                   // 0x0000   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterScalabilitySettings
 /// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FNiagaraEmitterScalabilitySettings
 { 
-	FNiagaraPlatformSet                                Platforms;                                                  // 0x0000   (0x0030)  
-	bool                                               bScaleSpawnCount : 1;                                       // 0x0030:0 (0x0001)  
-	unsigned char                                      UnknownData01_5[0x3];                                       // 0x0031   (0x0003)  MISSED
-	float                                              SpawnCountScale;                                            // 0x0034   (0x0004)  
+    FNiagaraPlatformSet                                Platforms;                                                  // 0x0000   (0x0030) 
+    bool                                               bScaleSpawnCount : 1;                                       // 0x0030:0 (0x0001) 
+    unsigned char                                      UnknownData01_5[0x3];                                       // 0x0031   (0x0003) MISSED
+    float                                              SpawnCountScale;                                            // 0x0034   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterScalabilitySettingsArray
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraEmitterScalabilitySettingsArray
 { 
-	TArray<FNiagaraEmitterScalabilitySettings>         Settings;                                                   // 0x0000   (0x0010)  
+    TArray<FNiagaraEmitterScalabilitySettings>         Settings;                                                   // 0x0000   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraEffectType
@@ -1702,131 +1845,131 @@ struct FNiagaraEmitterScalabilitySettingsArray
 class UNiagaraEffectType : public UObject
 { 
 public:
-	ENiagaraScalabilityUpdateFrequency                 UpdateFrequency;                                            // 0x0028   (0x0004)  
-	ENiagaraCullReaction                               CullReaction;                                               // 0x002C   (0x0004)  
-	class UNiagaraSignificanceHandler*                 SignificanceHandler;                                        // 0x0030   (0x0008)  
-	TArray<FNiagaraSystemScalabilitySettings>          DetailLevelScalabilitySettings;                             // 0x0038   (0x0010)  
-	FNiagaraSystemScalabilitySettingsArray             SystemScalabilitySettings;                                  // 0x0048   (0x0010)  
-	FNiagaraEmitterScalabilitySettingsArray            EmitterScalabilitySettings;                                 // 0x0058   (0x0010)  
-	unsigned char                                      UnknownData01_7[0xA8];                                      // 0x0068   (0x00A8)  MISSED
+    ENiagaraScalabilityUpdateFrequency                 UpdateFrequency;                                            // 0x0028   (0x0004) 
+    ENiagaraCullReaction                               CullReaction;                                               // 0x002C   (0x0004) 
+    class UNiagaraSignificanceHandler*                 SignificanceHandler;                                        // 0x0030   (0x0008) 
+    TArray<FNiagaraSystemScalabilitySettings>          DetailLevelScalabilitySettings;                             // 0x0038   (0x0010) 
+    FNiagaraSystemScalabilitySettingsArray             SystemScalabilitySettings;                                  // 0x0048   (0x0010) 
+    FNiagaraEmitterScalabilitySettingsArray            EmitterScalabilitySettings;                                 // 0x0058   (0x0010) 
+    unsigned char                                      UnknownData01_7[0xA8];                                      // 0x0068   (0x00A8) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraEventReceiverProperties
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FNiagaraEventReceiverProperties
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
-	FName                                              SourceEventGenerator;                                       // 0x0008   (0x0008)  
-	FName                                              SourceEmitter;                                              // 0x0010   (0x0008)  
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    FName                                              SourceEventGenerator;                                       // 0x0008   (0x0008) 
+    FName                                              SourceEmitter;                                              // 0x0010   (0x0008) 
 };
 
 /// Struct /Script/Niagara.NiagaraTypeLayoutInfo
 /// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FNiagaraTypeLayoutInfo
 { 
-	TArray<uint32_t>                                   FloatComponentByteOffsets;                                  // 0x0000   (0x0010)  
-	TArray<uint32_t>                                   FloatComponentRegisterOffsets;                              // 0x0010   (0x0010)  
-	TArray<uint32_t>                                   Int32ComponentByteOffsets;                                  // 0x0020   (0x0010)  
-	TArray<uint32_t>                                   Int32ComponentRegisterOffsets;                              // 0x0030   (0x0010)  
-	TArray<uint32_t>                                   HalfComponentByteOffsets;                                   // 0x0040   (0x0010)  
-	TArray<uint32_t>                                   HalfComponentRegisterOffsets;                               // 0x0050   (0x0010)  
+    TArray<uint32_t>                                   FloatComponentByteOffsets;                                  // 0x0000   (0x0010) 
+    TArray<uint32_t>                                   FloatComponentRegisterOffsets;                              // 0x0010   (0x0010) 
+    TArray<uint32_t>                                   Int32ComponentByteOffsets;                                  // 0x0020   (0x0010) 
+    TArray<uint32_t>                                   Int32ComponentRegisterOffsets;                              // 0x0030   (0x0010) 
+    TArray<uint32_t>                                   HalfComponentByteOffsets;                                   // 0x0040   (0x0010) 
+    TArray<uint32_t>                                   HalfComponentRegisterOffsets;                               // 0x0050   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraVariableLayoutInfo
 /// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align n/a MaxSize: 0x0070
 struct FNiagaraVariableLayoutInfo
 { 
-	uint32_t                                           FloatComponentStart;                                        // 0x0000   (0x0004)  
-	uint32_t                                           Int32ComponentStart;                                        // 0x0004   (0x0004)  
-	uint32_t                                           HalfComponentStart;                                         // 0x0008   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004)  MISSED
-	FNiagaraTypeLayoutInfo                             LayoutInfo;                                                 // 0x0010   (0x0060)  
+    uint32_t                                           FloatComponentStart;                                        // 0x0000   (0x0004) 
+    uint32_t                                           Int32ComponentStart;                                        // 0x0004   (0x0004) 
+    uint32_t                                           HalfComponentStart;                                         // 0x0008   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    FNiagaraTypeLayoutInfo                             LayoutInfo;                                                 // 0x0010   (0x0060) 
 };
 
 /// Struct /Script/Niagara.NiagaraDataSetID
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FNiagaraDataSetID
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
-	ENiagaraDataSetType                                Type;                                                       // 0x0008   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0009   (0x0003)  MISSED
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    ENiagaraDataSetType                                Type;                                                       // 0x0008   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0009   (0x0003) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraDataSetCompiledData
 /// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FNiagaraDataSetCompiledData
 { 
-	TArray<FNiagaraVariable>                           Variables;                                                  // 0x0000   (0x0010)  
-	TArray<FNiagaraVariableLayoutInfo>                 VariableLayouts;                                            // 0x0010   (0x0010)  
-	FNiagaraDataSetID                                  ID;                                                         // 0x0020   (0x000C)  
-	uint32_t                                           TotalFloatComponents;                                       // 0x002C   (0x0004)  
-	uint32_t                                           TotalInt32Components;                                       // 0x0030   (0x0004)  
-	uint32_t                                           TotalHalfComponents;                                        // 0x0034   (0x0004)  
-	bool                                               bRequiresPersistentIDs : 1;                                 // 0x0038:0 (0x0001)  
-	unsigned char                                      UnknownData02_5[0x3];                                       // 0x0039   (0x0003)  MISSED
-	ENiagaraSimTarget                                  SimTarget;                                                  // 0x003C   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x3];                                       // 0x003D   (0x0003)  MISSED
+    TArray<FNiagaraVariable>                           Variables;                                                  // 0x0000   (0x0010) 
+    TArray<FNiagaraVariableLayoutInfo>                 VariableLayouts;                                            // 0x0010   (0x0010) 
+    FNiagaraDataSetID                                  ID;                                                         // 0x0020   (0x000C) 
+    uint32_t                                           TotalFloatComponents;                                       // 0x002C   (0x0004) 
+    uint32_t                                           TotalInt32Components;                                       // 0x0030   (0x0004) 
+    uint32_t                                           TotalHalfComponents;                                        // 0x0034   (0x0004) 
+    bool                                               bRequiresPersistentIDs : 1;                                 // 0x0038:0 (0x0001) 
+    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0039   (0x0003) MISSED
+    ENiagaraSimTarget                                  SimTarget;                                                  // 0x003C   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x3];                                       // 0x003D   (0x0003) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraEventGeneratorProperties
 /// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FNiagaraEventGeneratorProperties
 { 
-	int32_t                                            MaxEventsPerFrame;                                          // 0x0000   (0x0004)  
-	FName                                              ID;                                                         // 0x0004   (0x0008)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004)  MISSED
-	FNiagaraDataSetCompiledData                        DataSetCompiledData;                                        // 0x0010   (0x0040)  
+    int32_t                                            MaxEventsPerFrame;                                          // 0x0000   (0x0004) 
+    FName                                              ID;                                                         // 0x0004   (0x0008) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    FNiagaraDataSetCompiledData                        DataSetCompiledData;                                        // 0x0010   (0x0040) 
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterScriptProperties
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FNiagaraEmitterScriptProperties
 { 
-	class UNiagaraScript*                              Script;                                                     // 0x0000   (0x0008)  
-	TArray<FNiagaraEventReceiverProperties>            EventReceivers;                                             // 0x0008   (0x0010)  
-	TArray<FNiagaraEventGeneratorProperties>           EventGenerators;                                            // 0x0018   (0x0010)  
+    class UNiagaraScript*                              Script;                                                     // 0x0000   (0x0008) 
+    TArray<FNiagaraEventReceiverProperties>            EventReceivers;                                             // 0x0008   (0x0010) 
+    TArray<FNiagaraEventGeneratorProperties>           EventGenerators;                                            // 0x0018   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraDetailsLevelScaleOverrides
 /// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
 struct FNiagaraDetailsLevelScaleOverrides
 { 
-	float                                              Low;                                                        // 0x0000   (0x0004)  
-	float                                              Medium;                                                     // 0x0004   (0x0004)  
-	float                                              High;                                                       // 0x0008   (0x0004)  
-	float                                              Epic;                                                       // 0x000C   (0x0004)  
-	float                                              Cine;                                                       // 0x0010   (0x0004)  
+    float                                              Low;                                                        // 0x0000   (0x0004) 
+    float                                              Medium;                                                     // 0x0004   (0x0004) 
+    float                                              High;                                                       // 0x0008   (0x0004) 
+    float                                              Epic;                                                       // 0x000C   (0x0004) 
+    float                                              Cine;                                                       // 0x0010   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterScalabilityOverride
 /// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align n/a MaxSize: 0x0040
 struct FNiagaraEmitterScalabilityOverride : FNiagaraEmitterScalabilitySettings
 { 
-	bool                                               bOverrideSpawnCountScale : 1;                               // 0x0038:0 (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0039   (0x0007)  MISSED
+    bool                                               bOverrideSpawnCountScale : 1;                               // 0x0038:0 (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0039   (0x0007) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterScalabilityOverrides
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraEmitterScalabilityOverrides
 { 
-	TArray<FNiagaraEmitterScalabilityOverride>         Overrides;                                                  // 0x0000   (0x0010)  
+    TArray<FNiagaraEmitterScalabilityOverride>         Overrides;                                                  // 0x0000   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraEventScriptProperties
 /// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 struct FNiagaraEventScriptProperties : FNiagaraEmitterScriptProperties
 { 
-	EScriptExecutionMode                               ExecutionMode;                                              // 0x0028   (0x0001)  
-	unsigned char                                      UnknownData03_6[0x3];                                       // 0x0029   (0x0003)  MISSED
-	uint32_t                                           SpawnNumber;                                                // 0x002C   (0x0004)  
-	uint32_t                                           MaxEventsPerFrame;                                          // 0x0030   (0x0004)  
-	FGuid                                              SourceEmitterID;                                            // 0x0034   (0x0010)  
-	FName                                              SourceEventName;                                            // 0x0044   (0x0008)  
-	bool                                               bRandomSpawnNumber;                                         // 0x004C   (0x0001)  
-	unsigned char                                      UnknownData04_6[0x3];                                       // 0x004D   (0x0003)  MISSED
-	uint32_t                                           MinSpawnNumber;                                             // 0x0050   (0x0004)  
-	unsigned char                                      UnknownData05_7[0x4];                                       // 0x0054   (0x0004)  MISSED
+    EScriptExecutionMode                               ExecutionMode;                                              // 0x0028   (0x0001) 
+    unsigned char                                      UnknownData03_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    uint32_t                                           SpawnNumber;                                                // 0x002C   (0x0004) 
+    uint32_t                                           MaxEventsPerFrame;                                          // 0x0030   (0x0004) 
+    FGuid                                              SourceEmitterID;                                            // 0x0034   (0x0010) 
+    FName                                              SourceEventName;                                            // 0x0044   (0x0008) 
+    bool                                               bRandomSpawnNumber;                                         // 0x004C   (0x0001) 
+    unsigned char                                      UnknownData04_6[0x3];                                       // 0x004D   (0x0003) MISSED
+    uint32_t                                           MinSpawnNumber;                                             // 0x0050   (0x0004) 
+    unsigned char                                      UnknownData05_7[0x4];                                       // 0x0054   (0x0004) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraEmitter
@@ -1834,47 +1977,47 @@ struct FNiagaraEventScriptProperties : FNiagaraEmitterScriptProperties
 class UNiagaraEmitter : public UObject
 { 
 public:
-	bool                                               bLocalSpace;                                                // 0x0028   (0x0001)  
-	bool                                               bDeterminism;                                               // 0x0029   (0x0001)  
-	unsigned char                                      UnknownData07_6[0x2];                                       // 0x002A   (0x0002)  MISSED
-	int32_t                                            RandomSeed;                                                 // 0x002C   (0x0004)  
-	EParticleAllocationMode                            AllocationMode;                                             // 0x0030   (0x0001)  
-	unsigned char                                      UnknownData08_6[0x3];                                       // 0x0031   (0x0003)  MISSED
-	int32_t                                            PreAllocationCount;                                         // 0x0034   (0x0004)  
-	FNiagaraEmitterScriptProperties                    UpdateScriptProps;                                          // 0x0038   (0x0028)  
-	FNiagaraEmitterScriptProperties                    SpawnScriptProps;                                           // 0x0060   (0x0028)  
-	ENiagaraSimTarget                                  SimTarget;                                                  // 0x0088   (0x0001)  
-	unsigned char                                      UnknownData09_6[0x3];                                       // 0x0089   (0x0003)  MISSED
-	FBox                                               FixedBounds;                                                // 0x008C   (0x001C)  
-	int32_t                                            MinDetailLevel;                                             // 0x00A8   (0x0004)  
-	int32_t                                            MaxDetailLevel;                                             // 0x00AC   (0x0004)  
-	FNiagaraDetailsLevelScaleOverrides                 GlobalSpawnCountScaleOverrides;                             // 0x00B0   (0x0014)  
-	unsigned char                                      UnknownData10_6[0x4];                                       // 0x00C4   (0x0004)  MISSED
-	FNiagaraPlatformSet                                Platforms;                                                  // 0x00C8   (0x0030)  
-	FNiagaraEmitterScalabilityOverrides                ScalabilityOverrides;                                       // 0x00F8   (0x0010)  
-	bool                                               bInterpolatedSpawning : 1;                                  // 0x0108:0 (0x0001)  
-	bool                                               bFixedBounds : 1;                                           // 0x0108:1 (0x0001)  
-	bool                                               bUseMinDetailLevel : 1;                                     // 0x0108:2 (0x0001)  
-	bool                                               bUseMaxDetailLevel : 1;                                     // 0x0108:3 (0x0001)  
-	bool                                               bOverrideGlobalSpawnCountScale : 1;                         // 0x0108:4 (0x0001)  
-	bool                                               bRequiresPersistentIDs : 1;                                 // 0x0108:5 (0x0001)  
-	bool                                               bCombineEventSpawn : 1;                                     // 0x0108:6 (0x0001)  
-	unsigned char                                      UnknownData11_5[0x3];                                       // 0x0109   (0x0003)  MISSED
-	float                                              MaxDeltaTimePerTick;                                        // 0x010C   (0x0004)  
-	uint32_t                                           DefaultShaderStageIndex;                                    // 0x0110   (0x0004)  
-	uint32_t                                           MaxUpdateIterations;                                        // 0x0114   (0x0004)  
-	TSet<uint32_t>                                     SpawnStages;                                                // 0x0118   (0x0050)  
-	bool                                               bSimulationStagesEnabled : 1;                               // 0x0168:0 (0x0001)  
-	bool                                               bDeprecatedShaderStagesEnabled : 1;                         // 0x0168:1 (0x0001)  
-	bool                                               bLimitDeltaTime : 1;                                        // 0x0168:2 (0x0001)  
-	unsigned char                                      UnknownData12_5[0x7];                                       // 0x0169   (0x0007)  MISSED
-	FString                                            UniqueEmitterName;                                          // 0x0170   (0x0010)  
-	TArray<class UNiagaraRendererProperties*>          RendererProperties;                                         // 0x0180   (0x0010)  
-	TArray<FNiagaraEventScriptProperties>              EventHandlerScriptProps;                                    // 0x0190   (0x0010)  
-	TArray<class UNiagaraSimulationStageBase*>         SimulationStages;                                           // 0x01A0   (0x0010)  
-	class UNiagaraScript*                              GPUComputeScript;                                           // 0x01B0   (0x0008)  
-	TArray<FName>                                      SharedEventGeneratorIds;                                    // 0x01B8   (0x0010)  
-	unsigned char                                      UnknownData13_7[0xD8];                                      // 0x01C8   (0x00D8)  MISSED
+    bool                                               bLocalSpace;                                                // 0x0028   (0x0001) 
+    bool                                               bDeterminism;                                               // 0x0029   (0x0001) 
+    unsigned char                                      UnknownData07_6[0x2];                                       // 0x002A   (0x0002) MISSED
+    int32_t                                            RandomSeed;                                                 // 0x002C   (0x0004) 
+    EParticleAllocationMode                            AllocationMode;                                             // 0x0030   (0x0001) 
+    unsigned char                                      UnknownData08_6[0x3];                                       // 0x0031   (0x0003) MISSED
+    int32_t                                            PreAllocationCount;                                         // 0x0034   (0x0004) 
+    FNiagaraEmitterScriptProperties                    UpdateScriptProps;                                          // 0x0038   (0x0028) 
+    FNiagaraEmitterScriptProperties                    SpawnScriptProps;                                           // 0x0060   (0x0028) 
+    ENiagaraSimTarget                                  SimTarget;                                                  // 0x0088   (0x0001) 
+    unsigned char                                      UnknownData09_6[0x3];                                       // 0x0089   (0x0003) MISSED
+    FBox                                               FixedBounds;                                                // 0x008C   (0x001C) 
+    int32_t                                            MinDetailLevel;                                             // 0x00A8   (0x0004) 
+    int32_t                                            MaxDetailLevel;                                             // 0x00AC   (0x0004) 
+    FNiagaraDetailsLevelScaleOverrides                 GlobalSpawnCountScaleOverrides;                             // 0x00B0   (0x0014) 
+    unsigned char                                      UnknownData10_6[0x4];                                       // 0x00C4   (0x0004) MISSED
+    FNiagaraPlatformSet                                Platforms;                                                  // 0x00C8   (0x0030) 
+    FNiagaraEmitterScalabilityOverrides                ScalabilityOverrides;                                       // 0x00F8   (0x0010) 
+    bool                                               bInterpolatedSpawning : 1;                                  // 0x0108:0 (0x0001) 
+    bool                                               bFixedBounds : 1;                                           // 0x0108:1 (0x0001) 
+    bool                                               bUseMinDetailLevel : 1;                                     // 0x0108:2 (0x0001) 
+    bool                                               bUseMaxDetailLevel : 1;                                     // 0x0108:3 (0x0001) 
+    bool                                               bOverrideGlobalSpawnCountScale : 1;                         // 0x0108:4 (0x0001) 
+    bool                                               bRequiresPersistentIDs : 1;                                 // 0x0108:5 (0x0001) 
+    bool                                               bCombineEventSpawn : 1;                                     // 0x0108:6 (0x0001) 
+    unsigned char                                      UnknownData11_5[0x3];                                       // 0x0109   (0x0003) MISSED
+    float                                              MaxDeltaTimePerTick;                                        // 0x010C   (0x0004) 
+    uint32_t                                           DefaultShaderStageIndex;                                    // 0x0110   (0x0004) 
+    uint32_t                                           MaxUpdateIterations;                                        // 0x0114   (0x0004) 
+    TSet<uint32_t>                                     SpawnStages;                                                // 0x0118   (0x0050) 
+    bool                                               bSimulationStagesEnabled : 1;                               // 0x0168:0 (0x0001) 
+    bool                                               bDeprecatedShaderStagesEnabled : 1;                         // 0x0168:1 (0x0001) 
+    bool                                               bLimitDeltaTime : 1;                                        // 0x0168:2 (0x0001) 
+    unsigned char                                      UnknownData12_5[0x7];                                       // 0x0169   (0x0007) MISSED
+    FString                                            UniqueEmitterName;                                          // 0x0170   (0x0010) 
+    TArray<class UNiagaraRendererProperties*>          RendererProperties;                                         // 0x0180   (0x0010) 
+    TArray<FNiagaraEventScriptProperties>              EventHandlerScriptProps;                                    // 0x0190   (0x0010) 
+    TArray<class UNiagaraSimulationStageBase*>         SimulationStages;                                           // 0x01A0   (0x0010) 
+    class UNiagaraScript*                              GPUComputeScript;                                           // 0x01B0   (0x0008) 
+    TArray<FName>                                      SharedEventGeneratorIds;                                    // 0x01B8   (0x0010) 
+    unsigned char                                      UnknownData13_7[0xD8];                                      // 0x01C8   (0x00D8) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraEventReceiverEmitterAction
@@ -1889,8 +2032,8 @@ public:
 class UNiagaraEventReceiverEmitterAction_SpawnParticles : public UNiagaraEventReceiverEmitterAction
 { 
 public:
-	uint32_t                                           NumParticles;                                               // 0x0028   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004)  MISSED
+    uint32_t                                           NumParticles;                                               // 0x0028   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraFunctionLibrary
@@ -1899,27 +2042,69 @@ class UNiagaraFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAttached
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraComponent*, const UNiagaraSystem*, const USceneComponent*, const FName, const FVector, const FRotator, const TEnumAsByte<EAttachLocation>, const bool, const bool, const ENCPoolMethod, const bool> SpawnSystemAttached = { 0x1157a60, 0 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraComponent*, const UObject*, const UNiagaraSystem*, const FVector, const FRotator, const FVector, const bool, const bool, const ENCPoolMethod, const bool> SpawnSystemAtLocation = { 0x1158380, 1 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.SetVolumeTextureObject
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UVolumeTexture*> SetVolumeTextureObject = { 0x1156350, 2 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.SetTextureObject_Immediately
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UTexture*> SetTextureObject_Immediately = { 0x1156670, 3 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.SetTextureObject
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UTexture*> SetTextureObject = { 0x11569e0, 4 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const TArray<FName>&> SetSkeletalMeshDataInterfaceSamplingRegions = { 0x1156d00, 5 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UStaticMeshComponent*> OverrideSystemUserVariableStaticMeshComponent = { 0x1157750, 6 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UStaticMesh*> OverrideSystemUserVariableStaticMesh = { 0x1157440, 7 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const USkeletalMeshComponent*> OverrideSystemUserVariableSkeletalMeshComponent = { 0x11570a0, 8 }; 
-	// Function /Script/Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraParameterCollectionInstance*, const UObject*, const UNiagaraParameterCollection*> GetNiagaraParameterCollection = { 0x1155f00, 9 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAttached
+    // [0] SystemTemplate : const UNiagaraSystem*
+    // [1] AttachToComponent : const USceneComponent*
+    // [2] AttachPointName : const FName
+    // [3] Location : const FVector
+    // [4] Rotation : const FRotator
+    // [5] LocationType : const TEnumAsByte<EAttachLocation>
+    // [6] bAutoDestroy : const bool
+    // [7] bAutoActivate : const bool
+    // [8] PoolingMethod : const ENCPoolMethod
+    // [9] bPreCullCheck : const bool
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraComponent*, const UNiagaraSystem*, const USceneComponent*, const FName, const FVector, const FRotator, const TEnumAsByte<EAttachLocation>, const bool, const bool, const ENCPoolMethod, const bool> SpawnSystemAttached = { 0x1157a60, 0 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation
+    // [0] WorldContextObject : const UObject*
+    // [1] SystemTemplate : const UNiagaraSystem*
+    // [2] Location : const FVector
+    // [3] Rotation : const FRotator
+    // [4] Scale : const FVector
+    // [5] bAutoDestroy : const bool
+    // [6] bAutoActivate : const bool
+    // [7] PoolingMethod : const ENCPoolMethod
+    // [8] bPreCullCheck : const bool
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraComponent*, const UObject*, const UNiagaraSystem*, const FVector, const FRotator, const FVector, const bool, const bool, const ENCPoolMethod, const bool> SpawnSystemAtLocation = { 0x1158380, 1 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.SetVolumeTextureObject
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FString
+    // [2] Texture : const UVolumeTexture*
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UVolumeTexture*> SetVolumeTextureObject = { 0x1156350, 2 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.SetTextureObject_Immediately
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FString
+    // [2] Texture : const UTexture*
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UTexture*> SetTextureObject_Immediately = { 0x1156670, 3 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.SetTextureObject
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FString
+    // [2] Texture : const UTexture*
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UTexture*> SetTextureObject = { 0x11569e0, 4 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FString
+    // [2] SamplingRegions : const TArray<FName>&
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const TArray<FName>&> SetSkeletalMeshDataInterfaceSamplingRegions = { 0x1156d00, 5 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FString
+    // [2] StaticMeshComponent : const UStaticMeshComponent*
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UStaticMeshComponent*> OverrideSystemUserVariableStaticMeshComponent = { 0x1157750, 6 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FString
+    // [2] StaticMesh : const UStaticMesh*
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UStaticMesh*> OverrideSystemUserVariableStaticMesh = { 0x1157440, 7 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent
+    // [0] NiagaraSystem : const UNiagaraComponent*
+    // [1] OverrideName : const FString
+    // [2] SkeletalMeshComponent : const USkeletalMeshComponent*
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const USkeletalMeshComponent*> OverrideSystemUserVariableSkeletalMeshComponent = { 0x11570a0, 8 };
+    // Function /Script/Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection
+    // [0] WorldContextObject : const UObject*
+    // [1] Collection : const UNiagaraParameterCollection*
+    constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraParameterCollectionInstance*, const UObject*, const UNiagaraParameterCollection*> GetNiagaraParameterCollection = { 0x1155f00, 9 };
 };
 
 /// Class /Script/Niagara.NiagaraLightRendererProperties
@@ -1927,27 +2112,27 @@ public:
 class UNiagaraLightRendererProperties : public UNiagaraRendererProperties
 { 
 public:
-	bool                                               bUseInverseSquaredFalloff : 1;                              // 0x0080:0 (0x0001)  
-	bool                                               bAffectsTranslucency : 1;                                   // 0x0080:1 (0x0001)  
-	unsigned char                                      UnknownData03_5[0x3];                                       // 0x0081   (0x0003)  MISSED
-	float                                              RadiusScale;                                                // 0x0084   (0x0004)  
-	FVector                                            ColorAdd;                                                   // 0x0088   (0x000C)  
-	unsigned char                                      UnknownData04_6[0x4];                                       // 0x0094   (0x0004)  MISSED
-	FNiagaraVariableAttributeBinding                   LightRenderingEnabledBinding;                               // 0x0098   (0x0058)  
-	FNiagaraVariableAttributeBinding                   LightExponentBinding;                                       // 0x00F0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   PositionBinding;                                            // 0x0148   (0x0058)  
-	FNiagaraVariableAttributeBinding                   ColorBinding;                                               // 0x01A0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RadiusBinding;                                              // 0x01F8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   VolumetricScatteringBinding;                                // 0x0250   (0x0058)  
-	unsigned char                                      UnknownData05_7[0x30];                                      // 0x02A8   (0x0030)  MISSED
+    bool                                               bUseInverseSquaredFalloff : 1;                              // 0x0080:0 (0x0001) 
+    bool                                               bAffectsTranslucency : 1;                                   // 0x0080:1 (0x0001) 
+    unsigned char                                      UnknownData03_5[0x3];                                       // 0x0081   (0x0003) MISSED
+    float                                              RadiusScale;                                                // 0x0084   (0x0004) 
+    FVector                                            ColorAdd;                                                   // 0x0088   (0x000C) 
+    unsigned char                                      UnknownData04_6[0x4];                                       // 0x0094   (0x0004) MISSED
+    FNiagaraVariableAttributeBinding                   LightRenderingEnabledBinding;                               // 0x0098   (0x0058) 
+    FNiagaraVariableAttributeBinding                   LightExponentBinding;                                       // 0x00F0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   PositionBinding;                                            // 0x0148   (0x0058) 
+    FNiagaraVariableAttributeBinding                   ColorBinding;                                               // 0x01A0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RadiusBinding;                                              // 0x01F8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   VolumetricScatteringBinding;                                // 0x0250   (0x0058) 
+    unsigned char                                      UnknownData05_7[0x30];                                      // 0x02A8   (0x0030) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraMeshMaterialOverride
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FNiagaraMeshMaterialOverride
 { 
-	class UMaterialInterface*                          ExplicitMat;                                                // 0x0000   (0x0008)  
-	FNiagaraUserParameterBinding                       UserParamBinding;                                           // 0x0008   (0x0020)  
+    class UMaterialInterface*                          ExplicitMat;                                                // 0x0000   (0x0008) 
+    FNiagaraUserParameterBinding                       UserParamBinding;                                           // 0x0008   (0x0020) 
 };
 
 /// Class /Script/Niagara.NiagaraMeshRendererProperties
@@ -1955,49 +2140,49 @@ struct FNiagaraMeshMaterialOverride
 class UNiagaraMeshRendererProperties : public UNiagaraRendererProperties
 { 
 public:
-	class UStaticMesh*                                 ParticleMesh;                                               // 0x0080   (0x0008)  
-	ENiagaraSortMode                                   SortMode;                                                   // 0x0088   (0x0001)  
-	unsigned char                                      UnknownData10_6[0x3];                                       // 0x0089   (0x0003)  MISSED
-	bool                                               bOverrideMaterials : 1;                                     // 0x008C:0 (0x0001)  
-	bool                                               bSortOnlyWhenTranslucent : 1;                               // 0x008C:1 (0x0001)  
-	unsigned char                                      UnknownData11_5[0x3];                                       // 0x008D   (0x0003)  MISSED
-	TArray<FNiagaraMeshMaterialOverride>               OverrideMaterials;                                          // 0x0090   (0x0010)  
-	FVector2D                                          SubImageSize;                                               // 0x00A0   (0x0008)  
-	bool                                               bSubImageBlend : 1;                                         // 0x00A8:0 (0x0001)  
-	unsigned char                                      UnknownData12_5[0x3];                                       // 0x00A9   (0x0003)  MISSED
-	ENiagaraMeshFacingMode                             FacingMode;                                                 // 0x00AC   (0x0001)  
-	unsigned char                                      UnknownData13_6[0x3];                                       // 0x00AD   (0x0003)  MISSED
-	bool                                               bLockedAxisEnable : 1;                                      // 0x00B0:0 (0x0001)  
-	unsigned char                                      UnknownData14_5[0x3];                                       // 0x00B1   (0x0003)  MISSED
-	FVector                                            LockedAxis;                                                 // 0x00B4   (0x000C)  
-	ENiagaraMeshLockedAxisSpace                        LockedAxisSpace;                                            // 0x00C0   (0x0001)  
-	unsigned char                                      UnknownData15_6[0x3];                                       // 0x00C1   (0x0003)  MISSED
-	FVector                                            PivotOffset;                                                // 0x00C4   (0x000C)  
-	ENiagaraMeshPivotOffsetSpace                       PivotOffsetSpace;                                           // 0x00D0   (0x0001)  
-	unsigned char                                      UnknownData16_6[0x3];                                       // 0x00D1   (0x0003)  MISSED
-	bool                                               bEnableFrustumCulling : 1;                                  // 0x00D4:0 (0x0001)  
-	bool                                               bEnableCameraDistanceCulling : 1;                           // 0x00D4:1 (0x0001)  
-	unsigned char                                      UnknownData17_5[0x3];                                       // 0x00D5   (0x0003)  MISSED
-	float                                              MinCameraDistance;                                          // 0x00D8   (0x0004)  
-	float                                              MaxCameraDistance;                                          // 0x00DC   (0x0004)  
-	uint32_t                                           RendererVisibility;                                         // 0x00E0   (0x0004)  
-	unsigned char                                      UnknownData18_6[0x4];                                       // 0x00E4   (0x0004)  MISSED
-	FNiagaraVariableAttributeBinding                   PositionBinding;                                            // 0x00E8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   ColorBinding;                                               // 0x0140   (0x0058)  
-	FNiagaraVariableAttributeBinding                   VelocityBinding;                                            // 0x0198   (0x0058)  
-	FNiagaraVariableAttributeBinding                   MeshOrientationBinding;                                     // 0x01F0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   ScaleBinding;                                               // 0x0248   (0x0058)  
-	FNiagaraVariableAttributeBinding                   SubImageIndexBinding;                                       // 0x02A0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterialBinding;                                     // 0x02F8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial1Binding;                                    // 0x0350   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial2Binding;                                    // 0x03A8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial3Binding;                                    // 0x0400   (0x0058)  
-	FNiagaraVariableAttributeBinding                   MaterialRandomBinding;                                      // 0x0458   (0x0058)  
-	FNiagaraVariableAttributeBinding                   CustomSortingBinding;                                       // 0x04B0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   NormalizedAgeBinding;                                       // 0x0508   (0x0058)  
-	FNiagaraVariableAttributeBinding                   CameraOffsetBinding;                                        // 0x0560   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RendererVisibilityTagBinding;                               // 0x05B8   (0x0058)  
-	unsigned char                                      UnknownData19_7[0x68];                                      // 0x0610   (0x0068)  MISSED
+    class UStaticMesh*                                 ParticleMesh;                                               // 0x0080   (0x0008) 
+    ENiagaraSortMode                                   SortMode;                                                   // 0x0088   (0x0001) 
+    unsigned char                                      UnknownData10_6[0x3];                                       // 0x0089   (0x0003) MISSED
+    bool                                               bOverrideMaterials : 1;                                     // 0x008C:0 (0x0001) 
+    bool                                               bSortOnlyWhenTranslucent : 1;                               // 0x008C:1 (0x0001) 
+    unsigned char                                      UnknownData11_5[0x3];                                       // 0x008D   (0x0003) MISSED
+    TArray<FNiagaraMeshMaterialOverride>               OverrideMaterials;                                          // 0x0090   (0x0010) 
+    FVector2D                                          SubImageSize;                                               // 0x00A0   (0x0008) 
+    bool                                               bSubImageBlend : 1;                                         // 0x00A8:0 (0x0001) 
+    unsigned char                                      UnknownData12_5[0x3];                                       // 0x00A9   (0x0003) MISSED
+    ENiagaraMeshFacingMode                             FacingMode;                                                 // 0x00AC   (0x0001) 
+    unsigned char                                      UnknownData13_6[0x3];                                       // 0x00AD   (0x0003) MISSED
+    bool                                               bLockedAxisEnable : 1;                                      // 0x00B0:0 (0x0001) 
+    unsigned char                                      UnknownData14_5[0x3];                                       // 0x00B1   (0x0003) MISSED
+    FVector                                            LockedAxis;                                                 // 0x00B4   (0x000C) 
+    ENiagaraMeshLockedAxisSpace                        LockedAxisSpace;                                            // 0x00C0   (0x0001) 
+    unsigned char                                      UnknownData15_6[0x3];                                       // 0x00C1   (0x0003) MISSED
+    FVector                                            PivotOffset;                                                // 0x00C4   (0x000C) 
+    ENiagaraMeshPivotOffsetSpace                       PivotOffsetSpace;                                           // 0x00D0   (0x0001) 
+    unsigned char                                      UnknownData16_6[0x3];                                       // 0x00D1   (0x0003) MISSED
+    bool                                               bEnableFrustumCulling : 1;                                  // 0x00D4:0 (0x0001) 
+    bool                                               bEnableCameraDistanceCulling : 1;                           // 0x00D4:1 (0x0001) 
+    unsigned char                                      UnknownData17_5[0x3];                                       // 0x00D5   (0x0003) MISSED
+    float                                              MinCameraDistance;                                          // 0x00D8   (0x0004) 
+    float                                              MaxCameraDistance;                                          // 0x00DC   (0x0004) 
+    uint32_t                                           RendererVisibility;                                         // 0x00E0   (0x0004) 
+    unsigned char                                      UnknownData18_6[0x4];                                       // 0x00E4   (0x0004) MISSED
+    FNiagaraVariableAttributeBinding                   PositionBinding;                                            // 0x00E8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   ColorBinding;                                               // 0x0140   (0x0058) 
+    FNiagaraVariableAttributeBinding                   VelocityBinding;                                            // 0x0198   (0x0058) 
+    FNiagaraVariableAttributeBinding                   MeshOrientationBinding;                                     // 0x01F0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   ScaleBinding;                                               // 0x0248   (0x0058) 
+    FNiagaraVariableAttributeBinding                   SubImageIndexBinding;                                       // 0x02A0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterialBinding;                                     // 0x02F8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial1Binding;                                    // 0x0350   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial2Binding;                                    // 0x03A8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial3Binding;                                    // 0x0400   (0x0058) 
+    FNiagaraVariableAttributeBinding                   MaterialRandomBinding;                                      // 0x0458   (0x0058) 
+    FNiagaraVariableAttributeBinding                   CustomSortingBinding;                                       // 0x04B0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   NormalizedAgeBinding;                                       // 0x0508   (0x0058) 
+    FNiagaraVariableAttributeBinding                   CameraOffsetBinding;                                        // 0x0560   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RendererVisibilityTagBinding;                               // 0x05B8   (0x0058) 
+    unsigned char                                      UnknownData19_7[0x68];                                      // 0x0610   (0x0068) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraMessageDataBase
@@ -2012,44 +2197,68 @@ public:
 class UNiagaraParameterCollectionInstance : public UObject
 { 
 public:
-	class UNiagaraParameterCollection*                 Collection;                                                 // 0x0028   (0x0008)  
-	TArray<FNiagaraVariable>                           OverridenParameters;                                        // 0x0030   (0x0010)  
-	FNiagaraParameterStore                             ParameterStorage;                                           // 0x0040   (0x0078)  
-	unsigned char                                      UnknownData01_7[0x8];                                       // 0x00B8   (0x0008)  MISSED
+    class UNiagaraParameterCollection*                 Collection;                                                 // 0x0028   (0x0008) 
+    TArray<FNiagaraVariable>                           OverridenParameters;                                        // 0x0030   (0x0010) 
+    FNiagaraParameterStore                             ParameterStorage;                                           // 0x0040   (0x0078) 
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x00B8   (0x0008) MISSED
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVectorParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector> SetVectorParameter = { 0x115a590, 0 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector4&> SetVector4Parameter = { 0x115a3f0, 1 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector2D> SetVector2DParameter = { 0x115a730, 2 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetQuatParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FQuat&> SetQuatParameter = { 0x115a0d0, 3 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetIntParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const int32_t> SetIntParameter = { 0x115a8c0, 4 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetFloatParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const float> SetFloatParameter = { 0x115aa50, 5 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetColorParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FLinearColor> SetColorParameter = { 0x115a260, 6 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetBoolParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const bool> SetBoolParameter = { 0x115abe0, 7 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVectorParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector, const FString> GetVectorParameter = { 0x115b080, 8 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector4, const FString> GetVector4Parameter = { 0x115af80, 9 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector2D, const FString> GetVector2DParameter = { 0x115b190, 10 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetQuatParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FQuat, const FString> GetQuatParameter = { 0x115ae80, 11 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetIntParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, int32_t, const FString> GetIntParameter = { 0x115b290, 12 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetFloatParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, float, const FString> GetFloatParameter = { 0x115b390, 13 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetColorParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FLinearColor, const FString> GetColorParameter = { 0x115ad80, 14 }; 
-	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, bool, const FString> GetBoolParameter = { 0x115b490, 15 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVectorParameter
+    // [0] InVariableName : const FString
+    // [1] InValue : const FVector
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector> SetVectorParameter = { 0x115a590, 0 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter
+    // [0] InVariableName : const FString
+    // [1] InValue : const FVector4&
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector4&> SetVector4Parameter = { 0x115a3f0, 1 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter
+    // [0] InVariableName : const FString
+    // [1] InValue : const FVector2D
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector2D> SetVector2DParameter = { 0x115a730, 2 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.SetQuatParameter
+    // [0] InVariableName : const FString
+    // [1] InValue : const FQuat&
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FQuat&> SetQuatParameter = { 0x115a0d0, 3 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.SetIntParameter
+    // [0] InVariableName : const FString
+    // [1] InValue : const int32_t
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const int32_t> SetIntParameter = { 0x115a8c0, 4 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.SetFloatParameter
+    // [0] InVariableName : const FString
+    // [1] InValue : const float
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const float> SetFloatParameter = { 0x115aa50, 5 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.SetColorParameter
+    // [0] InVariableName : const FString
+    // [1] InValue : const FLinearColor
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FLinearColor> SetColorParameter = { 0x115a260, 6 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.SetBoolParameter
+    // [0] InVariableName : const FString
+    // [1] InValue : const bool
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const bool> SetBoolParameter = { 0x115abe0, 7 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVectorParameter
+    // [0] InVariableName : const FString
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector, const FString> GetVectorParameter = { 0x115b080, 8 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter
+    // [0] InVariableName : const FString
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector4, const FString> GetVector4Parameter = { 0x115af80, 9 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter
+    // [0] InVariableName : const FString
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector2D, const FString> GetVector2DParameter = { 0x115b190, 10 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.GetQuatParameter
+    // [0] InVariableName : const FString
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FQuat, const FString> GetQuatParameter = { 0x115ae80, 11 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.GetIntParameter
+    // [0] InVariableName : const FString
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, int32_t, const FString> GetIntParameter = { 0x115b290, 12 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.GetFloatParameter
+    // [0] InVariableName : const FString
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, float, const FString> GetFloatParameter = { 0x115b390, 13 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.GetColorParameter
+    // [0] InVariableName : const FString
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FLinearColor, const FString> GetColorParameter = { 0x115ad80, 14 };
+    // Function /Script/Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
+    // [0] InVariableName : const FString
+    constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, bool, const FString> GetBoolParameter = { 0x115b490, 15 };
 };
 
 /// Class /Script/Niagara.NiagaraParameterCollection
@@ -2057,11 +2266,11 @@ public:
 class UNiagaraParameterCollection : public UObject
 { 
 public:
-	FName                                              Namespace;                                                  // 0x0028   (0x0008)  
-	TArray<FNiagaraVariable>                           Parameters;                                                 // 0x0030   (0x0010)  
-	class UMaterialParameterCollection*                SourceMaterialCollection;                                   // 0x0040   (0x0008)  
-	class UNiagaraParameterCollectionInstance*         DefaultInstance;                                            // 0x0048   (0x0008)  
-	FGuid                                              CompileId;                                                  // 0x0050   (0x0010)  
+    FName                                              Namespace;                                                  // 0x0028   (0x0008) 
+    TArray<FNiagaraVariable>                           Parameters;                                                 // 0x0030   (0x0010) 
+    class UMaterialParameterCollection*                SourceMaterialCollection;                                   // 0x0040   (0x0008) 
+    class UNiagaraParameterCollectionInstance*         DefaultInstance;                                            // 0x0048   (0x0008) 
+    FGuid                                              CompileId;                                                  // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraPrecompileContainer
@@ -2069,8 +2278,8 @@ public:
 class UNiagaraPrecompileContainer : public UObject
 { 
 public:
-	TArray<class UNiagaraScript*>                      Scripts;                                                    // 0x0028   (0x0010)  
-	class UNiagaraSystem*                              System;                                                     // 0x0038   (0x0008)  
+    TArray<class UNiagaraScript*>                      Scripts;                                                    // 0x0028   (0x0010) 
+    class UNiagaraSystem*                              System;                                                     // 0x0038   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewBase
@@ -2079,11 +2288,14 @@ class ANiagaraPreviewBase : public AActor
 { 
 public:
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraPreviewBase.SetSystem
-	constexpr static const FunctionPointer<ANiagaraPreviewBase, void, const UNiagaraSystem*> SetSystem = { 0x2bbb090, 0 }; 
-	// Function /Script/Niagara.NiagaraPreviewBase.SetLabelText
-	constexpr static const FunctionPointer<ANiagaraPreviewBase, void, const FText&, const FText&> SetLabelText = { 0x2bbb090, 1 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraPreviewBase.SetSystem
+    // [0] InSystem : const UNiagaraSystem*
+    constexpr static const FunctionPointer<ANiagaraPreviewBase, void, const UNiagaraSystem*> SetSystem = { 0x2bbb090, 0 };
+    // Function /Script/Niagara.NiagaraPreviewBase.SetLabelText
+    // [0] InXAxisText : const FText&
+    // [1] InYAxisText : const FText&
+    constexpr static const FunctionPointer<ANiagaraPreviewBase, void, const FText&, const FText&> SetLabelText = { 0x2bbb090, 1 };
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis
@@ -2092,11 +2304,15 @@ class UNiagaraPreviewAxis : public UObject
 { 
 public:
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraPreviewAxis.Num
-	constexpr static const FunctionPointer<UNiagaraPreviewAxis, int32_t> Num = { 0x115e0f0, 0 }; 
-	// Function /Script/Niagara.NiagaraPreviewAxis.ApplyToPreview
-	constexpr static const FunctionPointer<UNiagaraPreviewAxis, void, const UNiagaraComponent*, const int32_t, const bool, const FString&> ApplyToPreview = { 0x115de20, 1 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraPreviewAxis.Num
+    constexpr static const FunctionPointer<UNiagaraPreviewAxis, int32_t> Num = { 0x115e0f0, 0 };
+    // Function /Script/Niagara.NiagaraPreviewAxis.ApplyToPreview
+    // [0] PreviewComponent : const UNiagaraComponent*
+    // [1] PreviewIndex : const int32_t
+    // [2] bIsXAxis : const bool
+    // [3] OutLabelText : const FString&
+    constexpr static const FunctionPointer<UNiagaraPreviewAxis, void, const UNiagaraComponent*, const int32_t, const bool, const FString&> ApplyToPreview = { 0x115de20, 1 };
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamBase
@@ -2104,9 +2320,9 @@ public:
 class UNiagaraPreviewAxis_InterpParamBase : public UNiagaraPreviewAxis
 { 
 public:
-	FName                                              Param;                                                      // 0x0028   (0x0008)  
-	int32_t                                            Count;                                                      // 0x0030   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004)  MISSED
+    FName                                              Param;                                                      // 0x0028   (0x0008) 
+    int32_t                                            Count;                                                      // 0x0030   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamInt32
@@ -2114,8 +2330,8 @@ public:
 class UNiagaraPreviewAxis_InterpParamInt32 : public UNiagaraPreviewAxis_InterpParamBase
 { 
 public:
-	int32_t                                            Min;                                                        // 0x0038   (0x0004)  
-	int32_t                                            Max;                                                        // 0x003C   (0x0004)  
+    int32_t                                            Min;                                                        // 0x0038   (0x0004) 
+    int32_t                                            Max;                                                        // 0x003C   (0x0004) 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamFloat
@@ -2123,8 +2339,8 @@ public:
 class UNiagaraPreviewAxis_InterpParamFloat : public UNiagaraPreviewAxis_InterpParamBase
 { 
 public:
-	float                                              Min;                                                        // 0x0038   (0x0004)  
-	float                                              Max;                                                        // 0x003C   (0x0004)  
+    float                                              Min;                                                        // 0x0038   (0x0004) 
+    float                                              Max;                                                        // 0x003C   (0x0004) 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamVector2D
@@ -2132,8 +2348,8 @@ public:
 class UNiagaraPreviewAxis_InterpParamVector2D : public UNiagaraPreviewAxis_InterpParamBase
 { 
 public:
-	FVector2D                                          Min;                                                        // 0x0038   (0x0008)  
-	FVector2D                                          Max;                                                        // 0x0040   (0x0008)  
+    FVector2D                                          Min;                                                        // 0x0038   (0x0008) 
+    FVector2D                                          Max;                                                        // 0x0040   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamVector
@@ -2141,8 +2357,8 @@ public:
 class UNiagaraPreviewAxis_InterpParamVector : public UNiagaraPreviewAxis_InterpParamBase
 { 
 public:
-	FVector                                            Min;                                                        // 0x0038   (0x000C)  
-	FVector                                            Max;                                                        // 0x0044   (0x000C)  
+    FVector                                            Min;                                                        // 0x0038   (0x000C) 
+    FVector                                            Max;                                                        // 0x0044   (0x000C) 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamVector4
@@ -2150,9 +2366,9 @@ public:
 class UNiagaraPreviewAxis_InterpParamVector4 : public UNiagaraPreviewAxis_InterpParamBase
 { 
 public:
-	unsigned char                                      UnknownData01_8[0x8];                                       // 0x0038   (0x0008)  MISSED
-	FVector4                                           Min;                                                        // 0x0040   (0x0010)  
-	FVector4                                           Max;                                                        // 0x0050   (0x0010)  
+    unsigned char                                      UnknownData01_8[0x8];                                       // 0x0038   (0x0008) MISSED
+    FVector4                                           Min;                                                        // 0x0040   (0x0010) 
+    FVector4                                           Max;                                                        // 0x0050   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamLinearColor
@@ -2160,8 +2376,8 @@ public:
 class UNiagaraPreviewAxis_InterpParamLinearColor : public UNiagaraPreviewAxis_InterpParamBase
 { 
 public:
-	FLinearColor                                       Min;                                                        // 0x0038   (0x0010)  
-	FLinearColor                                       Max;                                                        // 0x0048   (0x0010)  
+    FLinearColor                                       Min;                                                        // 0x0038   (0x0010) 
+    FLinearColor                                       Max;                                                        // 0x0048   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewGrid
@@ -2169,43 +2385,46 @@ public:
 class ANiagaraPreviewGrid : public AActor
 { 
 public:
-	class UNiagaraSystem*                              System;                                                     // 0x02C8   (0x0008)  
-	ENiagaraPreviewGridResetMode                       ResetMode;                                                  // 0x02D0   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x7];                                       // 0x02D1   (0x0007)  MISSED
-	class UNiagaraPreviewAxis*                         PreviewAxisX;                                               // 0x02D8   (0x0008)  
-	class UNiagaraPreviewAxis*                         PreviewAxisY;                                               // 0x02E0   (0x0008)  
-	class UClass*                                      PreviewClass;                                               // 0x02E8   (0x0008)  
-	float                                              SpacingX;                                                   // 0x02F0   (0x0004)  
-	float                                              SpacingY;                                                   // 0x02F4   (0x0004)  
-	int32_t                                            NumX;                                                       // 0x02F8   (0x0004)  
-	int32_t                                            NumY;                                                       // 0x02FC   (0x0004)  
-	TArray<class UChildActorComponent*>                PreviewComponents;                                          // 0x0300   (0x0010)  
-	unsigned char                                      UnknownData03_7[0x8];                                       // 0x0310   (0x0008)  MISSED
+    class UNiagaraSystem*                              System;                                                     // 0x02C8   (0x0008) 
+    ENiagaraPreviewGridResetMode                       ResetMode;                                                  // 0x02D0   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x7];                                       // 0x02D1   (0x0007) MISSED
+    class UNiagaraPreviewAxis*                         PreviewAxisX;                                               // 0x02D8   (0x0008) 
+    class UNiagaraPreviewAxis*                         PreviewAxisY;                                               // 0x02E0   (0x0008) 
+    class UClass*                                      PreviewClass;                                               // 0x02E8   (0x0008) 
+    float                                              SpacingX;                                                   // 0x02F0   (0x0004) 
+    float                                              SpacingY;                                                   // 0x02F4   (0x0004) 
+    int32_t                                            NumX;                                                       // 0x02F8   (0x0004) 
+    int32_t                                            NumY;                                                       // 0x02FC   (0x0004) 
+    TArray<class UChildActorComponent*>                PreviewComponents;                                          // 0x0300   (0x0010) 
+    unsigned char                                      UnknownData03_7[0x8];                                       // 0x0310   (0x0008) MISSED
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraPreviewGrid.SetPaused
-	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const bool> SetPaused = { 0x115fc60, 0 }; 
-	// Function /Script/Niagara.NiagaraPreviewGrid.GetPreviews
-	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const TArray<UNiagaraComponent*>&> GetPreviews = { 0x115fb70, 1 }; 
-	// Function /Script/Niagara.NiagaraPreviewGrid.DeactivatePreviews
-	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void> DeactivatePreviews = { 0x115fd40, 2 }; 
-	// Function /Script/Niagara.NiagaraPreviewGrid.ActivatePreviews
-	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const bool> ActivatePreviews = { 0x115fef0, 3 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraPreviewGrid.SetPaused
+    // [0] bPaused : const bool
+    constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const bool> SetPaused = { 0x115fc60, 0 };
+    // Function /Script/Niagara.NiagaraPreviewGrid.GetPreviews
+    // [0] OutPreviews : const TArray<UNiagaraComponent*>&
+    constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const TArray<UNiagaraComponent*>&> GetPreviews = { 0x115fb70, 1 };
+    // Function /Script/Niagara.NiagaraPreviewGrid.DeactivatePreviews
+    constexpr static const FunctionPointer<ANiagaraPreviewGrid, void> DeactivatePreviews = { 0x115fd40, 2 };
+    // Function /Script/Niagara.NiagaraPreviewGrid.ActivatePreviews
+    // [0] bReset : const bool
+    constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const bool> ActivatePreviews = { 0x115fef0, 3 };
 };
 
 /// Struct /Script/Niagara.NiagaraRibbonUVSettings
 /// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FNiagaraRibbonUVSettings
 { 
-	ENiagaraRibbonUVEdgeMode                           LeadingEdgeMode;                                            // 0x0000   (0x0004)  
-	ENiagaraRibbonUVEdgeMode                           TrailingEdgeMode;                                           // 0x0004   (0x0004)  
-	ENiagaraRibbonUVDistributionMode                   DistributionMode;                                           // 0x0008   (0x0004)  
-	float                                              TilingLength;                                               // 0x000C   (0x0004)  
-	FVector2D                                          Offset;                                                     // 0x0010   (0x0008)  
-	FVector2D                                          Scale;                                                      // 0x0018   (0x0008)  
-	bool                                               bEnablePerParticleUOverride;                                // 0x0020   (0x0001)  
-	bool                                               bEnablePerParticleVRangeOverride;                           // 0x0021   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x2];                                       // 0x0022   (0x0002)  MISSED
+    ENiagaraRibbonUVEdgeMode                           LeadingEdgeMode;                                            // 0x0000   (0x0004) 
+    ENiagaraRibbonUVEdgeMode                           TrailingEdgeMode;                                           // 0x0004   (0x0004) 
+    ENiagaraRibbonUVDistributionMode                   DistributionMode;                                           // 0x0008   (0x0004) 
+    float                                              TilingLength;                                               // 0x000C   (0x0004) 
+    FVector2D                                          Offset;                                                     // 0x0010   (0x0008) 
+    FVector2D                                          Scale;                                                      // 0x0018   (0x0008) 
+    bool                                               bEnablePerParticleUOverride;                                // 0x0020   (0x0001) 
+    bool                                               bEnablePerParticleVRangeOverride;                           // 0x0021   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x2];                                       // 0x0022   (0x0002) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraRibbonRendererProperties
@@ -2213,187 +2432,187 @@ struct FNiagaraRibbonUVSettings
 class UNiagaraRibbonRendererProperties : public UNiagaraRendererProperties
 { 
 public:
-	class UMaterialInterface*                          Material;                                                   // 0x0080   (0x0008)  
-	FNiagaraUserParameterBinding                       MaterialUserParamBinding;                                   // 0x0088   (0x0020)  
-	ENiagaraRibbonFacingMode                           FacingMode;                                                 // 0x00A8   (0x0001)  
-	bool                                               bUseNiagaraTilingDistance;                                  // 0x00A9   (0x0001)  
-	unsigned char                                      UnknownData06_6[0x2];                                       // 0x00AA   (0x0002)  MISSED
-	FNiagaraRibbonUVSettings                           UV0Settings;                                                // 0x00AC   (0x0024)  
-	FNiagaraRibbonUVSettings                           UV1Settings;                                                // 0x00D0   (0x0024)  
-	ENiagaraRibbonDrawDirection                        DrawDirection;                                              // 0x00F4   (0x0001)  
-	unsigned char                                      UnknownData07_6[0x3];                                       // 0x00F5   (0x0003)  MISSED
-	float                                              CurveTension;                                               // 0x00F8   (0x0004)  
-	ENiagaraRibbonTessellationMode                     TessellationMode;                                           // 0x00FC   (0x0001)  
-	unsigned char                                      UnknownData08_6[0x3];                                       // 0x00FD   (0x0003)  MISSED
-	int32_t                                            TessellationFactor;                                         // 0x0100   (0x0004)  
-	bool                                               bUseConstantFactor;                                         // 0x0104   (0x0001)  
-	unsigned char                                      UnknownData09_6[0x3];                                       // 0x0105   (0x0003)  MISSED
-	float                                              TessellationAngle;                                          // 0x0108   (0x0004)  
-	bool                                               bScreenSpaceTessellation;                                   // 0x010C   (0x0001)  
-	unsigned char                                      UnknownData10_6[0x3];                                       // 0x010D   (0x0003)  MISSED
-	FNiagaraVariableAttributeBinding                   PositionBinding;                                            // 0x0110   (0x0058)  
-	FNiagaraVariableAttributeBinding                   ColorBinding;                                               // 0x0168   (0x0058)  
-	FNiagaraVariableAttributeBinding                   VelocityBinding;                                            // 0x01C0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RibbonTilingDistanceOffsetBinding;                          // 0x0218   (0x0058)  
-	FNiagaraVariableAttributeBinding                   NormalizedAgeBinding;                                       // 0x0270   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RibbonTwistBinding;                                         // 0x02C8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RibbonWidthBinding;                                         // 0x0320   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RibbonFacingBinding;                                        // 0x0378   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RibbonIdBinding;                                            // 0x03D0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RibbonLinkOrderBinding;                                     // 0x0428   (0x0058)  
-	FNiagaraVariableAttributeBinding                   MaterialRandomBinding;                                      // 0x0480   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterialBinding;                                     // 0x04D8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial1Binding;                                    // 0x0530   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial2Binding;                                    // 0x0588   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial3Binding;                                    // 0x05E0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   U0OverrideBinding;                                          // 0x0638   (0x0058)  
-	FNiagaraVariableAttributeBinding                   V0RangeOverrideBinding;                                     // 0x0690   (0x0058)  
-	FNiagaraVariableAttributeBinding                   U1OverrideBinding;                                          // 0x06E8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   V1RangeOverrideBinding;                                     // 0x0740   (0x0058)  
-	unsigned char                                      UnknownData11_7[0x98];                                      // 0x0798   (0x0098)  MISSED
+    class UMaterialInterface*                          Material;                                                   // 0x0080   (0x0008) 
+    FNiagaraUserParameterBinding                       MaterialUserParamBinding;                                   // 0x0088   (0x0020) 
+    ENiagaraRibbonFacingMode                           FacingMode;                                                 // 0x00A8   (0x0001) 
+    bool                                               bUseNiagaraTilingDistance;                                  // 0x00A9   (0x0001) 
+    unsigned char                                      UnknownData06_6[0x2];                                       // 0x00AA   (0x0002) MISSED
+    FNiagaraRibbonUVSettings                           UV0Settings;                                                // 0x00AC   (0x0024) 
+    FNiagaraRibbonUVSettings                           UV1Settings;                                                // 0x00D0   (0x0024) 
+    ENiagaraRibbonDrawDirection                        DrawDirection;                                              // 0x00F4   (0x0001) 
+    unsigned char                                      UnknownData07_6[0x3];                                       // 0x00F5   (0x0003) MISSED
+    float                                              CurveTension;                                               // 0x00F8   (0x0004) 
+    ENiagaraRibbonTessellationMode                     TessellationMode;                                           // 0x00FC   (0x0001) 
+    unsigned char                                      UnknownData08_6[0x3];                                       // 0x00FD   (0x0003) MISSED
+    int32_t                                            TessellationFactor;                                         // 0x0100   (0x0004) 
+    bool                                               bUseConstantFactor;                                         // 0x0104   (0x0001) 
+    unsigned char                                      UnknownData09_6[0x3];                                       // 0x0105   (0x0003) MISSED
+    float                                              TessellationAngle;                                          // 0x0108   (0x0004) 
+    bool                                               bScreenSpaceTessellation;                                   // 0x010C   (0x0001) 
+    unsigned char                                      UnknownData10_6[0x3];                                       // 0x010D   (0x0003) MISSED
+    FNiagaraVariableAttributeBinding                   PositionBinding;                                            // 0x0110   (0x0058) 
+    FNiagaraVariableAttributeBinding                   ColorBinding;                                               // 0x0168   (0x0058) 
+    FNiagaraVariableAttributeBinding                   VelocityBinding;                                            // 0x01C0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RibbonTilingDistanceOffsetBinding;                          // 0x0218   (0x0058) 
+    FNiagaraVariableAttributeBinding                   NormalizedAgeBinding;                                       // 0x0270   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RibbonTwistBinding;                                         // 0x02C8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RibbonWidthBinding;                                         // 0x0320   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RibbonFacingBinding;                                        // 0x0378   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RibbonIdBinding;                                            // 0x03D0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RibbonLinkOrderBinding;                                     // 0x0428   (0x0058) 
+    FNiagaraVariableAttributeBinding                   MaterialRandomBinding;                                      // 0x0480   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterialBinding;                                     // 0x04D8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial1Binding;                                    // 0x0530   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial2Binding;                                    // 0x0588   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial3Binding;                                    // 0x05E0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   U0OverrideBinding;                                          // 0x0638   (0x0058) 
+    FNiagaraVariableAttributeBinding                   V0RangeOverrideBinding;                                     // 0x0690   (0x0058) 
+    FNiagaraVariableAttributeBinding                   U1OverrideBinding;                                          // 0x06E8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   V1RangeOverrideBinding;                                     // 0x0740   (0x0058) 
+    unsigned char                                      UnknownData11_7[0x98];                                      // 0x0798   (0x0098) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraScriptExecutionPaddingInfo
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FNiagaraScriptExecutionPaddingInfo
 { 
-	uint16_t                                           SrcOffset;                                                  // 0x0000   (0x0002)  
-	uint16_t                                           DestOffset;                                                 // 0x0002   (0x0002)  
-	uint16_t                                           SrcSize;                                                    // 0x0004   (0x0002)  
-	uint16_t                                           DestSize;                                                   // 0x0006   (0x0002)  
+    uint16_t                                           SrcOffset;                                                  // 0x0000   (0x0002) 
+    uint16_t                                           DestOffset;                                                 // 0x0002   (0x0002) 
+    uint16_t                                           SrcSize;                                                    // 0x0004   (0x0002) 
+    uint16_t                                           DestSize;                                                   // 0x0006   (0x0002) 
 };
 
 /// Struct /Script/Niagara.NiagaraScriptExecutionParameterStore
 /// Size: 0x0098 (152 bytes) (0x000078 - 0x000098) align n/a MaxSize: 0x0098
 struct FNiagaraScriptExecutionParameterStore : FNiagaraParameterStore
 { 
-	int32_t                                            ParameterSize;                                              // 0x0078   (0x0004)  
-	uint32_t                                           PaddedParameterSize;                                        // 0x007C   (0x0004)  
-	TArray<FNiagaraScriptExecutionPaddingInfo>         PaddingInfo;                                                // 0x0080   (0x0010)  
-	bool                                               bInitialized : 1;                                           // 0x0090:0 (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0091   (0x0007)  MISSED
+    int32_t                                            ParameterSize;                                              // 0x0078   (0x0004) 
+    uint32_t                                           PaddedParameterSize;                                        // 0x007C   (0x0004) 
+    TArray<FNiagaraScriptExecutionPaddingInfo>         PaddingInfo;                                                // 0x0080   (0x0010) 
+    bool                                               bInitialized : 1;                                           // 0x0090:0 (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0091   (0x0007) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraBoundParameter
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FNiagaraBoundParameter
 { 
-	FNiagaraVariable                                   Parameter;                                                  // 0x0000   (0x0020)  
-	int32_t                                            SrcOffset;                                                  // 0x0020   (0x0004)  
-	int32_t                                            DestOffset;                                                 // 0x0024   (0x0004)  
+    FNiagaraVariable                                   Parameter;                                                  // 0x0000   (0x0020) 
+    int32_t                                            SrcOffset;                                                  // 0x0020   (0x0004) 
+    int32_t                                            DestOffset;                                                 // 0x0024   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraVMExecutableDataId
 /// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FNiagaraVMExecutableDataId
 { 
-	FGuid                                              CompilerVersionID;                                          // 0x0000   (0x0010)  
-	ENiagaraScriptUsage                                ScriptUsageType;                                            // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0011   (0x0003)  MISSED
-	FGuid                                              ScriptUsageTypeID;                                          // 0x0014   (0x0010)  
-	bool                                               bUsesRapidIterationParams : 1;                              // 0x0024:0 (0x0001)  
-	bool                                               bInterpolatedSpawn : 1;                                     // 0x0024:1 (0x0001)  
-	bool                                               bRequiresPersistentIDs : 1;                                 // 0x0024:2 (0x0001)  
-	unsigned char                                      UnknownData03_5[0x3];                                       // 0x0025   (0x0003)  MISSED
-	FGuid                                              BaseScriptID;                                               // 0x0028   (0x0010)  
-	FNiagaraCompileHash                                BaseScriptCompileHash;                                      // 0x0038   (0x0010)  
+    FGuid                                              CompilerVersionID;                                          // 0x0000   (0x0010) 
+    ENiagaraScriptUsage                                ScriptUsageType;                                            // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    FGuid                                              ScriptUsageTypeID;                                          // 0x0014   (0x0010) 
+    bool                                               bUsesRapidIterationParams : 1;                              // 0x0024:0 (0x0001) 
+    bool                                               bInterpolatedSpawn : 1;                                     // 0x0024:1 (0x0001) 
+    bool                                               bRequiresPersistentIDs : 1;                                 // 0x0024:2 (0x0001) 
+    unsigned char                                      UnknownData03_5[0x3];                                       // 0x0025   (0x0003) MISSED
+    FGuid                                              BaseScriptID;                                               // 0x0028   (0x0010) 
+    FNiagaraCompileHash                                BaseScriptCompileHash;                                      // 0x0038   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraScriptDataUsageInfo
 /// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FNiagaraScriptDataUsageInfo
 { 
-	bool                                               bReadsAttributeData;                                        // 0x0000   (0x0001)  
+    bool                                               bReadsAttributeData;                                        // 0x0000   (0x0001) 
 };
 
 /// Struct /Script/Niagara.NiagaraScriptDataInterfaceCompileInfo
 /// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FNiagaraScriptDataInterfaceCompileInfo
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
-	int32_t                                            UserPtrIdx;                                                 // 0x0008   (0x0004)  
-	unsigned char                                      UnknownData02_6[0x4];                                       // 0x000C   (0x0004)  MISSED
-	FNiagaraTypeDefinition                             Type;                                                       // 0x0010   (0x0010)  
-	FName                                              RegisteredParameterMapRead;                                 // 0x0020   (0x0008)  
-	FName                                              RegisteredParameterMapWrite;                                // 0x0028   (0x0008)  
-	bool                                               bIsPlaceholder;                                             // 0x0030   (0x0001)  
-	unsigned char                                      UnknownData03_7[0x7];                                       // 0x0031   (0x0007)  MISSED
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    int32_t                                            UserPtrIdx;                                                 // 0x0008   (0x0004) 
+    unsigned char                                      UnknownData02_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    FNiagaraTypeDefinition                             Type;                                                       // 0x0010   (0x0010) 
+    FName                                              RegisteredParameterMapRead;                                 // 0x0020   (0x0008) 
+    FName                                              RegisteredParameterMapWrite;                                // 0x0028   (0x0008) 
+    bool                                               bIsPlaceholder;                                             // 0x0030   (0x0001) 
+    unsigned char                                      UnknownData03_7[0x7];                                       // 0x0031   (0x0007) MISSED
 };
 
 /// Struct /Script/Niagara.VMFunctionSpecifier
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FVMFunctionSpecifier
 { 
-	FName                                              Key;                                                        // 0x0000   (0x0008)  
-	FName                                              Value;                                                      // 0x0008   (0x0008)  
+    FName                                              Key;                                                        // 0x0000   (0x0008) 
+    FName                                              Value;                                                      // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/Niagara.VMExternalFunctionBindingInfo
 /// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FVMExternalFunctionBindingInfo
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
-	FName                                              OwnerName;                                                  // 0x0008   (0x0008)  
-	TArray<bool>                                       InputParamLocations;                                        // 0x0010   (0x0010)  
-	int32_t                                            NumOutputs;                                                 // 0x0020   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x0024   (0x0004)  MISSED
-	TArray<FVMFunctionSpecifier>                       FunctionSpecifiers;                                         // 0x0028   (0x0010)  
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    FName                                              OwnerName;                                                  // 0x0008   (0x0008) 
+    TArray<bool>                                       InputParamLocations;                                        // 0x0010   (0x0010) 
+    int32_t                                            NumOutputs;                                                 // 0x0020   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0024   (0x0004) MISSED
+    TArray<FVMFunctionSpecifier>                       FunctionSpecifiers;                                         // 0x0028   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraDataSetProperties
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FNiagaraDataSetProperties
 { 
-	FNiagaraDataSetID                                  ID;                                                         // 0x0000   (0x000C)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004)  MISSED
-	TArray<FNiagaraVariable>                           Variables;                                                  // 0x0010   (0x0010)  
+    FNiagaraDataSetID                                  ID;                                                         // 0x0000   (0x000C) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    TArray<FNiagaraVariable>                           Variables;                                                  // 0x0010   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraStatScope
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraStatScope
 { 
-	FName                                              FullName;                                                   // 0x0000   (0x0008)  
-	FName                                              FriendlyName;                                               // 0x0008   (0x0008)  
+    FName                                              FullName;                                                   // 0x0000   (0x0008) 
+    FName                                              FriendlyName;                                               // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/Niagara.NiagaraVMExecutableData
 /// Size: 0x00E0 (224 bytes) (0x000000 - 0x0000E0) align n/a MaxSize: 0x00E0
 struct FNiagaraVMExecutableData
 { 
-	TArray<char>                                       ByteCode;                                                   // 0x0000   (0x0010)  
-	TArray<char>                                       OptimizedByteCode;                                          // 0x0010   (0x0010)  
-	int32_t                                            NumTempRegisters;                                           // 0x0020   (0x0004)  
-	int32_t                                            NumUserPtrs;                                                // 0x0024   (0x0004)  
-	TArray<char>                                       ScriptLiterals;                                             // 0x0028   (0x0010)  
-	TArray<FNiagaraVariable>                           Attributes;                                                 // 0x0038   (0x0010)  
-	FNiagaraScriptDataUsageInfo                        DataUsage;                                                  // 0x0048   (0x0001)  
-	unsigned char                                      UnknownData04_6[0x7];                                       // 0x0049   (0x0007)  MISSED
-	TArray<FNiagaraScriptDataInterfaceCompileInfo>     DataInterfaceInfo;                                          // 0x0050   (0x0010)  
-	TArray<FVMExternalFunctionBindingInfo>             CalledVMExternalFunctions;                                  // 0x0060   (0x0010)  
-	unsigned char                                      UnknownData05_6[0x10];                                      // 0x0070   (0x0010)  MISSED
-	TArray<FNiagaraDataSetID>                          ReadDataSets;                                               // 0x0080   (0x0010)  
-	TArray<FNiagaraDataSetProperties>                  WriteDataSets;                                              // 0x0090   (0x0010)  
-	TArray<FNiagaraStatScope>                          StatScopes;                                                 // 0x00A0   (0x0010)  
-	TArray<FNiagaraDataInterfaceGPUParamInfo>          DIParamInfo;                                                // 0x00B0   (0x0010)  
-	ENiagaraScriptCompileStatus                        LastCompileStatus;                                          // 0x00C0   (0x0001)  
-	unsigned char                                      UnknownData06_6[0x7];                                       // 0x00C1   (0x0007)  MISSED
-	TArray<FSimulationStageMetaData>                   SimulationStageMetaData;                                    // 0x00C8   (0x0010)  
-	bool                                               bReadsSignificanceIndex : 1;                                // 0x00D8:0 (0x0001)  
-	unsigned char                                      UnknownData07_7[0x7];                                       // 0x00D9   (0x0007)  MISSED
+    TArray<char>                                       ByteCode;                                                   // 0x0000   (0x0010) 
+    TArray<char>                                       OptimizedByteCode;                                          // 0x0010   (0x0010) 
+    int32_t                                            NumTempRegisters;                                           // 0x0020   (0x0004) 
+    int32_t                                            NumUserPtrs;                                                // 0x0024   (0x0004) 
+    TArray<char>                                       ScriptLiterals;                                             // 0x0028   (0x0010) 
+    TArray<FNiagaraVariable>                           Attributes;                                                 // 0x0038   (0x0010) 
+    FNiagaraScriptDataUsageInfo                        DataUsage;                                                  // 0x0048   (0x0001) 
+    unsigned char                                      UnknownData04_6[0x7];                                       // 0x0049   (0x0007) MISSED
+    TArray<FNiagaraScriptDataInterfaceCompileInfo>     DataInterfaceInfo;                                          // 0x0050   (0x0010) 
+    TArray<FVMExternalFunctionBindingInfo>             CalledVMExternalFunctions;                                  // 0x0060   (0x0010) 
+    unsigned char                                      UnknownData05_6[0x10];                                      // 0x0070   (0x0010) MISSED
+    TArray<FNiagaraDataSetID>                          ReadDataSets;                                               // 0x0080   (0x0010) 
+    TArray<FNiagaraDataSetProperties>                  WriteDataSets;                                              // 0x0090   (0x0010) 
+    TArray<FNiagaraStatScope>                          StatScopes;                                                 // 0x00A0   (0x0010) 
+    TArray<FNiagaraDataInterfaceGPUParamInfo>          DIParamInfo;                                                // 0x00B0   (0x0010) 
+    ENiagaraScriptCompileStatus                        LastCompileStatus;                                          // 0x00C0   (0x0001) 
+    unsigned char                                      UnknownData06_6[0x7];                                       // 0x00C1   (0x0007) MISSED
+    TArray<FSimulationStageMetaData>                   SimulationStageMetaData;                                    // 0x00C8   (0x0010) 
+    bool                                               bReadsSignificanceIndex : 1;                                // 0x00D8:0 (0x0001) 
+    unsigned char                                      UnknownData07_7[0x7];                                       // 0x00D9   (0x0007) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraScriptDataInterfaceInfo
 /// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FNiagaraScriptDataInterfaceInfo
 { 
-	class UNiagaraDataInterface*                       DataInterface;                                              // 0x0000   (0x0008)  
-	FName                                              Name;                                                       // 0x0008   (0x0008)  
-	int32_t                                            UserPtrIdx;                                                 // 0x0010   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x0014   (0x0004)  MISSED
-	FNiagaraTypeDefinition                             Type;                                                       // 0x0018   (0x0010)  
-	FName                                              RegisteredParameterMapRead;                                 // 0x0028   (0x0008)  
-	FName                                              RegisteredParameterMapWrite;                                // 0x0030   (0x0008)  
+    class UNiagaraDataInterface*                       DataInterface;                                              // 0x0000   (0x0008) 
+    FName                                              Name;                                                       // 0x0008   (0x0008) 
+    int32_t                                            UserPtrIdx;                                                 // 0x0010   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0014   (0x0004) MISSED
+    FNiagaraTypeDefinition                             Type;                                                       // 0x0018   (0x0010) 
+    FName                                              RegisteredParameterMapRead;                                 // 0x0028   (0x0008) 
+    FName                                              RegisteredParameterMapWrite;                                // 0x0030   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraScript
@@ -2401,23 +2620,23 @@ struct FNiagaraScriptDataInterfaceInfo
 class UNiagaraScript : public UNiagaraScriptBase
 { 
 public:
-	ENiagaraScriptUsage                                Usage;                                                      // 0x0028   (0x0001)  
-	unsigned char                                      UnknownData03_6[0x3];                                       // 0x0029   (0x0003)  MISSED
-	int32_t                                            UsageIndex;                                                 // 0x002C   (0x0004)  
-	FGuid                                              UsageId;                                                    // 0x0030   (0x0010)  
-	FNiagaraParameterStore                             RapidIterationParameters;                                   // 0x0040   (0x0078)  
-	FNiagaraScriptExecutionParameterStore              ScriptExecutionParamStore;                                  // 0x00B8   (0x0098)  
-	TArray<FNiagaraBoundParameter>                     ScriptExecutionBoundParameters;                             // 0x0150   (0x0010)  
-	FNiagaraVMExecutableDataId                         CachedScriptVMId;                                           // 0x0160   (0x0048)  
-	unsigned char                                      UnknownData04_6[0x10];                                      // 0x01A8   (0x0010)  MISSED
-	FNiagaraVMExecutableData                           CachedScriptVM;                                             // 0x01B8   (0x00E0)  
-	TArray<class UNiagaraParameterCollection*>         CachedParameterCollectionReferences;                        // 0x0298   (0x0010)  
-	TArray<FNiagaraScriptDataInterfaceInfo>            CachedDefaultDataInterfaces;                                // 0x02A8   (0x0010)  
-	unsigned char                                      UnknownData05_7[0x8];                                       // 0x02B8   (0x0008)  MISSED
+    ENiagaraScriptUsage                                Usage;                                                      // 0x0028   (0x0001) 
+    unsigned char                                      UnknownData03_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    int32_t                                            UsageIndex;                                                 // 0x002C   (0x0004) 
+    FGuid                                              UsageId;                                                    // 0x0030   (0x0010) 
+    FNiagaraParameterStore                             RapidIterationParameters;                                   // 0x0040   (0x0078) 
+    FNiagaraScriptExecutionParameterStore              ScriptExecutionParamStore;                                  // 0x00B8   (0x0098) 
+    TArray<FNiagaraBoundParameter>                     ScriptExecutionBoundParameters;                             // 0x0150   (0x0010) 
+    FNiagaraVMExecutableDataId                         CachedScriptVMId;                                           // 0x0160   (0x0048) 
+    unsigned char                                      UnknownData04_6[0x10];                                      // 0x01A8   (0x0010) MISSED
+    FNiagaraVMExecutableData                           CachedScriptVM;                                             // 0x01B8   (0x00E0) 
+    TArray<class UNiagaraParameterCollection*>         CachedParameterCollectionReferences;                        // 0x0298   (0x0010) 
+    TArray<FNiagaraScriptDataInterfaceInfo>            CachedDefaultDataInterfaces;                                // 0x02A8   (0x0010) 
+    unsigned char                                      UnknownData05_7[0x8];                                       // 0x02B8   (0x0008) MISSED
 
-	/// Functions
-	// Function /Script/Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
-	constexpr static const FunctionPointer<UNiagaraScript, void> RaiseOnGPUCompilationComplete = { 0x11615e0, 0 }; 
+    /// Functions
+    // Function /Script/Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
+    constexpr static const FunctionPointer<UNiagaraScript, void> RaiseOnGPUCompilationComplete = { 0x11615e0, 0 };
 };
 
 /// Class /Script/Niagara.NiagaraScriptSourceBase
@@ -2425,7 +2644,7 @@ public:
 class UNiagaraScriptSourceBase : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x20];                                      // 0x0028   (0x0020)  MISSED
+    unsigned char                                      UnknownData01_1[0x20];                                      // 0x0028   (0x0020) MISSED
 };
 
 /// Class /Script/Niagara.NiagaraSettings
@@ -2433,13 +2652,13 @@ public:
 class UNiagaraSettings : public UDeveloperSettings
 { 
 public:
-	FSoftObjectPath                                    DefaultEffectType;                                          // 0x0038   (0x0018)  
-	TArray<FText>                                      QualityLevels;                                              // 0x0050   (0x0010)  
-	TMap<FString, FText>                               ComponentRendererWarningsPerClass;                          // 0x0060   (0x0050)  
-	TEnumAsByte<ETextureRenderTargetFormat>            DefaultRenderTargetFormat;                                  // 0x00B0   (0x0001)  
-	ENiagaraGpuBufferFormat                            DefaultGridFormat;                                          // 0x00B1   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x6];                                       // 0x00B2   (0x0006)  MISSED
-	class UNiagaraEffectType*                          DefaultEffectTypePtr;                                       // 0x00B8   (0x0008)  
+    FSoftObjectPath                                    DefaultEffectType;                                          // 0x0038   (0x0018) 
+    TArray<FText>                                      QualityLevels;                                              // 0x0050   (0x0010) 
+    TMap<FString, FText>                               ComponentRendererWarningsPerClass;                          // 0x0060   (0x0050) 
+    TEnumAsByte<ETextureRenderTargetFormat>            DefaultRenderTargetFormat;                                  // 0x00B0   (0x0001) 
+    ENiagaraGpuBufferFormat                            DefaultGridFormat;                                          // 0x00B1   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x6];                                       // 0x00B2   (0x0006) MISSED
+    class UNiagaraEffectType*                          DefaultEffectTypePtr;                                       // 0x00B8   (0x0008) 
 };
 
 /// Class /Script/Niagara.NiagaraSimulationStageBase
@@ -2447,17 +2666,17 @@ public:
 class UNiagaraSimulationStageBase : public UNiagaraMergeable
 { 
 public:
-	class UNiagaraScript*                              Script;                                                     // 0x0028   (0x0008)  
-	FName                                              SimulationStageName;                                        // 0x0030   (0x0008)  
-	bool                                               bEnabled : 1;                                               // 0x0038:0 (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0039   (0x0007)  MISSED
+    class UNiagaraScript*                              Script;                                                     // 0x0028   (0x0008) 
+    FName                                              SimulationStageName;                                        // 0x0030   (0x0008) 
+    bool                                               bEnabled : 1;                                               // 0x0038:0 (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0039   (0x0007) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraVariableDataInterfaceBinding
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FNiagaraVariableDataInterfaceBinding
 { 
-	FNiagaraVariable                                   BoundVariable;                                              // 0x0000   (0x0020)  
+    FNiagaraVariable                                   BoundVariable;                                              // 0x0000   (0x0020) 
 };
 
 /// Class /Script/Niagara.NiagaraSimulationStageGeneric
@@ -2465,23 +2684,23 @@ struct FNiagaraVariableDataInterfaceBinding
 class UNiagaraSimulationStageGeneric : public UNiagaraSimulationStageBase
 { 
 public:
-	ENiagaraIterationSource                            IterationSource;                                            // 0x0040   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0041   (0x0003)  MISSED
-	int32_t                                            Iterations;                                                 // 0x0044   (0x0004)  
-	bool                                               bSpawnOnly : 1;                                             // 0x0048:0 (0x0001)  
-	bool                                               bDisablePartialParticleUpdate : 1;                          // 0x0048:1 (0x0001)  
-	unsigned char                                      UnknownData03_5[0x7];                                       // 0x0049   (0x0007)  MISSED
-	FNiagaraVariableDataInterfaceBinding               DataInterface;                                              // 0x0050   (0x0020)  
+    ENiagaraIterationSource                            IterationSource;                                            // 0x0040   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0041   (0x0003) MISSED
+    int32_t                                            Iterations;                                                 // 0x0044   (0x0004) 
+    bool                                               bSpawnOnly : 1;                                             // 0x0048:0 (0x0001) 
+    bool                                               bDisablePartialParticleUpdate : 1;                          // 0x0048:1 (0x0001) 
+    unsigned char                                      UnknownData03_5[0x7];                                       // 0x0049   (0x0007) MISSED
+    FNiagaraVariableDataInterfaceBinding               DataInterface;                                              // 0x0050   (0x0020) 
 };
 
 /// Struct /Script/Niagara.NiagaraMaterialAttributeBinding
 /// Size: 0x002C (44 bytes) (0x000000 - 0x00002C) align n/a MaxSize: 0x002C
 struct FNiagaraMaterialAttributeBinding
 { 
-	FName                                              MaterialParameterName;                                      // 0x0000   (0x0008)  
-	FNiagaraVariableBase                               NiagaraVariable;                                            // 0x0008   (0x000C)  
-	FNiagaraVariableBase                               ResolvedNiagaraVariable;                                    // 0x0014   (0x000C)  
-	FNiagaraVariableBase                               NiagaraChildVariable;                                       // 0x0020   (0x000C)  
+    FName                                              MaterialParameterName;                                      // 0x0000   (0x0008) 
+    FNiagaraVariableBase                               NiagaraVariable;                                            // 0x0008   (0x000C) 
+    FNiagaraVariableBase                               ResolvedNiagaraVariable;                                    // 0x0014   (0x000C) 
+    FNiagaraVariableBase                               NiagaraChildVariable;                                       // 0x0020   (0x000C) 
 };
 
 /// Class /Script/Niagara.NiagaraSpriteRendererProperties
@@ -2489,115 +2708,115 @@ struct FNiagaraMaterialAttributeBinding
 class UNiagaraSpriteRendererProperties : public UNiagaraRendererProperties
 { 
 public:
-	class UMaterialInterface*                          Material;                                                   // 0x0080   (0x0008)  
-	ENiagaraRendererSourceDataMode                     SourceMode;                                                 // 0x0088   (0x0001)  
-	unsigned char                                      UnknownData07_6[0x7];                                       // 0x0089   (0x0007)  MISSED
-	FNiagaraUserParameterBinding                       MaterialUserParamBinding;                                   // 0x0090   (0x0020)  
-	ENiagaraSpriteAlignment                            Alignment;                                                  // 0x00B0   (0x0001)  
-	ENiagaraSpriteFacingMode                           FacingMode;                                                 // 0x00B1   (0x0001)  
-	unsigned char                                      UnknownData08_6[0x2];                                       // 0x00B2   (0x0002)  MISSED
-	FVector2D                                          PivotInUVSpace;                                             // 0x00B4   (0x0008)  
-	ENiagaraSortMode                                   SortMode;                                                   // 0x00BC   (0x0001)  
-	unsigned char                                      UnknownData09_6[0x3];                                       // 0x00BD   (0x0003)  MISSED
-	FVector2D                                          SubImageSize;                                               // 0x00C0   (0x0008)  
-	bool                                               bSubImageBlend : 1;                                         // 0x00C8:0 (0x0001)  
-	bool                                               bRemoveHMDRollInVR : 1;                                     // 0x00C8:1 (0x0001)  
-	bool                                               bSortOnlyWhenTranslucent : 1;                               // 0x00C8:2 (0x0001)  
-	bool                                               bGpuLowLatencyTranslucency : 1;                             // 0x00C8:3 (0x0001)  
-	unsigned char                                      UnknownData10_5[0x3];                                       // 0x00C9   (0x0003)  MISSED
-	float                                              MinFacingCameraBlendDistance;                               // 0x00CC   (0x0004)  
-	float                                              MaxFacingCameraBlendDistance;                               // 0x00D0   (0x0004)  
-	bool                                               bEnableCameraDistanceCulling : 1;                           // 0x00D4:0 (0x0001)  
-	unsigned char                                      UnknownData11_5[0x3];                                       // 0x00D5   (0x0003)  MISSED
-	float                                              MinCameraDistance;                                          // 0x00D8   (0x0004)  
-	float                                              MaxCameraDistance;                                          // 0x00DC   (0x0004)  
-	uint32_t                                           RendererVisibility;                                         // 0x00E0   (0x0004)  
-	unsigned char                                      UnknownData12_6[0x4];                                       // 0x00E4   (0x0004)  MISSED
-	FNiagaraVariableAttributeBinding                   PositionBinding;                                            // 0x00E8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   ColorBinding;                                               // 0x0140   (0x0058)  
-	FNiagaraVariableAttributeBinding                   VelocityBinding;                                            // 0x0198   (0x0058)  
-	FNiagaraVariableAttributeBinding                   SpriteRotationBinding;                                      // 0x01F0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   SpriteSizeBinding;                                          // 0x0248   (0x0058)  
-	FNiagaraVariableAttributeBinding                   SpriteFacingBinding;                                        // 0x02A0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   SpriteAlignmentBinding;                                     // 0x02F8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   SubImageIndexBinding;                                       // 0x0350   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterialBinding;                                     // 0x03A8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial1Binding;                                    // 0x0400   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial2Binding;                                    // 0x0458   (0x0058)  
-	FNiagaraVariableAttributeBinding                   DynamicMaterial3Binding;                                    // 0x04B0   (0x0058)  
-	FNiagaraVariableAttributeBinding                   CameraOffsetBinding;                                        // 0x0508   (0x0058)  
-	FNiagaraVariableAttributeBinding                   UVScaleBinding;                                             // 0x0560   (0x0058)  
-	FNiagaraVariableAttributeBinding                   MaterialRandomBinding;                                      // 0x05B8   (0x0058)  
-	FNiagaraVariableAttributeBinding                   CustomSortingBinding;                                       // 0x0610   (0x0058)  
-	FNiagaraVariableAttributeBinding                   NormalizedAgeBinding;                                       // 0x0668   (0x0058)  
-	FNiagaraVariableAttributeBinding                   RendererVisibilityTagBinding;                               // 0x06C0   (0x0058)  
-	TArray<FNiagaraMaterialAttributeBinding>           MaterialParameterBindings;                                  // 0x0718   (0x0010)  
-	unsigned char                                      UnknownData13_7[0x78];                                      // 0x0728   (0x0078)  MISSED
+    class UMaterialInterface*                          Material;                                                   // 0x0080   (0x0008) 
+    ENiagaraRendererSourceDataMode                     SourceMode;                                                 // 0x0088   (0x0001) 
+    unsigned char                                      UnknownData07_6[0x7];                                       // 0x0089   (0x0007) MISSED
+    FNiagaraUserParameterBinding                       MaterialUserParamBinding;                                   // 0x0090   (0x0020) 
+    ENiagaraSpriteAlignment                            Alignment;                                                  // 0x00B0   (0x0001) 
+    ENiagaraSpriteFacingMode                           FacingMode;                                                 // 0x00B1   (0x0001) 
+    unsigned char                                      UnknownData08_6[0x2];                                       // 0x00B2   (0x0002) MISSED
+    FVector2D                                          PivotInUVSpace;                                             // 0x00B4   (0x0008) 
+    ENiagaraSortMode                                   SortMode;                                                   // 0x00BC   (0x0001) 
+    unsigned char                                      UnknownData09_6[0x3];                                       // 0x00BD   (0x0003) MISSED
+    FVector2D                                          SubImageSize;                                               // 0x00C0   (0x0008) 
+    bool                                               bSubImageBlend : 1;                                         // 0x00C8:0 (0x0001) 
+    bool                                               bRemoveHMDRollInVR : 1;                                     // 0x00C8:1 (0x0001) 
+    bool                                               bSortOnlyWhenTranslucent : 1;                               // 0x00C8:2 (0x0001) 
+    bool                                               bGpuLowLatencyTranslucency : 1;                             // 0x00C8:3 (0x0001) 
+    unsigned char                                      UnknownData10_5[0x3];                                       // 0x00C9   (0x0003) MISSED
+    float                                              MinFacingCameraBlendDistance;                               // 0x00CC   (0x0004) 
+    float                                              MaxFacingCameraBlendDistance;                               // 0x00D0   (0x0004) 
+    bool                                               bEnableCameraDistanceCulling : 1;                           // 0x00D4:0 (0x0001) 
+    unsigned char                                      UnknownData11_5[0x3];                                       // 0x00D5   (0x0003) MISSED
+    float                                              MinCameraDistance;                                          // 0x00D8   (0x0004) 
+    float                                              MaxCameraDistance;                                          // 0x00DC   (0x0004) 
+    uint32_t                                           RendererVisibility;                                         // 0x00E0   (0x0004) 
+    unsigned char                                      UnknownData12_6[0x4];                                       // 0x00E4   (0x0004) MISSED
+    FNiagaraVariableAttributeBinding                   PositionBinding;                                            // 0x00E8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   ColorBinding;                                               // 0x0140   (0x0058) 
+    FNiagaraVariableAttributeBinding                   VelocityBinding;                                            // 0x0198   (0x0058) 
+    FNiagaraVariableAttributeBinding                   SpriteRotationBinding;                                      // 0x01F0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   SpriteSizeBinding;                                          // 0x0248   (0x0058) 
+    FNiagaraVariableAttributeBinding                   SpriteFacingBinding;                                        // 0x02A0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   SpriteAlignmentBinding;                                     // 0x02F8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   SubImageIndexBinding;                                       // 0x0350   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterialBinding;                                     // 0x03A8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial1Binding;                                    // 0x0400   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial2Binding;                                    // 0x0458   (0x0058) 
+    FNiagaraVariableAttributeBinding                   DynamicMaterial3Binding;                                    // 0x04B0   (0x0058) 
+    FNiagaraVariableAttributeBinding                   CameraOffsetBinding;                                        // 0x0508   (0x0058) 
+    FNiagaraVariableAttributeBinding                   UVScaleBinding;                                             // 0x0560   (0x0058) 
+    FNiagaraVariableAttributeBinding                   MaterialRandomBinding;                                      // 0x05B8   (0x0058) 
+    FNiagaraVariableAttributeBinding                   CustomSortingBinding;                                       // 0x0610   (0x0058) 
+    FNiagaraVariableAttributeBinding                   NormalizedAgeBinding;                                       // 0x0668   (0x0058) 
+    FNiagaraVariableAttributeBinding                   RendererVisibilityTagBinding;                               // 0x06C0   (0x0058) 
+    TArray<FNiagaraMaterialAttributeBinding>           MaterialParameterBindings;                                  // 0x0718   (0x0010) 
+    unsigned char                                      UnknownData13_7[0x78];                                      // 0x0728   (0x0078) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraSystemScalabilityOverride
 /// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align n/a MaxSize: 0x0050
 struct FNiagaraSystemScalabilityOverride : FNiagaraSystemScalabilitySettings
 { 
-	bool                                               bOverrideDistanceSettings : 1;                              // 0x0048:0 (0x0001)  
-	bool                                               bOverrideInstanceCountSettings : 1;                         // 0x0048:1 (0x0001)  
-	bool                                               bOverridePerSystemInstanceCountSettings : 1;                // 0x0048:2 (0x0001)  
-	bool                                               bOverrideTimeSinceRendererSettings : 1;                     // 0x0048:3 (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007)  MISSED
+    bool                                               bOverrideDistanceSettings : 1;                              // 0x0048:0 (0x0001) 
+    bool                                               bOverrideInstanceCountSettings : 1;                         // 0x0048:1 (0x0001) 
+    bool                                               bOverridePerSystemInstanceCountSettings : 1;                // 0x0048:2 (0x0001) 
+    bool                                               bOverrideTimeSinceRendererSettings : 1;                     // 0x0048:3 (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraSystemScalabilityOverrides
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraSystemScalabilityOverrides
 { 
-	TArray<FNiagaraSystemScalabilityOverride>          Overrides;                                                  // 0x0000   (0x0010)  
+    TArray<FNiagaraSystemScalabilityOverride>          Overrides;                                                  // 0x0000   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterHandle
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FNiagaraEmitterHandle
 { 
-	FGuid                                              ID;                                                         // 0x0000   (0x0010)  
-	FName                                              IdName;                                                     // 0x0010   (0x0008)  
-	bool                                               bIsEnabled;                                                 // 0x0018   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0019   (0x0003)  MISSED
-	FName                                              Name;                                                       // 0x001C   (0x0008)  
-	unsigned char                                      UnknownData03_6[0x4];                                       // 0x0024   (0x0004)  MISSED
-	class UNiagaraEmitter*                             Instance;                                                   // 0x0028   (0x0008)  
+    FGuid                                              ID;                                                         // 0x0000   (0x0010) 
+    FName                                              IdName;                                                     // 0x0010   (0x0008) 
+    bool                                               bIsEnabled;                                                 // 0x0018   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0019   (0x0003) MISSED
+    FName                                              Name;                                                       // 0x001C   (0x0008) 
+    unsigned char                                      UnknownData03_6[0x4];                                       // 0x0024   (0x0004) MISSED
+    class UNiagaraEmitter*                             Instance;                                                   // 0x0028   (0x0008) 
 };
 
 /// Struct /Script/Niagara.NiagaraParameterDataSetBinding
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FNiagaraParameterDataSetBinding
 { 
-	int32_t                                            ParameterOffset;                                            // 0x0000   (0x0004)  
-	int32_t                                            DataSetComponentOffset;                                     // 0x0004   (0x0004)  
+    int32_t                                            ParameterOffset;                                            // 0x0000   (0x0004) 
+    int32_t                                            DataSetComponentOffset;                                     // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraParameterDataSetBindingCollection
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FNiagaraParameterDataSetBindingCollection
 { 
-	TArray<FNiagaraParameterDataSetBinding>            FloatOffsets;                                               // 0x0000   (0x0010)  
-	TArray<FNiagaraParameterDataSetBinding>            Int32Offsets;                                               // 0x0010   (0x0010)  
+    TArray<FNiagaraParameterDataSetBinding>            FloatOffsets;                                               // 0x0000   (0x0010) 
+    TArray<FNiagaraParameterDataSetBinding>            Int32Offsets;                                               // 0x0010   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraSystemCompiledData
 /// Size: 0x0218 (536 bytes) (0x000000 - 0x000218) align n/a MaxSize: 0x0218
 struct FNiagaraSystemCompiledData
 { 
-	FNiagaraParameterStore                             InstanceParamStore;                                         // 0x0000   (0x0078)  
-	FNiagaraDataSetCompiledData                        DataSetCompiledData;                                        // 0x0078   (0x0040)  
-	FNiagaraDataSetCompiledData                        SpawnInstanceParamsDataSetCompiledData;                     // 0x00B8   (0x0040)  
-	FNiagaraDataSetCompiledData                        UpdateInstanceParamsDataSetCompiledData;                    // 0x00F8   (0x0040)  
-	FNiagaraParameterDataSetBindingCollection          SpawnInstanceGlobalBinding;                                 // 0x0138   (0x0020)  
-	FNiagaraParameterDataSetBindingCollection          SpawnInstanceSystemBinding;                                 // 0x0158   (0x0020)  
-	FNiagaraParameterDataSetBindingCollection          SpawnInstanceOwnerBinding;                                  // 0x0178   (0x0020)  
-	TArray<FNiagaraParameterDataSetBindingCollection>  SpawnInstanceEmitterBindings;                               // 0x0198   (0x0010)  
-	FNiagaraParameterDataSetBindingCollection          UpdateInstanceGlobalBinding;                                // 0x01A8   (0x0020)  
-	FNiagaraParameterDataSetBindingCollection          UpdateInstanceSystemBinding;                                // 0x01C8   (0x0020)  
-	FNiagaraParameterDataSetBindingCollection          UpdateInstanceOwnerBinding;                                 // 0x01E8   (0x0020)  
-	TArray<FNiagaraParameterDataSetBindingCollection>  UpdateInstanceEmitterBindings;                              // 0x0208   (0x0010)  
+    FNiagaraParameterStore                             InstanceParamStore;                                         // 0x0000   (0x0078) 
+    FNiagaraDataSetCompiledData                        DataSetCompiledData;                                        // 0x0078   (0x0040) 
+    FNiagaraDataSetCompiledData                        SpawnInstanceParamsDataSetCompiledData;                     // 0x00B8   (0x0040) 
+    FNiagaraDataSetCompiledData                        UpdateInstanceParamsDataSetCompiledData;                    // 0x00F8   (0x0040) 
+    FNiagaraParameterDataSetBindingCollection          SpawnInstanceGlobalBinding;                                 // 0x0138   (0x0020) 
+    FNiagaraParameterDataSetBindingCollection          SpawnInstanceSystemBinding;                                 // 0x0158   (0x0020) 
+    FNiagaraParameterDataSetBindingCollection          SpawnInstanceOwnerBinding;                                  // 0x0178   (0x0020) 
+    TArray<FNiagaraParameterDataSetBindingCollection>  SpawnInstanceEmitterBindings;                               // 0x0198   (0x0010) 
+    FNiagaraParameterDataSetBindingCollection          UpdateInstanceGlobalBinding;                                // 0x01A8   (0x0020) 
+    FNiagaraParameterDataSetBindingCollection          UpdateInstanceSystemBinding;                                // 0x01C8   (0x0020) 
+    FNiagaraParameterDataSetBindingCollection          UpdateInstanceOwnerBinding;                                 // 0x01E8   (0x0020) 
+    TArray<FNiagaraParameterDataSetBindingCollection>  UpdateInstanceEmitterBindings;                              // 0x0208   (0x0010) 
 };
 
 /// Class /Script/Niagara.NiagaraSystem
@@ -2605,74 +2824,74 @@ struct FNiagaraSystemCompiledData
 class UNiagaraSystem : public UFXSystemAsset
 { 
 public:
-	bool                                               bDumpDebugSystemInfo;                                       // 0x0030   (0x0001)  
-	bool                                               bDumpDebugEmitterInfo;                                      // 0x0031   (0x0001)  
-	bool                                               bRequireCurrentFrameData;                                   // 0x0032   (0x0001)  
-	unsigned char                                      UnknownData08_6[0x1];                                       // 0x0033   (0x0001)  MISSED
-	bool                                               bFixedBounds : 1;                                           // 0x0034:0 (0x0001)  
-	unsigned char                                      UnknownData09_5[0x3];                                       // 0x0035   (0x0003)  MISSED
-	class UNiagaraEffectType*                          EffectType;                                                 // 0x0038   (0x0008)  
-	bool                                               bOverrideScalabilitySettings;                               // 0x0040   (0x0001)  
-	unsigned char                                      UnknownData10_6[0x7];                                       // 0x0041   (0x0007)  MISSED
-	TArray<FNiagaraSystemScalabilityOverride>          ScalabilityOverrides;                                       // 0x0048   (0x0010)  
-	FNiagaraSystemScalabilityOverrides                 SystemScalabilityOverrides;                                 // 0x0058   (0x0010)  
-	TArray<FNiagaraEmitterHandle>                      EmitterHandles;                                             // 0x0068   (0x0010)  
-	TArray<class UNiagaraParameterCollectionInstance*> ParameterCollectionOverrides;                               // 0x0078   (0x0010)  
-	class UNiagaraScript*                              SystemSpawnScript;                                          // 0x0088   (0x0008)  
-	class UNiagaraScript*                              SystemUpdateScript;                                         // 0x0090   (0x0008)  
-	unsigned char                                      UnknownData11_6[0x10];                                      // 0x0098   (0x0010)  MISSED
-	FNiagaraSystemCompiledData                         SystemCompiledData;                                         // 0x00A8   (0x0218)  
-	FNiagaraUserRedirectionParameterStore              ExposedParameters;                                          // 0x02C0   (0x00C8)  
-	FBox                                               FixedBounds;                                                // 0x0388   (0x001C)  
-	bool                                               bAutoDeactivate;                                            // 0x03A4   (0x0001)  
-	unsigned char                                      UnknownData12_6[0x3];                                       // 0x03A5   (0x0003)  MISSED
-	float                                              WarmupTime;                                                 // 0x03A8   (0x0004)  
-	int32_t                                            WarmupTickCount;                                            // 0x03AC   (0x0004)  
-	float                                              WarmupTickDelta;                                            // 0x03B0   (0x0004)  
-	bool                                               bHasSystemScriptDIsWithPerInstanceData;                     // 0x03B4   (0x0001)  
-	unsigned char                                      UnknownData13_6[0x3];                                       // 0x03B5   (0x0003)  MISSED
-	TArray<FName>                                      UserDINamesReadInSystemScripts;                             // 0x03B8   (0x0010)  
-	unsigned char                                      UnknownData14_6[0xB4];                                      // 0x03C8   (0x00B4)  MISSED
-	bool                                               bEnablePauseTick;                                           // 0x047C   (0x0001)  
-	unsigned char                                      UnknownData15_7[0x3];                                       // 0x047D   (0x0003)  MISSED
+    bool                                               bDumpDebugSystemInfo;                                       // 0x0030   (0x0001) 
+    bool                                               bDumpDebugEmitterInfo;                                      // 0x0031   (0x0001) 
+    bool                                               bRequireCurrentFrameData;                                   // 0x0032   (0x0001) 
+    unsigned char                                      UnknownData08_6[0x1];                                       // 0x0033   (0x0001) MISSED
+    bool                                               bFixedBounds : 1;                                           // 0x0034:0 (0x0001) 
+    unsigned char                                      UnknownData09_5[0x3];                                       // 0x0035   (0x0003) MISSED
+    class UNiagaraEffectType*                          EffectType;                                                 // 0x0038   (0x0008) 
+    bool                                               bOverrideScalabilitySettings;                               // 0x0040   (0x0001) 
+    unsigned char                                      UnknownData10_6[0x7];                                       // 0x0041   (0x0007) MISSED
+    TArray<FNiagaraSystemScalabilityOverride>          ScalabilityOverrides;                                       // 0x0048   (0x0010) 
+    FNiagaraSystemScalabilityOverrides                 SystemScalabilityOverrides;                                 // 0x0058   (0x0010) 
+    TArray<FNiagaraEmitterHandle>                      EmitterHandles;                                             // 0x0068   (0x0010) 
+    TArray<class UNiagaraParameterCollectionInstance*> ParameterCollectionOverrides;                               // 0x0078   (0x0010) 
+    class UNiagaraScript*                              SystemSpawnScript;                                          // 0x0088   (0x0008) 
+    class UNiagaraScript*                              SystemUpdateScript;                                         // 0x0090   (0x0008) 
+    unsigned char                                      UnknownData11_6[0x10];                                      // 0x0098   (0x0010) MISSED
+    FNiagaraSystemCompiledData                         SystemCompiledData;                                         // 0x00A8   (0x0218) 
+    FNiagaraUserRedirectionParameterStore              ExposedParameters;                                          // 0x02C0   (0x00C8) 
+    FBox                                               FixedBounds;                                                // 0x0388   (0x001C) 
+    bool                                               bAutoDeactivate;                                            // 0x03A4   (0x0001) 
+    unsigned char                                      UnknownData12_6[0x3];                                       // 0x03A5   (0x0003) MISSED
+    float                                              WarmupTime;                                                 // 0x03A8   (0x0004) 
+    int32_t                                            WarmupTickCount;                                            // 0x03AC   (0x0004) 
+    float                                              WarmupTickDelta;                                            // 0x03B0   (0x0004) 
+    bool                                               bHasSystemScriptDIsWithPerInstanceData;                     // 0x03B4   (0x0001) 
+    unsigned char                                      UnknownData13_6[0x3];                                       // 0x03B5   (0x0003) MISSED
+    TArray<FName>                                      UserDINamesReadInSystemScripts;                             // 0x03B8   (0x0010) 
+    unsigned char                                      UnknownData14_6[0xB4];                                      // 0x03C8   (0x00B4) MISSED
+    bool                                               bEnablePauseTick;                                           // 0x047C   (0x0001) 
+    unsigned char                                      UnknownData15_7[0x3];                                       // 0x047D   (0x0003) MISSED
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraParameterSectionTemplate
 /// Size: 0x0040 (64 bytes) (0x000020 - 0x000040) align n/a MaxSize: 0x0040
 struct FMovieSceneNiagaraParameterSectionTemplate : FMovieSceneEvalTemplate
 { 
-	FNiagaraVariable                                   Parameter;                                                  // 0x0020   (0x0020)  
+    FNiagaraVariable                                   Parameter;                                                  // 0x0020   (0x0020) 
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraBoolParameterSectionTemplate
 /// Size: 0x00D0 (208 bytes) (0x000040 - 0x0000D0) align n/a MaxSize: 0x00D0
 struct FMovieSceneNiagaraBoolParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 { 
-	FMovieSceneBoolChannel                             BoolChannel;                                                // 0x0040   (0x0090)  
+    FMovieSceneBoolChannel                             BoolChannel;                                                // 0x0040   (0x0090) 
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraColorParameterSectionTemplate
 /// Size: 0x02C0 (704 bytes) (0x000040 - 0x0002C0) align n/a MaxSize: 0x02C0
 struct FMovieSceneNiagaraColorParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 { 
-	FMovieSceneFloatChannel                            RedChannel;                                                 // 0x0040   (0x00A0)  
-	FMovieSceneFloatChannel                            GreenChannel;                                               // 0x00E0   (0x00A0)  
-	FMovieSceneFloatChannel                            BlueChannel;                                                // 0x0180   (0x00A0)  
-	FMovieSceneFloatChannel                            AlphaChannel;                                               // 0x0220   (0x00A0)  
+    FMovieSceneFloatChannel                            RedChannel;                                                 // 0x0040   (0x00A0) 
+    FMovieSceneFloatChannel                            GreenChannel;                                               // 0x00E0   (0x00A0) 
+    FMovieSceneFloatChannel                            BlueChannel;                                                // 0x0180   (0x00A0) 
+    FMovieSceneFloatChannel                            AlphaChannel;                                               // 0x0220   (0x00A0) 
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraFloatParameterSectionTemplate
 /// Size: 0x00E0 (224 bytes) (0x000040 - 0x0000E0) align n/a MaxSize: 0x00E0
 struct FMovieSceneNiagaraFloatParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 { 
-	FMovieSceneFloatChannel                            FloatChannel;                                               // 0x0040   (0x00A0)  
+    FMovieSceneFloatChannel                            FloatChannel;                                               // 0x0040   (0x00A0) 
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraIntegerParameterSectionTemplate
 /// Size: 0x00D0 (208 bytes) (0x000040 - 0x0000D0) align n/a MaxSize: 0x00D0
 struct FMovieSceneNiagaraIntegerParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 { 
-	FMovieSceneIntegerChannel                          IntegerChannel;                                             // 0x0040   (0x0090)  
+    FMovieSceneIntegerChannel                          IntegerChannel;                                             // 0x0040   (0x0090) 
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraSystemTrackTemplate
@@ -2685,392 +2904,392 @@ struct FMovieSceneNiagaraSystemTrackTemplate : FMovieSceneEvalTemplate
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FNiagaraSystemSpawnSectionBehavior
 { 
-	FFrameNumber                                       StartFrame;                                                 // 0x0000   (0x0004)  
-	FFrameNumber                                       EndFrame;                                                   // 0x0004   (0x0004)  
-	TEnumAsByte<ENiagaraSystemSpawnSectionBehavior>    Behavior;                                                   // 0x0008   (0x0001)  
-	ENiagaraAgeUpdateMode                              AgeUpdateMode;                                              // 0x0009   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x2];                                       // 0x000A   (0x0002)  MISSED
+    FFrameNumber                                       StartFrame;                                                 // 0x0000   (0x0004) 
+    FFrameNumber                                       EndFrame;                                                   // 0x0004   (0x0004) 
+    TEnumAsByte<ENiagaraSystemSpawnSectionBehavior>    Behavior;                                                   // 0x0008   (0x0001) 
+    ENiagaraAgeUpdateMode                              AgeUpdateMode;                                              // 0x0009   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x2];                                       // 0x000A   (0x0002) MISSED
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraSystemTrackImplementation
 /// Size: 0x0020 (32 bytes) (0x000010 - 0x000020) align n/a MaxSize: 0x0020
 struct FMovieSceneNiagaraSystemTrackImplementation : FMovieSceneTrackImplementation
 { 
-	TArray<FNiagaraSystemSpawnSectionBehavior>         SpawnSectionBehaviorArray;                                  // 0x0010   (0x0010)  
+    TArray<FNiagaraSystemSpawnSectionBehavior>         SpawnSectionBehaviorArray;                                  // 0x0010   (0x0010) 
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraVectorParameterSectionTemplate
 /// Size: 0x02C8 (712 bytes) (0x000040 - 0x0002C8) align n/a MaxSize: 0x02C8
 struct FMovieSceneNiagaraVectorParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 { 
-	FMovieSceneFloatChannel                            VectorChannels[4];                                          // 0x0040   (0x0280)  
-	int32_t                                            ChannelsUsed;                                               // 0x02C0   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x02C4   (0x0004)  MISSED
+    FMovieSceneFloatChannel                            VectorChannels[4];                                          // 0x0040   (0x0280) 
+    int32_t                                            ChannelsUsed;                                               // 0x02C0   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x02C4   (0x0004) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraRandInfo
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FNiagaraRandInfo
 { 
-	int32_t                                            Seed1;                                                      // 0x0000   (0x0004)  
-	int32_t                                            Seed2;                                                      // 0x0004   (0x0004)  
-	int32_t                                            Seed3;                                                      // 0x0008   (0x0004)  
+    int32_t                                            Seed1;                                                      // 0x0000   (0x0004) 
+    int32_t                                            Seed2;                                                      // 0x0004   (0x0004) 
+    int32_t                                            Seed3;                                                      // 0x0008   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraScriptVariableBinding
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FNiagaraScriptVariableBinding
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
 };
 
 /// Struct /Script/Niagara.NiagaraVariableInfo
 /// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FNiagaraVariableInfo
 { 
-	FNiagaraVariable                                   Variable;                                                   // 0x0000   (0x0020)  
-	FText                                              Definition;                                                 // 0x0020   (0x0018)  
-	class UNiagaraDataInterface*                       DataInterface;                                              // 0x0038   (0x0008)  
+    FNiagaraVariable                                   Variable;                                                   // 0x0000   (0x0020) 
+    FText                                              Definition;                                                 // 0x0020   (0x0018) 
+    class UNiagaraDataInterface*                       DataInterface;                                              // 0x0038   (0x0008) 
 };
 
 /// Struct /Script/Niagara.NiagaraSystemUpdateContext
 /// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FNiagaraSystemUpdateContext
 { 
-	TArray<class UNiagaraComponent*>                   ComponentsToReset;                                          // 0x0000   (0x0010)  
-	TArray<class UNiagaraComponent*>                   ComponentsToReInit;                                         // 0x0010   (0x0010)  
-	TArray<class UNiagaraComponent*>                   ComponentsToNotifySimDestroy;                               // 0x0020   (0x0010)  
-	TArray<class UNiagaraSystem*>                      SystemSimsToDestroy;                                        // 0x0030   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0040   (0x0008)  MISSED
+    TArray<class UNiagaraComponent*>                   ComponentsToReset;                                          // 0x0000   (0x0010) 
+    TArray<class UNiagaraComponent*>                   ComponentsToReInit;                                         // 0x0010   (0x0010) 
+    TArray<class UNiagaraComponent*>                   ComponentsToNotifySimDestroy;                               // 0x0020   (0x0010) 
+    TArray<class UNiagaraSystem*>                      SystemSimsToDestroy;                                        // 0x0030   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0040   (0x0008) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraFunctionSignature
 /// Size: 0x0090 (144 bytes) (0x000000 - 0x000090) align n/a MaxSize: 0x0090
 struct FNiagaraFunctionSignature
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
-	TArray<FNiagaraVariable>                           Inputs;                                                     // 0x0008   (0x0010)  
-	TArray<FNiagaraVariable>                           Outputs;                                                    // 0x0018   (0x0010)  
-	FName                                              OwnerName;                                                  // 0x0028   (0x0008)  
-	bool                                               bRequiresContext : 1;                                       // 0x0030:0 (0x0001)  
-	bool                                               bRequiresExecPin : 1;                                       // 0x0030:1 (0x0001)  
-	bool                                               bMemberFunction : 1;                                        // 0x0030:2 (0x0001)  
-	bool                                               bExperimental : 1;                                          // 0x0030:3 (0x0001)  
-	bool                                               bSupportsCPU : 1;                                           // 0x0030:4 (0x0001)  
-	bool                                               bSupportsGPU : 1;                                           // 0x0030:5 (0x0001)  
-	bool                                               bWriteFunction : 1;                                         // 0x0030:6 (0x0001)  
-	bool                                               bSoftDeprecatedFunction : 1;                                // 0x0030:7 (0x0001)  
-	unsigned char                                      UnknownData01_5[0x3];                                       // 0x0031   (0x0003)  MISSED
-	int32_t                                            ModuleUsageBitmask;                                         // 0x0034   (0x0004)  
-	int32_t                                            ContextStageMinIndex;                                       // 0x0038   (0x0004)  
-	int32_t                                            ContextStageMaxIndex;                                       // 0x003C   (0x0004)  
-	TMap<FName, FName>                                 FunctionSpecifiers;                                         // 0x0040   (0x0050)  
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    TArray<FNiagaraVariable>                           Inputs;                                                     // 0x0008   (0x0010) 
+    TArray<FNiagaraVariable>                           Outputs;                                                    // 0x0018   (0x0010) 
+    FName                                              OwnerName;                                                  // 0x0028   (0x0008) 
+    bool                                               bRequiresContext : 1;                                       // 0x0030:0 (0x0001) 
+    bool                                               bRequiresExecPin : 1;                                       // 0x0030:1 (0x0001) 
+    bool                                               bMemberFunction : 1;                                        // 0x0030:2 (0x0001) 
+    bool                                               bExperimental : 1;                                          // 0x0030:3 (0x0001) 
+    bool                                               bSupportsCPU : 1;                                           // 0x0030:4 (0x0001) 
+    bool                                               bSupportsGPU : 1;                                           // 0x0030:5 (0x0001) 
+    bool                                               bWriteFunction : 1;                                         // 0x0030:6 (0x0001) 
+    bool                                               bSoftDeprecatedFunction : 1;                                // 0x0030:7 (0x0001) 
+    unsigned char                                      UnknownData01_5[0x3];                                       // 0x0031   (0x0003) MISSED
+    int32_t                                            ModuleUsageBitmask;                                         // 0x0034   (0x0004) 
+    int32_t                                            ContextStageMinIndex;                                       // 0x0038   (0x0004) 
+    int32_t                                            ContextStageMaxIndex;                                       // 0x003C   (0x0004) 
+    TMap<FName, FName>                                 FunctionSpecifiers;                                         // 0x0040   (0x0050) 
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterNameSettingsRef
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FNiagaraEmitterNameSettingsRef
 { 
-	FName                                              SystemName;                                                 // 0x0000   (0x0008)  
-	FString                                            EmitterName;                                                // 0x0008   (0x0010)  
+    FName                                              SystemName;                                                 // 0x0000   (0x0008) 
+    FString                                            EmitterName;                                                // 0x0008   (0x0010) 
 };
 
 /// Struct /Script/Niagara.BasicParticleData
 /// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
 struct FBasicParticleData
 { 
-	FVector                                            position;                                                   // 0x0000   (0x000C)  
-	float                                              Size;                                                       // 0x000C   (0x0004)  
-	FVector                                            Velocity;                                                   // 0x0010   (0x000C)  
+    FVector                                            position;                                                   // 0x0000   (0x000C) 
+    float                                              Size;                                                       // 0x000C   (0x0004) 
+    FVector                                            Velocity;                                                   // 0x0010   (0x000C) 
 };
 
 /// Struct /Script/Niagara.MeshTriCoordinate
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FMeshTriCoordinate
 { 
-	int32_t                                            Tri;                                                        // 0x0000   (0x0004)  
-	FVector                                            BaryCoord;                                                  // 0x0004   (0x000C)  
+    int32_t                                            Tri;                                                        // 0x0000   (0x0004) 
+    FVector                                            BaryCoord;                                                  // 0x0004   (0x000C) 
 };
 
 /// Struct /Script/Niagara.NiagaraGraphViewSettings
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraGraphViewSettings
 { 
-	FVector2D                                          Location;                                                   // 0x0000   (0x0008)  
-	float                                              Zoom;                                                       // 0x0008   (0x0004)  
-	bool                                               bIsValid;                                                   // 0x000C   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x000D   (0x0003)  MISSED
+    FVector2D                                          Location;                                                   // 0x0000   (0x0008) 
+    float                                              Zoom;                                                       // 0x0008   (0x0004) 
+    bool                                               bIsValid;                                                   // 0x000C   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x000D   (0x0003) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraCollisionEventPayload
 /// Size: 0x002C (44 bytes) (0x000000 - 0x00002C) align n/a MaxSize: 0x002C
 struct FNiagaraCollisionEventPayload
 { 
-	FVector                                            CollisionPos;                                               // 0x0000   (0x000C)  
-	FVector                                            CollisionNormal;                                            // 0x000C   (0x000C)  
-	FVector                                            CollisionVelocity;                                          // 0x0018   (0x000C)  
-	int32_t                                            ParticleIndex;                                              // 0x0024   (0x0004)  
-	int32_t                                            PhysicalMaterialIndex;                                      // 0x0028   (0x0004)  
+    FVector                                            CollisionPos;                                               // 0x0000   (0x000C) 
+    FVector                                            CollisionNormal;                                            // 0x000C   (0x000C) 
+    FVector                                            CollisionVelocity;                                          // 0x0018   (0x000C) 
+    int32_t                                            ParticleIndex;                                              // 0x0024   (0x0004) 
+    int32_t                                            PhysicalMaterialIndex;                                      // 0x0028   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraParameters
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraParameters
 { 
-	TArray<FNiagaraVariable>                           Parameters;                                                 // 0x0000   (0x0010)  
+    TArray<FNiagaraVariable>                           Parameters;                                                 // 0x0000   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraPlatformSetConflictEntry
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FNiagaraPlatformSetConflictEntry
 { 
-	FName                                              ProfileName;                                                // 0x0000   (0x0008)  
-	int32_t                                            QualityLevelMask;                                           // 0x0008   (0x0004)  
+    FName                                              ProfileName;                                                // 0x0000   (0x0008) 
+    int32_t                                            QualityLevelMask;                                           // 0x0008   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraPlatformSetConflictInfo
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FNiagaraPlatformSetConflictInfo
 { 
-	int32_t                                            SetAIndex;                                                  // 0x0000   (0x0004)  
-	int32_t                                            SetBIndex;                                                  // 0x0004   (0x0004)  
-	TArray<FNiagaraPlatformSetConflictEntry>           Conflicts;                                                  // 0x0008   (0x0010)  
+    int32_t                                            SetAIndex;                                                  // 0x0000   (0x0004) 
+    int32_t                                            SetBIndex;                                                  // 0x0004   (0x0004) 
+    TArray<FNiagaraPlatformSetConflictEntry>           Conflicts;                                                  // 0x0008   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraScalabilityManager
 /// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FNiagaraScalabilityManager
 { 
-	class UNiagaraEffectType*                          EffectType;                                                 // 0x0000   (0x0008)  
-	TArray<class UNiagaraComponent*>                   ManagedComponents;                                          // 0x0008   (0x0010)  
-	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0018   (0x0028)  MISSED
+    class UNiagaraEffectType*                          EffectType;                                                 // 0x0000   (0x0008) 
+    TArray<class UNiagaraComponent*>                   ManagedComponents;                                          // 0x0008   (0x0010) 
+    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0018   (0x0028) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraModuleDependency
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FNiagaraModuleDependency
 { 
-	FName                                              ID;                                                         // 0x0000   (0x0008)  
-	ENiagaraModuleDependencyType                       Type;                                                       // 0x0008   (0x0001)  
-	ENiagaraModuleDependencyScriptConstraint           ScriptConstraint;                                           // 0x0009   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x6];                                       // 0x000A   (0x0006)  MISSED
-	FText                                              Description;                                                // 0x0010   (0x0018)  
+    FName                                              ID;                                                         // 0x0000   (0x0008) 
+    ENiagaraModuleDependencyType                       Type;                                                       // 0x0008   (0x0001) 
+    ENiagaraModuleDependencyScriptConstraint           ScriptConstraint;                                           // 0x0009   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x6];                                       // 0x000A   (0x0006) MISSED
+    FText                                              Description;                                                // 0x0010   (0x0018) 
 };
 
 /// Struct /Script/Niagara.NiagaraScriptInstanceParameterStore
 /// Size: 0x0088 (136 bytes) (0x000078 - 0x000088) align n/a MaxSize: 0x0088
 struct FNiagaraScriptInstanceParameterStore : FNiagaraParameterStore
 { 
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0078   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0078   (0x0010) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraScriptHighlight
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FNiagaraScriptHighlight
 { 
-	FLinearColor                                       Color;                                                      // 0x0000   (0x0010)  
-	FText                                              DisplayName;                                                // 0x0010   (0x0018)  
+    FLinearColor                                       Color;                                                      // 0x0000   (0x0010) 
+    FText                                              DisplayName;                                                // 0x0010   (0x0018) 
 };
 
 /// Struct /Script/Niagara.NiagaraSystemCompileRequest
 /// Size: 0x0080 (128 bytes) (0x000000 - 0x000080) align n/a MaxSize: 0x0080
 struct FNiagaraSystemCompileRequest
 { 
-	unsigned char                                      UnknownData02_7[0x8];                                       // 0x0000   (0x0008)  MISSED
-	TArray<class UObject*>                             RootObjects;                                                // 0x0008   (0x0010)  
-	unsigned char                                      UnknownData03_7[0x68];                                      // 0x0018   (0x0068)  MISSED
+    unsigned char                                      UnknownData02_7[0x8];                                       // 0x0000   (0x0008) MISSED
+    TArray<class UObject*>                             RootObjects;                                                // 0x0008   (0x0010) 
+    unsigned char                                      UnknownData03_7[0x68];                                      // 0x0018   (0x0068) MISSED
 };
 
 /// Struct /Script/Niagara.EmitterCompiledScriptPair
 /// Size: 0x0078 (120 bytes) (0x000000 - 0x000078) align n/a MaxSize: 0x0078
 struct FEmitterCompiledScriptPair
 { 
-	unsigned char                                      UnknownData01_2[0x78];                                      // 0x0000   (0x0078)  MISSED
+    unsigned char                                      UnknownData01_2[0x78];                                      // 0x0000   (0x0078) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterCompiledData
 /// Size: 0x0130 (304 bytes) (0x000000 - 0x000130) align n/a MaxSize: 0x0130
 struct FNiagaraEmitterCompiledData
 { 
-	TArray<FName>                                      SpawnAttributes;                                            // 0x0000   (0x0010)  
-	FNiagaraVariable                                   EmitterSpawnIntervalVar;                                    // 0x0010   (0x0020)  
-	FNiagaraVariable                                   EmitterInterpSpawnStartDTVar;                               // 0x0030   (0x0020)  
-	FNiagaraVariable                                   EmitterSpawnGroupVar;                                       // 0x0050   (0x0020)  
-	FNiagaraVariable                                   EmitterAgeVar;                                              // 0x0070   (0x0020)  
-	FNiagaraVariable                                   EmitterRandomSeedVar;                                       // 0x0090   (0x0020)  
-	FNiagaraVariable                                   EmitterInstanceSeedVar;                                     // 0x00B0   (0x0020)  
-	FNiagaraVariable                                   EmitterTotalSpawnedParticlesVar;                            // 0x00D0   (0x0020)  
-	FNiagaraDataSetCompiledData                        DataSetCompiledData;                                        // 0x00F0   (0x0040)  
+    TArray<FName>                                      SpawnAttributes;                                            // 0x0000   (0x0010) 
+    FNiagaraVariable                                   EmitterSpawnIntervalVar;                                    // 0x0010   (0x0020) 
+    FNiagaraVariable                                   EmitterInterpSpawnStartDTVar;                               // 0x0030   (0x0020) 
+    FNiagaraVariable                                   EmitterSpawnGroupVar;                                       // 0x0050   (0x0020) 
+    FNiagaraVariable                                   EmitterAgeVar;                                              // 0x0070   (0x0020) 
+    FNiagaraVariable                                   EmitterRandomSeedVar;                                       // 0x0090   (0x0020) 
+    FNiagaraVariable                                   EmitterInstanceSeedVar;                                     // 0x00B0   (0x0020) 
+    FNiagaraVariable                                   EmitterTotalSpawnedParticlesVar;                            // 0x00D0   (0x0020) 
+    FNiagaraDataSetCompiledData                        DataSetCompiledData;                                        // 0x00F0   (0x0040) 
 };
 
 /// Struct /Script/Niagara.NiagaraInputConditionMetadata
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FNiagaraInputConditionMetadata
 { 
-	FName                                              InputName;                                                  // 0x0000   (0x0008)  
-	TArray<FString>                                    TargetValues;                                               // 0x0008   (0x0010)  
+    FName                                              InputName;                                                  // 0x0000   (0x0008) 
+    TArray<FString>                                    TargetValues;                                               // 0x0008   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraVariableMetaData
 /// Size: 0x00F0 (240 bytes) (0x000000 - 0x0000F0) align n/a MaxSize: 0x00F0
 struct FNiagaraVariableMetaData
 { 
-	FText                                              Description;                                                // 0x0000   (0x0018)  
-	FText                                              CategoryName;                                               // 0x0018   (0x0018)  
-	bool                                               bAdvancedDisplay;                                           // 0x0030   (0x0001)  
-	unsigned char                                      UnknownData05_6[0x3];                                       // 0x0031   (0x0003)  MISSED
-	int32_t                                            EditorSortPriority;                                         // 0x0034   (0x0004)  
-	bool                                               bInlineEditConditionToggle;                                 // 0x0038   (0x0001)  
-	unsigned char                                      UnknownData06_6[0x7];                                       // 0x0039   (0x0007)  MISSED
-	FNiagaraInputConditionMetadata                     EditCondition;                                              // 0x0040   (0x0018)  
-	FNiagaraInputConditionMetadata                     VisibleCondition;                                           // 0x0058   (0x0018)  
-	TMap<FName, FString>                               PropertyMetaData;                                           // 0x0070   (0x0050)  
-	FName                                              ParentAttribute;                                            // 0x00C0   (0x0008)  
-	FName                                              ScopeName;                                                  // 0x00C8   (0x0008)  
-	ENiagaraScriptParameterUsage                       Usage;                                                      // 0x00D0   (0x0004)  
-	bool                                               bIsStaticSwitch;                                            // 0x00D4   (0x0001)  
-	unsigned char                                      UnknownData07_6[0x3];                                       // 0x00D5   (0x0003)  MISSED
-	int32_t                                            StaticSwitchDefaultValue;                                   // 0x00D8   (0x0004)  
-	bool                                               bAddedToNodeGraphDeepCopy;                                  // 0x00DC   (0x0001)  
-	bool                                               bOutputIsPersistent;                                        // 0x00DD   (0x0001)  
-	unsigned char                                      UnknownData08_6[0x2];                                       // 0x00DE   (0x0002)  MISSED
-	FName                                              CachedNamespacelessVariableName;                            // 0x00E0   (0x0008)  
-	bool                                               bCreatedInSystemEditor;                                     // 0x00E8   (0x0001)  
-	bool                                               bUseLegacyNameString;                                       // 0x00E9   (0x0001)  
-	unsigned char                                      UnknownData09_7[0x6];                                       // 0x00EA   (0x0006)  MISSED
+    FText                                              Description;                                                // 0x0000   (0x0018) 
+    FText                                              CategoryName;                                               // 0x0018   (0x0018) 
+    bool                                               bAdvancedDisplay;                                           // 0x0030   (0x0001) 
+    unsigned char                                      UnknownData05_6[0x3];                                       // 0x0031   (0x0003) MISSED
+    int32_t                                            EditorSortPriority;                                         // 0x0034   (0x0004) 
+    bool                                               bInlineEditConditionToggle;                                 // 0x0038   (0x0001) 
+    unsigned char                                      UnknownData06_6[0x7];                                       // 0x0039   (0x0007) MISSED
+    FNiagaraInputConditionMetadata                     EditCondition;                                              // 0x0040   (0x0018) 
+    FNiagaraInputConditionMetadata                     VisibleCondition;                                           // 0x0058   (0x0018) 
+    TMap<FName, FString>                               PropertyMetaData;                                           // 0x0070   (0x0050) 
+    FName                                              ParentAttribute;                                            // 0x00C0   (0x0008) 
+    FName                                              ScopeName;                                                  // 0x00C8   (0x0008) 
+    ENiagaraScriptParameterUsage                       Usage;                                                      // 0x00D0   (0x0004) 
+    bool                                               bIsStaticSwitch;                                            // 0x00D4   (0x0001) 
+    unsigned char                                      UnknownData07_6[0x3];                                       // 0x00D5   (0x0003) MISSED
+    int32_t                                            StaticSwitchDefaultValue;                                   // 0x00D8   (0x0004) 
+    bool                                               bAddedToNodeGraphDeepCopy;                                  // 0x00DC   (0x0001) 
+    bool                                               bOutputIsPersistent;                                        // 0x00DD   (0x0001) 
+    unsigned char                                      UnknownData08_6[0x2];                                       // 0x00DE   (0x0002) MISSED
+    FName                                              CachedNamespacelessVariableName;                            // 0x00E0   (0x0008) 
+    bool                                               bCreatedInSystemEditor;                                     // 0x00E8   (0x0001) 
+    bool                                               bUseLegacyNameString;                                       // 0x00E9   (0x0001) 
+    unsigned char                                      UnknownData09_7[0x6];                                       // 0x00EA   (0x0006) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraParameterScopeInfo
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FNiagaraParameterScopeInfo
 { 
-	ENiagaraParameterScope                             Scope;                                                      // 0x0000   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004)  MISSED
-	FString                                            NamespaceString;                                            // 0x0008   (0x0010)  
+    ENiagaraParameterScope                             Scope;                                                      // 0x0000   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    FString                                            NamespaceString;                                            // 0x0008   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraCompileHashVisitorDebugInfo
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FNiagaraCompileHashVisitorDebugInfo
 { 
-	FString                                            Object;                                                     // 0x0000   (0x0010)  
-	TArray<FString>                                    PropertyKeys;                                               // 0x0010   (0x0010)  
-	TArray<FString>                                    PropertyValues;                                             // 0x0020   (0x0010)  
+    FString                                            Object;                                                     // 0x0000   (0x0010) 
+    TArray<FString>                                    PropertyKeys;                                               // 0x0010   (0x0010) 
+    TArray<FString>                                    PropertyValues;                                             // 0x0020   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraID
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FNiagaraID
 { 
-	int32_t                                            Index;                                                      // 0x0000   (0x0004)  
-	int32_t                                            AcquireTag;                                                 // 0x0004   (0x0004)  
+    int32_t                                            Index;                                                      // 0x0000   (0x0004) 
+    int32_t                                            AcquireTag;                                                 // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraSpawnInfo
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNiagaraSpawnInfo
 { 
-	int32_t                                            Count;                                                      // 0x0000   (0x0004)  
-	float                                              InterpStartDt;                                              // 0x0004   (0x0004)  
-	float                                              IntervalDt;                                                 // 0x0008   (0x0004)  
-	int32_t                                            SpawnGroup;                                                 // 0x000C   (0x0004)  
+    int32_t                                            Count;                                                      // 0x0000   (0x0004) 
+    float                                              InterpStartDt;                                              // 0x0004   (0x0004) 
+    float                                              IntervalDt;                                                 // 0x0008   (0x0004) 
+    int32_t                                            SpawnGroup;                                                 // 0x000C   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraMatrix
 /// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FNiagaraMatrix
 { 
-	FVector4                                           Row0;                                                       // 0x0000   (0x0010)  
-	FVector4                                           Row1;                                                       // 0x0010   (0x0010)  
-	FVector4                                           Row2;                                                       // 0x0020   (0x0010)  
-	FVector4                                           Row3;                                                       // 0x0030   (0x0010)  
+    FVector4                                           Row0;                                                       // 0x0000   (0x0010) 
+    FVector4                                           Row1;                                                       // 0x0010   (0x0010) 
+    FVector4                                           Row2;                                                       // 0x0020   (0x0010) 
+    FVector4                                           Row3;                                                       // 0x0030   (0x0010) 
 };
 
 /// Struct /Script/Niagara.NiagaraParameterMap
 /// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FNiagaraParameterMap
 { 
-	unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001)  MISSED
+    unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraNumeric
 /// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FNiagaraNumeric
 { 
-	unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001)  MISSED
+    unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraHalfVector4
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FNiagaraHalfVector4
 { 
-	uint16_t                                           X;                                                          // 0x0000   (0x0002)  
-	uint16_t                                           Y;                                                          // 0x0002   (0x0002)  
-	uint16_t                                           Z;                                                          // 0x0004   (0x0002)  
-	uint16_t                                           W;                                                          // 0x0006   (0x0002)  
+    uint16_t                                           X;                                                          // 0x0000   (0x0002) 
+    uint16_t                                           Y;                                                          // 0x0002   (0x0002) 
+    uint16_t                                           Z;                                                          // 0x0004   (0x0002) 
+    uint16_t                                           W;                                                          // 0x0006   (0x0002) 
 };
 
 /// Struct /Script/Niagara.NiagaraHalfVector3
 /// Size: 0x0006 (6 bytes) (0x000000 - 0x000006) align n/a MaxSize: 0x0006
 struct FNiagaraHalfVector3
 { 
-	uint16_t                                           X;                                                          // 0x0000   (0x0002)  
-	uint16_t                                           Y;                                                          // 0x0002   (0x0002)  
-	uint16_t                                           Z;                                                          // 0x0004   (0x0002)  
+    uint16_t                                           X;                                                          // 0x0000   (0x0002) 
+    uint16_t                                           Y;                                                          // 0x0002   (0x0002) 
+    uint16_t                                           Z;                                                          // 0x0004   (0x0002) 
 };
 
 /// Struct /Script/Niagara.NiagaraHalfVector2
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FNiagaraHalfVector2
 { 
-	uint16_t                                           X;                                                          // 0x0000   (0x0002)  
-	uint16_t                                           Y;                                                          // 0x0002   (0x0002)  
+    uint16_t                                           X;                                                          // 0x0000   (0x0002) 
+    uint16_t                                           Y;                                                          // 0x0002   (0x0002) 
 };
 
 /// Struct /Script/Niagara.NiagaraHalf
 /// Size: 0x0002 (2 bytes) (0x000000 - 0x000002) align n/a MaxSize: 0x0002
 struct FNiagaraHalf
 { 
-	uint16_t                                           Value;                                                      // 0x0000   (0x0002)  
+    uint16_t                                           Value;                                                      // 0x0000   (0x0002) 
 };
 
 /// Struct /Script/Niagara.NiagaraBool
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FNiagaraBool
 { 
-	int32_t                                            Value;                                                      // 0x0000   (0x0004)  
+    int32_t                                            Value;                                                      // 0x0000   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraInt32
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FNiagaraInt32
 { 
-	int32_t                                            Value;                                                      // 0x0000   (0x0004)  
+    int32_t                                            Value;                                                      // 0x0000   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraFloat
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FNiagaraFloat
 { 
-	float                                              Value;                                                      // 0x0000   (0x0004)  
+    float                                              Value;                                                      // 0x0000   (0x0004) 
 };
 
 /// Struct /Script/Niagara.NiagaraVariant
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FNiagaraVariant
 { 
-	class UObject*                                     Object;                                                     // 0x0000   (0x0008)  
-	class UNiagaraDataInterface*                       DataInterface;                                              // 0x0008   (0x0008)  
-	TArray<char>                                       Bytes;                                                      // 0x0010   (0x0010)  
-	ENiagaraVariantMode                                CurrentMode;                                                // 0x0020   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x4];                                       // 0x0024   (0x0004)  MISSED
+    class UObject*                                     Object;                                                     // 0x0000   (0x0008) 
+    class UNiagaraDataInterface*                       DataInterface;                                              // 0x0008   (0x0008) 
+    TArray<char>                                       Bytes;                                                      // 0x0010   (0x0010) 
+    ENiagaraVariantMode                                CurrentMode;                                                // 0x0020   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0024   (0x0004) MISSED
 };
 
 /// Struct /Script/Niagara.NiagaraWorldManagerTickFunction
 /// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 struct FNiagaraWorldManagerTickFunction : FTickFunction
 { 
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010) MISSED
 };
 
 #pragma pack(pop)

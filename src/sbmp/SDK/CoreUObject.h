@@ -6,7 +6,7 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
+#include "BasicType.h"
 
 #pragma pack(push, 0x1)
 
@@ -14,296 +14,296 @@
 /// Size: 0x01 (1 bytes)
 enum class EInterpCurveMode : uint8_t
 {
-	CIM_Linear                                                                       = 0,
-	CIM_CurveAuto                                                                    = 1,
-	CIM_Constant                                                                     = 2,
-	CIM_CurveUser                                                                    = 3,
-	CIM_CurveBreak                                                                   = 4,
-	CIM_CurveAutoClamped                                                             = 5
+    CIM_Linear                                                                       = 0,
+    CIM_CurveAuto                                                                    = 1,
+    CIM_Constant                                                                     = 2,
+    CIM_CurveUser                                                                    = 3,
+    CIM_CurveBreak                                                                   = 4,
+    CIM_CurveAutoClamped                                                             = 5
 };
 
 /// Enum /Script/CoreUObject.ERangeBoundTypes
 /// Size: 0x01 (1 bytes)
 enum class ERangeBoundTypes : uint8_t
 {
-	Exclusive                                                                        = 0,
-	Inclusive                                                                        = 1,
-	Open                                                                             = 2
+    Exclusive                                                                        = 0,
+    Inclusive                                                                        = 1,
+    Open                                                                             = 2
 };
 
 /// Enum /Script/CoreUObject.ELocalizedTextSourceCategory
 /// Size: 0x01 (1 bytes)
 enum class ELocalizedTextSourceCategory : uint8_t
 {
-	Game                                                                             = 0,
-	Engine                                                                           = 1,
-	Editor                                                                           = 2
+    Game                                                                             = 0,
+    Engine                                                                           = 1,
+    Editor                                                                           = 2
 };
 
 /// Enum /Script/CoreUObject.EAutomationEventType
 /// Size: 0x01 (1 bytes)
 enum class EAutomationEventType : uint8_t
 {
-	Info                                                                             = 0,
-	Warning                                                                          = 1,
-	Error                                                                            = 2
+    Info                                                                             = 0,
+    Warning                                                                          = 1,
+    Error                                                                            = 2
 };
 
 /// Enum /Script/CoreUObject.EMouseCursor
 /// Size: 0x01 (1 bytes)
 enum class EMouseCursor : uint8_t
 {
-	None                                                                             = 0,
-	Default                                                                          = 1,
-	TextEditBeam                                                                     = 2,
-	ResizeLeftRight                                                                  = 3,
-	ResizeUpDown                                                                     = 4,
-	ResizeSouthEast                                                                  = 5,
-	ResizeSouthWest                                                                  = 6,
-	CardinalCross                                                                    = 7,
-	Crosshairs                                                                       = 8,
-	Hand                                                                             = 9,
-	GrabHand                                                                         = 10,
-	GrabHandClosed                                                                   = 11,
-	SlashedCircle                                                                    = 12,
-	EyeDropper                                                                       = 13
+    None                                                                             = 0,
+    Default                                                                          = 1,
+    TextEditBeam                                                                     = 2,
+    ResizeLeftRight                                                                  = 3,
+    ResizeUpDown                                                                     = 4,
+    ResizeSouthEast                                                                  = 5,
+    ResizeSouthWest                                                                  = 6,
+    CardinalCross                                                                    = 7,
+    Crosshairs                                                                       = 8,
+    Hand                                                                             = 9,
+    GrabHand                                                                         = 10,
+    GrabHandClosed                                                                   = 11,
+    SlashedCircle                                                                    = 12,
+    EyeDropper                                                                       = 13
 };
 
 /// Enum /Script/CoreUObject.ELifetimeCondition
 /// Size: 0x01 (1 bytes)
 enum class ELifetimeCondition : uint8_t
 {
-	COND_None                                                                        = 0,
-	COND_InitialOnly                                                                 = 1,
-	COND_OwnerOnly                                                                   = 2,
-	COND_SkipOwner                                                                   = 3,
-	COND_SimulatedOnly                                                               = 4,
-	COND_AutonomousOnly                                                              = 5,
-	COND_SimulatedOrPhysics                                                          = 6,
-	COND_InitialOrOwner                                                              = 7,
-	COND_Custom                                                                      = 8,
-	COND_ReplayOrOwner                                                               = 9,
-	COND_ReplayOnly                                                                  = 10,
-	COND_SimulatedOnlyNoReplay                                                       = 11,
-	COND_SimulatedOrPhysicsNoReplay                                                  = 12,
-	COND_SkipReplay                                                                  = 13,
-	COND_Never                                                                       = 15,
-	COND_Max                                                                         = 16
+    COND_None                                                                        = 0,
+    COND_InitialOnly                                                                 = 1,
+    COND_OwnerOnly                                                                   = 2,
+    COND_SkipOwner                                                                   = 3,
+    COND_SimulatedOnly                                                               = 4,
+    COND_AutonomousOnly                                                              = 5,
+    COND_SimulatedOrPhysics                                                          = 6,
+    COND_InitialOrOwner                                                              = 7,
+    COND_Custom                                                                      = 8,
+    COND_ReplayOrOwner                                                               = 9,
+    COND_ReplayOnly                                                                  = 10,
+    COND_SimulatedOnlyNoReplay                                                       = 11,
+    COND_SimulatedOrPhysicsNoReplay                                                  = 12,
+    COND_SkipReplay                                                                  = 13,
+    COND_Never                                                                       = 15,
+    COND_Max                                                                         = 16
 };
 
 /// Enum /Script/CoreUObject.EDataValidationResult
 /// Size: 0x01 (1 bytes)
 enum class EDataValidationResult : uint8_t
 {
-	Invalid                                                                          = 0,
-	Valid                                                                            = 1,
-	NotValidated                                                                     = 2
+    Invalid                                                                          = 0,
+    Valid                                                                            = 1,
+    NotValidated                                                                     = 2
 };
 
 /// Enum /Script/CoreUObject.EAppMsgType
 /// Size: 0x01 (1 bytes)
 enum class EAppMsgType : uint8_t
 {
-	Ok                                                                               = 0,
-	YesNo                                                                            = 1,
-	OkCancel                                                                         = 2,
-	YesNoCancel                                                                      = 3,
-	CancelRetryContinue                                                              = 4,
-	YesNoYesAllNoAll                                                                 = 5,
-	YesNoYesAllNoAllCancel                                                           = 6,
-	YesNoYesAll                                                                      = 7
+    Ok                                                                               = 0,
+    YesNo                                                                            = 1,
+    OkCancel                                                                         = 2,
+    YesNoCancel                                                                      = 3,
+    CancelRetryContinue                                                              = 4,
+    YesNoYesAllNoAll                                                                 = 5,
+    YesNoYesAllNoAllCancel                                                           = 6,
+    YesNoYesAll                                                                      = 7
 };
 
 /// Enum /Script/CoreUObject.EAppReturnType
 /// Size: 0x01 (1 bytes)
 enum class EAppReturnType : uint8_t
 {
-	No                                                                               = 0,
-	Yes                                                                              = 1,
-	YesAll                                                                           = 2,
-	NoAll                                                                            = 3,
-	Cancel                                                                           = 4,
-	Ok                                                                               = 5,
-	Retry                                                                            = 6,
-	Continue                                                                         = 7
+    No                                                                               = 0,
+    Yes                                                                              = 1,
+    YesAll                                                                           = 2,
+    NoAll                                                                            = 3,
+    Cancel                                                                           = 4,
+    Ok                                                                               = 5,
+    Retry                                                                            = 6,
+    Continue                                                                         = 7
 };
 
 /// Enum /Script/CoreUObject.EPropertyAccessChangeNotifyMode
 /// Size: 0x01 (1 bytes)
 enum class EPropertyAccessChangeNotifyMode : uint8_t
 {
-	Default                                                                          = 0,
-	Never                                                                            = 1,
-	Always                                                                           = 2
+    Default                                                                          = 0,
+    Never                                                                            = 1,
+    Always                                                                           = 2
 };
 
 /// Enum /Script/CoreUObject.EUnit
 /// Size: 0x01 (1 bytes)
 enum class EUnit : uint8_t
 {
-	Micrometers                                                                      = 0,
-	Millimeters                                                                      = 1,
-	Centimeters                                                                      = 2,
-	Meters                                                                           = 3,
-	Kilometers                                                                       = 4,
-	Inches                                                                           = 5,
-	Feet                                                                             = 6,
-	Yards                                                                            = 7,
-	Miles                                                                            = 8,
-	Lightyears                                                                       = 9,
-	Degrees                                                                          = 10,
-	Radians                                                                          = 11,
-	MetersPerSecond                                                                  = 12,
-	KilometersPerHour                                                                = 13,
-	MilesPerHour                                                                     = 14,
-	Celsius                                                                          = 15,
-	Farenheit                                                                        = 16,
-	Kelvin                                                                           = 17,
-	Micrograms                                                                       = 18,
-	Milligrams                                                                       = 19,
-	Grams                                                                            = 20,
-	Kilograms                                                                        = 21,
-	MetricTons                                                                       = 22,
-	Ounces                                                                           = 23,
-	Pounds                                                                           = 24,
-	Stones                                                                           = 25,
-	Newtons                                                                          = 26,
-	PoundsForce                                                                      = 27,
-	KilogramsForce                                                                   = 28,
-	Hertz                                                                            = 29,
-	Kilohertz                                                                        = 30,
-	Megahertz                                                                        = 31,
-	Gigahertz                                                                        = 32,
-	RevolutionsPerMinute                                                             = 33,
-	Bytes                                                                            = 34,
-	Kilobytes                                                                        = 35,
-	Megabytes                                                                        = 36,
-	Gigabytes                                                                        = 37,
-	Terabytes                                                                        = 38,
-	Lumens                                                                           = 39,
-	Milliseconds                                                                     = 43,
-	Seconds                                                                          = 44,
-	Minutes                                                                          = 45,
-	Hours                                                                            = 46,
-	Days                                                                             = 47,
-	Months                                                                           = 48,
-	Years                                                                            = 49,
-	Multiplier                                                                       = 52,
-	Percentage                                                                       = 51,
-	Unspecified                                                                      = 53
+    Micrometers                                                                      = 0,
+    Millimeters                                                                      = 1,
+    Centimeters                                                                      = 2,
+    Meters                                                                           = 3,
+    Kilometers                                                                       = 4,
+    Inches                                                                           = 5,
+    Feet                                                                             = 6,
+    Yards                                                                            = 7,
+    Miles                                                                            = 8,
+    Lightyears                                                                       = 9,
+    Degrees                                                                          = 10,
+    Radians                                                                          = 11,
+    MetersPerSecond                                                                  = 12,
+    KilometersPerHour                                                                = 13,
+    MilesPerHour                                                                     = 14,
+    Celsius                                                                          = 15,
+    Farenheit                                                                        = 16,
+    Kelvin                                                                           = 17,
+    Micrograms                                                                       = 18,
+    Milligrams                                                                       = 19,
+    Grams                                                                            = 20,
+    Kilograms                                                                        = 21,
+    MetricTons                                                                       = 22,
+    Ounces                                                                           = 23,
+    Pounds                                                                           = 24,
+    Stones                                                                           = 25,
+    Newtons                                                                          = 26,
+    PoundsForce                                                                      = 27,
+    KilogramsForce                                                                   = 28,
+    Hertz                                                                            = 29,
+    Kilohertz                                                                        = 30,
+    Megahertz                                                                        = 31,
+    Gigahertz                                                                        = 32,
+    RevolutionsPerMinute                                                             = 33,
+    Bytes                                                                            = 34,
+    Kilobytes                                                                        = 35,
+    Megabytes                                                                        = 36,
+    Gigabytes                                                                        = 37,
+    Terabytes                                                                        = 38,
+    Lumens                                                                           = 39,
+    Milliseconds                                                                     = 43,
+    Seconds                                                                          = 44,
+    Minutes                                                                          = 45,
+    Hours                                                                            = 46,
+    Days                                                                             = 47,
+    Months                                                                           = 48,
+    Years                                                                            = 49,
+    Multiplier                                                                       = 52,
+    Percentage                                                                       = 51,
+    Unspecified                                                                      = 53
 };
 
 /// Enum /Script/CoreUObject.EPixelFormat
 /// Size: 0x01 (1 bytes)
 enum class EPixelFormat : uint8_t
 {
-	PF_Unknown                                                                       = 0,
-	PF_A32B32G32R32F                                                                 = 1,
-	PF_B8G8R8A8                                                                      = 2,
-	PF_G8                                                                            = 3,
-	PF_G16                                                                           = 4,
-	PF_DXT1                                                                          = 5,
-	PF_DXT3                                                                          = 6,
-	PF_DXT5                                                                          = 7,
-	PF_UYVY                                                                          = 8,
-	PF_FloatRGB                                                                      = 9,
-	PF_FloatRGBA                                                                     = 10,
-	PF_DepthStencil                                                                  = 11,
-	PF_ShadowDepth                                                                   = 12,
-	PF_R32_FLOAT                                                                     = 13,
-	PF_G16R16                                                                        = 14,
-	PF_G16R16F                                                                       = 15,
-	PF_G16R16F_FILTER                                                                = 16,
-	PF_G32R32F                                                                       = 17,
-	PF_A2B10G10R10                                                                   = 18,
-	PF_A16B16G16R16                                                                  = 19,
-	PF_D24                                                                           = 20,
-	PF_R16F                                                                          = 21,
-	PF_R16F_FILTER                                                                   = 22,
-	PF_BC5                                                                           = 23,
-	PF_V8U8                                                                          = 24,
-	PF_A1                                                                            = 25,
-	PF_FloatR11G11B10                                                                = 26,
-	PF_A8                                                                            = 27,
-	PF_R32_UINT                                                                      = 28,
-	PF_R32_SINT                                                                      = 29,
-	PF_PVRTC2                                                                        = 30,
-	PF_PVRTC4                                                                        = 31,
-	PF_R16_UINT                                                                      = 32,
-	PF_R16_SINT                                                                      = 33,
-	PF_R16G16B16A16_UINT                                                             = 34,
-	PF_R16G16B16A16_SINT                                                             = 35,
-	PF_R5G6B5_UNORM                                                                  = 36,
-	PF_R8G8B8A8                                                                      = 37,
-	PF_A8R8G8B8                                                                      = 38,
-	PF_BC4                                                                           = 39,
-	PF_R8G8                                                                          = 40,
-	PF_ATC_RGB                                                                       = 41,
-	PF_ATC_RGBA_E                                                                    = 42,
-	PF_ATC_RGBA_I                                                                    = 43,
-	PF_X24_G8                                                                        = 44,
-	PF_ETC1                                                                          = 45,
-	PF_ETC2_RGB                                                                      = 46,
-	PF_ETC2_RGBA                                                                     = 47,
-	PF_R32G32B32A32_UINT                                                             = 48,
-	PF_R16G16_UINT                                                                   = 49,
-	PF_ASTC_4x4                                                                      = 50,
-	PF_ASTC_6x6                                                                      = 51,
-	PF_ASTC_8x8                                                                      = 52,
-	PF_ASTC_10x10                                                                    = 53,
-	PF_ASTC_12x12                                                                    = 54,
-	PF_BC6H                                                                          = 55,
-	PF_BC7                                                                           = 56,
-	PF_R8_UINT                                                                       = 57,
-	PF_L8                                                                            = 58,
-	PF_XGXR8                                                                         = 59,
-	PF_R8G8B8A8_UINT                                                                 = 60,
-	PF_R8G8B8A8_SNORM                                                                = 61,
-	PF_R16G16B16A16_UNORM                                                            = 62,
-	PF_R16G16B16A16_SNORM                                                            = 63,
-	PF_PLATFORM_HDR                                                                  = 64,
-	PF_PLATFORM_HDR66                                                                = 65,
-	PF_PLATFORM_HDR67                                                                = 66,
-	PF_NV12                                                                          = 67,
-	PF_R32G32_UINT                                                                   = 68,
-	PF_ETC2_R11_EAC                                                                  = 69,
-	PF_ETC2_RG11_EAC                                                                 = 70
+    PF_Unknown                                                                       = 0,
+    PF_A32B32G32R32F                                                                 = 1,
+    PF_B8G8R8A8                                                                      = 2,
+    PF_G8                                                                            = 3,
+    PF_G16                                                                           = 4,
+    PF_DXT1                                                                          = 5,
+    PF_DXT3                                                                          = 6,
+    PF_DXT5                                                                          = 7,
+    PF_UYVY                                                                          = 8,
+    PF_FloatRGB                                                                      = 9,
+    PF_FloatRGBA                                                                     = 10,
+    PF_DepthStencil                                                                  = 11,
+    PF_ShadowDepth                                                                   = 12,
+    PF_R32_FLOAT                                                                     = 13,
+    PF_G16R16                                                                        = 14,
+    PF_G16R16F                                                                       = 15,
+    PF_G16R16F_FILTER                                                                = 16,
+    PF_G32R32F                                                                       = 17,
+    PF_A2B10G10R10                                                                   = 18,
+    PF_A16B16G16R16                                                                  = 19,
+    PF_D24                                                                           = 20,
+    PF_R16F                                                                          = 21,
+    PF_R16F_FILTER                                                                   = 22,
+    PF_BC5                                                                           = 23,
+    PF_V8U8                                                                          = 24,
+    PF_A1                                                                            = 25,
+    PF_FloatR11G11B10                                                                = 26,
+    PF_A8                                                                            = 27,
+    PF_R32_UINT                                                                      = 28,
+    PF_R32_SINT                                                                      = 29,
+    PF_PVRTC2                                                                        = 30,
+    PF_PVRTC4                                                                        = 31,
+    PF_R16_UINT                                                                      = 32,
+    PF_R16_SINT                                                                      = 33,
+    PF_R16G16B16A16_UINT                                                             = 34,
+    PF_R16G16B16A16_SINT                                                             = 35,
+    PF_R5G6B5_UNORM                                                                  = 36,
+    PF_R8G8B8A8                                                                      = 37,
+    PF_A8R8G8B8                                                                      = 38,
+    PF_BC4                                                                           = 39,
+    PF_R8G8                                                                          = 40,
+    PF_ATC_RGB                                                                       = 41,
+    PF_ATC_RGBA_E                                                                    = 42,
+    PF_ATC_RGBA_I                                                                    = 43,
+    PF_X24_G8                                                                        = 44,
+    PF_ETC1                                                                          = 45,
+    PF_ETC2_RGB                                                                      = 46,
+    PF_ETC2_RGBA                                                                     = 47,
+    PF_R32G32B32A32_UINT                                                             = 48,
+    PF_R16G16_UINT                                                                   = 49,
+    PF_ASTC_4x4                                                                      = 50,
+    PF_ASTC_6x6                                                                      = 51,
+    PF_ASTC_8x8                                                                      = 52,
+    PF_ASTC_10x10                                                                    = 53,
+    PF_ASTC_12x12                                                                    = 54,
+    PF_BC6H                                                                          = 55,
+    PF_BC7                                                                           = 56,
+    PF_R8_UINT                                                                       = 57,
+    PF_L8                                                                            = 58,
+    PF_XGXR8                                                                         = 59,
+    PF_R8G8B8A8_UINT                                                                 = 60,
+    PF_R8G8B8A8_SNORM                                                                = 61,
+    PF_R16G16B16A16_UNORM                                                            = 62,
+    PF_R16G16B16A16_SNORM                                                            = 63,
+    PF_PLATFORM_HDR                                                                  = 64,
+    PF_PLATFORM_HDR66                                                                = 65,
+    PF_PLATFORM_HDR67                                                                = 66,
+    PF_NV12                                                                          = 67,
+    PF_R32G32_UINT                                                                   = 68,
+    PF_ETC2_R11_EAC                                                                  = 69,
+    PF_ETC2_RG11_EAC                                                                 = 70
 };
 
 /// Enum /Script/CoreUObject.EAxis
 /// Size: 0x01 (1 bytes)
 enum class EAxis : uint8_t
 {
-	None                                                                             = 0,
-	X                                                                                = 1,
-	Y                                                                                = 2,
-	Z                                                                                = 3
+    None                                                                             = 0,
+    X                                                                                = 1,
+    Y                                                                                = 2,
+    Z                                                                                = 3
 };
 
 /// Enum /Script/CoreUObject.ELogTimes
 /// Size: 0x01 (1 bytes)
 enum class ELogTimes : uint8_t
 {
-	None                                                                             = 0,
-	UTC                                                                              = 1,
-	SinceGStartTime                                                                  = 2,
-	Local                                                                            = 3
+    None                                                                             = 0,
+    UTC                                                                              = 1,
+    SinceGStartTime                                                                  = 2,
+    Local                                                                            = 3
 };
 
 /// Enum /Script/CoreUObject.ESearchDir
 /// Size: 0x01 (1 bytes)
 enum class ESearchDir : uint8_t
 {
-	FromStart                                                                        = 0,
-	FromEnd                                                                          = 1
+    FromStart                                                                        = 0,
+    FromEnd                                                                          = 1
 };
 
 /// Enum /Script/CoreUObject.ESearchCase
 /// Size: 0x01 (1 bytes)
 enum class ESearchCase : uint8_t
 {
-	CaseSensitive                                                                    = 0,
-	IgnoreCase                                                                       = 1
+    CaseSensitive                                                                    = 0,
+    IgnoreCase                                                                       = 1
 };
 
 /// Class /Script/CoreUObject.Object
@@ -311,16 +311,17 @@ enum class ESearchCase : uint8_t
 class UObject
 { 
 public:
-	uint64_t                                           vtable;                                                     // 0x0000   (0x0008)  
-	EObjectFlags                                       ObjectFlags;                                                // 0x0008   (0x0004)  
-	int                                                InternalIndex;                                              // 0x000C   (0x0004)  
-	class UClass*                                      ClassPrivate;                                               // 0x0010   (0x0008)  
-	FName                                              NamePrivate;                                                // 0x0018   (0x0008)  
-	class UObject*                                     OuterPrivate;                                               // 0x0020   (0x0008)  
+    uint64_t                                           vtable;                                                     // 0x0000   (0x0008) 
+    EObjectFlags                                       ObjectFlags;                                                // 0x0008   (0x0004) 
+    int                                                InternalIndex;                                              // 0x000C   (0x0004) 
+    class UClass*                                      ClassPrivate;                                               // 0x0010   (0x0008) 
+    FName                                              NamePrivate;                                                // 0x0018   (0x0008) 
+    class UObject*                                     OuterPrivate;                                               // 0x0020   (0x0008) 
 
-	/// Functions
-	// Function /Script/CoreUObject.Object.ExecuteUbergraph
-	constexpr static const FunctionPointer<UObject, void, const int32_t> ExecuteUbergraph = { 0x2bbb090, 0 }; 
+    /// Functions
+    // Function /Script/CoreUObject.Object.ExecuteUbergraph
+    // [0] EntryPoint : const int32_t
+    constexpr static const FunctionPointer<UObject, void, const int32_t> ExecuteUbergraph = { 0x2bbb090, 0 };
 };
 
 /// Class /Script/CoreUObject.Interface
@@ -335,7 +336,7 @@ public:
 class UPackage : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x78];                                      // 0x0028   (0x0078)  MISSED
+    unsigned char                                      UnknownData01_1[0x78];                                      // 0x0028   (0x0078) MISSED
 };
 
 /// Class /Script/CoreUObject.Field
@@ -343,7 +344,7 @@ public:
 class UField : public UObject
 { 
 public:
-	class UField*                                      Next;                                                       // 0x0028   (0x0008)  
+    class UField*                                      Next;                                                       // 0x0028   (0x0008) 
 };
 
 /// Class /Script/CoreUObject.struct
@@ -351,7 +352,7 @@ public:
 class Ustruct : public UField
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x80];                                      // 0x0030   (0x0080)  MISSED
+    unsigned char                                      UnknownData01_1[0x80];                                      // 0x0030   (0x0080) MISSED
 };
 
 /// Class /Script/CoreUObject.Class
@@ -359,7 +360,7 @@ public:
 class UClass : public Ustruct
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x180];                                     // 0x00B0   (0x0180)  MISSED
+    unsigned char                                      UnknownData01_1[0x180];                                     // 0x00B0   (0x0180) MISSED
 };
 
 /// Class /Script/CoreUObject.GCObjectReferencer
@@ -367,7 +368,7 @@ public:
 class UGCObjectReferencer : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x48];                                      // 0x0028   (0x0048)  MISSED
+    unsigned char                                      UnknownData01_1[0x48];                                      // 0x0028   (0x0048) MISSED
 };
 
 /// Class /Script/CoreUObject.TextBuffer
@@ -375,7 +376,7 @@ public:
 class UTextBuffer : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x28];                                      // 0x0028   (0x0028)  MISSED
+    unsigned char                                      UnknownData01_1[0x28];                                      // 0x0028   (0x0028) MISSED
 };
 
 /// Class /Script/CoreUObject.ScriptStruct
@@ -383,7 +384,7 @@ public:
 class UScriptStruct : public Ustruct
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x00B0   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x00B0   (0x0010) MISSED
 };
 
 /// Class /Script/CoreUObject.Function
@@ -391,7 +392,7 @@ public:
 class UFunction : public Ustruct
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x30];                                      // 0x00B0   (0x0030)  MISSED
+    unsigned char                                      UnknownData01_1[0x30];                                      // 0x00B0   (0x0030) MISSED
 };
 
 /// Class /Script/CoreUObject.DelegateFunction
@@ -406,7 +407,7 @@ public:
 class USparseDelegateFunction : public UDelegateFunction
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x00E0   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x00E0   (0x0010) MISSED
 };
 
 /// Class /Script/CoreUObject.DynamicClass
@@ -414,7 +415,7 @@ public:
 class UDynamicClass : public UClass
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x80];                                      // 0x0230   (0x0080)  MISSED
+    unsigned char                                      UnknownData01_1[0x80];                                      // 0x0230   (0x0080) MISSED
 };
 
 /// Class /Script/CoreUObject.PackageMap
@@ -422,7 +423,7 @@ public:
 class UPackageMap : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0xB8];                                      // 0x0028   (0x00B8)  MISSED
+    unsigned char                                      UnknownData01_1[0xB8];                                      // 0x0028   (0x00B8) MISSED
 };
 
 /// Class /Script/CoreUObject.Enum
@@ -430,7 +431,7 @@ public:
 class UEnum : public UField
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x30];                                      // 0x0030   (0x0030)  MISSED
+    unsigned char                                      UnknownData01_1[0x30];                                      // 0x0030   (0x0030) MISSED
 };
 
 /// Class /Script/CoreUObject.LinkerPlaceholderClass
@@ -438,7 +439,7 @@ public:
 class ULinkerPlaceholderClass : public UClass
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x1B8];                                     // 0x0230   (0x01B8)  MISSED
+    unsigned char                                      UnknownData01_1[0x1B8];                                     // 0x0230   (0x01B8) MISSED
 };
 
 /// Class /Script/CoreUObject.LinkerPlaceholderExportObject
@@ -446,7 +447,7 @@ public:
 class ULinkerPlaceholderExportObject : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0xC8];                                      // 0x0028   (0x00C8)  MISSED
+    unsigned char                                      UnknownData01_1[0xC8];                                      // 0x0028   (0x00C8) MISSED
 };
 
 /// Class /Script/CoreUObject.LinkerPlaceholderFunction
@@ -454,7 +455,7 @@ public:
 class ULinkerPlaceholderFunction : public UFunction
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x1B8];                                     // 0x00E0   (0x01B8)  MISSED
+    unsigned char                                      UnknownData01_1[0x1B8];                                     // 0x00E0   (0x01B8) MISSED
 };
 
 /// Class /Script/CoreUObject.MetaData
@@ -462,7 +463,7 @@ public:
 class UMetaData : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0xA0];                                      // 0x0028   (0x00A0)  MISSED
+    unsigned char                                      UnknownData01_1[0xA0];                                      // 0x0028   (0x00A0) MISSED
 };
 
 /// Class /Script/CoreUObject.ObjectRedirector
@@ -470,7 +471,7 @@ public:
 class UObjectRedirector : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.Property
@@ -478,7 +479,7 @@ public:
 class UProperty : public UField
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x40];                                      // 0x0030   (0x0040)  MISSED
+    unsigned char                                      UnknownData01_1[0x40];                                      // 0x0030   (0x0040) MISSED
 };
 
 /// Class /Script/CoreUObject.EnumProperty
@@ -486,7 +487,7 @@ public:
 class UEnumProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0070   (0x0010)  MISSED
+    unsigned char                                      UnknownData01_1[0x10];                                      // 0x0070   (0x0010) MISSED
 };
 
 /// Class /Script/CoreUObject.ArrayProperty
@@ -494,7 +495,7 @@ public:
 class UArrayProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.ObjectPropertyBase
@@ -502,7 +503,7 @@ public:
 class UObjectPropertyBase : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.BoolProperty
@@ -510,7 +511,7 @@ public:
 class UBoolProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.NumericProperty
@@ -525,7 +526,7 @@ public:
 class UByteProperty : public UNumericProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.ObjectProperty
@@ -540,7 +541,7 @@ public:
 class UClassProperty : public UObjectProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0078   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0078   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.DelegateProperty
@@ -548,7 +549,7 @@ public:
 class UDelegateProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.DoubleProperty
@@ -598,7 +599,7 @@ public:
 class UInterfaceProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.LazyObjectProperty
@@ -613,7 +614,7 @@ public:
 class UMapProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x28];                                      // 0x0070   (0x0028)  MISSED
+    unsigned char                                      UnknownData01_1[0x28];                                      // 0x0070   (0x0028) MISSED
 };
 
 /// Class /Script/CoreUObject.MulticastDelegateProperty
@@ -621,7 +622,7 @@ public:
 class UMulticastDelegateProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.MulticastInlineDelegateProperty
@@ -650,7 +651,7 @@ public:
 class USetProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x20];                                      // 0x0070   (0x0020)  MISSED
+    unsigned char                                      UnknownData01_1[0x20];                                      // 0x0070   (0x0020) MISSED
 };
 
 /// Class /Script/CoreUObject.SoftObjectProperty
@@ -665,7 +666,7 @@ public:
 class USoftClassProperty : public USoftObjectProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0078   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0078   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.StrProperty
@@ -680,7 +681,7 @@ public:
 class UStructProperty : public UProperty
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0070   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.UInt16Property
@@ -723,7 +724,7 @@ public:
 class UPropertyWrapper : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/CoreUObject.MulticastDelegatePropertyWrapper
@@ -744,422 +745,422 @@ public:
 /// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
 struct FJoinabilitySettings
 { 
-	FName                                              SessionName;                                                // 0x0000   (0x0008)  
-	bool                                               bPublicSearchable;                                          // 0x0008   (0x0001)  
-	bool                                               bAllowInvites;                                              // 0x0009   (0x0001)  
-	bool                                               bJoinViaPresence;                                           // 0x000A   (0x0001)  
-	bool                                               bJoinViaPresenceFriendsOnly;                                // 0x000B   (0x0001)  
-	int32_t                                            MaxPlayers;                                                 // 0x000C   (0x0004)  
-	int32_t                                            MaxPartySize;                                               // 0x0010   (0x0004)  
+    FName                                              SessionName;                                                // 0x0000   (0x0008) 
+    bool                                               bPublicSearchable;                                          // 0x0008   (0x0001) 
+    bool                                               bAllowInvites;                                              // 0x0009   (0x0001) 
+    bool                                               bJoinViaPresence;                                           // 0x000A   (0x0001) 
+    bool                                               bJoinViaPresenceFriendsOnly;                                // 0x000B   (0x0001) 
+    int32_t                                            MaxPlayers;                                                 // 0x000C   (0x0004) 
+    int32_t                                            MaxPartySize;                                               // 0x0010   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.UniqueNetIdWrapper
 /// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FUniqueNetIdWrapper
 { 
-	unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001)  MISSED
+    unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/CoreUObject.Guid
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FGuid
 { 
-	int32_t                                            A;                                                          // 0x0000   (0x0004)  
-	int32_t                                            B;                                                          // 0x0004   (0x0004)  
-	int32_t                                            C;                                                          // 0x0008   (0x0004)  
-	int32_t                                            D;                                                          // 0x000C   (0x0004)  
+    int32_t                                            A;                                                          // 0x0000   (0x0004) 
+    int32_t                                            B;                                                          // 0x0004   (0x0004) 
+    int32_t                                            C;                                                          // 0x0008   (0x0004) 
+    int32_t                                            D;                                                          // 0x000C   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Vector
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FVector
 { 
-	float                                              X;                                                          // 0x0000   (0x0004)  
-	float                                              Y;                                                          // 0x0004   (0x0004)  
-	float                                              Z;                                                          // 0x0008   (0x0004)  
+    float                                              X;                                                          // 0x0000   (0x0004) 
+    float                                              Y;                                                          // 0x0004   (0x0004) 
+    float                                              Z;                                                          // 0x0008   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Vector4
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FVector4
 { 
-	float                                              X;                                                          // 0x0000   (0x0004)  
-	float                                              Y;                                                          // 0x0004   (0x0004)  
-	float                                              Z;                                                          // 0x0008   (0x0004)  
-	float                                              W;                                                          // 0x000C   (0x0004)  
+    float                                              X;                                                          // 0x0000   (0x0004) 
+    float                                              Y;                                                          // 0x0004   (0x0004) 
+    float                                              Z;                                                          // 0x0008   (0x0004) 
+    float                                              W;                                                          // 0x000C   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Vector2D
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FVector2D
 { 
-	float                                              X;                                                          // 0x0000   (0x0004)  
-	float                                              Y;                                                          // 0x0004   (0x0004)  
+    float                                              X;                                                          // 0x0000   (0x0004) 
+    float                                              Y;                                                          // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.TwoVectors
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FTwoVectors
 { 
-	FVector                                            v1;                                                         // 0x0000   (0x000C)  
-	FVector                                            v2;                                                         // 0x000C   (0x000C)  
+    FVector                                            v1;                                                         // 0x0000   (0x000C) 
+    FVector                                            v2;                                                         // 0x000C   (0x000C) 
 };
 
 /// Struct /Script/CoreUObject.Plane
 /// Size: 0x0010 (16 bytes) (0x00000C - 0x000010) align n/a MaxSize: 0x0010
 struct FPlane : FVector
 { 
-	float                                              W;                                                          // 0x000C   (0x0004)  
+    float                                              W;                                                          // 0x000C   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Rotator
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FRotator
 { 
-	float                                              Pitch;                                                      // 0x0000   (0x0004)  
-	float                                              Yaw;                                                        // 0x0004   (0x0004)  
-	float                                              Roll;                                                       // 0x0008   (0x0004)  
+    float                                              Pitch;                                                      // 0x0000   (0x0004) 
+    float                                              Yaw;                                                        // 0x0004   (0x0004) 
+    float                                              Roll;                                                       // 0x0008   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Quat
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FQuat
 { 
-	float                                              X;                                                          // 0x0000   (0x0004)  
-	float                                              Y;                                                          // 0x0004   (0x0004)  
-	float                                              Z;                                                          // 0x0008   (0x0004)  
-	float                                              W;                                                          // 0x000C   (0x0004)  
+    float                                              X;                                                          // 0x0000   (0x0004) 
+    float                                              Y;                                                          // 0x0004   (0x0004) 
+    float                                              Z;                                                          // 0x0008   (0x0004) 
+    float                                              W;                                                          // 0x000C   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.PackedNormal
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FPackedNormal
 { 
-	char                                               X;                                                          // 0x0000   (0x0001)  
-	char                                               Y;                                                          // 0x0001   (0x0001)  
-	char                                               Z;                                                          // 0x0002   (0x0001)  
-	char                                               W;                                                          // 0x0003   (0x0001)  
+    char                                               X;                                                          // 0x0000   (0x0001) 
+    char                                               Y;                                                          // 0x0001   (0x0001) 
+    char                                               Z;                                                          // 0x0002   (0x0001) 
+    char                                               W;                                                          // 0x0003   (0x0001) 
 };
 
 /// Struct /Script/CoreUObject.PackedRGB10A2N
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FPackedRGB10A2N
 { 
-	int32_t                                            Packed;                                                     // 0x0000   (0x0004)  
+    int32_t                                            Packed;                                                     // 0x0000   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.PackedRGBA16N
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FPackedRGBA16N
 { 
-	int32_t                                            XY;                                                         // 0x0000   (0x0004)  
-	int32_t                                            ZW;                                                         // 0x0004   (0x0004)  
+    int32_t                                            XY;                                                         // 0x0000   (0x0004) 
+    int32_t                                            ZW;                                                         // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.IntPoint
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FIntPoint
 { 
-	int32_t                                            X;                                                          // 0x0000   (0x0004)  
-	int32_t                                            Y;                                                          // 0x0004   (0x0004)  
+    int32_t                                            X;                                                          // 0x0000   (0x0004) 
+    int32_t                                            Y;                                                          // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.IntVector
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FIntVector
 { 
-	int32_t                                            X;                                                          // 0x0000   (0x0004)  
-	int32_t                                            Y;                                                          // 0x0004   (0x0004)  
-	int32_t                                            Z;                                                          // 0x0008   (0x0004)  
+    int32_t                                            X;                                                          // 0x0000   (0x0004) 
+    int32_t                                            Y;                                                          // 0x0004   (0x0004) 
+    int32_t                                            Z;                                                          // 0x0008   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Color
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FColor
 { 
-	char                                               B;                                                          // 0x0000   (0x0001)  
-	char                                               G;                                                          // 0x0001   (0x0001)  
-	char                                               R;                                                          // 0x0002   (0x0001)  
-	char                                               A;                                                          // 0x0003   (0x0001)  
+    char                                               B;                                                          // 0x0000   (0x0001) 
+    char                                               G;                                                          // 0x0001   (0x0001) 
+    char                                               R;                                                          // 0x0002   (0x0001) 
+    char                                               A;                                                          // 0x0003   (0x0001) 
 };
 
 /// Struct /Script/CoreUObject.LinearColor
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FLinearColor
 { 
-	float                                              R;                                                          // 0x0000   (0x0004)  
-	float                                              G;                                                          // 0x0004   (0x0004)  
-	float                                              B;                                                          // 0x0008   (0x0004)  
-	float                                              A;                                                          // 0x000C   (0x0004)  
+    float                                              R;                                                          // 0x0000   (0x0004) 
+    float                                              G;                                                          // 0x0004   (0x0004) 
+    float                                              B;                                                          // 0x0008   (0x0004) 
+    float                                              A;                                                          // 0x000C   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Box
 /// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
 struct FBox
 { 
-	FVector                                            Min;                                                        // 0x0000   (0x000C)  
-	FVector                                            Max;                                                        // 0x000C   (0x000C)  
-	char                                               IsValid;                                                    // 0x0018   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0019   (0x0003)  MISSED
+    FVector                                            Min;                                                        // 0x0000   (0x000C) 
+    FVector                                            Max;                                                        // 0x000C   (0x000C) 
+    char                                               IsValid;                                                    // 0x0018   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0019   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.Box2D
 /// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
 struct FBox2D
 { 
-	FVector2D                                          Min;                                                        // 0x0000   (0x0008)  
-	FVector2D                                          Max;                                                        // 0x0008   (0x0008)  
-	char                                               bIsValid;                                                   // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003)  MISSED
+    FVector2D                                          Min;                                                        // 0x0000   (0x0008) 
+    FVector2D                                          Max;                                                        // 0x0008   (0x0008) 
+    char                                               bIsValid;                                                   // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.BoxSphereBounds
 /// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
 struct FBoxSphereBounds
 { 
-	FVector                                            Origin;                                                     // 0x0000   (0x000C)  
-	FVector                                            BoxExtent;                                                  // 0x000C   (0x000C)  
-	float                                              SphereRadius;                                               // 0x0018   (0x0004)  
+    FVector                                            Origin;                                                     // 0x0000   (0x000C) 
+    FVector                                            BoxExtent;                                                  // 0x000C   (0x000C) 
+    float                                              SphereRadius;                                               // 0x0018   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.OrientedBox
 /// Size: 0x003C (60 bytes) (0x000000 - 0x00003C) align n/a MaxSize: 0x003C
 struct FOrientedBox
 { 
-	FVector                                            Center;                                                     // 0x0000   (0x000C)  
-	FVector                                            AxisX;                                                      // 0x000C   (0x000C)  
-	FVector                                            AxisY;                                                      // 0x0018   (0x000C)  
-	FVector                                            AxisZ;                                                      // 0x0024   (0x000C)  
-	float                                              ExtentX;                                                    // 0x0030   (0x0004)  
-	float                                              ExtentY;                                                    // 0x0034   (0x0004)  
-	float                                              ExtentZ;                                                    // 0x0038   (0x0004)  
+    FVector                                            Center;                                                     // 0x0000   (0x000C) 
+    FVector                                            AxisX;                                                      // 0x000C   (0x000C) 
+    FVector                                            AxisY;                                                      // 0x0018   (0x000C) 
+    FVector                                            AxisZ;                                                      // 0x0024   (0x000C) 
+    float                                              ExtentX;                                                    // 0x0030   (0x0004) 
+    float                                              ExtentY;                                                    // 0x0034   (0x0004) 
+    float                                              ExtentZ;                                                    // 0x0038   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Matrix
 /// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FMatrix
 { 
-	FPlane                                             XPlane;                                                     // 0x0000   (0x0010)  
-	FPlane                                             YPlane;                                                     // 0x0010   (0x0010)  
-	FPlane                                             ZPlane;                                                     // 0x0020   (0x0010)  
-	FPlane                                             WPlane;                                                     // 0x0030   (0x0010)  
+    FPlane                                             XPlane;                                                     // 0x0000   (0x0010) 
+    FPlane                                             YPlane;                                                     // 0x0010   (0x0010) 
+    FPlane                                             ZPlane;                                                     // 0x0020   (0x0010) 
+    FPlane                                             WPlane;                                                     // 0x0030   (0x0010) 
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointFloat
 /// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
 struct FInterpCurvePointFloat
 { 
-	float                                              InVal;                                                      // 0x0000   (0x0004)  
-	float                                              OutVal;                                                     // 0x0004   (0x0004)  
-	float                                              ArriveTangent;                                              // 0x0008   (0x0004)  
-	float                                              LeaveTangent;                                               // 0x000C   (0x0004)  
-	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003)  MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004) 
+    float                                              OutVal;                                                     // 0x0004   (0x0004) 
+    float                                              ArriveTangent;                                              // 0x0008   (0x0004) 
+    float                                              LeaveTangent;                                               // 0x000C   (0x0004) 
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveFloat
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInterpCurveFloat
 { 
-	TArray<FInterpCurvePointFloat>                     Points;                                                     // 0x0000   (0x0010)  
-	bool                                               bIsLooped;                                                  // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003)  MISSED
-	float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)  
+    TArray<FInterpCurvePointFloat>                     Points;                                                     // 0x0000   (0x0010) 
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointVector2D
 /// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FInterpCurvePointVector2D
 { 
-	float                                              InVal;                                                      // 0x0000   (0x0004)  
-	FVector2D                                          OutVal;                                                     // 0x0004   (0x0008)  
-	FVector2D                                          ArriveTangent;                                              // 0x000C   (0x0008)  
-	FVector2D                                          LeaveTangent;                                               // 0x0014   (0x0008)  
-	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x001C   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x001D   (0x0003)  MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004) 
+    FVector2D                                          OutVal;                                                     // 0x0004   (0x0008) 
+    FVector2D                                          ArriveTangent;                                              // 0x000C   (0x0008) 
+    FVector2D                                          LeaveTangent;                                               // 0x0014   (0x0008) 
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x001C   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x001D   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveVector2D
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInterpCurveVector2D
 { 
-	TArray<FInterpCurvePointVector2D>                  Points;                                                     // 0x0000   (0x0010)  
-	bool                                               bIsLooped;                                                  // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003)  MISSED
-	float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)  
+    TArray<FInterpCurvePointVector2D>                  Points;                                                     // 0x0000   (0x0010) 
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointVector
 /// Size: 0x002C (44 bytes) (0x000000 - 0x00002C) align n/a MaxSize: 0x002C
 struct FInterpCurvePointVector
 { 
-	float                                              InVal;                                                      // 0x0000   (0x0004)  
-	FVector                                            OutVal;                                                     // 0x0004   (0x000C)  
-	FVector                                            ArriveTangent;                                              // 0x0010   (0x000C)  
-	FVector                                            LeaveTangent;                                               // 0x001C   (0x000C)  
-	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0028   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0029   (0x0003)  MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004) 
+    FVector                                            OutVal;                                                     // 0x0004   (0x000C) 
+    FVector                                            ArriveTangent;                                              // 0x0010   (0x000C) 
+    FVector                                            LeaveTangent;                                               // 0x001C   (0x000C) 
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0028   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0029   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveVector
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInterpCurveVector
 { 
-	TArray<FInterpCurvePointVector>                    Points;                                                     // 0x0000   (0x0010)  
-	bool                                               bIsLooped;                                                  // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003)  MISSED
-	float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)  
+    TArray<FInterpCurvePointVector>                    Points;                                                     // 0x0000   (0x0010) 
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointQuat
 /// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FInterpCurvePointQuat
 { 
-	float                                              InVal;                                                      // 0x0000   (0x0004)  
-	unsigned char                                      UnknownData02_6[0xC];                                       // 0x0004   (0x000C)  MISSED
-	FQuat                                              OutVal;                                                     // 0x0010   (0x0010)  
-	FQuat                                              ArriveTangent;                                              // 0x0020   (0x0010)  
-	FQuat                                              LeaveTangent;                                               // 0x0030   (0x0010)  
-	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0040   (0x0001)  
-	unsigned char                                      UnknownData03_7[0xF];                                       // 0x0041   (0x000F)  MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004) 
+    unsigned char                                      UnknownData02_6[0xC];                                       // 0x0004   (0x000C) MISSED
+    FQuat                                              OutVal;                                                     // 0x0010   (0x0010) 
+    FQuat                                              ArriveTangent;                                              // 0x0020   (0x0010) 
+    FQuat                                              LeaveTangent;                                               // 0x0030   (0x0010) 
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0040   (0x0001) 
+    unsigned char                                      UnknownData03_7[0xF];                                       // 0x0041   (0x000F) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveQuat
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInterpCurveQuat
 { 
-	TArray<FInterpCurvePointQuat>                      Points;                                                     // 0x0000   (0x0010)  
-	bool                                               bIsLooped;                                                  // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003)  MISSED
-	float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)  
+    TArray<FInterpCurvePointQuat>                      Points;                                                     // 0x0000   (0x0010) 
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointTwoVectors
 /// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FInterpCurvePointTwoVectors
 { 
-	float                                              InVal;                                                      // 0x0000   (0x0004)  
-	FTwoVectors                                        OutVal;                                                     // 0x0004   (0x0018)  
-	FTwoVectors                                        ArriveTangent;                                              // 0x001C   (0x0018)  
-	FTwoVectors                                        LeaveTangent;                                               // 0x0034   (0x0018)  
-	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x004C   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x004D   (0x0003)  MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004) 
+    FTwoVectors                                        OutVal;                                                     // 0x0004   (0x0018) 
+    FTwoVectors                                        ArriveTangent;                                              // 0x001C   (0x0018) 
+    FTwoVectors                                        LeaveTangent;                                               // 0x0034   (0x0018) 
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x004C   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x004D   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveTwoVectors
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInterpCurveTwoVectors
 { 
-	TArray<FInterpCurvePointTwoVectors>                Points;                                                     // 0x0000   (0x0010)  
-	bool                                               bIsLooped;                                                  // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003)  MISSED
-	float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)  
+    TArray<FInterpCurvePointTwoVectors>                Points;                                                     // 0x0000   (0x0010) 
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointLinearColor
 /// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FInterpCurvePointLinearColor
 { 
-	float                                              InVal;                                                      // 0x0000   (0x0004)  
-	FLinearColor                                       OutVal;                                                     // 0x0004   (0x0010)  
-	FLinearColor                                       ArriveTangent;                                              // 0x0014   (0x0010)  
-	FLinearColor                                       LeaveTangent;                                               // 0x0024   (0x0010)  
-	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0034   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0035   (0x0003)  MISSED
+    float                                              InVal;                                                      // 0x0000   (0x0004) 
+    FLinearColor                                       OutVal;                                                     // 0x0004   (0x0010) 
+    FLinearColor                                       ArriveTangent;                                              // 0x0014   (0x0010) 
+    FLinearColor                                       LeaveTangent;                                               // 0x0024   (0x0010) 
+    TEnumAsByte<EInterpCurveMode>                      InterpMode;                                                 // 0x0034   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0035   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.InterpCurveLinearColor
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInterpCurveLinearColor
 { 
-	TArray<FInterpCurvePointLinearColor>               Points;                                                     // 0x0000   (0x0010)  
-	bool                                               bIsLooped;                                                  // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003)  MISSED
-	float                                              LoopKeyOffset;                                              // 0x0014   (0x0004)  
+    TArray<FInterpCurvePointLinearColor>               Points;                                                     // 0x0000   (0x0010) 
+    bool                                               bIsLooped;                                                  // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    float                                              LoopKeyOffset;                                              // 0x0014   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Transform
 /// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FTransform
 { 
-	FQuat                                              Rotation;                                                   // 0x0000   (0x0010)  
-	FVector                                            Translation;                                                // 0x0010   (0x000C)  
-	unsigned char                                      UnknownData02_6[0x4];                                       // 0x001C   (0x0004)  MISSED
-	FVector                                            Scale3D;                                                    // 0x0020   (0x000C)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x002C   (0x0004)  MISSED
+    FQuat                                              Rotation;                                                   // 0x0000   (0x0010) 
+    FVector                                            Translation;                                                // 0x0010   (0x000C) 
+    unsigned char                                      UnknownData02_6[0x4];                                       // 0x001C   (0x0004) MISSED
+    FVector                                            Scale3D;                                                    // 0x0020   (0x000C) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Struct /Script/CoreUObject.RandomStream
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FRandomStream
 { 
-	int32_t                                            InitialSeed;                                                // 0x0000   (0x0004)  
-	int32_t                                            Seed;                                                       // 0x0004   (0x0004)  
+    int32_t                                            InitialSeed;                                                // 0x0000   (0x0004) 
+    int32_t                                            Seed;                                                       // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.DateTime
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FDateTime
 { 
-	unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008) MISSED
 };
 
 /// Struct /Script/CoreUObject.FrameNumber
 /// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FFrameNumber
 { 
-	int32_t                                            Value;                                                      // 0x0000   (0x0004)  
+    int32_t                                            Value;                                                      // 0x0000   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.FrameRate
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FFrameRate
 { 
-	int32_t                                            Numerator;                                                  // 0x0000   (0x0004)  
-	int32_t                                            Denominator;                                                // 0x0004   (0x0004)  
+    int32_t                                            Numerator;                                                  // 0x0000   (0x0004) 
+    int32_t                                            Denominator;                                                // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.FrameTime
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FFrameTime
 { 
-	FFrameNumber                                       FrameNumber;                                                // 0x0000   (0x0004)  
-	float                                              SubFrame;                                                   // 0x0004   (0x0004)  
+    FFrameNumber                                       FrameNumber;                                                // 0x0000   (0x0004) 
+    float                                              SubFrame;                                                   // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.QualifiedFrameTime
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FQualifiedFrameTime
 { 
-	FFrameTime                                         Time;                                                       // 0x0000   (0x0008)  
-	FFrameRate                                         Rate;                                                       // 0x0008   (0x0008)  
+    FFrameTime                                         Time;                                                       // 0x0000   (0x0008) 
+    FFrameRate                                         Rate;                                                       // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/CoreUObject.Timecode
 /// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
 struct FTimecode
 { 
-	int32_t                                            Hours;                                                      // 0x0000   (0x0004)  
-	int32_t                                            Minutes;                                                    // 0x0004   (0x0004)  
-	int32_t                                            Seconds;                                                    // 0x0008   (0x0004)  
-	int32_t                                            Frames;                                                     // 0x000C   (0x0004)  
-	bool                                               bDropFrameFormat;                                           // 0x0010   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003)  MISSED
+    int32_t                                            Hours;                                                      // 0x0000   (0x0004) 
+    int32_t                                            Minutes;                                                    // 0x0004   (0x0004) 
+    int32_t                                            Seconds;                                                    // 0x0008   (0x0004) 
+    int32_t                                            Frames;                                                     // 0x000C   (0x0004) 
+    bool                                               bDropFrameFormat;                                           // 0x0010   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003) MISSED
 };
 
 /// Struct /Script/CoreUObject.Timespan
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FTimespan
 { 
-	unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008) MISSED
 };
 
 /// Struct /Script/CoreUObject.SoftObjectPath
 /// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FSoftObjectPath
 { 
-	FName                                              AssetPathName;                                              // 0x0000   (0x0008)  
-	FString                                            SubPathString;                                              // 0x0008   (0x0010)  
+    FName                                              AssetPathName;                                              // 0x0000   (0x0008) 
+    FString                                            SubPathString;                                              // 0x0008   (0x0010) 
 };
 
 /// Struct /Script/CoreUObject.SoftClassPath
@@ -1172,171 +1173,171 @@ struct FSoftClassPath : FSoftObjectPath
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FPrimaryAssetType
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
 };
 
 /// Struct /Script/CoreUObject.PrimaryAssetId
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FPrimaryAssetId
 { 
-	FPrimaryAssetType                                  PrimaryAssetType;                                           // 0x0000   (0x0008)  
-	FName                                              PrimaryAssetName;                                           // 0x0008   (0x0008)  
+    FPrimaryAssetType                                  PrimaryAssetType;                                           // 0x0000   (0x0008) 
+    FName                                              PrimaryAssetName;                                           // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/CoreUObject.FallbackStruct
 /// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FFallbackStruct
 { 
-	unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001)  MISSED
+    unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/CoreUObject.FloatRangeBound
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FFloatRangeBound
 { 
-	TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003)  MISSED
-	float                                              Value;                                                      // 0x0004   (0x0004)  
+    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    float                                              Value;                                                      // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.FloatRange
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FFloatRange
 { 
-	FFloatRangeBound                                   LowerBound;                                                 // 0x0000   (0x0008)  
-	FFloatRangeBound                                   UpperBound;                                                 // 0x0008   (0x0008)  
+    FFloatRangeBound                                   LowerBound;                                                 // 0x0000   (0x0008) 
+    FFloatRangeBound                                   UpperBound;                                                 // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/CoreUObject.Int32RangeBound
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FInt32RangeBound
 { 
-	TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003)  MISSED
-	int32_t                                            Value;                                                      // 0x0004   (0x0004)  
+    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    int32_t                                            Value;                                                      // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Int32Range
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FInt32Range
 { 
-	FInt32RangeBound                                   LowerBound;                                                 // 0x0000   (0x0008)  
-	FInt32RangeBound                                   UpperBound;                                                 // 0x0008   (0x0008)  
+    FInt32RangeBound                                   LowerBound;                                                 // 0x0000   (0x0008) 
+    FInt32RangeBound                                   UpperBound;                                                 // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/CoreUObject.FrameNumberRangeBound
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FFrameNumberRangeBound
 { 
-	TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003)  MISSED
-	FFrameNumber                                       Value;                                                      // 0x0004   (0x0004)  
+    TEnumAsByte<ERangeBoundTypes>                      Type;                                                       // 0x0000   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    FFrameNumber                                       Value;                                                      // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.FrameNumberRange
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FFrameNumberRange
 { 
-	FFrameNumberRangeBound                             LowerBound;                                                 // 0x0000   (0x0008)  
-	FFrameNumberRangeBound                             UpperBound;                                                 // 0x0008   (0x0008)  
+    FFrameNumberRangeBound                             LowerBound;                                                 // 0x0000   (0x0008) 
+    FFrameNumberRangeBound                             UpperBound;                                                 // 0x0008   (0x0008) 
 };
 
 /// Struct /Script/CoreUObject.FloatInterval
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FFloatInterval
 { 
-	float                                              Min;                                                        // 0x0000   (0x0004)  
-	float                                              Max;                                                        // 0x0004   (0x0004)  
+    float                                              Min;                                                        // 0x0000   (0x0004) 
+    float                                              Max;                                                        // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.Int32Interval
 /// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FInt32Interval
 { 
-	int32_t                                            Min;                                                        // 0x0000   (0x0004)  
-	int32_t                                            Max;                                                        // 0x0004   (0x0004)  
+    int32_t                                            Min;                                                        // 0x0000   (0x0004) 
+    int32_t                                            Max;                                                        // 0x0004   (0x0004) 
 };
 
 /// Struct /Script/CoreUObject.PolyglotTextData
 /// Size: 0x00B8 (184 bytes) (0x000000 - 0x0000B8) align n/a MaxSize: 0x00B8
 struct FPolyglotTextData
 { 
-	ELocalizedTextSourceCategory                       Category;                                                   // 0x0000   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x7];                                       // 0x0001   (0x0007)  MISSED
-	FString                                            NativeCulture;                                              // 0x0008   (0x0010)  
-	FString                                            Namespace;                                                  // 0x0018   (0x0010)  
-	FString                                            Key;                                                        // 0x0028   (0x0010)  
-	FString                                            NativeString;                                               // 0x0038   (0x0010)  
-	TMap<FString, FString>                             LocalizedStrings;                                           // 0x0048   (0x0050)  
-	bool                                               bIsMinimalPatch;                                            // 0x0098   (0x0001)  
-	unsigned char                                      UnknownData03_6[0x7];                                       // 0x0099   (0x0007)  MISSED
-	FText                                              CachedText;                                                 // 0x00A0   (0x0018)  
+    ELocalizedTextSourceCategory                       Category;                                                   // 0x0000   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    FString                                            NativeCulture;                                              // 0x0008   (0x0010) 
+    FString                                            Namespace;                                                  // 0x0018   (0x0010) 
+    FString                                            Key;                                                        // 0x0028   (0x0010) 
+    FString                                            NativeString;                                               // 0x0038   (0x0010) 
+    TMap<FString, FString>                             LocalizedStrings;                                           // 0x0048   (0x0050) 
+    bool                                               bIsMinimalPatch;                                            // 0x0098   (0x0001) 
+    unsigned char                                      UnknownData03_6[0x7];                                       // 0x0099   (0x0007) MISSED
+    FText                                              CachedText;                                                 // 0x00A0   (0x0018) 
 };
 
 /// Struct /Script/CoreUObject.AutomationEvent
 /// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FAutomationEvent
 { 
-	EAutomationEventType                               Type;                                                       // 0x0000   (0x0001)  
-	unsigned char                                      UnknownData01_6[0x7];                                       // 0x0001   (0x0007)  MISSED
-	FString                                            Message;                                                    // 0x0008   (0x0010)  
-	FString                                            Context;                                                    // 0x0018   (0x0010)  
-	FGuid                                              Artifact;                                                   // 0x0028   (0x0010)  
+    EAutomationEventType                               Type;                                                       // 0x0000   (0x0001) 
+    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    FString                                            Message;                                                    // 0x0008   (0x0010) 
+    FString                                            Context;                                                    // 0x0018   (0x0010) 
+    FGuid                                              Artifact;                                                   // 0x0028   (0x0010) 
 };
 
 /// Struct /Script/CoreUObject.AutomationExecutionEntry
 /// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align n/a MaxSize: 0x0058
 struct FAutomationExecutionEntry
 { 
-	FAutomationEvent                                   Event;                                                      // 0x0000   (0x0038)  
-	FString                                            Filename;                                                   // 0x0038   (0x0010)  
-	int32_t                                            LineNumber;                                                 // 0x0048   (0x0004)  
-	unsigned char                                      UnknownData01_6[0x4];                                       // 0x004C   (0x0004)  MISSED
-	FDateTime                                          Timestamp;                                                  // 0x0050   (0x0008)  
+    FAutomationEvent                                   Event;                                                      // 0x0000   (0x0038) 
+    FString                                            Filename;                                                   // 0x0038   (0x0010) 
+    int32_t                                            LineNumber;                                                 // 0x0048   (0x0004) 
+    unsigned char                                      UnknownData01_6[0x4];                                       // 0x004C   (0x0004) MISSED
+    FDateTime                                          Timestamp;                                                  // 0x0050   (0x0008) 
 };
 
 /// Struct /Script/CoreUObject.ARFilter
 /// Size: 0x00F0 (240 bytes) (0x000000 - 0x0000F0) align n/a MaxSize: 0x00F0
 struct FARFilter
 { 
-	TArray<FName>                                      PackageNames;                                               // 0x0000   (0x0010)  
-	TArray<FName>                                      PackagePaths;                                               // 0x0010   (0x0010)  
-	TArray<FName>                                      ObjectPaths;                                                // 0x0020   (0x0010)  
-	TArray<FName>                                      ClassNames;                                                 // 0x0030   (0x0010)  
-	unsigned char                                      UnknownData02_6[0x50];                                      // 0x0040   (0x0050)  MISSED
-	TSet<FName>                                        RecursiveClassesExclusionSet;                               // 0x0090   (0x0050)  
-	bool                                               bRecursivePaths;                                            // 0x00E0   (0x0001)  
-	bool                                               bRecursiveClasses;                                          // 0x00E1   (0x0001)  
-	bool                                               bIncludeOnlyOnDiskAssets;                                   // 0x00E2   (0x0001)  
-	unsigned char                                      UnknownData03_7[0xD];                                       // 0x00E3   (0x000D)  MISSED
+    TArray<FName>                                      PackageNames;                                               // 0x0000   (0x0010) 
+    TArray<FName>                                      PackagePaths;                                               // 0x0010   (0x0010) 
+    TArray<FName>                                      ObjectPaths;                                                // 0x0020   (0x0010) 
+    TArray<FName>                                      ClassNames;                                                 // 0x0030   (0x0010) 
+    unsigned char                                      UnknownData02_6[0x50];                                      // 0x0040   (0x0050) MISSED
+    TSet<FName>                                        RecursiveClassesExclusionSet;                               // 0x0090   (0x0050) 
+    bool                                               bRecursivePaths;                                            // 0x00E0   (0x0001) 
+    bool                                               bRecursiveClasses;                                          // 0x00E1   (0x0001) 
+    bool                                               bIncludeOnlyOnDiskAssets;                                   // 0x00E2   (0x0001) 
+    unsigned char                                      UnknownData03_7[0xD];                                       // 0x00E3   (0x000D) MISSED
 };
 
 /// Struct /Script/CoreUObject.AssetBundleEntry
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FAssetBundleEntry
 { 
-	FPrimaryAssetId                                    BundleScope;                                                // 0x0000   (0x0010)  
-	FName                                              BundleName;                                                 // 0x0010   (0x0008)  
-	TArray<FSoftObjectPath>                            BundleAssets;                                               // 0x0018   (0x0010)  
+    FPrimaryAssetId                                    BundleScope;                                                // 0x0000   (0x0010) 
+    FName                                              BundleName;                                                 // 0x0010   (0x0008) 
+    TArray<FSoftObjectPath>                            BundleAssets;                                               // 0x0018   (0x0010) 
 };
 
 /// Struct /Script/CoreUObject.AssetBundleData
 /// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FAssetBundleData
 { 
-	TArray<FAssetBundleEntry>                          Bundles;                                                    // 0x0000   (0x0010)  
+    TArray<FAssetBundleEntry>                          Bundles;                                                    // 0x0000   (0x0010) 
 };
 
 /// Struct /Script/CoreUObject.AssetData
 /// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FAssetData
 { 
-	FName                                              ObjectPath;                                                 // 0x0000   (0x0008)  
-	FName                                              PackageName;                                                // 0x0008   (0x0008)  
-	FName                                              PackagePath;                                                // 0x0010   (0x0008)  
-	FName                                              AssetName;                                                  // 0x0018   (0x0008)  
-	FName                                              AssetClass;                                                 // 0x0020   (0x0008)  
-	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0028   (0x0028)  MISSED
+    FName                                              ObjectPath;                                                 // 0x0000   (0x0008) 
+    FName                                              PackageName;                                                // 0x0008   (0x0008) 
+    FName                                              PackagePath;                                                // 0x0010   (0x0008) 
+    FName                                              AssetName;                                                  // 0x0018   (0x0008) 
+    FName                                              AssetClass;                                                 // 0x0020   (0x0008) 
+    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0028   (0x0028) MISSED
 };
 
 #pragma pack(pop)

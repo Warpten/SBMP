@@ -6,10 +6,10 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
-/// dependency: Engine
-/// dependency: MovieScene
+#include "BasicType.h"
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -18,11 +18,11 @@
 class UTemplateSequence : public UMovieSceneSequence
 { 
 public:
-	class UMovieScene*                                 MovieScene;                                                 // 0x0060   (0x0008)  
-	TSoftObjectPtr<class UClass*>                      BoundActorClass;                                            // 0x0068   (0x0028)  
-	TWeakObjectPtr<class AActor*>                      BoundPreviewActor;                                          // 0x0090   (0x0008)  
-	unsigned char                                      UnknownData01_6[0x20];                                      // 0x0098   (0x0020)  MISSED
-	TMap<FGuid, FName>                                 BoundActorComponents;                                       // 0x00B8   (0x0050)  
+    class UMovieScene*                                 MovieScene;                                                 // 0x0060   (0x0008) 
+    TSoftObjectPtr<class UClass*>                      BoundActorClass;                                            // 0x0068   (0x0028) 
+    TWeakObjectPtr<class AActor*>                      BoundPreviewActor;                                          // 0x0090   (0x0008) 
+    unsigned char                                      UnknownData01_6[0x20];                                      // 0x0098   (0x0020) MISSED
+    TMap<FGuid, FName>                                 BoundActorComponents;                                       // 0x00B8   (0x0050) 
 };
 
 /// Class /Script/TemplateSequence.CameraAnimationSequence
@@ -37,9 +37,9 @@ public:
 class USequenceCameraShakeCameraStandIn : public UObject
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x8];                                       // 0x0028   (0x0008)  MISSED
-	float                                              FieldOfView;                                                // 0x0030   (0x0004)  
-	unsigned char                                      UnknownData03_7[0x3C];                                      // 0x0034   (0x003C)  MISSED
+    unsigned char                                      UnknownData02_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    float                                              FieldOfView;                                                // 0x0030   (0x0004) 
+    unsigned char                                      UnknownData03_7[0x3C];                                      // 0x0034   (0x003C) MISSED
 };
 
 /// Class /Script/TemplateSequence.SequenceCameraShake
@@ -47,17 +47,17 @@ public:
 class USequenceCameraShake : public UCameraShakeBase
 { 
 public:
-	class UCameraAnimationSequence*                    Sequence;                                                   // 0x00A8   (0x0008)  
-	float                                              PlayRate;                                                   // 0x00B0   (0x0004)  
-	float                                              Scale;                                                      // 0x00B4   (0x0004)  
-	float                                              BlendInTime;                                                // 0x00B8   (0x0004)  
-	float                                              BlendOutTime;                                               // 0x00BC   (0x0004)  
-	float                                              RandomSegmentDuration;                                      // 0x00C0   (0x0004)  
-	bool                                               bRandomSegment;                                             // 0x00C4   (0x0001)  
-	unsigned char                                      UnknownData02_6[0x3];                                       // 0x00C5   (0x0003)  MISSED
-	class USequenceCameraShakeSequencePlayer*          Player;                                                     // 0x00C8   (0x0008)  
-	class USequenceCameraShakeCameraStandIn*           CameraStandIn;                                              // 0x00D0   (0x0008)  
-	unsigned char                                      UnknownData03_7[0x8];                                       // 0x00D8   (0x0008)  MISSED
+    class UCameraAnimationSequence*                    Sequence;                                                   // 0x00A8   (0x0008) 
+    float                                              PlayRate;                                                   // 0x00B0   (0x0004) 
+    float                                              Scale;                                                      // 0x00B4   (0x0004) 
+    float                                              BlendInTime;                                                // 0x00B8   (0x0004) 
+    float                                              BlendOutTime;                                               // 0x00BC   (0x0004) 
+    float                                              RandomSegmentDuration;                                      // 0x00C0   (0x0004) 
+    bool                                               bRandomSegment;                                             // 0x00C4   (0x0001) 
+    unsigned char                                      UnknownData02_6[0x3];                                       // 0x00C5   (0x0003) MISSED
+    class USequenceCameraShakeSequencePlayer*          Player;                                                     // 0x00C8   (0x0008) 
+    class USequenceCameraShakeCameraStandIn*           CameraStandIn;                                              // 0x00D0   (0x0008) 
+    unsigned char                                      UnknownData03_7[0x8];                                       // 0x00D8   (0x0008) MISSED
 };
 
 /// Class /Script/TemplateSequence.SequenceCameraShakeSequencePlayer
@@ -65,20 +65,20 @@ public:
 class USequenceCameraShakeSequencePlayer : public UObject
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x458];                                     // 0x0028   (0x0458)  MISSED
-	class UObject*                                     BoundObjectOverride;                                        // 0x0480   (0x0008)  
-	class UMovieSceneSequence*                         Sequence;                                                   // 0x0488   (0x0008)  
-	FMovieSceneRootEvaluationTemplateInstance          RootTemplateInstance;                                       // 0x0490   (0x00E8)  
-	unsigned char                                      UnknownData03_7[0x60];                                      // 0x0578   (0x0060)  MISSED
+    unsigned char                                      UnknownData02_8[0x458];                                     // 0x0028   (0x0458) MISSED
+    class UObject*                                     BoundObjectOverride;                                        // 0x0480   (0x0008) 
+    class UMovieSceneSequence*                         Sequence;                                                   // 0x0488   (0x0008) 
+    FMovieSceneRootEvaluationTemplateInstance          RootTemplateInstance;                                       // 0x0490   (0x00E8) 
+    unsigned char                                      UnknownData03_7[0x60];                                      // 0x0578   (0x0060) MISSED
 };
 
 /// Struct /Script/TemplateSequence.TemplateSequenceBindingOverrideData
 /// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FTemplateSequenceBindingOverrideData
 { 
-	TWeakObjectPtr<class UObject*>                     Object;                                                     // 0x0000   (0x0008)  
-	bool                                               bOverridesDefault;                                          // 0x0008   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0009   (0x0003)  MISSED
+    TWeakObjectPtr<class UObject*>                     Object;                                                     // 0x0000   (0x0008) 
+    bool                                               bOverridesDefault;                                          // 0x0008   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0009   (0x0003) MISSED
 };
 
 /// Class /Script/TemplateSequence.TemplateSequenceActor
@@ -86,24 +86,26 @@ struct FTemplateSequenceBindingOverrideData
 class ATemplateSequenceActor : public AActor
 { 
 public:
-	unsigned char                                      UnknownData02_8[0x8];                                       // 0x02C8   (0x0008)  MISSED
-	FMovieSceneSequencePlaybackSettings                PlaybackSettings;                                           // 0x02D0   (0x0068)  
-	class UTemplateSequencePlayer*                     SequencePlayer;                                             // 0x0338   (0x0008)  
-	FSoftObjectPath                                    TemplateSequence;                                           // 0x0340   (0x0018)  
-	FTemplateSequenceBindingOverrideData               BindingOverride;                                            // 0x0358   (0x000C)  
-	unsigned char                                      UnknownData03_7[0x4];                                       // 0x0364   (0x0004)  MISSED
+    unsigned char                                      UnknownData02_8[0x8];                                       // 0x02C8   (0x0008) MISSED
+    FMovieSceneSequencePlaybackSettings                PlaybackSettings;                                           // 0x02D0   (0x0068) 
+    class UTemplateSequencePlayer*                     SequencePlayer;                                             // 0x0338   (0x0008) 
+    FSoftObjectPath                                    TemplateSequence;                                           // 0x0340   (0x0018) 
+    FTemplateSequenceBindingOverrideData               BindingOverride;                                            // 0x0358   (0x000C) 
+    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0364   (0x0004) MISSED
 
-	/// Functions
-	// Function /Script/TemplateSequence.TemplateSequenceActor.SetSequence
-	constexpr static const FunctionPointer<ATemplateSequenceActor, void, const UTemplateSequence*> SetSequence = { 0x196cdf0, 0 }; 
-	// Function /Script/TemplateSequence.TemplateSequenceActor.SetBinding
-	constexpr static const FunctionPointer<ATemplateSequenceActor, void, const AActor*> SetBinding = { 0x196cac0, 1 }; 
-	// Function /Script/TemplateSequence.TemplateSequenceActor.LoadSequence
-	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequence*> LoadSequence = { 0x196d1b0, 2 }; 
-	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequencePlayer
-	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequencePlayer*> GetSequencePlayer = { 0x196cdb0, 3 }; 
-	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequence
-	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequence*> GetSequence = { 0x196d230, 4 }; 
+    /// Functions
+    // Function /Script/TemplateSequence.TemplateSequenceActor.SetSequence
+    // [0] InSequence : const UTemplateSequence*
+    constexpr static const FunctionPointer<ATemplateSequenceActor, void, const UTemplateSequence*> SetSequence = { 0x196cdf0, 0 };
+    // Function /Script/TemplateSequence.TemplateSequenceActor.SetBinding
+    // [0] Actor : const AActor*
+    constexpr static const FunctionPointer<ATemplateSequenceActor, void, const AActor*> SetBinding = { 0x196cac0, 1 };
+    // Function /Script/TemplateSequence.TemplateSequenceActor.LoadSequence
+    constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequence*> LoadSequence = { 0x196d1b0, 2 };
+    // Function /Script/TemplateSequence.TemplateSequenceActor.GetSequencePlayer
+    constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequencePlayer*> GetSequencePlayer = { 0x196cdb0, 3 };
+    // Function /Script/TemplateSequence.TemplateSequenceActor.GetSequence
+    constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequence*> GetSequence = { 0x196d230, 4 };
 };
 
 /// Class /Script/TemplateSequence.TemplateSequencePlayer
@@ -111,11 +113,15 @@ public:
 class UTemplateSequencePlayer : public UMovieSceneSequencePlayer
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x06D8   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x06D8   (0x0008) MISSED
 
-	/// Functions
-	// Function /Script/TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer
-	constexpr static const FunctionPointer<UTemplateSequencePlayer, UTemplateSequencePlayer*, const UObject*, const UTemplateSequence*, const FMovieSceneSequencePlaybackSettings, const ATemplateSequenceActor*&> CreateTemplateSequencePlayer = { 0x196d510, 0 }; 
+    /// Functions
+    // Function /Script/TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer
+    // [0] WorldContextObject : const UObject*
+    // [1] TemplateSequence : const UTemplateSequence*
+    // [2] Settings : const FMovieSceneSequencePlaybackSettings
+    // [3] OutActor : const ATemplateSequenceActor*&
+    constexpr static const FunctionPointer<UTemplateSequencePlayer, UTemplateSequencePlayer*, const UObject*, const UTemplateSequence*, const FMovieSceneSequencePlaybackSettings, const ATemplateSequenceActor*&> CreateTemplateSequencePlayer = { 0x196d510, 0 };
 };
 
 /// Class /Script/TemplateSequence.TemplateSequenceSection
@@ -123,7 +129,7 @@ public:
 class UTemplateSequenceSection : public UMovieSceneSubSection
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0160   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x0160   (0x0008) MISSED
 };
 
 /// Class /Script/TemplateSequence.TemplateSequenceSystem
@@ -131,7 +137,7 @@ public:
 class UTemplateSequenceSystem : public UMovieSceneEntitySystem
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x70];                                      // 0x0040   (0x0070)  MISSED
+    unsigned char                                      UnknownData01_1[0x70];                                      // 0x0040   (0x0070) MISSED
 };
 
 /// Class /Script/TemplateSequence.TemplateSequenceTrack

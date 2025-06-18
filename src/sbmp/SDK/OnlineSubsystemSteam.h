@@ -6,10 +6,10 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
-/// dependency: Engine
-/// dependency: OnlineSubsystemUtils
-/// dependency: PacketHandler
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
+#include "OnlineSubsystemUtils.h"
+#include "PacketHandler.h"
 
 #pragma pack(push, 0x1)
 
@@ -25,8 +25,8 @@ public:
 class USteamNetConnection : public UIpConnection
 { 
 public:
-	bool                                               bIsPassthrough;                                             // 0x1B90   (0x0001)  
-	unsigned char                                      UnknownData01_7[0x7];                                       // 0x1B91   (0x0007)  MISSED
+    bool                                               bIsPassthrough;                                             // 0x1B90   (0x0001) 
+    unsigned char                                      UnknownData01_7[0x7];                                       // 0x1B91   (0x0007) MISSED
 };
 
 /// Class /Script/OnlineSubsystemSteam.SteamNetDriver
@@ -34,7 +34,7 @@ public:
 class USteamNetDriver : public UIpNetDriver
 { 
 public:
-	unsigned char                                      UnknownData01_1[0x8];                                       // 0x07B8   (0x0008)  MISSED
+    unsigned char                                      UnknownData01_1[0x8];                                       // 0x07B8   (0x0008) MISSED
 };
 
 #pragma pack(pop)

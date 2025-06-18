@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: BasicType
-/// dependency: CoreUObject
+#include "BasicType.h"
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -15,21 +15,21 @@
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FPropertyPathSegment
 { 
-	FName                                              Name;                                                       // 0x0000   (0x0008)  
-	int32_t                                            ArrayIndex;                                                 // 0x0008   (0x0004)  
-	unsigned char                                      UnknownData02_6[0x4];                                       // 0x000C   (0x0004)  MISSED
-	class Ustruct*                                     struct;                                                     // 0x0010   (0x0008)  
-	unsigned char                                      UnknownData03_7[0x10];                                      // 0x0018   (0x0010)  MISSED
+    FName                                              Name;                                                       // 0x0000   (0x0008) 
+    int32_t                                            ArrayIndex;                                                 // 0x0008   (0x0004) 
+    unsigned char                                      UnknownData02_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    class Ustruct*                                     struct;                                                     // 0x0010   (0x0008) 
+    unsigned char                                      UnknownData03_7[0x10];                                      // 0x0018   (0x0010) MISSED
 };
 
 /// Struct /Script/PropertyPath.CachedPropertyPath
 /// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FCachedPropertyPath
 { 
-	TArray<FPropertyPathSegment>                       Segments;                                                   // 0x0000   (0x0010)  
-	unsigned char                                      UnknownData02_6[0x8];                                       // 0x0010   (0x0008)  MISSED
-	class UFunction*                                   CachedFunction;                                             // 0x0018   (0x0008)  
-	unsigned char                                      UnknownData03_7[0x8];                                       // 0x0020   (0x0008)  MISSED
+    TArray<FPropertyPathSegment>                       Segments;                                                   // 0x0000   (0x0010) 
+    unsigned char                                      UnknownData02_6[0x8];                                       // 0x0010   (0x0008) MISSED
+    class UFunction*                                   CachedFunction;                                             // 0x0018   (0x0008) 
+    unsigned char                                      UnknownData03_7[0x8];                                       // 0x0020   (0x0008) MISSED
 };
 
 #pragma pack(pop)

@@ -6,7 +6,7 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
+#include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
@@ -15,8 +15,8 @@
 class USignificanceManager : public UObject
 { 
 public:
-	unsigned char                                      UnknownData01_8[0xE0];                                      // 0x0028   (0x00E0)  MISSED
-	FSoftClassPath                                     SignificanceManagerClassName;                               // 0x0108   (0x0018)  
+    unsigned char                                      UnknownData01_8[0xE0];                                      // 0x0028   (0x00E0) MISSED
+    FSoftClassPath                                     SignificanceManagerClassName;                               // 0x0108   (0x0018) 
 };
 
 #pragma pack(pop)

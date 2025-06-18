@@ -6,8 +6,8 @@
 ********************************************************/
 
 #pragma once
-/// dependency: CoreUObject
-/// dependency: Engine
+#include "CoreUObject.h"
+#include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
@@ -30,9 +30,9 @@ public:
 class UAudioAnalyzerNRT : public UAudioAnalyzerAsset
 { 
 public:
-	class USoundWave*                                  Sound;                                                      // 0x0028   (0x0008)  
-	float                                              DurationInSeconds;                                          // 0x0030   (0x0004)  
-	unsigned char                                      UnknownData01_7[0x44];                                      // 0x0034   (0x0044)  MISSED
+    class USoundWave*                                  Sound;                                                      // 0x0028   (0x0008) 
+    float                                              DurationInSeconds;                                          // 0x0030   (0x0004) 
+    unsigned char                                      UnknownData01_7[0x44];                                      // 0x0034   (0x0044) MISSED
 };
 
 #pragma pack(pop)
