@@ -62,14 +62,13 @@ class UMagicLeapPrivilegesFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary.RequestPrivilegeAsync
-	constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege, const FDelegateProperty&> UMagicLeapPrivilegesFunctionLibrary = { 0x1905850, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege, const FDelegateProperty&> RequestPrivilegeAsync = { 0x1905850, 0 }; 
 	// Function /Script/MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary.RequestPrivilege
-	constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege> UMagicLeapPrivilegesFunctionLibrary = { 0x19059c0, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege> RequestPrivilege = { 0x19059c0, 1 }; 
 	// Function /Script/MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary.CheckPrivilege
-	constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege> UMagicLeapPrivilegesFunctionLibrary = { 0x19059c0, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapPrivilegesFunctionLibrary, bool, const EMagicLeapPrivilege> CheckPrivilege = { 0x19059c0, 2 }; 
 };
 
 #pragma pack(pop)

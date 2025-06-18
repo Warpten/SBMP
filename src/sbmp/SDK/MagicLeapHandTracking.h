@@ -101,40 +101,39 @@ class UMagicLeapHandTrackingFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.SetStaticGestureConfidenceThreshold
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, void, const EMagicLeapHandTrackingGesture, const float> UMagicLeapHandTrackingFunctionLibrary = { 0x18faba0, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, void, const EMagicLeapHandTrackingGesture, const float> SetStaticGestureConfidenceThreshold = { 0x18faba0, 0 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.SetConfiguration
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const TArray<EMagicLeapHandTrackingGesture>&, const EMagicLeapHandTrackingKeypointFilterLevel, const EMagicLeapHandTrackingGestureFilterLevel, const bool> UMagicLeapHandTrackingFunctionLibrary = { 0x18fb070, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const TArray<EMagicLeapHandTrackingGesture>&, const EMagicLeapHandTrackingKeypointFilterLevel, const EMagicLeapHandTrackingGestureFilterLevel, const bool> SetConfiguration = { 0x18fb070, 1 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.IsHoldingControl
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand> UMagicLeapHandTrackingFunctionLibrary = { 0x18fa5c0, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand> IsHoldingControl = { 0x18fa5c0, 2 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetStaticGestureConfidenceThreshold
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, float, const EMagicLeapHandTrackingGesture> UMagicLeapHandTrackingFunctionLibrary = { 0x18fa9f0, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, float, const EMagicLeapHandTrackingGesture> GetStaticGestureConfidenceThreshold = { 0x18fa9f0, 3 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetMotionSourceForHandKeypoint
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapHandTrackingKeypoint, const FName&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fa2c0, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapHandTrackingKeypoint, const FName&> GetMotionSourceForHandKeypoint = { 0x18fa2c0, 4 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetMagicLeapHandTrackingLiveLinkSource
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const FLiveLinkSourceHandle&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fa4a0, 5 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const FLiveLinkSourceHandle&> GetMagicLeapHandTrackingLiveLinkSource = { 0x18fa4a0, 5 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandThumbTip
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapGestureTransformSpace, const FTransform&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fb9e0, 6 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapGestureTransformSpace, const FTransform&> GetHandThumbTip = { 0x18fb9e0, 6 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandKeypointForMotionSource
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const FName, const EMagicLeapHandTrackingKeypoint&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fa150, 7 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const FName, const EMagicLeapHandTrackingKeypoint&> GetHandKeypointForMotionSource = { 0x18fa150, 7 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandIndexFingerTip
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapGestureTransformSpace, const FTransform&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fbc20, 8 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapGestureTransformSpace, const FTransform&> GetHandIndexFingerTip = { 0x18fbc20, 8 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandCenterNormalized
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const FVector&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fb840, 9 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const FVector&> GetHandCenterNormalized = { 0x18fb840, 9 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandCenter
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const FTransform&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fbe60, 10 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const FTransform&> GetHandCenter = { 0x18fbe60, 10 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetGestureKeypointTransform
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapHandTrackingKeypoint, const EMagicLeapGestureTransformSpace, const FTransform&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fb370, 11 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapHandTrackingKeypoint, const EMagicLeapGestureTransformSpace, const FTransform&> GetGestureKeypointTransform = { 0x18fb370, 11 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetGestureKeypoints
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const TArray<FTransform>&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fb630, 12 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const TArray<FTransform>&> GetGestureKeypoints = { 0x18fb630, 12 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetCurrentGestureConfidence
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const float&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fa850, 13 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const float&> GetCurrentGestureConfidence = { 0x18fa850, 13 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetCurrentGesture
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapHandTrackingGesture&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fa6c0, 14 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const EControllerHand, const EMagicLeapHandTrackingGesture&> GetCurrentGesture = { 0x18fa6c0, 14 }; 
 	// Function /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetConfiguration
-	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const TArray<EMagicLeapHandTrackingGesture>&, const EMagicLeapHandTrackingKeypointFilterLevel&, const EMagicLeapHandTrackingGestureFilterLevel&, const bool&> UMagicLeapHandTrackingFunctionLibrary = { 0x18fadd0, 15 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandTrackingFunctionLibrary, bool, const TArray<EMagicLeapHandTrackingGesture>&, const EMagicLeapHandTrackingKeypointFilterLevel&, const EMagicLeapHandTrackingGestureFilterLevel&, const bool&> GetConfiguration = { 0x18fadd0, 15 }; 
 };
 
 #pragma pack(pop)

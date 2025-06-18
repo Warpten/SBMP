@@ -81,10 +81,9 @@ class UChaosSolverEngineBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary.ConvertPhysicsCollisionToHitResult
-	constexpr static const FunctionPointer<UChaosSolverEngineBlueprintLibrary, FHitResult, const FChaosPhysicsCollisionInfo&> UChaosSolverEngineBlueprintLibrary = { 0x4c28640, 0 }; 
+	constexpr static const FunctionPointer<UChaosSolverEngineBlueprintLibrary, FHitResult, const FChaosPhysicsCollisionInfo&> ConvertPhysicsCollisionToHitResult = { 0x4c28640, 0 }; 
 };
 
 /// Class /Script/ChaosSolverEngine.ChaosSolver
@@ -136,12 +135,11 @@ public:
 	class UChaosGameplayEventDispatcher*               GameplayEventDispatcherComponent;                           // 0x03B0   (0x0008)  
 	unsigned char                                      UnknownData13_7[0x8];                                       // 0x03B8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetSolverActive
-	constexpr static const FunctionPointer<AChaosSolverActor, void, const bool> AChaosSolverActor = { 0x122e890, 0 }; 
+	constexpr static const FunctionPointer<AChaosSolverActor, void, const bool> SetSolverActive = { 0x122e890, 0 }; 
 	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver
-	constexpr static const FunctionPointer<AChaosSolverActor, void> AChaosSolverActor = { 0x4c29140, 1 }; 
+	constexpr static const FunctionPointer<AChaosSolverActor, void> SetAsCurrentWorldSolver = { 0x4c29140, 1 }; 
 };
 
 /// Class /Script/ChaosSolverEngine.ChaosSolverSettings

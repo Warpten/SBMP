@@ -539,12 +539,11 @@ class UGroomBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/HairStrandsCore.GroomBlueprintLibrary.CreateNewGroomBindingAssetWithPath
-	constexpr static const FunctionPointer<UGroomBlueprintLibrary, UGroomBindingAsset*, const FString, const UGroomAsset*, const USkeletalMesh*, const int32_t, const USkeletalMesh*, const int32_t> UGroomBlueprintLibrary = { 0x13e8ba0, 0 }; 
+	constexpr static const FunctionPointer<UGroomBlueprintLibrary, UGroomBindingAsset*, const FString, const UGroomAsset*, const USkeletalMesh*, const int32_t, const USkeletalMesh*, const int32_t> CreateNewGroomBindingAssetWithPath = { 0x13e8ba0, 0 }; 
 	// Function /Script/HairStrandsCore.GroomBlueprintLibrary.CreateNewGroomBindingAsset
-	constexpr static const FunctionPointer<UGroomBlueprintLibrary, UGroomBindingAsset*, const UGroomAsset*, const USkeletalMesh*, const int32_t, const USkeletalMesh*, const int32_t> UGroomBlueprintLibrary = { 0x13e88e0, 1 }; 
+	constexpr static const FunctionPointer<UGroomBlueprintLibrary, UGroomBindingAsset*, const UGroomAsset*, const USkeletalMesh*, const int32_t, const USkeletalMesh*, const int32_t> CreateNewGroomBindingAsset = { 0x13e88e0, 1 }; 
 };
 
 /// Struct /Script/HairStrandsCore.HairGroupDesc
@@ -607,12 +606,11 @@ public:
 	TArray<FHairGroupDesc>                             GroomGroupsDesc;                                            // 0x0620   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x40];                                      // 0x0630   (0x0040)  MISSED
 
-
 	/// Functions
 	// Function /Script/HairStrandsCore.GroomComponent.SetGroomAsset
-	constexpr static const FunctionPointer<UGroomComponent, void, const UGroomAsset*> UGroomComponent = { 0x13e95c0, 0 }; 
+	constexpr static const FunctionPointer<UGroomComponent, void, const UGroomAsset*> SetGroomAsset = { 0x13e95c0, 0 }; 
 	// Function /Script/HairStrandsCore.GroomComponent.SetBindingAsset
-	constexpr static const FunctionPointer<UGroomComponent, void, const UGroomBindingAsset*> UGroomComponent = { 0x13e92e0, 1 }; 
+	constexpr static const FunctionPointer<UGroomComponent, void, const UGroomBindingAsset*> SetBindingAsset = { 0x13e92e0, 1 }; 
 };
 
 /// Class /Script/HairStrandsCore.GroomCreateBindingOptions

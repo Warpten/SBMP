@@ -31,16 +31,15 @@ public:
 	unsigned char                                      UnknownData01_6[0xA4];                                      // 0x03D4   (0x00A4)  MISSED
 	class AMagicLeapSharedWorldPlayerController*       ChosenOne;                                                  // 0x0478   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SendSharedWorldDataToClients
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, bool> AMagicLeapSharedWorldGameMode = { 0x18d1fe0, 0 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, bool> SendSharedWorldDataToClients = { 0x18d1fe0, 0 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SelectChosenOne
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void> AMagicLeapSharedWorldGameMode = { 0x18d2030, 1 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void> SelectChosenOne = { 0x18d2030, 1 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.MagicLeapOnNewLocalDataFromClients__DelegateSignature
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void> AMagicLeapSharedWorldGameMode = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void> MagicLeapOnNewLocalDataFromClients__DelegateSignature = { 0x2bbb090, 2 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.DetermineSharedWorldData
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void, const FMagicLeapSharedWorldSharedData&> AMagicLeapSharedWorldGameMode = { 0x18d2050, 3 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameMode, void, const FMagicLeapSharedWorldSharedData&> DetermineSharedWorldData = { 0x18d2050, 3 }; 
 };
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldAlignmentTransforms
@@ -60,16 +59,15 @@ public:
 	FMulticastInlineDelegate                           OnSharedWorldDataUpdated;                                   // 0x0358   (0x0010)  
 	FMulticastInlineDelegate                           OnAlignmentTransformsUpdated;                               // 0x0368   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_SharedWorldData
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> AMagicLeapSharedWorldGameState = { 0x18d2350, 0 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> OnReplicate_SharedWorldData = { 0x18d2350, 0 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_AlignmentTransforms
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> AMagicLeapSharedWorldGameState = { 0x18d2320, 1 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> OnReplicate_AlignmentTransforms = { 0x18d2320, 1 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.MagicLeapSharedWorldEvent__DelegateSignature
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> AMagicLeapSharedWorldGameState = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, void> MagicLeapSharedWorldEvent__DelegateSignature = { 0x2bbb090, 2 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.CalculateXRCameraRootTransform
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, FTransform> AMagicLeapSharedWorldGameState = { 0x18d2380, 3 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldGameState, FTransform> CalculateXRCameraRootTransform = { 0x18d2380, 3 }; 
 };
 
 /// Class /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController
@@ -79,20 +77,19 @@ class AMagicLeapSharedWorldPlayerController : public APlayerController
 public:
 	unsigned char                                      UnknownData01_1[0x18];                                      // 0x0668   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetLocalWorldData
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const FMagicLeapSharedWorldLocalData> AMagicLeapSharedWorldPlayerController = { 0x18d28e0, 0 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const FMagicLeapSharedWorldLocalData> ServerSetLocalWorldData = { 0x18d28e0, 0 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetAlignmentTransforms
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const FMagicLeapSharedWorldAlignmentTransforms> AMagicLeapSharedWorldPlayerController = { 0x18d26b0, 1 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const FMagicLeapSharedWorldAlignmentTransforms> ServerSetAlignmentTransforms = { 0x18d26b0, 1 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.IsChosenOne
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, bool> AMagicLeapSharedWorldPlayerController = { 0x18d27c0, 2 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, bool> IsChosenOne = { 0x18d27c0, 2 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ClientSetChosenOne
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const bool> AMagicLeapSharedWorldPlayerController = { 0x18d27e0, 3 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void, const bool> ClientSetChosenOne = { 0x18d27e0, 3 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ClientMarkReadyForSendingLocalData
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void> AMagicLeapSharedWorldPlayerController = { 0x18d28c0, 4 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, void> ClientMarkReadyForSendingLocalData = { 0x18d28c0, 4 }; 
 	// Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.CanSendLocalDataToServer
-	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, bool> AMagicLeapSharedWorldPlayerController = { 0x18d27a0, 5 }; 
+	constexpr static const FunctionPointer<AMagicLeapSharedWorldPlayerController, bool> CanSendLocalDataToServer = { 0x18d27a0, 5 }; 
 };
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPinData

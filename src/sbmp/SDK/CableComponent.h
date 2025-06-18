@@ -94,32 +94,31 @@ public:
 	bool                                               bUseRelativePosition;                                       // 0x06E4   (0x0001)  
 	unsigned char                                      UnknownData19_7[0x1B];                                      // 0x06E5   (0x001B)  MISSED
 
-
 	/// Functions
 	// Function /Script/CableComponent.CableComponent.SetAttachEndToComponent
-	constexpr static const FunctionPointer<UCableComponent, void, const USceneComponent*, const FName> UCableComponent = { 0x1983520, 0 }; 
+	constexpr static const FunctionPointer<UCableComponent, void, const USceneComponent*, const FName> SetAttachEndToComponent = { 0x1983520, 0 }; 
 	// Function /Script/CableComponent.CableComponent.SetAttachEndTo
-	constexpr static const FunctionPointer<UCableComponent, void, const AActor*, const FName, const FName> UCableComponent = { 0x1983340, 1 }; 
+	constexpr static const FunctionPointer<UCableComponent, void, const AActor*, const FName, const FName> SetAttachEndTo = { 0x1983340, 1 }; 
 	// Function /Script/CableComponent.CableComponent.ResetParticles
-	constexpr static const FunctionPointer<UCableComponent, void> UCableComponent = { 0x1983780, 2 }; 
+	constexpr static const FunctionPointer<UCableComponent, void> ResetParticles = { 0x1983780, 2 }; 
 	// Function /Script/CableComponent.CableComponent.IsSleeping
-	constexpr static const FunctionPointer<UCableComponent, bool> UCableComponent = { 0x1982fe0, 3 }; 
+	constexpr static const FunctionPointer<UCableComponent, bool> IsSleeping = { 0x1982fe0, 3 }; 
 	// Function /Script/CableComponent.CableComponent.GetParticleCount
-	constexpr static const FunctionPointer<UCableComponent, int32_t> UCableComponent = { 0x1983010, 4 }; 
+	constexpr static const FunctionPointer<UCableComponent, int32_t> GetParticleCount = { 0x1983010, 4 }; 
 	// Function /Script/CableComponent.CableComponent.GetCableParticleLocations
-	constexpr static const FunctionPointer<UCableComponent, void, const TArray<FVector>&> UCableComponent = { 0x1982ef0, 5 }; 
+	constexpr static const FunctionPointer<UCableComponent, void, const TArray<FVector>&> GetCableParticleLocations = { 0x1982ef0, 5 }; 
 	// Function /Script/CableComponent.CableComponent.GetCableParticleLocation
-	constexpr static const FunctionPointer<UCableComponent, void, const int32_t, const FVector&> UCableComponent = { 0x1983030, 6 }; 
+	constexpr static const FunctionPointer<UCableComponent, void, const int32_t, const FVector&> GetCableParticleLocation = { 0x1983030, 6 }; 
 	// Function /Script/CableComponent.CableComponent.GetAttachedComponent
-	constexpr static const FunctionPointer<UCableComponent, USceneComponent*> UCableComponent = { 0x1983290, 7 }; 
+	constexpr static const FunctionPointer<UCableComponent, USceneComponent*> GetAttachedComponent = { 0x1983290, 7 }; 
 	// Function /Script/CableComponent.CableComponent.GetAttachedActor
-	constexpr static const FunctionPointer<UCableComponent, AActor*> UCableComponent = { 0x1983320, 8 }; 
+	constexpr static const FunctionPointer<UCableComponent, AActor*> GetAttachedActor = { 0x1983320, 8 }; 
 	// Function /Script/CableComponent.CableComponent.ClearAttachSegment
-	constexpr static const FunctionPointer<UCableComponent, void, const bool> UCableComponent = { 0x19837a0, 9 }; 
+	constexpr static const FunctionPointer<UCableComponent, void, const bool> ClearAttachSegment = { 0x19837a0, 9 }; 
 	// Function /Script/CableComponent.CableComponent.AttachSegment
-	constexpr static const FunctionPointer<UCableComponent, void, const USceneComponent*, const FName&, const int32_t, const float, const int32_t> UCableComponent = { 0x1983880, 10 }; 
+	constexpr static const FunctionPointer<UCableComponent, void, const USceneComponent*, const FName&, const int32_t, const float, const int32_t> AttachSegment = { 0x1983880, 10 }; 
 	// Function /Script/CableComponent.CableComponent.AddOffset
-	constexpr static const FunctionPointer<UCableComponent, void, const FVector, const FRuntimeFloatCurve> UCableComponent = { 0x1983ba0, 11 }; 
+	constexpr static const FunctionPointer<UCableComponent, void, const FVector, const FRuntimeFloatCurve> AddOffset = { 0x1983ba0, 11 }; 
 };
 
 #pragma pack(pop)

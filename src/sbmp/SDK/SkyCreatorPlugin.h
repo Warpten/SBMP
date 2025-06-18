@@ -418,114 +418,113 @@ public:
 	bool                                               bExtendDefaultLuminanceRange;                               // 0x0BAC   (0x0001)  
 	unsigned char                                      UnknownData39_7[0x3];                                       // 0x0BAD   (0x0003)  MISSED
 
-
 	/// Functions
 	// Function /Script/SkyCreatorPlugin.SkyCreator.UpdateSunMoonIntensity
-	constexpr static const FunctionPointer<ASkyCreator, void, const float> ASkyCreator = { 0x14f22f0, 0 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const float> UpdateSunMoonIntensity = { 0x14f22f0, 0 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.UpdateSettings
-	constexpr static const FunctionPointer<ASkyCreator, void> ASkyCreator = { 0x14f2030, 1 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void> UpdateSettings = { 0x14f2030, 1 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetWindSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWindSettings> ASkyCreator = { 0x14f54e0, 2 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWindSettings> SetWindSettings = { 0x14f54e0, 2 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetWindIndependentSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWindSettings> ASkyCreator = { 0x14f53d0, 3 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWindSettings> SetWindIndependentSettings = { 0x14f53d0, 3 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetWeatherSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWeatherSettings> ASkyCreator = { 0x14f5150, 4 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWeatherSettings> SetWeatherSettings = { 0x14f5150, 4 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetWeatherFXSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWeatherFXSettings> ASkyCreator = { 0x14f55f0, 5 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWeatherFXSettings> SetWeatherFXSettings = { 0x14f55f0, 5 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetVolumetricCloudSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorVolumetricCloudSettings> ASkyCreator = { 0x14f5dd0, 6 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorVolumetricCloudSettings> SetVolumetricCloudSettings = { 0x14f5dd0, 6 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetTime
-	constexpr static const FunctionPointer<ASkyCreator, void, const float> ASkyCreator = { 0x14f2640, 7 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const float> SetTime = { 0x14f2640, 7 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetSunMoonPosition
-	constexpr static const FunctionPointer<ASkyCreator, void, const float> ASkyCreator = { 0x14f23c0, 8 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const float> SetSunMoonPosition = { 0x14f23c0, 8 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetSunLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSunLightSettings> ASkyCreator = { 0x14f5b70, 9 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSunLightSettings> SetSunLightSettings = { 0x14f5b70, 9 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetStarMapSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorStarMapSettings> ASkyCreator = { 0x14f5770, 10 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorStarMapSettings> SetStarMapSettings = { 0x14f5770, 10 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetSkyLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSkyLightSettings> ASkyCreator = { 0x14f5cc0, 11 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSkyLightSettings> SetSkyLightSettings = { 0x14f5cc0, 11 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetSkyAtmosphereSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSkyAtmosphereSettings> ASkyCreator = { 0x14f5f10, 12 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSkyAtmosphereSettings> SetSkyAtmosphereSettings = { 0x14f5f10, 12 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetMoonPhase
-	constexpr static const FunctionPointer<ASkyCreator, void, const float> ASkyCreator = { 0x14f24b0, 13 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const float> SetMoonPhase = { 0x14f24b0, 13 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetMoonLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorMoonLightSettings> ASkyCreator = { 0x14f5a20, 14 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorMoonLightSettings> SetMoonLightSettings = { 0x14f5a20, 14 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetExposureSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorExposureSettings> ASkyCreator = { 0x14f52e0, 15 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorExposureSettings> SetExposureSettings = { 0x14f52e0, 15 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetExponentialHeightFogSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorExponentialHeightFogSettings> ASkyCreator = { 0x14f58c0, 16 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorExponentialHeightFogSettings> SetExponentialHeightFogSettings = { 0x14f58c0, 16 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.SetComponentsSettings
-	constexpr static const FunctionPointer<ASkyCreator, void> ASkyCreator = { 0x14f2050, 17 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void> SetComponentsSettings = { 0x14f2050, 17 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.RerunConstructionScript
-	constexpr static const FunctionPointer<ASkyCreator, void> ASkyCreator = { 0x14f2070, 18 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void> RerunConstructionScript = { 0x14f2070, 18 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.RealtimeVolumetricCloudWind
-	constexpr static const FunctionPointer<ASkyCreator, void, const float> ASkyCreator = { 0x14f2090, 19 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const float> RealtimeVolumetricCloudWind = { 0x14f2090, 19 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.RealtimeTimeOfDay
-	constexpr static const FunctionPointer<ASkyCreator, void, const float, const float> ASkyCreator = { 0x14f2160, 20 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const float, const float> RealtimeTimeOfDay = { 0x14f2160, 20 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.OnRep_UpdateWeather
-	constexpr static const FunctionPointer<ASkyCreator, void> ASkyCreator = { 0x14f1f00, 21 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void> OnRep_UpdateWeather = { 0x14f1f00, 21 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.OnRep_UpdateTime
-	constexpr static const FunctionPointer<ASkyCreator, void> ASkyCreator = { 0x14f1fe0, 22 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void> OnRep_UpdateTime = { 0x14f1fe0, 22 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpWindSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWindSettings, const FSkyCreatorWindSettings, const float> ASkyCreator = { 0x14f35d0, 23 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWindSettings, const FSkyCreatorWindSettings, const float> LerpWindSettings = { 0x14f35d0, 23 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpWindIndependentSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWindSettings, const FSkyCreatorWindSettings, const float> ASkyCreator = { 0x14f3240, 24 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWindSettings, const FSkyCreatorWindSettings, const float> LerpWindIndependentSettings = { 0x14f3240, 24 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpWeatherSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWeatherSettings, const FSkyCreatorWeatherSettings, const float> ASkyCreator = { 0x14f2cc0, 25 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWeatherSettings, const FSkyCreatorWeatherSettings, const float> LerpWeatherSettings = { 0x14f2cc0, 25 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpWeatherFXSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWeatherFXSettings, const FSkyCreatorWeatherFXSettings, const float> ASkyCreator = { 0x14f3820, 26 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorWeatherFXSettings, const FSkyCreatorWeatherFXSettings, const float> LerpWeatherFXSettings = { 0x14f3820, 26 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpVolumetricCloudSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorVolumetricCloudSettings, const FSkyCreatorVolumetricCloudSettings, const float> ASkyCreator = { 0x14f4ad0, 27 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorVolumetricCloudSettings, const FSkyCreatorVolumetricCloudSettings, const float> LerpVolumetricCloudSettings = { 0x14f4ad0, 27 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpSunLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSunLightSettings, const FSkyCreatorSunLightSettings, const float> ASkyCreator = { 0x14f4570, 28 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSunLightSettings, const FSkyCreatorSunLightSettings, const float> LerpSunLightSettings = { 0x14f4570, 28 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpStarMapSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorStarMapSettings, const FSkyCreatorStarMapSettings, const float> ASkyCreator = { 0x14f3bf0, 29 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorStarMapSettings, const FSkyCreatorStarMapSettings, const float> LerpStarMapSettings = { 0x14f3bf0, 29 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpSkyLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSkyLightSettings, const FSkyCreatorSkyLightSettings, const float> ASkyCreator = { 0x14f4860, 30 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSkyLightSettings, const FSkyCreatorSkyLightSettings, const float> LerpSkyLightSettings = { 0x14f4860, 30 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpSkyAtmosphereSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSkyAtmosphereSettings, const FSkyCreatorSkyAtmosphereSettings, const float> ASkyCreator = { 0x14f4db0, 31 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorSkyAtmosphereSettings, const FSkyCreatorSkyAtmosphereSettings, const float> LerpSkyAtmosphereSettings = { 0x14f4db0, 31 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpMoonLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorMoonLightSettings, const FSkyCreatorMoonLightSettings, const float> ASkyCreator = { 0x14f4280, 32 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorMoonLightSettings, const FSkyCreatorMoonLightSettings, const float> LerpMoonLightSettings = { 0x14f4280, 32 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpExposureSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorExposureSettings, const FSkyCreatorExposureSettings, const float> ASkyCreator = { 0x14f3030, 33 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorExposureSettings, const FSkyCreatorExposureSettings, const float> LerpExposureSettings = { 0x14f3030, 33 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.LerpExponentialHeightFogSettings
-	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorExponentialHeightFogSettings, const FSkyCreatorExponentialHeightFogSettings, const float> ASkyCreator = { 0x14f3f00, 34 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const FSkyCreatorExponentialHeightFogSettings, const FSkyCreatorExponentialHeightFogSettings, const float> LerpExponentialHeightFogSettings = { 0x14f3f00, 34 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetWindSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorWindSettings> ASkyCreator = { 0x14f28e0, 35 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorWindSettings> GetWindSettings = { 0x14f28e0, 35 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetWeatherSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorWeatherSettings> ASkyCreator = { 0x14f2730, 36 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorWeatherSettings> GetWeatherSettings = { 0x14f2730, 36 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetWeatherFXSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorWeatherFXSettings> ASkyCreator = { 0x14f2920, 37 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorWeatherFXSettings> GetWeatherFXSettings = { 0x14f2920, 37 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetVolumetricCloudSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorVolumetricCloudSettings> ASkyCreator = { 0x14f2b80, 38 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorVolumetricCloudSettings> GetVolumetricCloudSettings = { 0x14f2b80, 38 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetTime
-	constexpr static const FunctionPointer<ASkyCreator, float> ASkyCreator = { 0x14f2620, 39 }; 
+	constexpr static const FunctionPointer<ASkyCreator, float> GetTime = { 0x14f2620, 39 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetSunPosition
-	constexpr static const FunctionPointer<ASkyCreator, FRotator, const float> ASkyCreator = { 0x14f62c0, 40 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FRotator, const float> GetSunPosition = { 0x14f62c0, 40 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetSunLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorSunLightSettings> ASkyCreator = { 0x14f2ae0, 41 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorSunLightSettings> GetSunLightSettings = { 0x14f2ae0, 41 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetStarMapSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorStarMapSettings> ASkyCreator = { 0x14f29b0, 42 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorStarMapSettings> GetStarMapSettings = { 0x14f29b0, 42 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetStarMapRotation
-	constexpr static const FunctionPointer<ASkyCreator, FRotator, const float> ASkyCreator = { 0x14f6080, 43 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FRotator, const float> GetStarMapRotation = { 0x14f6080, 43 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetSkyLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorSkyLightSettings> ASkyCreator = { 0x14f2b40, 44 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorSkyLightSettings> GetSkyLightSettings = { 0x14f2b40, 44 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetSkyAtmosphereSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorSkyAtmosphereSettings> ASkyCreator = { 0x14f2c40, 45 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorSkyAtmosphereSettings> GetSkyAtmosphereSettings = { 0x14f2c40, 45 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetMoonPosition
-	constexpr static const FunctionPointer<ASkyCreator, FRotator, const float> ASkyCreator = { 0x14f61c0, 46 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FRotator, const float> GetMoonPosition = { 0x14f61c0, 46 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetMoonPhase
-	constexpr static const FunctionPointer<ASkyCreator, float> ASkyCreator = { 0x14f2490, 47 }; 
+	constexpr static const FunctionPointer<ASkyCreator, float> GetMoonPhase = { 0x14f2490, 47 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetMoonLightSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorMoonLightSettings> ASkyCreator = { 0x14f2a80, 48 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorMoonLightSettings> GetMoonLightSettings = { 0x14f2a80, 48 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetExposureSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorExposureSettings> ASkyCreator = { 0x14f28b0, 49 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorExposureSettings> GetExposureSettings = { 0x14f28b0, 49 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.GetExponentialHeightFogSettings
-	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorExponentialHeightFogSettings> ASkyCreator = { 0x14f2a10, 50 }; 
+	constexpr static const FunctionPointer<ASkyCreator, FSkyCreatorExponentialHeightFogSettings> GetExponentialHeightFogSettings = { 0x14f2a10, 50 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.CreateVolumetricCloudMID
-	constexpr static const FunctionPointer<ASkyCreator, void> ASkyCreator = { 0x14f6650, 51 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void> CreateVolumetricCloudMID = { 0x14f6650, 51 }; 
 	// Function /Script/SkyCreatorPlugin.SkyCreator.CreateAndAssignMID
-	constexpr static const FunctionPointer<ASkyCreator, void, const UMaterialInterface*, const UMaterialInstanceDynamic*> ASkyCreator = { 0x14f63c0, 52 }; 
+	constexpr static const FunctionPointer<ASkyCreator, void, const UMaterialInterface*, const UMaterialInstanceDynamic*> CreateAndAssignMID = { 0x14f63c0, 52 }; 
 };
 
 /// Class /Script/SkyCreatorPlugin.SkyCreatorWeatherPreset
@@ -545,10 +544,9 @@ public:
 	FSkyCreatorWindSettings                            WindSettings;                                               // 0x0318   (0x0024)  
 	FSkyCreatorExposureSettings                        ExposureSettings;                                           // 0x033C   (0x0004)  
 
-
 	/// Functions
 	// Function /Script/SkyCreatorPlugin.SkyCreatorWeatherPreset.GetWeatherPresetSettings
-	constexpr static const FunctionPointer<USkyCreatorWeatherPreset, FSkyCreatorWeatherSettings> USkyCreatorWeatherPreset = { 0x14f7410, 0 }; 
+	constexpr static const FunctionPointer<USkyCreatorWeatherPreset, FSkyCreatorWeatherSettings> GetWeatherPresetSettings = { 0x14f7410, 0 }; 
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorWeatherMaterialFXSettings

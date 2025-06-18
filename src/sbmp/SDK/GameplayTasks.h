@@ -54,14 +54,13 @@ public:
 	unsigned char                                      UnknownData05_6[0x25];                                      // 0x003B   (0x0025)  MISSED
 	class UGameplayTask*                               ChildTask;                                                  // 0x0060   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask.ReadyForActivation
-	constexpr static const FunctionPointer<UGameplayTask, void> UGameplayTask = { 0x4b4a180, 0 }; 
+	constexpr static const FunctionPointer<UGameplayTask, void> ReadyForActivation = { 0x4b4a180, 0 }; 
 	// Function /Script/GameplayTasks.GameplayTask.GenericGameplayTaskDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UGameplayTask, void> UGameplayTask = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UGameplayTask, void> GenericGameplayTaskDelegate__DelegateSignature = { 0x2bbb090, 1 }; 
 	// Function /Script/GameplayTasks.GameplayTask.EndTask
-	constexpr static const FunctionPointer<UGameplayTask, void> UGameplayTask = { 0x4b4a160, 2 }; 
+	constexpr static const FunctionPointer<UGameplayTask, void> EndTask = { 0x4b4a160, 2 }; 
 };
 
 /// Class /Script/GameplayTasks.GameplayTask_ClaimResource
@@ -70,12 +69,11 @@ class UGameplayTask_ClaimResource : public UGameplayTask
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask_ClaimResource.ClaimResources
-	constexpr static const FunctionPointer<UGameplayTask_ClaimResource, UGameplayTask_ClaimResource*, const TScriptInterface<Class>, const TArray<UClass*>, const char, const FName> UGameplayTask_ClaimResource = { 0x4b4a5a0, 0 }; 
+	constexpr static const FunctionPointer<UGameplayTask_ClaimResource, UGameplayTask_ClaimResource*, const TScriptInterface<Class>, const TArray<UClass*>, const char, const FName> ClaimResources = { 0x4b4a5a0, 0 }; 
 	// Function /Script/GameplayTasks.GameplayTask_ClaimResource.ClaimResource
-	constexpr static const FunctionPointer<UGameplayTask_ClaimResource, UGameplayTask_ClaimResource*, const TScriptInterface<Class>, const UClass*, const char, const FName> UGameplayTask_ClaimResource = { 0x4b4a970, 1 }; 
+	constexpr static const FunctionPointer<UGameplayTask_ClaimResource, UGameplayTask_ClaimResource*, const TScriptInterface<Class>, const UClass*, const char, const FName> ClaimResource = { 0x4b4a970, 1 }; 
 };
 
 /// Class /Script/GameplayTasks.GameplayTask_SpawnActor
@@ -88,14 +86,13 @@ public:
 	unsigned char                                      UnknownData01_6[0x18];                                      // 0x0088   (0x0018)  MISSED
 	class UClass*                                      ClassToSpawn;                                               // 0x00A0   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask_SpawnActor.SpawnActor
-	constexpr static const FunctionPointer<UGameplayTask_SpawnActor, UGameplayTask_SpawnActor*, const TScriptInterface<Class>, const FVector, const FRotator, const UClass*, const bool> UGameplayTask_SpawnActor = { 0x4b4b3f0, 0 }; 
+	constexpr static const FunctionPointer<UGameplayTask_SpawnActor, UGameplayTask_SpawnActor*, const TScriptInterface<Class>, const FVector, const FRotator, const UClass*, const bool> SpawnActor = { 0x4b4b3f0, 0 }; 
 	// Function /Script/GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor
-	constexpr static const FunctionPointer<UGameplayTask_SpawnActor, void, const UObject*, const AActor*> UGameplayTask_SpawnActor = { 0x4b4b100, 1 }; 
+	constexpr static const FunctionPointer<UGameplayTask_SpawnActor, void, const UObject*, const AActor*> FinishSpawningActor = { 0x4b4b100, 1 }; 
 	// Function /Script/GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor
-	constexpr static const FunctionPointer<UGameplayTask_SpawnActor, bool, const UObject*, const AActor*&> UGameplayTask_SpawnActor = { 0x4b4b270, 2 }; 
+	constexpr static const FunctionPointer<UGameplayTask_SpawnActor, bool, const UObject*, const AActor*&> BeginSpawningActor = { 0x4b4b270, 2 }; 
 };
 
 /// Class /Script/GameplayTasks.GameplayTask_TimeLimitedExecution
@@ -116,12 +113,11 @@ public:
 	FMulticastInlineDelegate                           OnFinish;                                                   // 0x0068   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0078   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
-	constexpr static const FunctionPointer<UGameplayTask_WaitDelay, UGameplayTask_WaitDelay*, const TScriptInterface<Class>, const float, const char> UGameplayTask_WaitDelay = { 0x4b4bf10, 0 }; 
+	constexpr static const FunctionPointer<UGameplayTask_WaitDelay, UGameplayTask_WaitDelay*, const TScriptInterface<Class>, const float, const char> TaskWaitDelay = { 0x4b4bf10, 0 }; 
 	// Function /Script/GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UGameplayTask_WaitDelay, void> UGameplayTask_WaitDelay = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UGameplayTask_WaitDelay, void> TaskDelayDelegate__DelegateSignature = { 0x2bbb090, 1 }; 
 };
 
 /// Class /Script/GameplayTasks.GameplayTaskOwnerInterface
@@ -158,12 +154,11 @@ public:
 	TArray<class UGameplayTask*>                       KnownTasks;                                                 // 0x0110   (0x0010)  
 	FMulticastInlineDelegate                           OnClaimedResourcesChange;                                   // 0x0120   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks
-	constexpr static const FunctionPointer<UGameplayTasksComponent, void> UGameplayTasksComponent = { 0x4b4d050, 0 }; 
+	constexpr static const FunctionPointer<UGameplayTasksComponent, void> OnRep_SimulatedTasks = { 0x4b4d050, 0 }; 
 	// Function /Script/GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
-	constexpr static const FunctionPointer<UGameplayTasksComponent, EGameplayTaskRunResult, const TScriptInterface<Class>, const UGameplayTask*, const char, const TArray<UClass*>, const TArray<UClass*>> UGameplayTasksComponent = { 0x4b4ccb0, 1 }; 
+	constexpr static const FunctionPointer<UGameplayTasksComponent, EGameplayTaskRunResult, const TScriptInterface<Class>, const UGameplayTask*, const char, const TArray<UClass*>, const TArray<UClass*>> K2_RunGameplayTask = { 0x4b4ccb0, 1 }; 
 };
 
 /// Struct /Script/GameplayTasks.GameplayResourceSet

@@ -69,12 +69,11 @@ public:
 	uint32_t                                           MaxStreamRequestSizeKB;                                     // 0x0158   (0x0004)  
 	unsigned char                                      UnknownData03_7[0x4];                                       // 0x015C   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.SetVisualFidelity
-	constexpr static const FunctionPointer<UAnimationCompressionLibraryDatabase, void, const UObject*, const FLatentActionInfo, const UAnimationCompressionLibraryDatabase*, const ACLVisualFidelityChangeResult&, const ACLVisualFidelity> UAnimationCompressionLibraryDatabase = { 0x153adb0, 0 }; 
+	constexpr static const FunctionPointer<UAnimationCompressionLibraryDatabase, void, const UObject*, const FLatentActionInfo, const UAnimationCompressionLibraryDatabase*, const ACLVisualFidelityChangeResult&, const ACLVisualFidelity> SetVisualFidelity = { 0x153adb0, 0 }; 
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.GetVisualFidelity
-	constexpr static const FunctionPointer<UAnimationCompressionLibraryDatabase, ACLVisualFidelity, const UAnimationCompressionLibraryDatabase*> UAnimationCompressionLibraryDatabase = { 0x153acc0, 1 }; 
+	constexpr static const FunctionPointer<UAnimationCompressionLibraryDatabase, ACLVisualFidelity, const UAnimationCompressionLibraryDatabase*> GetVisualFidelity = { 0x153acc0, 1 }; 
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLBase

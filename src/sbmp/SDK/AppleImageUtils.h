@@ -57,16 +57,15 @@ public:
 	FAppleImageUtilsImageConversionResult              ConversionResult;                                           // 0x0060   (0x0020)  
 	unsigned char                                      UnknownData05_7[0x8];                                       // 0x0080   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy.CreateProxyObjectForConvertToTIFF
-	constexpr static const FunctionPointer<UAppleImageUtilsBaseAsyncTaskBlueprintProxy, UAppleImageUtilsBaseAsyncTaskBlueprintProxy*, const UTexture*, const bool, const bool, const float, const ETextureRotationDirection> UAppleImageUtilsBaseAsyncTaskBlueprintProxy = { 0x19728e0, 0 }; 
+	constexpr static const FunctionPointer<UAppleImageUtilsBaseAsyncTaskBlueprintProxy, UAppleImageUtilsBaseAsyncTaskBlueprintProxy*, const UTexture*, const bool, const bool, const float, const ETextureRotationDirection> CreateProxyObjectForConvertToTIFF = { 0x19728e0, 0 }; 
 	// Function /Script/AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy.CreateProxyObjectForConvertToPNG
-	constexpr static const FunctionPointer<UAppleImageUtilsBaseAsyncTaskBlueprintProxy, UAppleImageUtilsBaseAsyncTaskBlueprintProxy*, const UTexture*, const bool, const bool, const float, const ETextureRotationDirection> UAppleImageUtilsBaseAsyncTaskBlueprintProxy = { 0x1972500, 1 }; 
+	constexpr static const FunctionPointer<UAppleImageUtilsBaseAsyncTaskBlueprintProxy, UAppleImageUtilsBaseAsyncTaskBlueprintProxy*, const UTexture*, const bool, const bool, const float, const ETextureRotationDirection> CreateProxyObjectForConvertToPNG = { 0x1972500, 1 }; 
 	// Function /Script/AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy.CreateProxyObjectForConvertToJPEG
-	constexpr static const FunctionPointer<UAppleImageUtilsBaseAsyncTaskBlueprintProxy, UAppleImageUtilsBaseAsyncTaskBlueprintProxy*, const UTexture*, const int32_t, const bool, const bool, const float, const ETextureRotationDirection> UAppleImageUtilsBaseAsyncTaskBlueprintProxy = { 0x1973120, 2 }; 
+	constexpr static const FunctionPointer<UAppleImageUtilsBaseAsyncTaskBlueprintProxy, UAppleImageUtilsBaseAsyncTaskBlueprintProxy*, const UTexture*, const int32_t, const bool, const bool, const float, const ETextureRotationDirection> CreateProxyObjectForConvertToJPEG = { 0x1973120, 2 }; 
 	// Function /Script/AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy.CreateProxyObjectForConvertToHEIF
-	constexpr static const FunctionPointer<UAppleImageUtilsBaseAsyncTaskBlueprintProxy, UAppleImageUtilsBaseAsyncTaskBlueprintProxy*, const UTexture*, const int32_t, const bool, const bool, const float, const ETextureRotationDirection> UAppleImageUtilsBaseAsyncTaskBlueprintProxy = { 0x1972cc0, 3 }; 
+	constexpr static const FunctionPointer<UAppleImageUtilsBaseAsyncTaskBlueprintProxy, UAppleImageUtilsBaseAsyncTaskBlueprintProxy*, const UTexture*, const int32_t, const bool, const bool, const float, const ETextureRotationDirection> CreateProxyObjectForConvertToHEIF = { 0x1972cc0, 3 }; 
 };
 
 /// Class /Script/AppleImageUtils.AppleImageInterface

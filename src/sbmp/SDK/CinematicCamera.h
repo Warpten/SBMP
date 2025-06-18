@@ -114,36 +114,35 @@ public:
 	float                                              Override_FilmSensorAspect;                                  // 0x09C0   (0x0004)  
 	unsigned char                                      UnknownData03_7[0x4];                                       // 0x09C4   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/CinematicCamera.CineCameraComponent.SetOverrideFilmbackSensorAspect
-	constexpr static const FunctionPointer<UCineCameraComponent, void, const float> UCineCameraComponent = { 0x3dc9350, 0 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, void, const float> SetOverrideFilmbackSensorAspect = { 0x3dc9350, 0 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.SetLensPresetByName
-	constexpr static const FunctionPointer<UCineCameraComponent, void, const FString> UCineCameraComponent = { 0x3dc9460, 1 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, void, const FString> SetLensPresetByName = { 0x3dc9460, 1 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.SetFilmbackPresetByName
-	constexpr static const FunctionPointer<UCineCameraComponent, void, const FString> UCineCameraComponent = { 0x3dc96e0, 2 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, void, const FString> SetFilmbackPresetByName = { 0x3dc96e0, 2 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.SetCurrentFocalLength
-	constexpr static const FunctionPointer<UCineCameraComponent, void, const float> UCineCameraComponent = { 0x3dc9bf0, 3 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, void, const float> SetCurrentFocalLength = { 0x3dc9bf0, 3 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.SetAdditiveFocalLength
-	constexpr static const FunctionPointer<UCineCameraComponent, void, const float> UCineCameraComponent = { 0x3dc9b10, 4 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, void, const float> SetAdditiveFocalLength = { 0x3dc9b10, 4 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetVerticalFieldOfView
-	constexpr static const FunctionPointer<UCineCameraComponent, float> UCineCameraComponent = { 0x3dc99f0, 5 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, float> GetVerticalFieldOfView = { 0x3dc99f0, 5 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetLensPresetsCopy
-	constexpr static const FunctionPointer<UCineCameraComponent, TArray<FNamedLensPreset>> UCineCameraComponent = { 0x3dc9070, 6 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, TArray<FNamedLensPreset>> GetLensPresetsCopy = { 0x3dc9070, 6 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetLensPresetName
-	constexpr static const FunctionPointer<UCineCameraComponent, FString> UCineCameraComponent = { 0x3dc9560, 7 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, FString> GetLensPresetName = { 0x3dc9560, 7 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetHorizontalFieldOfView
-	constexpr static const FunctionPointer<UCineCameraComponent, float> UCineCameraComponent = { 0x3dc9a70, 8 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, float> GetHorizontalFieldOfView = { 0x3dc9a70, 8 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetFilmbackSensorHeight
-	constexpr static const FunctionPointer<UCineCameraComponent, float> UCineCameraComponent = { 0x3dc9430, 9 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, float> GetFilmbackSensorHeight = { 0x3dc9430, 9 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetFilmbackPresetsCopy
-	constexpr static const FunctionPointer<UCineCameraComponent, TArray<FNamedFilmbackPreset>> UCineCameraComponent = { 0x3dc91e0, 10 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, TArray<FNamedFilmbackPreset>> GetFilmbackPresetsCopy = { 0x3dc91e0, 10 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetFilmbackPresetName
-	constexpr static const FunctionPointer<UCineCameraComponent, FString> UCineCameraComponent = { 0x3dc98a0, 11 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, FString> GetFilmbackPresetName = { 0x3dc98a0, 11 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetDefaultFilmbackPresetName
-	constexpr static const FunctionPointer<UCineCameraComponent, FString> UCineCameraComponent = { 0x3dc97e0, 12 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, FString> GetDefaultFilmbackPresetName = { 0x3dc97e0, 12 }; 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetCurrentFocalLength
-	constexpr static const FunctionPointer<UCineCameraComponent, float> UCineCameraComponent = { 0x3dc9ae0, 13 }; 
+	constexpr static const FunctionPointer<UCineCameraComponent, float> GetCurrentFocalLength = { 0x3dc9ae0, 13 }; 
 };
 
 /// Struct /Script/CinematicCamera.CameraLookatTrackingSettings
@@ -170,10 +169,9 @@ public:
 	FCameraLookatTrackingSettings                      LookatTrackingSettings;                                     // 0x08A0   (0x0050)  
 	unsigned char                                      UnknownData01_7[0x10];                                      // 0x08F0   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/CinematicCamera.CineCameraActor.GetCineCameraComponent
-	constexpr static const FunctionPointer<ACineCameraActor, UCineCameraComponent*> ACineCameraActor = { 0x3dc8900, 0 }; 
+	constexpr static const FunctionPointer<ACineCameraActor, UCineCameraComponent*> GetCineCameraComponent = { 0x3dc8900, 0 }; 
 };
 
 /// Class /Script/CinematicCamera.CameraRig_Crane
@@ -205,10 +203,9 @@ public:
 	class USplineComponent*                            RailSplineComponent;                                        // 0x02D8   (0x0008)  
 	class USceneComponent*                             RailCameraMount;                                            // 0x02E0   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/CinematicCamera.CameraRig_Rail.GetRailSplineComponent
-	constexpr static const FunctionPointer<ACameraRig_Rail, USplineComponent*> ACameraRig_Rail = { 0x3dc8750, 0 }; 
+	constexpr static const FunctionPointer<ACameraRig_Rail, USplineComponent*> GetRailSplineComponent = { 0x3dc8750, 0 }; 
 };
 
 #pragma pack(pop)

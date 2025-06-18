@@ -73,14 +73,13 @@ class UBinkFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/BinkMediaPlayer.BinkFunctionLibrary.BinkLoadingMovie_GetTime
-	constexpr static const FunctionPointer<UBinkFunctionLibrary, FTimespan> UBinkFunctionLibrary = { 0x151a540, 0 }; 
+	constexpr static const FunctionPointer<UBinkFunctionLibrary, FTimespan> BinkLoadingMovie_GetTime = { 0x151a540, 0 }; 
 	// Function /Script/BinkMediaPlayer.BinkFunctionLibrary.BinkLoadingMovie_GetDuration
-	constexpr static const FunctionPointer<UBinkFunctionLibrary, FTimespan> UBinkFunctionLibrary = { 0x151a660, 1 }; 
+	constexpr static const FunctionPointer<UBinkFunctionLibrary, FTimespan> BinkLoadingMovie_GetDuration = { 0x151a660, 1 }; 
 	// Function /Script/BinkMediaPlayer.BinkFunctionLibrary.Bink_DrawOverlays
-	constexpr static const FunctionPointer<UBinkFunctionLibrary, void> UBinkFunctionLibrary = { 0x151a780, 2 }; 
+	constexpr static const FunctionPointer<UBinkFunctionLibrary, void> Bink_DrawOverlays = { 0x151a780, 2 }; 
 };
 
 /// Class /Script/BinkMediaPlayer.BinkMediaPlayer
@@ -110,58 +109,57 @@ public:
 	int32_t                                            BinkLayerDepth;                                             // 0x00A4   (0x0004)  
 	unsigned char                                      UnknownData11_7[0x60];                                      // 0x00A8   (0x0060)  MISSED
 
-
 	/// Functions
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.SupportsSeeking
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151b2d0, 0 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> SupportsSeeking = { 0x151b2d0, 0 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.SupportsScrubbing
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151b2d0, 1 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> SupportsScrubbing = { 0x151b2d0, 1 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.SupportsRate
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const float, const bool> UBinkMediaPlayer = { 0x151b2f0, 2 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const float, const bool> SupportsRate = { 0x151b2f0, 2 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.Stop
-	constexpr static const FunctionPointer<UBinkMediaPlayer, void> UBinkMediaPlayer = { 0x151b470, 3 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, void> Stop = { 0x151b470, 3 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.SetVolume
-	constexpr static const FunctionPointer<UBinkMediaPlayer, void, const float> UBinkMediaPlayer = { 0x151b490, 4 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, void, const float> SetVolume = { 0x151b490, 4 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.SetRate
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const float> UBinkMediaPlayer = { 0x151b5a0, 5 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const float> SetRate = { 0x151b5a0, 5 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.SetLooping
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const bool> UBinkMediaPlayer = { 0x151b690, 6 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const bool> SetLooping = { 0x151b690, 6 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.Seek
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const FTimespan&> UBinkMediaPlayer = { 0x151b790, 7 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const FTimespan&> Seek = { 0x151b790, 7 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.Rewind
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151b880, 8 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> Rewind = { 0x151b880, 8 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.Play
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151b8c0, 9 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> Play = { 0x151b8c0, 9 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.Pause
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151b900, 10 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> Pause = { 0x151b900, 10 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.OpenUrl
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const FString> UBinkMediaPlayer = { 0x151b9a0, 11 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool, const FString> OpenUrl = { 0x151b9a0, 11 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.IsStopped
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151bb50, 12 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> IsStopped = { 0x151bb50, 12 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.IsPlaying
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151bb80, 13 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> IsPlaying = { 0x151bb80, 13 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.IsPaused
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151bbb0, 14 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> IsPaused = { 0x151bbb0, 14 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.IsLooping
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151bbe0, 15 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> IsLooping = { 0x151bbe0, 15 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.IsInitialized
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151b2a0, 16 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> IsInitialized = { 0x151b2a0, 16 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.GetUrl
-	constexpr static const FunctionPointer<UBinkMediaPlayer, FString> UBinkMediaPlayer = { 0x151bc10, 17 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, FString> GetUrl = { 0x151bc10, 17 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.GetTime
-	constexpr static const FunctionPointer<UBinkMediaPlayer, FTimespan> UBinkMediaPlayer = { 0x151bc40, 18 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, FTimespan> GetTime = { 0x151bc40, 18 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.GetRate
-	constexpr static const FunctionPointer<UBinkMediaPlayer, float> UBinkMediaPlayer = { 0x151bc80, 19 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, float> GetRate = { 0x151bc80, 19 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.GetDuration
-	constexpr static const FunctionPointer<UBinkMediaPlayer, FTimespan> UBinkMediaPlayer = { 0x151bd40, 20 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, FTimespan> GetDuration = { 0x151bd40, 20 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.Draw
-	constexpr static const FunctionPointer<UBinkMediaPlayer, void, const UTexture*, const bool, const int32_t, const float, const bool, const bool> UBinkMediaPlayer = { 0x151af10, 21 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, void, const UTexture*, const bool, const int32_t, const float, const bool, const bool> Draw = { 0x151af10, 21 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.CloseUrl
-	constexpr static const FunctionPointer<UBinkMediaPlayer, void> UBinkMediaPlayer = { 0x151b940, 22 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, void> CloseUrl = { 0x151b940, 22 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.CanPlay
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151b2a0, 23 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> CanPlay = { 0x151b2a0, 23 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaPlayer.CanPause
-	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> UBinkMediaPlayer = { 0x151bb80, 24 }; 
+	constexpr static const FunctionPointer<UBinkMediaPlayer, bool> CanPause = { 0x151bb80, 24 }; 
 };
 
 /// Class /Script/BinkMediaPlayer.BinkMediaTexture
@@ -181,12 +179,11 @@ public:
 	bool                                               DecodeSRGB;                                                 // 0x00FC   (0x0001)  
 	unsigned char                                      UnknownData05_7[0x1B];                                      // 0x00FD   (0x001B)  MISSED
 
-
 	/// Functions
 	// Function /Script/BinkMediaPlayer.BinkMediaTexture.SetMediaPlayer
-	constexpr static const FunctionPointer<UBinkMediaTexture, void, const UBinkMediaPlayer*> UBinkMediaTexture = { 0x151c620, 0 }; 
+	constexpr static const FunctionPointer<UBinkMediaTexture, void, const UBinkMediaPlayer*> SetMediaPlayer = { 0x151c620, 0 }; 
 	// Function /Script/BinkMediaPlayer.BinkMediaTexture.Clear
-	constexpr static const FunctionPointer<UBinkMediaTexture, void> UBinkMediaTexture = { 0x151c5f0, 1 }; 
+	constexpr static const FunctionPointer<UBinkMediaTexture, void> Clear = { 0x151c5f0, 1 }; 
 };
 
 /// Class /Script/BinkMediaPlayer.BinkMoviePlayerSettings

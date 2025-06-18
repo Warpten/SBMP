@@ -37,12 +37,11 @@ class UMagicLeapEyeTrackerFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapEyeTracker.MagicLeapEyeTrackerFunctionLibrary.GetEyeBlinkState
-	constexpr static const FunctionPointer<UMagicLeapEyeTrackerFunctionLibrary, bool, const FMagicLeapEyeBlinkState&> UMagicLeapEyeTrackerFunctionLibrary = { 0x18ef070, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapEyeTrackerFunctionLibrary, bool, const FMagicLeapEyeBlinkState&> GetEyeBlinkState = { 0x18ef070, 0 }; 
 	// Function /Script/MagicLeapEyeTracker.MagicLeapEyeTrackerFunctionLibrary.GetCalibrationStatus
-	constexpr static const FunctionPointer<UMagicLeapEyeTrackerFunctionLibrary, EMagicLeapEyeTrackingCalibrationStatus> UMagicLeapEyeTrackerFunctionLibrary = { 0x18ef020, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapEyeTrackerFunctionLibrary, EMagicLeapEyeTrackingCalibrationStatus> GetCalibrationStatus = { 0x18ef020, 1 }; 
 };
 
 /// Struct /Script/MagicLeapEyeTracker.MagicLeapEyeBlinkState

@@ -93,18 +93,17 @@ public:
 	FTemplateSequenceBindingOverrideData               BindingOverride;                                            // 0x0358   (0x000C)  
 	unsigned char                                      UnknownData03_7[0x4];                                       // 0x0364   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/TemplateSequence.TemplateSequenceActor.SetSequence
-	constexpr static const FunctionPointer<ATemplateSequenceActor, void, const UTemplateSequence*> ATemplateSequenceActor = { 0x196cdf0, 0 }; 
+	constexpr static const FunctionPointer<ATemplateSequenceActor, void, const UTemplateSequence*> SetSequence = { 0x196cdf0, 0 }; 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.SetBinding
-	constexpr static const FunctionPointer<ATemplateSequenceActor, void, const AActor*> ATemplateSequenceActor = { 0x196cac0, 1 }; 
+	constexpr static const FunctionPointer<ATemplateSequenceActor, void, const AActor*> SetBinding = { 0x196cac0, 1 }; 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.LoadSequence
-	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequence*> ATemplateSequenceActor = { 0x196d1b0, 2 }; 
+	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequence*> LoadSequence = { 0x196d1b0, 2 }; 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequencePlayer
-	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequencePlayer*> ATemplateSequenceActor = { 0x196cdb0, 3 }; 
+	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequencePlayer*> GetSequencePlayer = { 0x196cdb0, 3 }; 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequence
-	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequence*> ATemplateSequenceActor = { 0x196d230, 4 }; 
+	constexpr static const FunctionPointer<ATemplateSequenceActor, UTemplateSequence*> GetSequence = { 0x196d230, 4 }; 
 };
 
 /// Class /Script/TemplateSequence.TemplateSequencePlayer
@@ -114,10 +113,9 @@ class UTemplateSequencePlayer : public UMovieSceneSequencePlayer
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x06D8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer
-	constexpr static const FunctionPointer<UTemplateSequencePlayer, UTemplateSequencePlayer*, const UObject*, const UTemplateSequence*, const FMovieSceneSequencePlaybackSettings, const ATemplateSequenceActor*&> UTemplateSequencePlayer = { 0x196d510, 0 }; 
+	constexpr static const FunctionPointer<UTemplateSequencePlayer, UTemplateSequencePlayer*, const UObject*, const UTemplateSequence*, const FMovieSceneSequencePlaybackSettings, const ATemplateSequenceActor*&> CreateTemplateSequencePlayer = { 0x196d510, 0 }; 
 };
 
 /// Class /Script/TemplateSequence.TemplateSequenceSection

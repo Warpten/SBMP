@@ -129,28 +129,27 @@ public:
 	FMulticastInlineDelegate                           GetPurchaseHistoryFailure;                                  // 0x0120   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0130   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeap.InAppPurchaseComponent.TryPurchaseItemAsync
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, bool, const FPurchaseItemDetails&> UInAppPurchaseComponent = { 0x18d79e0, 0 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, bool, const FPurchaseItemDetails&> TryPurchaseItemAsync = { 0x18d79e0, 0 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.TryGetPurchaseHistoryAsync
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, bool, const int32_t> UInAppPurchaseComponent = { 0x18d77d0, 1 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, bool, const int32_t> TryGetPurchaseHistoryAsync = { 0x18d77d0, 1 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.TryGetItemsDetailsAsync
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, bool, const TArray<FString>&> UInAppPurchaseComponent = { 0x18d7bb0, 2 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, bool, const TArray<FString>&> TryGetItemsDetailsAsync = { 0x18d7bb0, 2 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.PurchaseConfirmationSuccess__DelegateSignature
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, void, const FPurchaseConfirmation&> UInAppPurchaseComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, void, const FPurchaseConfirmation&> PurchaseConfirmationSuccess__DelegateSignature = { 0x2bbb090, 3 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.PurchaseConfirmationFailure__DelegateSignature
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, void> UInAppPurchaseComponent = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, void> PurchaseConfirmationFailure__DelegateSignature = { 0x2bbb090, 4 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.InAppPurchaseLogMessage__DelegateSignature
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, void, const FString> UInAppPurchaseComponent = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, void, const FString> InAppPurchaseLogMessage__DelegateSignature = { 0x2bbb090, 5 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.GetPurchaseHistorySuccess__DelegateSignature
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, void, const TArray<FPurchaseConfirmation>&> UInAppPurchaseComponent = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, void, const TArray<FPurchaseConfirmation>&> GetPurchaseHistorySuccess__DelegateSignature = { 0x2bbb090, 6 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.GetPurchaseHistoryFailure__DelegateSignature
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, void> UInAppPurchaseComponent = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, void> GetPurchaseHistoryFailure__DelegateSignature = { 0x2bbb090, 7 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.GetItemsDetailsSuccess__DelegateSignature
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, void, const TArray<FPurchaseItemDetails>&> UInAppPurchaseComponent = { 0x2bbb090, 8 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, void, const TArray<FPurchaseItemDetails>&> GetItemsDetailsSuccess__DelegateSignature = { 0x2bbb090, 8 }; 
 	// Function /Script/MagicLeap.InAppPurchaseComponent.GetItemsDetailsFailure__DelegateSignature
-	constexpr static const FunctionPointer<UInAppPurchaseComponent, void> UInAppPurchaseComponent = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseComponent, void> GetItemsDetailsFailure__DelegateSignature = { 0x2bbb090, 9 }; 
 };
 
 /// Class /Script/MagicLeap.LuminApplicationLifecycleComponent
@@ -183,40 +182,39 @@ class UMagicLeapHMDFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.SetStabilizationDepthActor
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const AActor*, const bool> UMagicLeapHMDFunctionLibrary = { 0x18d92a0, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const AActor*, const bool> SetStabilizationDepthActor = { 0x18d92a0, 0 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.SetFocusActor
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const AActor*, const bool> UMagicLeapHMDFunctionLibrary = { 0x18d95b0, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const AActor*, const bool> SetFocusActor = { 0x18d95b0, 1 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.SetBaseRotation
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const FRotator&> UMagicLeapHMDFunctionLibrary = { 0x18d98c0, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const FRotator&> SetBaseRotation = { 0x18d98c0, 2 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.SetBasePosition
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const FVector&> UMagicLeapHMDFunctionLibrary = { 0x18d98c0, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const FVector&> SetBasePosition = { 0x18d98c0, 3 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.SetBaseOrientation
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const FQuat&> UMagicLeapHMDFunctionLibrary = { 0x18d98c0, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, void, const FQuat&> SetBaseOrientation = { 0x18d98c0, 4 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.SetAppReady
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool> UMagicLeapHMDFunctionLibrary = { 0x151b2d0, 5 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool> SetAppReady = { 0x151b2d0, 5 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.IsRunningOnMagicLeapHMD
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool> UMagicLeapHMDFunctionLibrary = { 0x18d9220, 6 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool> IsRunningOnMagicLeapHMD = { 0x18d9220, 6 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetPlatformAPILevel
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> UMagicLeapHMDFunctionLibrary = { 0x113b840, 7 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> GetPlatformAPILevel = { 0x113b840, 7 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionRevision
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> UMagicLeapHMDFunctionLibrary = { 0x113b840, 8 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> GetMLSDKVersionRevision = { 0x113b840, 8 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionMinor
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> UMagicLeapHMDFunctionLibrary = { 0x113b840, 9 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> GetMLSDKVersionMinor = { 0x113b840, 9 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionMajor
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> UMagicLeapHMDFunctionLibrary = { 0x113b840, 10 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> GetMLSDKVersionMajor = { 0x113b840, 10 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersion
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, FString> UMagicLeapHMDFunctionLibrary = { 0x16628b0, 11 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, FString> GetMLSDKVersion = { 0x16628b0, 11 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetMinimumAPILevel
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> UMagicLeapHMDFunctionLibrary = { 0x18d9270, 12 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, int32_t> GetMinimumAPILevel = { 0x18d9270, 12 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetHeadTrackingState
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool, const FMagicLeapHeadTrackingState&> UMagicLeapHMDFunctionLibrary = { 0x18d9120, 13 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool, const FMagicLeapHeadTrackingState&> GetHeadTrackingState = { 0x18d9120, 13 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetHeadTrackingMapEvents
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool, const TSet<EMagicLeapHeadTrackingMapEvent>&> UMagicLeapHMDFunctionLibrary = { 0x18d8f60, 14 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool, const TSet<EMagicLeapHeadTrackingMapEvent>&> GetHeadTrackingMapEvents = { 0x18d8f60, 14 }; 
 	// Function /Script/MagicLeap.MagicLeapHMDFunctionLibrary.GetGraphicsClientPerformanceInfo
-	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool, const FMagicLeapGraphicsClientPerformanceInfo&> UMagicLeapHMDFunctionLibrary = { 0x18d8e80, 15 }; 
+	constexpr static const FunctionPointer<UMagicLeapHMDFunctionLibrary, bool, const FMagicLeapGraphicsClientPerformanceInfo&> GetGraphicsClientPerformanceInfo = { 0x18d8e80, 15 }; 
 };
 
 /// Class /Script/MagicLeap.MagicLeapMeshTrackerComponent
@@ -249,22 +247,21 @@ public:
 	int32_t                                            BricksPerFrame;                                             // 0x02E0   (0x0004)  
 	unsigned char                                      UnknownData13_7[0x1C];                                      // 0x02E4   (0x001C)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeap.MagicLeapMeshTrackerComponent.SelectMeshBlocks
-	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const FMagicLeapTrackingMeshInfo&, const TArray<FMagicLeapMeshBlockRequest>&> UMagicLeapMeshTrackerComponent = { 0x18da000, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const FMagicLeapTrackingMeshInfo&, const TArray<FMagicLeapMeshBlockRequest>&> SelectMeshBlocks = { 0x18da000, 0 }; 
 	// Function /Script/MagicLeap.MagicLeapMeshTrackerComponent.OnMeshTrackerUpdated__DelegateSignature
-	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const FGuid, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<float>&> UMagicLeapMeshTrackerComponent = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const FGuid, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<float>&> OnMeshTrackerUpdated__DelegateSignature = { 0x2bbb090, 1 }; 
 	// Function /Script/MagicLeap.MagicLeapMeshTrackerComponent.GetNumQueuedBlockUpdates
-	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, int32_t> UMagicLeapMeshTrackerComponent = { 0x18da1d0, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, int32_t> GetNumQueuedBlockUpdates = { 0x18da1d0, 2 }; 
 	// Function /Script/MagicLeap.MagicLeapMeshTrackerComponent.DisconnectMRMesh
-	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const UMRMeshComponent*> UMagicLeapMeshTrackerComponent = { 0x18da440, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const UMRMeshComponent*> DisconnectMRMesh = { 0x18da440, 3 }; 
 	// Function /Script/MagicLeap.MagicLeapMeshTrackerComponent.DisconnectBlockSelector
-	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void> UMagicLeapMeshTrackerComponent = { 0x18da200, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void> DisconnectBlockSelector = { 0x18da200, 4 }; 
 	// Function /Script/MagicLeap.MagicLeapMeshTrackerComponent.ConnectMRMesh
-	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const UMRMeshComponent*> UMagicLeapMeshTrackerComponent = { 0x18da520, 5 }; 
+	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const UMRMeshComponent*> ConnectMRMesh = { 0x18da520, 5 }; 
 	// Function /Script/MagicLeap.MagicLeapMeshTrackerComponent.ConnectBlockSelector
-	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const TScriptInterface<Class>> UMagicLeapMeshTrackerComponent = { 0x18da260, 6 }; 
+	constexpr static const FunctionPointer<UMagicLeapMeshTrackerComponent, void, const TScriptInterface<Class>> ConnectBlockSelector = { 0x18da260, 6 }; 
 };
 
 /// Class /Script/MagicLeap.MagicLeapSettings
@@ -284,10 +281,9 @@ class UMagicLeapMeshBlockSelectorInterface : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeap.MagicLeapMeshBlockSelectorInterface.SelectMeshBlocks
-	constexpr static const FunctionPointer<UMagicLeapMeshBlockSelectorInterface, void, const FMagicLeapTrackingMeshInfo&, const TArray<FMagicLeapMeshBlockRequest>&> UMagicLeapMeshBlockSelectorInterface = { 0x18db020, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapMeshBlockSelectorInterface, void, const FMagicLeapTrackingMeshInfo&, const TArray<FMagicLeapMeshBlockRequest>&> SelectMeshBlocks = { 0x18db020, 0 }; 
 };
 
 /// Class /Script/MagicLeap.MagicLeapRaycastComponent
@@ -297,12 +293,11 @@ class UMagicLeapRaycastComponent : public UActorComponent
 public:
 	unsigned char                                      UnknownData01_1[0x68];                                      // 0x00C0   (0x0068)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeap.MagicLeapRaycastComponent.RequestRaycast
-	constexpr static const FunctionPointer<UMagicLeapRaycastComponent, bool, const FMagicLeapRaycastQueryParams&, const FDelegateProperty&> UMagicLeapRaycastComponent = { 0x18dbf10, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapRaycastComponent, bool, const FMagicLeapRaycastQueryParams&, const FDelegateProperty&> RequestRaycast = { 0x18dbf10, 0 }; 
 	// Function /Script/MagicLeap.MagicLeapRaycastComponent.RaycastResultDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UMagicLeapRaycastComponent, void, const FMagicLeapRaycastHitResult> UMagicLeapRaycastComponent = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapRaycastComponent, void, const FMagicLeapRaycastHitResult> RaycastResultDelegate__DelegateSignature = { 0x2bbb090, 1 }; 
 };
 
 /// Class /Script/MagicLeap.MagicLeapRaycastFunctionLibrary
@@ -311,10 +306,9 @@ class UMagicLeapRaycastFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeap.MagicLeapRaycastFunctionLibrary.MakeRaycastQueryParams
-	constexpr static const FunctionPointer<UMagicLeapRaycastFunctionLibrary, FMagicLeapRaycastQueryParams, const FVector, const FVector, const FVector, const int32_t, const int32_t, const float, const bool, const int32_t> UMagicLeapRaycastFunctionLibrary = { 0x18dc400, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapRaycastFunctionLibrary, FMagicLeapRaycastQueryParams, const FVector, const FVector, const FVector, const int32_t, const int32_t, const float, const bool, const int32_t> MakeRaycastQueryParams = { 0x18dc400, 0 }; 
 };
 
 /// Struct /Script/MagicLeap.PurchaseItemDetails

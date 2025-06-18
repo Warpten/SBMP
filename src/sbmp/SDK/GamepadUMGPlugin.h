@@ -39,14 +39,13 @@ class UVirtualCursorFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/GamepadUMGPlugin.VirtualCursorFunctionLibrary.IsCursorOverInteractableWidget
-	constexpr static const FunctionPointer<UVirtualCursorFunctionLibrary, bool> UVirtualCursorFunctionLibrary = { 0x13f6500, 0 }; 
+	constexpr static const FunctionPointer<UVirtualCursorFunctionLibrary, bool> IsCursorOverInteractableWidget = { 0x13f6500, 0 }; 
 	// Function /Script/GamepadUMGPlugin.VirtualCursorFunctionLibrary.EnableVirtualCursor
-	constexpr static const FunctionPointer<UVirtualCursorFunctionLibrary, void, const APlayerController*> UVirtualCursorFunctionLibrary = { 0x13f6950, 1 }; 
+	constexpr static const FunctionPointer<UVirtualCursorFunctionLibrary, void, const APlayerController*> EnableVirtualCursor = { 0x13f6950, 1 }; 
 	// Function /Script/GamepadUMGPlugin.VirtualCursorFunctionLibrary.DisableVirtualCursor
-	constexpr static const FunctionPointer<UVirtualCursorFunctionLibrary, void, const APlayerController*> UVirtualCursorFunctionLibrary = { 0x13f6640, 2 }; 
+	constexpr static const FunctionPointer<UVirtualCursorFunctionLibrary, void, const APlayerController*> DisableVirtualCursor = { 0x13f6640, 2 }; 
 };
 
 #pragma pack(pop)

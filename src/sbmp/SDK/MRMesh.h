@@ -27,22 +27,21 @@ class UMeshReconstructorBase : public UObject
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MRMesh.MeshReconstructorBase.StopReconstruction
-	constexpr static const FunctionPointer<UMeshReconstructorBase, void> UMeshReconstructorBase = { 0x38170f0, 0 }; 
+	constexpr static const FunctionPointer<UMeshReconstructorBase, void> StopReconstruction = { 0x38170f0, 0 }; 
 	// Function /Script/MRMesh.MeshReconstructorBase.StartReconstruction
-	constexpr static const FunctionPointer<UMeshReconstructorBase, void> UMeshReconstructorBase = { 0x3817110, 1 }; 
+	constexpr static const FunctionPointer<UMeshReconstructorBase, void> StartReconstruction = { 0x3817110, 1 }; 
 	// Function /Script/MRMesh.MeshReconstructorBase.PauseReconstruction
-	constexpr static const FunctionPointer<UMeshReconstructorBase, void> UMeshReconstructorBase = { 0x38170d0, 2 }; 
+	constexpr static const FunctionPointer<UMeshReconstructorBase, void> PauseReconstruction = { 0x38170d0, 2 }; 
 	// Function /Script/MRMesh.MeshReconstructorBase.IsReconstructionStarted
-	constexpr static const FunctionPointer<UMeshReconstructorBase, bool> UMeshReconstructorBase = { 0x38170a0, 3 }; 
+	constexpr static const FunctionPointer<UMeshReconstructorBase, bool> IsReconstructionStarted = { 0x38170a0, 3 }; 
 	// Function /Script/MRMesh.MeshReconstructorBase.IsReconstructionPaused
-	constexpr static const FunctionPointer<UMeshReconstructorBase, bool> UMeshReconstructorBase = { 0x3817070, 4 }; 
+	constexpr static const FunctionPointer<UMeshReconstructorBase, bool> IsReconstructionPaused = { 0x3817070, 4 }; 
 	// Function /Script/MRMesh.MeshReconstructorBase.DisconnectMRMesh
-	constexpr static const FunctionPointer<UMeshReconstructorBase, void> UMeshReconstructorBase = { 0x3816f70, 5 }; 
+	constexpr static const FunctionPointer<UMeshReconstructorBase, void> DisconnectMRMesh = { 0x3816f70, 5 }; 
 	// Function /Script/MRMesh.MeshReconstructorBase.ConnectMRMesh
-	constexpr static const FunctionPointer<UMeshReconstructorBase, void, const UMRMeshComponent*> UMeshReconstructorBase = { 0x3816f90, 6 }; 
+	constexpr static const FunctionPointer<UMeshReconstructorBase, void, const UMRMeshComponent*> ConnectMRMesh = { 0x3816f90, 6 }; 
 };
 
 /// Class /Script/MRMesh.MockDataMeshTrackerComponent
@@ -64,14 +63,13 @@ public:
 	class UMRMeshComponent*                            MRMesh;                                                     // 0x02B0   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x18];                                      // 0x02B8   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/MRMesh.MockDataMeshTrackerComponent.OnMockDataMeshTrackerUpdated__DelegateSignature
-	constexpr static const FunctionPointer<UMockDataMeshTrackerComponent, void, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<float>&> UMockDataMeshTrackerComponent = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UMockDataMeshTrackerComponent, void, const int32_t, const TArray<FVector>&, const TArray<int32_t>&, const TArray<FVector>&, const TArray<float>&> OnMockDataMeshTrackerUpdated__DelegateSignature = { 0x2bbb090, 0 }; 
 	// Function /Script/MRMesh.MockDataMeshTrackerComponent.DisconnectMRMesh
-	constexpr static const FunctionPointer<UMockDataMeshTrackerComponent, void, const UMRMeshComponent*> UMockDataMeshTrackerComponent = { 0x3817700, 1 }; 
+	constexpr static const FunctionPointer<UMockDataMeshTrackerComponent, void, const UMRMeshComponent*> DisconnectMRMesh = { 0x3817700, 1 }; 
 	// Function /Script/MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh
-	constexpr static const FunctionPointer<UMockDataMeshTrackerComponent, void, const UMRMeshComponent*> UMockDataMeshTrackerComponent = { 0x38177f0, 2 }; 
+	constexpr static const FunctionPointer<UMockDataMeshTrackerComponent, void, const UMRMeshComponent*> ConnectMRMesh = { 0x38177f0, 2 }; 
 };
 
 /// Class /Script/MRMesh.MRMeshComponent
@@ -90,28 +88,27 @@ public:
 	TArray<class UBodySetup*>                          BodySetups;                                                 // 0x0568   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x78];                                      // 0x0578   (0x0078)  MISSED
 
-
 	/// Functions
 	// Function /Script/MRMesh.MRMeshComponent.SetWireframeMaterial
-	constexpr static const FunctionPointer<UMRMeshComponent, void, const UMaterialInterface*> UMRMeshComponent = { 0x122abf0, 0 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, void, const UMaterialInterface*> SetWireframeMaterial = { 0x122abf0, 0 }; 
 	// Function /Script/MRMesh.MRMeshComponent.SetWireframeColor
-	constexpr static const FunctionPointer<UMRMeshComponent, void, const FLinearColor&> UMRMeshComponent = { 0x3817d10, 1 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, void, const FLinearColor&> SetWireframeColor = { 0x3817d10, 1 }; 
 	// Function /Script/MRMesh.MRMeshComponent.SetUseWireframe
-	constexpr static const FunctionPointer<UMRMeshComponent, void, const bool> UMRMeshComponent = { 0x3817e10, 2 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, void, const bool> SetUseWireframe = { 0x3817e10, 2 }; 
 	// Function /Script/MRMesh.MRMeshComponent.SetEnableMeshOcclusion
-	constexpr static const FunctionPointer<UMRMeshComponent, void, const bool> UMRMeshComponent = { 0x3817f10, 3 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, void, const bool> SetEnableMeshOcclusion = { 0x3817f10, 3 }; 
 	// Function /Script/MRMesh.MRMeshComponent.IsConnected
-	constexpr static const FunctionPointer<UMRMeshComponent, bool> UMRMeshComponent = { 0x3818050, 4 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, bool> IsConnected = { 0x3818050, 4 }; 
 	// Function /Script/MRMesh.MRMeshComponent.GetWireframeColor
-	constexpr static const FunctionPointer<UMRMeshComponent, FLinearColor> UMRMeshComponent = { 0x3817ce0, 5 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, FLinearColor> GetWireframeColor = { 0x3817ce0, 5 }; 
 	// Function /Script/MRMesh.MRMeshComponent.GetUseWireframe
-	constexpr static const FunctionPointer<UMRMeshComponent, bool> UMRMeshComponent = { 0x3817df0, 6 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, bool> GetUseWireframe = { 0x3817df0, 6 }; 
 	// Function /Script/MRMesh.MRMeshComponent.GetEnableMeshOcclusion
-	constexpr static const FunctionPointer<UMRMeshComponent, bool> UMRMeshComponent = { 0x2832250, 7 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, bool> GetEnableMeshOcclusion = { 0x2832250, 7 }; 
 	// Function /Script/MRMesh.MRMeshComponent.ForceNavMeshUpdate
-	constexpr static const FunctionPointer<UMRMeshComponent, void> UMRMeshComponent = { 0x3818020, 8 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, void> ForceNavMeshUpdate = { 0x3818020, 8 }; 
 	// Function /Script/MRMesh.MRMeshComponent.Clear
-	constexpr static const FunctionPointer<UMRMeshComponent, void> UMRMeshComponent = { 0x3817ff0, 9 }; 
+	constexpr static const FunctionPointer<UMRMeshComponent, void> Clear = { 0x3817ff0, 9 }; 
 };
 
 /// Struct /Script/MRMesh.MRMeshConfiguration

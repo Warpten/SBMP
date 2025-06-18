@@ -28,10 +28,9 @@ class UImageWriteBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/ImageWriteQueue.ImageWriteBlueprintLibrary.ExportToDisk
-	constexpr static const FunctionPointer<UImageWriteBlueprintLibrary, void, const UTexture*, const FString, const FImageWriteOptions&> UImageWriteBlueprintLibrary = { 0x2f37d10, 0 }; 
+	constexpr static const FunctionPointer<UImageWriteBlueprintLibrary, void, const UTexture*, const FString, const FImageWriteOptions&> ExportToDisk = { 0x2f37d10, 0 }; 
 };
 
 /// Struct /Script/ImageWriteQueue.ImageWriteOptions

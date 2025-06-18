@@ -89,16 +89,15 @@ public:
 	float                                              RPM;                                                        // 0x0738   (0x0004)  
 	unsigned char                                      UnknownData01_7[0xB4];                                      // 0x073C   (0x00B4)  MISSED
 
-
 	/// Functions
 	// Function /Script/MotoSynth.SynthComponentMoto.SetSettings
-	constexpr static const FunctionPointer<USynthComponentMoto, void, const FMotoSynthRuntimeSettings&> USynthComponentMoto = { 0x18c0f30, 0 }; 
+	constexpr static const FunctionPointer<USynthComponentMoto, void, const FMotoSynthRuntimeSettings&> SetSettings = { 0x18c0f30, 0 }; 
 	// Function /Script/MotoSynth.SynthComponentMoto.SetRPM
-	constexpr static const FunctionPointer<USynthComponentMoto, void, const float, const float> USynthComponentMoto = { 0x18c1130, 1 }; 
+	constexpr static const FunctionPointer<USynthComponentMoto, void, const float, const float> SetRPM = { 0x18c1130, 1 }; 
 	// Function /Script/MotoSynth.SynthComponentMoto.IsEnabled
-	constexpr static const FunctionPointer<USynthComponentMoto, bool> USynthComponentMoto = { 0x18c0c30, 2 }; 
+	constexpr static const FunctionPointer<USynthComponentMoto, bool> IsEnabled = { 0x18c0c30, 2 }; 
 	// Function /Script/MotoSynth.SynthComponentMoto.GetRPMRange
-	constexpr static const FunctionPointer<USynthComponentMoto, void, const float&, const float&> USynthComponentMoto = { 0x18c0c60, 3 }; 
+	constexpr static const FunctionPointer<USynthComponentMoto, void, const float&, const float&> GetRPMRange = { 0x18c0c60, 3 }; 
 };
 
 #pragma pack(pop)

@@ -74,10 +74,9 @@ public:
 	bool                                               bHiddenInEditor;                                            // 0x05C0   (0x0001)  
 	unsigned char                                      UnknownData09_7[0xF];                                       // 0x05C1   (0x000F)  MISSED
 
-
 	/// Functions
 	// Function /Script/VirtualHeightfieldMesh.VirtualHeightfieldMeshComponent.GatherHideFlags
-	constexpr static const FunctionPointer<UVirtualHeightfieldMeshComponent, void, const bool&, const bool&> UVirtualHeightfieldMeshComponent = { 0x150a6a0, 0 }; 
+	constexpr static const FunctionPointer<UVirtualHeightfieldMeshComponent, void, const bool&, const bool&> GatherHideFlags = { 0x150a6a0, 0 }; 
 };
 
 #pragma pack(pop)

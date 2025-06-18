@@ -658,16 +658,15 @@ public:
 	TArray<class UAssetUserData*>                      AssetUserData;                                              // 0x05C8   (0x0010)  
 	unsigned char                                      UnknownData13_7[0x80];                                      // 0x05D8   (0x0080)  MISSED
 
-
 	/// Functions
 	// Function /Script/ControlRig.ControlRig.SetInteractionRigClass
-	constexpr static const FunctionPointer<UControlRig, void, const UClass*> UControlRig = { 0x1224bd0, 0 }; 
+	constexpr static const FunctionPointer<UControlRig, void, const UClass*> SetInteractionRigClass = { 0x1224bd0, 0 }; 
 	// Function /Script/ControlRig.ControlRig.SetInteractionRig
-	constexpr static const FunctionPointer<UControlRig, void, const UControlRig*> UControlRig = { 0x1224e60, 1 }; 
+	constexpr static const FunctionPointer<UControlRig, void, const UControlRig*> SetInteractionRig = { 0x1224e60, 1 }; 
 	// Function /Script/ControlRig.ControlRig.GetInteractionRigClass
-	constexpr static const FunctionPointer<UControlRig, UClass*> UControlRig = { 0x1224e40, 2 }; 
+	constexpr static const FunctionPointer<UControlRig, UClass*> GetInteractionRigClass = { 0x1224e40, 2 }; 
 	// Function /Script/ControlRig.ControlRig.GetInteractionRig
-	constexpr static const FunctionPointer<UControlRig, UControlRig*> UControlRig = { 0x1224f40, 3 }; 
+	constexpr static const FunctionPointer<UControlRig, UControlRig*> GetInteractionRig = { 0x1224f40, 3 }; 
 };
 
 /// Class /Script/ControlRig.AdditiveControlRig
@@ -736,94 +735,93 @@ public:
 	class UControlRig*                                 ControlRig;                                                 // 0x05A8   (0x0008)  
 	unsigned char                                      UnknownData03_7[0x80];                                      // 0x05B0   (0x0080)  MISSED
 
-
 	/// Functions
 	// Function /Script/ControlRig.ControlRigComponent.Update
-	constexpr static const FunctionPointer<UControlRigComponent, void, const float> UControlRigComponent = { 0x122ab00, 0 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const float> Update = { 0x122ab00, 0 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetMappedElements
-	constexpr static const FunctionPointer<UControlRigComponent, void, const TArray<FControlRigComponentMappedElement>> UControlRigComponent = { 0x122a7c0, 1 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const TArray<FControlRigComponentMappedElement>> SetMappedElements = { 0x122a7c0, 1 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetInitialSpaceTransform
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace> UControlRigComponent = { 0x1226170, 2 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace> SetInitialSpaceTransform = { 0x1226170, 2 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetInitialBoneTransform
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace, const bool> UControlRigComponent = { 0x1229240, 3 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace, const bool> SetInitialBoneTransform = { 0x1229240, 3 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlVector2D
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FVector2D> UControlRigComponent = { 0x1227b80, 4 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FVector2D> SetControlVector2D = { 0x1227b80, 4 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlTransform
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace> UControlRigComponent = { 0x1226e70, 5 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace> SetControlTransform = { 0x1226e70, 5 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlScale
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FVector, const EControlRigComponentSpace> UControlRigComponent = { 0x1227130, 6 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FVector, const EControlRigComponentSpace> SetControlScale = { 0x1227130, 6 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlRotator
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FRotator, const EControlRigComponentSpace> UControlRigComponent = { 0x1227500, 7 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FRotator, const EControlRigComponentSpace> SetControlRotator = { 0x1227500, 7 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlPosition
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FVector, const EControlRigComponentSpace> UControlRigComponent = { 0x1227700, 8 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FVector, const EControlRigComponentSpace> SetControlPosition = { 0x1227700, 8 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlOffset
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace> UControlRigComponent = { 0x1226950, 9 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace> SetControlOffset = { 0x1226950, 9 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlInt
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const int32_t> UControlRigComponent = { 0x1227dd0, 10 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const int32_t> SetControlInt = { 0x1227dd0, 10 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlFloat
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const float> UControlRigComponent = { 0x1227ff0, 11 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const float> SetControlFloat = { 0x1227ff0, 11 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetControlBool
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const bool> UControlRigComponent = { 0x1228230, 12 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const bool> SetControlBool = { 0x1228230, 12 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetBoneTransform
-	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace, const float, const bool> UControlRigComponent = { 0x1229510, 13 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const FName, const FTransform, const EControlRigComponentSpace, const float, const bool> SetBoneTransform = { 0x1229510, 13 }; 
 	// Function /Script/ControlRig.ControlRigComponent.SetBoneInitialTransformsFromSkeletalMesh
-	constexpr static const FunctionPointer<UControlRigComponent, void, const USkeletalMesh*> UControlRigComponent = { 0x122a0e0, 14 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const USkeletalMesh*> SetBoneInitialTransformsFromSkeletalMesh = { 0x122a0e0, 14 }; 
 	// Function /Script/ControlRig.ControlRigComponent.OnPreUpdate
-	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> UControlRigComponent = { 0x122acd0, 15 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> OnPreUpdate = { 0x122acd0, 15 }; 
 	// Function /Script/ControlRig.ControlRigComponent.OnPreSetup
-	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> UControlRigComponent = { 0x122ae90, 16 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> OnPreSetup = { 0x122ae90, 16 }; 
 	// Function /Script/ControlRig.ControlRigComponent.OnPostUpdate
-	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> UControlRigComponent = { 0x122abf0, 17 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> OnPostUpdate = { 0x122abf0, 17 }; 
 	// Function /Script/ControlRig.ControlRigComponent.OnPostSetup
-	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> UControlRigComponent = { 0x122adb0, 18 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> OnPostSetup = { 0x122adb0, 18 }; 
 	// Function /Script/ControlRig.ControlRigComponent.OnPostInitialize
-	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> UControlRigComponent = { 0x122af70, 19 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const UControlRigComponent*> OnPostInitialize = { 0x122af70, 19 }; 
 	// Function /Script/ControlRig.ControlRigComponent.Initialize
-	constexpr static const FunctionPointer<UControlRigComponent, void> UControlRigComponent = { 0x122abd0, 20 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void> Initialize = { 0x122abd0, 20 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetSpaceTransform
-	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x1226690, 21 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> GetSpaceTransform = { 0x1226690, 21 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetInitialSpaceTransform
-	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x12263d0, 22 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> GetInitialSpaceTransform = { 0x12263d0, 22 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetInitialBoneTransform
-	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x1229870, 23 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> GetInitialBoneTransform = { 0x1229870, 23 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetElementNames
-	constexpr static const FunctionPointer<UControlRigComponent, TArray<FName>, const ERigElementType> UControlRigComponent = { 0x1229fb0, 24 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, TArray<FName>, const ERigElementType> GetElementNames = { 0x1229fb0, 24 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlVector2D
-	constexpr static const FunctionPointer<UControlRigComponent, FVector2D, const FName> UControlRigComponent = { 0x1228d80, 25 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FVector2D, const FName> GetControlVector2D = { 0x1228d80, 25 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlTransform
-	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x1228440, 26 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> GetControlTransform = { 0x1228440, 26 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlScale
-	constexpr static const FunctionPointer<UControlRigComponent, FVector, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x1228670, 27 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FVector, const FName, const EControlRigComponentSpace> GetControlScale = { 0x1228670, 27 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlRotator
-	constexpr static const FunctionPointer<UControlRigComponent, FRotator, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x12288b0, 28 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FRotator, const FName, const EControlRigComponentSpace> GetControlRotator = { 0x12288b0, 28 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlRig
-	constexpr static const FunctionPointer<UControlRigComponent, UControlRig*> UControlRigComponent = { 0x122b090, 29 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, UControlRig*> GetControlRig = { 0x122b090, 29 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlPosition
-	constexpr static const FunctionPointer<UControlRigComponent, FVector, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x1228b20, 30 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FVector, const FName, const EControlRigComponentSpace> GetControlPosition = { 0x1228b20, 30 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlOffset
-	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x1226c40, 31 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> GetControlOffset = { 0x1226c40, 31 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlInt
-	constexpr static const FunctionPointer<UControlRigComponent, int32_t, const FName> UControlRigComponent = { 0x1228ec0, 32 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, int32_t, const FName> GetControlInt = { 0x1228ec0, 32 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlFloat
-	constexpr static const FunctionPointer<UControlRigComponent, float, const FName> UControlRigComponent = { 0x1228ff0, 33 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, float, const FName> GetControlFloat = { 0x1228ff0, 33 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetControlBool
-	constexpr static const FunctionPointer<UControlRigComponent, bool, const FName> UControlRigComponent = { 0x1229120, 34 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, bool, const FName> GetControlBool = { 0x1229120, 34 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetBoneTransform
-	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> UControlRigComponent = { 0x1229b10, 35 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, FTransform, const FName, const EControlRigComponentSpace> GetBoneTransform = { 0x1229b10, 35 }; 
 	// Function /Script/ControlRig.ControlRigComponent.GetAbsoluteTime
-	constexpr static const FunctionPointer<UControlRigComponent, float> UControlRigComponent = { 0x122b050, 36 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, float> GetAbsoluteTime = { 0x122b050, 36 }; 
 	// Function /Script/ControlRig.ControlRigComponent.DoesElementExist
-	constexpr static const FunctionPointer<UControlRigComponent, bool, const FName, const ERigElementType> UControlRigComponent = { 0x1229e40, 37 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, bool, const FName, const ERigElementType> DoesElementExist = { 0x1229e40, 37 }; 
 	// Function /Script/ControlRig.ControlRigComponent.ClearMappedElements
-	constexpr static const FunctionPointer<UControlRigComponent, void> UControlRigComponent = { 0x122aa10, 38 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void> ClearMappedElements = { 0x122aa10, 38 }; 
 	// Function /Script/ControlRig.ControlRigComponent.AddMappedSkeletalMesh
-	constexpr static const FunctionPointer<UControlRigComponent, void, const USkeletalMeshComponent*, const TArray<FControlRigComponentMappedBone>, const TArray<FControlRigComponentMappedCurve>> UControlRigComponent = { 0x122a2d0, 39 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const USkeletalMeshComponent*, const TArray<FControlRigComponentMappedBone>, const TArray<FControlRigComponentMappedCurve>> AddMappedSkeletalMesh = { 0x122a2d0, 39 }; 
 	// Function /Script/ControlRig.ControlRigComponent.AddMappedElements
-	constexpr static const FunctionPointer<UControlRigComponent, void, const TArray<FControlRigComponentMappedElement>> UControlRigComponent = { 0x122a680, 40 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const TArray<FControlRigComponentMappedElement>> AddMappedElements = { 0x122a680, 40 }; 
 	// Function /Script/ControlRig.ControlRigComponent.AddMappedComponents
-	constexpr static const FunctionPointer<UControlRigComponent, void, const TArray<FControlRigComponentMappedComponent>> UControlRigComponent = { 0x122a550, 41 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const TArray<FControlRigComponentMappedComponent>> AddMappedComponents = { 0x122a550, 41 }; 
 	// Function /Script/ControlRig.ControlRigComponent.AddMappedCompleteSkeletalMesh
-	constexpr static const FunctionPointer<UControlRigComponent, void, const USkeletalMeshComponent*> UControlRigComponent = { 0x122a1d0, 42 }; 
+	constexpr static const FunctionPointer<UControlRigComponent, void, const USkeletalMeshComponent*> AddMappedCompleteSkeletalMesh = { 0x122a1d0, 42 }; 
 };
 
 /// Class /Script/ControlRig.ControlRigControlActor
@@ -848,12 +846,11 @@ public:
 	TArray<class UMaterialInstanceDynamic*>            Materials;                                                  // 0x0340   (0x0010)  
 	FName                                              ColorParameterName;                                         // 0x0350   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/ControlRig.ControlRigControlActor.Refresh
-	constexpr static const FunctionPointer<AControlRigControlActor, void> AControlRigControlActor = { 0x122d550, 0 }; 
+	constexpr static const FunctionPointer<AControlRigControlActor, void> Refresh = { 0x122d550, 0 }; 
 	// Function /Script/ControlRig.ControlRigControlActor.Clear
-	constexpr static const FunctionPointer<AControlRigControlActor, void> AControlRigControlActor = { 0x122d570, 1 }; 
+	constexpr static const FunctionPointer<AControlRigControlActor, void> Clear = { 0x122d570, 1 }; 
 };
 
 /// Class /Script/ControlRig.ControlRigGizmoActor
@@ -872,36 +869,35 @@ public:
 	bool                                               bHovered : 1;                                               // 0x02EC:3 (0x0001)  
 	unsigned char                                      UnknownData01_7[0x3];                                       // 0x02ED   (0x0003)  MISSED
 
-
 	/// Functions
 	// Function /Script/ControlRig.ControlRigGizmoActor.SetSelected
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> AControlRigGizmoActor = { 0x122e780, 0 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> SetSelected = { 0x122e780, 0 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.SetSelectable
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> AControlRigGizmoActor = { 0x122e670, 1 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> SetSelectable = { 0x122e670, 1 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.SetHovered
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> AControlRigGizmoActor = { 0x122e590, 2 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> SetHovered = { 0x122e590, 2 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.SetGlobalTransform
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const FTransform&> AControlRigGizmoActor = { 0x122e420, 3 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const FTransform&> SetGlobalTransform = { 0x122e420, 3 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.SetEnabled
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> AControlRigGizmoActor = { 0x122e890, 4 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> SetEnabled = { 0x122e890, 4 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.OnTransformChanged
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const FTransform&> AControlRigGizmoActor = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const FTransform&> OnTransformChanged = { 0x2bbb090, 5 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.OnSelectionChanged
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> AControlRigGizmoActor = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> OnSelectionChanged = { 0x2bbb090, 6 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.OnManipulatingChanged
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> AControlRigGizmoActor = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> OnManipulatingChanged = { 0x2bbb090, 7 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.OnHoveredChanged
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> AControlRigGizmoActor = { 0x2bbb090, 8 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> OnHoveredChanged = { 0x2bbb090, 8 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.OnEnabledChanged
-	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> AControlRigGizmoActor = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, void, const bool> OnEnabledChanged = { 0x2bbb090, 9 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.IsSelectedInEditor
-	constexpr static const FunctionPointer<AControlRigGizmoActor, bool> AControlRigGizmoActor = { 0x122e750, 10 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, bool> IsSelectedInEditor = { 0x122e750, 10 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.IsHovered
-	constexpr static const FunctionPointer<AControlRigGizmoActor, bool> AControlRigGizmoActor = { 0x122e560, 11 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, bool> IsHovered = { 0x122e560, 11 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.IsEnabled
-	constexpr static const FunctionPointer<AControlRigGizmoActor, bool> AControlRigGizmoActor = { 0x122e860, 12 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, bool> IsEnabled = { 0x122e860, 12 }; 
 	// Function /Script/ControlRig.ControlRigGizmoActor.GetGlobalTransform
-	constexpr static const FunctionPointer<AControlRigGizmoActor, FTransform> AControlRigGizmoActor = { 0x122e3a0, 13 }; 
+	constexpr static const FunctionPointer<AControlRigGizmoActor, FTransform> GetGlobalTransform = { 0x122e3a0, 13 }; 
 };
 
 /// Struct /Script/ControlRig.ControlRigGizmoDefinition

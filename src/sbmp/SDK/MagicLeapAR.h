@@ -43,10 +43,9 @@ class ULuminARSessionFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapAR.LuminARSessionFunctionLibrary.StartLuminARSession
-	constexpr static const FunctionPointer<ULuminARSessionFunctionLibrary, void, const UObject*, const FLatentActionInfo, const ULuminARSessionConfig*> ULuminARSessionFunctionLibrary = { 0x18e1010, 0 }; 
+	constexpr static const FunctionPointer<ULuminARSessionFunctionLibrary, void, const UObject*, const FLatentActionInfo, const ULuminARSessionConfig*> StartLuminARSession = { 0x18e1010, 0 }; 
 };
 
 /// Class /Script/MagicLeapAR.LuminARFrameFunctionLibrary
@@ -55,12 +54,11 @@ class ULuminARFrameFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapAR.LuminARFrameFunctionLibrary.LuminARLineTrace
-	constexpr static const FunctionPointer<ULuminARFrameFunctionLibrary, bool, const UObject*, const FVector2D&, const TSet<ELuminARLineTraceChannel>, const TArray<FARTraceResult>&> ULuminARFrameFunctionLibrary = { 0x18e15b0, 0 }; 
+	constexpr static const FunctionPointer<ULuminARFrameFunctionLibrary, bool, const UObject*, const FVector2D&, const TSet<ELuminARLineTraceChannel>, const TArray<FARTraceResult>&> LuminARLineTrace = { 0x18e15b0, 0 }; 
 	// Function /Script/MagicLeapAR.LuminARFrameFunctionLibrary.GetTrackingState
-	constexpr static const FunctionPointer<ULuminARFrameFunctionLibrary, ELuminARTrackingState> ULuminARFrameFunctionLibrary = { 0x18e1a90, 1 }; 
+	constexpr static const FunctionPointer<ULuminARFrameFunctionLibrary, ELuminARTrackingState> GetTrackingState = { 0x18e1a90, 1 }; 
 };
 
 /// Class /Script/MagicLeapAR.LuminARImageTrackingFunctionLibrary
@@ -69,12 +67,11 @@ class ULuminARImageTrackingFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImageEx
-	constexpr static const FunctionPointer<ULuminARImageTrackingFunctionLibrary, ULuminARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float, const bool, const bool, const EMagicLeapImageTargetOrientation> ULuminARImageTrackingFunctionLibrary = { 0x18e1f30, 0 }; 
+	constexpr static const FunctionPointer<ULuminARImageTrackingFunctionLibrary, ULuminARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float, const bool, const bool, const EMagicLeapImageTargetOrientation> AddLuminRuntimeCandidateImageEx = { 0x18e1f30, 0 }; 
 	// Function /Script/MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImage
-	constexpr static const FunctionPointer<ULuminARImageTrackingFunctionLibrary, ULuminARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float, const bool, const bool> ULuminARImageTrackingFunctionLibrary = { 0x18e2390, 1 }; 
+	constexpr static const FunctionPointer<ULuminARImageTrackingFunctionLibrary, ULuminARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float, const bool, const bool> AddLuminRuntimeCandidateImage = { 0x18e2390, 1 }; 
 };
 
 /// Class /Script/MagicLeapAR.LuminAROrigin
@@ -112,10 +109,9 @@ class ULuminARLightEstimate : public UARBasicLightEstimate
 public:
 	TArray<float>                                      AmbientIntensityNits;                                       // 0x0040   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/MagicLeapAR.LuminARLightEstimate.GetAmbientIntensityNits
-	constexpr static const FunctionPointer<ULuminARLightEstimate, TArray<float>> ULuminARLightEstimate = { 0x18e33d0, 0 }; 
+	constexpr static const FunctionPointer<ULuminARLightEstimate, TArray<float>> GetAmbientIntensityNits = { 0x18e33d0, 0 }; 
 };
 
 /// Class /Script/MagicLeapAR.LuminARCandidateImage
@@ -128,14 +124,13 @@ public:
 	EMagicLeapImageTargetOrientation                   AxisOrientation;                                            // 0x005A   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x5];                                       // 0x005B   (0x0005)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeapAR.LuminARCandidateImage.GetUseUnreliablePose
-	constexpr static const FunctionPointer<ULuminARCandidateImage, bool> ULuminARCandidateImage = { 0x18e3850, 0 }; 
+	constexpr static const FunctionPointer<ULuminARCandidateImage, bool> GetUseUnreliablePose = { 0x18e3850, 0 }; 
 	// Function /Script/MagicLeapAR.LuminARCandidateImage.GetImageIsStationary
-	constexpr static const FunctionPointer<ULuminARCandidateImage, bool> ULuminARCandidateImage = { 0x18e3830, 1 }; 
+	constexpr static const FunctionPointer<ULuminARCandidateImage, bool> GetImageIsStationary = { 0x18e3830, 1 }; 
 	// Function /Script/MagicLeapAR.LuminARCandidateImage.GetAxisOrientation
-	constexpr static const FunctionPointer<ULuminARCandidateImage, EMagicLeapImageTargetOrientation> ULuminARCandidateImage = { 0x18e3810, 2 }; 
+	constexpr static const FunctionPointer<ULuminARCandidateImage, EMagicLeapImageTargetOrientation> GetAxisOrientation = { 0x18e3810, 2 }; 
 };
 
 #pragma pack(pop)

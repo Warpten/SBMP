@@ -305,28 +305,27 @@ class UKismetAnimationLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, void, const FVector&, const FVector&, const FVector&, const FVector&, const FVector&, const FVector&, const FVector&, const bool, const float, const float> UKismetAnimationLibrary = { 0x3bcc5a0, 0 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, void, const FVector&, const FVector&, const FVector&, const FVector&, const FVector&, const FVector&, const FVector&, const bool, const float, const float> K2_TwoBoneIK = { 0x3bcc5a0, 0 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_StartProfilingTimer
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, void> UKismetAnimationLibrary = { 0x3bca350, 1 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, void> K2_StartProfilingTimer = { 0x3bca350, 1 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseVectorAndRemap
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, FVector, const float, const float, const float, const float, const float, const float, const float, const float, const float> UKismetAnimationLibrary = { 0x3bcb1d0, 2 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, FVector, const float, const float, const float, const float, const float, const float, const float, const float, const float> K2_MakePerlinNoiseVectorAndRemap = { 0x3bcb1d0, 2 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseAndRemap
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const float, const float, const float> UKismetAnimationLibrary = { 0x3bcafa0, 3 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const float, const float, const float> K2_MakePerlinNoiseAndRemap = { 0x3bcafa0, 3 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, FTransform, const FTransform&, const FVector&, const FVector, const bool, const FVector, const float> UKismetAnimationLibrary = { 0x3bcc170, 4 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, FTransform, const FTransform&, const FVector&, const FVector, const bool, const FVector, const float> K2_LookAt = { 0x3bcc170, 4 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_EndProfilingTimer
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const bool, const FString> UKismetAnimationLibrary = { 0x3bca1c0, 5 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const bool, const FString> K2_EndProfilingTimer = { 0x3bca1c0, 5 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_DistanceBetweenTwoSocketsAndMapRange
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const USkeletalMeshComponent*, const FName, const TEnumAsByte<ERelativeTransformSpace>, const FName, const TEnumAsByte<ERelativeTransformSpace>, const bool, const float, const float, const float, const float> UKismetAnimationLibrary = { 0x3bcba60, 6 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const USkeletalMeshComponent*, const FName, const TEnumAsByte<ERelativeTransformSpace>, const FName, const TEnumAsByte<ERelativeTransformSpace>, const bool, const float, const float, const float, const float> K2_DistanceBetweenTwoSocketsAndMapRange = { 0x3bcba60, 6 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_DirectionBetweenSockets
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, FVector, const USkeletalMeshComponent*, const FName, const FName> UKismetAnimationLibrary = { 0x3bcb7a0, 7 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, FVector, const USkeletalMeshComponent*, const FName, const FName> K2_DirectionBetweenSockets = { 0x3bcb7a0, 7 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_CalculateVelocityFromSockets
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const float, const USkeletalMeshComponent*, const FName, const FName, const TEnumAsByte<ERelativeTransformSpace>, const FVector, const FPositionHistory&, const int32_t, const float, const float, const EEasingFuncType, const FRuntimeFloatCurve&> UKismetAnimationLibrary = { 0x3bca370, 8 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const float, const USkeletalMeshComponent*, const FName, const FName, const TEnumAsByte<ERelativeTransformSpace>, const FVector, const FPositionHistory&, const int32_t, const float, const float, const EEasingFuncType, const FRuntimeFloatCurve&> K2_CalculateVelocityFromSockets = { 0x3bca370, 8 }; 
 	// Function /Script/AnimGraphRuntime.KismetAnimationLibrary.K2_CalculateVelocityFromPositionHistory
-	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const float, const FVector, const FPositionHistory&, const int32_t, const float, const float> UKismetAnimationLibrary = { 0x3bcaba0, 9 }; 
+	constexpr static const FunctionPointer<UKismetAnimationLibrary, float, const float, const FVector, const FPositionHistory&, const int32_t, const float, const float> K2_CalculateVelocityFromPositionHistory = { 0x3bcaba0, 9 }; 
 };
 
 /// Class /Script/AnimGraphRuntime.PlayMontageCallbackProxy
@@ -341,18 +340,17 @@ public:
 	FMulticastInlineDelegate                           OnNotifyEnd;                                                // 0x0068   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x30];                                      // 0x0078   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
-	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, void, const FName, const FBranchingPointNotifyPayload&> UPlayMontageCallbackProxy = { 0x3bcf1a0, 0 }; 
+	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, void, const FName, const FBranchingPointNotifyPayload&> OnNotifyEndReceived = { 0x3bcf1a0, 0 }; 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
-	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, void, const FName, const FBranchingPointNotifyPayload&> UPlayMontageCallbackProxy = { 0x3bcf350, 1 }; 
+	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, void, const FName, const FBranchingPointNotifyPayload&> OnNotifyBeginReceived = { 0x3bcf350, 1 }; 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
-	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, void, const UAnimMontage*, const bool> UPlayMontageCallbackProxy = { 0x3bcf500, 2 }; 
+	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, void, const UAnimMontage*, const bool> OnMontageEnded = { 0x3bcf500, 2 }; 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
-	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, void, const UAnimMontage*, const bool> UPlayMontageCallbackProxy = { 0x3bcf690, 3 }; 
+	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, void, const UAnimMontage*, const bool> OnMontageBlendingOut = { 0x3bcf690, 3 }; 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
-	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, UPlayMontageCallbackProxy*, const USkeletalMeshComponent*, const UAnimMontage*, const float, const float, const FName> UPlayMontageCallbackProxy = { 0x3bcf820, 4 }; 
+	constexpr static const FunctionPointer<UPlayMontageCallbackProxy, UPlayMontageCallbackProxy*, const USkeletalMeshComponent*, const UAnimMontage*, const float, const float, const FName> CreateProxyObjectForPlayMontage = { 0x3bcf820, 4 }; 
 };
 
 /// Class /Script/AnimGraphRuntime.SequencerAnimationSupport

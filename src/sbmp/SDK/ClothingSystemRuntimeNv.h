@@ -88,10 +88,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x10];                                      // 0x0030   (0x0010)  MISSED
 	TArray<class UObject*>                             ReferencedObjectsArray;                                     // 0x0040   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/ClothingSystemRuntimeNv.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness
-	constexpr static const FunctionPointer<UClothingSimulationInteractorNv, void, const float> UClothingSimulationInteractorNv = { 0x49ea300, 0 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractorNv, void, const float> SetAnimDriveDamperStiffness = { 0x49ea300, 0 }; 
 };
 
 /// Class /Script/ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy

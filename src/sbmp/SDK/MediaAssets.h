@@ -104,20 +104,19 @@ class UMediaSource : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x58];                                      // 0x0028   (0x0058)  MISSED
 
-
 	/// Functions
 	// Function /Script/MediaAssets.MediaSource.Validate
-	constexpr static const FunctionPointer<UMediaSource, bool> UMediaSource = { 0x3f30a90, 0 }; 
+	constexpr static const FunctionPointer<UMediaSource, bool> Validate = { 0x3f30a90, 0 }; 
 	// Function /Script/MediaAssets.MediaSource.SetMediaOptionString
-	constexpr static const FunctionPointer<UMediaSource, void, const FName&, const FString> UMediaSource = { 0x3f30310, 1 }; 
+	constexpr static const FunctionPointer<UMediaSource, void, const FName&, const FString> SetMediaOptionString = { 0x3f30310, 1 }; 
 	// Function /Script/MediaAssets.MediaSource.SetMediaOptionInt64
-	constexpr static const FunctionPointer<UMediaSource, void, const FName&, const int64_t> UMediaSource = { 0x3f30500, 2 }; 
+	constexpr static const FunctionPointer<UMediaSource, void, const FName&, const int64_t> SetMediaOptionInt64 = { 0x3f30500, 2 }; 
 	// Function /Script/MediaAssets.MediaSource.SetMediaOptionFloat
-	constexpr static const FunctionPointer<UMediaSource, void, const FName&, const float> UMediaSource = { 0x3f306d0, 3 }; 
+	constexpr static const FunctionPointer<UMediaSource, void, const FName&, const float> SetMediaOptionFloat = { 0x3f306d0, 3 }; 
 	// Function /Script/MediaAssets.MediaSource.SetMediaOptionBool
-	constexpr static const FunctionPointer<UMediaSource, void, const FName&, const bool> UMediaSource = { 0x3f308b0, 4 }; 
+	constexpr static const FunctionPointer<UMediaSource, void, const FName&, const bool> SetMediaOptionBool = { 0x3f308b0, 4 }; 
 	// Function /Script/MediaAssets.MediaSource.GetUrl
-	constexpr static const FunctionPointer<UMediaSource, FString> UMediaSource = { 0x3f30ac0, 5 }; 
+	constexpr static const FunctionPointer<UMediaSource, FString> GetUrl = { 0x3f30ac0, 5 }; 
 };
 
 /// Class /Script/MediaAssets.BaseMediaSource
@@ -137,10 +136,9 @@ public:
 	bool                                               PrecacheFile;                                               // 0x0098   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x17];                                      // 0x0099   (0x0017)  MISSED
 
-
 	/// Functions
 	// Function /Script/MediaAssets.FileMediaSource.SetFilePath
-	constexpr static const FunctionPointer<UFileMediaSource, void, const FString> UFileMediaSource = { 0x3f24e60, 0 }; 
+	constexpr static const FunctionPointer<UFileMediaSource, void, const FString> SetFilePath = { 0x3f24e60, 0 }; 
 };
 
 /// Class /Script/MediaAssets.MediaBlueprintFunctionLibrary
@@ -149,14 +147,13 @@ class UMediaBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
-	constexpr static const FunctionPointer<UMediaBlueprintFunctionLibrary, void, const TArray<FMediaCaptureDevice>&, const int32_t> UMediaBlueprintFunctionLibrary = { 0x3f25a80, 0 }; 
+	constexpr static const FunctionPointer<UMediaBlueprintFunctionLibrary, void, const TArray<FMediaCaptureDevice>&, const int32_t> EnumerateWebcamCaptureDevices = { 0x3f25a80, 0 }; 
 	// Function /Script/MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
-	constexpr static const FunctionPointer<UMediaBlueprintFunctionLibrary, void, const TArray<FMediaCaptureDevice>&, const int32_t> UMediaBlueprintFunctionLibrary = { 0x3f25c70, 1 }; 
+	constexpr static const FunctionPointer<UMediaBlueprintFunctionLibrary, void, const TArray<FMediaCaptureDevice>&, const int32_t> EnumerateVideoCaptureDevices = { 0x3f25c70, 1 }; 
 	// Function /Script/MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
-	constexpr static const FunctionPointer<UMediaBlueprintFunctionLibrary, void, const TArray<FMediaCaptureDevice>&, const int32_t> UMediaBlueprintFunctionLibrary = { 0x3f25e60, 2 }; 
+	constexpr static const FunctionPointer<UMediaBlueprintFunctionLibrary, void, const TArray<FMediaCaptureDevice>&, const int32_t> EnumerateAudioCaptureDevices = { 0x3f25e60, 2 }; 
 };
 
 /// Class /Script/MediaAssets.MediaComponent
@@ -167,12 +164,11 @@ public:
 	class UMediaTexture*                               MediaTexture;                                               // 0x00C0   (0x0008)  
 	class UMediaPlayer*                                MediaPlayer;                                                // 0x00C8   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/MediaAssets.MediaComponent.GetMediaTexture
-	constexpr static const FunctionPointer<UMediaComponent, UMediaTexture*> UMediaComponent = { 0x3f26440, 0 }; 
+	constexpr static const FunctionPointer<UMediaComponent, UMediaTexture*> GetMediaTexture = { 0x3f26440, 0 }; 
 	// Function /Script/MediaAssets.MediaComponent.GetMediaPlayer
-	constexpr static const FunctionPointer<UMediaComponent, UMediaPlayer*> UMediaComponent = { 0x3f26460, 1 }; 
+	constexpr static const FunctionPointer<UMediaComponent, UMediaPlayer*> GetMediaPlayer = { 0x3f26460, 1 }; 
 };
 
 /// Class /Script/MediaAssets.MediaTimeStampInfo
@@ -217,152 +213,151 @@ public:
 	FGuid                                              PlayerGuid;                                                 // 0x0120   (0x0010)  
 	unsigned char                                      UnknownData09_7[0x8];                                       // 0x0130   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/MediaAssets.MediaPlayer.SupportsSeeking
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f26ce0, 0 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> SupportsSeeking = { 0x3f26ce0, 0 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SupportsScrubbing
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f26d10, 1 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> SupportsScrubbing = { 0x3f26d10, 1 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SupportsRate
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const float, const bool> UMediaPlayer = { 0x3f26e10, 2 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const float, const bool> SupportsRate = { 0x3f26e10, 2 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetViewRotation
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const FRotator&, const bool> UMediaPlayer = { 0x3f270d0, 3 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const FRotator&, const bool> SetViewRotation = { 0x3f270d0, 3 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetViewField
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const float, const float, const bool> UMediaPlayer = { 0x3f272a0, 4 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const float, const float, const bool> SetViewField = { 0x3f272a0, 4 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetVideoTrackFrameRate
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const int32_t, const int32_t, const float> UMediaPlayer = { 0x3f274d0, 5 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const int32_t, const int32_t, const float> SetVideoTrackFrameRate = { 0x3f274d0, 5 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetTrackFormat
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const EMediaPlayerTrack, const int32_t, const int32_t> UMediaPlayer = { 0x3f276f0, 6 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const EMediaPlayerTrack, const int32_t, const int32_t> SetTrackFormat = { 0x3f276f0, 6 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetTimeDelay
-	constexpr static const FunctionPointer<UMediaPlayer, void, const FTimespan> UMediaPlayer = { 0x3f27000, 7 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, void, const FTimespan> SetTimeDelay = { 0x3f27000, 7 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetRate
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const float> UMediaPlayer = { 0x3f27a30, 8 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const float> SetRate = { 0x3f27a30, 8 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetNativeVolume
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const float> UMediaPlayer = { 0x3f27920, 9 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const float> SetNativeVolume = { 0x3f27920, 9 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetMediaOptions
-	constexpr static const FunctionPointer<UMediaPlayer, void, const UMediaSource*> UMediaPlayer = { 0x17a7aa0, 10 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, void, const UMediaSource*> SetMediaOptions = { 0x17a7aa0, 10 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetLooping
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const bool> UMediaPlayer = { 0x3f27b20, 11 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const bool> SetLooping = { 0x3f27b20, 11 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetDesiredPlayerName
-	constexpr static const FunctionPointer<UMediaPlayer, void, const FName> UMediaPlayer = { 0x3f27c10, 12 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, void, const FName> SetDesiredPlayerName = { 0x3f27c10, 12 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SetBlockOnTime
-	constexpr static const FunctionPointer<UMediaPlayer, void, const FTimespan&> UMediaPlayer = { 0x3f27cf0, 13 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, void, const FTimespan&> SetBlockOnTime = { 0x3f27cf0, 13 }; 
 	// Function /Script/MediaAssets.MediaPlayer.SelectTrack
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const EMediaPlayerTrack, const int32_t> UMediaPlayer = { 0x3f27dd0, 14 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const EMediaPlayerTrack, const int32_t> SelectTrack = { 0x3f27dd0, 14 }; 
 	// Function /Script/MediaAssets.MediaPlayer.Seek
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const FTimespan&> UMediaPlayer = { 0x3f27f80, 15 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const FTimespan&> Seek = { 0x3f27f80, 15 }; 
 	// Function /Script/MediaAssets.MediaPlayer.Rewind
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f28070, 16 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> Rewind = { 0x3f28070, 16 }; 
 	// Function /Script/MediaAssets.MediaPlayer.Reopen
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f28110, 17 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> Reopen = { 0x3f28110, 17 }; 
 	// Function /Script/MediaAssets.MediaPlayer.Previous
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f28150, 18 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> Previous = { 0x3f28150, 18 }; 
 	// Function /Script/MediaAssets.MediaPlayer.PlayAndSeek
-	constexpr static const FunctionPointer<UMediaPlayer, void> UMediaPlayer = { 0x3f28180, 19 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, void> PlayAndSeek = { 0x3f28180, 19 }; 
 	// Function /Script/MediaAssets.MediaPlayer.Play
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f281a0, 20 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> Play = { 0x3f281a0, 20 }; 
 	// Function /Script/MediaAssets.MediaPlayer.Pause
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f281e0, 21 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> Pause = { 0x3f281e0, 21 }; 
 	// Function /Script/MediaAssets.MediaPlayer.OpenUrl
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const FString> UMediaPlayer = { 0x3f28220, 22 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const FString> OpenUrl = { 0x3f28220, 22 }; 
 	// Function /Script/MediaAssets.MediaPlayer.OpenSourceWithOptions
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaSource*, const FMediaPlayerOptions&> UMediaPlayer = { 0x3f287d0, 23 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaSource*, const FMediaPlayerOptions&> OpenSourceWithOptions = { 0x3f287d0, 23 }; 
 	// Function /Script/MediaAssets.MediaPlayer.OpenSourceLatent
-	constexpr static const FunctionPointer<UMediaPlayer, void, const UObject*, const FLatentActionInfo, const UMediaSource*, const FMediaPlayerOptions&, const bool&> UMediaPlayer = { 0x3f28480, 24 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, void, const UObject*, const FLatentActionInfo, const UMediaSource*, const FMediaPlayerOptions&, const bool&> OpenSourceLatent = { 0x3f28480, 24 }; 
 	// Function /Script/MediaAssets.MediaPlayer.OpenSource
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaSource*> UMediaPlayer = { 0x3f28a60, 25 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaSource*> OpenSource = { 0x3f28a60, 25 }; 
 	// Function /Script/MediaAssets.MediaPlayer.OpenPlaylistIndex
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaPlaylist*, const int32_t> UMediaPlayer = { 0x3f28c40, 26 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaPlaylist*, const int32_t> OpenPlaylistIndex = { 0x3f28c40, 26 }; 
 	// Function /Script/MediaAssets.MediaPlayer.OpenPlaylist
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaPlaylist*> UMediaPlayer = { 0x3f28e70, 27 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaPlaylist*> OpenPlaylist = { 0x3f28e70, 27 }; 
 	// Function /Script/MediaAssets.MediaPlayer.OpenFile
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const FString> UMediaPlayer = { 0x3f29000, 28 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const FString> OpenFile = { 0x3f29000, 28 }; 
 	// Function /Script/MediaAssets.MediaPlayer.Next
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f29690, 29 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> Next = { 0x3f29690, 29 }; 
 	// Function /Script/MediaAssets.MediaPlayer.IsReady
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f296c0, 30 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> IsReady = { 0x3f296c0, 30 }; 
 	// Function /Script/MediaAssets.MediaPlayer.IsPreparing
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f29720, 31 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> IsPreparing = { 0x3f29720, 31 }; 
 	// Function /Script/MediaAssets.MediaPlayer.IsPlaying
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f29760, 32 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> IsPlaying = { 0x3f29760, 32 }; 
 	// Function /Script/MediaAssets.MediaPlayer.IsPaused
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f297a0, 33 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> IsPaused = { 0x3f297a0, 33 }; 
 	// Function /Script/MediaAssets.MediaPlayer.IsLooping
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f297d0, 34 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> IsLooping = { 0x3f297d0, 34 }; 
 	// Function /Script/MediaAssets.MediaPlayer.IsConnecting
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f298d0, 35 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> IsConnecting = { 0x3f298d0, 35 }; 
 	// Function /Script/MediaAssets.MediaPlayer.IsClosed
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f296f0, 36 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> IsClosed = { 0x3f296f0, 36 }; 
 	// Function /Script/MediaAssets.MediaPlayer.IsBuffering
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f299d0, 37 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> IsBuffering = { 0x3f299d0, 37 }; 
 	// Function /Script/MediaAssets.MediaPlayer.HasError
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f29ad0, 38 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> HasError = { 0x3f29ad0, 38 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetViewRotation
-	constexpr static const FunctionPointer<UMediaPlayer, FRotator> UMediaPlayer = { 0x3f29b40, 39 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FRotator> GetViewRotation = { 0x3f29b40, 39 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackType
-	constexpr static const FunctionPointer<UMediaPlayer, FString, const int32_t, const int32_t> UMediaPlayer = { 0x3f29c80, 40 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FString, const int32_t, const int32_t> GetVideoTrackType = { 0x3f29c80, 40 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackFrameRates
-	constexpr static const FunctionPointer<UMediaPlayer, FFloatRange, const int32_t, const int32_t> UMediaPlayer = { 0x3f29e50, 41 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FFloatRange, const int32_t, const int32_t> GetVideoTrackFrameRates = { 0x3f29e50, 41 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackFrameRate
-	constexpr static const FunctionPointer<UMediaPlayer, float, const int32_t, const int32_t> UMediaPlayer = { 0x3f2a0a0, 42 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, float, const int32_t, const int32_t> GetVideoTrackFrameRate = { 0x3f2a0a0, 42 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackDimensions
-	constexpr static const FunctionPointer<UMediaPlayer, FIntPoint, const int32_t, const int32_t> UMediaPlayer = { 0x3f2a2c0, 43 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FIntPoint, const int32_t, const int32_t> GetVideoTrackDimensions = { 0x3f2a2c0, 43 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackAspectRatio
-	constexpr static const FunctionPointer<UMediaPlayer, float, const int32_t, const int32_t> UMediaPlayer = { 0x3f2a4f0, 44 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, float, const int32_t, const int32_t> GetVideoTrackAspectRatio = { 0x3f2a4f0, 44 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetVerticalFieldOfView
-	constexpr static const FunctionPointer<UMediaPlayer, float> UMediaPlayer = { 0x3f2a720, 45 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, float> GetVerticalFieldOfView = { 0x3f2a720, 45 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetUrl
-	constexpr static const FunctionPointer<UMediaPlayer, FString> UMediaPlayer = { 0x3f2a870, 46 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FString> GetUrl = { 0x3f2a870, 46 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetTrackLanguage
-	constexpr static const FunctionPointer<UMediaPlayer, FString, const EMediaPlayerTrack, const int32_t> UMediaPlayer = { 0x3f2a8a0, 47 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FString, const EMediaPlayerTrack, const int32_t> GetTrackLanguage = { 0x3f2a8a0, 47 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetTrackFormat
-	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const EMediaPlayerTrack, const int32_t> UMediaPlayer = { 0x3f2aac0, 48 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const EMediaPlayerTrack, const int32_t> GetTrackFormat = { 0x3f2aac0, 48 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetTrackDisplayName
-	constexpr static const FunctionPointer<UMediaPlayer, FText, const EMediaPlayerTrack, const int32_t> UMediaPlayer = { 0x3f2ac30, 49 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FText, const EMediaPlayerTrack, const int32_t> GetTrackDisplayName = { 0x3f2ac30, 49 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetTimeStamp
-	constexpr static const FunctionPointer<UMediaPlayer, UMediaTimeStampInfo*> UMediaPlayer = { 0x3f2aea0, 50 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, UMediaTimeStampInfo*> GetTimeStamp = { 0x3f2aea0, 50 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetTimeDelay
-	constexpr static const FunctionPointer<UMediaPlayer, FTimespan> UMediaPlayer = { 0x3f29b10, 51 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FTimespan> GetTimeDelay = { 0x3f29b10, 51 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetTime
-	constexpr static const FunctionPointer<UMediaPlayer, FTimespan> UMediaPlayer = { 0x3f2af60, 52 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FTimespan> GetTime = { 0x3f2af60, 52 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetSupportedRates
-	constexpr static const FunctionPointer<UMediaPlayer, void, const TArray<FFloatRange>&, const bool> UMediaPlayer = { 0x3f2afa0, 53 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, void, const TArray<FFloatRange>&, const bool> GetSupportedRates = { 0x3f2afa0, 53 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetSelectedTrack
-	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const EMediaPlayerTrack> UMediaPlayer = { 0x3f2b150, 54 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const EMediaPlayerTrack> GetSelectedTrack = { 0x3f2b150, 54 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetRate
-	constexpr static const FunctionPointer<UMediaPlayer, float> UMediaPlayer = { 0x3f2b240, 55 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, float> GetRate = { 0x3f2b240, 55 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetPlaylistIndex
-	constexpr static const FunctionPointer<UMediaPlayer, int32_t> UMediaPlayer = { 0x3847640, 56 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, int32_t> GetPlaylistIndex = { 0x3847640, 56 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetPlaylist
-	constexpr static const FunctionPointer<UMediaPlayer, UMediaPlaylist*> UMediaPlayer = { 0x3f26460, 57 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, UMediaPlaylist*> GetPlaylist = { 0x3f26460, 57 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetPlayerName
-	constexpr static const FunctionPointer<UMediaPlayer, FName> UMediaPlayer = { 0x3f2b280, 58 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FName> GetPlayerName = { 0x3f2b280, 58 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetNumTracks
-	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const EMediaPlayerTrack> UMediaPlayer = { 0x3f2b560, 59 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const EMediaPlayerTrack> GetNumTracks = { 0x3f2b560, 59 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetNumTrackFormats
-	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const EMediaPlayerTrack, const int32_t> UMediaPlayer = { 0x3f2b350, 60 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const EMediaPlayerTrack, const int32_t> GetNumTrackFormats = { 0x3f2b350, 60 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetMediaName
-	constexpr static const FunctionPointer<UMediaPlayer, FText> UMediaPlayer = { 0x3f2b6e0, 61 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FText> GetMediaName = { 0x3f2b6e0, 61 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetHorizontalFieldOfView
-	constexpr static const FunctionPointer<UMediaPlayer, float> UMediaPlayer = { 0x3f2b780, 62 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, float> GetHorizontalFieldOfView = { 0x3f2b780, 62 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetDuration
-	constexpr static const FunctionPointer<UMediaPlayer, FTimespan> UMediaPlayer = { 0x3f2b8d0, 63 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FTimespan> GetDuration = { 0x3f2b8d0, 63 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetDesiredPlayerName
-	constexpr static const FunctionPointer<UMediaPlayer, FName> UMediaPlayer = { 0x3f2b9c0, 64 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FName> GetDesiredPlayerName = { 0x3f2b9c0, 64 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetAudioTrackType
-	constexpr static const FunctionPointer<UMediaPlayer, FString, const int32_t, const int32_t> UMediaPlayer = { 0x3f2b9f0, 65 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, FString, const int32_t, const int32_t> GetAudioTrackType = { 0x3f2b9f0, 65 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetAudioTrackSampleRate
-	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const int32_t, const int32_t> UMediaPlayer = { 0x3f2bc90, 66 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const int32_t, const int32_t> GetAudioTrackSampleRate = { 0x3f2bc90, 66 }; 
 	// Function /Script/MediaAssets.MediaPlayer.GetAudioTrackChannels
-	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const int32_t, const int32_t> UMediaPlayer = { 0x3f2be70, 67 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, int32_t, const int32_t, const int32_t> GetAudioTrackChannels = { 0x3f2be70, 67 }; 
 	// Function /Script/MediaAssets.MediaPlayer.Close
-	constexpr static const FunctionPointer<UMediaPlayer, void> UMediaPlayer = { 0x3f2c050, 68 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, void> Close = { 0x3f2c050, 68 }; 
 	// Function /Script/MediaAssets.MediaPlayer.CanPlayUrl
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const FString> UMediaPlayer = { 0x3f2c070, 69 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const FString> CanPlayUrl = { 0x3f2c070, 69 }; 
 	// Function /Script/MediaAssets.MediaPlayer.CanPlaySource
-	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaSource*> UMediaPlayer = { 0x3f2c1b0, 70 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool, const UMediaSource*> CanPlaySource = { 0x3f2c1b0, 70 }; 
 	// Function /Script/MediaAssets.MediaPlayer.CanPause
-	constexpr static const FunctionPointer<UMediaPlayer, bool> UMediaPlayer = { 0x3f2c2f0, 71 }; 
+	constexpr static const FunctionPointer<UMediaPlayer, bool> CanPause = { 0x3f2c2f0, 71 }; 
 };
 
 /// Class /Script/MediaAssets.MediaPlaylist
@@ -372,32 +367,31 @@ class UMediaPlaylist : public UObject
 public:
 	TArray<class UMediaSource*>                        Items;                                                      // 0x0028   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/MediaAssets.MediaPlaylist.Replace
-	constexpr static const FunctionPointer<UMediaPlaylist, bool, const int32_t, const UMediaSource*> UMediaPlaylist = { 0x3f2d4d0, 0 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, bool, const int32_t, const UMediaSource*> Replace = { 0x3f2d4d0, 0 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.RemoveAt
-	constexpr static const FunctionPointer<UMediaPlaylist, bool, const int32_t> UMediaPlaylist = { 0x3f2d670, 1 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, bool, const int32_t> RemoveAt = { 0x3f2d670, 1 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.Remove
-	constexpr static const FunctionPointer<UMediaPlaylist, bool, const UMediaSource*> UMediaPlaylist = { 0x3f2d790, 2 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, bool, const UMediaSource*> Remove = { 0x3f2d790, 2 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.Num
-	constexpr static const FunctionPointer<UMediaPlaylist, int32_t> UMediaPlaylist = { 0x17bbce0, 3 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, int32_t> Num = { 0x17bbce0, 3 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.Insert
-	constexpr static const FunctionPointer<UMediaPlaylist, void, const UMediaSource*, const int32_t> UMediaPlaylist = { 0x3f2d960, 4 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, void, const UMediaSource*, const int32_t> Insert = { 0x3f2d960, 4 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.GetRandom
-	constexpr static const FunctionPointer<UMediaPlaylist, UMediaSource*, const int32_t&> UMediaPlaylist = { 0x3f2db10, 5 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, UMediaSource*, const int32_t&> GetRandom = { 0x3f2db10, 5 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.GetPrevious
-	constexpr static const FunctionPointer<UMediaPlaylist, UMediaSource*, const int32_t&> UMediaPlaylist = { 0x3f2dc00, 6 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, UMediaSource*, const int32_t&> GetPrevious = { 0x3f2dc00, 6 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.GetNext
-	constexpr static const FunctionPointer<UMediaPlaylist, UMediaSource*, const int32_t&> UMediaPlaylist = { 0x3f2dd30, 7 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, UMediaSource*, const int32_t&> GetNext = { 0x3f2dd30, 7 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.Get
-	constexpr static const FunctionPointer<UMediaPlaylist, UMediaSource*, const int32_t> UMediaPlaylist = { 0x3f2de70, 8 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, UMediaSource*, const int32_t> Get = { 0x3f2de70, 8 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.AddUrl
-	constexpr static const FunctionPointer<UMediaPlaylist, bool, const FString> UMediaPlaylist = { 0x3f2df80, 9 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, bool, const FString> AddUrl = { 0x3f2df80, 9 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.AddFile
-	constexpr static const FunctionPointer<UMediaPlaylist, bool, const FString> UMediaPlaylist = { 0x3f2e1c0, 10 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, bool, const FString> AddFile = { 0x3f2e1c0, 10 }; 
 	// Function /Script/MediaAssets.MediaPlaylist.Add
-	constexpr static const FunctionPointer<UMediaPlaylist, bool, const UMediaSource*> UMediaPlaylist = { 0x3f2e800, 11 }; 
+	constexpr static const FunctionPointer<UMediaPlaylist, bool, const UMediaSource*> Add = { 0x3f2e800, 11 }; 
 };
 
 /// Class /Script/MediaAssets.MediaSoundComponent
@@ -414,28 +408,27 @@ public:
 	class UMediaPlayer*                                MediaPlayer;                                                // 0x0750   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x1F8];                                     // 0x0758   (0x01F8)  MISSED
 
-
 	/// Functions
 	// Function /Script/MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings
-	constexpr static const FunctionPointer<UMediaSoundComponent, void, const TArray<float>, const EMediaSoundComponentFFTSize> UMediaSoundComponent = { 0x3f2f7a0, 0 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, void, const TArray<float>, const EMediaSoundComponentFFTSize> SetSpectralAnalysisSettings = { 0x3f2f7a0, 0 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.SetMediaPlayer
-	constexpr static const FunctionPointer<UMediaSoundComponent, void, const UMediaPlayer*> UMediaSoundComponent = { 0x3f2fab0, 1 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, void, const UMediaPlayer*> SetMediaPlayer = { 0x3f2fab0, 1 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.SetEnvelopeFollowingsettings
-	constexpr static const FunctionPointer<UMediaSoundComponent, void, const int32_t, const int32_t> UMediaSoundComponent = { 0x3f2f120, 2 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, void, const int32_t, const int32_t> SetEnvelopeFollowingsettings = { 0x3f2f120, 2 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.SetEnableSpectralAnalysis
-	constexpr static const FunctionPointer<UMediaSoundComponent, void, const bool> UMediaSoundComponent = { 0x3f2f9d0, 3 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, void, const bool> SetEnableSpectralAnalysis = { 0x3f2f9d0, 3 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.SetEnableEnvelopeFollowing
-	constexpr static const FunctionPointer<UMediaSoundComponent, void, const bool> UMediaSoundComponent = { 0x3f2f2c0, 4 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, void, const bool> SetEnableEnvelopeFollowing = { 0x3f2f2c0, 4 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.GetSpectralData
-	constexpr static const FunctionPointer<UMediaSoundComponent, TArray<FMediaSoundComponentSpectralData>> UMediaSoundComponent = { 0x3f2f600, 5 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, TArray<FMediaSoundComponentSpectralData>> GetSpectralData = { 0x3f2f600, 5 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.GetNormalizedSpectralData
-	constexpr static const FunctionPointer<UMediaSoundComponent, TArray<FMediaSoundComponentSpectralData>> UMediaSoundComponent = { 0x3f2f3e0, 6 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, TArray<FMediaSoundComponentSpectralData>> GetNormalizedSpectralData = { 0x3f2f3e0, 6 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.GetMediaPlayer
-	constexpr static const FunctionPointer<UMediaSoundComponent, UMediaPlayer*> UMediaSoundComponent = { 0x3f2fc50, 7 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, UMediaPlayer*> GetMediaPlayer = { 0x3f2fc50, 7 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.GetEnvelopeValue
-	constexpr static const FunctionPointer<UMediaSoundComponent, float> UMediaSoundComponent = { 0x26a4fd0, 8 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, float> GetEnvelopeValue = { 0x26a4fd0, 8 }; 
 	// Function /Script/MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
-	constexpr static const FunctionPointer<UMediaSoundComponent, bool, const FSoundAttenuationSettings&> UMediaSoundComponent = { 0x3f2fc80, 9 }; 
+	constexpr static const FunctionPointer<UMediaSoundComponent, bool, const FSoundAttenuationSettings&> BP_GetAttenuationSettingsToApply = { 0x3f2fc80, 9 }; 
 };
 
 /// Class /Script/MediaAssets.MediaTexture
@@ -458,18 +451,17 @@ public:
 	class UMediaPlayer*                                MediaPlayer;                                                // 0x0100   (0x0008)  
 	unsigned char                                      UnknownData05_7[0xB0];                                      // 0x0108   (0x00B0)  MISSED
 
-
 	/// Functions
 	// Function /Script/MediaAssets.MediaTexture.SetMediaPlayer
-	constexpr static const FunctionPointer<UMediaTexture, void, const UMediaPlayer*> UMediaTexture = { 0x3f31190, 0 }; 
+	constexpr static const FunctionPointer<UMediaTexture, void, const UMediaPlayer*> SetMediaPlayer = { 0x3f31190, 0 }; 
 	// Function /Script/MediaAssets.MediaTexture.GetWidth
-	constexpr static const FunctionPointer<UMediaTexture, int32_t> UMediaTexture = { 0x3f31320, 1 }; 
+	constexpr static const FunctionPointer<UMediaTexture, int32_t> GetWidth = { 0x3f31320, 1 }; 
 	// Function /Script/MediaAssets.MediaTexture.GetMediaPlayer
-	constexpr static const FunctionPointer<UMediaTexture, UMediaPlayer*> UMediaTexture = { 0x3f31340, 2 }; 
+	constexpr static const FunctionPointer<UMediaTexture, UMediaPlayer*> GetMediaPlayer = { 0x3f31340, 2 }; 
 	// Function /Script/MediaAssets.MediaTexture.GetHeight
-	constexpr static const FunctionPointer<UMediaTexture, int32_t> UMediaTexture = { 0x3f31370, 3 }; 
+	constexpr static const FunctionPointer<UMediaTexture, int32_t> GetHeight = { 0x3f31370, 3 }; 
 	// Function /Script/MediaAssets.MediaTexture.GetAspectRatio
-	constexpr static const FunctionPointer<UMediaTexture, float> UMediaTexture = { 0x3f31390, 4 }; 
+	constexpr static const FunctionPointer<UMediaTexture, float> GetAspectRatio = { 0x3f31390, 4 }; 
 };
 
 /// Class /Script/MediaAssets.PlatformMediaSource

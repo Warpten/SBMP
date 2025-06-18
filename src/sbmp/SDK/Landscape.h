@@ -256,30 +256,29 @@ public:
 	bool                                               bHasLayersContent;                                          // 0x063F   (0x0001)  
 	TMap<class UTexture2D*, class ULandscapeWeightmapUsage*> WeightmapUsageMap;                                    // 0x0640   (0x0050)  
 
-
 	/// Functions
 	// Function /Script/Landscape.LandscapeProxy.SetLandscapeMaterialVectorParameterValue
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const FName, const FLinearColor> ALandscapeProxy = { 0x3ad68e0, 0 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const FName, const FLinearColor> SetLandscapeMaterialVectorParameterValue = { 0x3ad68e0, 0 }; 
 	// Function /Script/Landscape.LandscapeProxy.SetLandscapeMaterialTextureParameterValue
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const FName, const UTexture*> ALandscapeProxy = { 0x3ad6af0, 1 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const FName, const UTexture*> SetLandscapeMaterialTextureParameterValue = { 0x3ad6af0, 1 }; 
 	// Function /Script/Landscape.LandscapeProxy.SetLandscapeMaterialScalarParameterValue
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const FName, const float> ALandscapeProxy = { 0x3ad66e0, 2 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const FName, const float> SetLandscapeMaterialScalarParameterValue = { 0x3ad66e0, 2 }; 
 	// Function /Script/Landscape.LandscapeProxy.LandscapeExportHeightmapToRenderTarget
-	constexpr static const FunctionPointer<ALandscapeProxy, bool, const UTextureRenderTarget2D*, const bool, const bool> ALandscapeProxy = { 0x3ad6510, 3 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, bool, const UTextureRenderTarget2D*, const bool, const bool> LandscapeExportHeightmapToRenderTarget = { 0x3ad6510, 3 }; 
 	// Function /Script/Landscape.LandscapeProxy.EditorSetLandscapeMaterial
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const UMaterialInterface*> ALandscapeProxy = { 0x17a7aa0, 4 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const UMaterialInterface*> EditorSetLandscapeMaterial = { 0x17a7aa0, 4 }; 
 	// Function /Script/Landscape.LandscapeProxy.EditorApplySpline
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const USplineComponent*, const float, const float, const float, const float, const float, const float, const int32_t, const bool, const bool, const ULandscapeLayerInfoObject*, const FName> ALandscapeProxy = { 0x3ad6c60, 5 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const USplineComponent*, const float, const float, const float, const float, const float, const float, const int32_t, const bool, const bool, const ULandscapeLayerInfoObject*, const FName> EditorApplySpline = { 0x3ad6c60, 5 }; 
 	// Function /Script/Landscape.LandscapeProxy.ChangeUseTessellationComponentScreenSizeFalloff
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const bool> ALandscapeProxy = { 0x3ad7390, 6 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const bool> ChangeUseTessellationComponentScreenSizeFalloff = { 0x3ad7390, 6 }; 
 	// Function /Script/Landscape.LandscapeProxy.ChangeTessellationComponentScreenSizeFalloff
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const float> ALandscapeProxy = { 0x3ad72c0, 7 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const float> ChangeTessellationComponentScreenSizeFalloff = { 0x3ad72c0, 7 }; 
 	// Function /Script/Landscape.LandscapeProxy.ChangeTessellationComponentScreenSize
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const float> ALandscapeProxy = { 0x3ad7540, 8 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const float> ChangeTessellationComponentScreenSize = { 0x3ad7540, 8 }; 
 	// Function /Script/Landscape.LandscapeProxy.ChangeLODDistanceFactor
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const float> ALandscapeProxy = { 0x3ad7610, 9 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const float> ChangeLODDistanceFactor = { 0x3ad7610, 9 }; 
 	// Function /Script/Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections
-	constexpr static const FunctionPointer<ALandscapeProxy, void, const float> ALandscapeProxy = { 0x3ad7470, 10 }; 
+	constexpr static const FunctionPointer<ALandscapeProxy, void, const float> ChangeComponentScreenSizeToUseSubSections = { 0x3ad7470, 10 }; 
 };
 
 /// Class /Script/Landscape.Landscape
@@ -295,16 +294,15 @@ class ALandscapeBlueprintBrushBase : public AActor
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Landscape.LandscapeBlueprintBrushBase.RequestLandscapeUpdate
-	constexpr static const FunctionPointer<ALandscapeBlueprintBrushBase, void> ALandscapeBlueprintBrushBase = { 0x11615e0, 0 }; 
+	constexpr static const FunctionPointer<ALandscapeBlueprintBrushBase, void> RequestLandscapeUpdate = { 0x11615e0, 0 }; 
 	// Function /Script/Landscape.LandscapeBlueprintBrushBase.Render
-	constexpr static const FunctionPointer<ALandscapeBlueprintBrushBase, UTextureRenderTarget2D*, const bool, const UTextureRenderTarget2D*, const FName&> ALandscapeBlueprintBrushBase = { 0x3ad0ef0, 1 }; 
+	constexpr static const FunctionPointer<ALandscapeBlueprintBrushBase, UTextureRenderTarget2D*, const bool, const UTextureRenderTarget2D*, const FName&> Render = { 0x3ad0ef0, 1 }; 
 	// Function /Script/Landscape.LandscapeBlueprintBrushBase.Initialize
-	constexpr static const FunctionPointer<ALandscapeBlueprintBrushBase, void, const FTransform&, const FIntPoint&, const FIntPoint&> ALandscapeBlueprintBrushBase = { 0x3ad0ca0, 2 }; 
+	constexpr static const FunctionPointer<ALandscapeBlueprintBrushBase, void, const FTransform&, const FIntPoint&, const FIntPoint&> Initialize = { 0x3ad0ca0, 2 }; 
 	// Function /Script/Landscape.LandscapeBlueprintBrushBase.GetBlueprintRenderDependencies
-	constexpr static const FunctionPointer<ALandscapeBlueprintBrushBase, void, const TArray<UObject*>&> ALandscapeBlueprintBrushBase = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<ALandscapeBlueprintBrushBase, void, const TArray<UObject*>&> GetBlueprintRenderDependencies = { 0x2bbb090, 3 }; 
 };
 
 /// Class /Script/Landscape.LandscapeLODStreamingProxy
@@ -384,14 +382,13 @@ public:
 	TArray<class UTexture2D*>                          MobileWeightmapTextures;                                    // 0x06E0   (0x0010)  
 	unsigned char                                      UnknownData11_7[0x70];                                      // 0x06F0   (0x0070)  MISSED
 
-
 	/// Functions
 	// Function /Script/Landscape.LandscapeComponent.GetMaterialInstanceDynamic
-	constexpr static const FunctionPointer<ULandscapeComponent, UMaterialInstanceDynamic*, const int32_t> ULandscapeComponent = { 0x3ad1dc0, 0 }; 
+	constexpr static const FunctionPointer<ULandscapeComponent, UMaterialInstanceDynamic*, const int32_t> GetMaterialInstanceDynamic = { 0x3ad1dc0, 0 }; 
 	// Function /Script/Landscape.LandscapeComponent.EditorGetPaintLayerWeightByNameAtLocation
-	constexpr static const FunctionPointer<ULandscapeComponent, float, const FVector&, const FName> ULandscapeComponent = { 0x3ad1b10, 1 }; 
+	constexpr static const FunctionPointer<ULandscapeComponent, float, const FVector&, const FName> EditorGetPaintLayerWeightByNameAtLocation = { 0x3ad1b10, 1 }; 
 	// Function /Script/Landscape.LandscapeComponent.EditorGetPaintLayerWeightAtLocation
-	constexpr static const FunctionPointer<ULandscapeComponent, float, const FVector&, const ULandscapeLayerInfoObject*> ULandscapeComponent = { 0x3ad1c60, 2 }; 
+	constexpr static const FunctionPointer<ULandscapeComponent, float, const FVector&, const ULandscapeLayerInfoObject*> EditorGetPaintLayerWeightAtLocation = { 0x3ad1c60, 2 }; 
 };
 
 /// Class /Script/Landscape.LandscapeGizmoActor
@@ -483,10 +480,9 @@ public:
 	TArray<class UPhysicalMaterial*>                   CookedPhysicalMaterials;                                    // 0x05C8   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x40];                                      // 0x05D8   (0x0040)  MISSED
 
-
 	/// Functions
 	// Function /Script/Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent
-	constexpr static const FunctionPointer<ULandscapeHeightfieldCollisionComponent, ULandscapeComponent*> ULandscapeHeightfieldCollisionComponent = { 0x3ad3380, 0 }; 
+	constexpr static const FunctionPointer<ULandscapeHeightfieldCollisionComponent, ULandscapeComponent*> GetRenderComponent = { 0x3ad3380, 0 }; 
 };
 
 /// Class /Script/Landscape.LandscapeInfo
@@ -593,10 +589,9 @@ public:
 	TArray<class UMeshComponent*>                      CookedForeignMeshComponents;                                // 0x0558   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0568   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
-	constexpr static const FunctionPointer<ULandscapeSplinesComponent, TArray<USplineMeshComponent*>> ULandscapeSplinesComponent = { 0x16628b0, 0 }; 
+	constexpr static const FunctionPointer<ULandscapeSplinesComponent, TArray<USplineMeshComponent*>> GetSplineMeshComponents = { 0x16628b0, 0 }; 
 };
 
 /// Struct /Script/Landscape.LandscapeSplineConnection

@@ -81,42 +81,41 @@ class UTimeManagementBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.TransformTime
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameTime, const FFrameTime&, const FFrameRate&, const FFrameRate&> UTimeManagementBlueprintLibrary = { 0x3adf2d0, 0 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameTime, const FFrameTime&, const FFrameRate&, const FFrameRate&> TransformTime = { 0x3adf2d0, 0 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Subtract_FrameNumberInteger
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const int32_t> UTimeManagementBlueprintLibrary = { 0x3adead0, 1 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const int32_t> Subtract_FrameNumberInteger = { 0x3adead0, 1 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Subtract_FrameNumberFrameNumber
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const FFrameNumber> UTimeManagementBlueprintLibrary = { 0x3aded90, 2 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const FFrameNumber> Subtract_FrameNumberFrameNumber = { 0x3aded90, 2 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.SnapFrameTimeToRate
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameTime, const FFrameTime&, const FFrameRate&, const FFrameRate&> UTimeManagementBlueprintLibrary = { 0x3adf050, 3 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameTime, const FFrameTime&, const FFrameRate&, const FFrameRate&> SnapFrameTimeToRate = { 0x3adf050, 3 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Multiply_SecondsFrameRate
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameTime, const float, const FFrameRate&> UTimeManagementBlueprintLibrary = { 0x3adf9c0, 4 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameTime, const float, const FFrameRate&> Multiply_SecondsFrameRate = { 0x3adf9c0, 4 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Multiply_FrameNumberInteger
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const int32_t> UTimeManagementBlueprintLibrary = { 0x3ade970, 5 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const int32_t> Multiply_FrameNumberInteger = { 0x3ade970, 5 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.IsValid_MultipleOf
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, bool, const FFrameRate&, const FFrameRate&> UTimeManagementBlueprintLibrary = { 0x3adf510, 6 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, bool, const FFrameRate&, const FFrameRate&> IsValid_MultipleOf = { 0x3adf510, 6 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.IsValid_Framerate
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, bool, const FFrameRate&> UTimeManagementBlueprintLibrary = { 0x3adf6f0, 7 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, bool, const FFrameRate&> IsValid_Framerate = { 0x3adf6f0, 7 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.GetTimecodeFrameRate
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameRate> UTimeManagementBlueprintLibrary = { 0x3ade6b0, 8 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameRate> GetTimecodeFrameRate = { 0x3ade6b0, 8 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.GetTimecode
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FTimecode> UTimeManagementBlueprintLibrary = { 0x3ade6f0, 9 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FTimecode> GetTimecode = { 0x3ade6f0, 9 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Divide_FrameNumberInteger
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const int32_t> UTimeManagementBlueprintLibrary = { 0x3ade810, 10 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const int32_t> Divide_FrameNumberInteger = { 0x3ade810, 10 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Conv_TimecodeToString
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FString, const FTimecode&, const bool> UTimeManagementBlueprintLibrary = { 0x3adf7e0, 11 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FString, const FTimecode&, const bool> Conv_TimecodeToString = { 0x3adf7e0, 11 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Conv_QualifiedFrameTimeToSeconds
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, float, const FQualifiedFrameTime&> UTimeManagementBlueprintLibrary = { 0x3adfc10, 12 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, float, const FQualifiedFrameTime&> Conv_QualifiedFrameTimeToSeconds = { 0x3adfc10, 12 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameRateToSeconds
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, float, const FFrameRate&> UTimeManagementBlueprintLibrary = { 0x3adfd10, 13 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, float, const FFrameRate&> Conv_FrameRateToSeconds = { 0x3adfd10, 13 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameNumberToInteger
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, int32_t, const FFrameNumber&> UTimeManagementBlueprintLibrary = { 0x3ade730, 14 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, int32_t, const FFrameNumber&> Conv_FrameNumberToInteger = { 0x3ade730, 14 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Add_FrameNumberInteger
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const int32_t> UTimeManagementBlueprintLibrary = { 0x3adec30, 15 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const int32_t> Add_FrameNumberInteger = { 0x3adec30, 15 }; 
 	// Function /Script/TimeManagement.TimeManagementBlueprintLibrary.Add_FrameNumberFrameNumber
-	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const FFrameNumber> UTimeManagementBlueprintLibrary = { 0x3adeef0, 16 }; 
+	constexpr static const FunctionPointer<UTimeManagementBlueprintLibrary, FFrameNumber, const FFrameNumber, const FFrameNumber> Add_FrameNumberFrameNumber = { 0x3adeef0, 16 }; 
 };
 
 /// Struct /Script/TimeManagement.TimedDataInputEvaluationData

@@ -170,94 +170,93 @@ class UHeadMountedDisplayFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.UpdateExternalTrackingHMDPosition
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FTransform&> UHeadMountedDisplayFunctionLibrary = { 0x385cdd0, 0 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FTransform&> UpdateExternalTrackingHMDPosition = { 0x385cdd0, 0 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetXRTimedInputActionDelegate
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FName&, const FDelegateProperty&> UHeadMountedDisplayFunctionLibrary = { 0x385af80, 1 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FName&, const FDelegateProperty&> SetXRTimedInputActionDelegate = { 0x385af80, 1 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetXRDisconnectDelegate
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FDelegateProperty&> UHeadMountedDisplayFunctionLibrary = { 0x385b110, 2 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FDelegateProperty&> SetXRDisconnectDelegate = { 0x385b110, 2 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UObject*, const float> UHeadMountedDisplayFunctionLibrary = { 0x385d3c0, 3 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UObject*, const float> SetWorldToMetersScale = { 0x385d3c0, 3 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetTrackingOrigin
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const TEnumAsByte<EHMDTrackingOrigin>> UHeadMountedDisplayFunctionLibrary = { 0x385d1c0, 4 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const TEnumAsByte<EHMDTrackingOrigin>> SetTrackingOrigin = { 0x385d1c0, 4 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenTexture
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UTexture*> UHeadMountedDisplayFunctionLibrary = { 0x385c880, 5 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UTexture*> SetSpectatorScreenTexture = { 0x385c880, 5 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenModeTexturePlusEyeLayout
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FVector2D, const FVector2D, const FVector2D, const FVector2D, const bool, const bool, const bool> UHeadMountedDisplayFunctionLibrary = { 0x385c3f0, 6 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FVector2D, const FVector2D, const FVector2D, const FVector2D, const bool, const bool, const bool> SetSpectatorScreenModeTexturePlusEyeLayout = { 0x385c3f0, 6 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenMode
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const ESpectatorScreenMode> UHeadMountedDisplayFunctionLibrary = { 0x385c990, 7 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const ESpectatorScreenMode> SetSpectatorScreenMode = { 0x385c990, 7 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetClippingPlanes
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const float, const float> UHeadMountedDisplayFunctionLibrary = { 0x385d710, 8 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const float, const float> SetClippingPlanes = { 0x385d710, 8 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ResetOrientationAndPosition
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const float, const TEnumAsByte<EOrientPositionSelector>> UHeadMountedDisplayFunctionLibrary = { 0x385d8b0, 9 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const float, const TEnumAsByte<EOrientPositionSelector>> ResetOrientationAndPosition = { 0x385d8b0, 9 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsSpectatorScreenModeControllable
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> UHeadMountedDisplayFunctionLibrary = { 0x385cba0, 10 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> IsSpectatorScreenModeControllable = { 0x385cba0, 10 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsInLowPersistenceMode
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> UHeadMountedDisplayFunctionLibrary = { 0x113b860, 11 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> IsInLowPersistenceMode = { 0x113b860, 11 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayEnabled
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> UHeadMountedDisplayFunctionLibrary = { 0x385ec60, 12 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> IsHeadMountedDisplayEnabled = { 0x385ec60, 12 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayConnected
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> UHeadMountedDisplayFunctionLibrary = { 0x385ec30, 13 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> IsHeadMountedDisplayConnected = { 0x385ec30, 13 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsDeviceTracking
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool, const FXRDeviceId&> UHeadMountedDisplayFunctionLibrary = { 0x385b910, 14 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool, const FXRDeviceId&> IsDeviceTracking = { 0x385b910, 14 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.HasValidTrackingPosition
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> UHeadMountedDisplayFunctionLibrary = { 0x385e610, 15 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool> HasValidTrackingPosition = { 0x385e610, 15 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetXRSystemFlags
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, int32_t> UHeadMountedDisplayFunctionLibrary = { 0x385e9e0, 16 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, int32_t> GetXRSystemFlags = { 0x385e9e0, 16 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetWorldToMetersScale
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, float, const UObject*> UHeadMountedDisplayFunctionLibrary = { 0x385d2c0, 17 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, float, const UObject*> GetWorldToMetersScale = { 0x385d2c0, 17 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVRFocusState
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const bool&, const bool&> UHeadMountedDisplayFunctionLibrary = { 0x385cc10, 18 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const bool&, const bool&> GetVRFocusState = { 0x385cc10, 18 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVersionString
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, FString> UHeadMountedDisplayFunctionLibrary = { 0x385e920, 19 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, FString> GetVersionString = { 0x385e920, 19 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingToWorldTransform
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, FTransform, const UObject*> UHeadMountedDisplayFunctionLibrary = { 0x385d030, 20 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, FTransform, const UObject*> GetTrackingToWorldTransform = { 0x385d030, 20 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingSensorParameters
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FVector&, const FRotator&, const float&, const float&, const float&, const float&, const float&, const float&, const float&, const bool&, const int32_t> UHeadMountedDisplayFunctionLibrary = { 0x385df20, 21 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FVector&, const FRotator&, const float&, const float&, const float&, const float&, const float&, const float&, const float&, const bool&, const int32_t> GetTrackingSensorParameters = { 0x385df20, 21 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingOrigin
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, TEnumAsByte<EHMDTrackingOrigin>> UHeadMountedDisplayFunctionLibrary = { 0x385d170, 22 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, TEnumAsByte<EHMDTrackingOrigin>> GetTrackingOrigin = { 0x385d170, 22 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetScreenPercentage
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, float> UHeadMountedDisplayFunctionLibrary = { 0x385d630, 23 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, float> GetScreenPercentage = { 0x385d630, 23 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FVector&, const FRotator&, const float&, const float&, const float&, const float&, const float&> UHeadMountedDisplayFunctionLibrary = { 0x385da80, 24 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FVector&, const FRotator&, const float&, const float&, const float&, const float&, const float&> GetPositionalTrackingCameraParameters = { 0x385da80, 24 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPixelDensity
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, float> UHeadMountedDisplayFunctionLibrary = { 0x385d550, 25 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, float> GetPixelDensity = { 0x385d550, 25 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FRotator&, const FVector&> UHeadMountedDisplayFunctionLibrary = { 0x385e680, 26 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FRotator&, const FVector&> GetOrientationAndPosition = { 0x385e680, 26 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetNumOfTrackingSensors
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, int32_t> UHeadMountedDisplayFunctionLibrary = { 0x385e5c0, 27 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, int32_t> GetNumOfTrackingSensors = { 0x385e5c0, 27 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetMotionControllerData
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UObject*, const EControllerHand, const FXRMotionControllerData&> UHeadMountedDisplayFunctionLibrary = { 0x385b4f0, 28 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UObject*, const EControllerHand, const FXRMotionControllerData&> GetMotionControllerData = { 0x385b4f0, 28 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDWornState
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, TEnumAsByte<EHMDWornState>> UHeadMountedDisplayFunctionLibrary = { 0x385e8a0, 29 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, TEnumAsByte<EHMDWornState>> GetHMDWornState = { 0x385e8a0, 29 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDDeviceName
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, FName> UHeadMountedDisplayFunctionLibrary = { 0x385ea70, 30 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, FName> GetHMDDeviceName = { 0x385ea70, 30 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDData
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UObject*, const FXRHMDData&> UHeadMountedDisplayFunctionLibrary = { 0x385b760, 31 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UObject*, const FXRHMDData&> GetHMDData = { 0x385b760, 31 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDeviceWorldPose
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UObject*, const FXRDeviceId&, const bool&, const FRotator&, const bool&, const FVector&> UHeadMountedDisplayFunctionLibrary = { 0x385ba40, 32 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const UObject*, const FXRDeviceId&, const bool&, const FRotator&, const bool&, const FVector&> GetDeviceWorldPose = { 0x385ba40, 32 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDevicePose
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FXRDeviceId&, const bool&, const FRotator&, const bool&, const FVector&> UHeadMountedDisplayFunctionLibrary = { 0x385be10, 33 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FXRDeviceId&, const bool&, const FRotator&, const bool&, const FVector&> GetDevicePose = { 0x385be10, 33 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetControllerTransformForTime
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool, const UObject*, const int32_t, const FName, const FTimespan, const bool&, const FRotator&, const FVector&, const bool&, const FVector&, const bool&, const FVector&> UHeadMountedDisplayFunctionLibrary = { 0x385a840, 34 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool, const UObject*, const int32_t, const FName, const FTimespan, const bool&, const FRotator&, const FVector&, const bool&, const FVector&, const bool&, const FVector&> GetControllerTransformForTime = { 0x385a840, 34 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnumerateTrackedDevices
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, TArray<FXRDeviceId>, const FName, const EXRTrackedDeviceType> UHeadMountedDisplayFunctionLibrary = { 0x385c150, 35 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, TArray<FXRDeviceId>, const FName, const EXRTrackedDeviceType> EnumerateTrackedDevices = { 0x385c150, 35 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableLowPersistenceMode
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const bool> UHeadMountedDisplayFunctionLibrary = { 0x26a9510, 36 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const bool> EnableLowPersistenceMode = { 0x26a9510, 36 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableHMD
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool, const bool> UHeadMountedDisplayFunctionLibrary = { 0x385ead0, 37 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool, const bool> EnableHMD = { 0x385ead0, 37 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.DisconnectRemoteXRDevice
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void> UHeadMountedDisplayFunctionLibrary = { 0x385b1f0, 38 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void> DisconnectRemoteXRDevice = { 0x385b1f0, 38 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ConnectRemoteXRDevice
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, TEnumAsByte<EXRDeviceConnectionResult>, const FString, const int32_t> UHeadMountedDisplayFunctionLibrary = { 0x385b230, 39 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, TEnumAsByte<EXRDeviceConnectionResult>, const FString, const int32_t> ConnectRemoteXRDevice = { 0x385b230, 39 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ConfigureGestures
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool, const FXRGestureConfig&> UHeadMountedDisplayFunctionLibrary = { 0x385b3e0, 40 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, bool, const FXRGestureConfig&> ConfigureGestures = { 0x385b3e0, 40 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ClearXRTimedInputActionDelegate
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FName&> UHeadMountedDisplayFunctionLibrary = { 0x385aea0, 41 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FName&> ClearXRTimedInputActionDelegate = { 0x385aea0, 41 }; 
 	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.CalibrateExternalTrackingToHMD
-	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FTransform&> UHeadMountedDisplayFunctionLibrary = { 0x385cf00, 42 }; 
+	constexpr static const FunctionPointer<UHeadMountedDisplayFunctionLibrary, void, const FTransform&> CalibrateExternalTrackingToHMD = { 0x385cf00, 42 }; 
 };
 
 /// Class /Script/HeadMountedDisplay.MotionControllerComponent
@@ -281,30 +280,29 @@ public:
 	class UPrimitiveComponent*                         DisplayComponent;                                           // 0x05D0   (0x0008)  
 	unsigned char                                      UnknownData09_7[0x18];                                      // 0x05D8   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingSource
-	constexpr static const FunctionPointer<UMotionControllerComponent, void, const EControllerHand> UMotionControllerComponent = { 0x3860a20, 0 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, void, const EControllerHand> SetTrackingSource = { 0x3860a20, 0 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingMotionSource
-	constexpr static const FunctionPointer<UMotionControllerComponent, void, const FName> UMotionControllerComponent = { 0x38608c0, 1 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, void, const FName> SetTrackingMotionSource = { 0x38608c0, 1 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetShowDeviceModel
-	constexpr static const FunctionPointer<UMotionControllerComponent, void, const bool> UMotionControllerComponent = { 0x3860d60, 2 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, void, const bool> SetShowDeviceModel = { 0x3860d60, 2 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetDisplayModelSource
-	constexpr static const FunctionPointer<UMotionControllerComponent, void, const FName> UMotionControllerComponent = { 0x3860c70, 3 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, void, const FName> SetDisplayModelSource = { 0x3860c70, 3 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetCustomDisplayMesh
-	constexpr static const FunctionPointer<UMotionControllerComponent, void, const UStaticMesh*> UMotionControllerComponent = { 0x3860b30, 4 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, void, const UStaticMesh*> SetCustomDisplayMesh = { 0x3860b30, 4 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetAssociatedPlayerIndex
-	constexpr static const FunctionPointer<UMotionControllerComponent, void, const int32_t> UMotionControllerComponent = { 0x38607b0, 5 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, void, const int32_t> SetAssociatedPlayerIndex = { 0x38607b0, 5 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.OnMotionControllerUpdated
-	constexpr static const FunctionPointer<UMotionControllerComponent, void> UMotionControllerComponent = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, void> OnMotionControllerUpdated = { 0x2bbb090, 6 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.IsTracked
-	constexpr static const FunctionPointer<UMotionControllerComponent, bool> UMotionControllerComponent = { 0x2832250, 7 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, bool> IsTracked = { 0x2832250, 7 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetTrackingSource
-	constexpr static const FunctionPointer<UMotionControllerComponent, EControllerHand> UMotionControllerComponent = { 0x38609d0, 8 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, EControllerHand> GetTrackingSource = { 0x38609d0, 8 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetParameterValue
-	constexpr static const FunctionPointer<UMotionControllerComponent, float, const FName, const bool&> UMotionControllerComponent = { 0x38605f0, 9 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, float, const FName, const bool&> GetParameterValue = { 0x38605f0, 9 }; 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetHandJointPosition
-	constexpr static const FunctionPointer<UMotionControllerComponent, FVector, const int32_t, const bool&> UMotionControllerComponent = { 0x3860440, 10 }; 
+	constexpr static const FunctionPointer<UMotionControllerComponent, FVector, const int32_t, const bool&> GetHandJointPosition = { 0x3860440, 10 }; 
 };
 
 /// Class /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary
@@ -313,44 +311,43 @@ class UMotionTrackedDeviceFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.SetIsControllerMotionTrackingEnabledByDefault
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const bool> UMotionTrackedDeviceFunctionLibrary = { 0x3862880, 0 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const bool> SetIsControllerMotionTrackingEnabledByDefault = { 0x3862880, 0 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForSource
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const FName> UMotionTrackedDeviceFunctionLibrary = { 0x38623d0, 1 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const FName> IsMotionTrackingEnabledForSource = { 0x38623d0, 1 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForDevice
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const EControllerHand> UMotionTrackedDeviceFunctionLibrary = { 0x3862540, 2 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const EControllerHand> IsMotionTrackingEnabledForDevice = { 0x3862540, 2 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForComponent
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const UMotionControllerComponent*> UMotionTrackedDeviceFunctionLibrary = { 0x38622d0, 3 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const UMotionControllerComponent*> IsMotionTrackingEnabledForComponent = { 0x38622d0, 3 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackedDeviceCountManagementNecessary
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool> UMotionTrackedDeviceFunctionLibrary = { 0x38629b0, 4 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool> IsMotionTrackedDeviceCountManagementNecessary = { 0x38629b0, 4 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionSourceTracking
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const FName> UMotionTrackedDeviceFunctionLibrary = { 0x3861480, 5 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const FName> IsMotionSourceTracking = { 0x3861480, 5 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMotionTrackingEnabledControllerCount
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, int32_t> UMotionTrackedDeviceFunctionLibrary = { 0x3862720, 6 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, int32_t> GetMotionTrackingEnabledControllerCount = { 0x3862720, 6 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMaximumMotionTrackedControllerCount
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, int32_t> UMotionTrackedDeviceFunctionLibrary = { 0x38627d0, 7 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, int32_t> GetMaximumMotionTrackedControllerCount = { 0x38627d0, 7 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetActiveTrackingSystemName
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, FName> UMotionTrackedDeviceFunctionLibrary = { 0x38616a0, 8 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, FName> GetActiveTrackingSystemName = { 0x38616a0, 8 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, TArray<FName>> UMotionTrackedDeviceFunctionLibrary = { 0x3861700, 9 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, TArray<FName>> EnumerateMotionSources = { 0x3861700, 9 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfSource
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const FName> UMotionTrackedDeviceFunctionLibrary = { 0x3861f80, 10 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const FName> EnableMotionTrackingOfSource = { 0x3861f80, 10 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfDevice
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const EControllerHand> UMotionTrackedDeviceFunctionLibrary = { 0x38620f0, 11 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const int32_t, const EControllerHand> EnableMotionTrackingOfDevice = { 0x38620f0, 11 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingForComponent
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const UMotionControllerComponent*> UMotionTrackedDeviceFunctionLibrary = { 0x3861e80, 12 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, bool, const UMotionControllerComponent*> EnableMotionTrackingForComponent = { 0x3861e80, 12 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfSource
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const int32_t, const FName> UMotionTrackedDeviceFunctionLibrary = { 0x3861b80, 13 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const int32_t, const FName> DisableMotionTrackingOfSource = { 0x3861b80, 13 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfDevice
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const int32_t, const EControllerHand> UMotionTrackedDeviceFunctionLibrary = { 0x3861cd0, 14 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const int32_t, const EControllerHand> DisableMotionTrackingOfDevice = { 0x3861cd0, 14 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfControllersForPlayer
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const int32_t> UMotionTrackedDeviceFunctionLibrary = { 0x38618e0, 15 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const int32_t> DisableMotionTrackingOfControllersForPlayer = { 0x38618e0, 15 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfAllControllers
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void> UMotionTrackedDeviceFunctionLibrary = { 0x3861a10, 16 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void> DisableMotionTrackingOfAllControllers = { 0x3861a10, 16 }; 
 	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingForComponent
-	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const UMotionControllerComponent*> UMotionTrackedDeviceFunctionLibrary = { 0x3861aa0, 17 }; 
+	constexpr static const FunctionPointer<UMotionTrackedDeviceFunctionLibrary, void, const UMotionControllerComponent*> DisableMotionTrackingForComponent = { 0x3861aa0, 17 }; 
 };
 
 /// Class /Script/HeadMountedDisplay.XRAssetFunctionLibrary
@@ -359,12 +356,11 @@ class UXRAssetFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/HeadMountedDisplay.XRAssetFunctionLibrary.AddNamedDeviceVisualizationComponentBlocking
-	constexpr static const FunctionPointer<UXRAssetFunctionLibrary, UPrimitiveComponent*, const AActor*, const FName, const FName, const bool, const FTransform&, const FXRDeviceId&> UXRAssetFunctionLibrary = { 0x3863460, 0 }; 
+	constexpr static const FunctionPointer<UXRAssetFunctionLibrary, UPrimitiveComponent*, const AActor*, const FName, const FName, const bool, const FTransform&, const FXRDeviceId&> AddNamedDeviceVisualizationComponentBlocking = { 0x3863460, 0 }; 
 	// Function /Script/HeadMountedDisplay.XRAssetFunctionLibrary.AddDeviceVisualizationComponentBlocking
-	constexpr static const FunctionPointer<UXRAssetFunctionLibrary, UPrimitiveComponent*, const AActor*, const FXRDeviceId&, const bool, const FTransform&> UXRAssetFunctionLibrary = { 0x38638d0, 1 }; 
+	constexpr static const FunctionPointer<UXRAssetFunctionLibrary, UPrimitiveComponent*, const AActor*, const FXRDeviceId&, const bool, const FTransform&> AddDeviceVisualizationComponentBlocking = { 0x38638d0, 1 }; 
 };
 
 /// Class /Script/HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent
@@ -377,12 +373,11 @@ public:
 	unsigned char                                      UnknownData01_6[0x8];                                       // 0x0050   (0x0008)  MISSED
 	class UPrimitiveComponent*                         SpawnedComponent;                                           // 0x0058   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddNamedDeviceVisualizationComponentAsync
-	constexpr static const FunctionPointer<UAsyncTask_LoadXRDeviceVisComponent, UAsyncTask_LoadXRDeviceVisComponent*, const AActor*, const FName, const FName, const bool, const FTransform&, const FXRDeviceId&, const UPrimitiveComponent*&> UAsyncTask_LoadXRDeviceVisComponent = { 0x3864550, 0 }; 
+	constexpr static const FunctionPointer<UAsyncTask_LoadXRDeviceVisComponent, UAsyncTask_LoadXRDeviceVisComponent*, const AActor*, const FName, const FName, const bool, const FTransform&, const FXRDeviceId&, const UPrimitiveComponent*&> AddNamedDeviceVisualizationComponentAsync = { 0x3864550, 0 }; 
 	// Function /Script/HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddDeviceVisualizationComponentAsync
-	constexpr static const FunctionPointer<UAsyncTask_LoadXRDeviceVisComponent, UAsyncTask_LoadXRDeviceVisComponent*, const AActor*, const FXRDeviceId&, const bool, const FTransform&, const UPrimitiveComponent*&> UAsyncTask_LoadXRDeviceVisComponent = { 0x38641e0, 1 }; 
+	constexpr static const FunctionPointer<UAsyncTask_LoadXRDeviceVisComponent, UAsyncTask_LoadXRDeviceVisComponent*, const AActor*, const FXRDeviceId&, const bool, const FTransform&, const UPrimitiveComponent*&> AddDeviceVisualizationComponentAsync = { 0x38641e0, 1 }; 
 };
 
 /// Class /Script/HeadMountedDisplay.XRLoadingScreenFunctionLibrary
@@ -391,18 +386,17 @@ class UXRLoadingScreenFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/HeadMountedDisplay.XRLoadingScreenFunctionLibrary.ShowLoadingScreen
-	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void> UXRLoadingScreenFunctionLibrary = { 0x3864fc0, 0 }; 
+	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void> ShowLoadingScreen = { 0x3864fc0, 0 }; 
 	// Function /Script/HeadMountedDisplay.XRLoadingScreenFunctionLibrary.SetLoadingScreen
-	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void, const UTexture*, const FVector2D, const FVector, const bool, const bool> UXRLoadingScreenFunctionLibrary = { 0x3865a30, 1 }; 
+	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void, const UTexture*, const FVector2D, const FVector, const bool, const bool> SetLoadingScreen = { 0x3865a30, 1 }; 
 	// Function /Script/HeadMountedDisplay.XRLoadingScreenFunctionLibrary.HideLoadingScreen
-	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void> UXRLoadingScreenFunctionLibrary = { 0x3864f60, 2 }; 
+	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void> HideLoadingScreen = { 0x3864f60, 2 }; 
 	// Function /Script/HeadMountedDisplay.XRLoadingScreenFunctionLibrary.ClearLoadingScreenSplashes
-	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void> UXRLoadingScreenFunctionLibrary = { 0x38659d0, 3 }; 
+	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void> ClearLoadingScreenSplashes = { 0x38659d0, 3 }; 
 	// Function /Script/HeadMountedDisplay.XRLoadingScreenFunctionLibrary.AddLoadingScreenSplash
-	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void, const UTexture*, const FVector, const FRotator, const FVector2D, const FRotator, const bool> UXRLoadingScreenFunctionLibrary = { 0x3865020, 4 }; 
+	constexpr static const FunctionPointer<UXRLoadingScreenFunctionLibrary, void, const UTexture*, const FVector, const FRotator, const FVector2D, const FRotator, const bool> AddLoadingScreenSplash = { 0x3865020, 4 }; 
 };
 
 /// Struct /Script/HeadMountedDisplay.XRMotionControllerData

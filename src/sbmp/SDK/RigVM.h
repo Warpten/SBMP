@@ -273,52 +273,51 @@ public:
 	unsigned char                                      UnknownData09_6[0x48];                                      // 0x02A8   (0x0048)  MISSED
 	class URigVM*                                      DeferredVMToCopy;                                           // 0x02F0   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/RigVM.RigVM.SetParameterValueVector2D
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const FVector2D&, const int32_t> URigVM = { 0x4a5cab0, 0 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const FVector2D&, const int32_t> SetParameterValueVector2D = { 0x4a5cab0, 0 }; 
 	// Function /Script/RigVM.RigVM.SetParameterValueVector
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const FVector&, const int32_t> URigVM = { 0x4a5c810, 1 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const FVector&, const int32_t> SetParameterValueVector = { 0x4a5c810, 1 }; 
 	// Function /Script/RigVM.RigVM.SetParameterValueTransform
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const FTransform&, const int32_t> URigVM = { 0x4a5c280, 2 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const FTransform&, const int32_t> SetParameterValueTransform = { 0x4a5c280, 2 }; 
 	// Function /Script/RigVM.RigVM.SetParameterValueString
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const FString, const int32_t> URigVM = { 0x4a5cd40, 3 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const FString, const int32_t> SetParameterValueString = { 0x4a5cd40, 3 }; 
 	// Function /Script/RigVM.RigVM.SetParameterValueQuat
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const FQuat&, const int32_t> URigVM = { 0x4a5c580, 4 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const FQuat&, const int32_t> SetParameterValueQuat = { 0x4a5c580, 4 }; 
 	// Function /Script/RigVM.RigVM.SetParameterValueName
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const FName&, const int32_t> URigVM = { 0x4a5d020, 5 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const FName&, const int32_t> SetParameterValueName = { 0x4a5d020, 5 }; 
 	// Function /Script/RigVM.RigVM.SetParameterValueInt
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const int32_t, const int32_t> URigVM = { 0x4a5d2b0, 6 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const int32_t, const int32_t> SetParameterValueInt = { 0x4a5d2b0, 6 }; 
 	// Function /Script/RigVM.RigVM.SetParameterValueFloat
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const float, const int32_t> URigVM = { 0x4a5d530, 7 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const float, const int32_t> SetParameterValueFloat = { 0x4a5d530, 7 }; 
 	// Function /Script/RigVM.RigVM.SetParameterValueBool
-	constexpr static const FunctionPointer<URigVM, void, const FName&, const bool, const int32_t> URigVM = { 0x4a5d7b0, 8 }; 
+	constexpr static const FunctionPointer<URigVM, void, const FName&, const bool, const int32_t> SetParameterValueBool = { 0x4a5d7b0, 8 }; 
 	// Function /Script/RigVM.RigVM.GetRigVMFunctionName
-	constexpr static const FunctionPointer<URigVM, FString, const int32_t> URigVM = { 0x4a5eea0, 9 }; 
+	constexpr static const FunctionPointer<URigVM, FString, const int32_t> GetRigVMFunctionName = { 0x4a5eea0, 9 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueVector2D
-	constexpr static const FunctionPointer<URigVM, FVector2D, const FName&, const int32_t> URigVM = { 0x4a5e090, 10 }; 
+	constexpr static const FunctionPointer<URigVM, FVector2D, const FName&, const int32_t> GetParameterValueVector2D = { 0x4a5e090, 10 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueVector
-	constexpr static const FunctionPointer<URigVM, FVector, const FName&, const int32_t> URigVM = { 0x4a5de70, 11 }; 
+	constexpr static const FunctionPointer<URigVM, FVector, const FName&, const int32_t> GetParameterValueVector = { 0x4a5de70, 11 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueTransform
-	constexpr static const FunctionPointer<URigVM, FTransform, const FName&, const int32_t> URigVM = { 0x4a5da30, 12 }; 
+	constexpr static const FunctionPointer<URigVM, FTransform, const FName&, const int32_t> GetParameterValueTransform = { 0x4a5da30, 12 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueString
-	constexpr static const FunctionPointer<URigVM, FString, const FName&, const int32_t> URigVM = { 0x4a5e2c0, 13 }; 
+	constexpr static const FunctionPointer<URigVM, FString, const FName&, const int32_t> GetParameterValueString = { 0x4a5e2c0, 13 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueQuat
-	constexpr static const FunctionPointer<URigVM, FQuat, const FName&, const int32_t> URigVM = { 0x4a5dc60, 14 }; 
+	constexpr static const FunctionPointer<URigVM, FQuat, const FName&, const int32_t> GetParameterValueQuat = { 0x4a5dc60, 14 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueName
-	constexpr static const FunctionPointer<URigVM, FName, const FName&, const int32_t> URigVM = { 0x4a5e500, 15 }; 
+	constexpr static const FunctionPointer<URigVM, FName, const FName&, const int32_t> GetParameterValueName = { 0x4a5e500, 15 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueInt
-	constexpr static const FunctionPointer<URigVM, int32_t, const FName&, const int32_t> URigVM = { 0x4a5e720, 16 }; 
+	constexpr static const FunctionPointer<URigVM, int32_t, const FName&, const int32_t> GetParameterValueInt = { 0x4a5e720, 16 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueFloat
-	constexpr static const FunctionPointer<URigVM, float, const FName&, const int32_t> URigVM = { 0x4a5e930, 17 }; 
+	constexpr static const FunctionPointer<URigVM, float, const FName&, const int32_t> GetParameterValueFloat = { 0x4a5e930, 17 }; 
 	// Function /Script/RigVM.RigVM.GetParameterValueBool
-	constexpr static const FunctionPointer<URigVM, bool, const FName&, const int32_t> URigVM = { 0x4a5eb40, 18 }; 
+	constexpr static const FunctionPointer<URigVM, bool, const FName&, const int32_t> GetParameterValueBool = { 0x4a5eb40, 18 }; 
 	// Function /Script/RigVM.RigVM.GetParameterArraySize
-	constexpr static const FunctionPointer<URigVM, int32_t, const FName&> URigVM = { 0x4a5ed60, 19 }; 
+	constexpr static const FunctionPointer<URigVM, int32_t, const FName&> GetParameterArraySize = { 0x4a5ed60, 19 }; 
 	// Function /Script/RigVM.RigVM.Execute
-	constexpr static const FunctionPointer<URigVM, bool, const FName&> URigVM = { 0x4a5f1a0, 20 }; 
+	constexpr static const FunctionPointer<URigVM, bool, const FName&> Execute = { 0x4a5f1a0, 20 }; 
 	// Function /Script/RigVM.RigVM.AddRigVMFunction
-	constexpr static const FunctionPointer<URigVM, int32_t, const UScriptStruct*, const FName&> URigVM = { 0x4a5f030, 21 }; 
+	constexpr static const FunctionPointer<URigVM, int32_t, const UScriptStruct*, const FName&> AddRigVMFunction = { 0x4a5f030, 21 }; 
 };
 
 /// Struct /Script/RigVM.RigVMStruct

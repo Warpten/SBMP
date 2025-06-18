@@ -45,20 +45,19 @@ public:
 	FMulticastInlineDelegate                           OnComponentFracture;                                        // 0x08B0   (0x0010)  
 	unsigned char                                      UnknownData07_7[0x98];                                      // 0x08C0   (0x0098)  MISSED
 
-
 	/// Functions
 	// Function /Script/ApexDestruction.DestructibleComponent.SetSmallChunkCollisionResponseToChannel
-	constexpr static const FunctionPointer<UDestructibleComponent, void, const TEnumAsByte<ECollisionChannel>, const TEnumAsByte<ECollisionResponse>> UDestructibleComponent = { 0x12e1960, 0 }; 
+	constexpr static const FunctionPointer<UDestructibleComponent, void, const TEnumAsByte<ECollisionChannel>, const TEnumAsByte<ECollisionResponse>> SetSmallChunkCollisionResponseToChannel = { 0x12e1960, 0 }; 
 	// Function /Script/ApexDestruction.DestructibleComponent.SetLargeChunkCollisionResponseToChannel
-	constexpr static const FunctionPointer<UDestructibleComponent, void, const TEnumAsByte<ECollisionChannel>, const TEnumAsByte<ECollisionResponse>> UDestructibleComponent = { 0x12e1ad0, 1 }; 
+	constexpr static const FunctionPointer<UDestructibleComponent, void, const TEnumAsByte<ECollisionChannel>, const TEnumAsByte<ECollisionResponse>> SetLargeChunkCollisionResponseToChannel = { 0x12e1ad0, 1 }; 
 	// Function /Script/ApexDestruction.DestructibleComponent.SetDestructibleMesh
-	constexpr static const FunctionPointer<UDestructibleComponent, void, const UDestructibleMesh*> UDestructibleComponent = { 0x12e1cb0, 2 }; 
+	constexpr static const FunctionPointer<UDestructibleComponent, void, const UDestructibleMesh*> SetDestructibleMesh = { 0x12e1cb0, 2 }; 
 	// Function /Script/ApexDestruction.DestructibleComponent.GetDestructibleMesh
-	constexpr static const FunctionPointer<UDestructibleComponent, UDestructibleMesh*> UDestructibleComponent = { 0x12e1c40, 3 }; 
+	constexpr static const FunctionPointer<UDestructibleComponent, UDestructibleMesh*> GetDestructibleMesh = { 0x12e1c40, 3 }; 
 	// Function /Script/ApexDestruction.DestructibleComponent.ApplyRadiusDamage
-	constexpr static const FunctionPointer<UDestructibleComponent, void, const float, const FVector&, const float, const float, const bool> UDestructibleComponent = { 0x12e1d90, 4 }; 
+	constexpr static const FunctionPointer<UDestructibleComponent, void, const float, const FVector&, const float, const float, const bool> ApplyRadiusDamage = { 0x12e1d90, 4 }; 
 	// Function /Script/ApexDestruction.DestructibleComponent.ApplyDamage
-	constexpr static const FunctionPointer<UDestructibleComponent, void, const float, const FVector&, const FVector&, const float> UDestructibleComponent = { 0x12e20d0, 5 }; 
+	constexpr static const FunctionPointer<UDestructibleComponent, void, const float, const FVector&, const FVector&, const float> ApplyDamage = { 0x12e20d0, 5 }; 
 };
 
 /// Struct /Script/ApexDestruction.FractureMaterial

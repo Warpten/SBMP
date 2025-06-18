@@ -161,42 +161,41 @@ class UMagicLeapControllerFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.SetMotionSourceForHand
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EControllerHand, const FName> UMagicLeapControllerFunctionLibrary = { 0x18ebd50, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EControllerHand, const FName> SetMotionSourceForHand = { 0x18ebd50, 0 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.SetControllerTrackingMode
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EMagicLeapControllerTrackingMode> UMagicLeapControllerFunctionLibrary = { 0x18eb9c0, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EMagicLeapControllerTrackingMode> SetControllerTrackingMode = { 0x18eb9c0, 1 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.PlayLEDPattern
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const FName, const EMagicLeapControllerLEDPattern, const EMagicLeapControllerLEDColor, const float> UMagicLeapControllerFunctionLibrary = { 0x18ec7c0, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const FName, const EMagicLeapControllerLEDPattern, const EMagicLeapControllerLEDColor, const float> PlayLEDPattern = { 0x18ec7c0, 2 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.PlayLEDEffect
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const FName, const EMagicLeapControllerLEDEffect, const EMagicLeapControllerLEDSpeed, const EMagicLeapControllerLEDPattern, const EMagicLeapControllerLEDColor, const float> UMagicLeapControllerFunctionLibrary = { 0x18ec3b0, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const FName, const EMagicLeapControllerLEDEffect, const EMagicLeapControllerLEDSpeed, const EMagicLeapControllerLEDPattern, const EMagicLeapControllerLEDColor, const float> PlayLEDEffect = { 0x18ec3b0, 3 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.PlayHapticPattern
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const FName, const EMagicLeapControllerHapticPattern, const EMagicLeapControllerHapticIntensity> UMagicLeapControllerFunctionLibrary = { 0x18ec130, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const FName, const EMagicLeapControllerHapticPattern, const EMagicLeapControllerHapticIntensity> PlayHapticPattern = { 0x18ec130, 4 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerLEDEffect
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EControllerHand, const EMagicLeapControllerLEDEffect, const EMagicLeapControllerLEDSpeed, const EMagicLeapControllerLEDPattern, const EMagicLeapControllerLEDColor, const float> UMagicLeapControllerFunctionLibrary = { 0x18eb2c0, 5 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EControllerHand, const EMagicLeapControllerLEDEffect, const EMagicLeapControllerLEDSpeed, const EMagicLeapControllerLEDPattern, const EMagicLeapControllerLEDColor, const float> PlayControllerLEDEffect = { 0x18eb2c0, 5 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerLED
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EControllerHand, const EMagicLeapControllerLEDPattern, const EMagicLeapControllerLEDColor, const float> UMagicLeapControllerFunctionLibrary = { 0x18eb6c0, 6 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EControllerHand, const EMagicLeapControllerLEDPattern, const EMagicLeapControllerLEDColor, const float> PlayControllerLED = { 0x18eb6c0, 6 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerHapticFeedback
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EControllerHand, const EMagicLeapControllerHapticPattern, const EMagicLeapControllerHapticIntensity> UMagicLeapControllerFunctionLibrary = { 0x18eb040, 7 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const EControllerHand, const EMagicLeapControllerHapticPattern, const EMagicLeapControllerHapticIntensity> PlayControllerHapticFeedback = { 0x18eb040, 7 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.MaxSupportedMagicLeapControllers
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, int32_t> UMagicLeapControllerFunctionLibrary = { 0x113b840, 8 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, int32_t> MaxSupportedMagicLeapControllers = { 0x113b840, 8 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.IsMLControllerConnected
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const FName> UMagicLeapControllerFunctionLibrary = { 0x18ebc80, 9 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const FName> IsMLControllerConnected = { 0x18ebc80, 9 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.InvertControllerMapping
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, void> UMagicLeapControllerFunctionLibrary = { 0x11615e0, 10 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, void> InvertControllerMapping = { 0x11615e0, 10 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.GetMotionSourceForHand
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, FName, const EControllerHand> UMagicLeapControllerFunctionLibrary = { 0x18ebf80, 11 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, FName, const EControllerHand> GetMotionSourceForHand = { 0x18ebf80, 11 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.GetMLControllerType
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, EMagicLeapControllerType, const EControllerHand> UMagicLeapControllerFunctionLibrary = { 0x18eb9c0, 12 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, EMagicLeapControllerType, const EControllerHand> GetMLControllerType = { 0x18eb9c0, 12 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.GetHandForMotionSource
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, EControllerHand, const FName> UMagicLeapControllerFunctionLibrary = { 0x18ebeb0, 13 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, EControllerHand, const FName> GetHandForMotionSource = { 0x18ebeb0, 13 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerType
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, EMagicLeapControllerType, const FName> UMagicLeapControllerFunctionLibrary = { 0x18ebc80, 14 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, EMagicLeapControllerType, const FName> GetControllerType = { 0x18ebc80, 14 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerTrackingMode
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, EMagicLeapControllerTrackingMode> UMagicLeapControllerFunctionLibrary = { 0x18ec050, 15 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, EMagicLeapControllerTrackingMode> GetControllerTrackingMode = { 0x18ec050, 15 }; 
 	// Function /Script/MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerMapping
-	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const int32_t, const EControllerHand&> UMagicLeapControllerFunctionLibrary = { 0x18ebb20, 16 }; 
+	constexpr static const FunctionPointer<UMagicLeapControllerFunctionLibrary, bool, const int32_t, const EControllerHand&> GetControllerMapping = { 0x18ebb20, 16 }; 
 };
 
 /// Class /Script/MagicLeapController.MagicLeapTouchpadGesturesComponent

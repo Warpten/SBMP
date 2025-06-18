@@ -69,42 +69,41 @@ public:
 	class UMagicLeapARPinSaveGame*                     PinData;                                                    // 0x0320   (0x0008)  
 	unsigned char                                      UnknownData03_7[0xF8];                                      // 0x0328   (0x00F8)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.UnPin
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void> UMagicLeapARPinComponent = { 0x18c99d0, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void> UnPin = { 0x18c99d0, 0 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.TryGetPinData
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, UMagicLeapARPinSaveGame*, const UClass*, const bool&> UMagicLeapARPinComponent = { 0x18c94b0, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, UMagicLeapARPinSaveGame*, const UClass*, const bool&> TryGetPinData = { 0x18c94b0, 1 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.PinToRestoredOrSyncedID
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool> UMagicLeapARPinComponent = { 0x18c9d50, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool> PinToRestoredOrSyncedID = { 0x18c9d50, 2 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.PinToID
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const FGuid&> UMagicLeapARPinComponent = { 0x18c9e10, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const FGuid&> PinToID = { 0x18c9e10, 3 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.PinToBestFit
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void> UMagicLeapARPinComponent = { 0x18c9dc0, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void> PinToBestFit = { 0x18c9dc0, 4 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.PinSceneComponent
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const USceneComponent*> UMagicLeapARPinComponent = { 0x18c9c30, 5 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const USceneComponent*> PinSceneComponent = { 0x18c9c30, 5 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.PinRestoredOrSynced
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool> UMagicLeapARPinComponent = { 0x18c9970, 6 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool> PinRestoredOrSynced = { 0x18c9970, 6 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.PinActor
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const AActor*> UMagicLeapARPinComponent = { 0x18c9b10, 7 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const AActor*> PinActor = { 0x18c9b10, 7 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.PersistentEntityPinned__DelegateSignature
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void, const bool> UMagicLeapARPinComponent = { 0x2bbb090, 8 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void, const bool> PersistentEntityPinned__DelegateSignature = { 0x2bbb090, 8 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.PersistentEntityPinLost__DelegateSignature
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void> UMagicLeapARPinComponent = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void> PersistentEntityPinLost__DelegateSignature = { 0x2bbb090, 9 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.MagicLeapARPinDataLoadAttemptCompleted__DelegateSignature
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void, const bool> UMagicLeapARPinComponent = { 0x2bbb090, 10 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void, const bool> MagicLeapARPinDataLoadAttemptCompleted__DelegateSignature = { 0x2bbb090, 10 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.IsPinned
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool> UMagicLeapARPinComponent = { 0x18c9990, 11 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool> IsPinned = { 0x18c9990, 11 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.GetPinState
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const FMagicLeapARPinState&> UMagicLeapARPinComponent = { 0x18c9380, 12 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const FMagicLeapARPinState&> GetPinState = { 0x18c9380, 12 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.GetPinnedPinID
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const FGuid&> UMagicLeapARPinComponent = { 0x18c9860, 13 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool, const FGuid&> GetPinnedPinID = { 0x18c9860, 13 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.GetPinData
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, UMagicLeapARPinSaveGame*, const UClass*> UMagicLeapARPinComponent = { 0x18c96e0, 14 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, UMagicLeapARPinSaveGame*, const UClass*> GetPinData = { 0x18c96e0, 14 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.AttemptPinDataRestorationAsync
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void> UMagicLeapARPinComponent = { 0x18c9330, 15 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, void> AttemptPinDataRestorationAsync = { 0x18c9330, 15 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinComponent.AttemptPinDataRestoration
-	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool> UMagicLeapARPinComponent = { 0x18c9350, 16 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinComponent, bool> AttemptPinDataRestoration = { 0x18c9350, 16 }; 
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary
@@ -113,50 +112,49 @@ class UMagicLeapARPinFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.UnBindToOnMagicLeapContentBindingFoundDelegate
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const FDelegateProperty&> UMagicLeapARPinFunctionLibrary = { 0x18ca610, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const FDelegateProperty&> UnBindToOnMagicLeapContentBindingFoundDelegate = { 0x18ca610, 0 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.UnBindToOnMagicLeapARPinUpdatedDelegate
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const FDelegateProperty&> UMagicLeapARPinFunctionLibrary = { 0x18cac00, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const FDelegateProperty&> UnBindToOnMagicLeapARPinUpdatedDelegate = { 0x18cac00, 1 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.SetGlobalQueryFilter
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FMagicLeapARPinQuery&> UMagicLeapARPinFunctionLibrary = { 0x18caa30, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FMagicLeapARPinQuery&> SetGlobalQueryFilter = { 0x18caa30, 2 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.SetContentBindingSaveGameUserIndex
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const int32_t> UMagicLeapARPinFunctionLibrary = { 0x18ca500, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const int32_t> SetContentBindingSaveGameUserIndex = { 0x18ca500, 3 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.QueryARPins
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FMagicLeapARPinQuery&, const TArray<FGuid>&> UMagicLeapARPinFunctionLibrary = { 0x18cba90, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FMagicLeapARPinQuery&, const TArray<FGuid>&> QueryARPins = { 0x18cba90, 4 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.ParseStringToARPinId
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, bool, const FString, const FGuid&> UMagicLeapARPinFunctionLibrary = { 0x18cae20, 5 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, bool, const FString, const FGuid&> ParseStringToARPinId = { 0x18cae20, 5 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.IsTrackerValid
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, bool> UMagicLeapARPinFunctionLibrary = { 0x18cc190, 6 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, bool> IsTrackerValid = { 0x18cc190, 6 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetNumAvailableARPins
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const int32_t&> UMagicLeapARPinFunctionLibrary = { 0x18cc080, 7 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const int32_t&> GetNumAvailableARPins = { 0x18cc080, 7 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetGlobalQueryFilter
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FMagicLeapARPinQuery&> UMagicLeapARPinFunctionLibrary = { 0x18ca830, 8 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FMagicLeapARPinQuery&> GetGlobalQueryFilter = { 0x18ca830, 8 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetContentBindingSaveGameUserIndex
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, int32_t> UMagicLeapARPinFunctionLibrary = { 0x18ca5d0, 9 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, int32_t> GetContentBindingSaveGameUserIndex = { 0x18ca5d0, 9 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetClosestARPin
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FVector&, const FGuid&> UMagicLeapARPinFunctionLibrary = { 0x18cbcf0, 10 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FVector&, const FGuid&> GetClosestARPin = { 0x18cbcf0, 10 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetAvailableARPins
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const int32_t, const TArray<FGuid>&> UMagicLeapARPinFunctionLibrary = { 0x18cbe90, 11 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const int32_t, const TArray<FGuid>&> GetAvailableARPins = { 0x18cbe90, 11 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinStateToString
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, FString, const FMagicLeapARPinState&> UMagicLeapARPinFunctionLibrary = { 0x18cb1e0, 12 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, FString, const FMagicLeapARPinState&> GetARPinStateToString = { 0x18cb1e0, 12 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinState
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FGuid&, const FMagicLeapARPinState&> UMagicLeapARPinFunctionLibrary = { 0x18cb310, 13 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError, const FGuid&, const FMagicLeapARPinState&> GetARPinState = { 0x18cb310, 13 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinPositionAndOrientation_TrackingSpace
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, bool, const FGuid&, const FVector&, const FRotator&, const bool&> UMagicLeapARPinFunctionLibrary = { 0x18cb7b0, 14 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, bool, const FGuid&, const FVector&, const FRotator&, const bool&> GetARPinPositionAndOrientation_TrackingSpace = { 0x18cb7b0, 14 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinPositionAndOrientation
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, bool, const FGuid&, const FVector&, const FRotator&, const bool&> UMagicLeapARPinFunctionLibrary = { 0x18cb4d0, 15 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, bool, const FGuid&, const FVector&, const FRotator&, const bool&> GetARPinPositionAndOrientation = { 0x18cb4d0, 15 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.DestroyTracker
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError> UMagicLeapARPinFunctionLibrary = { 0x18cc1e0, 16 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError> DestroyTracker = { 0x18cc1e0, 16 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.CreateTracker
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError> UMagicLeapARPinFunctionLibrary = { 0x18cc230, 17 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, EMagicLeapPassableWorldError> CreateTracker = { 0x18cc230, 17 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.BindToOnMagicLeapContentBindingFoundDelegate
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const FDelegateProperty&> UMagicLeapARPinFunctionLibrary = { 0x18ca710, 18 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const FDelegateProperty&> BindToOnMagicLeapContentBindingFoundDelegate = { 0x18ca710, 18 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.BindToOnMagicLeapARPinUpdatedDelegate
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const FDelegateProperty&> UMagicLeapARPinFunctionLibrary = { 0x18cad00, 19 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, void, const FDelegateProperty&> BindToOnMagicLeapARPinUpdatedDelegate = { 0x18cad00, 19 }; 
 	// Function /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary.ARPinIdToString
-	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, FString, const FGuid&> UMagicLeapARPinFunctionLibrary = { 0x18cafc0, 20 }; 
+	constexpr static const FunctionPointer<UMagicLeapARPinFunctionLibrary, FString, const FGuid&> ARPinIdToString = { 0x18cafc0, 20 }; 
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinInfoActorBase
@@ -168,10 +166,9 @@ public:
 	bool                                               bVisibilityOverride;                                        // 0x02D8   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x7];                                       // 0x02D9   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeapARPin.MagicLeapARPinInfoActorBase.OnUpdateARPinState
-	constexpr static const FunctionPointer<AMagicLeapARPinInfoActorBase, void> AMagicLeapARPinInfoActorBase = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<AMagicLeapARPinInfoActorBase, void> OnUpdateARPinState = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinRenderer
@@ -185,10 +182,9 @@ public:
 	unsigned char                                      UnknownData03_6[0x8];                                       // 0x0320   (0x0008)  MISSED
 	class UClass*                                      ClassToSpawn;                                               // 0x0328   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/MagicLeapARPin.MagicLeapARPinRenderer.SetVisibilityOverride
-	constexpr static const FunctionPointer<AMagicLeapARPinRenderer, void, const bool> AMagicLeapARPinRenderer = { 0x18ccde0, 0 }; 
+	constexpr static const FunctionPointer<AMagicLeapARPinRenderer, void, const bool> SetVisibilityOverride = { 0x18ccde0, 0 }; 
 };
 
 /// Struct /Script/MagicLeapARPin.MagicLeapARPinState

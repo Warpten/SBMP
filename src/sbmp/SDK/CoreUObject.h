@@ -318,10 +318,9 @@ public:
 	FName                                              NamePrivate;                                                // 0x0018   (0x0008)  
 	class UObject*                                     OuterPrivate;                                               // 0x0020   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/CoreUObject.Object.ExecuteUbergraph
-	constexpr static const FunctionPointer<UObject, void, const int32_t> UObject = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UObject, void, const int32_t> ExecuteUbergraph = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/CoreUObject.Interface

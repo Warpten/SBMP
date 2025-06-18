@@ -29,22 +29,21 @@ class ULocationServices : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/LocationServicesBPLibrary.LocationServices.StopLocationServices
-	constexpr static const FunctionPointer<ULocationServices, bool> ULocationServices = { 0x198fe20, 0 }; 
+	constexpr static const FunctionPointer<ULocationServices, bool> StopLocationServices = { 0x198fe20, 0 }; 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.StartLocationServices
-	constexpr static const FunctionPointer<ULocationServices, bool> ULocationServices = { 0x198fe70, 1 }; 
+	constexpr static const FunctionPointer<ULocationServices, bool> StartLocationServices = { 0x198fe70, 1 }; 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.IsLocationAccuracyAvailable
-	constexpr static const FunctionPointer<ULocationServices, bool, const ELocationAccuracy> ULocationServices = { 0x198fc80, 2 }; 
+	constexpr static const FunctionPointer<ULocationServices, bool, const ELocationAccuracy> IsLocationAccuracyAvailable = { 0x198fc80, 2 }; 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.InitLocationServices
-	constexpr static const FunctionPointer<ULocationServices, bool, const ELocationAccuracy, const float, const float> ULocationServices = { 0x198fec0, 3 }; 
+	constexpr static const FunctionPointer<ULocationServices, bool, const ELocationAccuracy, const float, const float> InitLocationServices = { 0x198fec0, 3 }; 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.GetLocationServicesImpl
-	constexpr static const FunctionPointer<ULocationServices, ULocationServicesImpl*> ULocationServices = { 0x198fc60, 4 }; 
+	constexpr static const FunctionPointer<ULocationServices, ULocationServicesImpl*> GetLocationServicesImpl = { 0x198fc60, 4 }; 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.GetLastKnownLocation
-	constexpr static const FunctionPointer<ULocationServices, FLocationServicesData> ULocationServices = { 0x198fdc0, 5 }; 
+	constexpr static const FunctionPointer<ULocationServices, FLocationServicesData> GetLastKnownLocation = { 0x198fdc0, 5 }; 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.AreLocationServicesEnabled
-	constexpr static const FunctionPointer<ULocationServices, bool> ULocationServices = { 0x198fd70, 6 }; 
+	constexpr static const FunctionPointer<ULocationServices, bool> AreLocationServicesEnabled = { 0x198fd70, 6 }; 
 };
 
 /// Class /Script/LocationServicesBPLibrary.LocationServicesImpl

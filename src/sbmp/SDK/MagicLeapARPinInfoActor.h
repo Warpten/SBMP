@@ -36,18 +36,17 @@ public:
 	class USceneComponent*                             Root;                                                       // 0x0360   (0x0008)  
 	float                                              RotationSmoothSpeed;                                        // 0x0368   (0x0004)  
 
-
 	/// Functions
 	// Function /MagicLeapPassableWorld/MagicLeapARPinInfoActor.MagicLeapARPinInfoActor_C.UpdatePinState
-	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void> AMagicLeapARPinInfoActor_C = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void> UpdatePinState = { 0x2bbb090, 0 }; 
 	// Function /MagicLeapPassableWorld/MagicLeapARPinInfoActor.MagicLeapARPinInfoActor_C.UserConstructionScript
-	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void> AMagicLeapARPinInfoActor_C = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void> UserConstructionScript = { 0x2bbb090, 1 }; 
 	// Function /MagicLeapPassableWorld/MagicLeapARPinInfoActor.MagicLeapARPinInfoActor_C.OnUpdateARPinState
-	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void> AMagicLeapARPinInfoActor_C = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void> OnUpdateARPinState = { 0x2bbb090, 2 }; 
 	// Function /MagicLeapPassableWorld/MagicLeapARPinInfoActor.MagicLeapARPinInfoActor_C.ReceiveTick
-	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void, const float> AMagicLeapARPinInfoActor_C = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void, const float> ReceiveTick = { 0x2bbb090, 3 }; 
 	// Function /MagicLeapPassableWorld/MagicLeapARPinInfoActor.MagicLeapARPinInfoActor_C.ExecuteUbergraph_MagicLeapARPinInfoActor
-	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void, const int32_t> AMagicLeapARPinInfoActor_C = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<AMagicLeapARPinInfoActor_C, void, const int32_t> ExecuteUbergraph_MagicLeapARPinInfoActor = { 0x2bbb090, 4 }; 
 };
 
 #pragma pack(pop)

@@ -36,14 +36,13 @@ public:
 	TArray<class UVariantSet*>                         VariantSets;                                                // 0x0030   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x50];                                      // 0x0040   (0x0050)  MISSED
 
-
 	/// Functions
 	// Function /Script/VariantManagerContent.LevelVariantSets.GetVariantSetByName
-	constexpr static const FunctionPointer<ULevelVariantSets, UVariantSet*, const FString> ULevelVariantSets = { 0x17b8cc0, 0 }; 
+	constexpr static const FunctionPointer<ULevelVariantSets, UVariantSet*, const FString> GetVariantSetByName = { 0x17b8cc0, 0 }; 
 	// Function /Script/VariantManagerContent.LevelVariantSets.GetVariantSet
-	constexpr static const FunctionPointer<ULevelVariantSets, UVariantSet*, const int32_t> ULevelVariantSets = { 0x17b8e10, 1 }; 
+	constexpr static const FunctionPointer<ULevelVariantSets, UVariantSet*, const int32_t> GetVariantSet = { 0x17b8e10, 1 }; 
 	// Function /Script/VariantManagerContent.LevelVariantSets.GetNumVariantSets
-	constexpr static const FunctionPointer<ULevelVariantSets, int32_t> ULevelVariantSets = { 0x163be10, 2 }; 
+	constexpr static const FunctionPointer<ULevelVariantSets, int32_t> GetNumVariantSets = { 0x163be10, 2 }; 
 };
 
 /// Class /Script/VariantManagerContent.LevelVariantSetsActor
@@ -53,16 +52,15 @@ class ALevelVariantSetsActor : public AActor
 public:
 	FSoftObjectPath                                    LevelVariantSets;                                           // 0x02C8   (0x0018)  
 
-
 	/// Functions
 	// Function /Script/VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByName
-	constexpr static const FunctionPointer<ALevelVariantSetsActor, bool, const FString, const FString> ALevelVariantSetsActor = { 0x17b94c0, 0 }; 
+	constexpr static const FunctionPointer<ALevelVariantSetsActor, bool, const FString, const FString> SwitchOnVariantByName = { 0x17b94c0, 0 }; 
 	// Function /Script/VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByIndex
-	constexpr static const FunctionPointer<ALevelVariantSetsActor, bool, const int32_t, const int32_t> ALevelVariantSetsActor = { 0x17b9300, 1 }; 
+	constexpr static const FunctionPointer<ALevelVariantSetsActor, bool, const int32_t, const int32_t> SwitchOnVariantByIndex = { 0x17b9300, 1 }; 
 	// Function /Script/VariantManagerContent.LevelVariantSetsActor.SetLevelVariantSets
-	constexpr static const FunctionPointer<ALevelVariantSetsActor, void, const ULevelVariantSets*> ALevelVariantSetsActor = { 0x17b96d0, 2 }; 
+	constexpr static const FunctionPointer<ALevelVariantSetsActor, void, const ULevelVariantSets*> SetLevelVariantSets = { 0x17b96d0, 2 }; 
 	// Function /Script/VariantManagerContent.LevelVariantSetsActor.GetLevelVariantSets
-	constexpr static const FunctionPointer<ALevelVariantSetsActor, ULevelVariantSets*, const bool> ALevelVariantSetsActor = { 0x17b97b0, 3 }; 
+	constexpr static const FunctionPointer<ALevelVariantSetsActor, ULevelVariantSets*, const bool> GetLevelVariantSets = { 0x17b97b0, 3 }; 
 };
 
 /// Class /Script/VariantManagerContent.LevelVariantSetsFunctionDirector
@@ -103,14 +101,13 @@ public:
 	EPropertyValueCategory                             PropCategory;                                               // 0x0148   (0x0001)  
 	unsigned char                                      UnknownData07_7[0x6F];                                      // 0x0149   (0x006F)  MISSED
 
-
 	/// Functions
 	// Function /Script/VariantManagerContent.PropertyValue.HasRecordedData
-	constexpr static const FunctionPointer<UPropertyValue, bool> UPropertyValue = { 0x17ba020, 0 }; 
+	constexpr static const FunctionPointer<UPropertyValue, bool> HasRecordedData = { 0x17ba020, 0 }; 
 	// Function /Script/VariantManagerContent.PropertyValue.GetPropertyTooltip
-	constexpr static const FunctionPointer<UPropertyValue, FText> UPropertyValue = { 0x17ba070, 1 }; 
+	constexpr static const FunctionPointer<UPropertyValue, FText> GetPropertyTooltip = { 0x17ba070, 1 }; 
 	// Function /Script/VariantManagerContent.PropertyValue.GetFullDisplayString
-	constexpr static const FunctionPointer<UPropertyValue, FString> UPropertyValue = { 0x17ba040, 2 }; 
+	constexpr static const FunctionPointer<UPropertyValue, FString> GetFullDisplayString = { 0x17ba040, 2 }; 
 };
 
 /// Class /Script/VariantManagerContent.PropertyValueTransform
@@ -165,14 +162,13 @@ public:
 	int32_t                                            LastSelectedOption;                                         // 0x02E8   (0x0004)  
 	unsigned char                                      UnknownData03_7[0x4];                                       // 0x02EC   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/VariantManagerContent.SwitchActor.SelectOption
-	constexpr static const FunctionPointer<ASwitchActor, void, const int32_t> ASwitchActor = { 0x17bb950, 0 }; 
+	constexpr static const FunctionPointer<ASwitchActor, void, const int32_t> SelectOption = { 0x17bb950, 0 }; 
 	// Function /Script/VariantManagerContent.SwitchActor.GetSelectedOption
-	constexpr static const FunctionPointer<ASwitchActor, int32_t> ASwitchActor = { 0x17bba20, 1 }; 
+	constexpr static const FunctionPointer<ASwitchActor, int32_t> GetSelectedOption = { 0x17bba20, 1 }; 
 	// Function /Script/VariantManagerContent.SwitchActor.GetOptions
-	constexpr static const FunctionPointer<ASwitchActor, TArray<AActor*>> ASwitchActor = { 0x17bba40, 2 }; 
+	constexpr static const FunctionPointer<ASwitchActor, TArray<AActor*>> GetOptions = { 0x17bba40, 2 }; 
 };
 
 /// Struct /Script/VariantManagerContent.VariantDependency
@@ -198,44 +194,43 @@ public:
 	TArray<class UVariantObjectBinding*>               ObjectBindings;                                             // 0x0068   (0x0010)  
 	class UTexture2D*                                  Thumbnail;                                                  // 0x0078   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/VariantManagerContent.Variant.SwitchOn
-	constexpr static const FunctionPointer<UVariant, void> UVariant = { 0x17bd460, 0 }; 
+	constexpr static const FunctionPointer<UVariant, void> SwitchOn = { 0x17bd460, 0 }; 
 	// Function /Script/VariantManagerContent.Variant.SetThumbnailFromTexture
-	constexpr static const FunctionPointer<UVariant, void, const UTexture2D*> UVariant = { 0x17bcd60, 1 }; 
+	constexpr static const FunctionPointer<UVariant, void, const UTexture2D*> SetThumbnailFromTexture = { 0x17bcd60, 1 }; 
 	// Function /Script/VariantManagerContent.Variant.SetThumbnailFromFile
-	constexpr static const FunctionPointer<UVariant, void, const FString> UVariant = { 0x17bcbd0, 2 }; 
+	constexpr static const FunctionPointer<UVariant, void, const FString> SetThumbnailFromFile = { 0x17bcbd0, 2 }; 
 	// Function /Script/VariantManagerContent.Variant.SetThumbnailFromEditorViewport
-	constexpr static const FunctionPointer<UVariant, void> UVariant = { 0x11615e0, 3 }; 
+	constexpr static const FunctionPointer<UVariant, void> SetThumbnailFromEditorViewport = { 0x11615e0, 3 }; 
 	// Function /Script/VariantManagerContent.Variant.SetThumbnailFromCamera
-	constexpr static const FunctionPointer<UVariant, void, const UObject*, const FTransform&, const float, const float, const float> UVariant = { 0x17bc820, 4 }; 
+	constexpr static const FunctionPointer<UVariant, void, const UObject*, const FTransform&, const float, const float, const float> SetThumbnailFromCamera = { 0x17bc820, 4 }; 
 	// Function /Script/VariantManagerContent.Variant.SetDisplayText
-	constexpr static const FunctionPointer<UVariant, void, const FText&> UVariant = { 0x17bd670, 5 }; 
+	constexpr static const FunctionPointer<UVariant, void, const FText&> SetDisplayText = { 0x17bd670, 5 }; 
 	// Function /Script/VariantManagerContent.Variant.SetDependency
-	constexpr static const FunctionPointer<UVariant, void, const int32_t, const FVariantDependency&> UVariant = { 0x17bbdf0, 6 }; 
+	constexpr static const FunctionPointer<UVariant, void, const int32_t, const FVariantDependency&> SetDependency = { 0x17bbdf0, 6 }; 
 	// Function /Script/VariantManagerContent.Variant.IsActive
-	constexpr static const FunctionPointer<UVariant, bool> UVariant = { 0x17bd3a0, 7 }; 
+	constexpr static const FunctionPointer<UVariant, bool> IsActive = { 0x17bd3a0, 7 }; 
 	// Function /Script/VariantManagerContent.Variant.GetThumbnail
-	constexpr static const FunctionPointer<UVariant, UTexture2D*> UVariant = { 0x17bc800, 8 }; 
+	constexpr static const FunctionPointer<UVariant, UTexture2D*> GetThumbnail = { 0x17bc800, 8 }; 
 	// Function /Script/VariantManagerContent.Variant.GetParent
-	constexpr static const FunctionPointer<UVariant, UVariantSet*> UVariant = { 0x17bd7b0, 9 }; 
+	constexpr static const FunctionPointer<UVariant, UVariantSet*> GetParent = { 0x17bd7b0, 9 }; 
 	// Function /Script/VariantManagerContent.Variant.GetNumDependencies
-	constexpr static const FunctionPointer<UVariant, int32_t> UVariant = { 0x17bbce0, 10 }; 
+	constexpr static const FunctionPointer<UVariant, int32_t> GetNumDependencies = { 0x17bbce0, 10 }; 
 	// Function /Script/VariantManagerContent.Variant.GetNumActors
-	constexpr static const FunctionPointer<UVariant, int32_t> UVariant = { 0x17bd5c0, 11 }; 
+	constexpr static const FunctionPointer<UVariant, int32_t> GetNumActors = { 0x17bd5c0, 11 }; 
 	// Function /Script/VariantManagerContent.Variant.GetDisplayText
-	constexpr static const FunctionPointer<UVariant, FText> UVariant = { 0x17bd5e0, 12 }; 
+	constexpr static const FunctionPointer<UVariant, FText> GetDisplayText = { 0x17bd5e0, 12 }; 
 	// Function /Script/VariantManagerContent.Variant.GetDependents
-	constexpr static const FunctionPointer<UVariant, TArray<UVariant*>, const ULevelVariantSets*, const bool> UVariant = { 0x17bc440, 13 }; 
+	constexpr static const FunctionPointer<UVariant, TArray<UVariant*>, const ULevelVariantSets*, const bool> GetDependents = { 0x17bc440, 13 }; 
 	// Function /Script/VariantManagerContent.Variant.GetDependency
-	constexpr static const FunctionPointer<UVariant, FVariantDependency, const int32_t> UVariant = { 0x17bc140, 14 }; 
+	constexpr static const FunctionPointer<UVariant, FVariantDependency, const int32_t> GetDependency = { 0x17bc140, 14 }; 
 	// Function /Script/VariantManagerContent.Variant.GetActor
-	constexpr static const FunctionPointer<UVariant, AActor*, const int32_t> UVariant = { 0x17bd480, 15 }; 
+	constexpr static const FunctionPointer<UVariant, AActor*, const int32_t> GetActor = { 0x17bd480, 15 }; 
 	// Function /Script/VariantManagerContent.Variant.DeleteDependency
-	constexpr static const FunctionPointer<UVariant, void, const int32_t> UVariant = { 0x17bbd00, 16 }; 
+	constexpr static const FunctionPointer<UVariant, void, const int32_t> DeleteDependency = { 0x17bbd00, 16 }; 
 	// Function /Script/VariantManagerContent.Variant.AddDependency
-	constexpr static const FunctionPointer<UVariant, int32_t, const FVariantDependency&> UVariant = { 0x17bc230, 17 }; 
+	constexpr static const FunctionPointer<UVariant, int32_t, const FVariantDependency&> AddDependency = { 0x17bc230, 17 }; 
 };
 
 /// Struct /Script/VariantManagerContent.FunctionCaller
@@ -270,30 +265,29 @@ public:
 	TArray<class UVariant*>                            Variants;                                                   // 0x0060   (0x0010)  
 	class UTexture2D*                                  Thumbnail;                                                  // 0x0070   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/VariantManagerContent.VariantSet.SetThumbnailFromTexture
-	constexpr static const FunctionPointer<UVariantSet, void, const UTexture2D*> UVariantSet = { 0x17bea00, 0 }; 
+	constexpr static const FunctionPointer<UVariantSet, void, const UTexture2D*> SetThumbnailFromTexture = { 0x17bea00, 0 }; 
 	// Function /Script/VariantManagerContent.VariantSet.SetThumbnailFromFile
-	constexpr static const FunctionPointer<UVariantSet, void, const FString> UVariantSet = { 0x17be8a0, 1 }; 
+	constexpr static const FunctionPointer<UVariantSet, void, const FString> SetThumbnailFromFile = { 0x17be8a0, 1 }; 
 	// Function /Script/VariantManagerContent.VariantSet.SetThumbnailFromEditorViewport
-	constexpr static const FunctionPointer<UVariantSet, void> UVariantSet = { 0x11615e0, 2 }; 
+	constexpr static const FunctionPointer<UVariantSet, void> SetThumbnailFromEditorViewport = { 0x11615e0, 2 }; 
 	// Function /Script/VariantManagerContent.VariantSet.SetThumbnailFromCamera
-	constexpr static const FunctionPointer<UVariantSet, void, const UObject*, const FTransform&, const float, const float, const float> UVariantSet = { 0x17be510, 3 }; 
+	constexpr static const FunctionPointer<UVariantSet, void, const UObject*, const FTransform&, const float, const float, const float> SetThumbnailFromCamera = { 0x17be510, 3 }; 
 	// Function /Script/VariantManagerContent.VariantSet.SetDisplayText
-	constexpr static const FunctionPointer<UVariantSet, void, const FText&> UVariantSet = { 0x17bf320, 4 }; 
+	constexpr static const FunctionPointer<UVariantSet, void, const FText&> SetDisplayText = { 0x17bf320, 4 }; 
 	// Function /Script/VariantManagerContent.VariantSet.GetVariantByName
-	constexpr static const FunctionPointer<UVariantSet, UVariant*, const FString> UVariantSet = { 0x17bf010, 5 }; 
+	constexpr static const FunctionPointer<UVariantSet, UVariant*, const FString> GetVariantByName = { 0x17bf010, 5 }; 
 	// Function /Script/VariantManagerContent.VariantSet.GetVariant
-	constexpr static const FunctionPointer<UVariantSet, UVariant*, const int32_t> UVariantSet = { 0x17bf160, 6 }; 
+	constexpr static const FunctionPointer<UVariantSet, UVariant*, const int32_t> GetVariant = { 0x17bf160, 6 }; 
 	// Function /Script/VariantManagerContent.VariantSet.GetThumbnail
-	constexpr static const FunctionPointer<UVariantSet, UTexture2D*> UVariantSet = { 0x17be4f0, 7 }; 
+	constexpr static const FunctionPointer<UVariantSet, UTexture2D*> GetThumbnail = { 0x17be4f0, 7 }; 
 	// Function /Script/VariantManagerContent.VariantSet.GetParent
-	constexpr static const FunctionPointer<UVariantSet, ULevelVariantSets*> UVariantSet = { 0x17bf460, 8 }; 
+	constexpr static const FunctionPointer<UVariantSet, ULevelVariantSets*> GetParent = { 0x17bf460, 8 }; 
 	// Function /Script/VariantManagerContent.VariantSet.GetNumVariants
-	constexpr static const FunctionPointer<UVariantSet, int32_t> UVariantSet = { 0x17bf270, 9 }; 
+	constexpr static const FunctionPointer<UVariantSet, int32_t> GetNumVariants = { 0x17bf270, 9 }; 
 	// Function /Script/VariantManagerContent.VariantSet.GetDisplayText
-	constexpr static const FunctionPointer<UVariantSet, FText> UVariantSet = { 0x17bf290, 10 }; 
+	constexpr static const FunctionPointer<UVariantSet, FText> GetDisplayText = { 0x17bf290, 10 }; 
 };
 
 #pragma pack(pop)

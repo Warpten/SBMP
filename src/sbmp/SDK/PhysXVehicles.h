@@ -131,52 +131,51 @@ public:
 	unsigned char                                      UnknownData15_6[0x24];                                      // 0x0284   (0x0024)  MISSED
 	class AController*                                 OverrideController;                                         // 0x02A8   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetUseAutoGears
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> UWheeledVehicleMovementComponent = { 0x19a4dd0, 0 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> SetUseAutoGears = { 0x19a4dd0, 0 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetThrottleInput
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const float> UWheeledVehicleMovementComponent = { 0x19a5500, 1 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const float> SetThrottleInput = { 0x19a5500, 1 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetTargetGear
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const int32_t, const bool> UWheeledVehicleMovementComponent = { 0x19a4eb0, 2 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const int32_t, const bool> SetTargetGear = { 0x19a4eb0, 2 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetSteeringInput
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const float> UWheeledVehicleMovementComponent = { 0x19a5300, 3 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const float> SetSteeringInput = { 0x19a5300, 3 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetHandbrakeInput
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> UWheeledVehicleMovementComponent = { 0x19a5220, 4 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> SetHandbrakeInput = { 0x19a5220, 4 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnoreMask
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const FNavAvoidanceMask&> UWheeledVehicleMovementComponent = { 0x19a4730, 5 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const FNavAvoidanceMask&> SetGroupsToIgnoreMask = { 0x19a4730, 5 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnore
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const int32_t> UWheeledVehicleMovementComponent = { 0x19a4810, 6 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const int32_t> SetGroupsToIgnore = { 0x19a4810, 6 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoidMask
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const FNavAvoidanceMask&> UWheeledVehicleMovementComponent = { 0x19a48f0, 7 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const FNavAvoidanceMask&> SetGroupsToAvoidMask = { 0x19a48f0, 7 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoid
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const int32_t> UWheeledVehicleMovementComponent = { 0x19a49d0, 8 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const int32_t> SetGroupsToAvoid = { 0x19a49d0, 8 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetGearUp
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> UWheeledVehicleMovementComponent = { 0x19a5140, 9 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> SetGearUp = { 0x19a5140, 9 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetGearDown
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> UWheeledVehicleMovementComponent = { 0x19a5060, 10 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> SetGearDown = { 0x19a5060, 10 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetBrakeInput
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const float> UWheeledVehicleMovementComponent = { 0x19a5400, 11 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const float> SetBrakeInput = { 0x19a5400, 11 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroupMask
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const FNavAvoidanceMask&> UWheeledVehicleMovementComponent = { 0x19a4ab0, 12 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const FNavAvoidanceMask&> SetAvoidanceGroupMask = { 0x19a4ab0, 12 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroup
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const int32_t> UWheeledVehicleMovementComponent = { 0x19a4b90, 13 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const int32_t> SetAvoidanceGroup = { 0x19a4b90, 13 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceEnabled
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> UWheeledVehicleMovementComponent = { 0x19a4600, 14 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const bool> SetAvoidanceEnabled = { 0x19a4600, 14 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.ServerUpdateState
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const float, const float, const float, const float, const int32_t> UWheeledVehicleMovementComponent = { 0x19a4290, 15 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, void, const float, const float, const float, const float, const int32_t> ServerUpdateState = { 0x19a4290, 15 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.GetUseAutoGears
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, bool> UWheeledVehicleMovementComponent = { 0x19a4c70, 16 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, bool> GetUseAutoGears = { 0x19a4c70, 16 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.GetTargetGear
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, int32_t> UWheeledVehicleMovementComponent = { 0x19a4cb0, 17 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, int32_t> GetTargetGear = { 0x19a4cb0, 17 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.GetForwardSpeed
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, float> UWheeledVehicleMovementComponent = { 0x19a4da0, 18 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, float> GetForwardSpeed = { 0x19a4da0, 18 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.GetEngineRotationSpeed
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, float> UWheeledVehicleMovementComponent = { 0x19a4d70, 19 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, float> GetEngineRotationSpeed = { 0x19a4d70, 19 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.GetEngineMaxRotationSpeed
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, float> UWheeledVehicleMovementComponent = { 0x19a4d50, 20 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, float> GetEngineMaxRotationSpeed = { 0x19a4d50, 20 }; 
 	// Function /Script/PhysXVehicles.WheeledVehicleMovementComponent.GetCurrentGear
-	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, int32_t> UWheeledVehicleMovementComponent = { 0x19a4d00, 21 }; 
+	constexpr static const FunctionPointer<UWheeledVehicleMovementComponent, int32_t> GetCurrentGear = { 0x19a4d00, 21 }; 
 };
 
 /// Class /Script/PhysXVehicles.SimpleWheeledVehicleMovementComponent
@@ -185,14 +184,13 @@ class USimpleWheeledVehicleMovementComponent : public UWheeledVehicleMovementCom
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetSteerAngle
-	constexpr static const FunctionPointer<USimpleWheeledVehicleMovementComponent, void, const float, const int32_t> USimpleWheeledVehicleMovementComponent = { 0x19a2590, 0 }; 
+	constexpr static const FunctionPointer<USimpleWheeledVehicleMovementComponent, void, const float, const int32_t> SetSteerAngle = { 0x19a2590, 0 }; 
 	// Function /Script/PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetDriveTorque
-	constexpr static const FunctionPointer<USimpleWheeledVehicleMovementComponent, void, const float, const int32_t> USimpleWheeledVehicleMovementComponent = { 0x19a27c0, 1 }; 
+	constexpr static const FunctionPointer<USimpleWheeledVehicleMovementComponent, void, const float, const int32_t> SetDriveTorque = { 0x19a27c0, 1 }; 
 	// Function /Script/PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetBrakeTorque
-	constexpr static const FunctionPointer<USimpleWheeledVehicleMovementComponent, void, const float, const int32_t> USimpleWheeledVehicleMovementComponent = { 0x19a29e0, 2 }; 
+	constexpr static const FunctionPointer<USimpleWheeledVehicleMovementComponent, void, const float, const int32_t> SetBrakeTorque = { 0x19a29e0, 2 }; 
 };
 
 /// Struct /Script/PhysXVehicles.TireConfigMaterialFriction
@@ -224,10 +222,9 @@ public:
 	class UWheeledVehicleMovementComponent*            WheeledVehicleMovementComponent;                            // 0x0A60   (0x0008)  
 	unsigned char                                      UnknownData03_7[0x8];                                       // 0x0A68   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/PhysXVehicles.VehicleAnimInstance.GetVehicle
-	constexpr static const FunctionPointer<UVehicleAnimInstance, AWheeledVehicle*> UVehicleAnimInstance = { 0x19a34f0, 0 }; 
+	constexpr static const FunctionPointer<UVehicleAnimInstance, AWheeledVehicle*> GetVehicle = { 0x19a34f0, 0 }; 
 };
 
 /// Class /Script/PhysXVehicles.VehicleWheel
@@ -276,16 +273,15 @@ public:
 	FVector                                            Velocity;                                                   // 0x00D8   (0x000C)  
 	unsigned char                                      UnknownData11_7[0xC];                                       // 0x00E4   (0x000C)  MISSED
 
-
 	/// Functions
 	// Function /Script/PhysXVehicles.VehicleWheel.IsInAir
-	constexpr static const FunctionPointer<UVehicleWheel, bool> UVehicleWheel = { 0x19a36f0, 0 }; 
+	constexpr static const FunctionPointer<UVehicleWheel, bool> IsInAir = { 0x19a36f0, 0 }; 
 	// Function /Script/PhysXVehicles.VehicleWheel.GetSuspensionOffset
-	constexpr static const FunctionPointer<UVehicleWheel, float> UVehicleWheel = { 0x19a37f0, 1 }; 
+	constexpr static const FunctionPointer<UVehicleWheel, float> GetSuspensionOffset = { 0x19a37f0, 1 }; 
 	// Function /Script/PhysXVehicles.VehicleWheel.GetSteerAngle
-	constexpr static const FunctionPointer<UVehicleWheel, float> UVehicleWheel = { 0x19a3850, 2 }; 
+	constexpr static const FunctionPointer<UVehicleWheel, float> GetSteerAngle = { 0x19a3850, 2 }; 
 	// Function /Script/PhysXVehicles.VehicleWheel.GetRotationAngle
-	constexpr static const FunctionPointer<UVehicleWheel, float> UVehicleWheel = { 0x19a3820, 3 }; 
+	constexpr static const FunctionPointer<UVehicleWheel, float> GetRotationAngle = { 0x19a3820, 3 }; 
 };
 
 /// Class /Script/PhysXVehicles.WheeledVehicle

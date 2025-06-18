@@ -88,12 +88,11 @@ class UConstantQNRT : public UAudioSynesthesiaNRT
 public:
 	class UConstantQNRTSettings*                       Settings;                                                   // 0x0078   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime
-	constexpr static const FunctionPointer<UConstantQNRT, void, const float, const int32_t, const TArray<float>&> UConstantQNRT = { 0x1a079e0, 0 }; 
+	constexpr static const FunctionPointer<UConstantQNRT, void, const float, const int32_t, const TArray<float>&> GetNormalizedChannelConstantQAtTime = { 0x1a079e0, 0 }; 
 	// Function /Script/AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
-	constexpr static const FunctionPointer<UConstantQNRT, void, const float, const int32_t, const TArray<float>&> UConstantQNRT = { 0x1a07c00, 1 }; 
+	constexpr static const FunctionPointer<UConstantQNRT, void, const float, const int32_t, const TArray<float>&> GetChannelConstantQAtTime = { 0x1a07c00, 1 }; 
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessNRTSettings
@@ -117,16 +116,15 @@ class ULoudnessNRT : public UAudioSynesthesiaNRT
 public:
 	class ULoudnessNRTSettings*                        Settings;                                                   // 0x0078   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetNormalizedLoudnessAtTime
-	constexpr static const FunctionPointer<ULoudnessNRT, void, const float, const float&> ULoudnessNRT = { 0x1a088f0, 0 }; 
+	constexpr static const FunctionPointer<ULoudnessNRT, void, const float, const float&> GetNormalizedLoudnessAtTime = { 0x1a088f0, 0 }; 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetNormalizedChannelLoudnessAtTime
-	constexpr static const FunctionPointer<ULoudnessNRT, void, const float, const int32_t, const float&> ULoudnessNRT = { 0x1a086f0, 1 }; 
+	constexpr static const FunctionPointer<ULoudnessNRT, void, const float, const int32_t, const float&> GetNormalizedChannelLoudnessAtTime = { 0x1a086f0, 1 }; 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetLoudnessAtTime
-	constexpr static const FunctionPointer<ULoudnessNRT, void, const float, const float&> ULoudnessNRT = { 0x1a08c70, 2 }; 
+	constexpr static const FunctionPointer<ULoudnessNRT, void, const float, const float&> GetLoudnessAtTime = { 0x1a08c70, 2 }; 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime
-	constexpr static const FunctionPointer<ULoudnessNRT, void, const float, const int32_t, const float&> ULoudnessNRT = { 0x1a08a70, 3 }; 
+	constexpr static const FunctionPointer<ULoudnessNRT, void, const float, const int32_t, const float&> GetChannelLoudnessAtTime = { 0x1a08a70, 3 }; 
 };
 
 /// Class /Script/AudioSynesthesia.OnsetNRTSettings
@@ -150,12 +148,11 @@ class UOnsetNRT : public UAudioSynesthesiaNRT
 public:
 	class UOnsetNRTSettings*                           Settings;                                                   // 0x0078   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes
-	constexpr static const FunctionPointer<UOnsetNRT, void, const float, const float, const int32_t, const TArray<float>&, const TArray<float>&> UOnsetNRT = { 0x1a09540, 0 }; 
+	constexpr static const FunctionPointer<UOnsetNRT, void, const float, const float, const int32_t, const TArray<float>&, const TArray<float>&> GetNormalizedChannelOnsetsBetweenTimes = { 0x1a09540, 0 }; 
 	// Function /Script/AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes
-	constexpr static const FunctionPointer<UOnsetNRT, void, const float, const float, const int32_t, const TArray<float>&, const TArray<float>&> UOnsetNRT = { 0x1a098a0, 1 }; 
+	constexpr static const FunctionPointer<UOnsetNRT, void, const float, const float, const int32_t, const TArray<float>&, const TArray<float>&> GetChannelOnsetsBetweenTimes = { 0x1a098a0, 1 }; 
 };
 
 #pragma pack(pop)

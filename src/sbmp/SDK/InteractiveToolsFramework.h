@@ -476,12 +476,11 @@ public:
 	float                                              PixelHitDistanceThreshold;                                  // 0x054C   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0550   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/InteractiveToolsFramework.GizmoBaseComponent.UpdateWorldLocalState
-	constexpr static const FunctionPointer<UGizmoBaseComponent, void, const bool> UGizmoBaseComponent = { 0x4b2d680, 0 }; 
+	constexpr static const FunctionPointer<UGizmoBaseComponent, void, const bool> UpdateWorldLocalState = { 0x4b2d680, 0 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoBaseComponent.UpdateHoverState
-	constexpr static const FunctionPointer<UGizmoBaseComponent, void, const bool> UGizmoBaseComponent = { 0x4b2d760, 1 }; 
+	constexpr static const FunctionPointer<UGizmoBaseComponent, void, const bool> UpdateHoverState = { 0x4b2d760, 1 }; 
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoArrowComponent
@@ -531,12 +530,11 @@ class UGizmoTransformSource : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/InteractiveToolsFramework.GizmoTransformSource.SetTransform
-	constexpr static const FunctionPointer<UGizmoTransformSource, void, const FTransform&> UGizmoTransformSource = { 0x4b2e280, 0 }; 
+	constexpr static const FunctionPointer<UGizmoTransformSource, void, const FTransform&> SetTransform = { 0x4b2e280, 0 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoTransformSource.GetTransform
-	constexpr static const FunctionPointer<UGizmoTransformSource, FTransform> UGizmoTransformSource = { 0x4b2e3b0, 1 }; 
+	constexpr static const FunctionPointer<UGizmoTransformSource, FTransform> GetTransform = { 0x4b2e3b0, 1 }; 
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoAxisSource
@@ -545,16 +543,15 @@ class UGizmoAxisSource : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/InteractiveToolsFramework.GizmoAxisSource.HasTangentVectors
-	constexpr static const FunctionPointer<UGizmoAxisSource, bool> UGizmoAxisSource = { 0x4b2e950, 0 }; 
+	constexpr static const FunctionPointer<UGizmoAxisSource, bool> HasTangentVectors = { 0x4b2e950, 0 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoAxisSource.GetTangentVectors
-	constexpr static const FunctionPointer<UGizmoAxisSource, void, const FVector&, const FVector&> UGizmoAxisSource = { 0x4b2e7d0, 1 }; 
+	constexpr static const FunctionPointer<UGizmoAxisSource, void, const FVector&, const FVector&> GetTangentVectors = { 0x4b2e7d0, 1 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoAxisSource.GetOrigin
-	constexpr static const FunctionPointer<UGizmoAxisSource, FVector> UGizmoAxisSource = { 0x4b2e9c0, 2 }; 
+	constexpr static const FunctionPointer<UGizmoAxisSource, FVector> GetOrigin = { 0x4b2e9c0, 2 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoAxisSource.GetDirection
-	constexpr static const FunctionPointer<UGizmoAxisSource, FVector> UGizmoAxisSource = { 0x4b2e980, 3 }; 
+	constexpr static const FunctionPointer<UGizmoAxisSource, FVector> GetDirection = { 0x4b2e980, 3 }; 
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoClickTarget
@@ -563,10 +560,9 @@ class UGizmoClickTarget : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/InteractiveToolsFramework.GizmoClickTarget.UpdateHoverState
-	constexpr static const FunctionPointer<UGizmoClickTarget, void, const bool> UGizmoClickTarget = { 0x4b2ee10, 0 }; 
+	constexpr static const FunctionPointer<UGizmoClickTarget, void, const bool> UpdateHoverState = { 0x4b2ee10, 0 }; 
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoStateTarget
@@ -575,12 +571,11 @@ class UGizmoStateTarget : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/InteractiveToolsFramework.GizmoStateTarget.EndUpdate
-	constexpr static const FunctionPointer<UGizmoStateTarget, void> UGizmoStateTarget = { 0x4b2f270, 0 }; 
+	constexpr static const FunctionPointer<UGizmoStateTarget, void> EndUpdate = { 0x4b2f270, 0 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoStateTarget.BeginUpdate
-	constexpr static const FunctionPointer<UGizmoStateTarget, void> UGizmoStateTarget = { 0x4b2f290, 1 }; 
+	constexpr static const FunctionPointer<UGizmoStateTarget, void> BeginUpdate = { 0x4b2f290, 1 }; 
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoFloatParameterSource
@@ -589,16 +584,15 @@ class UGizmoFloatParameterSource : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/InteractiveToolsFramework.GizmoFloatParameterSource.SetParameter
-	constexpr static const FunctionPointer<UGizmoFloatParameterSource, void, const float> UGizmoFloatParameterSource = { 0x4b2f680, 0 }; 
+	constexpr static const FunctionPointer<UGizmoFloatParameterSource, void, const float> SetParameter = { 0x4b2f680, 0 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoFloatParameterSource.GetParameter
-	constexpr static const FunctionPointer<UGizmoFloatParameterSource, float> UGizmoFloatParameterSource = { 0x4b2f750, 1 }; 
+	constexpr static const FunctionPointer<UGizmoFloatParameterSource, float> GetParameter = { 0x4b2f750, 1 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoFloatParameterSource.EndModify
-	constexpr static const FunctionPointer<UGizmoFloatParameterSource, void> UGizmoFloatParameterSource = { 0x4b2f660, 2 }; 
+	constexpr static const FunctionPointer<UGizmoFloatParameterSource, void> EndModify = { 0x4b2f660, 2 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoFloatParameterSource.BeginModify
-	constexpr static const FunctionPointer<UGizmoFloatParameterSource, void> UGizmoFloatParameterSource = { 0x4b2f270, 3 }; 
+	constexpr static const FunctionPointer<UGizmoFloatParameterSource, void> BeginModify = { 0x4b2f270, 3 }; 
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoVec2ParameterSource
@@ -607,16 +601,15 @@ class UGizmoVec2ParameterSource : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/InteractiveToolsFramework.GizmoVec2ParameterSource.SetParameter
-	constexpr static const FunctionPointer<UGizmoVec2ParameterSource, void, const FVector2D&> UGizmoVec2ParameterSource = { 0x4b2fb90, 0 }; 
+	constexpr static const FunctionPointer<UGizmoVec2ParameterSource, void, const FVector2D&> SetParameter = { 0x4b2fb90, 0 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoVec2ParameterSource.GetParameter
-	constexpr static const FunctionPointer<UGizmoVec2ParameterSource, FVector2D> UGizmoVec2ParameterSource = { 0x4b2fc70, 1 }; 
+	constexpr static const FunctionPointer<UGizmoVec2ParameterSource, FVector2D> GetParameter = { 0x4b2fc70, 1 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoVec2ParameterSource.EndModify
-	constexpr static const FunctionPointer<UGizmoVec2ParameterSource, void> UGizmoVec2ParameterSource = { 0x4b2f660, 2 }; 
+	constexpr static const FunctionPointer<UGizmoVec2ParameterSource, void> EndModify = { 0x4b2f660, 2 }; 
 	// Function /Script/InteractiveToolsFramework.GizmoVec2ParameterSource.BeginModify
-	constexpr static const FunctionPointer<UGizmoVec2ParameterSource, void> UGizmoVec2ParameterSource = { 0x4b2f270, 3 }; 
+	constexpr static const FunctionPointer<UGizmoVec2ParameterSource, void> BeginModify = { 0x4b2f270, 3 }; 
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoLineHandleComponent

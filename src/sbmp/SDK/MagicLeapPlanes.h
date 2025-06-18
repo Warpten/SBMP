@@ -53,10 +53,9 @@ public:
 	FMulticastInlineDelegate                           OnPersistentPlanesQueryResult;                              // 0x02A0   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x20];                                      // 0x02B0   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesComponent.RequestPlanesAsync
-	constexpr static const FunctionPointer<UMagicLeapPlanesComponent, bool> UMagicLeapPlanesComponent = { 0x1902da0, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesComponent, bool> RequestPlanesAsync = { 0x1902da0, 0 }; 
 };
 
 /// Class /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary
@@ -65,28 +64,27 @@ class UMagicLeapPlanesFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.ReorderPlaneFlags
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, void, const TArray<EMagicLeapPlaneQueryFlags>&, const TArray<EMagicLeapPlaneQueryFlags>&, const TArray<EMagicLeapPlaneQueryFlags>&> UMagicLeapPlanesFunctionLibrary = { 0x1903430, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, void, const TArray<EMagicLeapPlaneQueryFlags>&, const TArray<EMagicLeapPlaneQueryFlags>&, const TArray<EMagicLeapPlaneQueryFlags>&> ReorderPlaneFlags = { 0x1903430, 0 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.RemovePersistentQuery
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool, const FGuid> UMagicLeapPlanesFunctionLibrary = { 0x1903f10, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool, const FGuid> RemovePersistentQuery = { 0x1903f10, 1 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.RemoveFlagsNotInQuery
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, void, const TArray<EMagicLeapPlaneQueryFlags>&, const TArray<EMagicLeapPlaneQueryFlags>&, const TArray<EMagicLeapPlaneQueryFlags>&> UMagicLeapPlanesFunctionLibrary = { 0x1903160, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, void, const TArray<EMagicLeapPlaneQueryFlags>&, const TArray<EMagicLeapPlaneQueryFlags>&, const TArray<EMagicLeapPlaneQueryFlags>&> RemoveFlagsNotInQuery = { 0x1903160, 2 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.PlanesQueryBeginAsync
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool, const FMagicLeapPlanesQuery&, const FDelegateProperty&> UMagicLeapPlanesFunctionLibrary = { 0x1903ca0, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool, const FMagicLeapPlanesQuery&, const FDelegateProperty&> PlanesQueryBeginAsync = { 0x1903ca0, 3 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.PlanesPersistentQueryBeginAsync
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool, const FMagicLeapPlanesQuery&, const FGuid&, const FDelegateProperty&> UMagicLeapPlanesFunctionLibrary = { 0x1903990, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool, const FMagicLeapPlanesQuery&, const FGuid&, const FDelegateProperty&> PlanesPersistentQueryBeginAsync = { 0x1903990, 4 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.IsTrackerValid
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool> UMagicLeapPlanesFunctionLibrary = { 0x1904100, 5 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool> IsTrackerValid = { 0x1904100, 5 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.GetContentScale
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, FTransform, const AActor*, const FMagicLeapPlaneResult&> UMagicLeapPlanesFunctionLibrary = { 0x1903690, 6 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, FTransform, const AActor*, const FMagicLeapPlaneResult&> GetContentScale = { 0x1903690, 6 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.DestroyTracker
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool> UMagicLeapPlanesFunctionLibrary = { 0x1904140, 7 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool> DestroyTracker = { 0x1904140, 7 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.CreateTracker
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool> UMagicLeapPlanesFunctionLibrary = { 0x1904180, 8 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, bool> CreateTracker = { 0x1904180, 8 }; 
 	// Function /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.AddPersistentQuery
-	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, FGuid, const EMagicLeapPlaneQueryType> UMagicLeapPlanesFunctionLibrary = { 0x1904010, 9 }; 
+	constexpr static const FunctionPointer<UMagicLeapPlanesFunctionLibrary, FGuid, const EMagicLeapPlaneQueryType> AddPersistentQuery = { 0x1904010, 9 }; 
 };
 
 /// Struct /Script/MagicLeapPlanes.MagicLeapPolygon

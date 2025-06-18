@@ -528,50 +528,49 @@ public:
 	FMulticastInlineDelegate                           ReceiveMoveCompleted;                                       // 0x03B8   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x8];                                       // 0x03C8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.AIController.UseBlackboard
-	constexpr static const FunctionPointer<AAIController, bool, const UBlackboardData*, const UBlackboardComponent*&> AAIController = { 0x4bdb8a0, 0 }; 
+	constexpr static const FunctionPointer<AAIController, bool, const UBlackboardData*, const UBlackboardComponent*&> UseBlackboard = { 0x4bdb8a0, 0 }; 
 	// Function /Script/AIModule.AIController.UnclaimTaskResource
-	constexpr static const FunctionPointer<AAIController, void, const UClass*> AAIController = { 0x4bdb390, 1 }; 
+	constexpr static const FunctionPointer<AAIController, void, const UClass*> UnclaimTaskResource = { 0x4bdb390, 1 }; 
 	// Function /Script/AIModule.AIController.SetPathFollowingComponent
-	constexpr static const FunctionPointer<AAIController, void, const UPathFollowingComponent*> AAIController = { 0x4bdad90, 2 }; 
+	constexpr static const FunctionPointer<AAIController, void, const UPathFollowingComponent*> SetPathFollowingComponent = { 0x4bdad90, 2 }; 
 	// Function /Script/AIModule.AIController.SetMoveBlockDetection
-	constexpr static const FunctionPointer<AAIController, void, const bool> AAIController = { 0x4bdbc80, 3 }; 
+	constexpr static const FunctionPointer<AAIController, void, const bool> SetMoveBlockDetection = { 0x4bdbc80, 3 }; 
 	// Function /Script/AIModule.AIController.RunBehaviorTree
-	constexpr static const FunctionPointer<AAIController, bool, const UBehaviorTree*> AAIController = { 0x4bdbb90, 4 }; 
+	constexpr static const FunctionPointer<AAIController, bool, const UBehaviorTree*> RunBehaviorTree = { 0x4bdbb90, 4 }; 
 	// Function /Script/AIModule.AIController.OnUsingBlackBoard
-	constexpr static const FunctionPointer<AAIController, void, const UBlackboardComponent*, const UBlackboardData*> AAIController = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<AAIController, void, const UBlackboardComponent*, const UBlackboardData*> OnUsingBlackBoard = { 0x2bbb090, 5 }; 
 	// Function /Script/AIModule.AIController.OnGameplayTaskResourcesClaimed
-	constexpr static const FunctionPointer<AAIController, void, const FGameplayResourceSet, const FGameplayResourceSet> AAIController = { 0x4bdaeb0, 6 }; 
+	constexpr static const FunctionPointer<AAIController, void, const FGameplayResourceSet, const FGameplayResourceSet> OnGameplayTaskResourcesClaimed = { 0x4bdaeb0, 6 }; 
 	// Function /Script/AIModule.AIController.MoveToLocation
-	constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingRequestResult>, const FVector&, const float, const bool, const bool, const bool, const bool, const UClass*, const bool, const float> AAIController = { 0x4bdbe90, 7 }; 
+	constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingRequestResult>, const FVector&, const float, const bool, const bool, const bool, const bool, const UClass*, const bool, const float> MoveToLocation = { 0x4bdbe90, 7 }; 
 	// Function /Script/AIModule.AIController.MoveToActor
-	constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingRequestResult>, const AActor*, const float, const bool, const bool, const bool, const UClass*, const bool> AAIController = { 0x4bdc3d0, 8 }; 
+	constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingRequestResult>, const AActor*, const float, const bool, const bool, const bool, const UClass*, const bool> MoveToActor = { 0x4bdc3d0, 8 }; 
 	// Function /Script/AIModule.AIController.K2_SetFocus
-	constexpr static const FunctionPointer<AAIController, void, const AActor*> AAIController = { 0x4bdb080, 9 }; 
+	constexpr static const FunctionPointer<AAIController, void, const AActor*> K2_SetFocus = { 0x4bdb080, 9 }; 
 	// Function /Script/AIModule.AIController.K2_SetFocalPoint
-	constexpr static const FunctionPointer<AAIController, void, const FVector> AAIController = { 0x4bdb160, 10 }; 
+	constexpr static const FunctionPointer<AAIController, void, const FVector> K2_SetFocalPoint = { 0x4bdb160, 10 }; 
 	// Function /Script/AIModule.AIController.K2_ClearFocus
-	constexpr static const FunctionPointer<AAIController, void> AAIController = { 0x4bdb020, 11 }; 
+	constexpr static const FunctionPointer<AAIController, void> K2_ClearFocus = { 0x4bdb020, 11 }; 
 	// Function /Script/AIModule.AIController.HasPartialPath
-	constexpr static const FunctionPointer<AAIController, bool> AAIController = { 0x4bdbe00, 12 }; 
+	constexpr static const FunctionPointer<AAIController, bool> HasPartialPath = { 0x4bdbe00, 12 }; 
 	// Function /Script/AIModule.AIController.GetPathFollowingComponent
-	constexpr static const FunctionPointer<AAIController, UPathFollowingComponent*> AAIController = { 0x4bdae90, 13 }; 
+	constexpr static const FunctionPointer<AAIController, UPathFollowingComponent*> GetPathFollowingComponent = { 0x4bdae90, 13 }; 
 	// Function /Script/AIModule.AIController.GetMoveStatus
-	constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingStatus>> AAIController = { 0x4bdbe50, 14 }; 
+	constexpr static const FunctionPointer<AAIController, TEnumAsByte<EPathFollowingStatus>> GetMoveStatus = { 0x4bdbe50, 14 }; 
 	// Function /Script/AIModule.AIController.GetImmediateMoveDestination
-	constexpr static const FunctionPointer<AAIController, FVector> AAIController = { 0x4bdbd90, 15 }; 
+	constexpr static const FunctionPointer<AAIController, FVector> GetImmediateMoveDestination = { 0x4bdbd90, 15 }; 
 	// Function /Script/AIModule.AIController.GetFocusActor
-	constexpr static const FunctionPointer<AAIController, AActor*> AAIController = { 0x4bdb050, 16 }; 
+	constexpr static const FunctionPointer<AAIController, AActor*> GetFocusActor = { 0x4bdb050, 16 }; 
 	// Function /Script/AIModule.AIController.GetFocalPointOnActor
-	constexpr static const FunctionPointer<AAIController, FVector, const AActor*> AAIController = { 0x4bdb250, 17 }; 
+	constexpr static const FunctionPointer<AAIController, FVector, const AActor*> GetFocalPointOnActor = { 0x4bdb250, 17 }; 
 	// Function /Script/AIModule.AIController.GetFocalPoint
-	constexpr static const FunctionPointer<AAIController, FVector> AAIController = { 0x4bdb350, 18 }; 
+	constexpr static const FunctionPointer<AAIController, FVector> GetFocalPoint = { 0x4bdb350, 18 }; 
 	// Function /Script/AIModule.AIController.GetAIPerceptionComponent
-	constexpr static const FunctionPointer<AAIController, UAIPerceptionComponent*> AAIController = { 0x4bdae70, 19 }; 
+	constexpr static const FunctionPointer<AAIController, UAIPerceptionComponent*> GetAIPerceptionComponent = { 0x4bdae70, 19 }; 
 	// Function /Script/AIModule.AIController.ClaimTaskResource
-	constexpr static const FunctionPointer<AAIController, void, const UClass*> AAIController = { 0x4bdb5a0, 20 }; 
+	constexpr static const FunctionPointer<AAIController, void, const UClass*> ClaimTaskResource = { 0x4bdb5a0, 20 }; 
 };
 
 /// Class /Script/AIModule.BrainComponent
@@ -584,18 +583,17 @@ public:
 	class AAIController*                               AIOwner;                                                    // 0x00D0   (0x0008)  
 	unsigned char                                      UnknownData03_7[0x40];                                      // 0x00D8   (0x0040)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.BrainComponent.StopLogic
-	constexpr static const FunctionPointer<UBrainComponent, void, const FString> UBrainComponent = { 0x4bf2a10, 0 }; 
+	constexpr static const FunctionPointer<UBrainComponent, void, const FString> StopLogic = { 0x4bf2a10, 0 }; 
 	// Function /Script/AIModule.BrainComponent.StartLogic
-	constexpr static const FunctionPointer<UBrainComponent, void> UBrainComponent = { 0x475b390, 1 }; 
+	constexpr static const FunctionPointer<UBrainComponent, void> StartLogic = { 0x475b390, 1 }; 
 	// Function /Script/AIModule.BrainComponent.RestartLogic
-	constexpr static const FunctionPointer<UBrainComponent, void> UBrainComponent = { 0x475b370, 2 }; 
+	constexpr static const FunctionPointer<UBrainComponent, void> RestartLogic = { 0x475b370, 2 }; 
 	// Function /Script/AIModule.BrainComponent.IsRunning
-	constexpr static const FunctionPointer<UBrainComponent, bool> UBrainComponent = { 0x4bf29e0, 3 }; 
+	constexpr static const FunctionPointer<UBrainComponent, bool> IsRunning = { 0x4bf29e0, 3 }; 
 	// Function /Script/AIModule.BrainComponent.IsPaused
-	constexpr static const FunctionPointer<UBrainComponent, bool> UBrainComponent = { 0x4bf29b0, 4 }; 
+	constexpr static const FunctionPointer<UBrainComponent, bool> IsPaused = { 0x4bf29b0, 4 }; 
 };
 
 /// Class /Script/AIModule.BehaviorTreeComponent
@@ -609,14 +607,13 @@ public:
 	class UBehaviorTree*                               DefaultBehaviorTreeAsset;                                   // 0x0288   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x18];                                      // 0x0290   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.BehaviorTreeComponent.SetDynamicSubtree
-	constexpr static const FunctionPointer<UBehaviorTreeComponent, void, const FGameplayTag, const UBehaviorTree*> UBehaviorTreeComponent = { 0x4bebc10, 0 }; 
+	constexpr static const FunctionPointer<UBehaviorTreeComponent, void, const FGameplayTag, const UBehaviorTree*> SetDynamicSubtree = { 0x4bebc10, 0 }; 
 	// Function /Script/AIModule.BehaviorTreeComponent.GetTagCooldownEndTime
-	constexpr static const FunctionPointer<UBehaviorTreeComponent, float, const FGameplayTag> UBehaviorTreeComponent = { 0x4bebf70, 1 }; 
+	constexpr static const FunctionPointer<UBehaviorTreeComponent, float, const FGameplayTag> GetTagCooldownEndTime = { 0x4bebf70, 1 }; 
 	// Function /Script/AIModule.BehaviorTreeComponent.AddCooldownTagDuration
-	constexpr static const FunctionPointer<UBehaviorTreeComponent, void, const FGameplayTag, const float, const bool> UBehaviorTreeComponent = { 0x4bebd80, 2 }; 
+	constexpr static const FunctionPointer<UBehaviorTreeComponent, void, const FGameplayTag, const float, const bool> AddCooldownTagDuration = { 0x4bebd80, 2 }; 
 };
 
 /// Class /Script/AIModule.BTNode
@@ -669,10 +666,9 @@ public:
 	FMulticastInlineDelegate                           OnFail;                                                     // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
-	constexpr static const FunctionPointer<UAIAsyncTaskBlueprintProxy, void, const FAIRequestID, const TEnumAsByte<EPathFollowingResult>> UAIAsyncTaskBlueprintProxy = { 0x4bd7f10, 0 }; 
+	constexpr static const FunctionPointer<UAIAsyncTaskBlueprintProxy, void, const FAIRequestID, const TEnumAsByte<EPathFollowingResult>> OnMoveCompleted = { 0x4bd7f10, 0 }; 
 };
 
 /// Class /Script/AIModule.AIBlueprintHelperLibrary
@@ -681,40 +677,39 @@ class UAIBlueprintHelperLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.UnlockAIResourcesWithAnimation
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const UAnimInstance*, const bool, const bool> UAIBlueprintHelperLibrary = { 0x4bd92b0, 0 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const UAnimInstance*, const bool, const bool> UnlockAIResourcesWithAnimation = { 0x4bd92b0, 0 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.SpawnAIFromClass
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, APawn*, const UObject*, const UClass*, const UBehaviorTree*, const FVector, const FRotator, const bool, const AActor*> UAIBlueprintHelperLibrary = { 0x4bd9a50, 1 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, APawn*, const UObject*, const UClass*, const UBehaviorTree*, const FVector, const FRotator, const bool, const AActor*> SpawnAIFromClass = { 0x4bd9a50, 1 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.SimpleMoveToLocation
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const AController*, const FVector&> UAIBlueprintHelperLibrary = { 0x4bd86a0, 2 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const AController*, const FVector&> SimpleMoveToLocation = { 0x4bd86a0, 2 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.SimpleMoveToActor
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const AController*, const AActor*> UAIBlueprintHelperLibrary = { 0x4bd8810, 3 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const AController*, const AActor*> SimpleMoveToActor = { 0x4bd8810, 3 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.SendAIMessage
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const APawn*, const FName, const UObject*, const bool> UAIBlueprintHelperLibrary = { 0x4bda000, 4 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const APawn*, const FName, const UObject*, const bool> SendAIMessage = { 0x4bda000, 4 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.LockAIResourcesWithAnimation
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const UAnimInstance*, const bool, const bool> UAIBlueprintHelperLibrary = { 0x4bd9540, 5 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, void, const UAnimInstance*, const bool, const bool> LockAIResourcesWithAnimation = { 0x4bd9540, 5 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.IsValidAIRotation
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FRotator> UAIBlueprintHelperLibrary = { 0x4bd8f40, 6 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FRotator> IsValidAIRotation = { 0x4bd8f40, 6 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.IsValidAILocation
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FVector> UAIBlueprintHelperLibrary = { 0x4bd9180, 7 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FVector> IsValidAILocation = { 0x4bd9180, 7 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.IsValidAIDirection
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FVector> UAIBlueprintHelperLibrary = { 0x4bd9040, 8 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, bool, const FVector> IsValidAIDirection = { 0x4bd9040, 8 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.GetNextNavLinkIndex
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, int32_t, const AController*> UAIBlueprintHelperLibrary = { 0x4bd8960, 9 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, int32_t, const AController*> GetNextNavLinkIndex = { 0x4bd8960, 9 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.GetCurrentPathPoints
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, TArray<FVector>, const AController*> UAIBlueprintHelperLibrary = { 0x4bd8c90, 10 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, TArray<FVector>, const AController*> GetCurrentPathPoints = { 0x4bd8c90, 10 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.GetCurrentPathIndex
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, int32_t, const AController*> UAIBlueprintHelperLibrary = { 0x4bd8b50, 11 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, int32_t, const AController*> GetCurrentPathIndex = { 0x4bd8b50, 11 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.GetCurrentPath
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UNavigationPath*, const AController*> UAIBlueprintHelperLibrary = { 0x4bd8d80, 12 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UNavigationPath*, const AController*> GetCurrentPath = { 0x4bd8d80, 12 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.GetBlackboard
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UBlackboardComponent*, const AActor*> UAIBlueprintHelperLibrary = { 0x4bd97d0, 13 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UBlackboardComponent*, const AActor*> GetBlackboard = { 0x4bd97d0, 13 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.GetAIController
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, AAIController*, const AActor*> UAIBlueprintHelperLibrary = { 0x4bd9920, 14 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, AAIController*, const AActor*> GetAIController = { 0x4bd9920, 14 }; 
 	// Function /Script/AIModule.AIBlueprintHelperLibrary.CreateMoveToProxyObject
-	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UAIAsyncTaskBlueprintProxy*, const UObject*, const APawn*, const FVector, const AActor*, const float, const bool> UAIBlueprintHelperLibrary = { 0x4bda390, 15 }; 
+	constexpr static const FunctionPointer<UAIBlueprintHelperLibrary, UAIAsyncTaskBlueprintProxy*, const UObject*, const APawn*, const FVector, const AActor*, const float, const bool> CreateMoveToProxyObject = { 0x4bda390, 15 }; 
 };
 
 /// Class /Script/AIModule.AIDataProvider
@@ -768,28 +763,27 @@ public:
 	FMulticastInlineDelegate                           OnTargetPerceptionUpdated;                                  // 0x0180   (0x0010)  
 	FMulticastInlineDelegate                           OnTargetPerceptionInfoUpdated;                              // 0x0190   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/AIModule.AIPerceptionComponent.SetSenseEnabled
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const bool> UAIPerceptionComponent = { 0x4bde1a0, 0 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const bool> SetSenseEnabled = { 0x4bde1a0, 0 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.RequestStimuliListenerUpdate
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void> UAIPerceptionComponent = { 0x4bdeda0, 1 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void> RequestStimuliListenerUpdate = { 0x4bdeda0, 1 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.OnOwnerEndPlay
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const AActor*, const TEnumAsByte<EEndPlayReason>> UAIPerceptionComponent = { 0x4bdedc0, 2 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const AActor*, const TEnumAsByte<EEndPlayReason>> OnOwnerEndPlay = { 0x4bdedc0, 2 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> UAIPerceptionComponent = { 0x4bdeaf0, 3 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetPerceivedHostileActorsBySense = { 0x4bdeaf0, 3 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.GetPerceivedHostileActors
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const TArray<AActor*>&> UAIPerceptionComponent = { 0x4bdec90, 4 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const TArray<AActor*>&> GetPerceivedHostileActors = { 0x4bdec90, 4 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.GetPerceivedActors
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> UAIPerceptionComponent = { 0x4bde7b0, 5 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetPerceivedActors = { 0x4bde7b0, 5 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.GetKnownPerceivedActors
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> UAIPerceptionComponent = { 0x4bde950, 6 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetKnownPerceivedActors = { 0x4bde950, 6 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> UAIPerceptionComponent = { 0x4bde7b0, 7 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void, const UClass*, const TArray<AActor*>&> GetCurrentlyPerceivedActors = { 0x4bde7b0, 7 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.GetActorsPerception
-	constexpr static const FunctionPointer<UAIPerceptionComponent, bool, const AActor*, const FActorPerceptionBlueprintInfo&> UAIPerceptionComponent = { 0x4bde460, 8 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, bool, const AActor*, const FActorPerceptionBlueprintInfo&> GetActorsPerception = { 0x4bde460, 8 }; 
 	// Function /Script/AIModule.AIPerceptionComponent.ForgetAll
-	constexpr static const FunctionPointer<UAIPerceptionComponent, void> UAIPerceptionComponent = { 0x4bded80, 9 }; 
+	constexpr static const FunctionPointer<UAIPerceptionComponent, void> ForgetAll = { 0x4bded80, 9 }; 
 };
 
 /// Class /Script/AIModule.AIPerceptionListenerInterface
@@ -808,16 +802,15 @@ public:
 	unsigned char                                      UnknownData01_5[0x7];                                       // 0x00C1   (0x0007)  MISSED
 	TArray<class UClass*>                              RegisterAsSourceForSenses;                                  // 0x00C8   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense
-	constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void, const UClass*> UAIPerceptionStimuliSourceComponent = { 0x4bdf7b0, 0 }; 
+	constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void, const UClass*> UnregisterFromSense = { 0x4bdf7b0, 0 }; 
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromPerceptionSystem
-	constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void> UAIPerceptionStimuliSourceComponent = { 0x4bdfa30, 1 }; 
+	constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void> UnregisterFromPerceptionSystem = { 0x4bdfa30, 1 }; 
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.RegisterWithPerceptionSystem
-	constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void> UAIPerceptionStimuliSourceComponent = { 0x4bdfd50, 2 }; 
+	constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void> RegisterWithPerceptionSystem = { 0x4bdfd50, 2 }; 
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense
-	constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void, const UClass*> UAIPerceptionStimuliSourceComponent = { 0x4bdfb00, 3 }; 
+	constexpr static const FunctionPointer<UAIPerceptionStimuliSourceComponent, void, const UClass*> RegisterForSense = { 0x4bdfb00, 3 }; 
 };
 
 /// Class /Script/AIModule.AISubsystem
@@ -839,18 +832,17 @@ public:
 	float                                              PerceptionAgingRate;                                        // 0x0098   (0x0004)  
 	unsigned char                                      UnknownData03_7[0x94];                                      // 0x009C   (0x0094)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.AIPerceptionSystem.ReportPerceptionEvent
-	constexpr static const FunctionPointer<UAIPerceptionSystem, void, const UObject*, const UAISenseEvent*> UAIPerceptionSystem = { 0x4be0f50, 0 }; 
+	constexpr static const FunctionPointer<UAIPerceptionSystem, void, const UObject*, const UAISenseEvent*> ReportPerceptionEvent = { 0x4be0f50, 0 }; 
 	// Function /Script/AIModule.AIPerceptionSystem.ReportEvent
-	constexpr static const FunctionPointer<UAIPerceptionSystem, void, const UAISenseEvent*> UAIPerceptionSystem = { 0x4be11a0, 1 }; 
+	constexpr static const FunctionPointer<UAIPerceptionSystem, void, const UAISenseEvent*> ReportEvent = { 0x4be11a0, 1 }; 
 	// Function /Script/AIModule.AIPerceptionSystem.RegisterPerceptionStimuliSource
-	constexpr static const FunctionPointer<UAIPerceptionSystem, bool, const UObject*, const UClass*, const AActor*> UAIPerceptionSystem = { 0x4be0cc0, 2 }; 
+	constexpr static const FunctionPointer<UAIPerceptionSystem, bool, const UObject*, const UClass*, const AActor*> RegisterPerceptionStimuliSource = { 0x4be0cc0, 2 }; 
 	// Function /Script/AIModule.AIPerceptionSystem.OnPerceptionStimuliSourceEndPlay
-	constexpr static const FunctionPointer<UAIPerceptionSystem, void, const AActor*, const TEnumAsByte<EEndPlayReason>> UAIPerceptionSystem = { 0x4be0900, 3 }; 
+	constexpr static const FunctionPointer<UAIPerceptionSystem, void, const AActor*, const TEnumAsByte<EEndPlayReason>> OnPerceptionStimuliSourceEndPlay = { 0x4be0900, 3 }; 
 	// Function /Script/AIModule.AIPerceptionSystem.GetSenseClassForStimulus
-	constexpr static const FunctionPointer<UAIPerceptionSystem, UClass*, const UObject*, const FAIStimulus&> UAIPerceptionSystem = { 0x4be0a60, 4 }; 
+	constexpr static const FunctionPointer<UAIPerceptionSystem, UClass*, const UObject*, const FAIStimulus&> GetSenseClassForStimulus = { 0x4be0a60, 4 }; 
 };
 
 /// Class /Script/AIModule.AIResourceInterface
@@ -898,22 +890,21 @@ public:
 	TArray<class UAIPerceptionComponent*>              ListenerContainer;                                          // 0x0088   (0x0010)  
 	TArray<class UAISenseEvent*>                       UnprocessedEvents;                                          // 0x0098   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/AIModule.AISense_Blueprint.OnUpdate
-	constexpr static const FunctionPointer<UAISense_Blueprint, float, const TArray<UAISenseEvent*>&> UAISense_Blueprint = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UAISense_Blueprint, float, const TArray<UAISenseEvent*>&> OnUpdate = { 0x2bbb090, 0 }; 
 	// Function /Script/AIModule.AISense_Blueprint.OnListenerUpdated
-	constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> UAISense_Blueprint = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerUpdated = { 0x2bbb090, 1 }; 
 	// Function /Script/AIModule.AISense_Blueprint.OnListenerUnregistered
-	constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> UAISense_Blueprint = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerUnregistered = { 0x2bbb090, 2 }; 
 	// Function /Script/AIModule.AISense_Blueprint.OnListenerRegistered
-	constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> UAISense_Blueprint = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UAISense_Blueprint, void, const AActor*, const UAIPerceptionComponent*> OnListenerRegistered = { 0x2bbb090, 3 }; 
 	// Function /Script/AIModule.AISense_Blueprint.K2_OnNewPawn
-	constexpr static const FunctionPointer<UAISense_Blueprint, void, const APawn*> UAISense_Blueprint = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UAISense_Blueprint, void, const APawn*> K2_OnNewPawn = { 0x2bbb090, 4 }; 
 	// Function /Script/AIModule.AISense_Blueprint.GetAllListenerComponents
-	constexpr static const FunctionPointer<UAISense_Blueprint, void, const TArray<UAIPerceptionComponent*>&> UAISense_Blueprint = { 0x4be2680, 5 }; 
+	constexpr static const FunctionPointer<UAISense_Blueprint, void, const TArray<UAIPerceptionComponent*>&> GetAllListenerComponents = { 0x4be2680, 5 }; 
 	// Function /Script/AIModule.AISense_Blueprint.GetAllListenerActors
-	constexpr static const FunctionPointer<UAISense_Blueprint, void, const TArray<AActor*>&> UAISense_Blueprint = { 0x4be27c0, 6 }; 
+	constexpr static const FunctionPointer<UAISense_Blueprint, void, const TArray<AActor*>&> GetAllListenerActors = { 0x4be27c0, 6 }; 
 };
 
 /// Struct /Script/AIModule.AIDamageEvent
@@ -935,10 +926,9 @@ class UAISense_Damage : public UAISense
 public:
 	TArray<FAIDamageEvent>                             RegisteredEvents;                                           // 0x0080   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/AIModule.AISense_Damage.ReportDamageEvent
-	constexpr static const FunctionPointer<UAISense_Damage, void, const UObject*, const AActor*, const AActor*, const float, const FVector, const FVector> UAISense_Damage = { 0x4be2eb0, 0 }; 
+	constexpr static const FunctionPointer<UAISense_Damage, void, const UObject*, const AActor*, const AActor*, const float, const FVector, const FVector> ReportDamageEvent = { 0x4be2eb0, 0 }; 
 };
 
 /// Struct /Script/AIModule.AINoiseEvent
@@ -963,10 +953,9 @@ public:
 	float                                              SpeedOfSoundSq;                                             // 0x0090   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x54];                                      // 0x0094   (0x0054)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.AISense_Hearing.ReportNoiseEvent
-	constexpr static const FunctionPointer<UAISense_Hearing, void, const UObject*, const FVector, const float, const AActor*, const float, const FName> UAISense_Hearing = { 0x4be3910, 0 }; 
+	constexpr static const FunctionPointer<UAISense_Hearing, void, const UObject*, const FVector, const float, const AActor*, const float, const FName> ReportNoiseEvent = { 0x4be3910, 0 }; 
 };
 
 /// Struct /Script/AIModule.AIPredictionEvent
@@ -985,12 +974,11 @@ class UAISense_Prediction : public UAISense
 public:
 	TArray<FAIPredictionEvent>                         RegisteredEvents;                                           // 0x0080   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/AIModule.AISense_Prediction.RequestPawnPredictionEvent
-	constexpr static const FunctionPointer<UAISense_Prediction, void, const APawn*, const AActor*, const float> UAISense_Prediction = { 0x4be4240, 0 }; 
+	constexpr static const FunctionPointer<UAISense_Prediction, void, const APawn*, const AActor*, const float> RequestPawnPredictionEvent = { 0x4be4240, 0 }; 
 	// Function /Script/AIModule.AISense_Prediction.RequestControllerPredictionEvent
-	constexpr static const FunctionPointer<UAISense_Prediction, void, const AAIController*, const AActor*, const float> UAISense_Prediction = { 0x4be44c0, 1 }; 
+	constexpr static const FunctionPointer<UAISense_Prediction, void, const AAIController*, const AActor*, const float> RequestControllerPredictionEvent = { 0x4be44c0, 1 }; 
 };
 
 /// Class /Script/AIModule.AISense_Sight
@@ -1195,12 +1183,11 @@ public:
 	class UNavLocalGridManager*                        NavLocalGrids;                                              // 0x00D0   (0x0008)  
 	unsigned char                                      UnknownData03_7[0x58];                                      // 0x00D8   (0x0058)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.AISystem.AILoggingVerbose
-	constexpr static const FunctionPointer<UAISystem, void> UAISystem = { 0x3816f70, 0 }; 
+	constexpr static const FunctionPointer<UAISystem, void> AILoggingVerbose = { 0x3816f70, 0 }; 
 	// Function /Script/AIModule.AISystem.AIIgnorePlayers
-	constexpr static const FunctionPointer<UAISystem, void> UAISystem = { 0x3f063d0, 1 }; 
+	constexpr static const FunctionPointer<UAISystem, void> AIIgnorePlayers = { 0x3f063d0, 1 }; 
 };
 
 /// Class /Script/AIModule.AITask
@@ -1236,10 +1223,9 @@ public:
 	FAIMoveRequest                                     MoveRequest;                                                // 0x0090   (0x0048)  
 	unsigned char                                      UnknownData01_7[0x40];                                      // 0x00D8   (0x0040)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.AITask_MoveTo.AIMoveTo
-	constexpr static const FunctionPointer<UAITask_MoveTo, UAITask_MoveTo*, const AAIController*, const FVector, const AActor*, const float, const TEnumAsByte<EAIOptionFlag>, const TEnumAsByte<EAIOptionFlag>, const bool, const bool, const bool, const TEnumAsByte<EAIOptionFlag>> UAITask_MoveTo = { 0x4be8fb0, 0 }; 
+	constexpr static const FunctionPointer<UAITask_MoveTo, UAITask_MoveTo*, const AAIController*, const FVector, const AActor*, const float, const TEnumAsByte<EAIOptionFlag>, const TEnumAsByte<EAIOptionFlag>, const bool, const bool, const bool, const TEnumAsByte<EAIOptionFlag>> AIMoveTo = { 0x4be8fb0, 0 }; 
 };
 
 /// Class /Script/AIModule.AITask_RunEQS
@@ -1249,10 +1235,9 @@ class UAITask_RunEQS : public UAITask
 public:
 	unsigned char                                      UnknownData01_1[0x78];                                      // 0x0070   (0x0078)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.AITask_RunEQS.RunEQS
-	constexpr static const FunctionPointer<UAITask_RunEQS, UAITask_RunEQS*, const AAIController*, const UEnvQuery*> UAITask_RunEQS = { 0x4be9ac0, 0 }; 
+	constexpr static const FunctionPointer<UAITask_RunEQS, UAITask_RunEQS*, const AAIController*, const UEnvQuery*> RunEQS = { 0x4be9ac0, 0 }; 
 };
 
 /// Struct /Script/AIModule.BTDecoratorLogic
@@ -1310,10 +1295,9 @@ class UBlackboardAssetProvider : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AIModule.BlackboardAssetProvider.GetBlackboardAsset
-	constexpr static const FunctionPointer<UBlackboardAssetProvider, UBlackboardData*> UBlackboardAssetProvider = { 0x4bece00, 0 }; 
+	constexpr static const FunctionPointer<UBlackboardAssetProvider, UBlackboardData*> GetBlackboardAsset = { 0x4bece00, 0 }; 
 };
 
 /// Class /Script/AIModule.BlackboardComponent
@@ -1328,56 +1312,55 @@ public:
 	TArray<class UBlackboardKeyType*>                  KeyInstances;                                               // 0x00F8   (0x0010)  
 	unsigned char                                      UnknownData03_7[0xC0];                                      // 0x0108   (0x00C0)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsVector
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FVector> UBlackboardComponent = { 0x4bed9e0, 0 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FVector> SetValueAsVector = { 0x4bed9e0, 0 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsString
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FString> UBlackboardComponent = { 0x4bedd40, 1 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FString> SetValueAsString = { 0x4bedd40, 1 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsRotator
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FRotator> UBlackboardComponent = { 0x4bed7f0, 2 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FRotator> SetValueAsRotator = { 0x4bed7f0, 2 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsObject
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const UObject*> UBlackboardComponent = { 0x4bee7f0, 3 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const UObject*> SetValueAsObject = { 0x4bee7f0, 3 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsName
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FName> UBlackboardComponent = { 0x4bedb70, 4 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const FName> SetValueAsName = { 0x4bedb70, 4 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsInt
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const int32_t> UBlackboardComponent = { 0x4bee2e0, 5 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const int32_t> SetValueAsInt = { 0x4bee2e0, 5 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsFloat
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const float> UBlackboardComponent = { 0x4bee160, 6 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const float> SetValueAsFloat = { 0x4bee160, 6 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsEnum
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const char> UBlackboardComponent = { 0x4bee450, 7 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const char> SetValueAsEnum = { 0x4bee450, 7 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsClass
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const UClass*> UBlackboardComponent = { 0x4bee620, 8 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const UClass*> SetValueAsClass = { 0x4bee620, 8 }; 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsBool
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const bool> UBlackboardComponent = { 0x4bedf80, 9 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&, const bool> SetValueAsBool = { 0x4bedf80, 9 }; 
 	// Function /Script/AIModule.BlackboardComponent.IsVectorValueSet
-	constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&> UBlackboardComponent = { 0x4bed670, 10 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&> IsVectorValueSet = { 0x4bed670, 10 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsVector
-	constexpr static const FunctionPointer<UBlackboardComponent, FVector, const FName&> UBlackboardComponent = { 0x4beeb20, 11 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, FVector, const FName&> GetValueAsVector = { 0x4beeb20, 11 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsString
-	constexpr static const FunctionPointer<UBlackboardComponent, FString, const FName&> UBlackboardComponent = { 0x4beed70, 12 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, FString, const FName&> GetValueAsString = { 0x4beed70, 12 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsRotator
-	constexpr static const FunctionPointer<UBlackboardComponent, FRotator, const FName&> UBlackboardComponent = { 0x4bee9c0, 13 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, FRotator, const FName&> GetValueAsRotator = { 0x4bee9c0, 13 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsObject
-	constexpr static const FunctionPointer<UBlackboardComponent, UObject*, const FName&> UBlackboardComponent = { 0x4bef3c0, 14 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, UObject*, const FName&> GetValueAsObject = { 0x4bef3c0, 14 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsName
-	constexpr static const FunctionPointer<UBlackboardComponent, FName, const FName&> UBlackboardComponent = { 0x4beec80, 15 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, FName, const FName&> GetValueAsName = { 0x4beec80, 15 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsInt
-	constexpr static const FunctionPointer<UBlackboardComponent, int32_t, const FName&> UBlackboardComponent = { 0x4bef0f0, 16 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, int32_t, const FName&> GetValueAsInt = { 0x4bef0f0, 16 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsFloat
-	constexpr static const FunctionPointer<UBlackboardComponent, float, const FName&> UBlackboardComponent = { 0x4bef000, 17 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, float, const FName&> GetValueAsFloat = { 0x4bef000, 17 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsEnum
-	constexpr static const FunctionPointer<UBlackboardComponent, char, const FName&> UBlackboardComponent = { 0x4bef1e0, 18 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, char, const FName&> GetValueAsEnum = { 0x4bef1e0, 18 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsClass
-	constexpr static const FunctionPointer<UBlackboardComponent, UClass*, const FName&> UBlackboardComponent = { 0x4bef2d0, 19 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, UClass*, const FName&> GetValueAsClass = { 0x4bef2d0, 19 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsBool
-	constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&> UBlackboardComponent = { 0x4beef10, 20 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&> GetValueAsBool = { 0x4beef10, 20 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetRotationFromEntry
-	constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&, const FRotator&> UBlackboardComponent = { 0x4bed290, 21 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&, const FRotator&> GetRotationFromEntry = { 0x4bed290, 21 }; 
 	// Function /Script/AIModule.BlackboardComponent.GetLocationFromEntry
-	constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&, const FVector&> UBlackboardComponent = { 0x4bed480, 22 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, bool, const FName&, const FVector&> GetLocationFromEntry = { 0x4bed480, 22 }; 
 	// Function /Script/AIModule.BlackboardComponent.ClearValue
-	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&> UBlackboardComponent = { 0x4bed1b0, 23 }; 
+	constexpr static const FunctionPointer<UBlackboardComponent, void, const FName&> ClearValue = { 0x4bed1b0, 23 }; 
 };
 
 /// Struct /Script/AIModule.BlackboardEntry
@@ -1589,36 +1572,35 @@ public:
 	bool                                               bIsObservingBB : 1;                                         // 0x0098:2 (0x0001)  
 	unsigned char                                      UnknownData03_7[0x7];                                       // 0x0099   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*, const float> UBTDecorator_BlueprintBase = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bbb090, 0 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveTick
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*, const float> UBTDecorator_BlueprintBase = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bbb090, 1 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> UBTDecorator_BlueprintBase = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveObserverDeactivatedAI = { 0x2bbb090, 2 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> UBTDecorator_BlueprintBase = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveObserverDeactivated = { 0x2bbb090, 3 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> UBTDecorator_BlueprintBase = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveObserverActivatedAI = { 0x2bbb090, 4 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> UBTDecorator_BlueprintBase = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveObserverActivated = { 0x2bbb090, 5 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> UBTDecorator_BlueprintBase = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*> ReceiveExecutionStartAI = { 0x2bbb090, 6 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> UBTDecorator_BlueprintBase = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*> ReceiveExecutionStart = { 0x2bbb090, 7 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*, const TEnumAsByte<EBTNodeResult>> UBTDecorator_BlueprintBase = { 0x2bbb090, 8 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AAIController*, const APawn*, const TEnumAsByte<EBTNodeResult>> ReceiveExecutionFinishAI = { 0x2bbb090, 8 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*, const TEnumAsByte<EBTNodeResult>> UBTDecorator_BlueprintBase = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, void, const AActor*, const TEnumAsByte<EBTNodeResult>> ReceiveExecutionFinish = { 0x2bbb090, 9 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool, const AAIController*, const APawn*> UBTDecorator_BlueprintBase = { 0x2bbb090, 10 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool, const AAIController*, const APawn*> PerformConditionCheckAI = { 0x2bbb090, 10 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.PerformConditionCheck
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool, const AActor*> UBTDecorator_BlueprintBase = { 0x2bbb090, 11 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool, const AActor*> PerformConditionCheck = { 0x2bbb090, 11 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool> UBTDecorator_BlueprintBase = { 0x4bf4ec0, 12 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool> IsDecoratorObserverActive = { 0x4bf4ec0, 12 }; 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
-	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool> UBTDecorator_BlueprintBase = { 0x4bf4f50, 13 }; 
+	constexpr static const FunctionPointer<UBTDecorator_BlueprintBase, bool> IsDecoratorExecutionActive = { 0x4bf4f50, 13 }; 
 };
 
 /// Class /Script/AIModule.BTDecorator_CheckGameplayTagsOnActor
@@ -1814,62 +1796,61 @@ class UBTFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AIModule.BTFunctionLibrary.StopUsingExternalEvent
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*> UBTFunctionLibrary = { 0x17a7aa0, 0 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*> StopUsingExternalEvent = { 0x17a7aa0, 0 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.StartUsingExternalEvent
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const AActor*> UBTFunctionLibrary = { 0x267feb0, 1 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const AActor*> StartUsingExternalEvent = { 0x267feb0, 1 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsVector
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FVector> UBTFunctionLibrary = { 0x4bf9980, 2 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FVector> SetBlackboardValueAsVector = { 0x4bf9980, 2 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsString
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FString> UBTFunctionLibrary = { 0x4bf9f60, 3 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FString> SetBlackboardValueAsString = { 0x4bf9f60, 3 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsRotator
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FRotator> UBTFunctionLibrary = { 0x4bf9690, 4 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FRotator> SetBlackboardValueAsRotator = { 0x4bf9690, 4 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsObject
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const UObject*> UBTFunctionLibrary = { 0x4bfb1b0, 5 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const UObject*> SetBlackboardValueAsObject = { 0x4bfb1b0, 5 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsName
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FName> UBTFunctionLibrary = { 0x4bf9c70, 6 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const FName> SetBlackboardValueAsName = { 0x4bf9c70, 6 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsInt
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const int32_t> UBTFunctionLibrary = { 0x4bfa8e0, 7 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const int32_t> SetBlackboardValueAsInt = { 0x4bfa8e0, 7 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsFloat
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const float> UBTFunctionLibrary = { 0x4bfa5c0, 8 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const float> SetBlackboardValueAsFloat = { 0x4bfa5c0, 8 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsEnum
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const char> UBTFunctionLibrary = { 0x4bfabd0, 9 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const char> SetBlackboardValueAsEnum = { 0x4bfabd0, 9 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsClass
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const UClass*> UBTFunctionLibrary = { 0x4bfaec0, 10 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const UClass*> SetBlackboardValueAsClass = { 0x4bfaec0, 10 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.SetBlackboardValueAsBool
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const bool> UBTFunctionLibrary = { 0x4bfa2d0, 11 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&, const bool> SetBlackboardValueAsBool = { 0x4bfa2d0, 11 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetOwnersBlackboard
-	constexpr static const FunctionPointer<UBTFunctionLibrary, UBlackboardComponent*, const UBTNode*> UBTFunctionLibrary = { 0x4bfceb0, 12 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, UBlackboardComponent*, const UBTNode*> GetOwnersBlackboard = { 0x4bfceb0, 12 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetOwnerComponent
-	constexpr static const FunctionPointer<UBTFunctionLibrary, UBehaviorTreeComponent*, const UBTNode*> UBTFunctionLibrary = { 0x4bfcd80, 13 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, UBehaviorTreeComponent*, const UBTNode*> GetOwnerComponent = { 0x4bfcd80, 13 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsVector
-	constexpr static const FunctionPointer<UBTFunctionLibrary, FVector, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfb760, 14 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, FVector, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsVector = { 0x4bfb760, 14 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsString
-	constexpr static const FunctionPointer<UBTFunctionLibrary, FString, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfbc40, 15 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, FString, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsString = { 0x4bfbc40, 15 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsRotator
-	constexpr static const FunctionPointer<UBTFunctionLibrary, FRotator, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfb4a0, 16 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, FRotator, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsRotator = { 0x4bfb4a0, 16 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsObject
-	constexpr static const FunctionPointer<UBTFunctionLibrary, UObject*, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfcb80, 17 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, UObject*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsObject = { 0x4bfcb80, 17 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsName
-	constexpr static const FunctionPointer<UBTFunctionLibrary, FName, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfba20, 18 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, FName, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsName = { 0x4bfba20, 18 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsInt
-	constexpr static const FunctionPointer<UBTFunctionLibrary, int32_t, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfc350, 19 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, int32_t, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsInt = { 0x4bfc350, 19 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsFloat
-	constexpr static const FunctionPointer<UBTFunctionLibrary, float, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfc140, 20 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, float, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsFloat = { 0x4bfc140, 20 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsEnum
-	constexpr static const FunctionPointer<UBTFunctionLibrary, char, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfc550, 21 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, char, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsEnum = { 0x4bfc550, 21 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsClass
-	constexpr static const FunctionPointer<UBTFunctionLibrary, UClass*, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfc750, 22 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, UClass*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsClass = { 0x4bfc750, 22 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsBool
-	constexpr static const FunctionPointer<UBTFunctionLibrary, bool, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfbf40, 23 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, bool, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsBool = { 0x4bfbf40, 23 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.GetBlackboardValueAsActor
-	constexpr static const FunctionPointer<UBTFunctionLibrary, AActor*, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bfc950, 24 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, AActor*, const UBTNode*, const FBlackboardKeySelector&> GetBlackboardValueAsActor = { 0x4bfc950, 24 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.ClearBlackboardValueAsVector
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bf9490, 25 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&> ClearBlackboardValueAsVector = { 0x4bf9490, 25 }; 
 	// Function /Script/AIModule.BTFunctionLibrary.ClearBlackboardValue
-	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&> UBTFunctionLibrary = { 0x4bf9490, 26 }; 
+	constexpr static const FunctionPointer<UBTFunctionLibrary, void, const UBTNode*, const FBlackboardKeySelector&> ClearBlackboardValue = { 0x4bf9490, 26 }; 
 };
 
 /// Class /Script/AIModule.BTService
@@ -1904,26 +1885,25 @@ public:
 	bool                                               bShowEventDetails : 1;                                      // 0x0090:1 (0x0001)  
 	unsigned char                                      UnknownData03_7[0x7];                                       // 0x0091   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveTickAI
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*, const float> UBTService_BlueprintBase = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bbb090, 0 }; 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveTick
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*, const float> UBTService_BlueprintBase = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bbb090, 1 }; 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveSearchStartAI
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> UBTService_BlueprintBase = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveSearchStartAI = { 0x2bbb090, 2 }; 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveSearchStart
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> UBTService_BlueprintBase = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveSearchStart = { 0x2bbb090, 3 }; 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveDeactivationAI
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> UBTService_BlueprintBase = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveDeactivationAI = { 0x2bbb090, 4 }; 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveDeactivation
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> UBTService_BlueprintBase = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveDeactivation = { 0x2bbb090, 5 }; 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveActivationAI
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> UBTService_BlueprintBase = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AAIController*, const APawn*> ReceiveActivationAI = { 0x2bbb090, 6 }; 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveActivation
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> UBTService_BlueprintBase = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, void, const AActor*> ReceiveActivation = { 0x2bbb090, 7 }; 
 	// Function /Script/AIModule.BTService_BlueprintBase.IsServiceActive
-	constexpr static const FunctionPointer<UBTService_BlueprintBase, bool> UBTService_BlueprintBase = { 0x4bfe1f0, 8 }; 
+	constexpr static const FunctionPointer<UBTService_BlueprintBase, bool> IsServiceActive = { 0x4bfe1f0, 8 }; 
 };
 
 /// Class /Script/AIModule.BTService_DefaultFocus
@@ -1996,32 +1976,31 @@ public:
 	bool                                               bShowPropertyDetails : 1;                                   // 0x00A0:0 (0x0001)  
 	unsigned char                                      UnknownData03_7[0x7];                                       // 0x00A1   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.BTTask_BlueprintBase.SetFinishOnMessageWithId
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const FName, const int32_t> UBTTask_BlueprintBase = { 0x4bff1e0, 0 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const FName, const int32_t> SetFinishOnMessageWithId = { 0x4bff1e0, 0 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.SetFinishOnMessage
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const FName> UBTTask_BlueprintBase = { 0x4bff380, 1 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const FName> SetFinishOnMessage = { 0x4bff380, 1 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveTickAI
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*, const float> UBTTask_BlueprintBase = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*, const float> ReceiveTickAI = { 0x2bbb090, 2 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveTick
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*, const float> UBTTask_BlueprintBase = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*, const float> ReceiveTick = { 0x2bbb090, 3 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveExecuteAI
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*> UBTTask_BlueprintBase = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*> ReceiveExecuteAI = { 0x2bbb090, 4 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveExecute
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*> UBTTask_BlueprintBase = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*> ReceiveExecute = { 0x2bbb090, 5 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveAbortAI
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*> UBTTask_BlueprintBase = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AAIController*, const APawn*> ReceiveAbortAI = { 0x2bbb090, 6 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveAbort
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*> UBTTask_BlueprintBase = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const AActor*> ReceiveAbort = { 0x2bbb090, 7 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.IsTaskExecuting
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, bool> UBTTask_BlueprintBase = { 0x4bff160, 8 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, bool> IsTaskExecuting = { 0x4bff160, 8 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.IsTaskAborting
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, bool> UBTTask_BlueprintBase = { 0x4bff130, 9 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, bool> IsTaskAborting = { 0x4bff130, 9 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.FinishExecute
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const bool> UBTTask_BlueprintBase = { 0x4bff530, 10 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void, const bool> FinishExecute = { 0x4bff530, 10 }; 
 	// Function /Script/AIModule.BTTask_BlueprintBase.FinishAbort
-	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void> UBTTask_BlueprintBase = { 0x4bff490, 11 }; 
+	constexpr static const FunctionPointer<UBTTask_BlueprintBase, void> FinishAbort = { 0x4bff490, 11 }; 
 };
 
 /// Class /Script/AIModule.BTTask_FinishWithResult
@@ -2220,16 +2199,15 @@ public:
 	class ANavigationData*                             MyNavData;                                                  // 0x0108   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x150];                                     // 0x0110   (0x0150)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.PathFollowingComponent.OnNavDataRegistered
-	constexpr static const FunctionPointer<UPathFollowingComponent, void, const ANavigationData*> UPathFollowingComponent = { 0x4c16730, 0 }; 
+	constexpr static const FunctionPointer<UPathFollowingComponent, void, const ANavigationData*> OnNavDataRegistered = { 0x4c16730, 0 }; 
 	// Function /Script/AIModule.PathFollowingComponent.OnActorBump
-	constexpr static const FunctionPointer<UPathFollowingComponent, void, const AActor*, const AActor*, const FVector, const FHitResult&> UPathFollowingComponent = { 0x4c169b0, 1 }; 
+	constexpr static const FunctionPointer<UPathFollowingComponent, void, const AActor*, const AActor*, const FVector, const FHitResult&> OnActorBump = { 0x4c169b0, 1 }; 
 	// Function /Script/AIModule.PathFollowingComponent.GetPathDestination
-	constexpr static const FunctionPointer<UPathFollowingComponent, FVector> UPathFollowingComponent = { 0x4c16870, 2 }; 
+	constexpr static const FunctionPointer<UPathFollowingComponent, FVector> GetPathDestination = { 0x4c16870, 2 }; 
 	// Function /Script/AIModule.PathFollowingComponent.GetPathActionType
-	constexpr static const FunctionPointer<UPathFollowingComponent, TEnumAsByte<EPathFollowingAction>> UPathFollowingComponent = { 0x4c16910, 3 }; 
+	constexpr static const FunctionPointer<UPathFollowingComponent, TEnumAsByte<EPathFollowingAction>> GetPathActionType = { 0x4c16910, 3 }; 
 };
 
 /// Class /Script/AIModule.CrowdFollowingComponent
@@ -2246,10 +2224,9 @@ public:
 	float                                              VelocityLerpAngle;                                          // 0x02B8   (0x0004)  
 	unsigned char                                      UnknownData05_7[0x4];                                       // 0x02BC   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.CrowdFollowingComponent.SuspendCrowdSteering
-	constexpr static const FunctionPointer<UCrowdFollowingComponent, void, const bool> UCrowdFollowingComponent = { 0x4c045f0, 0 }; 
+	constexpr static const FunctionPointer<UCrowdFollowingComponent, void, const bool> SuspendCrowdSteering = { 0x4c045f0, 0 }; 
 };
 
 /// Struct /Script/AIModule.CrowdAvoidanceConfig
@@ -2330,16 +2307,15 @@ class UEnvQueryContext_BlueprintBase : public UEnvQueryContext
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
-	constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const FVector&> UEnvQueryContext_BlueprintBase = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const FVector&> ProvideSingleLocation = { 0x2bbb090, 0 }; 
 	// Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
-	constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const AActor*&> UEnvQueryContext_BlueprintBase = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const AActor*&> ProvideSingleActor = { 0x2bbb090, 1 }; 
 	// Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
-	constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const TArray<FVector>&> UEnvQueryContext_BlueprintBase = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const TArray<FVector>&> ProvideLocationsSet = { 0x2bbb090, 2 }; 
 	// Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
-	constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const TArray<AActor*>&> UEnvQueryContext_BlueprintBase = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UEnvQueryContext_BlueprintBase, void, const UObject*, const AActor*, const TArray<AActor*>&> ProvideActorsSet = { 0x2bbb090, 3 }; 
 };
 
 /// Class /Script/AIModule.EnvQueryContext_Item
@@ -2412,16 +2388,15 @@ public:
 	class UClass*                                      GeneratedItemType;                                          // 0x0070   (0x0008)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0078   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier
-	constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, UObject*> UEnvQueryGenerator_BlueprintBase = { 0x4c06ce0, 0 }; 
+	constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, UObject*> GetQuerier = { 0x4c06ce0, 0 }; 
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration
-	constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const TArray<FVector>&> UEnvQueryGenerator_BlueprintBase = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const TArray<FVector>&> DoItemGeneration = { 0x2bbb090, 1 }; 
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector
-	constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const FVector> UEnvQueryGenerator_BlueprintBase = { 0x4c07000, 2 }; 
+	constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const FVector> AddGeneratedVector = { 0x4c07000, 2 }; 
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
-	constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const AActor*> UEnvQueryGenerator_BlueprintBase = { 0x4c06d20, 3 }; 
+	constexpr static const FunctionPointer<UEnvQueryGenerator_BlueprintBase, void, const AActor*> AddGeneratedActor = { 0x4c06d20, 3 }; 
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Composite
@@ -2585,22 +2560,21 @@ public:
 	unsigned char                                      UnknownData05_6[0x4];                                       // 0x0064   (0x0004)  MISSED
 	FMulticastInlineDelegate                           OnQueryFinishedEvent;                                       // 0x0068   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.SetNamedParam
-	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, void, const FName, const float> UEnvQueryInstanceBlueprintWrapper = { 0x4c0a540, 0 }; 
+	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, void, const FName, const float> SetNamedParam = { 0x4c0a540, 0 }; 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsLocations
-	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, TArray<FVector>> UEnvQueryInstanceBlueprintWrapper = { 0x4c0a720, 1 }; 
+	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, TArray<FVector>> GetResultsAsLocations = { 0x4c0a720, 1 }; 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsActors
-	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, TArray<AActor*>> UEnvQueryInstanceBlueprintWrapper = { 0x4c0a800, 2 }; 
+	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, TArray<AActor*>> GetResultsAsActors = { 0x4c0a800, 2 }; 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsLocations
-	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, bool, const TArray<FVector>&> UEnvQueryInstanceBlueprintWrapper = { 0x4c0a880, 3 }; 
+	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, bool, const TArray<FVector>&> GetQueryResultsAsLocations = { 0x4c0a880, 3 }; 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsActors
-	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, bool, const TArray<AActor*>&> UEnvQueryInstanceBlueprintWrapper = { 0x4c0aa00, 4 }; 
+	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, bool, const TArray<AActor*>&> GetQueryResultsAsActors = { 0x4c0aa00, 4 }; 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetItemScore
-	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, float, const int32_t> UEnvQueryInstanceBlueprintWrapper = { 0x4c0ab00, 5 }; 
+	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, float, const int32_t> GetItemScore = { 0x4c0ab00, 5 }; 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.EQSQueryDoneSignature__DelegateSignature
-	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, void, const UEnvQueryInstanceBlueprintWrapper*, const TEnumAsByte<EEnvQueryStatus>> UEnvQueryInstanceBlueprintWrapper = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<UEnvQueryInstanceBlueprintWrapper, void, const UEnvQueryInstanceBlueprintWrapper*, const TEnumAsByte<EEnvQueryStatus>> EQSQueryDoneSignature__DelegateSignature = { 0x2bbb090, 6 }; 
 };
 
 /// Class /Script/AIModule.EnvQueryItemType
@@ -2670,10 +2644,9 @@ public:
 	int32_t                                            QueryCountWarningThreshold;                                 // 0x0134   (0x0004)  
 	double                                             QueryCountWarningInterval;                                  // 0x0138   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AIModule.EnvQueryManager.RunEQSQuery
-	constexpr static const FunctionPointer<UEnvQueryManager, UEnvQueryInstanceBlueprintWrapper*, const UObject*, const UEnvQuery*, const UObject*, const TEnumAsByte<EEnvQueryRunMode>, const UClass*> UEnvQueryManager = { 0x4c0c580, 0 }; 
+	constexpr static const FunctionPointer<UEnvQueryManager, UEnvQueryInstanceBlueprintWrapper*, const UObject*, const UEnvQuery*, const UObject*, const TEnumAsByte<EEnvQueryRunMode>, const UClass*> RunEQSQuery = { 0x4c0c580, 0 }; 
 };
 
 /// Class /Script/AIModule.EnvQueryOption
@@ -2925,18 +2898,17 @@ public:
 	unsigned char                                      UnknownData03_6[0x7];                                       // 0x0301   (0x0007)  MISSED
 	FMulticastInlineDelegate                           OnSmartLinkReached;                                         // 0x0308   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/AIModule.NavLinkProxy.SetSmartLinkEnabled
-	constexpr static const FunctionPointer<ANavLinkProxy, void, const bool> ANavLinkProxy = { 0x4c13ee0, 0 }; 
+	constexpr static const FunctionPointer<ANavLinkProxy, void, const bool> SetSmartLinkEnabled = { 0x4c13ee0, 0 }; 
 	// Function /Script/AIModule.NavLinkProxy.ResumePathFollowing
-	constexpr static const FunctionPointer<ANavLinkProxy, void, const AActor*> ANavLinkProxy = { 0x4c13ff0, 1 }; 
+	constexpr static const FunctionPointer<ANavLinkProxy, void, const AActor*> ResumePathFollowing = { 0x4c13ff0, 1 }; 
 	// Function /Script/AIModule.NavLinkProxy.ReceiveSmartLinkReached
-	constexpr static const FunctionPointer<ANavLinkProxy, void, const AActor*, const FVector&> ANavLinkProxy = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<ANavLinkProxy, void, const AActor*, const FVector&> ReceiveSmartLinkReached = { 0x2bbb090, 2 }; 
 	// Function /Script/AIModule.NavLinkProxy.IsSmartLinkEnabled
-	constexpr static const FunctionPointer<ANavLinkProxy, bool> ANavLinkProxy = { 0x4c13fc0, 3 }; 
+	constexpr static const FunctionPointer<ANavLinkProxy, bool> IsSmartLinkEnabled = { 0x4c13fc0, 3 }; 
 	// Function /Script/AIModule.NavLinkProxy.HasMovingAgents
-	constexpr static const FunctionPointer<ANavLinkProxy, bool> ANavLinkProxy = { 0x4c13e70, 4 }; 
+	constexpr static const FunctionPointer<ANavLinkProxy, bool> HasMovingAgents = { 0x4c13e70, 4 }; 
 };
 
 /// Class /Script/AIModule.NavLocalGridManager
@@ -2946,22 +2918,21 @@ class UNavLocalGridManager : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x30];                                      // 0x0028   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
-	constexpr static const FunctionPointer<UNavLocalGridManager, bool, const UObject*, const float> UNavLocalGridManager = { 0x4c15d10, 0 }; 
+	constexpr static const FunctionPointer<UNavLocalGridManager, bool, const UObject*, const float> SetLocalNavigationGridDensity = { 0x4c15d10, 0 }; 
 	// Function /Script/AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
-	constexpr static const FunctionPointer<UNavLocalGridManager, void, const UObject*, const int32_t, const bool> UNavLocalGridManager = { 0x4c14580, 1 }; 
+	constexpr static const FunctionPointer<UNavLocalGridManager, void, const UObject*, const int32_t, const bool> RemoveLocalNavigationGrid = { 0x4c14580, 1 }; 
 	// Function /Script/AIModule.NavLocalGridManager.FindLocalNavigationGridPath
-	constexpr static const FunctionPointer<UNavLocalGridManager, bool, const UObject*, const FVector&, const FVector&, const TArray<FVector>&> UNavLocalGridManager = { 0x4c142b0, 2 }; 
+	constexpr static const FunctionPointer<UNavLocalGridManager, bool, const UObject*, const FVector&, const FVector&, const TArray<FVector>&> FindLocalNavigationGridPath = { 0x4c142b0, 2 }; 
 	// Function /Script/AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
-	constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const TArray<FVector>&, const int32_t, const float, const bool> UNavLocalGridManager = { 0x4c15440, 3 }; 
+	constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const TArray<FVector>&, const int32_t, const float, const bool> AddLocalNavigationGridForPoints = { 0x4c15440, 3 }; 
 	// Function /Script/AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
-	constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const int32_t, const float, const bool> UNavLocalGridManager = { 0x4c15920, 4 }; 
+	constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const int32_t, const float, const bool> AddLocalNavigationGridForPoint = { 0x4c15920, 4 }; 
 	// Function /Script/AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
-	constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const float, const float, const int32_t, const float, const bool> UNavLocalGridManager = { 0x4c147a0, 5 }; 
+	constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const float, const float, const int32_t, const float, const bool> AddLocalNavigationGridForCapsule = { 0x4c147a0, 5 }; 
 	// Function /Script/AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
-	constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const FVector, const FRotator, const int32_t, const float, const bool> UNavLocalGridManager = { 0x4c14d60, 6 }; 
+	constexpr static const FunctionPointer<UNavLocalGridManager, int32_t, const UObject*, const FVector&, const FVector, const FRotator, const int32_t, const float, const bool> AddLocalNavigationGridForBox = { 0x4c14d60, 6 }; 
 };
 
 /// Class /Script/AIModule.PathFollowingManager
@@ -2988,14 +2959,13 @@ public:
 	bool                                               bAlwaysNotifyOnFinished : 1;                                // 0x0080:3 (0x0001)  
 	unsigned char                                      UnknownData03_7[0x17];                                      // 0x0081   (0x0017)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.PawnAction.GetActionPriority
-	constexpr static const FunctionPointer<UPawnAction, TEnumAsByte<EAIRequestPriority>> UPawnAction = { 0x4c178d0, 0 }; 
+	constexpr static const FunctionPointer<UPawnAction, TEnumAsByte<EAIRequestPriority>> GetActionPriority = { 0x4c178d0, 0 }; 
 	// Function /Script/AIModule.PawnAction.Finish
-	constexpr static const FunctionPointer<UPawnAction, void, const TEnumAsByte<EPawnActionResult>> UPawnAction = { 0x4c175a0, 1 }; 
+	constexpr static const FunctionPointer<UPawnAction, void, const TEnumAsByte<EPawnActionResult>> Finish = { 0x4c175a0, 1 }; 
 	// Function /Script/AIModule.PawnAction.CreateActionInstance
-	constexpr static const FunctionPointer<UPawnAction, UPawnAction*, const UObject*, const UClass*> UPawnAction = { 0x4c17670, 2 }; 
+	constexpr static const FunctionPointer<UPawnAction, UPawnAction*, const UObject*, const UClass*> CreateActionInstance = { 0x4c17670, 2 }; 
 };
 
 /// Class /Script/AIModule.PawnAction_BlueprintBase
@@ -3004,18 +2974,17 @@ class UPawnAction_BlueprintBase : public UPawnAction
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AIModule.PawnAction_BlueprintBase.ActionTick
-	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*, const float> UPawnAction_BlueprintBase = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*, const float> ActionTick = { 0x2bbb090, 0 }; 
 	// Function /Script/AIModule.PawnAction_BlueprintBase.ActionStart
-	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> UPawnAction_BlueprintBase = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionStart = { 0x2bbb090, 1 }; 
 	// Function /Script/AIModule.PawnAction_BlueprintBase.ActionResume
-	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> UPawnAction_BlueprintBase = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionResume = { 0x2bbb090, 2 }; 
 	// Function /Script/AIModule.PawnAction_BlueprintBase.ActionPause
-	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> UPawnAction_BlueprintBase = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*> ActionPause = { 0x2bbb090, 3 }; 
 	// Function /Script/AIModule.PawnAction_BlueprintBase.ActionFinished
-	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*, const TEnumAsByte<EPawnActionResult>> UPawnAction_BlueprintBase = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UPawnAction_BlueprintBase, void, const APawn*, const TEnumAsByte<EPawnActionResult>> ActionFinished = { 0x2bbb090, 4 }; 
 };
 
 /// Class /Script/AIModule.PawnAction_Move
@@ -3095,16 +3064,15 @@ public:
 	class UPawnAction*                                 CurrentAction;                                              // 0x00E8   (0x0008)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x00F0   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AIModule.PawnActionsComponent.K2_PushAction
-	constexpr static const FunctionPointer<UPawnActionsComponent, bool, const UPawnAction*, const TEnumAsByte<EAIRequestPriority>, const UObject*> UPawnActionsComponent = { 0x4c19290, 0 }; 
+	constexpr static const FunctionPointer<UPawnActionsComponent, bool, const UPawnAction*, const TEnumAsByte<EAIRequestPriority>, const UObject*> K2_PushAction = { 0x4c19290, 0 }; 
 	// Function /Script/AIModule.PawnActionsComponent.K2_PerformAction
-	constexpr static const FunctionPointer<UPawnActionsComponent, bool, const APawn*, const UPawnAction*, const TEnumAsByte<EAIRequestPriority>> UPawnActionsComponent = { 0x4c194b0, 1 }; 
+	constexpr static const FunctionPointer<UPawnActionsComponent, bool, const APawn*, const UPawnAction*, const TEnumAsByte<EAIRequestPriority>> K2_PerformAction = { 0x4c194b0, 1 }; 
 	// Function /Script/AIModule.PawnActionsComponent.K2_ForceAbortAction
-	constexpr static const FunctionPointer<UPawnActionsComponent, TEnumAsByte<EPawnActionAbortState>, const UPawnAction*> UPawnActionsComponent = { 0x4c19050, 2 }; 
+	constexpr static const FunctionPointer<UPawnActionsComponent, TEnumAsByte<EPawnActionAbortState>, const UPawnAction*> K2_ForceAbortAction = { 0x4c19050, 2 }; 
 	// Function /Script/AIModule.PawnActionsComponent.K2_AbortAction
-	constexpr static const FunctionPointer<UPawnActionsComponent, TEnumAsByte<EPawnActionAbortState>, const UPawnAction*> UPawnActionsComponent = { 0x4c19190, 3 }; 
+	constexpr static const FunctionPointer<UPawnActionsComponent, TEnumAsByte<EPawnActionAbortState>, const UPawnAction*> K2_AbortAction = { 0x4c19190, 3 }; 
 };
 
 /// Class /Script/AIModule.PawnSensingComponent
@@ -3127,22 +3095,21 @@ public:
 	float                                              PeripheralVisionAngle;                                      // 0x0100   (0x0004)  
 	float                                              PeripheralVisionCosine;                                     // 0x0104   (0x0004)  
 
-
 	/// Functions
 	// Function /Script/AIModule.PawnSensingComponent.SetSensingUpdatesEnabled
-	constexpr static const FunctionPointer<UPawnSensingComponent, void, const bool> UPawnSensingComponent = { 0x4c19c60, 0 }; 
+	constexpr static const FunctionPointer<UPawnSensingComponent, void, const bool> SetSensingUpdatesEnabled = { 0x4c19c60, 0 }; 
 	// Function /Script/AIModule.PawnSensingComponent.SetSensingInterval
-	constexpr static const FunctionPointer<UPawnSensingComponent, void, const float> UPawnSensingComponent = { 0x4c19d40, 1 }; 
+	constexpr static const FunctionPointer<UPawnSensingComponent, void, const float> SetSensingInterval = { 0x4c19d40, 1 }; 
 	// Function /Script/AIModule.PawnSensingComponent.SetPeripheralVisionAngle
-	constexpr static const FunctionPointer<UPawnSensingComponent, void, const float> UPawnSensingComponent = { 0x4c19b90, 2 }; 
+	constexpr static const FunctionPointer<UPawnSensingComponent, void, const float> SetPeripheralVisionAngle = { 0x4c19b90, 2 }; 
 	// Function /Script/AIModule.PawnSensingComponent.SeePawnDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UPawnSensingComponent, void, const APawn*> UPawnSensingComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UPawnSensingComponent, void, const APawn*> SeePawnDelegate__DelegateSignature = { 0x2bbb090, 3 }; 
 	// Function /Script/AIModule.PawnSensingComponent.HearNoiseDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UPawnSensingComponent, void, const APawn*, const FVector&, const float> UPawnSensingComponent = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UPawnSensingComponent, void, const APawn*, const FVector&, const float> HearNoiseDelegate__DelegateSignature = { 0x2bbb090, 4 }; 
 	// Function /Script/AIModule.PawnSensingComponent.GetPeripheralVisionCosine
-	constexpr static const FunctionPointer<UPawnSensingComponent, float> UPawnSensingComponent = { 0x4c19b70, 5 }; 
+	constexpr static const FunctionPointer<UPawnSensingComponent, float> GetPeripheralVisionCosine = { 0x4c19b70, 5 }; 
 	// Function /Script/AIModule.PawnSensingComponent.GetPeripheralVisionAngle
-	constexpr static const FunctionPointer<UPawnSensingComponent, float> UPawnSensingComponent = { 0x384a730, 6 }; 
+	constexpr static const FunctionPointer<UPawnSensingComponent, float> GetPeripheralVisionAngle = { 0x384a730, 6 }; 
 };
 
 /// Class /Script/AIModule.VisualLoggerExtension

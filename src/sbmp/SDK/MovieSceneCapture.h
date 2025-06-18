@@ -44,12 +44,11 @@ public:
 	EMovieSceneCaptureProtocolState                    State;                                                      // 0x0050   (0x0001)  
 	unsigned char                                      UnknownData03_7[0x7];                                       // 0x0051   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/MovieSceneCapture.MovieSceneCaptureProtocolBase.IsCapturing
-	constexpr static const FunctionPointer<UMovieSceneCaptureProtocolBase, bool> UMovieSceneCaptureProtocolBase = { 0x3f59860, 0 }; 
+	constexpr static const FunctionPointer<UMovieSceneCaptureProtocolBase, bool> IsCapturing = { 0x3f59860, 0 }; 
 	// Function /Script/MovieSceneCapture.MovieSceneCaptureProtocolBase.GetState
-	constexpr static const FunctionPointer<UMovieSceneCaptureProtocolBase, EMovieSceneCaptureProtocolState> UMovieSceneCaptureProtocolBase = { 0x384c770, 1 }; 
+	constexpr static const FunctionPointer<UMovieSceneCaptureProtocolBase, EMovieSceneCaptureProtocolState> GetState = { 0x384c770, 1 }; 
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneAudioCaptureProtocolBase
@@ -227,16 +226,15 @@ public:
 	FString                                            InheritedCommandLineArguments;                              // 0x0100   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x110];                                     // 0x0110   (0x0110)  MISSED
 
-
 	/// Functions
 	// Function /Script/MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType
-	constexpr static const FunctionPointer<UMovieSceneCapture, void, const UClass*> UMovieSceneCapture = { 0x3f58ad0, 0 }; 
+	constexpr static const FunctionPointer<UMovieSceneCapture, void, const UClass*> SetImageCaptureProtocolType = { 0x3f58ad0, 0 }; 
 	// Function /Script/MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType
-	constexpr static const FunctionPointer<UMovieSceneCapture, void, const UClass*> UMovieSceneCapture = { 0x3f58990, 1 }; 
+	constexpr static const FunctionPointer<UMovieSceneCapture, void, const UClass*> SetAudioCaptureProtocolType = { 0x3f58990, 1 }; 
 	// Function /Script/MovieSceneCapture.MovieSceneCapture.GetImageCaptureProtocol
-	constexpr static const FunctionPointer<UMovieSceneCapture, UMovieSceneCaptureProtocolBase*> UMovieSceneCapture = { 0x1168fc0, 2 }; 
+	constexpr static const FunctionPointer<UMovieSceneCapture, UMovieSceneCaptureProtocolBase*> GetImageCaptureProtocol = { 0x1168fc0, 2 }; 
 	// Function /Script/MovieSceneCapture.MovieSceneCapture.GetAudioCaptureProtocol
-	constexpr static const FunctionPointer<UMovieSceneCapture, UMovieSceneCaptureProtocolBase*> UMovieSceneCapture = { 0x17be4f0, 3 }; 
+	constexpr static const FunctionPointer<UMovieSceneCapture, UMovieSceneCaptureProtocolBase*> GetAudioCaptureProtocol = { 0x17be4f0, 3 }; 
 };
 
 /// Class /Script/MovieSceneCapture.LevelCapture
@@ -256,18 +254,17 @@ class UMovieSceneCaptureEnvironment : public UObject
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress
-	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, bool> UMovieSceneCaptureEnvironment = { 0x3f59180, 0 }; 
+	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, bool> IsCaptureInProgress = { 0x3f59180, 0 }; 
 	// Function /Script/MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber
-	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, int32_t> UMovieSceneCaptureEnvironment = { 0x3f59230, 1 }; 
+	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, int32_t> GetCaptureFrameNumber = { 0x3f59230, 1 }; 
 	// Function /Script/MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime
-	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, float> UMovieSceneCaptureEnvironment = { 0x3f591c0, 2 }; 
+	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, float> GetCaptureElapsedTime = { 0x3f591c0, 2 }; 
 	// Function /Script/MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol
-	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, UMovieSceneImageCaptureProtocolBase*> UMovieSceneCaptureEnvironment = { 0x3f590f0, 3 }; 
+	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, UMovieSceneImageCaptureProtocolBase*> FindImageCaptureProtocol = { 0x3f590f0, 3 }; 
 	// Function /Script/MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol
-	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, UMovieSceneAudioCaptureProtocolBase*> UMovieSceneCaptureEnvironment = { 0x3f59060, 4 }; 
+	constexpr static const FunctionPointer<UMovieSceneCaptureEnvironment, UMovieSceneAudioCaptureProtocolBase*> FindAudioCaptureProtocol = { 0x3f59060, 4 }; 
 };
 
 /// Class /Script/MovieSceneCapture.UserDefinedCaptureProtocol
@@ -278,40 +275,39 @@ public:
 	class UWorld*                                      World;                                                      // 0x0058   (0x0008)  
 	unsigned char                                      UnknownData01_7[0x78];                                      // 0x0060   (0x0078)  MISSED
 
-
 	/// Functions
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.StopCapturingFinalPixels
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x3f5a7a0, 0 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> StopCapturingFinalPixels = { 0x3f5a7a0, 0 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.StartCapturingFinalPixels
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void, const FCapturedPixelsID&> UUserDefinedCaptureProtocol = { 0x3f5a7e0, 1 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void, const FCapturedPixelsID&> StartCapturingFinalPixels = { 0x3f5a7e0, 1 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void, const UTexture*, const FCapturedPixelsID&> UUserDefinedCaptureProtocol = { 0x3f5a990, 2 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void, const UTexture*, const FCapturedPixelsID&> ResolveBuffer = { 0x3f5a990, 2 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnWarmUp
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> OnWarmUp = { 0x2bbb090, 3 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnTick
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> OnTick = { 0x2bbb090, 4 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnStartCapture
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> OnStartCapture = { 0x2bbb090, 5 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnSetup
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, bool> UUserDefinedCaptureProtocol = { 0x3f5ac10, 6 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, bool> OnSetup = { 0x3f5ac10, 6 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnPreTick
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> OnPreTick = { 0x2bbb090, 7 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnPixelsReceived
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void, const FCapturedPixels&, const FCapturedPixelsID&, const FFrameMetrics> UUserDefinedCaptureProtocol = { 0x2bbb090, 8 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void, const FCapturedPixels&, const FCapturedPixelsID&, const FFrameMetrics> OnPixelsReceived = { 0x2bbb090, 8 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnPauseCapture
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> OnPauseCapture = { 0x2bbb090, 9 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnFinalize
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x2bbb090, 10 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> OnFinalize = { 0x2bbb090, 10 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnCaptureFrame
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x2bbb090, 11 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> OnCaptureFrame = { 0x2bbb090, 11 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnCanFinalize
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, bool> UUserDefinedCaptureProtocol = { 0x3f5abe0, 12 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, bool> OnCanFinalize = { 0x3f5abe0, 12 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.OnBeginFinalize
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> UUserDefinedCaptureProtocol = { 0x2bbb090, 13 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, void> OnBeginFinalize = { 0x2bbb090, 13 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.GetCurrentFrameMetrics
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, FFrameMetrics> UUserDefinedCaptureProtocol = { 0x3f5a640, 14 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, FFrameMetrics> GetCurrentFrameMetrics = { 0x3f5a640, 14 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.GenerateFilename
-	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, FString, const FFrameMetrics&> UUserDefinedCaptureProtocol = { 0x3f5a660, 15 }; 
+	constexpr static const FunctionPointer<UUserDefinedCaptureProtocol, FString, const FFrameMetrics&> GenerateFilename = { 0x3f5a660, 15 }; 
 };
 
 /// Class /Script/MovieSceneCapture.UserDefinedImageCaptureProtocol
@@ -324,14 +320,13 @@ public:
 	unsigned char                                      UnknownData01_6[0x2];                                       // 0x00DA   (0x0002)  MISSED
 	int32_t                                            CompressionQuality;                                         // 0x00DC   (0x0004)  
 
-
 	/// Functions
 	// Function /Script/MovieSceneCapture.UserDefinedImageCaptureProtocol.WriteImageToDisk
-	constexpr static const FunctionPointer<UUserDefinedImageCaptureProtocol, void, const FCapturedPixels&, const FCapturedPixelsID&, const FFrameMetrics&, const bool> UUserDefinedImageCaptureProtocol = { 0x3f5b290, 0 }; 
+	constexpr static const FunctionPointer<UUserDefinedImageCaptureProtocol, void, const FCapturedPixels&, const FCapturedPixelsID&, const FFrameMetrics&, const bool> WriteImageToDisk = { 0x3f5b290, 0 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForCurrentFrame
-	constexpr static const FunctionPointer<UUserDefinedImageCaptureProtocol, FString> UUserDefinedImageCaptureProtocol = { 0x3f5b630, 1 }; 
+	constexpr static const FunctionPointer<UUserDefinedImageCaptureProtocol, FString> GenerateFilenameForCurrentFrame = { 0x3f5b630, 1 }; 
 	// Function /Script/MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer
-	constexpr static const FunctionPointer<UUserDefinedImageCaptureProtocol, FString, const UTexture*, const FCapturedPixelsID&> UUserDefinedImageCaptureProtocol = { 0x3f5b6c0, 2 }; 
+	constexpr static const FunctionPointer<UUserDefinedImageCaptureProtocol, FString, const UTexture*, const FCapturedPixelsID&> GenerateFilenameForBuffer = { 0x3f5b6c0, 2 }; 
 };
 
 /// Class /Script/MovieSceneCapture.VideoCaptureProtocol

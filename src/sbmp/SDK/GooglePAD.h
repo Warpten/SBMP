@@ -77,38 +77,37 @@ class UGooglePADFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.ShowCellularDataConfirmation
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode> UGooglePADFunctionLibrary = { 0x198ee80, 0 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode> ShowCellularDataConfirmation = { 0x198ee80, 0 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.RequestRemoval
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const FString> UGooglePADFunctionLibrary = { 0x198eea0, 1 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const FString> RequestRemoval = { 0x198eea0, 1 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.RequestInfo
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const TArray<FString>> UGooglePADFunctionLibrary = { 0x198f130, 2 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const TArray<FString>> RequestInfo = { 0x198f130, 2 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.RequestDownload
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const TArray<FString>> UGooglePADFunctionLibrary = { 0x198f130, 3 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const TArray<FString>> RequestDownload = { 0x198f130, 3 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.ReleaseDownloadState
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, void, const int32_t> UGooglePADFunctionLibrary = { 0x198eb40, 4 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, void, const int32_t> ReleaseDownloadState = { 0x198eb40, 4 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.ReleaseAssetPackLocation
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, void, const int32_t> UGooglePADFunctionLibrary = { 0x198eb40, 5 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, void, const int32_t> ReleaseAssetPackLocation = { 0x198eb40, 5 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetTotalBytesToDownload
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, int32_t, const int32_t> UGooglePADFunctionLibrary = { 0x198ef90, 6 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, int32_t, const int32_t> GetTotalBytesToDownload = { 0x198ef90, 6 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetStorageMethod
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADStorageMethod, const int32_t> UGooglePADFunctionLibrary = { 0x198ea70, 7 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADStorageMethod, const int32_t> GetStorageMethod = { 0x198ea70, 7 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetShowCellularDataConfirmationStatus
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const EGooglePADCellularDataConfirmStatus&> UGooglePADFunctionLibrary = { 0x198eda0, 8 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const EGooglePADCellularDataConfirmStatus&> GetShowCellularDataConfirmationStatus = { 0x198eda0, 8 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetDownloadStatus
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADDownloadStatus, const int32_t> UGooglePADFunctionLibrary = { 0x198f060, 9 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADDownloadStatus, const int32_t> GetDownloadStatus = { 0x198f060, 9 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetDownloadState
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const FString, const int32_t&> UGooglePADFunctionLibrary = { 0x198ec00, 10 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const FString, const int32_t&> GetDownloadState = { 0x198ec00, 10 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetBytesDownloaded
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, int32_t, const int32_t> UGooglePADFunctionLibrary = { 0x198ef90, 11 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, int32_t, const int32_t> GetBytesDownloaded = { 0x198ef90, 11 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetAssetsPath
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, FString, const int32_t> UGooglePADFunctionLibrary = { 0x198e980, 12 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, FString, const int32_t> GetAssetsPath = { 0x198e980, 12 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetAssetPackLocation
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const FString, const int32_t&> UGooglePADFunctionLibrary = { 0x198ec00, 13 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const FString, const int32_t&> GetAssetPackLocation = { 0x198ec00, 13 }; 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.CancelDownload
-	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const TArray<FString>> UGooglePADFunctionLibrary = { 0x198f130, 14 }; 
+	constexpr static const FunctionPointer<UGooglePADFunctionLibrary, EGooglePADErrorCode, const TArray<FString>> CancelDownload = { 0x198f130, 14 }; 
 };
 
 #pragma pack(pop)

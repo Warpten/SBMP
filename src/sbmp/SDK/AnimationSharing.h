@@ -25,10 +25,9 @@ public:
 	class UAnimSharingInstance*                        Instance;                                                   // 0x02E0   (0x0008)  
 	unsigned char                                      UnknownData03_7[0x8];                                       // 0x02E8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AnimationSharing.AnimSharingStateInstance.GetInstancedActors
-	constexpr static const FunctionPointer<UAnimSharingStateInstance, void, const TArray<AActor*>&> UAnimSharingStateInstance = { 0x1793400, 0 }; 
+	constexpr static const FunctionPointer<UAnimSharingStateInstance, void, const TArray<AActor*>&> GetInstancedActors = { 0x1793400, 0 }; 
 };
 
 /// Class /Script/AnimationSharing.AnimSharingTransitionInstance
@@ -80,16 +79,15 @@ public:
 	TArray<class UAnimSharingInstance*>                PerSkeletonData;                                            // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x40];                                      // 0x0048   (0x0040)  MISSED
 
-
 	/// Functions
 	// Function /Script/AnimationSharing.AnimationSharingManager.RegisterActorWithSkeletonBP
-	constexpr static const FunctionPointer<UAnimationSharingManager, void, const AActor*, const USkeleton*> UAnimationSharingManager = { 0x1794490, 0 }; 
+	constexpr static const FunctionPointer<UAnimationSharingManager, void, const AActor*, const USkeleton*> RegisterActorWithSkeletonBP = { 0x1794490, 0 }; 
 	// Function /Script/AnimationSharing.AnimationSharingManager.GetAnimationSharingManager
-	constexpr static const FunctionPointer<UAnimationSharingManager, UAnimationSharingManager*, const UObject*> UAnimationSharingManager = { 0x17949c0, 1 }; 
+	constexpr static const FunctionPointer<UAnimationSharingManager, UAnimationSharingManager*, const UObject*> GetAnimationSharingManager = { 0x17949c0, 1 }; 
 	// Function /Script/AnimationSharing.AnimationSharingManager.CreateAnimationSharingManager
-	constexpr static const FunctionPointer<UAnimationSharingManager, bool, const UObject*, const UAnimationSharingSetup*> UAnimationSharingManager = { 0x1794680, 2 }; 
+	constexpr static const FunctionPointer<UAnimationSharingManager, bool, const UObject*, const UAnimationSharingSetup*> CreateAnimationSharingManager = { 0x1794680, 2 }; 
 	// Function /Script/AnimationSharing.AnimationSharingManager.AnimationSharingEnabled
-	constexpr static const FunctionPointer<UAnimationSharingManager, bool> UAnimationSharingManager = { 0x1794460, 3 }; 
+	constexpr static const FunctionPointer<UAnimationSharingManager, bool> AnimationSharingEnabled = { 0x1794460, 3 }; 
 };
 
 /// Struct /Script/AnimationSharing.AnimationSetup
@@ -164,12 +162,11 @@ public:
 	TWeakObjectPtr<class UEnum*>                       AnimationStateEnum;                                         // 0x0028   (0x0008)  
 	unsigned char                                      UnknownData01_7[0x20];                                      // 0x0030   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/AnimationSharing.AnimationSharingStateProcessor.ProcessActorState
-	constexpr static const FunctionPointer<UAnimationSharingStateProcessor, void, const int32_t&, const AActor*, const char, const char, const bool&> UAnimationSharingStateProcessor = { 0x1795610, 0 }; 
+	constexpr static const FunctionPointer<UAnimationSharingStateProcessor, void, const int32_t&, const AActor*, const char, const char, const bool&> ProcessActorState = { 0x1795610, 0 }; 
 	// Function /Script/AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
-	constexpr static const FunctionPointer<UAnimationSharingStateProcessor, UEnum*> UAnimationSharingStateProcessor = { 0x17955e0, 1 }; 
+	constexpr static const FunctionPointer<UAnimationSharingStateProcessor, UEnum*> GetAnimationStateEnum = { 0x17955e0, 1 }; 
 };
 
 /// Struct /Script/AnimationSharing.TickAnimationSharingFunction

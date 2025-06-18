@@ -720,12 +720,11 @@ public:
 	bool                                               bDestroyOnSystemFinish : 1;                                 // 0x02D0:0 (0x0001)  
 	unsigned char                                      UnknownData01_7[0x7];                                       // 0x02D1   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraActor.SetDestroyOnSystemFinish
-	constexpr static const FunctionPointer<ANiagaraActor, void, const bool> ANiagaraActor = { 0x11378a0, 0 }; 
+	constexpr static const FunctionPointer<ANiagaraActor, void, const bool> SetDestroyOnSystemFinish = { 0x11378a0, 0 }; 
 	// Function /Script/Niagara.NiagaraActor.OnNiagaraSystemFinished
-	constexpr static const FunctionPointer<ANiagaraActor, void, const UNiagaraComponent*> ANiagaraActor = { 0x11377b0, 1 }; 
+	constexpr static const FunctionPointer<ANiagaraActor, void, const UNiagaraComponent*> OnNiagaraSystemFinished = { 0x11377b0, 1 }; 
 };
 
 /// Struct /Script/Niagara.NiagaraVariableWithOffset
@@ -801,118 +800,117 @@ public:
 	EAttachmentRule                                    AutoAttachScaleRule;                                        // 0x06E2   (0x0001)  
 	unsigned char                                      UnknownData15_7[0x5D];                                      // 0x06E3   (0x005D)  MISSED
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec4
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector4&> UNiagaraComponent = { 0x113e4a0, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector4&> SetVariableVec4 = { 0x113e4a0, 0 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec3
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector> UNiagaraComponent = { 0x113dd60, 1 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector> SetVariableVec3 = { 0x113dd60, 1 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec2
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector2D> UNiagaraComponent = { 0x113d9e0, 2 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FVector2D> SetVariableVec2 = { 0x113d9e0, 2 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableTextureRenderTarget
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UTextureRenderTarget*> UNiagaraComponent = { 0x113c7c0, 3 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UTextureRenderTarget*> SetVariableTextureRenderTarget = { 0x113c7c0, 3 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableQuat
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FQuat&> UNiagaraComponent = { 0x113e100, 4 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FQuat&> SetVariableQuat = { 0x113e100, 4 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableObject
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UObject*> UNiagaraComponent = { 0x113cbc0, 5 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UObject*> SetVariableObject = { 0x113cbc0, 5 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableMaterial
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UMaterialInterface*> UNiagaraComponent = { 0x113c9a0, 6 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const UMaterialInterface*> SetVariableMaterial = { 0x113c9a0, 6 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableLinearColor
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FLinearColor&> UNiagaraComponent = { 0x113e860, 7 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const FLinearColor&> SetVariableLinearColor = { 0x113e860, 7 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableInt
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const int32_t> UNiagaraComponent = { 0x113d2d0, 8 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const int32_t> SetVariableInt = { 0x113d2d0, 8 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableFloat
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const float> UNiagaraComponent = { 0x113d650, 9 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const float> SetVariableFloat = { 0x113d650, 9 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableBool
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const bool> UNiagaraComponent = { 0x113cf40, 10 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const bool> SetVariableBool = { 0x113cf40, 10 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableActor
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const AActor*> UNiagaraComponent = { 0x113cbc0, 11 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FName, const AActor*> SetVariableActor = { 0x113cbc0, 11 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetTickBehavior
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const ENiagaraTickBehavior> UNiagaraComponent = { 0x113ec20, 12 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const ENiagaraTickBehavior> SetTickBehavior = { 0x113ec20, 12 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetSeekDelta
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> UNiagaraComponent = { 0x113ef10, 13 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetSeekDelta = { 0x113ef10, 13 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetRenderingEnabled
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> UNiagaraComponent = { 0x113c0f0, 14 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetRenderingEnabled = { 0x113c0f0, 14 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetPreviewLODDistance
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool, const float> UNiagaraComponent = { 0x113b880, 15 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool, const float> SetPreviewLODDistance = { 0x113b880, 15 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetPaused
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> UNiagaraComponent = { 0x113bbf0, 16 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetPaused = { 0x113bbf0, 16 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec4
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector4&> UNiagaraComponent = { 0x113e620, 17 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector4&> SetNiagaraVariableVec4 = { 0x113e620, 17 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec3
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector> UNiagaraComponent = { 0x113ded0, 18 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector> SetNiagaraVariableVec3 = { 0x113ded0, 18 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec2
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector2D> UNiagaraComponent = { 0x113db40, 19 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FVector2D> SetNiagaraVariableVec2 = { 0x113db40, 19 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableQuat
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FQuat&> UNiagaraComponent = { 0x113e270, 20 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FQuat&> SetNiagaraVariableQuat = { 0x113e270, 20 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableObject
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const UObject*> UNiagaraComponent = { 0x113cd30, 21 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const UObject*> SetNiagaraVariableObject = { 0x113cd30, 21 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableLinearColor
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FLinearColor&> UNiagaraComponent = { 0x113e9d0, 22 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const FLinearColor&> SetNiagaraVariableLinearColor = { 0x113e9d0, 22 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableInt
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const int32_t> UNiagaraComponent = { 0x113d440, 23 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const int32_t> SetNiagaraVariableInt = { 0x113d440, 23 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableFloat
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const float> UNiagaraComponent = { 0x113d7c0, 24 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const float> SetNiagaraVariableFloat = { 0x113d7c0, 24 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableBool
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const bool> UNiagaraComponent = { 0x113d0b0, 25 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const bool> SetNiagaraVariableBool = { 0x113d0b0, 25 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableActor
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const AActor*> UNiagaraComponent = { 0x113cd30, 26 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const FString, const AActor*> SetNiagaraVariableActor = { 0x113cd30, 26 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetMaxSimTime
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> UNiagaraComponent = { 0x113ee20, 27 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetMaxSimTime = { 0x113ee20, 27 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetGpuComputeDebug
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> UNiagaraComponent = { 0x113f3b0, 28 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetGpuComputeDebug = { 0x113f3b0, 28 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetForceSolo
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> UNiagaraComponent = { 0x113f4d0, 29 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetForceSolo = { 0x113f4d0, 29 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetDesiredAge
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> UNiagaraComponent = { 0x113f1c0, 30 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SetDesiredAge = { 0x113f1c0, 30 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetCanRenderWhileSeeking
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> UNiagaraComponent = { 0x113f000, 31 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetCanRenderWhileSeeking = { 0x113f000, 31 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetAutoDestroy
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> UNiagaraComponent = { 0x113ed30, 32 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetAutoDestroy = { 0x113ed30, 32 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetAsset
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const UNiagaraSystem*> UNiagaraComponent = { 0x113f610, 33 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const UNiagaraSystem*> SetAsset = { 0x113f610, 33 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetAllowScalability
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> UNiagaraComponent = { 0x113b750, 34 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const bool> SetAllowScalability = { 0x113b750, 34 }; 
 	// Function /Script/Niagara.NiagaraComponent.SetAgeUpdateMode
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const ENiagaraAgeUpdateMode> UNiagaraComponent = { 0x113f2c0, 35 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const ENiagaraAgeUpdateMode> SetAgeUpdateMode = { 0x113f2c0, 35 }; 
 	// Function /Script/Niagara.NiagaraComponent.SeekToDesiredAge
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> UNiagaraComponent = { 0x113f0e0, 36 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const float> SeekToDesiredAge = { 0x113f0e0, 36 }; 
 	// Function /Script/Niagara.NiagaraComponent.ResetSystem
-	constexpr static const FunctionPointer<UNiagaraComponent, void> UNiagaraComponent = { 0x113c210, 37 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void> ResetSystem = { 0x113c210, 37 }; 
 	// Function /Script/Niagara.NiagaraComponent.ReinitializeSystem
-	constexpr static const FunctionPointer<UNiagaraComponent, void> UNiagaraComponent = { 0x113c1d0, 38 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void> ReinitializeSystem = { 0x113c1d0, 38 }; 
 	// Function /Script/Niagara.NiagaraComponent.IsPaused
-	constexpr static const FunctionPointer<UNiagaraComponent, bool> UNiagaraComponent = { 0x113bbb0, 39 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, bool> IsPaused = { 0x113bbb0, 39 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetTickBehavior
-	constexpr static const FunctionPointer<UNiagaraComponent, ENiagaraTickBehavior> UNiagaraComponent = { 0x113ec00, 40 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, ENiagaraTickBehavior> GetTickBehavior = { 0x113ec00, 40 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetSeekDelta
-	constexpr static const FunctionPointer<UNiagaraComponent, float> UNiagaraComponent = { 0x113efe0, 41 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, float> GetSeekDelta = { 0x113efe0, 41 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled
-	constexpr static const FunctionPointer<UNiagaraComponent, bool> UNiagaraComponent = { 0x113b860, 42 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, bool> GetPreviewLODDistanceEnabled = { 0x113b860, 42 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistance
-	constexpr static const FunctionPointer<UNiagaraComponent, int32_t> UNiagaraComponent = { 0x113b840, 43 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, int32_t> GetPreviewLODDistance = { 0x113b840, 43 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly
-	constexpr static const FunctionPointer<UNiagaraComponent, TArray<FVector>, const FString, const FString> UNiagaraComponent = { 0x113c240, 44 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, TArray<FVector>, const FString, const FString> GetNiagaraParticleValueVec3_DebugOnly = { 0x113c240, 44 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly
-	constexpr static const FunctionPointer<UNiagaraComponent, TArray<float>, const FString, const FString> UNiagaraComponent = { 0x113c430, 45 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, TArray<float>, const FString, const FString> GetNiagaraParticleValues_DebugOnly = { 0x113c430, 45 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly
-	constexpr static const FunctionPointer<UNiagaraComponent, TArray<FVector>, const FString> UNiagaraComponent = { 0x113c620, 46 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, TArray<FVector>, const FString> GetNiagaraParticlePositions_DebugOnly = { 0x113c620, 46 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetMaxSimTime
-	constexpr static const FunctionPointer<UNiagaraComponent, float> UNiagaraComponent = { 0x113eef0, 47 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, float> GetMaxSimTime = { 0x113eef0, 47 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetForceSolo
-	constexpr static const FunctionPointer<UNiagaraComponent, bool> UNiagaraComponent = { 0x113f4a0, 48 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, bool> GetForceSolo = { 0x113f4a0, 48 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetDesiredAge
-	constexpr static const FunctionPointer<UNiagaraComponent, float> UNiagaraComponent = { 0x113f2a0, 49 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, float> GetDesiredAge = { 0x113f2a0, 49 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetDataInterface
-	constexpr static const FunctionPointer<UNiagaraComponent, UNiagaraDataInterface*, const FString> UNiagaraComponent = { 0x113b9c0, 50 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, UNiagaraDataInterface*, const FString> GetDataInterface = { 0x113b9c0, 50 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetAsset
-	constexpr static const FunctionPointer<UNiagaraComponent, UNiagaraSystem*> UNiagaraComponent = { 0x113f5f0, 51 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, UNiagaraSystem*> GetAsset = { 0x113f5f0, 51 }; 
 	// Function /Script/Niagara.NiagaraComponent.GetAgeUpdateMode
-	constexpr static const FunctionPointer<UNiagaraComponent, ENiagaraAgeUpdateMode> UNiagaraComponent = { 0x113f390, 52 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, ENiagaraAgeUpdateMode> GetAgeUpdateMode = { 0x113f390, 52 }; 
 	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulationByTime
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const float, const float> UNiagaraComponent = { 0x113bcd0, 53 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const float, const float> AdvanceSimulationByTime = { 0x113bcd0, 53 }; 
 	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulation
-	constexpr static const FunctionPointer<UNiagaraComponent, void, const int32_t, const float> UNiagaraComponent = { 0x113be60, 54 }; 
+	constexpr static const FunctionPointer<UNiagaraComponent, void, const int32_t, const float> AdvanceSimulation = { 0x113be60, 54 }; 
 };
 
 /// Struct /Script/Niagara.NCPoolElement
@@ -1142,40 +1140,39 @@ class UNiagaraDataInterfaceArrayFunctionLibrary : public UBlueprintFunctionLibra
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector4>&> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1145b90, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector4>&> SetNiagaraArrayVector4 = { 0x1145b90, 0 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2D
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector2D>&> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1146150, 1 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector2D>&> SetNiagaraArrayVector2D = { 0x1146150, 1 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector>&> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1145e70, 2 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FVector>&> SetNiagaraArrayVector = { 0x1145e70, 2 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuat
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FQuat>&> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x11455d0, 3 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FQuat>&> SetNiagaraArrayQuat = { 0x11455d0, 3 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<int32_t>&> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x11452f0, 4 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<int32_t>&> SetNiagaraArrayInt32 = { 0x11452f0, 4 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloat
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<float>&> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1146430, 5 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<float>&> SetNiagaraArrayFloat = { 0x1146430, 5 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColor
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FLinearColor>&> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x11458b0, 6 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<FLinearColor>&> SetNiagaraArrayColor = { 0x11458b0, 6 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBool
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<bool>&> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1145010, 7 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, void, const UNiagaraComponent*, const FName, const TArray<bool>&> SetNiagaraArrayBool = { 0x1145010, 7 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector4>, const UNiagaraComponent*, const FName> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1144590, 8 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector4>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector4 = { 0x1144590, 8 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2D
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector2D>, const UNiagaraComponent*, const FName> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1144ad0, 9 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector2D>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector2D = { 0x1144ad0, 9 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector>, const UNiagaraComponent*, const FName> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1144830, 10 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FVector>, const UNiagaraComponent*, const FName> GetNiagaraArrayVector = { 0x1144830, 10 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuat
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FQuat>, const UNiagaraComponent*, const FName> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1144050, 11 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FQuat>, const UNiagaraComponent*, const FName> GetNiagaraArrayQuat = { 0x1144050, 11 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<int32_t>, const UNiagaraComponent*, const FName> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1143db0, 12 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<int32_t>, const UNiagaraComponent*, const FName> GetNiagaraArrayInt32 = { 0x1143db0, 12 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloat
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<float>, const UNiagaraComponent*, const FName> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1144d70, 13 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<float>, const UNiagaraComponent*, const FName> GetNiagaraArrayFloat = { 0x1144d70, 13 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColor
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FLinearColor>, const UNiagaraComponent*, const FName> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x11442f0, 14 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<FLinearColor>, const UNiagaraComponent*, const FName> GetNiagaraArrayColor = { 0x11442f0, 14 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<bool>, const UNiagaraComponent*, const FName> UNiagaraDataInterfaceArrayFunctionLibrary = { 0x1143b10, 15 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceArrayFunctionLibrary, TArray<bool>, const UNiagaraComponent*, const FName> GetNiagaraArrayBool = { 0x1143b10, 15 }; 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayInt32
@@ -1309,10 +1306,9 @@ class UNiagaraParticleCallbackHandler : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraParticleCallbackHandler.ReceiveParticleData
-	constexpr static const FunctionPointer<UNiagaraParticleCallbackHandler, void, const TArray<FBasicParticleData>&, const UNiagaraSystem*> UNiagaraParticleCallbackHandler = { 0x11496a0, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraParticleCallbackHandler, void, const TArray<FBasicParticleData>&, const UNiagaraSystem*> ReceiveParticleData = { 0x11496a0, 0 }; 
 };
 
 /// Struct /Script/Niagara.NiagaraUserParameterBinding
@@ -1377,16 +1373,15 @@ public:
 	unsigned char                                      UnknownData01_5[0x56];                                      // 0x011A   (0x0056)  MISSED
 	TMap<uint64_t, class UTextureRenderTarget2DArray*> ManagedRenderTargets;                                       // 0x0170   (0x0050)  
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&> UNiagaraDataInterfaceGrid2DCollection = { 0x114a3d0, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&> GetTextureSize = { 0x114a3d0, 0 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&> UNiagaraDataInterfaceGrid2DCollection = { 0x114a5e0, 1 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&> GetRawTextureSize = { 0x114a5e0, 1 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, bool, const UNiagaraComponent*, const UTextureRenderTarget2D*, const int32_t> UNiagaraDataInterfaceGrid2DCollection = { 0x114aaa0, 2 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, bool, const UNiagaraComponent*, const UTextureRenderTarget2D*, const int32_t> FillTexture2D = { 0x114aaa0, 2 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, bool, const UNiagaraComponent*, const UTextureRenderTarget2D*, const int32_t&, const int32_t&> UNiagaraDataInterfaceGrid2DCollection = { 0x114a7f0, 3 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid2DCollection, bool, const UNiagaraComponent*, const UTextureRenderTarget2D*, const int32_t&, const int32_t&> FillRawTexture2D = { 0x114a7f0, 3 }; 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid2DCollectionReader
@@ -1423,16 +1418,15 @@ public:
 	ENiagaraGpuBufferFormat                            BufferFormat;                                               // 0x0128   (0x0001)  
 	unsigned char                                      UnknownData03_7[0x57];                                      // 0x0129   (0x0057)  MISSED
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&, const int32_t&> UNiagaraDataInterfaceGrid3DCollection = { 0x114b410, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&, const int32_t&> GetTextureSize = { 0x114b410, 0 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&, const int32_t&> UNiagaraDataInterfaceGrid3DCollection = { 0x114b6c0, 1 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, void, const UNiagaraComponent*, const int32_t&, const int32_t&, const int32_t&> GetRawTextureSize = { 0x114b6c0, 1 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, bool, const UNiagaraComponent*, const UVolumeTexture*, const int32_t> UNiagaraDataInterfaceGrid3DCollection = { 0x114aaa0, 2 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, bool, const UNiagaraComponent*, const UVolumeTexture*, const int32_t> FillVolumeTexture = { 0x114aaa0, 2 }; 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture
-	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, bool, const UNiagaraComponent*, const UVolumeTexture*, const int32_t&, const int32_t&, const int32_t&> UNiagaraDataInterfaceGrid3DCollection = { 0x114b970, 3 }; 
+	constexpr static const FunctionPointer<UNiagaraDataInterfaceGrid3DCollection, bool, const UNiagaraComponent*, const UVolumeTexture*, const int32_t&, const int32_t&, const int32_t&> FillRawVolumeTexture = { 0x114b970, 3 }; 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceLandscape
@@ -1905,28 +1899,27 @@ class UNiagaraFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAttached
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraComponent*, const UNiagaraSystem*, const USceneComponent*, const FName, const FVector, const FRotator, const TEnumAsByte<EAttachLocation>, const bool, const bool, const ENCPoolMethod, const bool> UNiagaraFunctionLibrary = { 0x1157a60, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraComponent*, const UNiagaraSystem*, const USceneComponent*, const FName, const FVector, const FRotator, const TEnumAsByte<EAttachLocation>, const bool, const bool, const ENCPoolMethod, const bool> SpawnSystemAttached = { 0x1157a60, 0 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraComponent*, const UObject*, const UNiagaraSystem*, const FVector, const FRotator, const FVector, const bool, const bool, const ENCPoolMethod, const bool> UNiagaraFunctionLibrary = { 0x1158380, 1 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraComponent*, const UObject*, const UNiagaraSystem*, const FVector, const FRotator, const FVector, const bool, const bool, const ENCPoolMethod, const bool> SpawnSystemAtLocation = { 0x1158380, 1 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetVolumeTextureObject
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UVolumeTexture*> UNiagaraFunctionLibrary = { 0x1156350, 2 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UVolumeTexture*> SetVolumeTextureObject = { 0x1156350, 2 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetTextureObject_Immediately
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UTexture*> UNiagaraFunctionLibrary = { 0x1156670, 3 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UTexture*> SetTextureObject_Immediately = { 0x1156670, 3 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetTextureObject
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UTexture*> UNiagaraFunctionLibrary = { 0x11569e0, 4 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UTexture*> SetTextureObject = { 0x11569e0, 4 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const TArray<FName>&> UNiagaraFunctionLibrary = { 0x1156d00, 5 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const TArray<FName>&> SetSkeletalMeshDataInterfaceSamplingRegions = { 0x1156d00, 5 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UStaticMeshComponent*> UNiagaraFunctionLibrary = { 0x1157750, 6 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UStaticMeshComponent*> OverrideSystemUserVariableStaticMeshComponent = { 0x1157750, 6 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UStaticMesh*> UNiagaraFunctionLibrary = { 0x1157440, 7 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const UStaticMesh*> OverrideSystemUserVariableStaticMesh = { 0x1157440, 7 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const USkeletalMeshComponent*> UNiagaraFunctionLibrary = { 0x11570a0, 8 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, void, const UNiagaraComponent*, const FString, const USkeletalMeshComponent*> OverrideSystemUserVariableSkeletalMeshComponent = { 0x11570a0, 8 }; 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection
-	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraParameterCollectionInstance*, const UObject*, const UNiagaraParameterCollection*> UNiagaraFunctionLibrary = { 0x1155f00, 9 }; 
+	constexpr static const FunctionPointer<UNiagaraFunctionLibrary, UNiagaraParameterCollectionInstance*, const UObject*, const UNiagaraParameterCollection*> GetNiagaraParameterCollection = { 0x1155f00, 9 }; 
 };
 
 /// Class /Script/Niagara.NiagaraLightRendererProperties
@@ -2024,40 +2017,39 @@ public:
 	FNiagaraParameterStore                             ParameterStorage;                                           // 0x0040   (0x0078)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x00B8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVectorParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector> UNiagaraParameterCollectionInstance = { 0x115a590, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector> SetVectorParameter = { 0x115a590, 0 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector4&> UNiagaraParameterCollectionInstance = { 0x115a3f0, 1 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector4&> SetVector4Parameter = { 0x115a3f0, 1 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector2D> UNiagaraParameterCollectionInstance = { 0x115a730, 2 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FVector2D> SetVector2DParameter = { 0x115a730, 2 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetQuatParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FQuat&> UNiagaraParameterCollectionInstance = { 0x115a0d0, 3 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FQuat&> SetQuatParameter = { 0x115a0d0, 3 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetIntParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const int32_t> UNiagaraParameterCollectionInstance = { 0x115a8c0, 4 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const int32_t> SetIntParameter = { 0x115a8c0, 4 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetFloatParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const float> UNiagaraParameterCollectionInstance = { 0x115aa50, 5 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const float> SetFloatParameter = { 0x115aa50, 5 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetColorParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FLinearColor> UNiagaraParameterCollectionInstance = { 0x115a260, 6 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const FLinearColor> SetColorParameter = { 0x115a260, 6 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetBoolParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const bool> UNiagaraParameterCollectionInstance = { 0x115abe0, 7 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, void, const FString, const bool> SetBoolParameter = { 0x115abe0, 7 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVectorParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector, const FString> UNiagaraParameterCollectionInstance = { 0x115b080, 8 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector, const FString> GetVectorParameter = { 0x115b080, 8 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector4, const FString> UNiagaraParameterCollectionInstance = { 0x115af80, 9 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector4, const FString> GetVector4Parameter = { 0x115af80, 9 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector2D, const FString> UNiagaraParameterCollectionInstance = { 0x115b190, 10 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FVector2D, const FString> GetVector2DParameter = { 0x115b190, 10 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetQuatParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FQuat, const FString> UNiagaraParameterCollectionInstance = { 0x115ae80, 11 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FQuat, const FString> GetQuatParameter = { 0x115ae80, 11 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetIntParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, int32_t, const FString> UNiagaraParameterCollectionInstance = { 0x115b290, 12 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, int32_t, const FString> GetIntParameter = { 0x115b290, 12 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetFloatParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, float, const FString> UNiagaraParameterCollectionInstance = { 0x115b390, 13 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, float, const FString> GetFloatParameter = { 0x115b390, 13 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetColorParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FLinearColor, const FString> UNiagaraParameterCollectionInstance = { 0x115ad80, 14 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, FLinearColor, const FString> GetColorParameter = { 0x115ad80, 14 }; 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
-	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, bool, const FString> UNiagaraParameterCollectionInstance = { 0x115b490, 15 }; 
+	constexpr static const FunctionPointer<UNiagaraParameterCollectionInstance, bool, const FString> GetBoolParameter = { 0x115b490, 15 }; 
 };
 
 /// Class /Script/Niagara.NiagaraParameterCollection
@@ -2087,12 +2079,11 @@ class ANiagaraPreviewBase : public AActor
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraPreviewBase.SetSystem
-	constexpr static const FunctionPointer<ANiagaraPreviewBase, void, const UNiagaraSystem*> ANiagaraPreviewBase = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ANiagaraPreviewBase, void, const UNiagaraSystem*> SetSystem = { 0x2bbb090, 0 }; 
 	// Function /Script/Niagara.NiagaraPreviewBase.SetLabelText
-	constexpr static const FunctionPointer<ANiagaraPreviewBase, void, const FText&, const FText&> ANiagaraPreviewBase = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<ANiagaraPreviewBase, void, const FText&, const FText&> SetLabelText = { 0x2bbb090, 1 }; 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis
@@ -2101,12 +2092,11 @@ class UNiagaraPreviewAxis : public UObject
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraPreviewAxis.Num
-	constexpr static const FunctionPointer<UNiagaraPreviewAxis, int32_t> UNiagaraPreviewAxis = { 0x115e0f0, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraPreviewAxis, int32_t> Num = { 0x115e0f0, 0 }; 
 	// Function /Script/Niagara.NiagaraPreviewAxis.ApplyToPreview
-	constexpr static const FunctionPointer<UNiagaraPreviewAxis, void, const UNiagaraComponent*, const int32_t, const bool, const FString&> UNiagaraPreviewAxis = { 0x115de20, 1 }; 
+	constexpr static const FunctionPointer<UNiagaraPreviewAxis, void, const UNiagaraComponent*, const int32_t, const bool, const FString&> ApplyToPreview = { 0x115de20, 1 }; 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamBase
@@ -2192,16 +2182,15 @@ public:
 	TArray<class UChildActorComponent*>                PreviewComponents;                                          // 0x0300   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x8];                                       // 0x0310   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraPreviewGrid.SetPaused
-	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const bool> ANiagaraPreviewGrid = { 0x115fc60, 0 }; 
+	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const bool> SetPaused = { 0x115fc60, 0 }; 
 	// Function /Script/Niagara.NiagaraPreviewGrid.GetPreviews
-	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const TArray<UNiagaraComponent*>&> ANiagaraPreviewGrid = { 0x115fb70, 1 }; 
+	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const TArray<UNiagaraComponent*>&> GetPreviews = { 0x115fb70, 1 }; 
 	// Function /Script/Niagara.NiagaraPreviewGrid.DeactivatePreviews
-	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void> ANiagaraPreviewGrid = { 0x115fd40, 2 }; 
+	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void> DeactivatePreviews = { 0x115fd40, 2 }; 
 	// Function /Script/Niagara.NiagaraPreviewGrid.ActivatePreviews
-	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const bool> ANiagaraPreviewGrid = { 0x115fef0, 3 }; 
+	constexpr static const FunctionPointer<ANiagaraPreviewGrid, void, const bool> ActivatePreviews = { 0x115fef0, 3 }; 
 };
 
 /// Struct /Script/Niagara.NiagaraRibbonUVSettings
@@ -2426,10 +2415,9 @@ public:
 	TArray<FNiagaraScriptDataInterfaceInfo>            CachedDefaultDataInterfaces;                                // 0x02A8   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x8];                                       // 0x02B8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
-	constexpr static const FunctionPointer<UNiagaraScript, void> UNiagaraScript = { 0x11615e0, 0 }; 
+	constexpr static const FunctionPointer<UNiagaraScript, void> RaiseOnGPUCompilationComplete = { 0x11615e0, 0 }; 
 };
 
 /// Class /Script/Niagara.NiagaraScriptSourceBase

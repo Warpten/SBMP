@@ -455,14 +455,13 @@ class UDatasmithContentBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey
-	constexpr static const FunctionPointer<UDatasmithContentBlueprintLibrary, FString, const UObject*, const FName> UDatasmithContentBlueprintLibrary = { 0x17a6a40, 0 }; 
+	constexpr static const FunctionPointer<UDatasmithContentBlueprintLibrary, FString, const UObject*, const FName> GetDatasmithUserDataValueForKey = { 0x17a6a40, 0 }; 
 	// Function /Script/DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue
-	constexpr static const FunctionPointer<UDatasmithContentBlueprintLibrary, void, const UObject*, const FString, const TArray<FName>&, const TArray<FString>&> UDatasmithContentBlueprintLibrary = { 0x17a6410, 1 }; 
+	constexpr static const FunctionPointer<UDatasmithContentBlueprintLibrary, void, const UObject*, const FString, const TArray<FName>&, const TArray<FString>&> GetDatasmithUserDataKeysAndValuesForValue = { 0x17a6410, 1 }; 
 	// Function /Script/DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData
-	constexpr static const FunctionPointer<UDatasmithContentBlueprintLibrary, UDatasmithAssetUserData*, const UObject*> UDatasmithContentBlueprintLibrary = { 0x17a6d90, 2 }; 
+	constexpr static const FunctionPointer<UDatasmithContentBlueprintLibrary, UDatasmithAssetUserData*, const UObject*> GetDatasmithUserData = { 0x17a6d90, 2 }; 
 };
 
 /// Class /Script/DatasmithContent.DatasmithCustomActionBase
@@ -490,10 +489,9 @@ class ADatasmithImportedSequencesActor : public AActor
 public:
 	TArray<class ULevelSequence*>                      ImportedSequences;                                          // 0x02C8   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence
-	constexpr static const FunctionPointer<ADatasmithImportedSequencesActor, void, const ULevelSequence*> ADatasmithImportedSequencesActor = { 0x17a7aa0, 0 }; 
+	constexpr static const FunctionPointer<ADatasmithImportedSequencesActor, void, const ULevelSequence*> PlayLevelSequence = { 0x17a7aa0, 0 }; 
 };
 
 /// Class /Script/DatasmithContent.DatasmithOptionsBase

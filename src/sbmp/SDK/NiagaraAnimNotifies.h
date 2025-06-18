@@ -29,10 +29,9 @@ public:
 	FName                                              SocketName;                                                 // 0x0084   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x4];                                       // 0x008C   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect
-	constexpr static const FunctionPointer<UAnimNotify_PlayNiagaraEffect, UFXSystemComponent*> UAnimNotify_PlayNiagaraEffect = { 0x1168fc0, 0 }; 
+	constexpr static const FunctionPointer<UAnimNotify_PlayNiagaraEffect, UFXSystemComponent*> GetSpawnedEffect = { 0x1168fc0, 0 }; 
 };
 
 /// Class /Script/NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffect

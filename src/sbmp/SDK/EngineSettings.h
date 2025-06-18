@@ -105,14 +105,13 @@ public:
 	TArray<FGameModeName>                              GameModeMapPrefixes;                                        // 0x00D0   (0x0010)  
 	TArray<FGameModeName>                              GameModeClassAliases;                                       // 0x00E0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/EngineSettings.GameMapsSettings.SetSkipAssigningGamepadToPlayer1
-	constexpr static const FunctionPointer<UGameMapsSettings, void, const bool> UGameMapsSettings = { 0x34cfc90, 0 }; 
+	constexpr static const FunctionPointer<UGameMapsSettings, void, const bool> SetSkipAssigningGamepadToPlayer1 = { 0x34cfc90, 0 }; 
 	// Function /Script/EngineSettings.GameMapsSettings.GetSkipAssigningGamepadToPlayer1
-	constexpr static const FunctionPointer<UGameMapsSettings, bool> UGameMapsSettings = { 0x34cfc70, 1 }; 
+	constexpr static const FunctionPointer<UGameMapsSettings, bool> GetSkipAssigningGamepadToPlayer1 = { 0x34cfc70, 1 }; 
 	// Function /Script/EngineSettings.GameMapsSettings.GetGameMapsSettings
-	constexpr static const FunctionPointer<UGameMapsSettings, UGameMapsSettings*> UGameMapsSettings = { 0x34cfd60, 2 }; 
+	constexpr static const FunctionPointer<UGameMapsSettings, UGameMapsSettings*> GetGameMapsSettings = { 0x34cfd60, 2 }; 
 };
 
 /// Class /Script/EngineSettings.GameNetworkManagerSettings

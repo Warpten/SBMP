@@ -18,16 +18,15 @@ class UStaticMeshDescription : public UMeshDescriptionBase
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/StaticMeshDescription.StaticMeshDescription.SetVertexInstanceUV
-	constexpr static const FunctionPointer<UStaticMeshDescription, void, const FVertexInstanceID, const FVector2D, const int32_t> UStaticMeshDescription = { 0x3ed8140, 0 }; 
+	constexpr static const FunctionPointer<UStaticMeshDescription, void, const FVertexInstanceID, const FVector2D, const int32_t> SetVertexInstanceUV = { 0x3ed8140, 0 }; 
 	// Function /Script/StaticMeshDescription.StaticMeshDescription.SetPolygonGroupMaterialSlotName
-	constexpr static const FunctionPointer<UStaticMeshDescription, void, const FPolygonGroupID, const FName&> UStaticMeshDescription = { 0x3ed79d0, 1 }; 
+	constexpr static const FunctionPointer<UStaticMeshDescription, void, const FPolygonGroupID, const FName&> SetPolygonGroupMaterialSlotName = { 0x3ed79d0, 1 }; 
 	// Function /Script/StaticMeshDescription.StaticMeshDescription.GetVertexInstanceUV
-	constexpr static const FunctionPointer<UStaticMeshDescription, FVector2D, const FVertexInstanceID, const int32_t> UStaticMeshDescription = { 0x3ed83c0, 2 }; 
+	constexpr static const FunctionPointer<UStaticMeshDescription, FVector2D, const FVertexInstanceID, const int32_t> GetVertexInstanceUV = { 0x3ed83c0, 2 }; 
 	// Function /Script/StaticMeshDescription.StaticMeshDescription.CreateCube
-	constexpr static const FunctionPointer<UStaticMeshDescription, void, const FVector, const FVector, const FPolygonGroupID, const FPolygonID&, const FPolygonID&, const FPolygonID&, const FPolygonID&, const FPolygonID&, const FPolygonID&> UStaticMeshDescription = { 0x3ed7ba0, 3 }; 
+	constexpr static const FunctionPointer<UStaticMeshDescription, void, const FVector, const FVector, const FPolygonGroupID, const FPolygonID&, const FPolygonID&, const FPolygonID&, const FPolygonID&, const FPolygonID&, const FPolygonID&> CreateCube = { 0x3ed7ba0, 3 }; 
 };
 
 /// Struct /Script/StaticMeshDescription.UVMapSettings

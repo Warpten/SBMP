@@ -56,10 +56,9 @@ class ULatentDelegate : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LatentDelegate.OnLatentCallback
-	constexpr static const FunctionPointer<ULatentDelegate, void, const int32_t> ULatentDelegate = { 0x1756500, 0 }; 
+	constexpr static const FunctionPointer<ULatentDelegate, void, const int32_t> OnLatentCallback = { 0x1756500, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaActor
@@ -71,10 +70,9 @@ public:
 	FString                                            LuaFilePath;                                                // 0x0358   (0x0010)  
 	FString                                            LuaStateName;                                               // 0x0368   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaActor.CallLuaMember
-	constexpr static const FunctionPointer<ALuaActor, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ALuaActor = { 0x1758230, 0 }; 
+	constexpr static const FunctionPointer<ALuaActor, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x1758230, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaPawn
@@ -86,10 +84,9 @@ public:
 	FString                                            LuaFilePath;                                                // 0x03B8   (0x0010)  
 	FString                                            LuaStateName;                                               // 0x03C8   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaPawn.CallLuaMember
-	constexpr static const FunctionPointer<ALuaPawn, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ALuaPawn = { 0x1758570, 0 }; 
+	constexpr static const FunctionPointer<ALuaPawn, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x1758570, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaCharacter
@@ -102,10 +99,9 @@ public:
 	FString                                            LuaStateName;                                               // 0x05F8   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x8];                                       // 0x0608   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaCharacter.CallLuaMember
-	constexpr static const FunctionPointer<ALuaCharacter, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ALuaCharacter = { 0x17588b0, 0 }; 
+	constexpr static const FunctionPointer<ALuaCharacter, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x17588b0, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaController
@@ -117,10 +113,9 @@ public:
 	FString                                            LuaFilePath;                                                // 0x03D0   (0x0010)  
 	FString                                            LuaStateName;                                               // 0x03E0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaController.CallLuaMember
-	constexpr static const FunctionPointer<ALuaController, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ALuaController = { 0x1758bf0, 0 }; 
+	constexpr static const FunctionPointer<ALuaController, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x1758bf0, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaPlayerController
@@ -132,10 +127,9 @@ public:
 	FString                                            LuaFilePath;                                                // 0x06F8   (0x0010)  
 	FString                                            LuaStateName;                                               // 0x0708   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaPlayerController.CallLuaMember
-	constexpr static const FunctionPointer<ALuaPlayerController, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ALuaPlayerController = { 0x1758f30, 0 }; 
+	constexpr static const FunctionPointer<ALuaPlayerController, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x1758f30, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaActorComponent
@@ -147,10 +141,9 @@ public:
 	FString                                            LuaFilePath;                                                // 0x0160   (0x0010)  
 	FString                                            LuaStateName;                                               // 0x0170   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaActorComponent.CallLuaMember
-	constexpr static const FunctionPointer<ULuaActorComponent, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ULuaActorComponent = { 0x1759270, 0 }; 
+	constexpr static const FunctionPointer<ULuaActorComponent, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x1759270, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaGameModeBase
@@ -162,10 +155,9 @@ public:
 	FString                                            LuaFilePath;                                                // 0x03F8   (0x0010)  
 	FString                                            LuaStateName;                                               // 0x0408   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaGameModeBase.CallLuaMember
-	constexpr static const FunctionPointer<ALuaGameModeBase, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ALuaGameModeBase = { 0x17598a0, 0 }; 
+	constexpr static const FunctionPointer<ALuaGameModeBase, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x17598a0, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaHUD
@@ -177,10 +169,9 @@ public:
 	FString                                            LuaFilePath;                                                // 0x0448   (0x0010)  
 	FString                                            LuaStateName;                                               // 0x0458   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaHUD.CallLuaMember
-	constexpr static const FunctionPointer<ALuaHUD, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ALuaHUD = { 0x1759be0, 0 }; 
+	constexpr static const FunctionPointer<ALuaHUD, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x1759be0, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaTableObjectInterface
@@ -196,32 +187,31 @@ class ULuaBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.GetStringFromVar
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FString, const FLuaBPVar, const int32_t> ULuaBlueprintLibrary = { 0x175aa00, 0 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FString, const FLuaBPVar, const int32_t> GetStringFromVar = { 0x175aa00, 0 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.GetObjectFromVar
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, UObject*, const FLuaBPVar, const int32_t> ULuaBlueprintLibrary = { 0x175a340, 1 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, UObject*, const FLuaBPVar, const int32_t> GetObjectFromVar = { 0x175a340, 1 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.GetNumberFromVar
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, float, const FLuaBPVar, const int32_t> ULuaBlueprintLibrary = { 0x175adf0, 2 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, float, const FLuaBPVar, const int32_t> GetNumberFromVar = { 0x175adf0, 2 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.GetIntFromVar
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, int32_t, const FLuaBPVar, const int32_t> ULuaBlueprintLibrary = { 0x175b160, 3 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, int32_t, const FLuaBPVar, const int32_t> GetIntFromVar = { 0x175b160, 3 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.GetBoolFromVar
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, bool, const FLuaBPVar, const int32_t> ULuaBlueprintLibrary = { 0x175a6a0, 4 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, bool, const FLuaBPVar, const int32_t> GetBoolFromVar = { 0x175a6a0, 4 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.CreateVarFromString
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const FString> ULuaBlueprintLibrary = { 0x175b910, 5 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const FString> CreateVarFromString = { 0x175b910, 5 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.CreateVarFromObject
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const UObject*, const UObject*> ULuaBlueprintLibrary = { 0x175b4c0, 6 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const UObject*, const UObject*> CreateVarFromObject = { 0x175b4c0, 6 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.CreateVarFromNumber
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const float> ULuaBlueprintLibrary = { 0x175b7b0, 7 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const float> CreateVarFromNumber = { 0x175b7b0, 7 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.CreateVarFromInt
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const int32_t> ULuaBlueprintLibrary = { 0x175bb30, 8 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const int32_t> CreateVarFromInt = { 0x175bb30, 8 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.CreateVarFromBool
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const bool> ULuaBlueprintLibrary = { 0x175b670, 9 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const bool> CreateVarFromBool = { 0x175b670, 9 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.CallToLuaWithArgs
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const UObject*, const FString, const TArray<FLuaBPVar>&, const FString> ULuaBlueprintLibrary = { 0x175bf50, 10 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const UObject*, const FString, const TArray<FLuaBPVar>&, const FString> CallToLuaWithArgs = { 0x175bf50, 10 }; 
 	// Function /Script/slua_unreal.LuaBlueprintLibrary.CallToLua
-	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const UObject*, const FString, const FString> ULuaBlueprintLibrary = { 0x175bc70, 11 }; 
+	constexpr static const FunctionPointer<ULuaBlueprintLibrary, FLuaBPVar, const UObject*, const FString, const FString> CallToLua = { 0x175bc70, 11 }; 
 };
 
 /// Class /Script/slua_unreal.LuaDelegate
@@ -231,10 +221,9 @@ class ULuaDelegate : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaDelegate.EventTrigger
-	constexpr static const FunctionPointer<ULuaDelegate, void> ULuaDelegate = { 0x11615e0, 0 }; 
+	constexpr static const FunctionPointer<ULuaDelegate, void> EventTrigger = { 0x11615e0, 0 }; 
 };
 
 /// Class /Script/slua_unreal.LuaUserWidget
@@ -247,10 +236,9 @@ public:
 	FString                                            LuaStateName;                                               // 0x0320   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x38];                                      // 0x0330   (0x0038)  MISSED
 
-
 	/// Functions
 	// Function /Script/slua_unreal.LuaUserWidget.CallLuaMember
-	constexpr static const FunctionPointer<ULuaUserWidget, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> ULuaUserWidget = { 0x175ce10, 0 }; 
+	constexpr static const FunctionPointer<ULuaUserWidget, FLuaBPVar, const FString, const TArray<FLuaBPVar>&> CallLuaMember = { 0x175ce10, 0 }; 
 };
 
 /// Struct /Script/slua_unreal.LuaBPVar

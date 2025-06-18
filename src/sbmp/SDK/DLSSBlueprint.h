@@ -45,52 +45,51 @@ class UDLSSLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/DLSSBlueprint.DLSSLibrary.SetDLSSSharpness
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const float> UDLSSLibrary = { 0x1556540, 0 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const float> SetDLSSSharpness = { 0x1556540, 0 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.SetDLSSMode
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const UObject*, const UDLSSMode> UDLSSLibrary = { 0x15567d0, 1 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const UObject*, const UDLSSMode> SetDLSSMode = { 0x15567d0, 1 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.QueryDLSSSupport
-	constexpr static const FunctionPointer<UDLSSLibrary, UDLSSSupport> UDLSSLibrary = { 0x15578a0, 2 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, UDLSSSupport> QueryDLSSSupport = { 0x15578a0, 2 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.QueryDLSSRRSupport
-	constexpr static const FunctionPointer<UDLSSLibrary, UDLSSSupport> UDLSSLibrary = { 0x1557870, 3 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, UDLSSSupport> QueryDLSSRRSupport = { 0x1557870, 3 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.IsRayTracingAvailable
-	constexpr static const FunctionPointer<UDLSSLibrary, bool> UDLSSLibrary = { 0x113b860, 4 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, bool> IsRayTracingAvailable = { 0x113b860, 4 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.IsDLSSSupported
-	constexpr static const FunctionPointer<UDLSSLibrary, bool> UDLSSLibrary = { 0x1557920, 5 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, bool> IsDLSSSupported = { 0x1557920, 5 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.IsDLSSRRSupported
-	constexpr static const FunctionPointer<UDLSSLibrary, bool> UDLSSLibrary = { 0x15578e0, 6 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, bool> IsDLSSRRSupported = { 0x15578e0, 6 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.IsDLSSRREnabled
-	constexpr static const FunctionPointer<UDLSSLibrary, bool> UDLSSLibrary = { 0x1557370, 7 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, bool> IsDLSSRREnabled = { 0x1557370, 7 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.IsDLSSModeSupported
-	constexpr static const FunctionPointer<UDLSSLibrary, bool, const UDLSSMode> UDLSSLibrary = { 0x1557140, 8 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, bool, const UDLSSMode> IsDLSSModeSupported = { 0x1557140, 8 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.IsDLSSEnabled
-	constexpr static const FunctionPointer<UDLSSLibrary, bool> UDLSSLibrary = { 0x1557470, 9 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, bool> IsDLSSEnabled = { 0x1557470, 9 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.IsDLAAEnabled
-	constexpr static const FunctionPointer<UDLSSLibrary, bool> UDLSSLibrary = { 0x1557210, 10 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, bool> IsDLAAEnabled = { 0x1557210, 10 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.GetSupportedDLSSModes
-	constexpr static const FunctionPointer<UDLSSLibrary, TArray<UDLSSMode>> UDLSSLibrary = { 0x1556fe0, 11 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, TArray<UDLSSMode>> GetSupportedDLSSModes = { 0x1556fe0, 11 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.GetDLSSSharpness
-	constexpr static const FunctionPointer<UDLSSLibrary, float> UDLSSLibrary = { 0x1556510, 12 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, float> GetDLSSSharpness = { 0x1556510, 12 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.GetDLSSScreenPercentageRange
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const float&, const float&> UDLSSLibrary = { 0x1556920, 13 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const float&, const float&> GetDLSSScreenPercentageRange = { 0x1556920, 13 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.GetDLSSRRMinimumDriverVersion
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const int32_t&, const int32_t&> UDLSSLibrary = { 0x1557570, 14 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const int32_t&, const int32_t&> GetDLSSRRMinimumDriverVersion = { 0x1557570, 14 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.GetDLSSModeInformation
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const UDLSSMode, const FVector2D, const bool&, const float&, const bool&, const float&, const float&, const float&> UDLSSLibrary = { 0x1556b20, 15 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const UDLSSMode, const FVector2D, const bool&, const float&, const bool&, const float&, const float&, const float&> GetDLSSModeInformation = { 0x1556b20, 15 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.GetDLSSMode
-	constexpr static const FunctionPointer<UDLSSLibrary, UDLSSMode> UDLSSLibrary = { 0x1556610, 16 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, UDLSSMode> GetDLSSMode = { 0x1556610, 16 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.GetDLSSMinimumDriverVersion
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const int32_t&, const int32_t&> UDLSSLibrary = { 0x15576f0, 17 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const int32_t&, const int32_t&> GetDLSSMinimumDriverVersion = { 0x15576f0, 17 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.GetDefaultDLSSMode
-	constexpr static const FunctionPointer<UDLSSLibrary, UDLSSMode> UDLSSLibrary = { 0x15564b0, 18 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, UDLSSMode> GetDefaultDLSSMode = { 0x15564b0, 18 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.EnableDLSSRR
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const bool> UDLSSLibrary = { 0x15573a0, 19 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const bool> EnableDLSSRR = { 0x15573a0, 19 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.EnableDLSS
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const bool> UDLSSLibrary = { 0x15574a0, 20 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const bool> EnableDLSS = { 0x15574a0, 20 }; 
 	// Function /Script/DLSSBlueprint.DLSSLibrary.EnableDLAA
-	constexpr static const FunctionPointer<UDLSSLibrary, void, const bool> UDLSSLibrary = { 0x1557260, 21 }; 
+	constexpr static const FunctionPointer<UDLSSLibrary, void, const bool> EnableDLAA = { 0x1557260, 21 }; 
 };
 
 #pragma pack(pop)

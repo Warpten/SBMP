@@ -105,72 +105,71 @@ class ULiveLinkBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.TransformNames
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const TArray<FName>&> ULiveLinkBlueprintLibrary = { 0xee1b70, 0 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const TArray<FName>&> TransformNames = { 0xee1b70, 0 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.TransformName
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const FName&> ULiveLinkBlueprintLibrary = { 0xee0a80, 1 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const FName&> TransformName = { 0xee0a80, 1 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.SetLiveLinkSubjectEnabled
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkSubjectKey, const bool> ULiveLinkBlueprintLibrary = { 0xedecb0, 2 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkSubjectKey, const bool> SetLiveLinkSubjectEnabled = { 0xedecb0, 2 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.RemoveSource
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSourceHandle&> ULiveLinkBlueprintLibrary = { 0xedfb90, 3 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSourceHandle&> RemoveSource = { 0xedfb90, 3 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.ParentBoneSpaceTransform
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const FTransform&> ULiveLinkBlueprintLibrary = { 0xee0810, 4 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const FTransform&> ParentBoneSpaceTransform = { 0xee0810, 4 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.NumberOfTransforms
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, int32_t, const FSubjectFrameHandle&> ULiveLinkBlueprintLibrary = { 0xee1d60, 5 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, int32_t, const FSubjectFrameHandle&> NumberOfTransforms = { 0xee1d60, 5 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.IsSpecificLiveLinkSubjectEnabled
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectKey, const bool> ULiveLinkBlueprintLibrary = { 0xedefc0, 6 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectKey, const bool> IsSpecificLiveLinkSubjectEnabled = { 0xedefc0, 6 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.IsSourceStillValid
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSourceHandle&> ULiveLinkBlueprintLibrary = { 0xedfd30, 7 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSourceHandle&> IsSourceStillValid = { 0xedfd30, 7 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.IsLiveLinkSubjectEnabled
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectName> ULiveLinkBlueprintLibrary = { 0xedee90, 8 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectName> IsLiveLinkSubjectEnabled = { 0xedee90, 8 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.HasParent
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkTransform&> ULiveLinkBlueprintLibrary = { 0xee0470, 9 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkTransform&> HasParent = { 0xee0470, 9 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetTransformByName
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const FName, const FLiveLinkTransform&> ULiveLinkBlueprintLibrary = { 0xee1360, 10 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const FName, const FLiveLinkTransform&> GetTransformByName = { 0xee1360, 10 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetTransformByIndex
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const int32_t, const FLiveLinkTransform&> ULiveLinkBlueprintLibrary = { 0xee1640, 11 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const int32_t, const FLiveLinkTransform&> GetTransformByIndex = { 0xee1640, 11 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetSpecificLiveLinkSubjectRole
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, UClass*, const FLiveLinkSubjectKey> ULiveLinkBlueprintLibrary = { 0xedeb50, 12 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, UClass*, const FLiveLinkSubjectKey> GetSpecificLiveLinkSubjectRole = { 0xedeb50, 12 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetSourceType
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, FText, const FLiveLinkSourceHandle&> ULiveLinkBlueprintLibrary = { 0xedf830, 13 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, FText, const FLiveLinkSourceHandle&> GetSourceType = { 0xedf830, 13 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetSourceStatus
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, FText, const FLiveLinkSourceHandle&> ULiveLinkBlueprintLibrary = { 0xedf9e0, 14 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, FText, const FLiveLinkSourceHandle&> GetSourceStatus = { 0xedf9e0, 14 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetSourceMachineName
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, FText, const FLiveLinkSourceHandle&> ULiveLinkBlueprintLibrary = { 0xedf5f0, 15 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, FText, const FLiveLinkSourceHandle&> GetSourceMachineName = { 0xedf5f0, 15 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetRootTransform
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const FLiveLinkTransform&> ULiveLinkBlueprintLibrary = { 0xee18f0, 16 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const FLiveLinkTransform&> GetRootTransform = { 0xee18f0, 16 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetPropertyValue
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkBasicBlueprintData&, const FName, const float&> ULiveLinkBlueprintLibrary = { 0xee2120, 17 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkBasicBlueprintData&, const FName, const float&> GetPropertyValue = { 0xee2120, 17 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetParent
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const FLiveLinkTransform&> ULiveLinkBlueprintLibrary = { 0xee0210, 18 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const FLiveLinkTransform&> GetParent = { 0xee0210, 18 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetMetadata
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const FSubjectMetadata&> ULiveLinkBlueprintLibrary = { 0xee10c0, 19 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const FSubjectMetadata&> GetMetadata = { 0xee10c0, 19 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetLiveLinkSubjects
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, TArray<FLiveLinkSubjectKey>, const bool, const bool> ULiveLinkBlueprintLibrary = { 0xedf1a0, 20 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, TArray<FLiveLinkSubjectKey>, const bool, const bool> GetLiveLinkSubjects = { 0xedf1a0, 20 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetLiveLinkSubjectRole
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, UClass*, const FLiveLinkSubjectName> ULiveLinkBlueprintLibrary = { 0xedea20, 21 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, UClass*, const FLiveLinkSubjectName> GetLiveLinkSubjectRole = { 0xedea20, 21 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetLiveLinkEnabledSubjectNames
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, TArray<FLiveLinkSubjectName>, const bool> ULiveLinkBlueprintLibrary = { 0xedf3c0, 22 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, TArray<FLiveLinkSubjectName>, const bool> GetLiveLinkEnabledSubjectNames = { 0xedf3c0, 22 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetCurves
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const TMap<FName, float>&> ULiveLinkBlueprintLibrary = { 0xee1e90, 23 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const TMap<FName, float>&> GetCurves = { 0xee1e90, 23 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetChildren
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const TArray<FLiveLinkTransform>&> ULiveLinkBlueprintLibrary = { 0xedfe70, 24 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const TArray<FLiveLinkTransform>&> GetChildren = { 0xedfe70, 24 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.GetBasicData
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const FLiveLinkBasicBlueprintData&> ULiveLinkBlueprintLibrary = { 0xee0d00, 25 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FSubjectFrameHandle&, const FLiveLinkBasicBlueprintData&> GetBasicData = { 0xee0d00, 25 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.EvaluateLiveLinkFrameWithSpecificRole
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectName, const UClass*, const FLiveLinkBaseBlueprintData&> ULiveLinkBlueprintLibrary = { 0xe8e0f0, 26 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectName, const UClass*, const FLiveLinkBaseBlueprintData&> EvaluateLiveLinkFrameWithSpecificRole = { 0xe8e0f0, 26 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.EvaluateLiveLinkFrameAtWorldTimeOffset
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectName, const UClass*, const float, const FLiveLinkBaseBlueprintData&> ULiveLinkBlueprintLibrary = { 0xe8e350, 27 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectName, const UClass*, const float, const FLiveLinkBaseBlueprintData&> EvaluateLiveLinkFrameAtWorldTimeOffset = { 0xe8e350, 27 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.EvaluateLiveLinkFrameAtSceneTime
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectName, const UClass*, const FTimecode, const FLiveLinkBaseBlueprintData&> ULiveLinkBlueprintLibrary = { 0xe8e650, 28 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectName, const UClass*, const FTimecode, const FLiveLinkBaseBlueprintData&> EvaluateLiveLinkFrameAtSceneTime = { 0xe8e650, 28 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.EvaluateLiveLinkFrame
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectRepresentation, const FLiveLinkBaseBlueprintData&> ULiveLinkBlueprintLibrary = { 0xe8df10, 29 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, bool, const FLiveLinkSubjectRepresentation, const FLiveLinkBaseBlueprintData&> EvaluateLiveLinkFrame = { 0xe8df10, 29 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.ComponentSpaceTransform
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const FTransform&> ULiveLinkBlueprintLibrary = { 0xee05d0, 30 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, void, const FLiveLinkTransform&, const FTransform&> ComponentSpaceTransform = { 0xee05d0, 30 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintLibrary.ChildCount
-	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, int32_t, const FLiveLinkTransform&> ULiveLinkBlueprintLibrary = { 0xee00b0, 31 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintLibrary, int32_t, const FLiveLinkTransform&> ChildCount = { 0xee00b0, 31 }; 
 };
 
 /// Class /Script/LiveLink.LiveLinkBlueprintVirtualSubject
@@ -180,16 +179,15 @@ class ULiveLinkBlueprintVirtualSubject : public ULiveLinkVirtualSubject
 public:
 	unsigned char                                      UnknownData01_1[0x28];                                      // 0x00D8   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkBlueprintVirtualSubject.UpdateVirtualSubjectStaticData_Internal
-	constexpr static const FunctionPointer<ULiveLinkBlueprintVirtualSubject, bool, const FLiveLinkBaseStaticData&> ULiveLinkBlueprintVirtualSubject = { 0xeb0700, 0 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintVirtualSubject, bool, const FLiveLinkBaseStaticData&> UpdateVirtualSubjectStaticData_Internal = { 0xeb0700, 0 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintVirtualSubject.UpdateVirtualSubjectFrameData_Internal
-	constexpr static const FunctionPointer<ULiveLinkBlueprintVirtualSubject, bool, const FLiveLinkBaseFrameData&> ULiveLinkBlueprintVirtualSubject = { 0xeb0890, 1 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintVirtualSubject, bool, const FLiveLinkBaseFrameData&> UpdateVirtualSubjectFrameData_Internal = { 0xeb0890, 1 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintVirtualSubject.OnUpdate
-	constexpr static const FunctionPointer<ULiveLinkBlueprintVirtualSubject, void> ULiveLinkBlueprintVirtualSubject = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintVirtualSubject, void> OnUpdate = { 0x2bbb090, 2 }; 
 	// Function /Script/LiveLink.LiveLinkBlueprintVirtualSubject.OnInitialize
-	constexpr static const FunctionPointer<ULiveLinkBlueprintVirtualSubject, void> ULiveLinkBlueprintVirtualSubject = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<ULiveLinkBlueprintVirtualSubject, void> OnInitialize = { 0x2bbb090, 3 }; 
 };
 
 /// Class /Script/LiveLink.LiveLinkComponent
@@ -200,16 +198,15 @@ public:
 	FMulticastInlineDelegate                           OnLiveLinkUpdated;                                          // 0x00C0   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x10];                                      // 0x00D0   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectDataAtWorldTime
-	constexpr static const FunctionPointer<ULiveLinkComponent, void, const FName, const float, const bool&, const FSubjectFrameHandle&> ULiveLinkComponent = { 0xee3550, 0 }; 
+	constexpr static const FunctionPointer<ULiveLinkComponent, void, const FName, const float, const bool&, const FSubjectFrameHandle&> GetSubjectDataAtWorldTime = { 0xee3550, 0 }; 
 	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectDataAtSceneTime
-	constexpr static const FunctionPointer<ULiveLinkComponent, void, const FName, const FTimecode&, const bool&, const FSubjectFrameHandle&> ULiveLinkComponent = { 0xee3230, 1 }; 
+	constexpr static const FunctionPointer<ULiveLinkComponent, void, const FName, const FTimecode&, const bool&, const FSubjectFrameHandle&> GetSubjectDataAtSceneTime = { 0xee3230, 1 }; 
 	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectData
-	constexpr static const FunctionPointer<ULiveLinkComponent, void, const FName, const bool&, const FSubjectFrameHandle&> ULiveLinkComponent = { 0xee3850, 2 }; 
+	constexpr static const FunctionPointer<ULiveLinkComponent, void, const FName, const bool&, const FSubjectFrameHandle&> GetSubjectData = { 0xee3850, 2 }; 
 	// Function /Script/LiveLink.LiveLinkComponent.GetAvailableSubjectNames
-	constexpr static const FunctionPointer<ULiveLinkComponent, void, const TArray<FName>&> ULiveLinkComponent = { 0xee3ab0, 3 }; 
+	constexpr static const FunctionPointer<ULiveLinkComponent, void, const TArray<FName>&> GetAvailableSubjectNames = { 0xee3ab0, 3 }; 
 };
 
 /// Class /Script/LiveLink.LiveLinkDrivenComponent
@@ -231,12 +228,11 @@ class ULiveLinkInstance : public UAnimInstance
 public:
 	class ULiveLinkRetargetAsset*                      CurrentRetargetAsset;                                       // 0x02C8   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkInstance.SetSubject
-	constexpr static const FunctionPointer<ULiveLinkInstance, void, const FLiveLinkSubjectName> ULiveLinkInstance = { 0xee4c80, 0 }; 
+	constexpr static const FunctionPointer<ULiveLinkInstance, void, const FLiveLinkSubjectName> SetSubject = { 0xee4c80, 0 }; 
 	// Function /Script/LiveLink.LiveLinkInstance.SetRetargetAsset
-	constexpr static const FunctionPointer<ULiveLinkInstance, void, const UClass*> ULiveLinkInstance = { 0xee4ad0, 1 }; 
+	constexpr static const FunctionPointer<ULiveLinkInstance, void, const UClass*> SetRetargetAsset = { 0xee4ad0, 1 }; 
 };
 
 /// Class /Script/LiveLink.LiveLinkMessageBusFinder
@@ -246,14 +242,13 @@ class ULiveLinkMessageBusFinder : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x58];                                      // 0x0028   (0x0058)  MISSED
 
-
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkMessageBusFinder.GetAvailableProviders
-	constexpr static const FunctionPointer<ULiveLinkMessageBusFinder, void, const UObject*, const FLatentActionInfo, const float, const TArray<FProviderPollResult>&> ULiveLinkMessageBusFinder = { 0xee5270, 0 }; 
+	constexpr static const FunctionPointer<ULiveLinkMessageBusFinder, void, const UObject*, const FLatentActionInfo, const float, const TArray<FProviderPollResult>&> GetAvailableProviders = { 0xee5270, 0 }; 
 	// Function /Script/LiveLink.LiveLinkMessageBusFinder.ConstructMessageBusFinder
-	constexpr static const FunctionPointer<ULiveLinkMessageBusFinder, ULiveLinkMessageBusFinder*> ULiveLinkMessageBusFinder = { 0xee4fe0, 1 }; 
+	constexpr static const FunctionPointer<ULiveLinkMessageBusFinder, ULiveLinkMessageBusFinder*> ConstructMessageBusFinder = { 0xee4fe0, 1 }; 
 	// Function /Script/LiveLink.LiveLinkMessageBusFinder.ConnectToProvider
-	constexpr static const FunctionPointer<ULiveLinkMessageBusFinder, void, const FProviderPollResult&, const FLiveLinkSourceHandle&> ULiveLinkMessageBusFinder = { 0xee5060, 2 }; 
+	constexpr static const FunctionPointer<ULiveLinkMessageBusFinder, void, const FProviderPollResult&, const FLiveLinkSourceHandle&> ConnectToProvider = { 0xee5060, 2 }; 
 };
 
 /// Class /Script/LiveLink.LiveLinkMessageBusSourceFactory
@@ -278,14 +273,13 @@ public:
 	TArray<FLiveLinkSourcePreset>                      Sources;                                                    // 0x0028   (0x0010)  
 	TArray<FLiveLinkSubjectPreset>                     Subjects;                                                   // 0x0038   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkPreset.BuildFromClient
-	constexpr static const FunctionPointer<ULiveLinkPreset, void> ULiveLinkPreset = { 0xee6000, 0 }; 
+	constexpr static const FunctionPointer<ULiveLinkPreset, void> BuildFromClient = { 0xee6000, 0 }; 
 	// Function /Script/LiveLink.LiveLinkPreset.ApplyToClient
-	constexpr static const FunctionPointer<ULiveLinkPreset, bool> ULiveLinkPreset = { 0xee6110, 1 }; 
+	constexpr static const FunctionPointer<ULiveLinkPreset, bool> ApplyToClient = { 0xee6110, 1 }; 
 	// Function /Script/LiveLink.LiveLinkPreset.AddToClient
-	constexpr static const FunctionPointer<ULiveLinkPreset, bool, const bool> ULiveLinkPreset = { 0xee6020, 2 }; 
+	constexpr static const FunctionPointer<ULiveLinkPreset, bool, const bool> AddToClient = { 0xee6020, 2 }; 
 };
 
 /// Struct /Script/LiveLink.SBRemapElements
@@ -315,14 +309,13 @@ public:
 	class USBCurveRemapData*                           RemapData;                                                  // 0x0078   (0x0008)  
 	unsigned char                                      UnknownData01_7[0xA0];                                      // 0x0080   (0x00A0)  MISSED
 
-
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkRemapAsset.RemapCurveElements
-	constexpr static const FunctionPointer<ULiveLinkRemapAsset, void, const TMap<FName, float>&> ULiveLinkRemapAsset = { 0xee6700, 0 }; 
+	constexpr static const FunctionPointer<ULiveLinkRemapAsset, void, const TMap<FName, float>&> RemapCurveElements = { 0xee6700, 0 }; 
 	// Function /Script/LiveLink.LiveLinkRemapAsset.GetRemappedCurveName
-	constexpr static const FunctionPointer<ULiveLinkRemapAsset, FName, const FName> ULiveLinkRemapAsset = { 0xee6890, 1 }; 
+	constexpr static const FunctionPointer<ULiveLinkRemapAsset, FName, const FName> GetRemappedCurveName = { 0xee6890, 1 }; 
 	// Function /Script/LiveLink.LiveLinkRemapAsset.GetRemappedBoneName
-	constexpr static const FunctionPointer<ULiveLinkRemapAsset, FName, const FName> ULiveLinkRemapAsset = { 0xee6980, 2 }; 
+	constexpr static const FunctionPointer<ULiveLinkRemapAsset, FName, const FName> GetRemappedBoneName = { 0xee6980, 2 }; 
 };
 
 /// Struct /Script/LiveLink.LiveLinkRoleProjectSetting

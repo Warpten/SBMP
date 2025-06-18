@@ -9016,14 +9016,13 @@ class USBWidgetNavigationCustom : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SB.SBWidgetNavigationCustom.GetNavigationTargetMap
-	constexpr static const FunctionPointer<USBWidgetNavigationCustom, TMap<USBUserWidget*, FSBWidgetNavigationInfo>> USBWidgetNavigationCustom = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBWidgetNavigationCustom, TMap<USBUserWidget*, FSBWidgetNavigationInfo>> GetNavigationTargetMap = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBWidgetNavigationCustom.GetNavigationRelay
-	constexpr static const FunctionPointer<USBWidgetNavigationCustom, UWidget*, const EUINavigation, const USBUserWidget*, const USBUserWidget*> USBWidgetNavigationCustom = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBWidgetNavigationCustom, UWidget*, const EUINavigation, const USBUserWidget*, const USBUserWidget*> GetNavigationRelay = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBWidgetNavigationCustom.GetNavigation
-	constexpr static const FunctionPointer<USBWidgetNavigationCustom, UWidget*, const EUINavigation> USBWidgetNavigationCustom = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBWidgetNavigationCustom, UWidget*, const EUINavigation> GetNavigation = { 0x2bbb090, 2 }; 
 };
 
 /// Class /Script/SB.SBWidgetNavigationCustomLibrary
@@ -9032,10 +9031,9 @@ class USBWidgetNavigationCustomLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SB.SBWidgetNavigationCustomLibrary.GetNavigationRelayDefault
-	constexpr static const FunctionPointer<USBWidgetNavigationCustomLibrary, UWidget*, const TScriptInterface<Class>, const EUINavigation, const USBUserWidget*, const USBUserWidget*> USBWidgetNavigationCustomLibrary = { 0x266cc90, 0 }; 
+	constexpr static const FunctionPointer<USBWidgetNavigationCustomLibrary, UWidget*, const TScriptInterface<Class>, const EUINavigation, const USBUserWidget*, const USBUserWidget*> GetNavigationRelayDefault = { 0x266cc90, 0 }; 
 };
 
 /// Struct /Script/SB.SBCineCameraActorBoundsBoneData
@@ -9369,10 +9367,9 @@ class USBAnimInstance : public UAnimInstance
 public:
 	unsigned char                                      UnknownData01_1[0x258];                                     // 0x02C8   (0x0258)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBAnimInstance.Event_EventMove
-	constexpr static const FunctionPointer<USBAnimInstance, void, const USBSkeletalMeshComponent*, const bool> USBAnimInstance = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBAnimInstance, void, const USBSkeletalMeshComponent*, const bool> Event_EventMove = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/SB.SBAnimNotify_CharSESound
@@ -9666,10 +9663,9 @@ public:
 	unsigned char                                      UnknownData11_6[0x10];                                      // 0x0388   (0x0010)  MISSED
 	TWeakObjectPtr<class ASBCharacter*>                ForceMovePlayerCharacter;                                   // 0x0398   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/SB.SBAreaControlVolume.EventSetActive
-	constexpr static const FunctionPointer<ASBAreaControlVolume, void, const bool, const bool> ASBAreaControlVolume = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ASBAreaControlVolume, void, const bool, const bool> EventSetActive = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/SB.SBBehaviorTreeComponent
@@ -9891,10 +9887,9 @@ class USBMultithreaded : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SB.SBMultithreaded.MultithreadedFunction
-	constexpr static const FunctionPointer<USBMultithreaded, void> USBMultithreaded = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBMultithreaded, void> MultithreadedFunction = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/SB.SBBlueprintLibrary
@@ -9903,296 +9898,295 @@ class USBBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SB.SBBlueprintLibrary.WaterBodyUpdate
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UObject*, const USceneCaptureComponent2D*, const UTextureRenderTarget2D*, const UTextureRenderTarget2D*, const UTextureRenderTarget2D*, const UTextureRenderTarget2D*, const UMaterialInstanceDynamic*, const UMaterialInstanceDynamic*, const UMaterialInstanceDynamic*, const UMaterialInstanceDynamic*, const UMaterialParameterCollection*, const UMaterialParameterCollection*, const float, const float, const float, const bool> USBBlueprintLibrary = { 0x2680f20, 0 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UObject*, const USceneCaptureComponent2D*, const UTextureRenderTarget2D*, const UTextureRenderTarget2D*, const UTextureRenderTarget2D*, const UTextureRenderTarget2D*, const UMaterialInstanceDynamic*, const UMaterialInstanceDynamic*, const UMaterialInstanceDynamic*, const UMaterialInstanceDynamic*, const UMaterialParameterCollection*, const UMaterialParameterCollection*, const float, const float, const float, const bool> WaterBodyUpdate = { 0x2680f20, 0 }; 
 	// Function /Script/SB.SBBlueprintLibrary.UseGroupingByCulture
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267ea40, 1 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> UseGroupingByCulture = { 0x267ea40, 1 }; 
 	// Function /Script/SB.SBBlueprintLibrary.UpdateWaterSceneCaptureComponent
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const float, const UClass*, const FName, const FName, const float, const USceneCaptureComponent2D*> USBBlueprintLibrary = { 0x268a810, 2 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const float, const UClass*, const FName, const FName, const float, const USceneCaptureComponent2D*> UpdateWaterSceneCaptureComponent = { 0x268a810, 2 }; 
 	// Function /Script/SB.SBBlueprintLibrary.UpdateWaterHeight
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UObject*, const TArray<FName>&, const UStaticMeshComponent*, const float, const float, const float, const bool> USBBlueprintLibrary = { 0x267c740, 3 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UObject*, const TArray<FName>&, const UStaticMeshComponent*, const float, const float, const float, const bool> UpdateWaterHeight = { 0x267c740, 3 }; 
 	// Function /Script/SB.SBBlueprintLibrary.UpdateEventMoveInstance
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBEventMoveDataComponent*, const FVector, const FRotator, const FVector, const FRotator, const FVector, const FRotator, const FVector, const FRotator> USBBlueprintLibrary = { 0x2688b80, 4 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBEventMoveDataComponent*, const FVector, const FRotator, const FVector, const FRotator, const FVector, const FRotator, const FVector, const FRotator> UpdateEventMoveInstance = { 0x2688b80, 4 }; 
 	// Function /Script/SB.SBBlueprintLibrary.UnApplySBEnvSettingDataToScene
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void> USBBlueprintLibrary = { 0x267fff0, 5 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void> UnApplySBEnvSettingDataToScene = { 0x267fff0, 5 }; 
 	// Function /Script/SB.SBBlueprintLibrary.TurntableRefreshMusic
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> USBBlueprintLibrary = { 0x26834b0, 6 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> TurntableRefreshMusic = { 0x26834b0, 6 }; 
 	// Function /Script/SB.SBBlueprintLibrary.TurntablePrevMusic
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> USBBlueprintLibrary = { 0x2683290, 7 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> TurntablePrevMusic = { 0x2683290, 7 }; 
 	// Function /Script/SB.SBBlueprintLibrary.TurntableNextMusic
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> USBBlueprintLibrary = { 0x26833a0, 8 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> TurntableNextMusic = { 0x26833a0, 8 }; 
 	// Function /Script/SB.SBBlueprintLibrary.TimeSecondsToL10NTextWithHours
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const float> USBBlueprintLibrary = { 0x267d540, 9 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const float> TimeSecondsToL10NTextWithHours = { 0x267d540, 9 }; 
 	// Function /Script/SB.SBBlueprintLibrary.TimeSecondsToL10NText
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const float> USBBlueprintLibrary = { 0x267d670, 10 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const float> TimeSecondsToL10NText = { 0x267d670, 10 }; 
 	// Function /Script/SB.SBBlueprintLibrary.TextToStringArray
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FString>, const FText> USBBlueprintLibrary = { 0x267dd80, 11 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FString>, const FText> TextToStringArray = { 0x267dd80, 11 }; 
 	// Function /Script/SB.SBBlueprintLibrary.ShowHDRScene
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UTexture*, const bool> USBBlueprintLibrary = { 0x267dbd0, 12 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UTexture*, const bool> ShowHDRScene = { 0x267dbd0, 12 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetWorldCompositionStreamPawnLocation
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> USBBlueprintLibrary = { 0x267e3b0, 13 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> SetWorldCompositionStreamPawnLocation = { 0x267e3b0, 13 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetUMGSharedValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FName&, const float> USBBlueprintLibrary = { 0x26868e0, 14 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FName&, const float> SetUMGSharedValue = { 0x26868e0, 14 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetTurntableMusicIndex
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const int32_t> USBBlueprintLibrary = { 0x2683600, 15 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const int32_t> SetTurntableMusicIndex = { 0x2683600, 15 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetGamePuase
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> USBBlueprintLibrary = { 0x2687bf0, 16 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> SetGamePuase = { 0x2687bf0, 16 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetForceSubSteppingValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> USBBlueprintLibrary = { 0x267eff0, 17 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const bool> SetForceSubSteppingValue = { 0x267eff0, 17 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetForceMipLevelsToBeResidentFromSkeletalMesh
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USkeletalMesh*, const float> USBBlueprintLibrary = { 0x267bfe0, 18 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USkeletalMesh*, const float> SetForceMipLevelsToBeResidentFromSkeletalMesh = { 0x267bfe0, 18 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetForceMipLevelsToBeResident
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UMeshComponent*, const float> USBBlueprintLibrary = { 0x267c190, 19 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UMeshComponent*, const float> SetForceMipLevelsToBeResident = { 0x267c190, 19 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetEventMoveInstanceEnableFlag
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBEventMoveDataComponent*, const bool> USBBlueprintLibrary = { 0x26893e0, 20 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBEventMoveDataComponent*, const bool> SetEventMoveInstanceEnableFlag = { 0x26893e0, 20 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetEventDirectionToPlayer
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FVector> USBBlueprintLibrary = { 0x2689110, 21 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FVector> SetEventDirectionToPlayer = { 0x2689110, 21 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetDroneBodyMeshName
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FName> USBBlueprintLibrary = { 0x267ef00, 22 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FName> SetDroneBodyMeshName = { 0x267ef00, 22 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SetControllerLightColor
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FColor> USBBlueprintLibrary = { 0x2686f80, 23 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FColor> SetControllerLightColor = { 0x2686f80, 23 }; 
 	// Function /Script/SB.SBBlueprintLibrary.SaveStringsToTextFile
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FString, const TArray<FString>&> USBBlueprintLibrary = { 0x267e110, 24 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FString, const TArray<FString>&> SaveStringsToTextFile = { 0x267e110, 24 }; 
 	// Function /Script/SB.SBBlueprintLibrary.ResetControllerLightColor
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void> USBBlueprintLibrary = { 0x2686f40, 25 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void> ResetControllerLightColor = { 0x2686f40, 25 }; 
 	// Function /Script/SB.SBBlueprintLibrary.RequestPlaySession
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FVector> USBBlueprintLibrary = { 0x267df20, 26 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FVector> RequestPlaySession = { 0x267df20, 26 }; 
 	// Function /Script/SB.SBBlueprintLibrary.RemoveUMGSharedValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FName&> USBBlueprintLibrary = { 0x26867f0, 27 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FName&> RemoveUMGSharedValue = { 0x26867f0, 27 }; 
 	// Function /Script/SB.SBBlueprintLibrary.RemoveEventMoveInstance
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBEventMoveDataComponent*> USBBlueprintLibrary = { 0x26895d0, 28 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBEventMoveDataComponent*> RemoveEventMoveInstance = { 0x26895d0, 28 }; 
 	// Function /Script/SB.SBBlueprintLibrary.RemoveDeactiveMovingInstance
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBDeactiveMovingComponent*> USBBlueprintLibrary = { 0x2687d60, 29 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBDeactiveMovingComponent*> RemoveDeactiveMovingInstance = { 0x2687d60, 29 }; 
 	// Function /Script/SB.SBBlueprintLibrary.PlayVibrationAtLocation
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBVibrationSet*, const FVector&> USBBlueprintLibrary = { 0x2682850, 30 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBVibrationSet*, const FVector&> PlayVibrationAtLocation = { 0x2682850, 30 }; 
 	// Function /Script/SB.SBBlueprintLibrary.PlayVibration
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBVibrationSet*> USBBlueprintLibrary = { 0x2682d20, 31 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBVibrationSet*> PlayVibration = { 0x2682d20, 31 }; 
 	// Function /Script/SB.SBBlueprintLibrary.PlaySoundatLocation
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USoundBase*, const FVector, const FRotator, const float, const float, const float, const USoundAttenuation*, const USoundConcurrency*, const AActor*> USBBlueprintLibrary = { 0x2687680, 32 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USoundBase*, const FVector, const FRotator, const float, const float, const float, const USoundAttenuation*, const USoundConcurrency*, const AActor*> PlaySoundatLocation = { 0x2687680, 32 }; 
 	// Function /Script/SB.SBBlueprintLibrary.PlaySBShowToPlayerCharacter
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBShowData*> USBBlueprintLibrary = { 0x267bc70, 33 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBShowData*> PlaySBShowToPlayerCharacter = { 0x267bc70, 33 }; 
 	// Function /Script/SB.SBBlueprintLibrary.MergeMeshes
-	constexpr static const FunctionPointer<USBBlueprintLibrary, USkeletalMesh*, const FSkeletalMeshMergeParams&> USBBlueprintLibrary = { 0x267ed10, 34 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, USkeletalMesh*, const FSkeletalMeshMergeParams&> MergeMeshes = { 0x267ed10, 34 }; 
 	// Function /Script/SB.SBBlueprintLibrary.LoadingScreenFadeAuto
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FGuid, const float, const float, const float, const float, const float, const float, const float, const ESBUILoadingScreenTag> USBBlueprintLibrary = { 0x2683960, 35 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FGuid, const float, const float, const float, const float, const float, const float, const float, const ESBUILoadingScreenTag> LoadingScreenFadeAuto = { 0x2683960, 35 }; 
 	// Function /Script/SB.SBBlueprintLibrary.LastInputDeviceGamepad
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267cdc0, 36 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> LastInputDeviceGamepad = { 0x267cdc0, 36 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsUMGTargetReceiveWidget
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBUserWidget*> USBBlueprintLibrary = { 0x2686d40, 37 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBUserWidget*> IsUMGTargetReceiveWidget = { 0x2686d40, 37 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsThumbStickKeyName
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FName&> USBBlueprintLibrary = { 0x2684620, 38 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FName&> IsThumbStickKeyName = { 0x2684620, 38 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsSBUMGCursorVisible
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x26845f0, 39 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsSBUMGCursorVisible = { 0x26845f0, 39 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsSaving
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267d9b0, 40 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsSaving = { 0x267d9b0, 40 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsPortableGamingDevice
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267c550, 41 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsPortableGamingDevice = { 0x267c550, 41 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsPlayNewGamePlus
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267eec0, 42 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsPlayNewGamePlus = { 0x267eec0, 42 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsPlayerSwimming
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x26875e0, 43 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsPlayerSwimming = { 0x26875e0, 43 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsLastInputDeviceGamepad
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267cdc0, 44 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsLastInputDeviceGamepad = { 0x267cdc0, 44 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsKeymappingCombination
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FInputActionKeyMapping, const bool> USBBlueprintLibrary = { 0x2684bb0, 45 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FInputActionKeyMapping, const bool> IsKeymappingCombination = { 0x2684bb0, 45 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsEnabledHDR
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267dac0, 46 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsEnabledHDR = { 0x267dac0, 46 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsCultureArab
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267ea70, 47 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsCultureArab = { 0x267ea70, 47 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsActiveSBEnvCounter
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const TEnumAsByte<ESBWorldEnvCounterType>> USBBlueprintLibrary = { 0x2680260, 48 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const TEnumAsByte<ESBWorldEnvCounterType>> IsActiveSBEnvCounter = { 0x2680260, 48 }; 
 	// Function /Script/SB.SBBlueprintLibrary.IsActiveMinimizeUI
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x2686b90, 49 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> IsActiveMinimizeUI = { 0x2686b90, 49 }; 
 	// Function /Script/SB.SBBlueprintLibrary.HUDAspectRatioGameOptionApply
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x26845c0, 50 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> HUDAspectRatioGameOptionApply = { 0x26845c0, 50 }; 
 	// Function /Script/SB.SBBlueprintLibrary.HideHDRScene
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void> USBBlueprintLibrary = { 0x267db80, 51 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void> HideHDRScene = { 0x267db80, 51 }; 
 	// Function /Script/SB.SBBlueprintLibrary.HasUMGSharedValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FName&> USBBlueprintLibrary = { 0x2686700, 52 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FName&> HasUMGSharedValue = { 0x2686700, 52 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetWorldWaterHeight
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const FVector> USBBlueprintLibrary = { 0x268ab90, 53 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const FVector> GetWorldWaterHeight = { 0x268ab90, 53 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetWorldGlobalValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const TEnumAsByte<ESBWorldGlobalValueType>> USBBlueprintLibrary = { 0x267fd30, 54 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const TEnumAsByte<ESBWorldGlobalValueType>> GetWorldGlobalValue = { 0x267fd30, 54 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetWaterSimUpdateQuality
-	constexpr static const FunctionPointer<USBBlueprintLibrary, int32_t> USBBlueprintLibrary = { 0x267eb50, 55 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, int32_t> GetWaterSimUpdateQuality = { 0x267eb50, 55 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetUsedFoliageTypes
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<UFoliageType*>, const AInstancedFoliageActor*> USBBlueprintLibrary = { 0x267ce00, 56 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<UFoliageType*>, const AInstancedFoliageActor*> GetUsedFoliageTypes = { 0x267ce00, 56 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetUMGSharedValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const FName&> USBBlueprintLibrary = { 0x2686a60, 57 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const FName&> GetUMGSharedValue = { 0x2686a60, 57 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetTurntableMusicIndex
-	constexpr static const FunctionPointer<USBBlueprintLibrary, int32_t> USBBlueprintLibrary = { 0x26835c0, 58 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, int32_t> GetTurntableMusicIndex = { 0x26835c0, 58 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetTraceDirectionRigSpace
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FVector, const AActor*, const FSBEventMoveIKData&> USBBlueprintLibrary = { 0x26809f0, 59 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FVector, const AActor*, const FSBEventMoveIKData&> GetTraceDirectionRigSpace = { 0x26809f0, 59 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetThumbStickReverseKeyName
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FName, const FName&> USBBlueprintLibrary = { 0x2684850, 60 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FName, const FName&> GetThumbStickReverseKeyName = { 0x2684850, 60 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetTextureFromUIKeyNameImageAsset
-	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FName, const FName, const FName> USBBlueprintLibrary = { 0x2685a70, 61 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FName, const FName, const FName> GetTextureFromUIKeyNameImageAsset = { 0x2685a70, 61 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetTextureFromUIKeyImageAsset
-	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FKey, const FName, const FName> USBBlueprintLibrary = { 0x2685c60, 62 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FKey, const FName, const FName> GetTextureFromUIKeyImageAsset = { 0x2685c60, 62 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetTextureFromSwipeOption
-	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const ESBGameOptionSwipeShortCutType, const FName, const FName> USBBlueprintLibrary = { 0x2684e70, 63 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const ESBGameOptionSwipeShortCutType, const FName, const FName> GetTextureFromSwipeOption = { 0x2684e70, 63 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetTextureFromKeymappingCombination
-	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FInputActionKeyMapping, const FName, const FName> USBBlueprintLibrary = { 0x26853c0, 64 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FInputActionKeyMapping, const FName, const FName> GetTextureFromKeymappingCombination = { 0x26853c0, 64 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetTextureFromKeymapping
-	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FInputActionKeyMapping, const FName, const FName> USBBlueprintLibrary = { 0x2685710, 65 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FInputActionKeyMapping, const FName, const FName> GetTextureFromKeymapping = { 0x2685710, 65 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetTextureFromAxisKeyMapping
-	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FInputAxisKeyMapping, const FName, const FName> USBBlueprintLibrary = { 0x2685050, 66 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, UTexture2D*, const FInputAxisKeyMapping, const FName, const FName> GetTextureFromAxisKeyMapping = { 0x2685050, 66 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetSplashScreenMinimumPlayTime
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x267c650, 67 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetSplashScreenMinimumPlayTime = { 0x267c650, 67 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetSoundVolume
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const ESBSoundVolumeChannel> USBBlueprintLibrary = { 0x2683190, 68 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const ESBSoundVolumeChannel> GetSoundVolume = { 0x2683190, 68 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetSlateBrushResourceType
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TEnumAsByte<ESlateBrushResourceType>> USBBlueprintLibrary = { 0x2686ea0, 69 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TEnumAsByte<ESlateBrushResourceType>> GetSlateBrushResourceType = { 0x2686ea0, 69 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetSettingRollingItemsValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FString>, const ESBUISettingRollingType> USBBlueprintLibrary = { 0x26836d0, 70 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FString>, const ESBUISettingRollingType> GetSettingRollingItemsValue = { 0x26836d0, 70 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetSettingRollingItemsDisplay
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FText>, const ESBUISettingRollingType> USBBlueprintLibrary = { 0x26837e0, 71 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FText>, const ESBUISettingRollingType> GetSettingRollingItemsDisplay = { 0x26837e0, 71 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetRuntimeFloatCurveValueRange
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FRuntimeFloatCurve&, const float&, const float&> USBBlueprintLibrary = { 0x2681f10, 72 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FRuntimeFloatCurve&, const float&, const float&> GetRuntimeFloatCurveValueRange = { 0x2681f10, 72 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetRuntimeFloatCurveValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const FRuntimeFloatCurve&, const float> USBBlueprintLibrary = { 0x2681c60, 73 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float, const FRuntimeFloatCurve&, const float> GetRuntimeFloatCurveValue = { 0x2681c60, 73 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetRuntimeFloatCurveTimeRange
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FRuntimeFloatCurve&, const float&, const float&> USBBlueprintLibrary = { 0x2682250, 74 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FRuntimeFloatCurve&, const float&, const float&> GetRuntimeFloatCurveTimeRange = { 0x2682250, 74 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetRightInputYAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x2683fa0, 75 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetRightInputYAxis = { 0x2683fa0, 75 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetRightInputXAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x2684120, 76 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetRightInputXAxis = { 0x2684120, 76 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetReverseLRStickOption
-	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBGameOptionReverseLRStickType> USBBlueprintLibrary = { 0x267e560, 77 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBGameOptionReverseLRStickType> GetReverseLRStickOption = { 0x267e560, 77 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetPuzzleTimeLimitOption
-	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBGameOptionPuzzleTimeLimitType> USBBlueprintLibrary = { 0x267e630, 78 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBGameOptionPuzzleTimeLimitType> GetPuzzleTimeLimitOption = { 0x267e630, 78 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetPlayerMeshInfoTag
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FName, const TEnumAsByte<ESBSkelMeshSlot>> USBBlueprintLibrary = { 0x267c3e0, 79 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FName, const TEnumAsByte<ESBSkelMeshSlot>> GetPlayerMeshInfoTag = { 0x267c3e0, 79 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetOptionReverseLRStick
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267e7b0, 80 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> GetOptionReverseLRStick = { 0x267e7b0, 80 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetOptionLanguageCode
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FString> USBBlueprintLibrary = { 0x267e950, 81 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FString> GetOptionLanguageCode = { 0x267e950, 81 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetOptionEnableEventContents
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267e880, 82 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> GetOptionEnableEventContents = { 0x267e880, 82 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetOnlineStoreStoreType
-	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBOnlineStoreType> USBBlueprintLibrary = { 0x267c520, 83 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBOnlineStoreType> GetOnlineStoreStoreType = { 0x267c520, 83 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetNiagaraSystem
-	constexpr static const FunctionPointer<USBBlueprintLibrary, UNiagaraSystem*, const FSBNiagaraSystemWithOverrideParam> USBBlueprintLibrary = { 0x2681800, 84 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, UNiagaraSystem*, const FSBNiagaraSystemWithOverrideParam> GetNiagaraSystem = { 0x2681800, 84 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetNiagaraQualityLevel
-	constexpr static const FunctionPointer<USBBlueprintLibrary, int32_t> USBBlueprintLibrary = { 0x267eaa0, 85 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, int32_t> GetNiagaraQualityLevel = { 0x267eaa0, 85 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetMouseYAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x2687340, 86 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetMouseYAxis = { 0x2687340, 86 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetMouseXAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x2687370, 87 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetMouseXAxis = { 0x2687370, 87 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetMouseWheelAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x2687310, 88 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetMouseWheelAxis = { 0x2687310, 88 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetMouseButtonKeyName
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FName, const FPointerEvent&> USBBlueprintLibrary = { 0x2687040, 89 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FName, const FPointerEvent&> GetMouseButtonKeyName = { 0x2687040, 89 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetMaterialInterfaceBlendMode
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TEnumAsByte<EBlendMode>, const UMaterialInterface*> USBBlueprintLibrary = { 0x267dfd0, 90 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TEnumAsByte<EBlendMode>, const UMaterialInterface*> GetMaterialInterfaceBlendMode = { 0x267dfd0, 90 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetLocalizeText
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const TEnumAsByte<ESBLocalize>, const FString> USBBlueprintLibrary = { 0x2680650, 91 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const TEnumAsByte<ESBLocalize>, const FString> GetLocalizeText = { 0x2680650, 91 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetLocalizeActorStatValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const TEnumAsByte<ESBActorStatType>, const float> USBBlueprintLibrary = { 0x2680360, 92 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const TEnumAsByte<ESBActorStatType>, const float> GetLocalizeActorStatValue = { 0x2680360, 92 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetLocalizeActorStatName
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const TEnumAsByte<ESBActorStatType>> USBBlueprintLibrary = { 0x2680520, 93 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const TEnumAsByte<ESBActorStatType>> GetLocalizeActorStatName = { 0x2680520, 93 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetLeftInputYAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x26842a0, 94 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetLeftInputYAxis = { 0x26842a0, 94 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetLeftInputXAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x2684430, 95 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetLeftInputXAxis = { 0x2684430, 95 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetLastGamePadSlateBrushResourceType
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TEnumAsByte<ESlateBrushResourceType>> USBBlueprintLibrary = { 0x2686e70, 96 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TEnumAsByte<ESlateBrushResourceType>> GetLastGamePadSlateBrushResourceType = { 0x2686e70, 96 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetKeyTextLastGamePad
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const FName&> USBBlueprintLibrary = { 0x2684930, 97 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const FName&> GetKeyTextLastGamePad = { 0x2684930, 97 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetKeyText
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const FName&> USBBlueprintLibrary = { 0x2684a70, 98 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FText, const FName&> GetKeyText = { 0x2684a70, 98 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetKeyName
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FName, const FKey&> USBBlueprintLibrary = { 0x26871f0, 99 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FName, const FKey&> GetKeyName = { 0x26871f0, 99 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetKeyMappingsFromInputAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FInputAxisKeyMapping>, const FName, const ESBKeyMappingAxisScaleType, const bool, const bool> USBBlueprintLibrary = { 0x2685ef0, 100 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FInputAxisKeyMapping>, const FName, const ESBKeyMappingAxisScaleType, const bool, const bool> GetKeyMappingsFromInputAxis = { 0x2685ef0, 100 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetKeyMappingsFromInputAction
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FInputActionKeyMapping>, const FName, const bool, const bool> USBBlueprintLibrary = { 0x2686200, 101 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FInputActionKeyMapping>, const FName, const bool, const bool> GetKeyMappingsFromInputAction = { 0x2686200, 101 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetKeyboardType
-	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBKeyboardType> USBBlueprintLibrary = { 0x267cd90, 102 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBKeyboardType> GetKeyboardType = { 0x267cd90, 102 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetInstanceTransforms
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FTransform>, const AInstancedFoliageActor*, const UFoliageType*, const ULevel*> USBBlueprintLibrary = { 0x267d140, 103 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FTransform>, const AInstancedFoliageActor*, const UFoliageType*, const ULevel*> GetInstanceTransforms = { 0x267d140, 103 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetInputActionNameBack
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FName> USBBlueprintLibrary = { 0x2686ec0, 104 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FName> GetInputActionNameBack = { 0x2686ec0, 104 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetInputActionNameAccept
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FName> USBBlueprintLibrary = { 0x2686f00, 105 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FName> GetInputActionNameAccept = { 0x2686f00, 105 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetHUDSizeType
-	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBGameOptionHUDSizeType> USBBlueprintLibrary = { 0x2686c60, 106 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, ESBGameOptionHUDSizeType> GetHUDSizeType = { 0x2686c60, 106 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetGamepadRightYAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x2687400, 107 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetGamepadRightYAxis = { 0x2687400, 107 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetGamepadRightXAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x2687430, 108 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetGamepadRightXAxis = { 0x2687430, 108 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetGamepadLeftYAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x26873a0, 109 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetGamepadLeftYAxis = { 0x26873a0, 109 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetGamepadLeftXAxis
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x26873d0, 110 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetGamepadLeftXAxis = { 0x26873d0, 110 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetGamepadBackKey
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FKey> USBBlueprintLibrary = { 0x2687460, 111 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FKey> GetGamepadBackKey = { 0x2687460, 111 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetGamepadAcceptKey
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FKey> USBBlueprintLibrary = { 0x2687520, 112 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FKey> GetGamepadAcceptKey = { 0x2687520, 112 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetFuidFluxQuality
-	constexpr static const FunctionPointer<USBBlueprintLibrary, int32_t> USBBlueprintLibrary = { 0x267ec30, 113 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, int32_t> GetFuidFluxQuality = { 0x267ec30, 113 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetFootStepPhySurface
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TEnumAsByte<EPhysicalSurface>, const FVector, const TEnumAsByte<EPhysicalSurface>> USBBlueprintLibrary = { 0x267fb90, 114 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TEnumAsByte<EPhysicalSurface>, const FVector, const TEnumAsByte<EPhysicalSurface>> GetFootStepPhySurface = { 0x267fb90, 114 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetEquipLilyMeshAssetPath
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FString> USBBlueprintLibrary = { 0x267c360, 115 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FString> GetEquipLilyMeshAssetPath = { 0x267c360, 115 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetEnableSummerEventContents
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267e770, 116 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> GetEnableSummerEventContents = { 0x267e770, 116 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetEnableDLCContents
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267e700, 117 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> GetEnableDLCContents = { 0x267e700, 117 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetEnableChristmasEventContents
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267e730, 118 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> GetEnableChristmasEventContents = { 0x267e730, 118 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetDroneBodyMeshName
-	constexpr static const FunctionPointer<USBBlueprintLibrary, FName> USBBlueprintLibrary = { 0x267efd0, 119 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, FName> GetDroneBodyMeshName = { 0x267efd0, 119 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetDisplayGamma
-	constexpr static const FunctionPointer<USBBlueprintLibrary, float> USBBlueprintLibrary = { 0x267d9e0, 120 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, float> GetDisplayGamma = { 0x267d9e0, 120 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetConfigBoolValue
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FString, const bool> USBBlueprintLibrary = { 0x267f750, 121 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FString, const bool> GetConfigBoolValue = { 0x267f750, 121 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetCollisionProfileNames
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FName>> USBBlueprintLibrary = { 0x267d340, 122 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<FName>> GetCollisionProfileNames = { 0x267d340, 122 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetAllSBItemActors
-	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<ASBItem*>> USBBlueprintLibrary = { 0x267d7a0, 123 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, TArray<ASBItem*>> GetAllSBItemActors = { 0x267d7a0, 123 }; 
 	// Function /Script/SB.SBBlueprintLibrary.GetActiveEnvControlSettings
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const TArray<FString>&, const TArray<float>&> USBBlueprintLibrary = { 0x267f960, 124 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const TArray<FString>&, const TArray<float>&> GetActiveEnvControlSettings = { 0x267f960, 124 }; 
 	// Function /Script/SB.SBBlueprintLibrary.FocusLockFrameCount
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const int32_t> USBBlueprintLibrary = { 0x2683e90, 125 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const int32_t> FocusLockFrameCount = { 0x2683e90, 125 }; 
 	// Function /Script/SB.SBBlueprintLibrary.FindUserWidgetByTag
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FName, const TArray<USBUserWidget*>&> USBBlueprintLibrary = { 0x2686570, 126 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const FName, const TArray<USBUserWidget*>&> FindUserWidgetByTag = { 0x2686570, 126 }; 
 	// Function /Script/SB.SBBlueprintLibrary.FindFirstUserWidgetByTag
-	constexpr static const FunctionPointer<USBBlueprintLibrary, USBUserWidget*, const FName> USBBlueprintLibrary = { 0x2686480, 127 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, USBUserWidget*, const FName> FindFirstUserWidgetByTag = { 0x2686480, 127 }; 
 	// Function /Script/SB.SBBlueprintLibrary.EntryNikkeStage
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267e4a0, 128 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> EntryNikkeStage = { 0x267e4a0, 128 }; 
 	// Function /Script/SB.SBBlueprintLibrary.DelayFrames
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UObject*, const int32_t, const FLatentActionInfo> USBBlueprintLibrary = { 0x267cb80, 129 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UObject*, const int32_t, const FLatentActionInfo> DelayFrames = { 0x267cb80, 129 }; 
 	// Function /Script/SB.SBBlueprintLibrary.CurrentCultureArab
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> USBBlueprintLibrary = { 0x267ea70, 130 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool> CurrentCultureArab = { 0x267ea70, 130 }; 
 	// Function /Script/SB.SBBlueprintLibrary.CreateVibration2D
-	constexpr static const FunctionPointer<USBBlueprintLibrary, USBVibrationComponent*, const USBVibrationSet*, const bool> USBBlueprintLibrary = { 0x2682590, 131 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, USBVibrationComponent*, const USBVibrationSet*, const bool> CreateVibration2D = { 0x2682590, 131 }; 
 	// Function /Script/SB.SBBlueprintLibrary.CreateSBZoneEvent
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const TEnumAsByte<ESBZoneEventType>, const FName> USBBlueprintLibrary = { 0x2689210, 132 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const TEnumAsByte<ESBZoneEventType>, const FName> CreateSBZoneEvent = { 0x2689210, 132 }; 
 	// Function /Script/SB.SBBlueprintLibrary.CreateProjectile
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UClass*, const FTransform, const FTransform, const TEnumAsByte<ESBProjectileMovementType>, const FSBProjectileUpdateInfo, const float> USBBlueprintLibrary = { 0x267f0c0, 133 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UClass*, const FTransform, const FTransform, const TEnumAsByte<ESBProjectileMovementType>, const FSBProjectileUpdateInfo, const float> CreateProjectile = { 0x267f0c0, 133 }; 
 	// Function /Script/SB.SBBlueprintLibrary.CopySBEnvSettingData
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBEnvSettingData*, const USBEnvSettingData*> USBBlueprintLibrary = { 0x267feb0, 134 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBEnvSettingData*, const USBEnvSettingData*> CopySBEnvSettingData = { 0x267feb0, 134 }; 
 	// Function /Script/SB.SBBlueprintLibrary.CopyBackBufferToRenderTarget
-	constexpr static const FunctionPointer<USBBlueprintLibrary, UTextureRenderTarget2D*> USBBlueprintLibrary = { 0x267dd50, 135 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, UTextureRenderTarget2D*> CopyBackBufferToRenderTarget = { 0x267dd50, 135 }; 
 	// Function /Script/SB.SBBlueprintLibrary.ConvertTraceTypeToByte
-	constexpr static const FunctionPointer<USBBlueprintLibrary, char, const FSBEventMoveIKData&> USBBlueprintLibrary = { 0x2680870, 136 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, char, const FSBEventMoveIKData&> ConvertTraceTypeToByte = { 0x2680870, 136 }; 
 	// Function /Script/SB.SBBlueprintLibrary.ConvertOpaqueToMaksedDitherMaterialInstance
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const UMaterialInstance*> USBBlueprintLibrary = { 0x267e2e0, 137 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const UMaterialInstance*> ConvertOpaqueToMaksedDitherMaterialInstance = { 0x267e2e0, 137 }; 
 	// Function /Script/SB.SBBlueprintLibrary.ConvertInvalidMaskedToOpaqueDitherMaterialInstance
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const UMaterialInstance*> USBBlueprintLibrary = { 0x267e2e0, 138 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const UMaterialInstance*> ConvertInvalidMaskedToOpaqueDitherMaterialInstance = { 0x267e2e0, 138 }; 
 	// Function /Script/SB.SBBlueprintLibrary.ConsoleCommand
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FString, const bool> USBBlueprintLibrary = { 0x2681a50, 139 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const FString, const bool> ConsoleCommand = { 0x2681a50, 139 }; 
 	// Function /Script/SB.SBBlueprintLibrary.CallMultithreadedFunction
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UObject*> USBBlueprintLibrary = { 0x267f620, 140 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const UObject*> CallMultithreadedFunction = { 0x267f620, 140 }; 
 	// Function /Script/SB.SBBlueprintLibrary.ApplySBEnvSettingDataToScene
-	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBEnvSettingData*> USBBlueprintLibrary = { 0x2680100, 141 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, void, const USBEnvSettingData*> ApplySBEnvSettingDataToScene = { 0x2680100, 141 }; 
 	// Function /Script/SB.SBBlueprintLibrary.AddEventMoveInstance
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBEventMoveDataComponent*, const FVector, const FRotator, const FVector, const FRotator, const FVector, const FRotator, const FVector, const FRotator, const UPrimitiveComponent*, const AActor*, const USplineComponent*, const UPrimitiveComponent*> USBBlueprintLibrary = { 0x2689ae0, 142 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBEventMoveDataComponent*, const FVector, const FRotator, const FVector, const FRotator, const FVector, const FRotator, const FVector, const FRotator, const UPrimitiveComponent*, const AActor*, const USplineComponent*, const UPrimitiveComponent*> AddEventMoveInstance = { 0x2689ae0, 142 }; 
 	// Function /Script/SB.SBBlueprintLibrary.AddDeactiveMovingInstance
-	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBDeactiveMovingComponent*, const UPrimitiveComponent*> USBBlueprintLibrary = { 0x2688350, 143 }; 
+	constexpr static const FunctionPointer<USBBlueprintLibrary, bool, const USBDeactiveMovingComponent*, const UPrimitiveComponent*> AddDeactiveMovingInstance = { 0x2688350, 143 }; 
 };
 
 /// Class /Script/SB.SBAutomationBlueprintFunctionLibrary
@@ -10201,24 +10195,23 @@ class USBAutomationBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SB.SBAutomationBlueprintFunctionLibrary.IsSelfieMode
-	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, bool> USBAutomationBlueprintFunctionLibrary = { 0x268cd30, 0 }; 
+	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, bool> IsSelfieMode = { 0x268cd30, 0 }; 
 	// Function /Script/SB.SBAutomationBlueprintFunctionLibrary.IsPhotoMode
-	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, bool> USBAutomationBlueprintFunctionLibrary = { 0x268cd80, 1 }; 
+	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, bool> IsPhotoMode = { 0x268cd80, 1 }; 
 	// Function /Script/SB.SBAutomationBlueprintFunctionLibrary.IsEnableHitStopIK
-	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, bool> USBAutomationBlueprintFunctionLibrary = { 0x151b2d0, 2 }; 
+	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, bool> IsEnableHitStopIK = { 0x151b2d0, 2 }; 
 	// Function /Script/SB.SBAutomationBlueprintFunctionLibrary.IsEnableFootIKWhenSequence
-	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, bool> USBAutomationBlueprintFunctionLibrary = { 0x268cdb0, 3 }; 
+	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, bool> IsEnableFootIKWhenSequence = { 0x268cdb0, 3 }; 
 	// Function /Script/SB.SBAutomationBlueprintFunctionLibrary.GetSelfieHeadLookAtTarget
-	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, FVector> USBAutomationBlueprintFunctionLibrary = { 0x268caf0, 4 }; 
+	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, FVector> GetSelfieHeadLookAtTarget = { 0x268caf0, 4 }; 
 	// Function /Script/SB.SBAutomationBlueprintFunctionLibrary.GetSelfieCameraRotation
-	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, FRotator> USBAutomationBlueprintFunctionLibrary = { 0x268cbb0, 5 }; 
+	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, FRotator> GetSelfieCameraRotation = { 0x268cbb0, 5 }; 
 	// Function /Script/SB.SBAutomationBlueprintFunctionLibrary.GetSelfieCameraLocation
-	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, FVector> USBAutomationBlueprintFunctionLibrary = { 0x268cc90, 6 }; 
+	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, FVector> GetSelfieCameraLocation = { 0x268cc90, 6 }; 
 	// Function /Script/SB.SBAutomationBlueprintFunctionLibrary.GetSelfieCameraDirection
-	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, ESBPhotoModeSelfieDirection> USBAutomationBlueprintFunctionLibrary = { 0x268cb60, 7 }; 
+	constexpr static const FunctionPointer<USBAutomationBlueprintFunctionLibrary, ESBPhotoModeSelfieDirection> GetSelfieCameraDirection = { 0x268cb60, 7 }; 
 };
 
 /// Class /Script/SB.SBBobber
@@ -10244,22 +10237,21 @@ public:
 	TWeakObjectPtr<class ASBCharacter*>                Caster;                                                     // 0x03D8   (0x0008)  
 	unsigned char                                      UnknownData09_7[0x40];                                      // 0x03E0   (0x0040)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBBobber.NotifyBP_SetState
-	constexpr static const FunctionPointer<ASBBobber, void, const TEnumAsByte<ESBFishingBobberState>> ASBBobber = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ASBBobber, void, const TEnumAsByte<ESBFishingBobberState>> NotifyBP_SetState = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBBobber.NotifyBP_SetReel
-	constexpr static const FunctionPointer<ASBBobber, void, const bool> ASBBobber = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<ASBBobber, void, const bool> NotifyBP_SetReel = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBBobber.NotifyBP_SetAttachEnd
-	constexpr static const FunctionPointer<ASBBobber, void, const ASBCharacter*> ASBBobber = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<ASBBobber, void, const ASBCharacter*> NotifyBP_SetAttachEnd = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBBobber.NotifyBP_PullHit
-	constexpr static const FunctionPointer<ASBBobber, void, const bool> ASBBobber = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<ASBBobber, void, const bool> NotifyBP_PullHit = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBBobber.NotifyBP_FishTurn
-	constexpr static const FunctionPointer<ASBBobber, void, const float> ASBBobber = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<ASBBobber, void, const float> NotifyBP_FishTurn = { 0x2bbb090, 4 }; 
 	// Function /Script/SB.SBBobber.NotifyBP_CastingToWaiting
-	constexpr static const FunctionPointer<ASBBobber, void> ASBBobber = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<ASBBobber, void> NotifyBP_CastingToWaiting = { 0x2bbb090, 5 }; 
 	// Function /Script/SB.SBBobber.GetState
-	constexpr static const FunctionPointer<ASBBobber, TEnumAsByte<ESBFishingBobberState>> ASBBobber = { 0x268e310, 6 }; 
+	constexpr static const FunctionPointer<ASBBobber, TEnumAsByte<ESBFishingBobberState>> GetState = { 0x268e310, 6 }; 
 };
 
 /// Class /Script/SB.SBBTDecorator_SbAggroLevel
@@ -13073,506 +13065,505 @@ public:
 	float                                              SignificanceManagerOptimizationScale;                       // 0x3804   (0x0004)  
 	unsigned char                                      UnknownData351_7[0x78];                                     // 0x3808   (0x0078)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBCharacter.WeaponForceHide
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x26a4a40, 0 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> WeaponForceHide = { 0x26a4a40, 0 }; 
 	// Function /Script/SB.SBCharacter.UpdateEyePosition
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x26ab5b0, 1 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> UpdateEyePosition = { 0x26ab5b0, 1 }; 
 	// Function /Script/SB.SBCharacter.StartFlyingAction
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26ac000, 2 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> StartFlyingAction = { 0x26ac000, 2 }; 
 	// Function /Script/SB.SBCharacter.StartClimbing
-	constexpr static const FunctionPointer<ASBCharacter, void, const FHitResult> ASBCharacter = { 0x26aa630, 3 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FHitResult> StartClimbing = { 0x26aa630, 3 }; 
 	// Function /Script/SB.SBCharacter.SetOverridePonytailClothPhysicsAsset
-	constexpr static const FunctionPointer<ASBCharacter, void, const UPhysicsAsset*> ASBCharacter = { 0x26ac190, 4 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const UPhysicsAsset*> SetOverridePonytailClothPhysicsAsset = { 0x26ac190, 4 }; 
 	// Function /Script/SB.SBCharacter.SetOverrideClothPhysicsAsset
-	constexpr static const FunctionPointer<ASBCharacter, void, const FString, const bool, const bool> ASBCharacter = { 0x26a6ed0, 5 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FString, const bool, const bool> SetOverrideClothPhysicsAsset = { 0x26a6ed0, 5 }; 
 	// Function /Script/SB.SBCharacter.SetMoveToTargetLocation
-	constexpr static const FunctionPointer<ASBCharacter, void, const FVector, const FVector, const float, const float, const USceneComponent*, const float> ASBCharacter = { 0x26a8ab0, 6 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FVector, const FVector, const float, const float, const USceneComponent*, const float> SetMoveToTargetLocation = { 0x26a8ab0, 6 }; 
 	// Function /Script/SB.SBCharacter.SetMoveInputBlockDuration
-	constexpr static const FunctionPointer<ASBCharacter, void, const float> ASBCharacter = { 0x26ab2b0, 7 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const float> SetMoveInputBlockDuration = { 0x26ab2b0, 7 }; 
 	// Function /Script/SB.SBCharacter.SetMoveInputBlock
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x26ab3d0, 8 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> SetMoveInputBlock = { 0x26ab3d0, 8 }; 
 	// Function /Script/SB.SBCharacter.SetLockupSimulatePhysics
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x26ab9b0, 9 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> SetLockupSimulatePhysics = { 0x26ab9b0, 9 }; 
 	// Function /Script/SB.SBCharacter.SetKinematicForShortPonytail
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x26a7550, 10 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> SetKinematicForShortPonytail = { 0x26a7550, 10 }; 
 	// Function /Script/SB.SBCharacter.SetKeepAllBodiesPhysicsTransform
-	constexpr static const FunctionPointer<ASBCharacter, void, const int32_t> ASBCharacter = { 0x26abab0, 11 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const int32_t> SetKeepAllBodiesPhysicsTransform = { 0x26abab0, 11 }; 
 	// Function /Script/SB.SBCharacter.SetGlobalMaterialScalarParameterValue
-	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const float> ASBCharacter = { 0x26a97d0, 12 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const float> SetGlobalMaterialScalarParameterValue = { 0x26a97d0, 12 }; 
 	// Function /Script/SB.SBCharacter.SetEnableCollision
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x26ac070, 13 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> SetEnableCollision = { 0x26ac070, 13 }; 
 	// Function /Script/SB.SBCharacter.SetDroneSpotLight
-	constexpr static const FunctionPointer<ASBCharacter, void, const USpotLightComponent*> ASBCharacter = { 0x26a34d0, 14 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const USpotLightComponent*> SetDroneSpotLight = { 0x26a34d0, 14 }; 
 	// Function /Script/SB.SBCharacter.SetDollyCamMode
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x26a9510, 15 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> SetDollyCamMode = { 0x26a9510, 15 }; 
 	// Function /Script/SB.SBCharacter.SetCustomFloat
-	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const float> ASBCharacter = { 0x26a78b0, 16 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const float> SetCustomFloat = { 0x26a78b0, 16 }; 
 	// Function /Script/SB.SBCharacter.SetCustomBool
-	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const bool> ASBCharacter = { 0x26a7650, 17 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const bool> SetCustomBool = { 0x26a7650, 17 }; 
 	// Function /Script/SB.SBCharacter.SetClothAdditiveWindDirection
-	constexpr static const FunctionPointer<ASBCharacter, void, const FVector> ASBCharacter = { 0x26abb90, 18 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FVector> SetClothAdditiveWindDirection = { 0x26abb90, 18 }; 
 	// Function /Script/SB.SBCharacter.SetCamOverrideFovMode
-	constexpr static const FunctionPointer<ASBCharacter, void, const float, const float> ASBCharacter = { 0x26a91e0, 19 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const float, const float> SetCamOverrideFovMode = { 0x26a91e0, 19 }; 
 	// Function /Script/SB.SBCharacter.SetCameraLagSpeed
-	constexpr static const FunctionPointer<ASBCharacter, void, const float> ASBCharacter = { 0x26a5140, 20 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const float> SetCameraLagSpeed = { 0x26a5140, 20 }; 
 	// Function /Script/SB.SBCharacter.SetBlackboardVectorValue
-	constexpr static const FunctionPointer<ASBCharacter, bool, const FName, const FVector> ASBCharacter = { 0x26a7d80, 21 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const FName, const FVector> SetBlackboardVectorValue = { 0x26a7d80, 21 }; 
 	// Function /Script/SB.SBCharacter.SetBlackboardIntValue
-	constexpr static const FunctionPointer<ASBCharacter, bool, const FName, const int32_t> ASBCharacter = { 0x26a8180, 22 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const FName, const int32_t> SetBlackboardIntValue = { 0x26a8180, 22 }; 
 	// Function /Script/SB.SBCharacter.SetBlackboardFloatValue
-	constexpr static const FunctionPointer<ASBCharacter, bool, const FName, const float> ASBCharacter = { 0x26a7f90, 23 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const FName, const float> SetBlackboardFloatValue = { 0x26a7f90, 23 }; 
 	// Function /Script/SB.SBCharacter.SetActiveEventMoveIK
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool, const float, const float, const float, const TEnumAsByte<ESBEventMoveIKApplySlot>> ASBCharacter = { 0x26a5290, 24 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool, const float, const float, const float, const TEnumAsByte<ESBEventMoveIKApplySlot>> SetActiveEventMoveIK = { 0x26a5290, 24 }; 
 	// Function /Script/SB.SBCharacter.SetActivateFootIK
-	constexpr static const FunctionPointer<ASBCharacter, void, const FString, const bool, const float, const float, const float, const bool, const float> ASBCharacter = { 0x26a5a20, 25 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FString, const bool, const float, const float, const float, const bool, const float> SetActivateFootIK = { 0x26a5a20, 25 }; 
 	// Function /Script/SB.SBCharacter.SetActivateFeetIK
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x26a5e80, 26 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> SetActivateFeetIK = { 0x26a5e80, 26 }; 
 	// Function /Script/SB.SBCharacter.ServerRequest_SetMoveInfo_Reliable
-	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharacterMoveInfo> ASBCharacter = { 0x26a4680, 27 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharacterMoveInfo> ServerRequest_SetMoveInfo_Reliable = { 0x26a4680, 27 }; 
 	// Function /Script/SB.SBCharacter.ServerRequest_SetMoveInfo
-	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharacterMoveInfo> ASBCharacter = { 0x26a47c0, 28 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharacterMoveInfo> ServerRequest_SetMoveInfo = { 0x26a47c0, 28 }; 
 	// Function /Script/SB.SBCharacter.ServerRequest_DoJump
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool, const bool, const FVector> ASBCharacter = { 0x26a4470, 29 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool, const bool, const FVector> ServerRequest_DoJump = { 0x26a4470, 29 }; 
 	// Function /Script/SB.SBCharacter.ServerMoveWrapper
-	constexpr static const FunctionPointer<ASBCharacter, void, const float, const FVector_NetQuantize10, const FVector_NetQuantize100, const char, const char, const uint32_t, const UPrimitiveComponent*, const FName, const char> ASBCharacter = { 0x26a3bc0, 30 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const float, const FVector_NetQuantize10, const FVector_NetQuantize100, const char, const char, const uint32_t, const UPrimitiveComponent*, const FName, const char> ServerMoveWrapper = { 0x26a3bc0, 30 }; 
 	// Function /Script/SB.SBCharacter.ServerMoveNoBaseWrapper
-	constexpr static const FunctionPointer<ASBCharacter, void, const float, const FVector_NetQuantize10, const FVector_NetQuantize100, const char, const char, const uint32_t, const char> ASBCharacter = { 0x26a3700, 31 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const float, const FVector_NetQuantize10, const FVector_NetQuantize100, const char, const char, const uint32_t, const char> ServerMoveNoBaseWrapper = { 0x26a3700, 31 }; 
 	// Function /Script/SB.SBCharacter.RopeSwingPendulumAnglePerAlpha
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26aaf80, 32 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> RopeSwingPendulumAnglePerAlpha = { 0x26aaf80, 32 }; 
 	// Function /Script/SB.SBCharacter.ReturnToDefault
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x2bbb090, 33 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> ReturnToDefault = { 0x2bbb090, 33 }; 
 	// Function /Script/SB.SBCharacter.RegisterFXSystem
-	constexpr static const FunctionPointer<ASBCharacter, void, const UFXSystemComponent*> ASBCharacter = { 0x26a95d0, 34 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const UFXSystemComponent*> RegisterFXSystem = { 0x26a95d0, 34 }; 
 	// Function /Script/SB.SBCharacter.OnToggleClimbCam
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x11615e0, 35 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> OnToggleClimbCam = { 0x11615e0, 35 }; 
 	// Function /Script/SB.SBCharacter.OnRep_BroadcastSpawnInfo
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26a41a0, 36 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> OnRep_BroadcastSpawnInfo = { 0x26a41a0, 36 }; 
 	// Function /Script/SB.SBCharacter.OnFinishedLevelSequence
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26ac150, 37 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> OnFinishedLevelSequence = { 0x26ac150, 37 }; 
 	// Function /Script/SB.SBCharacter.OnCollisionOriginHit
-	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> ASBCharacter = { 0x26ad2c0, 38 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> OnCollisionOriginHit = { 0x26ad2c0, 38 }; 
 	// Function /Script/SB.SBCharacter.OnCollisionOriginEndOverlap
-	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> ASBCharacter = { 0x26aca80, 39 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> OnCollisionOriginEndOverlap = { 0x26aca80, 39 }; 
 	// Function /Script/SB.SBCharacter.OnCollisionOriginBeginOverlap
-	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> ASBCharacter = { 0x26acef0, 40 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> OnCollisionOriginBeginOverlap = { 0x26acef0, 40 }; 
 	// Function /Script/SB.SBCharacter.OnCapsuleComponentEndOverlap
-	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> ASBCharacter = { 0x26ac370, 41 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> OnCapsuleComponentEndOverlap = { 0x26ac370, 41 }; 
 	// Function /Script/SB.SBCharacter.OnCapsuleComponentBeginOverlap
-	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> ASBCharacter = { 0x26ac6b0, 42 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> OnCapsuleComponentBeginOverlap = { 0x26ac6b0, 42 }; 
 	// Function /Script/SB.SBCharacter.OnAIMoveComplete
-	constexpr static const FunctionPointer<ASBCharacter, void, const FAIRequestID, const TEnumAsByte<EPathFollowingResult>> ASBCharacter = { 0x26a6be0, 43 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FAIRequestID, const TEnumAsByte<EPathFollowingResult>> OnAIMoveComplete = { 0x26a6be0, 43 }; 
 	// Function /Script/SB.SBCharacter.NotifyShowEvent
-	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const FName> ASBCharacter = { 0x2bbb090, 44 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const FName> NotifyShowEvent = { 0x2bbb090, 44 }; 
 	// Function /Script/SB.SBCharacter.NotifyBPEvent
-	constexpr static const FunctionPointer<ASBCharacter, void, const TEnumAsByte<ESBNotifyBPEvent>> ASBCharacter = { 0x2bbb090, 45 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const TEnumAsByte<ESBNotifyBPEvent>> NotifyBPEvent = { 0x2bbb090, 45 }; 
 	// Function /Script/SB.SBCharacter.NotifyBP_SliceMesh
-	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const FName, const FVector&, const FName, const FVector&> ASBCharacter = { 0x2bbb090, 46 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FName, const FName, const FVector&, const FName, const FVector&> NotifyBP_SliceMesh = { 0x2bbb090, 46 }; 
 	// Function /Script/SB.SBCharacter.NotifyBP_SetMesh
-	constexpr static const FunctionPointer<ASBCharacter, void, const TEnumAsByte<ESBSkelMeshSlot>> ASBCharacter = { 0x2bbb090, 47 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const TEnumAsByte<ESBSkelMeshSlot>> NotifyBP_SetMesh = { 0x2bbb090, 47 }; 
 	// Function /Script/SB.SBCharacter.NotifyBP_ReleaseActor
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x2bbb090, 48 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> NotifyBP_ReleaseActor = { 0x2bbb090, 48 }; 
 	// Function /Script/SB.SBCharacter.NotifyBP_ReInitActor
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x2bbb090, 49 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> NotifyBP_ReInitActor = { 0x2bbb090, 49 }; 
 	// Function /Script/SB.SBCharacter.NotifyBP_PostInit
-	constexpr static const FunctionPointer<ASBCharacter, void, const TArray<FTransform>&> ASBCharacter = { 0x2bbb090, 50 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const TArray<FTransform>&> NotifyBP_PostInit = { 0x2bbb090, 50 }; 
 	// Function /Script/SB.SBCharacter.NotifyBP_InitActor
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x2bbb090, 51 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> NotifyBP_InitActor = { 0x2bbb090, 51 }; 
 	// Function /Script/SB.SBCharacter.NotifyBP_ChangeCrowdControl
-	constexpr static const FunctionPointer<ASBCharacter, void, const TEnumAsByte<ESBNotifyBPCrowdControl>> ASBCharacter = { 0x2bbb090, 52 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const TEnumAsByte<ESBNotifyBPCrowdControl>> NotifyBP_ChangeCrowdControl = { 0x2bbb090, 52 }; 
 	// Function /Script/SB.SBCharacter.IsWireMoving
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab100, 53 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsWireMoving = { 0x26ab100, 53 }; 
 	// Function /Script/SB.SBCharacter.IsWallRunJumpScaleOverrided
-	constexpr static const FunctionPointer<ASBCharacter, bool, const float&> ASBCharacter = { 0x26aa7c0, 54 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const float&> IsWallRunJumpScaleOverrided = { 0x26aa7c0, 54 }; 
 	// Function /Script/SB.SBCharacter.IsWallRunJump
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aa8b0, 55 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsWallRunJump = { 0x26aa8b0, 55 }; 
 	// Function /Script/SB.SBCharacter.IsWallRun
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aaaf0, 56 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsWallRun = { 0x26aaaf0, 56 }; 
 	// Function /Script/SB.SBCharacter.IsWallHitAction
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26abf80, 57 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsWallHitAction = { 0x26abf80, 57 }; 
 	// Function /Script/SB.SBCharacter.IsVisibleSwordTrail
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6bc0, 58 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsVisibleSwordTrail = { 0x26a6bc0, 58 }; 
 	// Function /Script/SB.SBCharacter.IsValidTachyWingSnapshotDataPath
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6aa0, 59 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsValidTachyWingSnapshotDataPath = { 0x26a6aa0, 59 }; 
 	// Function /Script/SB.SBCharacter.IsValidMoveRightSmoothValue
-	constexpr static const FunctionPointer<ASBCharacter, bool, const bool> ASBCharacter = { 0x26a4d50, 60 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const bool> IsValidMoveRightSmoothValue = { 0x26a4d50, 60 }; 
 	// Function /Script/SB.SBCharacter.IsValidHairSnapshotDataPath
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6ad0, 61 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsValidHairSnapshotDataPath = { 0x26a6ad0, 61 }; 
 	// Function /Script/SB.SBCharacter.IsUseSlopeMovingCamera
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aad70, 62 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsUseSlopeMovingCamera = { 0x26aad70, 62 }; 
 	// Function /Script/SB.SBCharacter.IsUnderWaterSwimming
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aab90, 63 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsUnderWaterSwimming = { 0x26aab90, 63 }; 
 	// Function /Script/SB.SBCharacter.IsTPSMode
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6a50, 64 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsTPSMode = { 0x26a6a50, 64 }; 
 	// Function /Script/SB.SBCharacter.IsSwimJumping
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aad10, 65 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSwimJumping = { 0x26aad10, 65 }; 
 	// Function /Script/SB.SBCharacter.IsSprintJump
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab1b0, 66 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSprintJump = { 0x26ab1b0, 66 }; 
 	// Function /Script/SB.SBCharacter.IsSprint
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab200, 67 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSprint = { 0x26ab200, 67 }; 
 	// Function /Script/SB.SBCharacter.IsSlopeMoving
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aada0, 68 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSlopeMoving = { 0x26aada0, 68 }; 
 	// Function /Script/SB.SBCharacter.IsSlopeJumpOut
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aad30, 69 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSlopeJumpOut = { 0x26aad30, 69 }; 
 	// Function /Script/SB.SBCharacter.IsSlopeJumping
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aad50, 70 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSlopeJumping = { 0x26aad50, 70 }; 
 	// Function /Script/SB.SBCharacter.IsSlideSlipJumping
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aacf0, 71 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSlideSlipJumping = { 0x26aacf0, 71 }; 
 	// Function /Script/SB.SBCharacter.IsSlideSlipFalling
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aacd0, 72 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSlideSlipFalling = { 0x26aacd0, 72 }; 
 	// Function /Script/SB.SBCharacter.IsSideRodWallless
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aac50, 73 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSideRodWallless = { 0x26aac50, 73 }; 
 	// Function /Script/SB.SBCharacter.IsSideRodJumping
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aac70, 74 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSideRodJumping = { 0x26aac70, 74 }; 
 	// Function /Script/SB.SBCharacter.IsSideRodFalling
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aacb0, 75 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsSideRodFalling = { 0x26aacb0, 75 }; 
 	// Function /Script/SB.SBCharacter.IsShowCharacter
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x113b860, 76 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsShowCharacter = { 0x113b860, 76 }; 
 	// Function /Script/SB.SBCharacter.IsShortPonyTail
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a7630, 77 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsShortPonyTail = { 0x26a7630, 77 }; 
 	// Function /Script/SB.SBCharacter.IsRunSpiderNavWay
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6d40, 78 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsRunSpiderNavWay = { 0x26a6d40, 78 }; 
 	// Function /Script/SB.SBCharacter.IsRunningSkill
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a7c80, 79 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsRunningSkill = { 0x26a7c80, 79 }; 
 	// Function /Script/SB.SBCharacter.IsRunningInteraction
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ac170, 80 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsRunningInteraction = { 0x26ac170, 80 }; 
 	// Function /Script/SB.SBCharacter.IsRunHuddleUpAction
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6e90, 81 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsRunHuddleUpAction = { 0x26a6e90, 81 }; 
 	// Function /Script/SB.SBCharacter.IsRun
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aa5b0, 82 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsRun = { 0x26aa5b0, 82 }; 
 	// Function /Script/SB.SBCharacter.IsRopeSwing
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aaff0, 83 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsRopeSwing = { 0x26aaff0, 83 }; 
 	// Function /Script/SB.SBCharacter.IsRopeMoving
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab030, 84 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsRopeMoving = { 0x26ab030, 84 }; 
 	// Function /Script/SB.SBCharacter.IsRodJumping
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aac90, 85 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsRodJumping = { 0x26aac90, 85 }; 
 	// Function /Script/SB.SBCharacter.IsRagdollSimulate
-	constexpr static const FunctionPointer<ASBCharacter, bool, const bool> ASBCharacter = { 0x26a6d90, 86 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const bool> IsRagdollSimulate = { 0x26a6d90, 86 }; 
 	// Function /Script/SB.SBCharacter.IsPlayJumpTransitAnim
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aa550, 87 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsPlayJumpTransitAnim = { 0x26aa550, 87 }; 
 	// Function /Script/SB.SBCharacter.IsPlayingRunInteraction
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a41c0, 88 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsPlayingRunInteraction = { 0x26a41c0, 88 }; 
 	// Function /Script/SB.SBCharacter.IsPlayableWhenLevelSequence
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6670, 89 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsPlayableWhenLevelSequence = { 0x26a6670, 89 }; 
 	// Function /Script/SB.SBCharacter.IsPhotoModeFacialAnimationEnabled
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a65d0, 90 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsPhotoModeFacialAnimationEnabled = { 0x26a65d0, 90 }; 
 	// Function /Script/SB.SBCharacter.IsPhotoModeDefaultWeaponSnapshot
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6b00, 91 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsPhotoModeDefaultWeaponSnapshot = { 0x26a6b00, 91 }; 
 	// Function /Script/SB.SBCharacter.IsPhotoModeDefaultSnapshot
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6b20, 92 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsPhotoModeDefaultSnapshot = { 0x26a6b20, 92 }; 
 	// Function /Script/SB.SBCharacter.IsOverrideBlendSpaceUpper
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6510, 93 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsOverrideBlendSpaceUpper = { 0x26a6510, 93 }; 
 	// Function /Script/SB.SBCharacter.IsOverriddenBlendSpacePlayerActive
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a64f0, 94 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsOverriddenBlendSpacePlayerActive = { 0x26a64f0, 94 }; 
 	// Function /Script/SB.SBCharacter.IsNeedPlayTurnAnim
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x113b860, 95 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsNeedPlayTurnAnim = { 0x113b860, 95 }; 
 	// Function /Script/SB.SBCharacter.IsMovingTargetOn
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aa610, 96 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsMovingTargetOn = { 0x26aa610, 96 }; 
 	// Function /Script/SB.SBCharacter.IsMoving
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aa5e0, 97 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsMoving = { 0x26aa5e0, 97 }; 
 	// Function /Script/SB.SBCharacter.IsMoveInputBlock
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab260, 98 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsMoveInputBlock = { 0x26ab260, 98 }; 
 	// Function /Script/SB.SBCharacter.IsMoveBlockedByWall
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ac040, 99 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsMoveBlockedByWall = { 0x26ac040, 99 }; 
 	// Function /Script/SB.SBCharacter.IsMoveBackByTargetOverlap
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ac2e0, 100 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsMoveBackByTargetOverlap = { 0x26ac2e0, 100 }; 
 	// Function /Script/SB.SBCharacter.IsMotionMoving
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab1d0, 101 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsMotionMoving = { 0x26ab1d0, 101 }; 
 	// Function /Script/SB.SBCharacter.IsMetaAITiredState
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a8a30, 102 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsMetaAITiredState = { 0x26a8a30, 102 }; 
 	// Function /Script/SB.SBCharacter.IsLockOn
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a9ec0, 103 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsLockOn = { 0x26a9ec0, 103 }; 
 	// Function /Script/SB.SBCharacter.IsJumping
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26abd90, 104 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsJumping = { 0x26abd90, 104 }; 
 	// Function /Script/SB.SBCharacter.IsJoggingRun
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab130, 105 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsJoggingRun = { 0x26ab130, 105 }; 
 	// Function /Script/SB.SBCharacter.IsHoldSwimming
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab0d0, 106 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsHoldSwimming = { 0x26ab0d0, 106 }; 
 	// Function /Script/SB.SBCharacter.IsHoldBalanceBeam
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a8a50, 107 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsHoldBalanceBeam = { 0x26a8a50, 107 }; 
 	// Function /Script/SB.SBCharacter.IsHidePonyTail
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a4b50, 108 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsHidePonyTail = { 0x26a4b50, 108 }; 
 	// Function /Script/SB.SBCharacter.IsGrabObjectMoving
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aabe0, 109 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsGrabObjectMoving = { 0x26aabe0, 109 }; 
 	// Function /Script/SB.SBCharacter.IsGlide
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab190, 110 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsGlide = { 0x26ab190, 110 }; 
 	// Function /Script/SB.SBCharacter.IsFlyingAction
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab170, 111 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsFlyingAction = { 0x26ab170, 111 }; 
 	// Function /Script/SB.SBCharacter.IsFishingReel
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a66d0, 112 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsFishingReel = { 0x26a66d0, 112 }; 
 	// Function /Script/SB.SBCharacter.IsExistFloor
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a5100, 113 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsExistFloor = { 0x26a5100, 113 }; 
 	// Function /Script/SB.SBCharacter.IsEventMovingSlidingState
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26aab60, 114 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsEventMovingSlidingState = { 0x26aab60, 114 }; 
 	// Function /Script/SB.SBCharacter.IsEventMoving
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab060, 115 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsEventMoving = { 0x26ab060, 115 }; 
 	// Function /Script/SB.SBCharacter.IsEnableKneeIK
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6020, 116 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsEnableKneeIK = { 0x26a6020, 116 }; 
 	// Function /Script/SB.SBCharacter.IsDoubleJump
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26abd60, 117 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsDoubleJump = { 0x26abd60, 117 }; 
 	// Function /Script/SB.SBCharacter.IsDisableLookAtEye
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a9d90, 118 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsDisableLookAtEye = { 0x26a9d90, 118 }; 
 	// Function /Script/SB.SBCharacter.IsDisableIdleAdditiveAnim
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a9d40, 119 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsDisableIdleAdditiveAnim = { 0x26a9d40, 119 }; 
 	// Function /Script/SB.SBCharacter.IsDisableFootIKWhenRideOnVehicle
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab6d0, 120 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsDisableFootIKWhenRideOnVehicle = { 0x26ab6d0, 120 }; 
 	// Function /Script/SB.SBCharacter.IsCurrentStretchSideRodSearch
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab220, 121 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsCurrentStretchSideRodSearch = { 0x26ab220, 121 }; 
 	// Function /Script/SB.SBCharacter.IsClimbing
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x113b860, 122 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsClimbing = { 0x113b860, 122 }; 
 	// Function /Script/SB.SBCharacter.IsBlockingMode
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6a70, 123 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsBlockingMode = { 0x26a6a70, 123 }; 
 	// Function /Script/SB.SBCharacter.IsbDoWallJump
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x113b860, 124 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsbDoWallJump = { 0x113b860, 124 }; 
 	// Function /Script/SB.SBCharacter.IsBattle
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a9d70, 125 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsBattle = { 0x26a9d70, 125 }; 
 	// Function /Script/SB.SBCharacter.IsAttackParried
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a7c60, 126 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsAttackParried = { 0x26a7c60, 126 }; 
 	// Function /Script/SB.SBCharacter.IsAttachedToLevelSequenceWithoutPlayable
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a66a0, 127 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsAttachedToLevelSequenceWithoutPlayable = { 0x26a66a0, 127 }; 
 	// Function /Script/SB.SBCharacter.IsAllowLookAtTargetWhenLevelSequence
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6640, 128 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsAllowLookAtTargetWhenLevelSequence = { 0x26a6640, 128 }; 
 	// Function /Script/SB.SBCharacter.IsActiveTPSAimOffset
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6a20, 129 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsActiveTPSAimOffset = { 0x26a6a20, 129 }; 
 	// Function /Script/SB.SBCharacter.IsActiveOverlapMove
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a7bf0, 130 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsActiveOverlapMove = { 0x26a7bf0, 130 }; 
 	// Function /Script/SB.SBCharacter.IsActiveFullBodyIK_ByName
-	constexpr static const FunctionPointer<ASBCharacter, bool, const FString> ASBCharacter = { 0x26a57a0, 131 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const FString> IsActiveFullBodyIK_ByName = { 0x26a57a0, 131 }; 
 	// Function /Script/SB.SBCharacter.IsActiveFullBodyIK
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a58d0, 132 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsActiveFullBodyIK = { 0x26a58d0, 132 }; 
 	// Function /Script/SB.SBCharacter.IsActiveFootIK
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a5940, 133 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsActiveFootIK = { 0x26a5940, 133 }; 
 	// Function /Script/SB.SBCharacter.IsActiveFeetIK
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a5910, 134 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsActiveFeetIK = { 0x26a5910, 134 }; 
 	// Function /Script/SB.SBCharacter.IsActiveCustomMovingStanceData
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26abdc0, 135 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsActiveCustomMovingStanceData = { 0x26abdc0, 135 }; 
 	// Function /Script/SB.SBCharacter.IsActiveBoneBlend
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a7b50, 136 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsActiveBoneBlend = { 0x26a7b50, 136 }; 
 	// Function /Script/SB.SBCharacter.IsAccelSwimUp
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab4d0, 137 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsAccelSwimUp = { 0x26ab4d0, 137 }; 
 	// Function /Script/SB.SBCharacter.IsAccelSwimDown
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab4b0, 138 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> IsAccelSwimDown = { 0x26ab4b0, 138 }; 
 	// Function /Script/SB.SBCharacter.GetWallSlideSideValue
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a7ba0, 139 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetWallSlideSideValue = { 0x26a7ba0, 139 }; 
 	// Function /Script/SB.SBCharacter.GetWallRunNormal
-	constexpr static const FunctionPointer<ASBCharacter, FVector> ASBCharacter = { 0x26aaa50, 140 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector> GetWallRunNormal = { 0x26aaa50, 140 }; 
 	// Function /Script/SB.SBCharacter.GetWallRunDir
-	constexpr static const FunctionPointer<ASBCharacter, FVector> ASBCharacter = { 0x26aa9b0, 141 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector> GetWallRunDir = { 0x26aa9b0, 141 }; 
 	// Function /Script/SB.SBCharacter.GetTPSModeType
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBTPSModeType>> ASBCharacter = { 0x26a6a00, 142 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBTPSModeType>> GetTPSModeType = { 0x26a6a00, 142 }; 
 	// Function /Script/SB.SBCharacter.GetTPSLookAtWorldLocation
-	constexpr static const FunctionPointer<ASBCharacter, FVector, const bool> ASBCharacter = { 0x26a67f0, 143 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector, const bool> GetTPSLookAtWorldLocation = { 0x26a67f0, 143 }; 
 	// Function /Script/SB.SBCharacter.GetTPSLookAtLocalSpaceDirection
-	constexpr static const FunctionPointer<ASBCharacter, FVector> ASBCharacter = { 0x26a6930, 144 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector> GetTPSLookAtLocalSpaceDirection = { 0x26a6930, 144 }; 
 	// Function /Script/SB.SBCharacter.GetTPSLookAtBlendSpaceXY
-	constexpr static const FunctionPointer<ASBCharacter, FVector2D> ASBCharacter = { 0x26a68f0, 145 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector2D> GetTPSLookAtBlendSpaceXY = { 0x26a68f0, 145 }; 
 	// Function /Script/SB.SBCharacter.GetSprintSpeedScale
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26ab4f0, 146 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetSprintSpeedScale = { 0x26ab4f0, 146 }; 
 	// Function /Script/SB.SBCharacter.GetSequencerAnimMode
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a6620, 147 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> GetSequencerAnimMode = { 0x26a6620, 147 }; 
 	// Function /Script/SB.SBCharacter.GetSelfieAnimBSValue
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a4fd0, 148 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetSelfieAnimBSValue = { 0x26a4fd0, 148 }; 
 	// Function /Script/SB.SBCharacter.GetSBSpeedForAnimGraph
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a7bc0, 149 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetSBSpeedForAnimGraph = { 0x26a7bc0, 149 }; 
 	// Function /Script/SB.SBCharacter.GetSBSkeletalMeshComponent
-	constexpr static const FunctionPointer<ASBCharacter, USBSkeletalMeshComponent*, const TEnumAsByte<ESBSkelMeshSlot>> ASBCharacter = { 0x26a7130, 150 }; 
+	constexpr static const FunctionPointer<ASBCharacter, USBSkeletalMeshComponent*, const TEnumAsByte<ESBSkelMeshSlot>> GetSBSkeletalMeshComponent = { 0x26a7130, 150 }; 
 	// Function /Script/SB.SBCharacter.GetSBMovementComponent
-	constexpr static const FunctionPointer<ASBCharacter, USBCharacterMovementComponent*> ASBCharacter = { 0x26a7cc0, 151 }; 
+	constexpr static const FunctionPointer<ASBCharacter, USBCharacterMovementComponent*> GetSBMovementComponent = { 0x26a7cc0, 151 }; 
 	// Function /Script/SB.SBCharacter.GetSBCharacterRightVector
-	constexpr static const FunctionPointer<ASBCharacter, FVector> ASBCharacter = { 0x26aa8d0, 152 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector> GetSBCharacterRightVector = { 0x26aa8d0, 152 }; 
 	// Function /Script/SB.SBCharacter.GetRunInputDuration
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26ac310, 153 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetRunInputDuration = { 0x26ac310, 153 }; 
 	// Function /Script/SB.SBCharacter.GetPoseSnapBlendWeight
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6d70, 154 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetPoseSnapBlendWeight = { 0x26a6d70, 154 }; 
 	// Function /Script/SB.SBCharacter.GetPoseName_PhotoMode
-	constexpr static const FunctionPointer<ASBCharacter, FName> ASBCharacter = { 0x26a6b40, 155 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FName> GetPoseName_PhotoMode = { 0x26a6b40, 155 }; 
 	// Function /Script/SB.SBCharacter.GetPonytailMeshName
-	constexpr static const FunctionPointer<ASBCharacter, FName> ASBCharacter = { 0x26a6060, 156 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FName> GetPonytailMeshName = { 0x26a6060, 156 }; 
 	// Function /Script/SB.SBCharacter.GetPhotoModeFacialAnimation
-	constexpr static const FunctionPointer<ASBCharacter, UAnimSequence*> ASBCharacter = { 0x26a6540, 157 }; 
+	constexpr static const FunctionPointer<ASBCharacter, UAnimSequence*> GetPhotoModeFacialAnimation = { 0x26a6540, 157 }; 
 	// Function /Script/SB.SBCharacter.GetOverrideFootStepPhySurface
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<EPhysicalSurface>, const TEnumAsByte<EPhysicalSurface>> ASBCharacter = { 0x26a4ff0, 158 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<EPhysicalSurface>, const TEnumAsByte<EPhysicalSurface>> GetOverrideFootStepPhySurface = { 0x26a4ff0, 158 }; 
 	// Function /Script/SB.SBCharacter.GetMoveToIdleFootPlace
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharacterFootPlacement>> ASBCharacter = { 0x26a7c40, 159 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharacterFootPlacement>> GetMoveToIdleFootPlace = { 0x26a7c40, 159 }; 
 	// Function /Script/SB.SBCharacter.GetMoveInputDirectionAngle
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a4b70, 160 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetMoveInputDirectionAngle = { 0x26a4b70, 160 }; 
 	// Function /Script/SB.SBCharacter.GetMoveAnimBlendMode
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharacterMoveAnimBlendMode>> ASBCharacter = { 0x26aa580, 161 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharacterMoveAnimBlendMode>> GetMoveAnimBlendMode = { 0x26aa580, 161 }; 
 	// Function /Script/SB.SBCharacter.GetMetaAIBehaviorStance
-	constexpr static const FunctionPointer<ASBCharacter, ESBMetaAIBehaviorStance> ASBCharacter = { 0x26a8a10, 162 }; 
+	constexpr static const FunctionPointer<ASBCharacter, ESBMetaAIBehaviorStance> GetMetaAIBehaviorStance = { 0x26a8a10, 162 }; 
 	// Function /Script/SB.SBCharacter.GetLookAtTargetCharacter
-	constexpr static const FunctionPointer<ASBCharacter, ASBCharacter*> ASBCharacter = { 0x26a86f0, 163 }; 
+	constexpr static const FunctionPointer<ASBCharacter, ASBCharacter*> GetLookAtTargetCharacter = { 0x26a86f0, 163 }; 
 	// Function /Script/SB.SBCharacter.GetLockOnTargetCharacter
-	constexpr static const FunctionPointer<ASBCharacter, ASBCharacter*> ASBCharacter = { 0x26a8720, 164 }; 
+	constexpr static const FunctionPointer<ASBCharacter, ASBCharacter*> GetLockOnTargetCharacter = { 0x26a8720, 164 }; 
 	// Function /Script/SB.SBCharacter.GetLastMoveType
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharacterMoveType>> ASBCharacter = { 0x26a7c20, 165 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharacterMoveType>> GetLastMoveType = { 0x26a7c20, 165 }; 
 	// Function /Script/SB.SBCharacter.GetKneeIKSearchDistanceForwardR
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5fc0, 166 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKneeIKSearchDistanceForwardR = { 0x26a5fc0, 166 }; 
 	// Function /Script/SB.SBCharacter.GetKneeIKSearchDistanceForwardL
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5f80, 167 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKneeIKSearchDistanceForwardL = { 0x26a5f80, 167 }; 
 	// Function /Script/SB.SBCharacter.GetKneeIKSearchDistanceBackwardR
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5fa0, 168 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKneeIKSearchDistanceBackwardR = { 0x26a5fa0, 168 }; 
 	// Function /Script/SB.SBCharacter.GetKneeIKSearchDistanceBackwardL
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5f60, 169 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKneeIKSearchDistanceBackwardL = { 0x26a5f60, 169 }; 
 	// Function /Script/SB.SBCharacter.GetKneeIKOffset_RToe
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5fe0, 170 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKneeIKOffset_RToe = { 0x26a5fe0, 170 }; 
 	// Function /Script/SB.SBCharacter.GetKneeIKOffset_RKnee
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6000, 171 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKneeIKOffset_RKnee = { 0x26a6000, 171 }; 
 	// Function /Script/SB.SBCharacter.GetKneeIKOffset_LToe
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5fe0, 172 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKneeIKOffset_LToe = { 0x26a5fe0, 172 }; 
 	// Function /Script/SB.SBCharacter.GetKneeIKOffset_LKnee
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6000, 173 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKneeIKOffset_LKnee = { 0x26a6000, 173 }; 
 	// Function /Script/SB.SBCharacter.GetKawaiiPhysicsAlpha
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6eb0, 174 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetKawaiiPhysicsAlpha = { 0x26a6eb0, 174 }; 
 	// Function /Script/SB.SBCharacter.GetIdleAdditiveAnimType
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharaterAdditiveBodyType>> ASBCharacter = { 0x26a9d10, 175 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharaterAdditiveBodyType>> GetIdleAdditiveAnimType = { 0x26a9d10, 175 }; 
 	// Function /Script/SB.SBCharacter.GetIdleAdditiveAnimAlpha
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a9c00, 176 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetIdleAdditiveAnimAlpha = { 0x26a9c00, 176 }; 
 	// Function /Script/SB.SBCharacter.GetHitStopIKData
-	constexpr static const FunctionPointer<ASBCharacter, FHitStopIK> ASBCharacter = { 0x26a4920, 177 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FHitStopIK> GetHitStopIKData = { 0x26a4920, 177 }; 
 	// Function /Script/SB.SBCharacter.GetGrabIKAlpha
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26aabc0, 178 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetGrabIKAlpha = { 0x26aabc0, 178 }; 
 	// Function /Script/SB.SBCharacter.GetGlobalMaterialVectorParameterValue
-	constexpr static const FunctionPointer<ASBCharacter, FVector, const FName> ASBCharacter = { 0x26a9ab0, 179 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector, const FName> GetGlobalMaterialVectorParameterValue = { 0x26a9ab0, 179 }; 
 	// Function /Script/SB.SBCharacter.GetGlobalMaterialScalarParameterValue
-	constexpr static const FunctionPointer<ASBCharacter, float, const FName> ASBCharacter = { 0x26a9980, 180 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float, const FName> GetGlobalMaterialScalarParameterValue = { 0x26a9980, 180 }; 
 	// Function /Script/SB.SBCharacter.GetGamePadRTriggerAxisValue
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26ac330, 181 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetGamePadRTriggerAxisValue = { 0x26ac330, 181 }; 
 	// Function /Script/SB.SBCharacter.GetGamePadLTriggerAxisValue
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26ac350, 182 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetGamePadLTriggerAxisValue = { 0x26ac350, 182 }; 
 	// Function /Script/SB.SBCharacter.GetFullBodyIkActiveHitPointAngle
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a56b0, 183 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetFullBodyIkActiveHitPointAngle = { 0x26a56b0, 183 }; 
 	// Function /Script/SB.SBCharacter.GetFowardVector
-	constexpr static const FunctionPointer<ASBCharacter, FVector, const bool> ASBCharacter = { 0x26a9dc0, 184 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector, const bool> GetFowardVector = { 0x26a9dc0, 184 }; 
 	// Function /Script/SB.SBCharacter.GetFootIKAlphaValue
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a59f0, 185 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetFootIKAlphaValue = { 0x26a59f0, 185 }; 
 	// Function /Script/SB.SBCharacter.GetFishingRodDirection
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6760, 186 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetFishingRodDirection = { 0x26a6760, 186 }; 
 	// Function /Script/SB.SBCharacter.GetFishingModeType
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBFishingModeType>> ASBCharacter = { 0x26a67d0, 187 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBFishingModeType>> GetFishingModeType = { 0x26a67d0, 187 }; 
 	// Function /Script/SB.SBCharacter.GetFishingLookAtBlendSpaceX
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a67a0, 188 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetFishingLookAtBlendSpaceX = { 0x26a67a0, 188 }; 
 	// Function /Script/SB.SBCharacter.GetFeetIKTraceScale
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5960, 189 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetFeetIKTraceScale = { 0x26a5960, 189 }; 
 	// Function /Script/SB.SBCharacter.GetFeetIKAlphaValue
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a59a0, 190 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetFeetIKAlphaValue = { 0x26a59a0, 190 }; 
 	// Function /Script/SB.SBCharacter.GetFacialIdleAnimType
-	constexpr static const FunctionPointer<ASBCharacter, int32_t> ASBCharacter = { 0x26a6ba0, 191 }; 
+	constexpr static const FunctionPointer<ASBCharacter, int32_t> GetFacialIdleAnimType = { 0x26a6ba0, 191 }; 
 	// Function /Script/SB.SBCharacter.GetFacialAnimType_PhotoMode
-	constexpr static const FunctionPointer<ASBCharacter, int32_t> ASBCharacter = { 0x26a6b80, 192 }; 
+	constexpr static const FunctionPointer<ASBCharacter, int32_t> GetFacialAnimType_PhotoMode = { 0x26a6b80, 192 }; 
 	// Function /Script/SB.SBCharacter.GetFacialAnimPosition_PhotoMode
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6b60, 193 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetFacialAnimPosition_PhotoMode = { 0x26a6b60, 193 }; 
 	// Function /Script/SB.SBCharacter.GetEyeTrackingToCam
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26ab590, 194 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> GetEyeTrackingToCam = { 0x26ab590, 194 }; 
 	// Function /Script/SB.SBCharacter.GetEyePosition2D
-	constexpr static const FunctionPointer<ASBCharacter, FVector2D> ASBCharacter = { 0x26ab690, 195 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector2D> GetEyePosition2D = { 0x26ab690, 195 }; 
 	// Function /Script/SB.SBCharacter.GetEventMovingType
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBEventMoveType>> ASBCharacter = { 0x26aaf60, 196 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBEventMoveType>> GetEventMovingType = { 0x26aaf60, 196 }; 
 	// Function /Script/SB.SBCharacter.GetEventMoveSideValue
-	constexpr static const FunctionPointer<ASBCharacter, int32_t> ASBCharacter = { 0x26aae10, 197 }; 
+	constexpr static const FunctionPointer<ASBCharacter, int32_t> GetEventMoveSideValue = { 0x26aae10, 197 }; 
 	// Function /Script/SB.SBCharacter.GetEventMoveIKAlphaValue
-	constexpr static const FunctionPointer<ASBCharacter, float, const TEnumAsByte<ESBEventMoveIKApplySlot>&> ASBCharacter = { 0x26a55a0, 198 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float, const TEnumAsByte<ESBEventMoveIKApplySlot>&> GetEventMoveIKAlphaValue = { 0x26a55a0, 198 }; 
 	// Function /Script/SB.SBCharacter.GetEventMoveIKActivateTime
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6040, 199 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetEventMoveIKActivateTime = { 0x26a6040, 199 }; 
 	// Function /Script/SB.SBCharacter.GetDollyCamMode
-	constexpr static const FunctionPointer<ASBCharacter, bool, const bool> ASBCharacter = { 0x26a9370, 200 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const bool> GetDollyCamMode = { 0x26a9370, 200 }; 
 	// Function /Script/SB.SBCharacter.GetCustomPoseSnapBlendWeight
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6d70, 201 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetCustomPoseSnapBlendWeight = { 0x26a6d70, 201 }; 
 	// Function /Script/SB.SBCharacter.GetCustomFloat
-	constexpr static const FunctionPointer<ASBCharacter, float, const FName> ASBCharacter = { 0x26a7a20, 202 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float, const FName> GetCustomFloat = { 0x26a7a20, 202 }; 
 	// Function /Script/SB.SBCharacter.GetCustomBool
-	constexpr static const FunctionPointer<ASBCharacter, bool, const FName> ASBCharacter = { 0x26a77c0, 203 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const FName> GetCustomBool = { 0x26a77c0, 203 }; 
 	// Function /Script/SB.SBCharacter.GetCustomBlendSpaceInput
-	constexpr static const FunctionPointer<ASBCharacter, FVector> ASBCharacter = { 0x26a7b10, 204 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector> GetCustomBlendSpaceInput = { 0x26a7b10, 204 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentStanceName
-	constexpr static const FunctionPointer<ASBCharacter, FName> ASBCharacter = { 0x26a86d0, 205 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FName> GetCurrentStanceName = { 0x26a86d0, 205 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentSideRodSearchDegreeValue
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26ab240, 206 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetCurrentSideRodSearchDegreeValue = { 0x26ab240, 206 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentRotaionPower
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26abd40, 207 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetCurrentRotaionPower = { 0x26abd40, 207 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentFootPlace
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharacterFootPlacement>> ASBCharacter = { 0x26a7ca0, 208 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBCharacterFootPlacement>> GetCurrentFootPlace = { 0x26a7ca0, 208 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentCustomAnimByMeshSlotAlpha
-	constexpr static const FunctionPointer<ASBCharacter, float, const TEnumAsByte<ESBSkelMeshSlot>> ASBCharacter = { 0x26a9ef0, 209 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float, const TEnumAsByte<ESBSkelMeshSlot>> GetCurrentCustomAnimByMeshSlotAlpha = { 0x26a9ef0, 209 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentCustomAnimAlpha_Upper
-	constexpr static const FunctionPointer<ASBCharacter, float, const int32_t> ASBCharacter = { 0x26aa270, 210 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float, const int32_t> GetCurrentCustomAnimAlpha_Upper = { 0x26aa270, 210 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentCustomAnimAlpha_Lower
-	constexpr static const FunctionPointer<ASBCharacter, float, const int32_t> ASBCharacter = { 0x26aa010, 211 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float, const int32_t> GetCurrentCustomAnimAlpha_Lower = { 0x26aa010, 211 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentCustomAnimAlpha
-	constexpr static const FunctionPointer<ASBCharacter, float, const int32_t> ASBCharacter = { 0x26aa3e0, 212 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float, const int32_t> GetCurrentCustomAnimAlpha = { 0x26aa3e0, 212 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentCustomAnimAddtiveAlpha_Upper
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26aa1e0, 213 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetCurrentCustomAnimAddtiveAlpha_Upper = { 0x26aa1e0, 213 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentCustomAnimAddtiveAlpha
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26aa180, 214 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetCurrentCustomAnimAddtiveAlpha = { 0x26aa180, 214 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentCameraLagSpeed
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5220, 215 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetCurrentCameraLagSpeed = { 0x26a5220, 215 }; 
 	// Function /Script/SB.SBCharacter.GetCurrentBulletItemAlias
-	constexpr static const FunctionPointer<ASBCharacter, FName> ASBCharacter = { 0x26a4900, 216 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FName> GetCurrentBulletItemAlias = { 0x26a4900, 216 }; 
 	// Function /Script/SB.SBCharacter.GetCamOverrideFovMode
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a9180, 217 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetCamOverrideFovMode = { 0x26a9180, 217 }; 
 	// Function /Script/SB.SBCharacter.GetCameraZoom
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a9050, 218 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetCameraZoom = { 0x26a9050, 218 }; 
 	// Function /Script/SB.SBCharacter.GetBoneBlendType
-	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBBoneBlendType>> ASBCharacter = { 0x26a7b80, 219 }; 
+	constexpr static const FunctionPointer<ASBCharacter, TEnumAsByte<ESBBoneBlendType>> GetBoneBlendType = { 0x26a7b80, 219 }; 
 	// Function /Script/SB.SBCharacter.GetBodyMeshName
-	constexpr static const FunctionPointer<ASBCharacter, FName> ASBCharacter = { 0x26a6180, 220 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FName> GetBodyMeshName = { 0x26a6180, 220 }; 
 	// Function /Script/SB.SBCharacter.GetBlackboardValue
-	constexpr static const FunctionPointer<ASBCharacter, bool, const FName, const int32_t&, const float&, const FVector&> ASBCharacter = { 0x26a8360, 221 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const FName, const int32_t&, const float&, const FVector&> GetBlackboardValue = { 0x26a8360, 221 }; 
 	// Function /Script/SB.SBCharacter.GetArriveMetaAIBehaviorNode
-	constexpr static const FunctionPointer<ASBCharacter, bool> ASBCharacter = { 0x26a89f0, 222 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool> GetArriveMetaAIBehaviorNode = { 0x26a89f0, 222 }; 
 	// Function /Script/SB.SBCharacter.GetAnimLookAtTargetLocation
-	constexpr static const FunctionPointer<ASBCharacter, FVector, const TEnumAsByte<ESBLookAtIKType>, const bool, const bool> ASBCharacter = { 0x26a62c0, 223 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector, const TEnumAsByte<ESBLookAtIKType>, const bool, const bool> GetAnimLookAtTargetLocation = { 0x26a62c0, 223 }; 
 	// Function /Script/SB.SBCharacter.GetAnimControllerSpringWeight
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a6600, 224 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetAnimControllerSpringWeight = { 0x26a6600, 224 }; 
 	// Function /Script/SB.SBCharacter.GetAnimControllerFullbodyIKFactor
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a5890, 225 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> GetAnimControllerFullbodyIKFactor = { 0x26a5890, 225 }; 
 	// Function /Script/SB.SBCharacter.GetActorBottomLocation
-	constexpr static const FunctionPointer<ASBCharacter, FVector> ASBCharacter = { 0x26a7d40, 226 }; 
+	constexpr static const FunctionPointer<ASBCharacter, FVector> GetActorBottomLocation = { 0x26a7d40, 226 }; 
 	// Function /Script/SB.SBCharacter.ForceAllClothNextUpdateTeleportAndReset
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26abb70, 227 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> ForceAllClothNextUpdateTeleportAndReset = { 0x26abb70, 227 }; 
 	// Function /Script/SB.SBCharacter.ExitVehicle
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26ab6f0, 228 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> ExitVehicle = { 0x26ab6f0, 228 }; 
 	// Function /Script/SB.SBCharacter.EventUnderWater
-	constexpr static const FunctionPointer<ASBCharacter, void, const FVector> ASBCharacter = { 0x2bbb090, 229 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FVector> EventUnderWater = { 0x2bbb090, 229 }; 
 	// Function /Script/SB.SBCharacter.EventImmidateTickForEditor
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x2bbb090, 230 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> EventImmidateTickForEditor = { 0x2bbb090, 230 }; 
 	// Function /Script/SB.SBCharacter.Event_ChangeBattleState
-	constexpr static const FunctionPointer<ASBCharacter, void, const bool> ASBCharacter = { 0x2bbb090, 231 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const bool> Event_ChangeBattleState = { 0x2bbb090, 231 }; 
 	// Function /Script/SB.SBCharacter.EnterVehicle
-	constexpr static const FunctionPointer<ASBCharacter, void, const AActor*, const bool, const bool, const bool> ASBCharacter = { 0x26ab710, 232 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const AActor*, const bool, const bool, const bool> EnterVehicle = { 0x26ab710, 232 }; 
 	// Function /Script/SB.SBCharacter.EndFlyingAction
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26abfa0, 233 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> EndFlyingAction = { 0x26abfa0, 233 }; 
 	// Function /Script/SB.SBCharacter.DeactiveCustomMovingStanceData
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26abde0, 234 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> DeactiveCustomMovingStanceData = { 0x26abde0, 234 }; 
 	// Function /Script/SB.SBCharacter.ClientBroadcast_SetMoveInfo_Reliable
-	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharacterMoveInfo> ASBCharacter = { 0x26a41f0, 235 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharacterMoveInfo> ClientBroadcast_SetMoveInfo_Reliable = { 0x26a41f0, 235 }; 
 	// Function /Script/SB.SBCharacter.ClientBroadcast_SetMoveInfo
-	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharacterMoveInfo> ASBCharacter = { 0x26a4330, 236 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharacterMoveInfo> ClientBroadcast_SetMoveInfo = { 0x26a4330, 236 }; 
 	// Function /Script/SB.SBCharacter.ClearNeedPlayTurnAnimFlag
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x11615e0, 237 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> ClearNeedPlayTurnAnimFlag = { 0x11615e0, 237 }; 
 	// Function /Script/SB.SBCharacter.CheckMoveRightSmoothValue
-	constexpr static const FunctionPointer<ASBCharacter, bool, const float, const bool> ASBCharacter = { 0x26a4ba0, 238 }; 
+	constexpr static const FunctionPointer<ASBCharacter, bool, const float, const bool> CheckMoveRightSmoothValue = { 0x26a4ba0, 238 }; 
 	// Function /Script/SB.SBCharacter.ChangeAttachTarget
-	constexpr static const FunctionPointer<ASBCharacter, void, const TEnumAsByte<ESBSkelMeshSlot>, const TEnumAsByte<ESBSkelMeshSlot>, const FName, const float, const float> ASBCharacter = { 0x26a7240, 239 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const TEnumAsByte<ESBSkelMeshSlot>, const TEnumAsByte<ESBSkelMeshSlot>, const FName, const float, const float> ChangeAttachTarget = { 0x26a7240, 239 }; 
 	// Function /Script/SB.SBCharacter.CancelClimbing
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26aa7a0, 240 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> CancelClimbing = { 0x26aa7a0, 240 }; 
 	// Function /Script/SB.SBCharacter.CalcHitEventDirection
-	constexpr static const FunctionPointer<ASBCharacter, void, const FVector, const FVector> ASBCharacter = { 0x26a4e40, 241 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FVector, const FVector> CalcHitEventDirection = { 0x26a4e40, 241 }; 
 	// Function /Script/SB.SBCharacter.CalcAnimSpeedByWalkSpeed
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a8810, 242 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> CalcAnimSpeedByWalkSpeed = { 0x26a8810, 242 }; 
 	// Function /Script/SB.SBCharacter.CalcAnimSpeedByRunSpeed
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a8900, 243 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> CalcAnimSpeedByRunSpeed = { 0x26a8900, 243 }; 
 	// Function /Script/SB.SBCharacter.CalcAnimSpeedByClimbSpeed
-	constexpr static const FunctionPointer<ASBCharacter, float> ASBCharacter = { 0x26a8740, 244 }; 
+	constexpr static const FunctionPointer<ASBCharacter, float> CalcAnimSpeedByClimbSpeed = { 0x26a8740, 244 }; 
 	// Function /Script/SB.SBCharacter.ApplyMeshInfo
-	constexpr static const FunctionPointer<ASBCharacter, void, const USBSkeletalMeshComponent*, const TEnumAsByte<ESBSkelMeshSlot>> ASBCharacter = { 0x2bbb090, 245 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const USBSkeletalMeshComponent*, const TEnumAsByte<ESBSkelMeshSlot>> ApplyMeshInfo = { 0x2bbb090, 245 }; 
 	// Function /Script/SB.SBCharacter.ApplyKeepAllBodiesPhysicsTransform
-	constexpr static const FunctionPointer<ASBCharacter, void> ASBCharacter = { 0x26aba90, 246 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void> ApplyKeepAllBodiesPhysicsTransform = { 0x26aba90, 246 }; 
 	// Function /Script/SB.SBCharacter.AddCameraZoom
-	constexpr static const FunctionPointer<ASBCharacter, void, const float> ASBCharacter = { 0x26a9070, 247 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const float> AddCameraZoom = { 0x26a9070, 247 }; 
 	// Function /Script/SB.SBCharacter.ActiveCustomMovingStanceData
-	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharMovingStanceData&> ASBCharacter = { 0x26abe00, 248 }; 
+	constexpr static const FunctionPointer<ASBCharacter, void, const FSBCharMovingStanceData&> ActiveCustomMovingStanceData = { 0x26abe00, 248 }; 
 };
 
 /// Class /Script/SB.SBCharacterActiveVolume
@@ -14202,42 +14193,41 @@ public:
 	bool                                               bIsEnableParallelTick;                                      // 0x10CD   (0x0001)  
 	unsigned char                                      UnknownData69_7[0x12];                                      // 0x10CE   (0x0012)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBCharacterMovementComponent.SetControlSlopeMoveSpeed
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, void, const float, const float, const float> USBCharacterMovementComponent = { 0x26b8780, 0 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, void, const float, const float, const float> SetControlSlopeMoveSpeed = { 0x26b8780, 0 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.ResetSlidingFlagForBP
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, void> USBCharacterMovementComponent = { 0x26b8760, 1 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, void> ResetSlidingFlagForBP = { 0x26b8760, 1 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.IsWalkSlidingSlip
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool> USBCharacterMovementComponent = { 0x26b8340, 2 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool> IsWalkSlidingSlip = { 0x26b8340, 2 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.IsWalkSliding
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool> USBCharacterMovementComponent = { 0x26b8360, 3 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool> IsWalkSliding = { 0x26b8360, 3 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.IsUnderWater
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool, const bool> USBCharacterMovementComponent = { 0x26b8380, 4 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool, const bool> IsUnderWater = { 0x26b8380, 4 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.IsEnableSwim
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool> USBCharacterMovementComponent = { 0x26b8470, 5 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool> IsEnableSwim = { 0x26b8470, 5 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetVelocityYAxis
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, float, const float> USBCharacterMovementComponent = { 0x26b8580, 6 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, float, const float> GetVelocityYAxis = { 0x26b8580, 6 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetVelocityXAxis
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, float, const float> USBCharacterMovementComponent = { 0x26b8670, 7 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, float, const float> GetVelocityXAxis = { 0x26b8670, 7 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetVelocity
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, float> USBCharacterMovementComponent = { 0x26b84c0, 8 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, float> GetVelocity = { 0x26b84c0, 8 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetSlidingValueDirBetweenVelocity
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, int32_t> USBCharacterMovementComponent = { 0x26b8320, 9 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, int32_t> GetSlidingValueDirBetweenVelocity = { 0x26b8320, 9 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetSBTargetCharacterForwardVector
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, FVector> USBCharacterMovementComponent = { 0x26b82d0, 10 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, FVector> GetSBTargetCharacterForwardVector = { 0x26b82d0, 10 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetSBMaxJumpHeightWithJumpTime
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, float> USBCharacterMovementComponent = { 0x26b8250, 11 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, float> GetSBMaxJumpHeightWithJumpTime = { 0x26b8250, 11 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetSBMaxJumpHeight
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, float> USBCharacterMovementComponent = { 0x26b8290, 12 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, float> GetSBMaxJumpHeight = { 0x26b8290, 12 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetMoveStruggleAnimAlpha
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, float> USBCharacterMovementComponent = { 0x26b8300, 13 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, float> GetMoveStruggleAnimAlpha = { 0x26b8300, 13 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetCurrentSprintVelocityForward
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, FVector> USBCharacterMovementComponent = { 0x26b8510, 14 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, FVector> GetCurrentSprintVelocityForward = { 0x26b8510, 14 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetAnimAcceleration
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, FVector> USBCharacterMovementComponent = { 0x26b8540, 15 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, FVector> GetAnimAcceleration = { 0x26b8540, 15 }; 
 	// Function /Script/SB.SBCharacterMovementComponent.GetActiveMoveStruggleAnim
-	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool> USBCharacterMovementComponent = { 0x26a6620, 16 }; 
+	constexpr static const FunctionPointer<USBCharacterMovementComponent, bool> GetActiveMoveStruggleAnim = { 0x26a6620, 16 }; 
 };
 
 /// Class /Script/SB.SBCharacterOccluderActor
@@ -14260,12 +14250,11 @@ class ASBCharacterOverlapManager : public AActor
 public:
 	unsigned char                                      UnknownData01_1[0x118];                                     // 0x02C8   (0x0118)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBCharacterOverlapManager.OnCollisionOriginEndOverlap
-	constexpr static const FunctionPointer<ASBCharacterOverlapManager, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> ASBCharacterOverlapManager = { 0x26b9700, 0 }; 
+	constexpr static const FunctionPointer<ASBCharacterOverlapManager, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> OnCollisionOriginEndOverlap = { 0x26b9700, 0 }; 
 	// Function /Script/SB.SBCharacterOverlapManager.OnCollisionOriginBeginOverlap
-	constexpr static const FunctionPointer<ASBCharacterOverlapManager, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> ASBCharacterOverlapManager = { 0x26b9980, 1 }; 
+	constexpr static const FunctionPointer<ASBCharacterOverlapManager, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> OnCollisionOriginBeginOverlap = { 0x26b9980, 1 }; 
 };
 
 /// Class /Script/SB.SBCharacterOverrideSlopeVolume
@@ -14664,1412 +14653,1411 @@ public:
 	int32_t                                            luaIntValue;                                                // 0x00C8   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x24];                                      // 0x00CC   (0x0024)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBCheatManager.StopManualLoadingScreen
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cda90, 0 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> StopManualLoadingScreen = { 0x26cda90, 0 }; 
 	// Function /Script/SB.SBCheatManager.StartManualLoadingScreen
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cdab0, 1 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> StartManualLoadingScreen = { 0x26cdab0, 1 }; 
 	// Function /Script/SB.SBCheatManager.SetMaxUndilatedFrameTime
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26c6dc0, 2 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SetMaxUndilatedFrameTime = { 0x26c6dc0, 2 }; 
 	// Function /Script/SB.SBCheatManager.SetFixedFrameRate
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26c7040, 3 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SetFixedFrameRate = { 0x26c7040, 3 }; 
 	// Function /Script/SB.SBCheatManager.SBZoneEvent
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26ef970, 4 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBZoneEvent = { 0x26ef970, 4 }; 
 	// Function /Script/SB.SBCheatManager.SbWorldObjReInit
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 5 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SbWorldObjReInit = { 0x11615e0, 5 }; 
 	// Function /Script/SB.SBCheatManager.SBWorldGlobalMotionBlurScale
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> USBCheatManager = { 0x26c75a0, 6 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> SBWorldGlobalMotionBlurScale = { 0x26c75a0, 6 }; 
 	// Function /Script/SB.SBCheatManager.SBWorldEnvPostProcessDisable
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c0640, 7 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBWorldEnvPostProcessDisable = { 0x26c0640, 7 }; 
 	// Function /Script/SB.SBCheatManager.SBWorldEnvCounter
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const bool> USBCheatManager = { 0x26cae60, 8 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const bool> SBWorldEnvCounter = { 0x26cae60, 8 }; 
 	// Function /Script/SB.SBCheatManager.SBWaypoint
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26f02a0, 9 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBWaypoint = { 0x26f02a0, 9 }; 
 	// Function /Script/SB.SBCheatManager.SBWaveMerge
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> USBCheatManager = { 0x26ca610, 10 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> SBWaveMerge = { 0x26ca610, 10 }; 
 	// Function /Script/SB.SBCheatManager.SBWarpWorld
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26de830, 11 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBWarpWorld = { 0x26de830, 11 }; 
 	// Function /Script/SB.SBCheatManager.SBWarpPosition
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const bool> USBCheatManager = { 0x26df0e0, 12 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const bool> SBWarpPosition = { 0x26df0e0, 12 }; 
 	// Function /Script/SB.SBCheatManager.SBWarpPlayer
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e2100, 13 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBWarpPlayer = { 0x26e2100, 13 }; 
 	// Function /Script/SB.SBCheatManager.SBWarpCampToPointName
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> USBCheatManager = { 0x26decd0, 14 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> SBWarpCampToPointName = { 0x26decd0, 14 }; 
 	// Function /Script/SB.SBCheatManager.SBWarpCampToLocation
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float> USBCheatManager = { 0x26de990, 15 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float> SBWarpCampToLocation = { 0x26de990, 15 }; 
 	// Function /Script/SB.SBCheatManager.SBWarpCamp
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26def00, 16 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBWarpCamp = { 0x26def00, 16 }; 
 	// Function /Script/SB.SBCheatManager.SBVisibleLoadingScreen
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 17 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBVisibleLoadingScreen = { 0x26a9510, 17 }; 
 	// Function /Script/SB.SBCheatManager.SBVariationText
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const FString> USBCheatManager = { 0x26dcff0, 18 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const FString> SBVariationText = { 0x26dcff0, 18 }; 
 	// Function /Script/SB.SBCheatManager.SBValidatePakDuplication
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 19 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBValidatePakDuplication = { 0x11615e0, 19 }; 
 	// Function /Script/SB.SBCheatManager.SBValidatePakCount
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26bcde0, 20 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBValidatePakCount = { 0x26bcde0, 20 }; 
 	// Function /Script/SB.SBCheatManager.SBUsePDODitherAlpha
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26bff80, 21 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBUsePDODitherAlpha = { 0x26bff80, 21 }; 
 	// Function /Script/SB.SBCheatManager.SBUseOcclusionDebugging
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d8070, 22 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUseOcclusionDebugging = { 0x26d8070, 22 }; 
 	// Function /Script/SB.SBCheatManager.SBUpdateNierDLCUI
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c0210, 23 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBUpdateNierDLCUI = { 0x26c0210, 23 }; 
 	// Function /Script/SB.SBCheatManager.SBUpdateMoveSpeed
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26e2f20, 24 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBUpdateMoveSpeed = { 0x26e2f20, 24 }; 
 	// Function /Script/SB.SBCheatManager.SBUpdateCouponUserInfo
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const int32_t> USBCheatManager = { 0x26c8f40, 25 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const int32_t> SBUpdateCouponUserInfo = { 0x26c8f40, 25 }; 
 	// Function /Script/SB.SBCheatManager.SBUpdateCognitoStatus
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26ca0e0, 26 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBUpdateCognitoStatus = { 0x26ca0e0, 26 }; 
 	// Function /Script/SB.SBCheatManager.SBUnuseOcclusionDebugging
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d7dd0, 27 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUnuseOcclusionDebugging = { 0x26d7dd0, 27 }; 
 	// Function /Script/SB.SBCheatManager.SBUnLoadLevel
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26dc6f0, 28 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBUnLoadLevel = { 0x26dc6f0, 28 }; 
 	// Function /Script/SB.SBCheatManager.SBUIWorkShopEnableDefaultShop
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dc990, 29 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIWorkShopEnableDefaultShop = { 0x26dc990, 29 }; 
 	// Function /Script/SB.SBCheatManager.SBUIWorkShopDisableDefaultShop
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dc960, 30 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIWorkShopDisableDefaultShop = { 0x26dc960, 30 }; 
 	// Function /Script/SB.SBCheatManager.SBUIToggleShowFriendShipGain
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c3f70, 31 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIToggleShowFriendShipGain = { 0x26c3f70, 31 }; 
 	// Function /Script/SB.SBCheatManager.SBUIToggleForceValidShopItem
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c3fa0, 32 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIToggleForceValidShopItem = { 0x26c3fa0, 32 }; 
 	// Function /Script/SB.SBCheatManager.SBUIStudioShowPlay
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool, const bool> USBCheatManager = { 0x26c8530, 33 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool, const bool> SBUIStudioShowPlay = { 0x26c8530, 33 }; 
 	// Function /Script/SB.SBCheatManager.SBUIStudioSetItem
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c7fa0, 34 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBUIStudioSetItem = { 0x26c7fa0, 34 }; 
 	// Function /Script/SB.SBCheatManager.SBUIStudioSequencePlay
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool, const bool> USBCheatManager = { 0x26c8800, 35 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool, const bool> SBUIStudioSequencePlay = { 0x26c8800, 35 }; 
 	// Function /Script/SB.SBCheatManager.SBUIStudioPreviewOpen
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c7f80, 36 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIStudioPreviewOpen = { 0x26c7f80, 36 }; 
 	// Function /Script/SB.SBCheatManager.SBUIStudioEvent
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c8350, 37 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBUIStudioEvent = { 0x26c8350, 37 }; 
 	// Function /Script/SB.SBCheatManager.SBUIStudioAttachEquipment
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26c8150, 38 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBUIStudioAttachEquipment = { 0x26c8150, 38 }; 
 	// Function /Script/SB.SBCheatManager.SBUIOpenWorkShop
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dcac0, 39 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIOpenWorkShop = { 0x26dcac0, 39 }; 
 	// Function /Script/SB.SBCheatManager.SBUIOpenShop
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString> USBCheatManager = { 0x26c3fd0, 40 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString> SBUIOpenShop = { 0x26c3fd0, 40 }; 
 	// Function /Script/SB.SBCheatManager.SBUIOpenHairSalonToGameMenu
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dca60, 41 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIOpenHairSalonToGameMenu = { 0x26dca60, 41 }; 
 	// Function /Script/SB.SBCheatManager.SBUIOpenGameMenuToHairSalon
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dca90, 42 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIOpenGameMenuToHairSalon = { 0x26dca90, 42 }; 
 	// Function /Script/SB.SBCheatManager.SBUIOpenGameMenu
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dcb00, 43 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIOpenGameMenu = { 0x26dcb00, 43 }; 
 	// Function /Script/SB.SBCheatManager.SBUIOpen
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26dce30, 44 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBUIOpen = { 0x26dce30, 44 }; 
 	// Function /Script/SB.SBCheatManager.SBUIEventUnlockBurst
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float> USBCheatManager = { 0x26cc610, 45 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float> SBUIEventUnlockBurst = { 0x26cc610, 45 }; 
 	// Function /Script/SB.SBCheatManager.SBUIActionWidgetCreate
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> USBCheatManager = { 0x26cce80, 46 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> SBUIActionWidgetCreate = { 0x26cce80, 46 }; 
 	// Function /Script/SB.SBCheatManager.SBUIActionUnlockMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float> USBCheatManager = { 0x26cd0a0, 47 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float> SBUIActionUnlockMode = { 0x26cd0a0, 47 }; 
 	// Function /Script/SB.SBCheatManager.SBUIActionRequestAlias
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26cc780, 48 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBUIActionRequestAlias = { 0x26cc780, 48 }; 
 	// Function /Script/SB.SBCheatManager.SBUIActionNikkeLostArticlePopup
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26ccbf0, 49 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBUIActionNikkeLostArticlePopup = { 0x26ccbf0, 49 }; 
 	// Function /Script/SB.SBCheatManager.SBUIActionGuideVideo
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString, const float, const float> USBCheatManager = { 0x26cd430, 50 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString, const float, const float> SBUIActionGuideVideo = { 0x26cd430, 50 }; 
 	// Function /Script/SB.SBCheatManager.SBUIActionControllerStatePrint
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 51 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBUIActionControllerStatePrint = { 0x11615e0, 51 }; 
 	// Function /Script/SB.SBCheatManager.SBTrinityMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 52 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBTrinityMode = { 0x26a9510, 52 }; 
 	// Function /Script/SB.SBCheatManager.SBTrialVersionSet
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c0850, 53 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBTrialVersionSet = { 0x26c0850, 53 }; 
 	// Function /Script/SB.SBCheatManager.SBTrainingRoomMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const TEnumAsByte<ESBTrainningRoomChangeType>, const bool, const TEnumAsByte<ESBTrainningRoomNpcAIType>> USBCheatManager = { 0x26de4a0, 54 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const TEnumAsByte<ESBTrainningRoomChangeType>, const bool, const TEnumAsByte<ESBTrainningRoomNpcAIType>> SBTrainingRoomMode = { 0x26de4a0, 54 }; 
 	// Function /Script/SB.SBCheatManager.SBToLobby
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c0960, 55 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToLobby = { 0x26c0960, 55 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleUseLog
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e8410, 56 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBToggleUseLog = { 0x26e8410, 56 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleUseDrawDebug
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e84e0, 57 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBToggleUseDrawDebug = { 0x26e84e0, 57 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleStudioOnOff
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c79a0, 58 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleStudioOnOff = { 0x26c79a0, 58 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleStencilLog
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c3c00, 59 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleStencilLog = { 0x26c3c00, 59 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleSoundDebugger
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 60 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleSoundDebugger = { 0x11615e0, 60 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleSimpleFishing
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d45c0, 61 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleSimpleFishing = { 0x26d45c0, 61 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleSigManShowDebug
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d0290, 62 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleSigManShowDebug = { 0x26d0290, 62 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleRopeSwingPhysic
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d5a40, 63 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleRopeSwingPhysic = { 0x26d5a40, 63 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleRewardRateForceSuccess
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c7110, 64 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleRewardRateForceSuccess = { 0x26c7110, 64 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleResourceCacheRecorder
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d5ef0, 65 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleResourceCacheRecorder = { 0x26d5ef0, 65 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleResourceCacheManagerShowDebug
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d5f60, 66 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleResourceCacheManagerShowDebug = { 0x26d5f60, 66 }; 
 	// Function /Script/SB.SBCheatManager.SBTogglePrintQuartzBeat
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d8980, 67 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTogglePrintQuartzBeat = { 0x26d8980, 67 }; 
 	// Function /Script/SB.SBCheatManager.SBTogglePlayerState
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e85b0, 68 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTogglePlayerState = { 0x26e85b0, 68 }; 
 	// Function /Script/SB.SBCheatManager.SBTogglePlayerIgnoreCoolTime
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 69 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTogglePlayerIgnoreCoolTime = { 0x11615e0, 69 }; 
 	// Function /Script/SB.SBCheatManager.SBTogglePlayerDamageInfo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c6d60, 70 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTogglePlayerDamageInfo = { 0x26c6d60, 70 }; 
 	// Function /Script/SB.SBCheatManager.SBTogglePhotoModeUI
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c4590, 71 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTogglePhotoModeUI = { 0x26c4590, 71 }; 
 	// Function /Script/SB.SBCheatManager.SBTogglePhotoModeScreenShotCaptureForceFail
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26be1b0, 72 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTogglePhotoModeScreenShotCaptureForceFail = { 0x26be1b0, 72 }; 
 	// Function /Script/SB.SBCheatManager.SBTogglePadSpeaker
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d7db0, 73 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTogglePadSpeaker = { 0x26d7db0, 73 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleObjectID
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c5fa0, 74 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleObjectID = { 0x26c5fa0, 74 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleMotionMatching
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e20a0, 75 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleMotionMatching = { 0x26e20a0, 75 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleMailBox
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd8b0, 76 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleMailBox = { 0x26bd8b0, 76 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleLockOnCamera
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e1bd0, 77 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleLockOnCamera = { 0x26e1bd0, 77 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleLevelInfo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 78 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleLevelInfo = { 0x11615e0, 78 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleGCControl
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d5db0, 79 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleGCControl = { 0x26d5db0, 79 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleFullBodyIK
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d7970, 80 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBToggleFullBodyIK = { 0x26d7970, 80 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleFootIK
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26ef950, 81 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleFootIK = { 0x26ef950, 81 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleFoliageTypeDensityScale
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26bf9e0, 82 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBToggleFoliageTypeDensityScale = { 0x26bf9e0, 82 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleFlyCamera
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e1c30, 83 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleFlyCamera = { 0x26e1c30, 83 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleFishMove
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d4a30, 84 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleFishMove = { 0x26d4a30, 84 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleFishingDebugger
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d4670, 85 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleFishingDebugger = { 0x26d4670, 85 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleEngineFlag
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26eb630, 86 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBToggleEngineFlag = { 0x26eb630, 86 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleEnemyDamageInfo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c6d90, 87 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleEnemyDamageInfo = { 0x26c6d90, 87 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleEnableSTS
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d0a60, 88 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleEnableSTS = { 0x26d0a60, 88 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleEnableSliceMesh
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d0d00, 89 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleEnableSliceMesh = { 0x26d0d00, 89 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleEnableFootIKWhenSequence
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c3370, 90 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleEnableFootIKWhenSequence = { 0x26c3370, 90 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleDrawPlayerMove
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> USBCheatManager = { 0x26eaf20, 91 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> SBToggleDrawPlayerMove = { 0x26eaf20, 91 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleDisplayLamsID
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c6d20, 92 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleDisplayLamsID = { 0x26c6d20, 92 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleDeviceProfileDebugDisplay
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26caa10, 93 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleDeviceProfileDebugDisplay = { 0x26caa10, 93 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleDebugSTS
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d0900, 94 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleDebugSTS = { 0x26d0900, 94 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleDebugSliceMesh
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d0bb0, 95 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleDebugSliceMesh = { 0x26d0bb0, 95 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleDebugAudioComponent
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c62a0, 96 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleDebugAudioComponent = { 0x26c62a0, 96 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleCheatCommandDistribution
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 97 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleCheatCommandDistribution = { 0x11615e0, 97 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleCharacterMovementParallelUpdate
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cada0, 98 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleCharacterMovementParallelUpdate = { 0x26cada0, 98 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleBossChallengeDebug
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 99 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleBossChallengeDebug = { 0x11615e0, 99 }; 
 	// Function /Script/SB.SBCheatManager.SBToggleAimIK
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d77e0, 100 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBToggleAimIK = { 0x26d77e0, 100 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterTestInteractionYesNo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cbf90, 101 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTheaterTestInteractionYesNo = { 0x26cbf90, 101 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterTestInteractionSelect
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cbfb0, 102 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTheaterTestInteractionSelect = { 0x26cbfb0, 102 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterTestInteractionAdamFusion
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cbf70, 103 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTheaterTestInteractionAdamFusion = { 0x26cbf70, 103 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterStop
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e6e00, 104 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBTheaterStop = { 0x26e6e00, 104 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterSkip
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e6c70, 105 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBTheaterSkip = { 0x26e6c70, 105 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterPrintLevelSeqPlaying
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bed80, 106 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTheaterPrintLevelSeqPlaying = { 0x26bed80, 106 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterPlayLevelSeq
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const float, const float> USBCheatManager = { 0x26e6ef0, 107 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const float, const float> SBTheaterPlayLevelSeq = { 0x26e6ef0, 107 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterPlay
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const float, const float> USBCheatManager = { 0x26e7430, 108 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const float, const float> SBTheaterPlay = { 0x26e7430, 108 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterOptionCheck
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c1690, 109 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBTheaterOptionCheck = { 0x26c1690, 109 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterNotifyCompleteSequence
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26e6b50, 110 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBTheaterNotifyCompleteSequence = { 0x26e6b50, 110 }; 
 	// Function /Script/SB.SBCheatManager.SBTheaterIgnoreFirstSkip
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d5aa0, 111 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBTheaterIgnoreFirstSkip = { 0x26d5aa0, 111 }; 
 	// Function /Script/SB.SBCheatManager.SBTestPlayGoUI
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cc4b0, 112 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTestPlayGoUI = { 0x26cc4b0, 112 }; 
 	// Function /Script/SB.SBCheatManager.SBTestPlayGoLabelAssetCache
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 113 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTestPlayGoLabelAssetCache = { 0x11615e0, 113 }; 
 	// Function /Script/SB.SBCheatManager.SBTestKrulosLog
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 114 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTestKrulosLog = { 0x11615e0, 114 }; 
 	// Function /Script/SB.SBCheatManager.SBTestEanbleBoid
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d3890, 115 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTestEanbleBoid = { 0x26d3890, 115 }; 
 	// Function /Script/SB.SBCheatManager.SBTestCharacterAnim
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const bool, const int32_t> USBCheatManager = { 0x26eeeb0, 116 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const bool, const int32_t> SBTestCharacterAnim = { 0x26eeeb0, 116 }; 
 	// Function /Script/SB.SBCheatManager.SBTestChangeBlendSpace
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const FString> USBCheatManager = { 0x26eeca0, 117 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const FString> SBTestChangeBlendSpace = { 0x26eeca0, 117 }; 
 	// Function /Script/SB.SBCheatManager.SBTestBridgeLog
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f0370, 118 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTestBridgeLog = { 0x26f0370, 118 }; 
 	// Function /Script/SB.SBCheatManager.SBTestBool
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool> USBCheatManager = { 0x26dc020, 119 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool> SBTestBool = { 0x26dc020, 119 }; 
 	// Function /Script/SB.SBCheatManager.SBTestBlackboardComponent
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26ef450, 120 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTestBlackboardComponent = { 0x26ef450, 120 }; 
 	// Function /Script/SB.SBCheatManager.SBTerminateLevelStreamProfiling
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dc280, 121 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBTerminateLevelStreamProfiling = { 0x26dc280, 121 }; 
 	// Function /Script/SB.SBCheatManager.SBTeleportTo
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float> USBCheatManager = { 0x26d9d90, 122 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float> SBTeleportTo = { 0x26d9d90, 122 }; 
 	// Function /Script/SB.SBCheatManager.SBTalkTest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const float, const float, const float, const float, const FString> USBCheatManager = { 0x26c2bb0, 123 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const float, const float, const float, const float, const FString> SBTalkTest = { 0x26c2bb0, 123 }; 
 	// Function /Script/SB.SBCheatManager.SBSystemSetAppActivate
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> USBCheatManager = { 0x26c3200, 124 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> SBSystemSetAppActivate = { 0x26c3200, 124 }; 
 	// Function /Script/SB.SBCheatManager.SBSuicide
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8320, 125 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSuicide = { 0x26e8320, 125 }; 
 	// Function /Script/SB.SBCheatManager.SBStudioState
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26cb950, 126 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBStudioState = { 0x26cb950, 126 }; 
 	// Function /Script/SB.SBCheatManager.SBStudioResetPhysics
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cb900, 127 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBStudioResetPhysics = { 0x26cb900, 127 }; 
 	// Function /Script/SB.SBCheatManager.SBStudioCameraSetManualDistance
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26c1990, 128 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBStudioCameraSetManualDistance = { 0x26c1990, 128 }; 
 	// Function /Script/SB.SBCheatManager.SBStudioCameraSetCurrentFocalLength
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26c17d0, 129 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBStudioCameraSetCurrentFocalLength = { 0x26c17d0, 129 }; 
 	// Function /Script/SB.SBCheatManager.SBStudioCameraSetCurrentAperture
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26c18b0, 130 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBStudioCameraSetCurrentAperture = { 0x26c18b0, 130 }; 
 	// Function /Script/SB.SBCheatManager.SBStudioCameraFocusInfo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c1a70, 131 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBStudioCameraFocusInfo = { 0x26c1a70, 131 }; 
 	// Function /Script/SB.SBCheatManager.SBStopMatchRequest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26df350, 132 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBStopMatchRequest = { 0x26df350, 132 }; 
 	// Function /Script/SB.SBCheatManager.SBStopKeepPlaySingleSound
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d8920, 133 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBStopKeepPlaySingleSound = { 0x26d8920, 133 }; 
 	// Function /Script/SB.SBCheatManager.SBStopAllSounds
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c6700, 134 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBStopAllSounds = { 0x26c6700, 134 }; 
 	// Function /Script/SB.SBCheatManager.SBStartSingleLevelStreamProfiling
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26dc320, 135 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBStartSingleLevelStreamProfiling = { 0x26dc320, 135 }; 
 	// Function /Script/SB.SBCheatManager.SBStartLevelStreamProfiling
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dc440, 136 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBStartLevelStreamProfiling = { 0x26dc440, 136 }; 
 	// Function /Script/SB.SBCheatManager.SBStartKeepPlaySingleSound
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d8950, 137 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBStartKeepPlaySingleSound = { 0x26d8950, 137 }; 
 	// Function /Script/SB.SBCheatManager.SBStartActivity
-	constexpr static const FunctionPointer<USBCheatManager, bool, const FName> USBCheatManager = { 0x26d1370, 138 }; 
+	constexpr static const FunctionPointer<USBCheatManager, bool, const FName> SBStartActivity = { 0x26d1370, 138 }; 
 	// Function /Script/SB.SBCheatManager.SBSpawnEnemy
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f0180, 139 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSpawnEnemy = { 0x26f0180, 139 }; 
 	// Function /Script/SB.SBCheatManager.SBSoundUnMute
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e2020, 140 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSoundUnMute = { 0x26e2020, 140 }; 
 	// Function /Script/SB.SBCheatManager.SBSoundMute
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e2060, 141 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSoundMute = { 0x26e2060, 141 }; 
 	// Function /Script/SB.SBCheatManager.SBSnapShot
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26e15f0, 142 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBSnapShot = { 0x26e15f0, 142 }; 
 	// Function /Script/SB.SBCheatManager.SBSignOutCognito
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26c9e60, 143 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBSignOutCognito = { 0x26c9e60, 143 }; 
 	// Function /Script/SB.SBCheatManager.SBSignInCognito
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26ca360, 144 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBSignInCognito = { 0x26ca360, 144 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManUseDebugActors
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26cfe30, 145 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSigManUseDebugActors = { 0x26cfe30, 145 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManUnregisterAll
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d0110, 146 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSigManUnregisterAll = { 0x26d0110, 146 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManToggleZoneEnvOptimizationConfigs
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26cfef0, 147 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSigManToggleZoneEnvOptimizationConfigs = { 0x26cfef0, 147 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManToggleCharacterOptimizationConfigs
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26cffc0, 148 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSigManToggleCharacterOptimizationConfigs = { 0x26cffc0, 148 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManShowDebugFilter
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d0150, 149 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBSigManShowDebugFilter = { 0x26d0150, 149 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManSetDummyViewportLocationToPlayer
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 150 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSigManSetDummyViewportLocationToPlayer = { 0x11615e0, 150 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManSetDummyViewportLocation
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float> USBCheatManager = { 0x26cfc20, 151 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float> SBSigManSetDummyViewportLocation = { 0x26cfc20, 151 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManResetSignificance
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d0090, 152 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSigManResetSignificance = { 0x26d0090, 152 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManRegisterAll
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d00d0, 153 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSigManRegisterAll = { 0x26d00d0, 153 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManHideDebugActors
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26cfe30, 154 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSigManHideDebugActors = { 0x26cfe30, 154 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManEnableDummyViewport
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 155 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSigManEnableDummyViewport = { 0x26a9510, 155 }; 
 	// Function /Script/SB.SBCheatManager.SBSigManDumpLog
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cfdf0, 156 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSigManDumpLog = { 0x26cfdf0, 156 }; 
 	// Function /Script/SB.SBCheatManager.SBShowStoreUI
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c0730, 157 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBShowStoreUI = { 0x26c0730, 157 }; 
 	// Function /Script/SB.SBCheatManager.SBShowRes
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f0050, 158 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBShowRes = { 0x26f0050, 158 }; 
 	// Function /Script/SB.SBCheatManager.SBShowEventContentsDate
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26be070, 159 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBShowEventContentsDate = { 0x26be070, 159 }; 
 	// Function /Script/SB.SBCheatManager.SBShowControllerBindingPanel
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26beb60, 160 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBShowControllerBindingPanel = { 0x26beb60, 160 }; 
 	// Function /Script/SB.SBCheatManager.SBShowActorID
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e32b0, 161 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBShowActorID = { 0x26e32b0, 161 }; 
 	// Function /Script/SB.SBCheatManager.SBShaderPrecompileEnable
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26beee0, 162 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBShaderPrecompileEnable = { 0x26beee0, 162 }; 
 	// Function /Script/SB.SBCheatManager.SBShaderPrecompileDisable
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26beec0, 163 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBShaderPrecompileDisable = { 0x26beec0, 163 }; 
 	// Function /Script/SB.SBCheatManager.SBSetVoice
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d29b0, 164 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBSetVoice = { 0x26d29b0, 164 }; 
 	// Function /Script/SB.SBCheatManager.SBSetUTCCountryCode
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bc920, 165 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBSetUTCCountryCode = { 0x26bc920, 165 }; 
 	// Function /Script/SB.SBCheatManager.SBSetSlowLevelStreamingUpdate
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26be2c0, 166 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSetSlowLevelStreamingUpdate = { 0x26be2c0, 166 }; 
 	// Function /Script/SB.SBCheatManager.SBSetSkillSlot
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> USBCheatManager = { 0x26df830, 167 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> SBSetSkillSlot = { 0x26df830, 167 }; 
 	// Function /Script/SB.SBCheatManager.SBSetSettingVersion
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26d3740, 168 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSetSettingVersion = { 0x26d3740, 168 }; 
 	// Function /Script/SB.SBCheatManager.SBSetScreenTypeWindowedFullScreen
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d31e0, 169 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetScreenTypeWindowedFullScreen = { 0x26d31e0, 169 }; 
 	// Function /Script/SB.SBCheatManager.SBSetScreenTypeWindowed
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d3130, 170 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetScreenTypeWindowed = { 0x26d3130, 170 }; 
 	// Function /Script/SB.SBCheatManager.SBSetScreenTypeFullScreen
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d3290, 171 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetScreenTypeFullScreen = { 0x26d3290, 171 }; 
 	// Function /Script/SB.SBCheatManager.SBSetScreenType
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26d3340, 172 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSetScreenType = { 0x26d3340, 172 }; 
 	// Function /Script/SB.SBCheatManager.SBSetScreenResolution4K
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d3490, 173 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetScreenResolution4K = { 0x26d3490, 173 }; 
 	// Function /Script/SB.SBCheatManager.SBSetScreenResolution2K
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d34f0, 174 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetScreenResolution2K = { 0x26d34f0, 174 }; 
 	// Function /Script/SB.SBCheatManager.SBSetScreenResolution1K
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d3550, 175 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetScreenResolution1K = { 0x26d3550, 175 }; 
 	// Function /Script/SB.SBCheatManager.SBSetScreenResolution
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const int32_t> USBCheatManager = { 0x26d35b0, 176 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const int32_t> SBSetScreenResolution = { 0x26d35b0, 176 }; 
 	// Function /Script/SB.SBCheatManager.SBSetSaveSlot
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 177 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSetSaveSlot = { 0x198eb40, 177 }; 
 	// Function /Script/SB.SBCheatManager.SBSetSaveMajorVersionLatest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 178 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetSaveMajorVersionLatest = { 0x11615e0, 178 }; 
 	// Function /Script/SB.SBCheatManager.SBSetSaveMajorVersion
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 179 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSetSaveMajorVersion = { 0x198eb40, 179 }; 
 	// Function /Script/SB.SBCheatManager.SBSetSaveAppContentVersionLatest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 180 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetSaveAppContentVersionLatest = { 0x11615e0, 180 }; 
 	// Function /Script/SB.SBCheatManager.SBSetSaveAppContentVersion
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 181 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSetSaveAppContentVersion = { 0x198eb40, 181 }; 
 	// Function /Script/SB.SBCheatManager.SBSetResolutionQuality
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26d2c30, 182 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBSetResolutionQuality = { 0x26d2c30, 182 }; 
 	// Function /Script/SB.SBCheatManager.SBSetPurchaseInTrial
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c0570, 183 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetPurchaseInTrial = { 0x26c0570, 183 }; 
 	// Function /Script/SB.SBCheatManager.SBSetPlayerPawnAnimMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 184 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSetPlayerPawnAnimMode = { 0x198eb40, 184 }; 
 	// Function /Script/SB.SBCheatManager.SBSetPhotoModeLightLocation
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const float, const float, const float> USBCheatManager = { 0x26bcfd0, 185 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const float, const float, const float> SBSetPhotoModeLightLocation = { 0x26bcfd0, 185 }; 
 	// Function /Script/SB.SBCheatManager.SBSetNewGamePlus
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8fc0, 186 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSetNewGamePlus = { 0x26e8fc0, 186 }; 
 	// Function /Script/SB.SBCheatManager.SBSetMultiRuleRemainTime
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26d7570, 187 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBSetMultiRuleRemainTime = { 0x26d7570, 187 }; 
 	// Function /Script/SB.SBCheatManager.SBSetLoadSlot
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x1640450, 188 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBSetLoadSlot = { 0x1640450, 188 }; 
 	// Function /Script/SB.SBCheatManager.SBSetLanguage
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d2af0, 189 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBSetLanguage = { 0x26d2af0, 189 }; 
 	// Function /Script/SB.SBCheatManager.SBSetIgnoreEntitlementList
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c04a0, 190 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetIgnoreEntitlementList = { 0x26c04a0, 190 }; 
 	// Function /Script/SB.SBCheatManager.SBSetHintType
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26c73a0, 191 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBSetHintType = { 0x26c73a0, 191 }; 
 	// Function /Script/SB.SBCheatManager.SBSetHDRDisplayNit
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26d2da0, 192 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSetHDRDisplayNit = { 0x26d2da0, 192 }; 
 	// Function /Script/SB.SBCheatManager.SBSetHDR
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d2e80, 193 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetHDR = { 0x26d2e80, 193 }; 
 	// Function /Script/SB.SBCheatManager.SBSetGamma
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26d2fe0, 194 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBSetGamma = { 0x26d2fe0, 194 }; 
 	// Function /Script/SB.SBCheatManager.SBSetFreezeIK
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26ef880, 195 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBSetFreezeIK = { 0x26ef880, 195 }; 
 	// Function /Script/SB.SBCheatManager.SBSetFishingLogBook
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const float> USBCheatManager = { 0x26d4740, 196 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const float> SBSetFishingLogBook = { 0x26d4740, 196 }; 
 	// Function /Script/SB.SBCheatManager.SBSetFishingAssist
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d2850, 197 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetFishingAssist = { 0x26d2850, 197 }; 
 	// Function /Script/SB.SBCheatManager.SBSetDollyCamMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26e0580, 198 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetDollyCamMode = { 0x26e0580, 198 }; 
 	// Function /Script/SB.SBCheatManager.SBSetDisplayCropAspectRatio
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26be3e0, 199 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetDisplayCropAspectRatio = { 0x26be3e0, 199 }; 
 	// Function /Script/SB.SBCheatManager.SBSetDifficultyAlias
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26c8d90, 200 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBSetDifficultyAlias = { 0x26c8d90, 200 }; 
 	// Function /Script/SB.SBCheatManager.SBSetDifficulty
-	constexpr static const FunctionPointer<USBCheatManager, void, const ESBGameDifficultyType> USBCheatManager = { 0x26c8e70, 201 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const ESBGameDifficultyType> SBSetDifficulty = { 0x26c8e70, 201 }; 
 	// Function /Script/SB.SBCheatManager.SBSetCustomVector2D
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float> USBCheatManager = { 0x26e3420, 202 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float> SBSetCustomVector2D = { 0x26e3420, 202 }; 
 	// Function /Script/SB.SBCheatManager.SBSetCustomInt
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const int32_t> USBCheatManager = { 0x26d6840, 203 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const int32_t> SBSetCustomInt = { 0x26d6840, 203 }; 
 	// Function /Script/SB.SBCheatManager.SBSetCustomFloat
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> USBCheatManager = { 0x26d6640, 204 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> SBSetCustomFloat = { 0x26d6640, 204 }; 
 	// Function /Script/SB.SBCheatManager.SBSetCustomBool
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26d6450, 205 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBSetCustomBool = { 0x26d6450, 205 }; 
 	// Function /Script/SB.SBCheatManager.SBSetCouponUserInfo
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString> USBCheatManager = { 0x26c9b00, 206 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString> SBSetCouponUserInfo = { 0x26c9b00, 206 }; 
 	// Function /Script/SB.SBCheatManager.SBSetCamBlend
-	constexpr static const FunctionPointer<USBCheatManager, void, const TEnumAsByte<EViewTargetBlendFunction>, const float> USBCheatManager = { 0x26e08c0, 207 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const TEnumAsByte<EViewTargetBlendFunction>, const float> SBSetCamBlend = { 0x26e08c0, 207 }; 
 	// Function /Script/SB.SBCheatManager.SBSetBuySB
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c03d0, 208 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetBuySB = { 0x26c03d0, 208 }; 
 	// Function /Script/SB.SBCheatManager.SBSetBuyNikkeDLC
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c0140, 209 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetBuyNikkeDLC = { 0x26c0140, 209 }; 
 	// Function /Script/SB.SBCheatManager.SBSetBuyNierDLC
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c0300, 210 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetBuyNierDLC = { 0x26c0300, 210 }; 
 	// Function /Script/SB.SBCheatManager.SBSetBodySuitLevel
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const uint32_t, const bool> USBCheatManager = { 0x26d9740, 211 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const uint32_t, const bool> SBSetBodySuitLevel = { 0x26d9740, 211 }; 
 	// Function /Script/SB.SBCheatManager.SBSetAsyncLoadingScreenDisable
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26cd810, 212 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetAsyncLoadingScreenDisable = { 0x26cd810, 212 }; 
 	// Function /Script/SB.SBCheatManager.SBSetAssetGroupCulture
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c37c0, 213 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBSetAssetGroupCulture = { 0x26c37c0, 213 }; 
 	// Function /Script/SB.SBCheatManager.SBSetAppRegionUP
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c36d0, 214 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetAppRegionUP = { 0x26c36d0, 214 }; 
 	// Function /Script/SB.SBCheatManager.SBSetAppRegionJP
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c36d0, 215 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetAppRegionJP = { 0x26c36d0, 215 }; 
 	// Function /Script/SB.SBCheatManager.SBSetAppRegionEP
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c36d0, 216 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSetAppRegionEP = { 0x26c36d0, 216 }; 
 	// Function /Script/SB.SBCheatManager.SBSetActivityAvailability
-	constexpr static const FunctionPointer<USBCheatManager, bool, const FName, const bool> USBCheatManager = { 0x26d1110, 217 }; 
+	constexpr static const FunctionPointer<USBCheatManager, bool, const FName, const bool> SBSetActivityAvailability = { 0x26d1110, 217 }; 
 	// Function /Script/SB.SBCheatManager.SBServerTravel
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26c5500, 218 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBServerTravel = { 0x26c5500, 218 }; 
 	// Function /Script/SB.SBCheatManager.SBServer
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c7750, 219 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBServer = { 0x26c7750, 219 }; 
 	// Function /Script/SB.SBCheatManager.SBSequenceMovie
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float> USBCheatManager = { 0x26c5800, 220 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float> SBSequenceMovie = { 0x26c5800, 220 }; 
 	// Function /Script/SB.SBCheatManager.SBSequenceAttachWidget
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool, const FString, const int32_t, const int32_t, const float, const float, const FString, const FString, const FString, const FString, const FString, const FString> USBCheatManager = { 0x26c09c0, 221 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool, const FString, const int32_t, const int32_t, const float, const float, const FString, const FString, const FString, const FString, const FString, const FString> SBSequenceAttachWidget = { 0x26c09c0, 221 }; 
 	// Function /Script/SB.SBCheatManager.SBSendPlayerSessionInviteName
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c5310, 222 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBSendPlayerSessionInviteName = { 0x26c5310, 222 }; 
 	// Function /Script/SB.SBCheatManager.SBSendPlayerSessionInviteIndex
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c5240, 223 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSendPlayerSessionInviteIndex = { 0x26c5240, 223 }; 
 	// Function /Script/SB.SBCheatManager.SBSendHelloToAWSLambda
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26ca5e0, 224 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSendHelloToAWSLambda = { 0x26ca5e0, 224 }; 
 	// Function /Script/SB.SBCheatManager.SBSelfiePhotoMode
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c4640, 225 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSelfiePhotoMode = { 0x26c4640, 225 }; 
 	// Function /Script/SB.SBCheatManager.SBSceErrorDialog
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 226 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSceErrorDialog = { 0x198eb40, 226 }; 
 	// Function /Script/SB.SBCheatManager.SBSaveToManualSaveSlot
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 227 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSaveToManualSaveSlot = { 0x198eb40, 227 }; 
 	// Function /Script/SB.SBCheatManager.SBSaveToAutoSaveSlot
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 228 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBSaveToAutoSaveSlot = { 0x198eb40, 228 }; 
 	// Function /Script/SB.SBCheatManager.SBSaveResetTrigger
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26be200, 229 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBSaveResetTrigger = { 0x26be200, 229 }; 
 	// Function /Script/SB.SBCheatManager.SBSaveObjectCount
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 230 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSaveObjectCount = { 0x11615e0, 230 }; 
 	// Function /Script/SB.SBCheatManager.SBSaveGameOption
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d27f0, 231 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSaveGameOption = { 0x26d27f0, 231 }; 
 	// Function /Script/SB.SBCheatManager.SBSaveGame
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 232 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBSaveGame = { 0x11615e0, 232 }; 
 	// Function /Script/SB.SBCheatManager.SBSaveEveryZone
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c30a0, 233 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBSaveEveryZone = { 0x26c30a0, 233 }; 
 	// Function /Script/SB.SBCheatManager.SBRunSpawnEvent
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e0790, 234 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBRunSpawnEvent = { 0x26e0790, 234 }; 
 	// Function /Script/SB.SBCheatManager.SBRunItemSpawnEvent
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e0660, 235 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBRunItemSpawnEvent = { 0x26e0660, 235 }; 
 	// Function /Script/SB.SBCheatManager.SBRunGameWorldEvent
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const FName> USBCheatManager = { 0x26efa90, 236 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const FName> SBRunGameWorldEvent = { 0x26efa90, 236 }; 
 	// Function /Script/SB.SBCheatManager.SBRunEventUIAction
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26dff30, 237 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBRunEventUIAction = { 0x26dff30, 237 }; 
 	// Function /Script/SB.SBCheatManager.SBRSToPC
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26e26b0, 238 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBRSToPC = { 0x26e26b0, 238 }; 
 	// Function /Script/SB.SBCheatManager.SBRSToPA
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26e26b0, 239 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBRSToPA = { 0x26e26b0, 239 }; 
 	// Function /Script/SB.SBCheatManager.SBRewardGroupDropSequentialArc
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float> USBCheatManager = { 0x26e4800, 240 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float> SBRewardGroupDropSequentialArc = { 0x26e4800, 240 }; 
 	// Function /Script/SB.SBCheatManager.SBRewardGroupDropRandomRange
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float> USBCheatManager = { 0x26e4ed0, 241 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float, const float> SBRewardGroupDropRandomRange = { 0x26e4ed0, 241 }; 
 	// Function /Script/SB.SBCheatManager.SBRewardGroupDropInven
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool> USBCheatManager = { 0x26e56c0, 242 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool> SBRewardGroupDropInven = { 0x26e56c0, 242 }; 
 	// Function /Script/SB.SBCheatManager.SBRewardGroupDropFormationPathLocation
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const FString, const float, const float, const float> USBCheatManager = { 0x26e3fc0, 243 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const FString, const float, const float, const float> SBRewardGroupDropFormationPathLocation = { 0x26e3fc0, 243 }; 
 	// Function /Script/SB.SBCheatManager.SBRewardGroupDropFormationPath
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const FString> USBCheatManager = { 0x26e44b0, 244 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const FString> SBRewardGroupDropFormationPath = { 0x26e44b0, 244 }; 
 	// Function /Script/SB.SBCheatManager.SBRewardGroupDrop
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const float> USBCheatManager = { 0x26e5830, 245 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const float> SBRewardGroupDrop = { 0x26e5830, 245 }; 
 	// Function /Script/SB.SBCheatManager.SBReturnToSinglePlay
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dc6b0, 246 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBReturnToSinglePlay = { 0x26dc6b0, 246 }; 
 	// Function /Script/SB.SBCheatManager.SBRetryNikkeStage
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cc9f0, 247 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBRetryNikkeStage = { 0x26cc9f0, 247 }; 
 	// Function /Script/SB.SBCheatManager.SBRestoreSkillPoint
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const FName> USBCheatManager = { 0x26d8f10, 248 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const FName> SBRestoreSkillPoint = { 0x26d8f10, 248 }; 
 	// Function /Script/SB.SBCheatManager.SBRestoreDeviceProfile
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cac00, 249 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBRestoreDeviceProfile = { 0x26cac00, 249 }; 
 	// Function /Script/SB.SBCheatManager.SBResourceCacheUpdate
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 250 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResourceCacheUpdate = { 0x11615e0, 250 }; 
 	// Function /Script/SB.SBCheatManager.SBResourceCacheSequenceList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 251 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResourceCacheSequenceList = { 0x11615e0, 251 }; 
 	// Function /Script/SB.SBCheatManager.SBResourceCacheManagerLog
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d6040, 252 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResourceCacheManagerLog = { 0x26d6040, 252 }; 
 	// Function /Script/SB.SBCheatManager.SBResourceCacheManagerEnable
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d6150, 253 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBResourceCacheManagerEnable = { 0x26d6150, 253 }; 
 	// Function /Script/SB.SBCheatManager.SBResourceCacheEnable
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 254 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBResourceCacheEnable = { 0x26a9510, 254 }; 
 	// Function /Script/SB.SBCheatManager.SBResetZone
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dc8a0, 255 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResetZone = { 0x26dc8a0, 255 }; 
 	// Function /Script/SB.SBCheatManager.SBResetTrainingRoom
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26de6a0, 256 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResetTrainingRoom = { 0x26de6a0, 256 }; 
 	// Function /Script/SB.SBCheatManager.SBResetRope
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c22d0, 257 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResetRope = { 0x26c22d0, 257 }; 
 	// Function /Script/SB.SBCheatManager.SBResetNoticeScreenSkip
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26be390, 258 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResetNoticeScreenSkip = { 0x26be390, 258 }; 
 	// Function /Script/SB.SBCheatManager.SBResetDifficultyAlias
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c8d50, 259 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResetDifficultyAlias = { 0x26c8d50, 259 }; 
 	// Function /Script/SB.SBCheatManager.SBResetCam
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e1a30, 260 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBResetCam = { 0x26e1a30, 260 }; 
 	// Function /Script/SB.SBCheatManager.SBRequestTargetZone
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName&, const FName&> USBCheatManager = { 0x26dddc0, 261 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName&, const FName&> SBRequestTargetZone = { 0x26dddc0, 261 }; 
 	// Function /Script/SB.SBCheatManager.SBRequestExit
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c3170, 262 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBRequestExit = { 0x26c3170, 262 }; 
 	// Function /Script/SB.SBCheatManager.SBRenderHair
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d9230, 263 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBRenderHair = { 0x26d9230, 263 }; 
 	// Function /Script/SB.SBCheatManager.SBRenderFace
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d9150, 264 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBRenderFace = { 0x26d9150, 264 }; 
 	// Function /Script/SB.SBCheatManager.SBRemoveSkillAll
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26de1c0, 265 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBRemoveSkillAll = { 0x26de1c0, 265 }; 
 	// Function /Script/SB.SBCheatManager.SBRemoveSkill
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26dfb20, 266 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBRemoveSkill = { 0x26dfb20, 266 }; 
 	// Function /Script/SB.SBCheatManager.SBRemovedWidgetFindReferences
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c42a0, 267 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBRemovedWidgetFindReferences = { 0x26c42a0, 267 }; 
 	// Function /Script/SB.SBCheatManager.SBReloadConfig
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e3740, 268 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBReloadConfig = { 0x26e3740, 268 }; 
 	// Function /Script/SB.SBCheatManager.SBRegisterPlayerSessionName
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c4e80, 269 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBRegisterPlayerSessionName = { 0x26c4e80, 269 }; 
 	// Function /Script/SB.SBCheatManager.SBRegisterPlayerSessionFriendIndex
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c4db0, 270 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBRegisterPlayerSessionFriendIndex = { 0x26c4db0, 270 }; 
 	// Function /Script/SB.SBCheatManager.SBRefreshWidgetViewportSize
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26be050, 271 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBRefreshWidgetViewportSize = { 0x26be050, 271 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestTrackOnOff
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e88c0, 272 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestTrackOnOff = { 0x26e88c0, 272 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestTrackingTargetFilterPrint
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8910, 273 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestTrackingTargetFilterPrint = { 0x26e8910, 273 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestRemoveAllQuest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26ea730, 274 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestRemoveAllQuest = { 0x26ea730, 274 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestPause
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26e8790, 275 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBQuestPause = { 0x26e8790, 275 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestFailed
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26ea8f0, 276 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBQuestFailed = { 0x26ea8f0, 276 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerTaskGroupDescriptionShow
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8a60, 277 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerTaskGroupDescriptionShow = { 0x26e8a60, 277 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerTaskGroupDescriptionHide
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8a40, 278 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerTaskGroupDescriptionHide = { 0x26e8a40, 278 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerTaskDescriptionShow
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8a20, 279 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerTaskDescriptionShow = { 0x26e8a20, 279 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerTaskDescriptionHide
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8a00, 280 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerTaskDescriptionHide = { 0x26e8a00, 280 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerShow
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8bf0, 281 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerShow = { 0x26e8bf0, 281 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerSetCompleteQuestVisible
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26e8930, 282 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBQuestDebuggerSetCompleteQuestVisible = { 0x26e8930, 282 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerQuestTitleShow
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8ae0, 283 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerQuestTitleShow = { 0x26e8ae0, 283 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerQuestTitleHide
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8ac0, 284 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerQuestTitleHide = { 0x26e8ac0, 284 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerQuestDescriptionShow
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8aa0, 285 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerQuestDescriptionShow = { 0x26e8aa0, 285 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerQuestDescriptionHide
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8a80, 286 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerQuestDescriptionHide = { 0x26e8a80, 286 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestDebuggerHide
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8b00, 287 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestDebuggerHide = { 0x26e8b00, 287 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestCompleteTaskGroup
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e8dc0, 288 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBQuestCompleteTaskGroup = { 0x26e8dc0, 288 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestCompleteTask
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e8cf0, 289 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBQuestCompleteTask = { 0x26e8cf0, 289 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestCompleteList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e88a0, 290 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQuestCompleteList = { 0x26e88a0, 290 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestComplete
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26eaa80, 291 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBQuestComplete = { 0x26eaa80, 291 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestAcquireReward
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26ea770, 292 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBQuestAcquireReward = { 0x26ea770, 292 }; 
 	// Function /Script/SB.SBCheatManager.SBQuestAcquire
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26eac10, 293 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBQuestAcquire = { 0x26eac10, 293 }; 
 	// Function /Script/SB.SBCheatManager.SBQueryPresence
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd840, 294 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQueryPresence = { 0x26bd840, 294 }; 
 	// Function /Script/SB.SBCheatManager.SBQueryAchievements
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd870, 295 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBQueryAchievements = { 0x26bd870, 295 }; 
 	// Function /Script/SB.SBCheatManager.SBPVDConnect
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c7ed0, 296 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPVDConnect = { 0x26c7ed0, 296 }; 
 	// Function /Script/SB.SBCheatManager.SBPushSoundMix
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d8c10, 297 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPushSoundMix = { 0x26d8c10, 297 }; 
 	// Function /Script/SB.SBCheatManager.SBPushSoundEvent
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float> USBCheatManager = { 0x26d8350, 298 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float> SBPushSoundEvent = { 0x26d8350, 298 }; 
 	// Function /Script/SB.SBCheatManager.SBProgressTrophy
-	constexpr static const FunctionPointer<USBCheatManager, bool, const FName, const uint32_t> USBCheatManager = { 0x26d0f80, 299 }; 
+	constexpr static const FunctionPointer<USBCheatManager, bool, const FName, const uint32_t> SBProgressTrophy = { 0x26d0f80, 299 }; 
 	// Function /Script/SB.SBCheatManager.SBProgressAllTrophy
-	constexpr static const FunctionPointer<USBCheatManager, bool> USBCheatManager = { 0x26d0e30, 300 }; 
+	constexpr static const FunctionPointer<USBCheatManager, bool> SBProgressAllTrophy = { 0x26d0e30, 300 }; 
 	// Function /Script/SB.SBCheatManager.SBProfilingUI
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 301 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBProfilingUI = { 0x11615e0, 301 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintWorldTimeSeconds
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f0390, 302 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintWorldTimeSeconds = { 0x26f0390, 302 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintUTCOffset
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bca50, 303 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintUTCOffset = { 0x26bca50, 303 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintSupportedWindowedscreenResolutions
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d2720, 304 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintSupportedWindowedscreenResolutions = { 0x26d2720, 304 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintSupportedFullscreenResolutions
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d2770, 305 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintSupportedFullscreenResolutions = { 0x26d2770, 305 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintSteamInputActive
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26beba0, 306 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintSteamInputActive = { 0x26beba0, 306 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintSoundVolume
-	constexpr static const FunctionPointer<USBCheatManager, void, const ESBSoundVolumeChannel, const ESBSoundVolumeControlType> USBCheatManager = { 0x26d84e0, 307 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const ESBSoundVolumeChannel, const ESBSoundVolumeControlType> SBPrintSoundVolume = { 0x26d84e0, 307 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintScreenSize
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd370, 308 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintScreenSize = { 0x26bd370, 308 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintSaveVersion
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e0a50, 309 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintSaveVersion = { 0x26e0a50, 309 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintPlayerCharacterInfo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f0480, 310 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintPlayerCharacterInfo = { 0x26f0480, 310 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintNewGamePlusCount
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8e90, 311 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintNewGamePlusCount = { 0x26e8e90, 311 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintLogLockOnPoint
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e5b20, 312 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintLogLockOnPoint = { 0x26e5b20, 312 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintLanguageDefaultCode
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f03f0, 313 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintLanguageDefaultCode = { 0x26f03f0, 313 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintKeyboardLayout
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bcc90, 314 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintKeyboardLayout = { 0x26bcc90, 314 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintHdrToneMapLuminance
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d2d80, 315 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintHdrToneMapLuminance = { 0x26d2d80, 315 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintGPUAdapterDedicatedMemoryUsage
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26be520, 316 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintGPUAdapterDedicatedMemoryUsage = { 0x26be520, 316 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintGameOptionDefaultValue
-	constexpr static const FunctionPointer<USBCheatManager, void, const ESBGameOptionType> USBCheatManager = { 0x26d2580, 317 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const ESBGameOptionType> SBPrintGameOptionDefaultValue = { 0x26d2580, 317 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintFixedFrameRate
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c6f20, 318 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintFixedFrameRate = { 0x26c6f20, 318 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintEquipLilyMeshAssetPath
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd2a0, 319 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintEquipLilyMeshAssetPath = { 0x26bd2a0, 319 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintEntitlementList
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d1580, 320 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPrintEntitlementList = { 0x26d1580, 320 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintCurrentLanguage
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f0460, 321 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintCurrentLanguage = { 0x26f0460, 321 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintBuildInfo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f04a0, 322 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintBuildInfo = { 0x26f04a0, 322 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintAvailableLanguages
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d2640, 323 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintAvailableLanguages = { 0x26d2640, 323 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintAppId
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 324 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintAppId = { 0x11615e0, 324 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintAllScreenSize
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd330, 325 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintAllScreenSize = { 0x26bd330, 325 }; 
 	// Function /Script/SB.SBCheatManager.SBPrintActiveVolume
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d71f0, 326 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPrintActiveVolume = { 0x26d71f0, 326 }; 
 	// Function /Script/SB.SBCheatManager.SBPopUpPlayGoDebugUI
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cc5f0, 327 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPopUpPlayGoDebugUI = { 0x26cc5f0, 327 }; 
 	// Function /Script/SB.SBCheatManager.SBPopSoundMix
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d89b0, 328 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPopSoundMix = { 0x26d89b0, 328 }; 
 	// Function /Script/SB.SBCheatManager.SBPointRectLightCastShadow
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d9cc0, 329 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPointRectLightCastShadow = { 0x26d9cc0, 329 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayVibration
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c64c0, 330 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayVibration = { 0x26c64c0, 330 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayTestSound
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> USBCheatManager = { 0x26c69c0, 331 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> SBPlayTestSound = { 0x26c69c0, 331 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayTestQuartzSound
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c6780, 332 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayTestQuartzSound = { 0x26c6780, 332 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayTest3dSound
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c68a0, 333 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayTest3dSound = { 0x26c68a0, 333 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayShow
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26ee4b0, 334 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayShow = { 0x26ee4b0, 334 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayLevelSeq
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const FString> USBCheatManager = { 0x26e1800, 335 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const FString> SBPlayLevelSeq = { 0x26e1800, 335 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayGoTest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 336 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayGoTest = { 0x11615e0, 336 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerUseSkill
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26ee6f0, 337 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBPlayerUseSkill = { 0x26ee6f0, 337 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerUngrabObject
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d8e80, 338 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerUngrabObject = { 0x26d8e80, 338 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerTransform
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26d7710, 339 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBPlayerTransform = { 0x26d7710, 339 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerSP
-	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t> USBCheatManager = { 0x26df660, 340 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t> SBPlayerSP = { 0x26df660, 340 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerShowMultiMapLevel
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26db470, 341 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerShowMultiMapLevel = { 0x26db470, 341 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerShowAchievementInfo
-	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t, const FString> USBCheatManager = { 0x26db0d0, 342 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t, const FString> SBPlayerShowAchievementInfo = { 0x26db0d0, 342 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerSetLevel
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t, const bool> USBCheatManager = { 0x26db580, 343 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t, const bool> SBPlayerSetLevel = { 0x26db580, 343 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerSetCameraLock
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26da6c0, 344 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPlayerSetCameraLock = { 0x26da6c0, 344 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerRevival
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8340, 345 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerRevival = { 0x26e8340, 345 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerResetPhysics
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool, const float> USBCheatManager = { 0x26c6040, 346 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool, const float> SBPlayerResetPhysics = { 0x26c6040, 346 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerRemoveAchievement
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26daac0, 347 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayerRemoveAchievement = { 0x26daac0, 347 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerRecreatePhysicsState
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c25a0, 348 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerRecreatePhysicsState = { 0x26c25a0, 348 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerRecoveryItems
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dcba0, 349 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerRecoveryItems = { 0x26dcba0, 349 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerReceiveAchievementReward
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26da900, 350 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayerReceiveAchievementReward = { 0x26da900, 350 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerProcessAchievementOnlyOne
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const int32_t> USBCheatManager = { 0x26dac90, 351 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const int32_t> SBPlayerProcessAchievementOnlyOne = { 0x26dac90, 351 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerMoveTo
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const bool, const bool, const bool, const int32_t, const float, const float> USBCheatManager = { 0x26dd570, 352 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const bool, const bool, const bool, const int32_t, const float, const float> SBPlayerMoveTo = { 0x26dd570, 352 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerMovementMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26dd430, 353 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayerMovementMode = { 0x26dd430, 353 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerMovementDisableDesireRotation
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26da7d0, 354 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPlayerMovementDisableDesireRotation = { 0x26da7d0, 354 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerMaxTachyGauge
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cbe30, 355 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerMaxTachyGauge = { 0x26cbe30, 355 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerMaterialChange
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c3ea0, 356 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBPlayerMaterialChange = { 0x26c3ea0, 356 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerLockOnSpeed
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float> USBCheatManager = { 0x26e7a30, 357 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float> SBPlayerLockOnSpeed = { 0x26e7a30, 357 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerLevelList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26db560, 358 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerLevelList = { 0x26db560, 358 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerJaliFace
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26ee9a0, 359 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPlayerJaliFace = { 0x26ee9a0, 359 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerItemRecharge
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26c5a40, 360 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBPlayerItemRecharge = { 0x26c5a40, 360 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerItemBucketList
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26e3780, 361 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPlayerItemBucketList = { 0x26e3780, 361 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerItemBucketItemRemove
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const int32_t> USBCheatManager = { 0x26e3a80, 362 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const int32_t> SBPlayerItemBucketItemRemove = { 0x26e3a80, 362 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerItemBucketItemConsume
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const int32_t> USBCheatManager = { 0x26e3850, 363 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const int32_t> SBPlayerItemBucketItemConsume = { 0x26e3850, 363 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerItemBucketItemAdd
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const int32_t, const bool> USBCheatManager = { 0x26e3cc0, 364 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const int32_t, const bool> SBPlayerItemBucketItemAdd = { 0x26e3cc0, 364 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerIsCompleteAchievement
-	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t, const FString> USBCheatManager = { 0x26db290, 365 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t, const FString> SBPlayerIsCompleteAchievement = { 0x26db290, 365 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerInputState
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool, const bool> USBCheatManager = { 0x26cb290, 366 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool, const bool> SBPlayerInputState = { 0x26cb290, 366 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerIncreaseMultiMapLevel
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26db490, 367 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBPlayerIncreaseMultiMapLevel = { 0x26db490, 367 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerHP
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26e0440, 368 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBPlayerHP = { 0x26e0440, 368 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerHintList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c7980, 369 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerHintList = { 0x26c7980, 369 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerFrontGrabObject
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d8ef0, 370 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerFrontGrabObject = { 0x26d8ef0, 370 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerForceTurn
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e85f0, 371 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerForceTurn = { 0x26e85f0, 371 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerEventTagClear
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c1d60, 372 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerEventTagClear = { 0x26c1d60, 372 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerEventTag
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c1e10, 373 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayerEventTag = { 0x26c1e10, 373 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerEquipItem
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool, const FString> USBCheatManager = { 0x26dd1b0, 374 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool, const FString> SBPlayerEquipItem = { 0x26dd1b0, 374 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerEnableExtraSprint
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d4350, 375 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPlayerEnableExtraSprint = { 0x26d4350, 375 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerCompleteAchievementOnlyOne
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26daf10, 376 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayerCompleteAchievementOnlyOne = { 0x26daf10, 376 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerCompleteAchievement
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26daf10, 377 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayerCompleteAchievement = { 0x26daf10, 377 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerChangeStance
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26ee880, 378 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayerChangeStance = { 0x26ee880, 378 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerChangeBulletAlias
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bd960, 379 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayerChangeBulletAlias = { 0x26bd960, 379 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerCameraInterpolMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const bool, const bool> USBCheatManager = { 0x26e1c50, 380 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const bool, const bool> SBPlayerCameraInterpolMode = { 0x26e1c50, 380 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerCameraFadeManualPriority
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float, const float> USBCheatManager = { 0x26d3e60, 381 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float, const float> SBPlayerCameraFadeManualPriority = { 0x26d3e60, 381 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerCameraFadeAutoPriority
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float, const float, const float, const float, const float> USBCheatManager = { 0x26d39e0, 382 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float, const float, const float, const float, const float> SBPlayerCameraFadeAutoPriority = { 0x26d39e0, 382 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerCameraFade
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> USBCheatManager = { 0x26d4150, 383 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> SBPlayerCameraFade = { 0x26d4150, 383 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerBurstGauge
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26e01e0, 384 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBPlayerBurstGauge = { 0x26e01e0, 384 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerBetaGauge
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26e0310, 385 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBPlayerBetaGauge = { 0x26e0310, 385 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerBattleState
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26db760, 386 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPlayerBattleState = { 0x26db760, 386 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayerAchievementList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26db450, 387 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPlayerAchievementList = { 0x26db450, 387 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayCustomBlendSpace
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26efc80, 388 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBPlayCustomBlendSpace = { 0x26efc80, 388 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayCustomAnimMeshSlotByTag
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const float, const float, const float, const float, const float, const bool, const int32_t, const bool, const float, const TEnumAsByte<ESBSkelMeshSlot>> USBCheatManager = { 0x26ec5b0, 389 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const float, const float, const float, const float, const float, const bool, const int32_t, const bool, const float, const TEnumAsByte<ESBSkelMeshSlot>> SBPlayCustomAnimMeshSlotByTag = { 0x26ec5b0, 389 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayCustomAnimMeshSlot
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const bool, const int32_t, const bool, const float, const TEnumAsByte<ESBSkelMeshSlot>> USBCheatManager = { 0x26ed350, 390 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const bool, const int32_t, const bool, const float, const TEnumAsByte<ESBSkelMeshSlot>> SBPlayCustomAnimMeshSlot = { 0x26ed350, 390 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayCustomAnimByTag
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const int32_t, const float, const float, const float, const float, const float, const bool, const int32_t> USBCheatManager = { 0x26ecd10, 391 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const int32_t, const float, const float, const float, const float, const float, const bool, const int32_t> SBPlayCustomAnimByTag = { 0x26ecd10, 391 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayCustomAnimByFolder
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bea40, 392 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayCustomAnimByFolder = { 0x26bea40, 392 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayCustomAnim
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const bool, const int32_t, const bool, const float, const int32_t> USBCheatManager = { 0x26edc20, 393 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float, const float, const float, const float, const float, const bool, const int32_t, const bool, const float, const int32_t> SBPlayCustomAnim = { 0x26edc20, 393 }; 
 	// Function /Script/SB.SBCheatManager.SBPlayCameraAnim
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26e21d0, 394 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBPlayCameraAnim = { 0x26e21d0, 394 }; 
 	// Function /Script/SB.SBCheatManager.SBPhotoModeTakeScreenshot
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bea00, 395 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPhotoModeTakeScreenshot = { 0x26bea00, 395 }; 
 	// Function /Script/SB.SBCheatManager.SBPhotoModeFacialAnimType
-	constexpr static const FunctionPointer<USBCheatManager, void, const TEnumAsByte<ESBPhotoModeFacialAnimType>> USBCheatManager = { 0x26bf0b0, 396 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const TEnumAsByte<ESBPhotoModeFacialAnimType>> SBPhotoModeFacialAnimType = { 0x26bf0b0, 396 }; 
 	// Function /Script/SB.SBCheatManager.SBPhotoModeFacialAnimPosition
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26befb0, 397 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBPhotoModeFacialAnimPosition = { 0x26befb0, 397 }; 
 	// Function /Script/SB.SBCheatManager.SBPhotoModeDebug
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26be1e0, 398 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPhotoModeDebug = { 0x26be1e0, 398 }; 
 	// Function /Script/SB.SBCheatManager.SBPhotoMode
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c4680, 399 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPhotoMode = { 0x26c4680, 399 }; 
 	// Function /Script/SB.SBCheatManager.SBPerformanceProfilerStop
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26da150, 400 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPerformanceProfilerStop = { 0x26da150, 400 }; 
 	// Function /Script/SB.SBCheatManager.SBPerformanceProfilerStartForLevelStream
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26da250, 401 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBPerformanceProfilerStartForLevelStream = { 0x26da250, 401 }; 
 	// Function /Script/SB.SBCheatManager.SBPerformanceProfilerStart
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> USBCheatManager = { 0x26da270, 402 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> SBPerformanceProfilerStart = { 0x26da270, 402 }; 
 	// Function /Script/SB.SBCheatManager.SBPerformanceProfilerMoveCamera
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26da500, 403 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBPerformanceProfilerMoveCamera = { 0x26da500, 403 }; 
 	// Function /Script/SB.SBCheatManager.SBPDODitherAlphaThreshold
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26c0050, 404 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBPDODitherAlphaThreshold = { 0x26c0050, 404 }; 
 	// Function /Script/SB.SBCheatManager.SBPauseAllSounds
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c6600, 405 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBPauseAllSounds = { 0x26c6600, 405 }; 
 	// Function /Script/SB.SBCheatManager.SBOverrideDeviceProfile
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26cac40, 406 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBOverrideDeviceProfile = { 0x26cac40, 406 }; 
 	// Function /Script/SB.SBCheatManager.SBOpenRequestBoard
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26e86c0, 407 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBOpenRequestBoard = { 0x26e86c0, 407 }; 
 	// Function /Script/SB.SBCheatManager.SBOpenLevel
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26be200, 408 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBOpenLevel = { 0x26be200, 408 }; 
 	// Function /Script/SB.SBCheatManager.SBOpenCredit
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool> USBCheatManager = { 0x26c2100, 409 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool> SBOpenCredit = { 0x26c2100, 409 }; 
 	// Function /Script/SB.SBCheatManager.SBNikkeMiniGameResultTest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26bd650, 410 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBNikkeMiniGameResultTest = { 0x26bd650, 410 }; 
 	// Function /Script/SB.SBCheatManager.SBNikkeMiniGameNextWaveUITest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd570, 411 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBNikkeMiniGameNextWaveUITest = { 0x26bd570, 411 }; 
 	// Function /Script/SB.SBCheatManager.SBNikkeMiniGameForceVictory
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd420, 412 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBNikkeMiniGameForceVictory = { 0x26bd420, 412 }; 
 	// Function /Script/SB.SBCheatManager.SBNikkeMiniGameDefenseGaugeTest
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26bd480, 413 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBNikkeMiniGameDefenseGaugeTest = { 0x26bd480, 413 }; 
 	// Function /Script/SB.SBCheatManager.SBNextChangeBody
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e7ee0, 414 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBNextChangeBody = { 0x26e7ee0, 414 }; 
 	// Function /Script/SB.SBCheatManager.SBNewGUID
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c1fb0, 415 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBNewGUID = { 0x26c1fb0, 415 }; 
 	// Function /Script/SB.SBCheatManager.SBMetaAIThink
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> USBCheatManager = { 0x26d07b0, 416 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> SBMetaAIThink = { 0x26d07b0, 416 }; 
 	// Function /Script/SB.SBCheatManager.SBMetaAISpecialBehaviorTag
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26d05c0, 417 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBMetaAISpecialBehaviorTag = { 0x26d05c0, 417 }; 
 	// Function /Script/SB.SBCheatManager.SBMetaAISetNodeIndex
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26d0370, 418 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBMetaAISetNodeIndex = { 0x26d0370, 418 }; 
 	// Function /Script/SB.SBCheatManager.SBMetaAIAlias
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26d06b0, 419 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBMetaAIAlias = { 0x26d06b0, 419 }; 
 	// Function /Script/SB.SBCheatManager.SBMessageBoxV3Text
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const int32_t> USBCheatManager = { 0x26d6c70, 420 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const int32_t> SBMessageBoxV3Text = { 0x26d6c70, 420 }; 
 	// Function /Script/SB.SBCheatManager.SBMessageBoxV3StringTable
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const bool, const int32_t> USBCheatManager = { 0x26d6ef0, 421 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const bool, const int32_t> SBMessageBoxV3StringTable = { 0x26d6ef0, 421 }; 
 	// Function /Script/SB.SBCheatManager.SBMeshStudioShowTest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd630, 422 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBMeshStudioShowTest = { 0x26bd630, 422 }; 
 	// Function /Script/SB.SBCheatManager.SBMemRecordStop
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c2800, 423 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBMemRecordStop = { 0x26c2800, 423 }; 
 	// Function /Script/SB.SBCheatManager.SBMemRecordStart
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const int32_t, const float> USBCheatManager = { 0x26c2870, 424 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const int32_t, const float> SBMemRecordStart = { 0x26c2870, 424 }; 
 	// Function /Script/SB.SBCheatManager.SBMaterialTest
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26d9bf0, 425 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBMaterialTest = { 0x26d9bf0, 425 }; 
 	// Function /Script/SB.SBCheatManager.SBMatchRequestWithName
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString> USBCheatManager = { 0x26df370, 426 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString> SBMatchRequestWithName = { 0x26df370, 426 }; 
 	// Function /Script/SB.SBCheatManager.SBMatchRequest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26df640, 427 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBMatchRequest = { 0x26df640, 427 }; 
 	// Function /Script/SB.SBCheatManager.SBManualSaveList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e17c0, 428 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBManualSaveList = { 0x26e17c0, 428 }; 
 	// Function /Script/SB.SBCheatManager.SBLuaCheat
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bea40, 429 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBLuaCheat = { 0x26bea40, 429 }; 
 	// Function /Script/SB.SBCheatManager.SBLookAtTargetTag
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FString, const FString, const float> USBCheatManager = { 0x26cbb30, 430 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FString, const FString, const float> SBLookAtTargetTag = { 0x26cbb30, 430 }; 
 	// Function /Script/SB.SBCheatManager.SBLogTickToTime
-	constexpr static const FunctionPointer<USBCheatManager, void, const int64_t> USBCheatManager = { 0x26c3500, 431 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int64_t> SBLogTickToTime = { 0x26c3500, 431 }; 
 	// Function /Script/SB.SBCheatManager.SBLogThreadCount
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bcc30, 432 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLogThreadCount = { 0x26bcc30, 432 }; 
 	// Function /Script/SB.SBCheatManager.SBLogShowDataContainsKey
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26cbfd0, 433 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBLogShowDataContainsKey = { 0x26cbfd0, 433 }; 
 	// Function /Script/SB.SBCheatManager.SBLogSaveData
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e0a70, 434 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBLogSaveData = { 0x26e0a70, 434 }; 
 	// Function /Script/SB.SBCheatManager.SBLogPlayerLocation
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dc880, 435 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLogPlayerLocation = { 0x26dc880, 435 }; 
 	// Function /Script/SB.SBCheatManager.SBLogPackageDependency
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26be200, 436 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBLogPackageDependency = { 0x26be200, 436 }; 
 	// Function /Script/SB.SBCheatManager.SBLogEnvState
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26dd550, 437 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLogEnvState = { 0x26dd550, 437 }; 
 	// Function /Script/SB.SBCheatManager.SBLogDLSSEstimatedVRAM
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26be090, 438 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLogDLSSEstimatedVRAM = { 0x26be090, 438 }; 
 	// Function /Script/SB.SBCheatManager.SBLogDirectoriesNeverCook
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 439 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLogDirectoriesNeverCook = { 0x11615e0, 439 }; 
 	// Function /Script/SB.SBCheatManager.SBLogDeviceProfileName
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cab80, 440 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLogDeviceProfileName = { 0x26cab80, 440 }; 
 	// Function /Script/SB.SBCheatManager.SBLogCVarValue
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26ca7d0, 441 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBLogCVarValue = { 0x26ca7d0, 441 }; 
 	// Function /Script/SB.SBCheatManager.SBLogAllVibrationComponent
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c62f0, 442 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBLogAllVibrationComponent = { 0x26c62f0, 442 }; 
 	// Function /Script/SB.SBCheatManager.SBLogAllAudioComponent
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c62d0, 443 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLogAllAudioComponent = { 0x26c62d0, 443 }; 
 	// Function /Script/SB.SBCheatManager.SBLogActiveInteraction
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e7c30, 444 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLogActiveInteraction = { 0x26e7c30, 444 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadSnapShot
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26e13a0, 445 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBLoadSnapShot = { 0x26e13a0, 445 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadShortcutData
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 446 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBLoadShortcutData = { 0x198eb40, 446 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadSaveData
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26cb800, 447 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBLoadSaveData = { 0x26cb800, 447 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadMap
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26eeb60, 448 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBLoadMap = { 0x26eeb60, 448 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadLevel
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26dc6f0, 449 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBLoadLevel = { 0x26dc6f0, 449 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadingScreenFadeOut
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const float> USBCheatManager = { 0x26d5330, 450 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const float> SBLoadingScreenFadeOut = { 0x26d5330, 450 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadingScreenFadeIn
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const float> USBCheatManager = { 0x26d5690, 451 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const float> SBLoadingScreenFadeIn = { 0x26d5690, 451 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadingScreenFadeAuto
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const float, const float, const float, const float> USBCheatManager = { 0x26d4ea0, 452 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const float, const float, const float, const float> SBLoadingScreenFadeAuto = { 0x26d4ea0, 452 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadingScreenAlpha
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26bf920, 453 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBLoadingScreenAlpha = { 0x26bf920, 453 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadGameOption
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d27c0, 454 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLoadGameOption = { 0x26d27c0, 454 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadFromShortcut
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26e1050, 455 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBLoadFromShortcut = { 0x26e1050, 455 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadFromManualSaveSlot
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e11e0, 456 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBLoadFromManualSaveSlot = { 0x26e11e0, 456 }; 
 	// Function /Script/SB.SBCheatManager.SBLoadFromAutoSaveSlot
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e12c0, 457 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBLoadFromAutoSaveSlot = { 0x26e12c0, 457 }; 
 	// Function /Script/SB.SBCheatManager.SBLLMRecordStop
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c2720, 458 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLLMRecordStop = { 0x26c2720, 458 }; 
 	// Function /Script/SB.SBCheatManager.SBLLMRecordStart
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26c2740, 459 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBLLMRecordStart = { 0x26c2740, 459 }; 
 	// Function /Script/SB.SBCheatManager.SBLineNotify
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26dbc30, 460 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBLineNotify = { 0x26dbc30, 460 }; 
 	// Function /Script/SB.SBCheatManager.SBLiftUpFish
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26d4c90, 461 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBLiftUpFish = { 0x26d4c90, 461 }; 
 	// Function /Script/SB.SBCheatManager.SBLeaveTrainingRoom
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26de6d0, 462 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBLeaveTrainingRoom = { 0x26de6d0, 462 }; 
 	// Function /Script/SB.SBCheatManager.SBJoinPlayerSession
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c5080, 463 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBJoinPlayerSession = { 0x26c5080, 463 }; 
 	// Function /Script/SB.SBCheatManager.SBJiraLoginUI
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c4370, 464 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBJiraLoginUI = { 0x26c4370, 464 }; 
 	// Function /Script/SB.SBCheatManager.SBJiraLogin
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26c4390, 465 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBJiraLogin = { 0x26c4390, 465 }; 
 	// Function /Script/SB.SBCheatManager.SBItemTableGroupPrint
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const int32_t> USBCheatManager = { 0x26dbed0, 466 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const int32_t> SBItemTableGroupPrint = { 0x26dbed0, 466 }; 
 	// Function /Script/SB.SBCheatManager.SBItemMustAcquisition
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bda80, 467 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBItemMustAcquisition = { 0x26bda80, 467 }; 
 	// Function /Script/SB.SBCheatManager.SBIsHeadphonePluggedIn
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d8330, 468 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBIsHeadphonePluggedIn = { 0x26d8330, 468 }; 
 	// Function /Script/SB.SBCheatManager.SBInvalidationRoot
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c2410, 469 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBInvalidationRoot = { 0x26c2410, 469 }; 
 	// Function /Script/SB.SBCheatManager.SBInputKeyMappingTest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bed60, 470 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBInputKeyMappingTest = { 0x26bed60, 470 }; 
 	// Function /Script/SB.SBCheatManager.SBInputKeyMappingSave
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bed40, 471 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBInputKeyMappingSave = { 0x26bed40, 471 }; 
 	// Function /Script/SB.SBCheatManager.SBInputKeyMappingRestore
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bed10, 472 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBInputKeyMappingRestore = { 0x26bed10, 472 }; 
 	// Function /Script/SB.SBCheatManager.SBInputKeyMappingForceRebuild
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bec20, 473 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBInputKeyMappingForceRebuild = { 0x26bec20, 473 }; 
 	// Function /Script/SB.SBCheatManager.SBInputBlockTimer
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const bool> USBCheatManager = { 0x26cb680, 474 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const bool> SBInputBlockTimer = { 0x26cb680, 474 }; 
 	// Function /Script/SB.SBCheatManager.SBInputBlockManual
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> USBCheatManager = { 0x26cb510, 475 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> SBInputBlockManual = { 0x26cb510, 475 }; 
 	// Function /Script/SB.SBCheatManager.SBIgnoreHintActivateZoneTrigger
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c7870, 476 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBIgnoreHintActivateZoneTrigger = { 0x26c7870, 476 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDViewportSize
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const int32_t> USBCheatManager = { 0x26bddc0, 477 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const int32_t> SBHUDViewportSize = { 0x26bddc0, 477 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDViewportPos
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const int32_t, const int32_t> USBCheatManager = { 0x26bdac0, 478 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const int32_t, const int32_t> SBHUDViewportPos = { 0x26bdac0, 478 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDSkillRefreshIcon
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c2680, 479 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBHUDSkillRefreshIcon = { 0x26c2680, 479 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDRefresh
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26cba60, 480 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBHUDRefresh = { 0x26cba60, 480 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDPlayerInfoSendWigetEvent
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d99e0, 481 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBHUDPlayerInfoSendWigetEvent = { 0x26d99e0, 481 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDPlayerInfoDetailToggle
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d99b0, 482 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBHUDPlayerInfoDetailToggle = { 0x26d99b0, 482 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDModeChange
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26d73d0, 483 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBHUDModeChange = { 0x26d73d0, 483 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDEnemyStatInfoDetailToggle
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d9980, 484 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBHUDEnemyStatInfoDetailToggle = { 0x26d9980, 484 }; 
 	// Function /Script/SB.SBCheatManager.SBHUDAspectRatio
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26be840, 485 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBHUDAspectRatio = { 0x26be840, 485 }; 
 	// Function /Script/SB.SBCheatManager.SBHideActor
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26be580, 486 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBHideActor = { 0x26be580, 486 }; 
 	// Function /Script/SB.SBCheatManager.SBHDRTextureRenderShow
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26bfc40, 487 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBHDRTextureRenderShow = { 0x26bfc40, 487 }; 
 	// Function /Script/SB.SBCheatManager.SBHDRTextureRenderHide
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x267db80, 488 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBHDRTextureRenderHide = { 0x267db80, 488 }; 
 	// Function /Script/SB.SBCheatManager.SBHDRTextureRefreshDPI
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bfc10, 489 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBHDRTextureRefreshDPI = { 0x26bfc10, 489 }; 
 	// Function /Script/SB.SBCheatManager.SBHDRContrastDetail
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26bf920, 490 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBHDRContrastDetail = { 0x26bf920, 490 }; 
 	// Function /Script/SB.SBCheatManager.SBHDRBrightnessDetail
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26bf920, 491 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBHDRBrightnessDetail = { 0x26bf920, 491 }; 
 	// Function /Script/SB.SBCheatManager.SBGWorldOrigin
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const int32_t, const int32_t> USBCheatManager = { 0x26dcc30, 492 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const int32_t, const int32_t> SBGWorldOrigin = { 0x26dcc30, 492 }; 
 	// Function /Script/SB.SBCheatManager.SBGetRewardFish
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const float> USBCheatManager = { 0x26d4ab0, 493 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const float> SBGetRewardFish = { 0x26d4ab0, 493 }; 
 	// Function /Script/SB.SBCheatManager.SBGetPublicIP
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c9e30, 494 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBGetPublicIP = { 0x26c9e30, 494 }; 
 	// Function /Script/SB.SBCheatManager.SBGetPhotoModeLightPresetData
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26bccb0, 495 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBGetPhotoModeLightPresetData = { 0x26bccb0, 495 }; 
 	// Function /Script/SB.SBCheatManager.SBGetPhotoModeLightLocation
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26bcef0, 496 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBGetPhotoModeLightLocation = { 0x26bcef0, 496 }; 
 	// Function /Script/SB.SBCheatManager.SBGetGameIntentInfo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c5710, 497 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBGetGameIntentInfo = { 0x26c5710, 497 }; 
 	// Function /Script/SB.SBCheatManager.SBGetFriendList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c56f0, 498 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBGetFriendList = { 0x26c56f0, 498 }; 
 	// Function /Script/SB.SBCheatManager.SBGetCouponUserInfo
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26c9250, 499 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBGetCouponUserInfo = { 0x26c9250, 499 }; 
 	// Function /Script/SB.SBCheatManager.SBGetCoupon
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString, const FString, const FString> USBCheatManager = { 0x26c9530, 500 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString, const FString, const FString> SBGetCoupon = { 0x26c9530, 500 }; 
 	// Function /Script/SB.SBCheatManager.SBGenerateSpawnGroupRuleFromZone
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c4b70, 501 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBGenerateSpawnGroupRuleFromZone = { 0x26c4b70, 501 }; 
 	// Function /Script/SB.SBCheatManager.SBGenerateSpawnGroupRule
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c4c90, 502 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBGenerateSpawnGroupRule = { 0x26c4c90, 502 }; 
 	// Function /Script/SB.SBCheatManager.SBGenerateMapResPosition
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const float, const float, const float, const float, const float, const float, const float, const int32_t> USBCheatManager = { 0x26eb150, 503 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const float, const float, const float, const float, const float, const float, const float, const int32_t> SBGenerateMapResPosition = { 0x26eb150, 503 }; 
 	// Function /Script/SB.SBCheatManager.SBGenerateCirclePack
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const float, const float, const float, const float, const float, const float, const float, const int32_t, const int32_t, const float, const float> USBCheatManager = { 0x26eb710, 504 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const float, const float, const float, const float, const float, const float, const float, const int32_t, const int32_t, const float, const float> SBGenerateCirclePack = { 0x26eb710, 504 }; 
 	// Function /Script/SB.SBCheatManager.SBGameUserSettings_StopBenchmark
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bf2c0, 505 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBGameUserSettings_StopBenchmark = { 0x26bf2c0, 505 }; 
 	// Function /Script/SB.SBCheatManager.SBGameUserSettings_SetPreset
-	constexpr static const FunctionPointer<USBCheatManager, void, const int64_t> USBCheatManager = { 0x26bf3a0, 506 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int64_t> SBGameUserSettings_SetPreset = { 0x26bf3a0, 506 }; 
 	// Function /Script/SB.SBCheatManager.SBGameUserSettings_Set
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const int64_t> USBCheatManager = { 0x26bf4d0, 507 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const int64_t> SBGameUserSettings_Set = { 0x26bf4d0, 507 }; 
 	// Function /Script/SB.SBCheatManager.SBGameUserSettings_RunBenchmark
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26bf2e0, 508 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBGameUserSettings_RunBenchmark = { 0x26bf2e0, 508 }; 
 	// Function /Script/SB.SBCheatManager.SBGameUserSettings_ResolutionScale
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26bf740, 509 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBGameUserSettings_ResolutionScale = { 0x26bf740, 509 }; 
 	// Function /Script/SB.SBCheatManager.SBGameUserSettings_HDDMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26bf840, 510 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBGameUserSettings_HDDMode = { 0x26bf840, 510 }; 
 	// Function /Script/SB.SBCheatManager.SBGameProgressSubQuest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const int32_t, const int32_t> USBCheatManager = { 0x26e9200, 511 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const int32_t, const int32_t> SBGameProgressSubQuest = { 0x26e9200, 511 }; 
 	// Function /Script/SB.SBCheatManager.SBGameProgressEpicQuest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const int32_t, const int32_t> USBCheatManager = { 0x26e95b0, 512 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const int32_t, const int32_t> SBGameProgressEpicQuest = { 0x26e95b0, 512 }; 
 	// Function /Script/SB.SBCheatManager.SBGameProgressCommand
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool, const FName, const int32_t> USBCheatManager = { 0x26e9810, 513 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool, const FName, const int32_t> SBGameProgressCommand = { 0x26e9810, 513 }; 
 	// Function /Script/SB.SBCheatManager.SBGamePauseTagListPrint
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 514 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBGamePauseTagListPrint = { 0x11615e0, 514 }; 
 	// Function /Script/SB.SBCheatManager.SBGamePaused
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26da080, 515 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBGamePaused = { 0x26da080, 515 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionSubtitleVisible
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d2420, 516 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBGameOptionSubtitleVisible = { 0x26d2420, 516 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionSetActiveHDRLuminanceController
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d1c70, 517 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBGameOptionSetActiveHDRLuminanceController = { 0x26d1c70, 517 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionResetNeedInitialSetup
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d1ad0, 518 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBGameOptionResetNeedInitialSetup = { 0x26d1ad0, 518 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionResetNeedInitialContentsSetup
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d1ba0, 519 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBGameOptionResetNeedInitialContentsSetup = { 0x26d1ba0, 519 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionMasterVolume
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26d22a0, 520 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBGameOptionMasterVolume = { 0x26d22a0, 520 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionKeyMappingReload
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d1aa0, 521 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBGameOptionKeyMappingReload = { 0x26d1aa0, 521 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionHUDVisible
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d1fc0, 522 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBGameOptionHUDVisible = { 0x26d1fc0, 522 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionContrast
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26d1e70, 523 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBGameOptionContrast = { 0x26d1e70, 523 }; 
 	// Function /Script/SB.SBCheatManager.SBGameOptionBGMVolume
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26d2120, 524 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBGameOptionBGMVolume = { 0x26d2120, 524 }; 
 	// Function /Script/SB.SBCheatManager.SBForceLOD
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c7140, 525 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBForceLOD = { 0x26c7140, 525 }; 
 	// Function /Script/SB.SBCheatManager.SBForceLag
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float> USBCheatManager = { 0x26d4450, 526 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float> SBForceLag = { 0x26d4450, 526 }; 
 	// Function /Script/SB.SBCheatManager.SBForceHitFish
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26d4d60, 527 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBForceHitFish = { 0x26d4d60, 527 }; 
 	// Function /Script/SB.SBCheatManager.SBForceHapticVibration
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c63b0, 528 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBForceHapticVibration = { 0x26c63b0, 528 }; 
 	// Function /Script/SB.SBCheatManager.SBForceGCActorPool
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d90c0, 529 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBForceGCActorPool = { 0x26d90c0, 529 }; 
 	// Function /Script/SB.SBCheatManager.SBForceGC
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d90f0, 530 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBForceGC = { 0x26d90f0, 530 }; 
 	// Function /Script/SB.SBCheatManager.SBForceEnsure
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 531 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBForceEnsure = { 0x11615e0, 531 }; 
 	// Function /Script/SB.SBCheatManager.SBForceCrash
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e8360, 532 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBForceCrash = { 0x26e8360, 532 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackWarpIssue
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bea40, 533 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBFeedbackWarpIssue = { 0x26bea40, 533 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackUMapRefresh
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 534 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBFeedbackUMapRefresh = { 0x11615e0, 534 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackUMapIssueMapChange
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26e26b0, 535 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBFeedbackUMapIssueMapChange = { 0x26e26b0, 535 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackUMapIssueCreate
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const int32_t> USBCheatManager = { 0x26e2c90, 536 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const int32_t> SBFeedbackUMapIssueCreate = { 0x26e2c90, 536 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackUMapIssueClose
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bea40, 537 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBFeedbackUMapIssueClose = { 0x26bea40, 537 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackOpenList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 538 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBFeedbackOpenList = { 0x11615e0, 538 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackIssueUpdate
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString, const int32_t, const int32_t> USBCheatManager = { 0x26e28c0, 539 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString, const int32_t, const int32_t> SBFeedbackIssueUpdate = { 0x26e28c0, 539 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackIssueRefresh
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bea40, 540 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBFeedbackIssueRefresh = { 0x26bea40, 540 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackCommentRemove
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26e26b0, 541 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBFeedbackCommentRemove = { 0x26e26b0, 541 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackCommentRefresh
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bea40, 542 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBFeedbackCommentRefresh = { 0x26bea40, 542 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackCommentEdit
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString> USBCheatManager = { 0x26e23c0, 543 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const FString> SBFeedbackCommentEdit = { 0x26e23c0, 543 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackCommentAdd
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26e26b0, 544 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBFeedbackCommentAdd = { 0x26e26b0, 544 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackCloseList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 545 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBFeedbackCloseList = { 0x11615e0, 545 }; 
 	// Function /Script/SB.SBCheatManager.SBFeedbackChangeNextState
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 546 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBFeedbackChangeNextState = { 0x11615e0, 546 }; 
 	// Function /Script/SB.SBCheatManager.SBFailedQuest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26ea8f0, 547 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBFailedQuest = { 0x26ea8f0, 547 }; 
 	// Function /Script/SB.SBCheatManager.SBExitNikkeStage
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cc990, 548 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBExitNikkeStage = { 0x26cc990, 548 }; 
 	// Function /Script/SB.SBCheatManager.SBEquipBodySuit
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26d9b00, 549 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBEquipBodySuit = { 0x26d9b00, 549 }; 
 	// Function /Script/SB.SBCheatManager.SBEnvState
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> USBCheatManager = { 0x26e7c50, 550 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> SBEnvState = { 0x26e7c50, 550 }; 
 	// Function /Script/SB.SBCheatManager.SBEnvControlVolControlOverride
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26c7d10, 551 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBEnvControlVolControlOverride = { 0x26c7d10, 551 }; 
 	// Function /Script/SB.SBCheatManager.SBEntitlementInfinityLoading
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d14c0, 552 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBEntitlementInfinityLoading = { 0x26d14c0, 552 }; 
 	// Function /Script/SB.SBCheatManager.SBEnterWorld
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName&> USBCheatManager = { 0x26ddf50, 553 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName&> SBEnterWorld = { 0x26ddf50, 553 }; 
 	// Function /Script/SB.SBCheatManager.SBEnterTrainingRoom
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26de700, 554 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBEnterTrainingRoom = { 0x26de700, 554 }; 
 	// Function /Script/SB.SBCheatManager.SBEnterNikkeStage
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> USBCheatManager = { 0x26cca50, 555 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> SBEnterNikkeStage = { 0x26cca50, 555 }; 
 	// Function /Script/SB.SBCheatManager.SBEnteredByActivityFakeClear
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 556 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBEnteredByActivityFakeClear = { 0x11615e0, 556 }; 
 	// Function /Script/SB.SBCheatManager.SBEnteredByActivityFake
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 557 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBEnteredByActivityFake = { 0x11615e0, 557 }; 
 	// Function /Script/SB.SBCheatManager.SBEndActivity
-	constexpr static const FunctionPointer<USBCheatManager, bool, const FName> USBCheatManager = { 0x26d1290, 558 }; 
+	constexpr static const FunctionPointer<USBCheatManager, bool, const FName> SBEndActivity = { 0x26d1290, 558 }; 
 	// Function /Script/SB.SBCheatManager.SBEnableAreaVolume
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName&, const bool> USBCheatManager = { 0x26cb110, 559 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName&, const bool> SBEnableAreaVolume = { 0x26cb110, 559 }; 
 	// Function /Script/SB.SBCheatManager.SBDumpPackageList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c3990, 560 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBDumpPackageList = { 0x26c3990, 560 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseVibrationMode
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26cdc60, 561 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBDualSenseVibrationMode = { 0x26cdc60, 561 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseVibration
-	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char> USBCheatManager = { 0x26cdea0, 562 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char> SBDualSenseVibration = { 0x26cdea0, 562 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseToggleAdaptiveTriggerStateLog
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 563 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBDualSenseToggleAdaptiveTriggerStateLog = { 0x198eb40, 563 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseToggleAdaptiveTriggerPositionLog
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x198eb40, 564 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBDualSenseToggleAdaptiveTriggerPositionLog = { 0x198eb40, 564 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseCheckUpdate
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 565 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBDualSenseCheckUpdate = { 0x11615e0, 565 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseCheckAudioSupport
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cdc40, 566 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBDualSenseCheckAudioSupport = { 0x26cdc40, 566 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseApplyTriggerEffectWithData
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26cdad0, 567 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBDualSenseApplyTriggerEffectWithData = { 0x26cdad0, 567 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseAdaptiveTriggerWeapon
-	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const int32_t> USBCheatManager = { 0x26cf5e0, 568 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const int32_t> SBDualSenseAdaptiveTriggerWeapon = { 0x26cf5e0, 568 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseAdaptiveTriggerVibration
-	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const int32_t> USBCheatManager = { 0x26cf290, 569 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const int32_t> SBDualSenseAdaptiveTriggerVibration = { 0x26cf290, 569 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseAdaptiveTriggerSlopeFeedback
-	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const char, const int32_t> USBCheatManager = { 0x26ce850, 570 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const char, const int32_t> SBDualSenseAdaptiveTriggerSlopeFeedback = { 0x26ce850, 570 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseAdaptiveTriggerMultiplePositionVibration
-	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const char, const char, const char, const char, const char, const char, const char, const char, const int32_t> USBCheatManager = { 0x26ce1a0, 571 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const char, const char, const char, const char, const char, const char, const char, const char, const int32_t> SBDualSenseAdaptiveTriggerMultiplePositionVibration = { 0x26ce1a0, 571 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseAdaptiveTriggerMultiplePositionFeedback
-	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const char, const char, const char, const char, const char, const char, const char, const int32_t> USBCheatManager = { 0x26cec60, 572 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const char, const char, const char, const char, const char, const char, const char, const char, const int32_t> SBDualSenseAdaptiveTriggerMultiplePositionFeedback = { 0x26cec60, 572 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseAdaptiveTriggerFeedback
-	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const int32_t> USBCheatManager = { 0x26cf960, 573 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const char, const char, const int32_t> SBDualSenseAdaptiveTriggerFeedback = { 0x26cf960, 573 }; 
 	// Function /Script/SB.SBCheatManager.SBDualSenseAdaptiveTriggerClear
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26ce0b0, 574 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBDualSenseAdaptiveTriggerClear = { 0x26ce0b0, 574 }; 
 	// Function /Script/SB.SBCheatManager.SBDroneSpotLightCastShadow
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26d74a0, 575 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBDroneSpotLightCastShadow = { 0x26d74a0, 575 }; 
 	// Function /Script/SB.SBCheatManager.SBDrawTestCurve
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float> USBCheatManager = { 0x26ec2e0, 576 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float> SBDrawTestCurve = { 0x26ec2e0, 576 }; 
 	// Function /Script/SB.SBCheatManager.SBDrawPlayerMove
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26ec4d0, 577 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBDrawPlayerMove = { 0x26ec4d0, 577 }; 
 	// Function /Script/SB.SBCheatManager.SBDoesPakExist
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26bcb20, 578 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBDoesPakExist = { 0x26bcb20, 578 }; 
 	// Function /Script/SB.SBCheatManager.SBDiffCaptureObjectList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 579 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBDiffCaptureObjectList = { 0x11615e0, 579 }; 
 	// Function /Script/SB.SBCheatManager.SBDetachPlayerEquipment
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26ebd70, 580 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBDetachPlayerEquipment = { 0x26ebd70, 580 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugTheaterPlay
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e7960, 581 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBDebugTheaterPlay = { 0x26e7960, 581 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugSave
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 582 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBDebugSave = { 0x26a9510, 582 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugManualSaveData
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e0b80, 583 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBDebugManualSaveData = { 0x26e0b80, 583 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugLogStatLLMFull
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool> USBCheatManager = { 0x26c3d60, 584 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool> SBDebugLogStatLLMFull = { 0x26c3d60, 584 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugLogOnSyncLoadPackage
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 585 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBDebugLogOnSyncLoadPackage = { 0x26a9510, 585 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugLogOnSyncLoadingFlush
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 586 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBDebugLogOnSyncLoadingFlush = { 0x26a9510, 586 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugLogOnAsyncLoadPackage
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 587 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBDebugLogOnAsyncLoadPackage = { 0x26a9510, 587 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugLogOnAsyncLoadingFlush
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 588 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBDebugLogOnAsyncLoadingFlush = { 0x26a9510, 588 }; 
 	// Function /Script/SB.SBCheatManager.SBDebugAutoSaveData
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26e0de0, 589 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBDebugAutoSaveData = { 0x26e0de0, 589 }; 
 	// Function /Script/SB.SBCheatManager.SBCurrentWorldInfo
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d9bd0, 590 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBCurrentWorldInfo = { 0x26d9bd0, 590 }; 
 	// Function /Script/SB.SBCheatManager.SBCurrentViewTarget
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26ef860, 591 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBCurrentViewTarget = { 0x26ef860, 591 }; 
 	// Function /Script/SB.SBCheatManager.SBCurrentDeviceSteamDeck
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 592 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBCurrentDeviceSteamDeck = { 0x26a9510, 592 }; 
 	// Function /Script/SB.SBCheatManager.SBCreditDebugCloseAllow
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c1fd0, 593 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBCreditDebugCloseAllow = { 0x26c1fd0, 593 }; 
 	// Function /Script/SB.SBCheatManager.SBCreatePlayerSession
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c5160, 594 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBCreatePlayerSession = { 0x26c5160, 594 }; 
 	// Function /Script/SB.SBCheatManager.SBCreateItemRange
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t, const uint32_t, const float, const float, const float, const float> USBCheatManager = { 0x26e62a0, 595 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t, const uint32_t, const float, const float, const float, const float> SBCreateItemRange = { 0x26e62a0, 595 }; 
 	// Function /Script/SB.SBCheatManager.SBCreateItemArc
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t, const uint32_t, const float, const float, const int32_t, const float, const float, const float, const float, const float, const float, const float> USBCheatManager = { 0x26e5b40, 596 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t, const uint32_t, const float, const float, const int32_t, const float, const float, const float, const float, const float, const float, const float> SBCreateItemArc = { 0x26e5b40, 596 }; 
 	// Function /Script/SB.SBCheatManager.SBCreateItem
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t, const uint32_t, const float, const float, const float, const float, const float> USBCheatManager = { 0x26e66b0, 597 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t, const uint32_t, const float, const float, const float, const float, const float> SBCreateItem = { 0x26e66b0, 597 }; 
 	// Function /Script/SB.SBCheatManager.SBCreateCharacter
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const float> USBCheatManager = { 0x26ebff0, 598 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const float, const float, const float, const float> SBCreateCharacter = { 0x26ebff0, 598 }; 
 	// Function /Script/SB.SBCheatManager.SBConnectDedicatedServer
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26dc460, 599 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBConnectDedicatedServer = { 0x26dc460, 599 }; 
 	// Function /Script/SB.SBCheatManager.SBConfigOverrideString
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26d6a20, 600 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBConfigOverrideString = { 0x26d6a20, 600 }; 
 	// Function /Script/SB.SBCheatManager.SBConfigOverrideInt
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const int32_t> USBCheatManager = { 0x26d6840, 601 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const int32_t> SBConfigOverrideInt = { 0x26d6840, 601 }; 
 	// Function /Script/SB.SBCheatManager.SBConfigOverrideFloatArray
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> USBCheatManager = { 0x26d6250, 602 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString> SBConfigOverrideFloatArray = { 0x26d6250, 602 }; 
 	// Function /Script/SB.SBCheatManager.SBConfigOverrideFloat
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> USBCheatManager = { 0x26d6640, 603 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const float> SBConfigOverrideFloat = { 0x26d6640, 603 }; 
 	// Function /Script/SB.SBCheatManager.SBConfigOverrideBool
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> USBCheatManager = { 0x26d6450, 604 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const bool> SBConfigOverrideBool = { 0x26d6450, 604 }; 
 	// Function /Script/SB.SBCheatManager.SBConditionTest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d5c90, 605 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBConditionTest = { 0x26d5c90, 605 }; 
 	// Function /Script/SB.SBCheatManager.SBConditionGroupTest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d5b70, 606 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBConditionGroupTest = { 0x26d5b70, 606 }; 
 	// Function /Script/SB.SBCheatManager.SBCompleteQuest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool> USBCheatManager = { 0x26eace0, 607 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool> SBCompleteQuest = { 0x26eace0, 607 }; 
 	// Function /Script/SB.SBCheatManager.SBCompleteNikkeStage
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 608 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBCompleteNikkeStage = { 0x26a9510, 608 }; 
 	// Function /Script/SB.SBCheatManager.SBCompleteHint
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26c7af0, 609 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBCompleteHint = { 0x26c7af0, 609 }; 
 	// Function /Script/SB.SBCheatManager.SBColorVisionDeficiency
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const float, const bool, const bool> USBCheatManager = { 0x26c8ad0, 610 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const float, const bool, const bool> SBColorVisionDeficiency = { 0x26c8ad0, 610 }; 
 	// Function /Script/SB.SBCheatManager.SBClearFixedEntitlement
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c7f80, 611 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBClearFixedEntitlement = { 0x26c7f80, 611 }; 
 	// Function /Script/SB.SBCheatManager.SBClearDebugLog
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c22f0, 612 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBClearDebugLog = { 0x26c22f0, 612 }; 
 	// Function /Script/SB.SBCheatManager.SBClearCaptureObjectList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 613 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBClearCaptureObjectList = { 0x11615e0, 613 }; 
 	// Function /Script/SB.SBCheatManager.SBClearACPool
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c26a0, 614 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBClearACPool = { 0x26c26a0, 614 }; 
 	// Function /Script/SB.SBCheatManager.SBCheckTrialVersion
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 615 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBCheckTrialVersion = { 0x11615e0, 615 }; 
 	// Function /Script/SB.SBCheatManager.SBCheckPlayGoDebug
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26cc0a0, 616 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBCheckPlayGoDebug = { 0x26cc0a0, 616 }; 
 	// Function /Script/SB.SBCheatManager.SBCheckChunkSize
-	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t> USBCheatManager = { 0x26cc1c0, 617 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t> SBCheckChunkSize = { 0x26cc1c0, 617 }; 
 	// Function /Script/SB.SBCheatManager.SBCheckChunkProgress
-	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t> USBCheatManager = { 0x26cc370, 618 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t> SBCheckChunkProgress = { 0x26cc370, 618 }; 
 	// Function /Script/SB.SBCheatManager.SBCheckChunkLocation
-	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t> USBCheatManager = { 0x26cc1c0, 619 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const uint32_t> SBCheckChunkLocation = { 0x26cc1c0, 619 }; 
 	// Function /Script/SB.SBCheatManager.SBCheckAvaiableLocationFromLineCheck
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const float, const float, const float, const float> USBCheatManager = { 0x26d9310, 620 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const float, const float, const float, const float, const float> SBCheckAvaiableLocationFromLineCheck = { 0x26d9310, 620 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatTableCommand
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bf1a0, 621 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBCheatTableCommand = { 0x26bf1a0, 621 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatProgressSubQuestNewGamePlusMinMax
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const int32_t> USBCheatManager = { 0x26e9cc0, 622 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const int32_t> SBCheatProgressSubQuestNewGamePlusMinMax = { 0x26e9cc0, 622 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatProgressSubQuestMinMax
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> USBCheatManager = { 0x26e9ed0, 623 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> SBCheatProgressSubQuestMinMax = { 0x26e9ed0, 623 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatProgressSubQuestCommand
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool, const FName, const int32_t> USBCheatManager = { 0x26e9a50, 624 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool, const FName, const int32_t> SBCheatProgressSubQuestCommand = { 0x26e9a50, 624 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatProgressSubQuest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26ea060, 625 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBCheatProgressSubQuest = { 0x26ea060, 625 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatProgressQuestNewGamePlusMinMax
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const int32_t> USBCheatManager = { 0x26ea160, 626 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName, const int32_t> SBCheatProgressQuestNewGamePlusMinMax = { 0x26ea160, 626 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatProgressQuestNewGamePlus
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> USBCheatManager = { 0x26ea530, 627 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const FName> SBCheatProgressQuestNewGamePlus = { 0x26ea530, 627 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatProgressQuestMinMax
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> USBCheatManager = { 0x26ea3f0, 628 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> SBCheatProgressQuestMinMax = { 0x26ea3f0, 628 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatProgressQuest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26be200, 629 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBCheatProgressQuest = { 0x26be200, 629 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatGroupLoop
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> USBCheatManager = { 0x26c5d10, 630 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> SBCheatGroupLoop = { 0x26c5d10, 630 }; 
 	// Function /Script/SB.SBCheatManager.SBCheatGroup
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26c5e60, 631 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBCheatGroup = { 0x26c5e60, 631 }; 
 	// Function /Script/SB.SBCheatManager.SBCharacterSetting
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const int32_t> USBCheatManager = { 0x26e9020, 632 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t, const int32_t> SBCharacterSetting = { 0x26e9020, 632 }; 
 	// Function /Script/SB.SBCheatManager.SBCharacterDespawnFromTag
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26c1c40, 633 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBCharacterDespawnFromTag = { 0x26c1c40, 633 }; 
 	// Function /Script/SB.SBCheatManager.SBChangeWorld
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26de050, 634 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBChangeWorld = { 0x26de050, 634 }; 
 	// Function /Script/SB.SBCheatManager.SBChangeRule
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26d7640, 635 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBChangeRule = { 0x26d7640, 635 }; 
 	// Function /Script/SB.SBCheatManager.SBChangeMesh
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const FName, const FName> USBCheatManager = { 0x26e7f70, 636 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t, const FName, const FName> SBChangeMesh = { 0x26e7f70, 636 }; 
 	// Function /Script/SB.SBCheatManager.SBChangeFace
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e8140, 637 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBChangeFace = { 0x26e8140, 637 }; 
 	// Function /Script/SB.SBCheatManager.SBChangeBody
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e8230, 638 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBChangeBody = { 0x26e8230, 638 }; 
 	// Function /Script/SB.SBCheatManager.SBCaptureObjectList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 639 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBCaptureObjectList = { 0x11615e0, 639 }; 
 	// Function /Script/SB.SBCheatManager.SBCameraFOV
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26e1ab0, 640 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBCameraFOV = { 0x26e1ab0, 640 }; 
 	// Function /Script/SB.SBCheatManager.SBBossKillInfinity
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> USBCheatManager = { 0x26bfe10, 641 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const float> SBBossKillInfinity = { 0x26bfe10, 641 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeUnlockStageReset
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 642 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeUnlockStageReset = { 0x11615e0, 642 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeUnlockAllStage
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 643 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeUnlockAllStage = { 0x11615e0, 643 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeUnlockAllPreset
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 644 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeUnlockAllPreset = { 0x11615e0, 644 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeUnlockAllMode
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 645 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeUnlockAllMode = { 0x11615e0, 645 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeUnlockAll
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 646 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeUnlockAll = { 0x11615e0, 646 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeResetAllPreset
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 647 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeResetAllPreset = { 0x11615e0, 647 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeResetAllMode
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 648 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeResetAllMode = { 0x11615e0, 648 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeResetAll
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 649 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeResetAll = { 0x11615e0, 649 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeRecordResetStage
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bea40, 650 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBBossChallengeRecordResetStage = { 0x26bea40, 650 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeRecordReset
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 651 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeRecordReset = { 0x11615e0, 651 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengePrintBestRecord
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bef90, 652 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengePrintBestRecord = { 0x26bef90, 652 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeExit
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bef00, 653 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeExit = { 0x26bef00, 653 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallengeCompleteAllStage
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x11615e0, 654 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBBossChallengeCompleteAllStage = { 0x11615e0, 654 }; 
 	// Function /Script/SB.SBCheatManager.SBBossChallenge
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName&, const int32_t, const int32_t> USBCheatManager = { 0x26ddb90, 655 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName&, const int32_t, const int32_t> SBBossChallenge = { 0x26ddb90, 655 }; 
 	// Function /Script/SB.SBCheatManager.SBBoneToBone
-	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const int32_t> USBCheatManager = { 0x26efd80, 656 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float, const float, const int32_t> SBBoneToBone = { 0x26efd80, 656 }; 
 	// Function /Script/SB.SBCheatManager.SBBlockLevelStreaming
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26c3b00, 657 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBBlockLevelStreaming = { 0x26c3b00, 657 }; 
 	// Function /Script/SB.SBCheatManager.SBBackupTest
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c6c50, 658 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBBackupTest = { 0x26c6c50, 658 }; 
 	// Function /Script/SB.SBCheatManager.SBBackupDelete
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c6b80, 659 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBBackupDelete = { 0x26c6b80, 659 }; 
 	// Function /Script/SB.SBCheatManager.SBAutoSaveList
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26e17e0, 660 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBAutoSaveList = { 0x26e17e0, 660 }; 
 	// Function /Script/SB.SBCheatManager.SBAutoMemReportStop
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26c2a80, 661 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBAutoMemReportStop = { 0x26c2a80, 661 }; 
 	// Function /Script/SB.SBCheatManager.SBAutoMemReportStart
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26c2ad0, 662 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBAutoMemReportStart = { 0x26c2ad0, 662 }; 
 	// Function /Script/SB.SBCheatManager.SBAutoLoginWithOnlineIdentity
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26bd810, 663 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBAutoLoginWithOnlineIdentity = { 0x26bd810, 663 }; 
 	// Function /Script/SB.SBCheatManager.SBAudioHRTFEnabledForAllEnable
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d7cf0, 664 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBAudioHRTFEnabledForAllEnable = { 0x26d7cf0, 664 }; 
 	// Function /Script/SB.SBCheatManager.SBAudioHRTFEnabledForAllDisable
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d7c30, 665 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBAudioHRTFEnabledForAllDisable = { 0x26d7c30, 665 }; 
 	// Function /Script/SB.SBCheatManager.SBAudio3DMixdownPassthroughEnable
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d7b40, 666 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBAudio3DMixdownPassthroughEnable = { 0x26d7b40, 666 }; 
 	// Function /Script/SB.SBCheatManager.SBAudio3DMixdownPassthroughDisable
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26d7a50, 667 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBAudio3DMixdownPassthroughDisable = { 0x26d7a50, 667 }; 
 	// Function /Script/SB.SBCheatManager.SBAttenuationVisualize
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool> USBCheatManager = { 0x26a9510, 668 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool> SBAttenuationVisualize = { 0x26a9510, 668 }; 
 	// Function /Script/SB.SBCheatManager.SBAttachPlayerEquipment
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26ebeb0, 669 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBAttachPlayerEquipment = { 0x26ebeb0, 669 }; 
 	// Function /Script/SB.SBCheatManager.SBAsyncLoadingScreenStop
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26cd8e0, 670 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBAsyncLoadingScreenStop = { 0x26cd8e0, 670 }; 
 	// Function /Script/SB.SBCheatManager.SBAsyncLoadingScreenPlay
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26cd9c0, 671 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBAsyncLoadingScreenPlay = { 0x26cd9c0, 671 }; 
 	// Function /Script/SB.SBCheatManager.SBArcEventSpawn
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c24b0, 672 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> SBArcEventSpawn = { 0x26c24b0, 672 }; 
 	// Function /Script/SB.SBCheatManager.SBApplyEffectMe
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26e2ff0, 673 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBApplyEffectMe = { 0x26e2ff0, 673 }; 
 	// Function /Script/SB.SBCheatManager.SBApplyEffect
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> USBCheatManager = { 0x26e30c0, 674 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const int32_t> SBApplyEffect = { 0x26e30c0, 674 }; 
 	// Function /Script/SB.SBCheatManager.SBAppFunc
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool> USBCheatManager = { 0x26c1a90, 675 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool> SBAppFunc = { 0x26c1a90, 675 }; 
 	// Function /Script/SB.SBCheatManager.SBAnimSequenceGetTimeFromPos
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const float, const float, const float> USBCheatManager = { 0x26db8b0, 676 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const FString, const float, const float, const float> SBAnimSequenceGetTimeFromPos = { 0x26db8b0, 676 }; 
 	// Function /Script/SB.SBCheatManager.SBAnimSequenceBake
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26bea40, 677 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBAnimSequenceBake = { 0x26bea40, 677 }; 
 	// Function /Script/SB.SBCheatManager.SBAIMovePath
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t> USBCheatManager = { 0x26e7da0, 678 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const uint32_t> SBAIMovePath = { 0x26e7da0, 678 }; 
 	// Function /Script/SB.SBCheatManager.SBAdjustSoundVolume
-	constexpr static const FunctionPointer<USBCheatManager, void, const ESBSoundVolumeChannel, const float, const ESBSoundVolumeControlType> USBCheatManager = { 0x26d8640, 679 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const ESBSoundVolumeChannel, const float, const ESBSoundVolumeControlType> SBAdjustSoundVolume = { 0x26d8640, 679 }; 
 	// Function /Script/SB.SBCheatManager.SBAddMaterialParamTest
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26ef470, 680 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SBAddMaterialParamTest = { 0x26ef470, 680 }; 
 	// Function /Script/SB.SBCheatManager.SBAddFixedEntitlement
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d17f0, 681 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBAddFixedEntitlement = { 0x26d17f0, 681 }; 
 	// Function /Script/SB.SBCheatManager.SBAddEntitlement
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26d1920, 682 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBAddEntitlement = { 0x26d1920, 682 }; 
 	// Function /Script/SB.SBCheatManager.SBAddDebugMessageFromStringTable
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const TEnumAsByte<ESBLocalize>> USBCheatManager = { 0x26ef4e0, 683 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString, const TEnumAsByte<ESBLocalize>> SBAddDebugMessageFromStringTable = { 0x26ef4e0, 683 }; 
 	// Function /Script/SB.SBCheatManager.SBAddDebugMessage
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26ef710, 684 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBAddDebugMessage = { 0x26ef710, 684 }; 
 	// Function /Script/SB.SBCheatManager.SBActorTickDistance
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26bf920, 685 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBActorTickDistance = { 0x26bf920, 685 }; 
 	// Function /Script/SB.SBCheatManager.SBActorRenderDistance
-	constexpr static const FunctionPointer<USBCheatManager, void, const float> USBCheatManager = { 0x26e0110, 686 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const float> SBActorRenderDistance = { 0x26e0110, 686 }; 
 	// Function /Script/SB.SBCheatManager.SBActorInfo
-	constexpr static const FunctionPointer<USBCheatManager, void, const FString> USBCheatManager = { 0x26cafd0, 687 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FString> SBActorInfo = { 0x26cafd0, 687 }; 
 	// Function /Script/SB.SBCheatManager.SBActiveCamp
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26c7470, 688 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBActiveCamp = { 0x26c7470, 688 }; 
 	// Function /Script/SB.SBCheatManager.SBActivateHint
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26c7c00, 689 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBActivateHint = { 0x26c7c00, 689 }; 
 	// Function /Script/SB.SBCheatManager.SBAcquireSkillAll
-	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool, const bool> USBCheatManager = { 0x26de240, 690 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const bool, const bool, const bool> SBAcquireSkillAll = { 0x26de240, 690 }; 
 	// Function /Script/SB.SBCheatManager.SBAcquireSkill
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool, const bool> USBCheatManager = { 0x26dfc80, 691 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName, const bool, const bool> SBAcquireSkill = { 0x26dfc80, 691 }; 
 	// Function /Script/SB.SBCheatManager.SBAcquireQuest
-	constexpr static const FunctionPointer<USBCheatManager, void, const FName> USBCheatManager = { 0x26eac10, 692 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const FName> SBAcquireQuest = { 0x26eac10, 692 }; 
 	// Function /Script/SB.SBCheatManager.SB720p
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26f0010, 693 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SB720p = { 0x26f0010, 693 }; 
 	// Function /Script/SB.SBCheatManager.SB2160p
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26eff50, 694 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SB2160p = { 0x26eff50, 694 }; 
 	// Function /Script/SB.SBCheatManager.SB1440p
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26eff90, 695 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SB1440p = { 0x26eff90, 695 }; 
 	// Function /Script/SB.SBCheatManager.SB1080p
-	constexpr static const FunctionPointer<USBCheatManager, void> USBCheatManager = { 0x26effd0, 696 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void> SB1080p = { 0x26effd0, 696 }; 
 	// Function /Script/SB.SBCheatManager.ProfilePoint_F02
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c4a80, 697 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> ProfilePoint_F02 = { 0x26c4a80, 697 }; 
 	// Function /Script/SB.SBCheatManager.ProfilePoint_F01
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c4990, 698 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> ProfilePoint_F01 = { 0x26c4990, 698 }; 
 	// Function /Script/SB.SBCheatManager.ProfilePoint_E05
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c46c0, 699 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> ProfilePoint_E05 = { 0x26c46c0, 699 }; 
 	// Function /Script/SB.SBCheatManager.ProfilePoint_E03
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c47b0, 700 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> ProfilePoint_E03 = { 0x26c47b0, 700 }; 
 	// Function /Script/SB.SBCheatManager.ProfilePoint_C05
-	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> USBCheatManager = { 0x26c48a0, 701 }; 
+	constexpr static const FunctionPointer<USBCheatManager, void, const int32_t> ProfilePoint_C05 = { 0x26c48a0, 701 }; 
 };
 
 /// Class /Script/SB.SBCheckFileNameLengthCommandlet
@@ -16203,142 +16191,141 @@ public:
 	unsigned char                                      UnknownData11_5[0x5B];                                      // 0x05D5   (0x005B)  MISSED
 	TMap<ESBUIInputAxisType, FSBUserWidgetInputBindInfo> PuzzleInputInfoMap;                                       // 0x0630   (0x0050)  
 
-
 	/// Functions
 	// Function /Script/SB.SBUserWidget.SetTickActive
-	constexpr static const FunctionPointer<USBUserWidget, void, const bool> USBUserWidget = { 0x2823b10, 0 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const bool> SetTickActive = { 0x2823b10, 0 }; 
 	// Function /Script/SB.SBUserWidget.SetEnableAutoDestroy
-	constexpr static const FunctionPointer<USBUserWidget, void, const bool> USBUserWidget = { 0x2822920, 1 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const bool> SetEnableAutoDestroy = { 0x2822920, 1 }; 
 	// Function /Script/SB.SBUserWidget.SendWidgetInputEvent
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const TEnumAsByte<EInputEvent>, const TEnumAsByte<ESBUILogicType>> USBUserWidget = { 0x2822630, 2 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const TEnumAsByte<EInputEvent>, const TEnumAsByte<ESBUILogicType>> SendWidgetInputEvent = { 0x2822630, 2 }; 
 	// Function /Script/SB.SBUserWidget.SelectItemToListView
-	constexpr static const FunctionPointer<USBUserWidget, void, const UObject*, const TEnumAsByte<ESBUILogicType>> USBUserWidget = { 0x2823690, 3 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const UObject*, const TEnumAsByte<ESBUILogicType>> SelectItemToListView = { 0x2823690, 3 }; 
 	// Function /Script/SB.SBUserWidget.RestoreFocusToListView
-	constexpr static const FunctionPointer<USBUserWidget, void, const UListView*, const UObject*> USBUserWidget = { 0x2822a00, 4 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const UListView*, const UObject*> RestoreFocusToListView = { 0x2822a00, 4 }; 
 	// Function /Script/SB.SBUserWidget.RequestWidgetFocus
-	constexpr static const FunctionPointer<USBUserWidget, void, const UWidget*> USBUserWidget = { 0x28262a0, 5 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const UWidget*> RequestWidgetFocus = { 0x28262a0, 5 }; 
 	// Function /Script/SB.SBUserWidget.RemoveDynamicChildUserWidget
-	constexpr static const FunctionPointer<USBUserWidget, void, const USBUserWidget*> USBUserWidget = { 0x2823c10, 6 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const USBUserWidget*> RemoveDynamicChildUserWidget = { 0x2823c10, 6 }; 
 	// Function /Script/SB.SBUserWidget.RemoveChildSBUserWidget
-	constexpr static const FunctionPointer<USBUserWidget, void, const USBUserWidget*> USBUserWidget = { 0x2824570, 7 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const USBUserWidget*> RemoveChildSBUserWidget = { 0x2824570, 7 }; 
 	// Function /Script/SB.SBUserWidget.OnWidgetFocusRestore
-	constexpr static const FunctionPointer<USBUserWidget, bool> USBUserWidget = { 0x2822600, 8 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool> OnWidgetFocusRestore = { 0x2822600, 8 }; 
 	// Function /Script/SB.SBUserWidget.OnInputPuzzleRightAxisY
-	constexpr static const FunctionPointer<USBUserWidget, void, const float> USBUserWidget = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const float> OnInputPuzzleRightAxisY = { 0x2bbb090, 9 }; 
 	// Function /Script/SB.SBUserWidget.OnInputPuzzleRightAxisX
-	constexpr static const FunctionPointer<USBUserWidget, void, const float> USBUserWidget = { 0x2bbb090, 10 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const float> OnInputPuzzleRightAxisX = { 0x2bbb090, 10 }; 
 	// Function /Script/SB.SBUserWidget.OnInputPuzzleLeftAxisY
-	constexpr static const FunctionPointer<USBUserWidget, void, const float> USBUserWidget = { 0x2bbb090, 11 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const float> OnInputPuzzleLeftAxisY = { 0x2bbb090, 11 }; 
 	// Function /Script/SB.SBUserWidget.OnInputPuzzleLeftAxisX
-	constexpr static const FunctionPointer<USBUserWidget, void, const float> USBUserWidget = { 0x2bbb090, 12 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const float> OnInputPuzzleLeftAxisX = { 0x2bbb090, 12 }; 
 	// Function /Script/SB.SBUserWidget.OnExternalUIChange
-	constexpr static const FunctionPointer<USBUserWidget, void, const bool, const bool> USBUserWidget = { 0x2bbb090, 13 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const bool, const bool> OnExternalUIChange = { 0x2bbb090, 13 }; 
 	// Function /Script/SB.SBUserWidget.NotifyReleaseToListView
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UObject*, const TEnumAsByte<ESBUILogicType>> USBUserWidget = { 0x2822ea0, 14 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UObject*, const TEnumAsByte<ESBUILogicType>> NotifyReleaseToListView = { 0x2822ea0, 14 }; 
 	// Function /Script/SB.SBUserWidget.NotifyPressToListView
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UObject*, const TEnumAsByte<ESBUILogicType>, const bool> USBUserWidget = { 0x28230b0, 15 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UObject*, const TEnumAsByte<ESBUILogicType>, const bool> NotifyPressToListView = { 0x28230b0, 15 }; 
 	// Function /Script/SB.SBUserWidget.NotifyDoubleClickToListView
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UObject*, const TEnumAsByte<ESBUILogicType>, const bool> USBUserWidget = { 0x2823390, 16 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UObject*, const TEnumAsByte<ESBUILogicType>, const bool> NotifyDoubleClickToListView = { 0x2823390, 16 }; 
 	// Function /Script/SB.SBUserWidget.NotifyClientRunEvent
-	constexpr static const FunctionPointer<USBUserWidget, void, const TEnumAsByte<ESBZoneEventType>, const FName> USBUserWidget = { 0x2825460, 17 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const TEnumAsByte<ESBZoneEventType>, const FName> NotifyClientRunEvent = { 0x2825460, 17 }; 
 	// Function /Script/SB.SBUserWidget.NotifyClickToListView
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UObject*, const TEnumAsByte<ESBUILogicType>, const bool> USBUserWidget = { 0x2823390, 18 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UObject*, const TEnumAsByte<ESBUILogicType>, const bool> NotifyClickToListView = { 0x2823390, 18 }; 
 	// Function /Script/SB.SBUserWidget.NotifyBlueprint
-	constexpr static const FunctionPointer<USBUserWidget, void, const FString> USBUserWidget = { 0x2825710, 19 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FString> NotifyBlueprint = { 0x2825710, 19 }; 
 	// Function /Script/SB.SBUserWidget.LoadBrushAsyncResourceImageWidgets
-	constexpr static const FunctionPointer<USBUserWidget, void> USBUserWidget = { 0x2823a70, 20 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void> LoadBrushAsyncResourceImageWidgets = { 0x2823a70, 20 }; 
 	// Function /Script/SB.SBUserWidget.LastFocusActive
-	constexpr static const FunctionPointer<USBUserWidget, bool, const bool> USBUserWidget = { 0x2825fc0, 21 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const bool> LastFocusActive = { 0x2825fc0, 21 }; 
 	// Function /Script/SB.SBUserWidget.KeyReleased
-	constexpr static const FunctionPointer<USBUserWidget, bool, const FKey> USBUserWidget = { 0x2824b50, 22 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const FKey> KeyReleased = { 0x2824b50, 22 }; 
 	// Function /Script/SB.SBUserWidget.KeyPressed
-	constexpr static const FunctionPointer<USBUserWidget, bool, const FKey> USBUserWidget = { 0x2824d80, 23 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const FKey> KeyPressed = { 0x2824d80, 23 }; 
 	// Function /Script/SB.SBUserWidget.IsVisiblityParent
-	constexpr static const FunctionPointer<USBUserWidget, bool, const bool> USBUserWidget = { 0x2826600, 24 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const bool> IsVisiblityParent = { 0x2826600, 24 }; 
 	// Function /Script/SB.SBUserWidget.IsTickActive
-	constexpr static const FunctionPointer<USBUserWidget, bool> USBUserWidget = { 0x2823bf0, 25 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool> IsTickActive = { 0x2823bf0, 25 }; 
 	// Function /Script/SB.SBUserWidget.IsSameParentGroupFoucs
-	constexpr static const FunctionPointer<USBUserWidget, bool, const USBUserWidget*, const FName> USBUserWidget = { 0x28260b0, 26 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const USBUserWidget*, const FName> IsSameParentGroupFoucs = { 0x28260b0, 26 }; 
 	// Function /Script/SB.SBUserWidget.IsManagedParentGroupFocus
-	constexpr static const FunctionPointer<USBUserWidget, bool> USBUserWidget = { 0x2826260, 27 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool> IsManagedParentGroupFocus = { 0x2826260, 27 }; 
 	// Function /Script/SB.SBUserWidget.IsKeyDown
-	constexpr static const FunctionPointer<USBUserWidget, bool, const FKey> USBUserWidget = { 0x2824950, 28 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const FKey> IsKeyDown = { 0x2824950, 28 }; 
 	// Function /Script/SB.SBUserWidget.IsFocusSBUserWidget
-	constexpr static const FunctionPointer<USBUserWidget, bool> USBUserWidget = { 0x2825e60, 29 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool> IsFocusSBUserWidget = { 0x2825e60, 29 }; 
 	// Function /Script/SB.SBUserWidget.IsAutoDestroy
-	constexpr static const FunctionPointer<USBUserWidget, bool> USBUserWidget = { 0x2822900, 30 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool> IsAutoDestroy = { 0x2822900, 30 }; 
 	// Function /Script/SB.SBUserWidget.InvalidationRootWindow
-	constexpr static const FunctionPointer<USBUserWidget, void> USBUserWidget = { 0x26c2410, 31 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void> InvalidationRootWindow = { 0x26c2410, 31 }; 
 	// Function /Script/SB.SBUserWidget.InputWidgetUnbind
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const TEnumAsByte<EInputEvent>, const USBUserWidget*> USBUserWidget = { 0x28259f0, 32 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const TEnumAsByte<EInputEvent>, const USBUserWidget*> InputWidgetUnbind = { 0x28259f0, 32 }; 
 	// Function /Script/SB.SBUserWidget.InputWidgetBind
-	constexpr static const FunctionPointer<USBUserWidget, bool, const USBUserWidget*, const FName, const int32_t, const TEnumAsByte<EInputEvent>> USBUserWidget = { 0x2825be0, 33 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const USBUserWidget*, const FName, const int32_t, const TEnumAsByte<EInputEvent>> InputWidgetBind = { 0x2825be0, 33 }; 
 	// Function /Script/SB.SBUserWidget.HasFocusActive
-	constexpr static const FunctionPointer<USBUserWidget, bool, const bool> USBUserWidget = { 0x2825ed0, 34 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const bool> HasFocusActive = { 0x2825ed0, 34 }; 
 	// Function /Script/SB.SBUserWidget.GetUserWidgetFromTileView
-	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*, const UTileView*, const UObject*> USBUserWidget = { 0x2824240, 35 }; 
+	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*, const UTileView*, const UObject*> GetUserWidgetFromTileView = { 0x2824240, 35 }; 
 	// Function /Script/SB.SBUserWidget.GetUserWidgetFromListView
-	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*, const UListView*, const UObject*> USBUserWidget = { 0x2824240, 36 }; 
+	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*, const UListView*, const UObject*> GetUserWidgetFromListView = { 0x2824240, 36 }; 
 	// Function /Script/SB.SBUserWidget.GetTextureStyleSetKey
-	constexpr static const FunctionPointer<USBUserWidget, UTexture2D*, const USBTextureStyleSetData*, const FKey, const TEnumAsByte<ESBTextureStyleType>> USBUserWidget = { 0x2824f80, 37 }; 
+	constexpr static const FunctionPointer<USBUserWidget, UTexture2D*, const USBTextureStyleSetData*, const FKey, const TEnumAsByte<ESBTextureStyleType>> GetTextureStyleSetKey = { 0x2824f80, 37 }; 
 	// Function /Script/SB.SBUserWidget.GetTextureStyleSetAction
-	constexpr static const FunctionPointer<USBUserWidget, UTexture2D*, const USBTextureStyleSetData*, const FName, const TEnumAsByte<ESBTextureStyleType>> USBUserWidget = { 0x2825250, 38 }; 
+	constexpr static const FunctionPointer<USBUserWidget, UTexture2D*, const USBTextureStyleSetData*, const FName, const TEnumAsByte<ESBTextureStyleType>> GetTextureStyleSetAction = { 0x2825250, 38 }; 
 	// Function /Script/SB.SBUserWidget.GetSBNavigation
-	constexpr static const FunctionPointer<USBUserWidget, UWidget*, const EUINavigation> USBUserWidget = { 0x2826380, 39 }; 
+	constexpr static const FunctionPointer<USBUserWidget, UWidget*, const EUINavigation> GetSBNavigation = { 0x2826380, 39 }; 
 	// Function /Script/SB.SBUserWidget.GetRightStickVector
-	constexpr static const FunctionPointer<USBUserWidget, FVector2D> USBUserWidget = { 0x2824020, 40 }; 
+	constexpr static const FunctionPointer<USBUserWidget, FVector2D> GetRightStickVector = { 0x2824020, 40 }; 
 	// Function /Script/SB.SBUserWidget.GetRenderOpacityParent
-	constexpr static const FunctionPointer<USBUserWidget, float> USBUserWidget = { 0x28264a0, 41 }; 
+	constexpr static const FunctionPointer<USBUserWidget, float> GetRenderOpacityParent = { 0x28264a0, 41 }; 
 	// Function /Script/SB.SBUserWidget.GetLeftStickVector
-	constexpr static const FunctionPointer<USBUserWidget, FVector2D> USBUserWidget = { 0x2824130, 42 }; 
+	constexpr static const FunctionPointer<USBUserWidget, FVector2D> GetLeftStickVector = { 0x2824130, 42 }; 
 	// Function /Script/SB.SBUserWidget.GenerateEventObserverNameKey
-	constexpr static const FunctionPointer<USBUserWidget, FName, const FName, const FName, const FString> USBUserWidget = { 0x28266f0, 43 }; 
+	constexpr static const FunctionPointer<USBUserWidget, FName, const FName, const FName, const FString> GenerateEventObserverNameKey = { 0x28266f0, 43 }; 
 	// Function /Script/SB.SBUserWidget.FoundParentWidgetHasUILogicType
-	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*> USBUserWidget = { 0x2824520, 44 }; 
+	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*> FoundParentWidgetHasUILogicType = { 0x2824520, 44 }; 
 	// Function /Script/SB.SBUserWidget.FoundFirstFocusWidget
-	constexpr static const FunctionPointer<USBUserWidget, UWidget*> USBUserWidget = { 0x2826470, 45 }; 
+	constexpr static const FunctionPointer<USBUserWidget, UWidget*> FoundFirstFocusWidget = { 0x2826470, 45 }; 
 	// Function /Script/SB.SBUserWidget.FindWidgetEventObserverNameEventTag
-	constexpr static const FunctionPointer<USBUserWidget, USBUserWidgetEventObserver*, const FName> USBUserWidget = { 0x2826960, 46 }; 
+	constexpr static const FunctionPointer<USBUserWidget, USBUserWidgetEventObserver*, const FName> FindWidgetEventObserverNameEventTag = { 0x2826960, 46 }; 
 	// Function /Script/SB.SBUserWidget.FindParentSBUserWidget
-	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*, const UWidget*, const TEnumAsByte<ESBUILogicType>> USBUserWidget = { 0x2823840, 47 }; 
+	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*, const UWidget*, const TEnumAsByte<ESBUILogicType>> FindParentSBUserWidget = { 0x2823840, 47 }; 
 	// Function /Script/SB.SBUserWidget.EventWidgetPaused
-	constexpr static const FunctionPointer<USBUserWidget, void, const bool> USBUserWidget = { 0x2bbb090, 48 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const bool> EventWidgetPaused = { 0x2bbb090, 48 }; 
 	// Function /Script/SB.SBUserWidget.EventWidgetGroupFocusDeactive
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const USBUserWidget*> USBUserWidget = { 0x2bbb090, 49 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const USBUserWidget*> EventWidgetGroupFocusDeactive = { 0x2bbb090, 49 }; 
 	// Function /Script/SB.SBUserWidget.EventWidgetGroupFocusChanged
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const USBUserWidget*, const FName, const USBUserWidget*> USBUserWidget = { 0x2bbb090, 50 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const USBUserWidget*, const FName, const USBUserWidget*> EventWidgetGroupFocusChanged = { 0x2bbb090, 50 }; 
 	// Function /Script/SB.SBUserWidget.EventWidgetGroupFocusActive
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const USBUserWidget*> USBUserWidget = { 0x2bbb090, 51 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const USBUserWidget*> EventWidgetGroupFocusActive = { 0x2bbb090, 51 }; 
 	// Function /Script/SB.SBUserWidget.EventWidgetFocusDeactive
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UWidget*, const USBUserWidget*, const FName, const UWidget*> USBUserWidget = { 0x2bbb090, 52 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UWidget*, const USBUserWidget*, const FName, const UWidget*> EventWidgetFocusDeactive = { 0x2bbb090, 52 }; 
 	// Function /Script/SB.SBUserWidget.EventWidgetFocusActive
-	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UWidget*> USBUserWidget = { 0x2bbb090, 53 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FName, const UWidget*> EventWidgetFocusActive = { 0x2bbb090, 53 }; 
 	// Function /Script/SB.SBUserWidget.EventTileViewObjectUpdate
-	constexpr static const FunctionPointer<USBUserWidget, void, const UObject*> USBUserWidget = { 0x2bbb090, 54 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const UObject*> EventTileViewObjectUpdate = { 0x2bbb090, 54 }; 
 	// Function /Script/SB.SBUserWidget.EventReleaseWidget
-	constexpr static const FunctionPointer<USBUserWidget, void> USBUserWidget = { 0x2bbb090, 55 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void> EventReleaseWidget = { 0x2bbb090, 55 }; 
 	// Function /Script/SB.SBUserWidget.EventNotification
-	constexpr static const FunctionPointer<USBUserWidget, void, const FString> USBUserWidget = { 0x2bbb090, 56 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const FString> EventNotification = { 0x2bbb090, 56 }; 
 	// Function /Script/SB.SBUserWidget.EventListViewObjectUpdate
-	constexpr static const FunctionPointer<USBUserWidget, void, const UObject*> USBUserWidget = { 0x2bbb090, 57 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const UObject*> EventListViewObjectUpdate = { 0x2bbb090, 57 }; 
 	// Function /Script/SB.SBUserWidget.EventInitWidget
-	constexpr static const FunctionPointer<USBUserWidget, void> USBUserWidget = { 0x2bbb090, 58 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void> EventInitWidget = { 0x2bbb090, 58 }; 
 	// Function /Script/SB.SBUserWidget.EventFocusActivate
-	constexpr static const FunctionPointer<USBUserWidget, void, const bool> USBUserWidget = { 0x2bbb090, 59 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const bool> EventFocusActivate = { 0x2bbb090, 59 }; 
 	// Function /Script/SB.SBUserWidget.EventFirstWidgetFocus
-	constexpr static const FunctionPointer<USBUserWidget, void> USBUserWidget = { 0x2bbb090, 60 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void> EventFirstWidgetFocus = { 0x2bbb090, 60 }; 
 	// Function /Script/SB.SBUserWidget.CreateDynamicChildUserWidget
-	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*, const UClass*, const UPanelWidget*> USBUserWidget = { 0x2823d00, 61 }; 
+	constexpr static const FunctionPointer<USBUserWidget, USBUserWidget*, const UClass*, const UPanelWidget*> CreateDynamicChildUserWidget = { 0x2823d00, 61 }; 
 	// Function /Script/SB.SBUserWidget.ConsumeNotifyBlueprint
-	constexpr static const FunctionPointer<USBUserWidget, bool, const FString> USBUserWidget = { 0x2825610, 62 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const FString> ConsumeNotifyBlueprint = { 0x2825610, 62 }; 
 	// Function /Script/SB.SBUserWidget.ConsumeInputEvent
-	constexpr static const FunctionPointer<USBUserWidget, bool, const USBUserWidget*, const FName, const TEnumAsByte<EInputEvent>> USBUserWidget = { 0x2825800, 63 }; 
+	constexpr static const FunctionPointer<USBUserWidget, bool, const USBUserWidget*, const FName, const TEnumAsByte<EInputEvent>> ConsumeInputEvent = { 0x2825800, 63 }; 
 	// Function /Script/SB.SBUserWidget.CloseSelf
-	constexpr static const FunctionPointer<USBUserWidget, void> USBUserWidget = { 0x2729f80, 64 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void> CloseSelf = { 0x2729f80, 64 }; 
 	// Function /Script/SB.SBUserWidget.ClearBrushAsyncResourceImageWidgets
-	constexpr static const FunctionPointer<USBUserWidget, void> USBUserWidget = { 0x28239d0, 65 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void> ClearBrushAsyncResourceImageWidgets = { 0x28239d0, 65 }; 
 	// Function /Script/SB.SBUserWidget.AddChildSBUserWidget
-	constexpr static const FunctionPointer<USBUserWidget, void, const USBUserWidget*, const bool> USBUserWidget = { 0x2824680, 66 }; 
+	constexpr static const FunctionPointer<USBUserWidget, void, const USBUserWidget*, const bool> AddChildSBUserWidget = { 0x2824680, 66 }; 
 };
 
 /// Class /Script/SB.SBComboBoxItemWidget
@@ -16348,16 +16335,15 @@ class USBComboBoxItemWidget : public USBUserWidget
 public:
 	unsigned char                                      UnknownData01_1[0x40];                                      // 0x0680   (0x0040)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBComboBoxItemWidget.SelectItem
-	constexpr static const FunctionPointer<USBComboBoxItemWidget, void> USBComboBoxItemWidget = { 0x26fbbb0, 0 }; 
+	constexpr static const FunctionPointer<USBComboBoxItemWidget, void> SelectItem = { 0x26fbbb0, 0 }; 
 	// Function /Script/SB.SBComboBoxItemWidget.OnItemFocusSelectionInactive
-	constexpr static const FunctionPointer<USBComboBoxItemWidget, void, const USBUIComboBoxBaseDataObject*> USBComboBoxItemWidget = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBComboBoxItemWidget, void, const USBUIComboBoxBaseDataObject*> OnItemFocusSelectionInactive = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBComboBoxItemWidget.OnItemFocusSelectionActive
-	constexpr static const FunctionPointer<USBComboBoxItemWidget, void, const USBUIComboBoxBaseDataObject*> USBComboBoxItemWidget = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBComboBoxItemWidget, void, const USBUIComboBoxBaseDataObject*> OnItemFocusSelectionActive = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBComboBoxItemWidget.OnItemDataChanged
-	constexpr static const FunctionPointer<USBComboBoxItemWidget, void, const USBUIComboBoxBaseDataObject*> USBComboBoxItemWidget = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBComboBoxItemWidget, void, const USBUIComboBoxBaseDataObject*> OnItemDataChanged = { 0x2bbb090, 3 }; 
 };
 
 /// Struct /Script/SB.SBComboBoxItemSet
@@ -16386,40 +16372,39 @@ public:
 	TArray<FSBComboBoxItemSet>                         ItemSetArray;                                               // 0x0F40   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x28];                                      // 0x0F50   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBComboBoxWidget.SetManualOpen
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const bool> USBComboBoxWidget = { 0x26fc710, 0 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const bool> SetManualOpen = { 0x26fc710, 0 }; 
 	// Function /Script/SB.SBComboBoxWidget.SelectItemByIndex
-	constexpr static const FunctionPointer<USBComboBoxWidget, bool, const int32_t> USBComboBoxWidget = { 0x26fca50, 1 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, bool, const int32_t> SelectItemByIndex = { 0x26fca50, 1 }; 
 	// Function /Script/SB.SBComboBoxWidget.SBOnSelectionChangedEvent__DelegateSignature
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*, const TEnumAsByte<ESelectInfo>> USBComboBoxWidget = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*, const TEnumAsByte<ESelectInfo>> SBOnSelectionChangedEvent__DelegateSignature = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBComboBoxWidget.SBOnHoverItemEvent__DelegateSignature
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*> USBComboBoxWidget = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*> SBOnHoverItemEvent__DelegateSignature = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBComboBoxWidget.SBOnGeneratedItemWidget__DelegateSignature
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const USBComboBoxItemWidget*> USBComboBoxWidget = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const USBComboBoxItemWidget*> SBOnGeneratedItemWidget__DelegateSignature = { 0x2bbb090, 4 }; 
 	// Function /Script/SB.SBComboBoxWidget.SBOnFocusChangedEvent__DelegateSignature
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*, const UObject*> USBComboBoxWidget = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*, const UObject*> SBOnFocusChangedEvent__DelegateSignature = { 0x2bbb090, 5 }; 
 	// Function /Script/SB.SBComboBoxWidget.RemoveItemByIndex
-	constexpr static const FunctionPointer<USBComboBoxWidget, bool, const int32_t> USBComboBoxWidget = { 0x26fcb80, 6 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, bool, const int32_t> RemoveItemByIndex = { 0x26fcb80, 6 }; 
 	// Function /Script/SB.SBComboBoxWidget.RemoveItem
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*> USBComboBoxWidget = { 0x26fcd90, 7 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*> RemoveItem = { 0x26fcd90, 7 }; 
 	// Function /Script/SB.SBComboBoxWidget.HandleSelectionChangedInternal
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const FString, const TEnumAsByte<ESelectInfo>> USBComboBoxWidget = { 0x26fc400, 8 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const FString, const TEnumAsByte<ESelectInfo>> HandleSelectionChangedInternal = { 0x26fc400, 8 }; 
 	// Function /Script/SB.SBComboBoxWidget.HandleFocusSelectionChangedInternal
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const FString, const TEnumAsByte<ESelectInfo>> USBComboBoxWidget = { 0x26fc240, 9 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const FString, const TEnumAsByte<ESelectInfo>> HandleFocusSelectionChangedInternal = { 0x26fc240, 9 }; 
 	// Function /Script/SB.SBComboBoxWidget.GetItemAt
-	constexpr static const FunctionPointer<USBComboBoxWidget, UObject*, const int32_t> USBComboBoxWidget = { 0x26fc920, 10 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, UObject*, const int32_t> GetItemAt = { 0x26fc920, 10 }; 
 	// Function /Script/SB.SBComboBoxWidget.GetEntryWidgetFromItem
-	constexpr static const FunctionPointer<USBComboBoxWidget, USBComboBoxItemWidget*, const UObject*> USBComboBoxWidget = { 0x26fc7f0, 11 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, USBComboBoxItemWidget*, const UObject*> GetEntryWidgetFromItem = { 0x26fc7f0, 11 }; 
 	// Function /Script/SB.SBComboBoxWidget.GenerateItemWidget
-	constexpr static const FunctionPointer<USBComboBoxWidget, UWidget*, const FString> USBComboBoxWidget = { 0x26fc5c0, 12 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, UWidget*, const FString> GenerateItemWidget = { 0x26fc5c0, 12 }; 
 	// Function /Script/SB.SBComboBoxWidget.FindOptionIndexByItem
-	constexpr static const FunctionPointer<USBComboBoxWidget, int32_t, const UObject*> USBComboBoxWidget = { 0x26fcc70, 13 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, int32_t, const UObject*> FindOptionIndexByItem = { 0x26fcc70, 13 }; 
 	// Function /Script/SB.SBComboBoxWidget.ClearItems
-	constexpr static const FunctionPointer<USBComboBoxWidget, void> USBComboBoxWidget = { 0x26fca30, 14 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void> ClearItems = { 0x26fca30, 14 }; 
 	// Function /Script/SB.SBComboBoxWidget.AddItem
-	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*> USBComboBoxWidget = { 0x26fce70, 15 }; 
+	constexpr static const FunctionPointer<USBComboBoxWidget, void, const UObject*> AddItem = { 0x26fce70, 15 }; 
 };
 
 /// Class /Script/SB.SBCommonCreditDataObject
@@ -16440,12 +16425,11 @@ public:
 	uint32_t                                           TableId;                                                    // 0x0688   (0x0004)  
 	int32_t                                            VoiceIndex;                                                 // 0x068C   (0x0004)  
 
-
 	/// Functions
 	// Function /Script/SB.SBCommonCreditSlotWidget.GetTableData
-	constexpr static const FunctionPointer<USBCommonCreditSlotWidget, bool, const FSBCreditTableProperty&> USBCommonCreditSlotWidget = { 0x26fd920, 0 }; 
+	constexpr static const FunctionPointer<USBCommonCreditSlotWidget, bool, const FSBCreditTableProperty&> GetTableData = { 0x26fd920, 0 }; 
 	// Function /Script/SB.SBCommonCreditSlotWidget.EventRefresh
-	constexpr static const FunctionPointer<USBCommonCreditSlotWidget, void> USBCommonCreditSlotWidget = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBCommonCreditSlotWidget, void> EventRefresh = { 0x2bbb090, 1 }; 
 };
 
 /// Class /Script/SB.SBCommonCreditWidget
@@ -16483,24 +16467,23 @@ public:
 	unsigned char                                      UnknownData09_6[0x3];                                       // 0x06E9   (0x0003)  MISSED
 	float                                              ScrollHoldTime;                                             // 0x06EC   (0x0004)  
 
-
 	/// Functions
 	// Function /Script/SB.SBCommonCreditWidget.IsAllowClose
-	constexpr static const FunctionPointer<USBCommonCreditWidget, bool> USBCommonCreditWidget = { 0x26fe020, 0 }; 
+	constexpr static const FunctionPointer<USBCommonCreditWidget, bool> IsAllowClose = { 0x26fe020, 0 }; 
 	// Function /Script/SB.SBCommonCreditWidget.EventStateExit
-	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const ESBCommonCreditState> USBCommonCreditWidget = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const ESBCommonCreditState> EventStateExit = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBCommonCreditWidget.EventStateEnter
-	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const ESBCommonCreditState> USBCommonCreditWidget = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const ESBCommonCreditState> EventStateEnter = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBCommonCreditWidget.EventEndScroll
-	constexpr static const FunctionPointer<USBCommonCreditWidget, void> USBCommonCreditWidget = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBCommonCreditWidget, void> EventEndScroll = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBCommonCreditWidget.EventChangeScrollSpeed
-	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const int32_t> USBCommonCreditWidget = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const int32_t> EventChangeScrollSpeed = { 0x2bbb090, 4 }; 
 	// Function /Script/SB.SBCommonCreditWidget.EventChangeCloseProgress
-	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const float> USBCommonCreditWidget = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const float> EventChangeCloseProgress = { 0x2bbb090, 5 }; 
 	// Function /Script/SB.SBCommonCreditWidget.EventChangeCloseAllow
-	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const bool> USBCommonCreditWidget = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const bool> EventChangeCloseAllow = { 0x2bbb090, 6 }; 
 	// Function /Script/SB.SBCommonCreditWidget.ChangeState
-	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const ESBCommonCreditState> USBCommonCreditWidget = { 0x26fe060, 7 }; 
+	constexpr static const FunctionPointer<USBCommonCreditWidget, void, const ESBCommonCreditState> ChangeState = { 0x26fe060, 7 }; 
 };
 
 /// Struct /Script/SB.SBCommonManualTabBtnData
@@ -16545,18 +16528,17 @@ public:
 	class USoundBase*                                  TabChangedSound;                                            // 0x08E0   (0x0008)  
 	unsigned char                                      UnknownData01_7[0x50];                                      // 0x08E8   (0x0050)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBCommonManualTabWidget.UpdateTabButton
-	constexpr static const FunctionPointer<USBCommonManualTabWidget, void, const FName, const TEnumAsByte<ESBUIRedDotState>> USBCommonManualTabWidget = { 0x26fea70, 0 }; 
+	constexpr static const FunctionPointer<USBCommonManualTabWidget, void, const FName, const TEnumAsByte<ESBUIRedDotState>> UpdateTabButton = { 0x26fea70, 0 }; 
 	// Function /Script/SB.SBCommonManualTabWidget.SetVisibilityTabButton
-	constexpr static const FunctionPointer<USBCommonManualTabWidget, void, const FName, const ESlateVisibility> USBCommonManualTabWidget = { 0x26fe840, 1 }; 
+	constexpr static const FunctionPointer<USBCommonManualTabWidget, void, const FName, const ESlateVisibility> SetVisibilityTabButton = { 0x26fe840, 1 }; 
 	// Function /Script/SB.SBCommonManualTabWidget.SetVisibilityMoveButton
-	constexpr static const FunctionPointer<USBCommonManualTabWidget, void, const ESlateVisibility> USBCommonManualTabWidget = { 0x26fe750, 2 }; 
+	constexpr static const FunctionPointer<USBCommonManualTabWidget, void, const ESlateVisibility> SetVisibilityMoveButton = { 0x26fe750, 2 }; 
 	// Function /Script/SB.SBCommonManualTabWidget.FocusTabButton
-	constexpr static const FunctionPointer<USBCommonManualTabWidget, void, const FName> USBCommonManualTabWidget = { 0x26fee10, 3 }; 
+	constexpr static const FunctionPointer<USBCommonManualTabWidget, void, const FName> FocusTabButton = { 0x26fee10, 3 }; 
 	// Function /Script/SB.SBCommonManualTabWidget.DefocusTabButton
-	constexpr static const FunctionPointer<USBCommonManualTabWidget, void> USBCommonManualTabWidget = { 0x26fecb0, 4 }; 
+	constexpr static const FunctionPointer<USBCommonManualTabWidget, void> DefocusTabButton = { 0x26fecb0, 4 }; 
 };
 
 /// Class /Script/SB.SBCommonTabButtonWidget
@@ -16575,18 +16557,17 @@ public:
 	FSlateFontInfo                                     TextFont;                                                   // 0x06E8   (0x0060)  
 	FLinearColor                                       TextShadowColor;                                            // 0x0748   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/SB.SBCommonTabButtonWidget.SetDotState
-	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void, const TEnumAsByte<ESBUIRedDotState>> USBCommonTabButtonWidget = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void, const TEnumAsByte<ESBUIRedDotState>> SetDotState = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBCommonTabButtonWidget.SetDotData
-	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void, const FName, const FName> USBCommonTabButtonWidget = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void, const FName, const FName> SetDotData = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBCommonTabButtonWidget.RefreshDesign
-	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void> USBCommonTabButtonWidget = { 0x2700410, 2 }; 
+	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void> RefreshDesign = { 0x2700410, 2 }; 
 	// Function /Script/SB.SBCommonTabButtonWidget.FocusTabButton
-	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void> USBCommonTabButtonWidget = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void> FocusTabButton = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBCommonTabButtonWidget.DefocusTabButton
-	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void> USBCommonTabButtonWidget = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<USBCommonTabButtonWidget, void> DefocusTabButton = { 0x2bbb090, 4 }; 
 };
 
 /// Class /Script/SB.SBCommonSideTabButtonWidget
@@ -16597,16 +16578,15 @@ public:
 	FString                                            FocusEvent;                                                 // 0x0758   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x18];                                      // 0x0768   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBCommonSideTabButtonWidget.SetNavigationFunction
-	constexpr static const FunctionPointer<USBCommonSideTabButtonWidget, void, const FName> USBCommonSideTabButtonWidget = { 0x26ff480, 0 }; 
+	constexpr static const FunctionPointer<USBCommonSideTabButtonWidget, void, const FName> SetNavigationFunction = { 0x26ff480, 0 }; 
 	// Function /Script/SB.SBCommonSideTabButtonWidget.NotifyFocusEvent
-	constexpr static const FunctionPointer<USBCommonSideTabButtonWidget, void> USBCommonSideTabButtonWidget = { 0x26ff420, 1 }; 
+	constexpr static const FunctionPointer<USBCommonSideTabButtonWidget, void> NotifyFocusEvent = { 0x26ff420, 1 }; 
 	// Function /Script/SB.SBCommonSideTabButtonWidget.NavigationEvent
-	constexpr static const FunctionPointer<USBCommonSideTabButtonWidget, UWidget*, const EUINavigation> USBCommonSideTabButtonWidget = { 0x26ff330, 2 }; 
+	constexpr static const FunctionPointer<USBCommonSideTabButtonWidget, UWidget*, const EUINavigation> NavigationEvent = { 0x26ff330, 2 }; 
 	// Function /Script/SB.SBCommonSideTabButtonWidget.BindEventTarget
-	constexpr static const FunctionPointer<USBCommonSideTabButtonWidget, void, const USBUserWidget*> USBCommonSideTabButtonWidget = { 0x26ff560, 3 }; 
+	constexpr static const FunctionPointer<USBCommonSideTabButtonWidget, void, const USBUserWidget*> BindEventTarget = { 0x26ff560, 3 }; 
 };
 
 /// Struct /Script/SB.SBWidgetNavigationEventData
@@ -16644,10 +16624,9 @@ public:
 	TArray<class USBCommonSideTabButtonWidget*>        TabButtonInstanceArray;                                     // 0x0770   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x8];                                       // 0x0780   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBCommonSideTabWidget.BindEventTarget
-	constexpr static const FunctionPointer<USBCommonSideTabWidget, void, const USBUserWidget*> USBCommonSideTabWidget = { 0x26ffc00, 0 }; 
+	constexpr static const FunctionPointer<USBCommonSideTabWidget, void, const USBUserWidget*> BindEventTarget = { 0x26ffc00, 0 }; 
 };
 
 /// Struct /Script/SB.SBCommonTabBtnData
@@ -16694,18 +16673,17 @@ public:
 	class USoundBase*                                  TabChangedSound;                                            // 0x08E0   (0x0008)  
 	unsigned char                                      UnknownData03_7[0x50];                                      // 0x08E8   (0x0050)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBCommonTabWidget.UpdateTabButton
-	constexpr static const FunctionPointer<USBCommonTabWidget, void, const TEnumAsByte<ESBUILogicType>, const TEnumAsByte<ESBUIRedDotState>> USBCommonTabWidget = { 0x2701450, 0 }; 
+	constexpr static const FunctionPointer<USBCommonTabWidget, void, const TEnumAsByte<ESBUILogicType>, const TEnumAsByte<ESBUIRedDotState>> UpdateTabButton = { 0x2701450, 0 }; 
 	// Function /Script/SB.SBCommonTabWidget.SetVisibilityTabButton
-	constexpr static const FunctionPointer<USBCommonTabWidget, void, const TEnumAsByte<ESBUILogicType>, const ESlateVisibility> USBCommonTabWidget = { 0x2701260, 1 }; 
+	constexpr static const FunctionPointer<USBCommonTabWidget, void, const TEnumAsByte<ESBUILogicType>, const ESlateVisibility> SetVisibilityTabButton = { 0x2701260, 1 }; 
 	// Function /Script/SB.SBCommonTabWidget.SetVisibilityMoveButton
-	constexpr static const FunctionPointer<USBCommonTabWidget, void, const ESlateVisibility> USBCommonTabWidget = { 0x26fe750, 2 }; 
+	constexpr static const FunctionPointer<USBCommonTabWidget, void, const ESlateVisibility> SetVisibilityMoveButton = { 0x26fe750, 2 }; 
 	// Function /Script/SB.SBCommonTabWidget.FocusTabButton
-	constexpr static const FunctionPointer<USBCommonTabWidget, void, const TEnumAsByte<ESBUILogicType>> USBCommonTabWidget = { 0x27017a0, 3 }; 
+	constexpr static const FunctionPointer<USBCommonTabWidget, void, const TEnumAsByte<ESBUILogicType>> FocusTabButton = { 0x27017a0, 3 }; 
 	// Function /Script/SB.SBCommonTabWidget.DefocusTabButton
-	constexpr static const FunctionPointer<USBCommonTabWidget, void> USBCommonTabWidget = { 0x2701670, 4 }; 
+	constexpr static const FunctionPointer<USBCommonTabWidget, void> DefocusTabButton = { 0x2701670, 4 }; 
 };
 
 /// Class /Script/SB.SBCursorUserWidget
@@ -16714,12 +16692,11 @@ class USBCursorUserWidget : public UUserWidget
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SB.SBCursorUserWidget.OnCursorUpdate
-	constexpr static const FunctionPointer<USBCursorUserWidget, void> USBCursorUserWidget = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBCursorUserWidget, void> OnCursorUpdate = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBCursorUserWidget.IsGlobalCursorVisibleAllow
-	constexpr static const FunctionPointer<USBCursorUserWidget, bool> USBCursorUserWidget = { 0x2701e10, 1 }; 
+	constexpr static const FunctionPointer<USBCursorUserWidget, bool> IsGlobalCursorVisibleAllow = { 0x2701e10, 1 }; 
 };
 
 /// Class /Script/SB.SBDataAsset
@@ -16815,18 +16792,17 @@ public:
 	int32_t                                            RestoreChunkCurrentStep;                                    // 0x0A70   (0x0004)  
 	unsigned char                                      UnknownData13_7[0x8C];                                      // 0x0A74   (0x008C)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBDestructibleComponent.SetHitParticleSystem
-	constexpr static const FunctionPointer<USBDestructibleComponent, void, const TArray<FSBChunkParticleInfo>, const int32_t> USBDestructibleComponent = { 0x2728330, 0 }; 
+	constexpr static const FunctionPointer<USBDestructibleComponent, void, const TArray<FSBChunkParticleInfo>, const int32_t> SetHitParticleSystem = { 0x2728330, 0 }; 
 	// Function /Script/SB.SBDestructibleComponent.SetDissolveFade
-	constexpr static const FunctionPointer<USBDestructibleComponent, void, const float, const float, const FName, const bool, const bool> USBDestructibleComponent = { 0x2728660, 1 }; 
+	constexpr static const FunctionPointer<USBDestructibleComponent, void, const float, const float, const FName, const bool, const bool> SetDissolveFade = { 0x2728660, 1 }; 
 	// Function /Script/SB.SBDestructibleComponent.SetChunkNiagaraSystem
-	constexpr static const FunctionPointer<USBDestructibleComponent, void, const UNiagaraSystem*, const float> USBDestructibleComponent = { 0x27284f0, 2 }; 
+	constexpr static const FunctionPointer<USBDestructibleComponent, void, const UNiagaraSystem*, const float> SetChunkNiagaraSystem = { 0x27284f0, 2 }; 
 	// Function /Script/SB.SBDestructibleComponent.OnOverlapBegin
-	constexpr static const FunctionPointer<USBDestructibleComponent, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> USBDestructibleComponent = { 0x2728980, 3 }; 
+	constexpr static const FunctionPointer<USBDestructibleComponent, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> OnOverlapBegin = { 0x2728980, 3 }; 
 	// Function /Script/SB.SBDestructibleComponent.OnCollisionHit
-	constexpr static const FunctionPointer<USBDestructibleComponent, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> USBDestructibleComponent = { 0x2728d00, 4 }; 
+	constexpr static const FunctionPointer<USBDestructibleComponent, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> OnCollisionHit = { 0x2728d00, 4 }; 
 };
 
 /// Class /Script/SB.SBDevCommonMessageBoxWidget
@@ -16837,12 +16813,11 @@ public:
 	unsigned char                                      UnknownData01_8[0x20];                                      // 0x0680   (0x0020)  MISSED
 	FString                                            prefixName;                                                 // 0x06A0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/SB.SBDevCommonMessageBoxWidget.OnClickPositive
-	constexpr static const FunctionPointer<USBDevCommonMessageBoxWidget, void> USBDevCommonMessageBoxWidget = { 0x2729500, 0 }; 
+	constexpr static const FunctionPointer<USBDevCommonMessageBoxWidget, void> OnClickPositive = { 0x2729500, 0 }; 
 	// Function /Script/SB.SBDevCommonMessageBoxWidget.OnClickNegative
-	constexpr static const FunctionPointer<USBDevCommonMessageBoxWidget, void> USBDevCommonMessageBoxWidget = { 0x27294b0, 1 }; 
+	constexpr static const FunctionPointer<USBDevCommonMessageBoxWidget, void> OnClickNegative = { 0x27294b0, 1 }; 
 };
 
 /// Class /Script/SB.SBDevCommonToastWidget
@@ -16872,12 +16847,11 @@ public:
 	bool                                               bAuthorized;                                                // 0x0681   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x6];                                       // 0x0682   (0x0006)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBDevJiraAuthorizeWidget.OnInputActionOK
-	constexpr static const FunctionPointer<USBDevJiraAuthorizeWidget, void> USBDevJiraAuthorizeWidget = { 0x2729fa0, 0 }; 
+	constexpr static const FunctionPointer<USBDevJiraAuthorizeWidget, void> OnInputActionOK = { 0x2729fa0, 0 }; 
 	// Function /Script/SB.SBDevJiraAuthorizeWidget.OnInputActionClose
-	constexpr static const FunctionPointer<USBDevJiraAuthorizeWidget, void> USBDevJiraAuthorizeWidget = { 0x2729f80, 1 }; 
+	constexpr static const FunctionPointer<USBDevJiraAuthorizeWidget, void> OnInputActionClose = { 0x2729f80, 1 }; 
 };
 
 /// Class /Script/SB.SBDevUIStudioPreviewDataObject
@@ -16897,10 +16871,9 @@ public:
 	FText                                              Category;                                                   // 0x0688   (0x0018)  
 	FText                                              Message;                                                    // 0x06A0   (0x0018)  
 
-
 	/// Functions
 	// Function /Script/SB.SBDevUIStudioPreviewSlotWidget.EventRefresh
-	constexpr static const FunctionPointer<USBDevUIStudioPreviewSlotWidget, void> USBDevUIStudioPreviewSlotWidget = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBDevUIStudioPreviewSlotWidget, void> EventRefresh = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/SB.SBDevUIStudioPreviewWidget
@@ -16915,12 +16888,11 @@ public:
 	class UListView*                                   ListView;                                                   // 0x06F0   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x10];                                      // 0x06F8   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBDevUIStudioPreviewWidget.EventStudioShowPlay
-	constexpr static const FunctionPointer<USBDevUIStudioPreviewWidget, void, const FName> USBDevUIStudioPreviewWidget = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBDevUIStudioPreviewWidget, void, const FName> EventStudioShowPlay = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBDevUIStudioPreviewWidget.EventChangeCameraBlend
-	constexpr static const FunctionPointer<USBDevUIStudioPreviewWidget, void, const bool> USBDevUIStudioPreviewWidget = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBDevUIStudioPreviewWidget, void, const bool> EventChangeCameraBlend = { 0x2bbb090, 1 }; 
 };
 
 /// Class /Script/SB.SBDPICustomScalingRule
@@ -16978,14 +16950,13 @@ class ASBDynamicRegionActor : public AActor
 public:
 	FName                                              UniqueRegionName;                                           // 0x02C8   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/SB.SBDynamicRegionActor.InitRegion
-	constexpr static const FunctionPointer<ASBDynamicRegionActor, void, const FName> ASBDynamicRegionActor = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ASBDynamicRegionActor, void, const FName> InitRegion = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBDynamicRegionActor.EventLeaveRegion
-	constexpr static const FunctionPointer<ASBDynamicRegionActor, void> ASBDynamicRegionActor = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<ASBDynamicRegionActor, void> EventLeaveRegion = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBDynamicRegionActor.EventEnterRegion
-	constexpr static const FunctionPointer<ASBDynamicRegionActor, void> ASBDynamicRegionActor = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<ASBDynamicRegionActor, void> EventEnterRegion = { 0x2bbb090, 2 }; 
 };
 
 /// Class /Script/SB.SBEdGraphNode
@@ -17024,10 +16995,9 @@ class USBEngineActorPoolingInterface : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SB.SBEngineActorPoolingInterface.IsPoolingActor
-	constexpr static const FunctionPointer<USBEngineActorPoolingInterface, bool> USBEngineActorPoolingInterface = { 0x272c690, 0 }; 
+	constexpr static const FunctionPointer<USBEngineActorPoolingInterface, bool> IsPoolingActor = { 0x272c690, 0 }; 
 };
 
 /// Struct /Script/SB.SBEnvParticle
@@ -17071,10 +17041,9 @@ public:
 	float                                              OverrideControlSettingWeight;                               // 0x0EB0   (0x0004)  
 	unsigned char                                      UnknownData09_7[0xAC];                                      // 0x0EB4   (0x00AC)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBEnvControlVolume.RefreshProperty
-	constexpr static const FunctionPointer<ASBEnvControlVolume, void> ASBEnvControlVolume = { 0x27488e0, 0 }; 
+	constexpr static const FunctionPointer<ASBEnvControlVolume, void> RefreshProperty = { 0x27488e0, 0 }; 
 };
 
 /// Struct /Script/SB.SBEnvSettingScalarParam
@@ -17416,36 +17385,35 @@ public:
 	bool                                               bUpdated;                                                   // 0x0B10   (0x0001)  
 	unsigned char                                      UnknownData15_7[0xF];                                       // 0x0B11   (0x000F)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBEventMoveDataComponent.SetRopeMaxLength
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float> USBEventMoveDataComponent = { 0x2749f80, 0 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float> SetRopeMaxLength = { 0x2749f80, 0 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.SetRopeLeaveDistance
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float, const float> USBEventMoveDataComponent = { 0x274a1c0, 1 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float, const float> SetRopeLeaveDistance = { 0x274a1c0, 1 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.SetRopeAxisLocation
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float, const float> USBEventMoveDataComponent = { 0x274a050, 2 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float, const float> SetRopeAxisLocation = { 0x274a050, 2 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.SetOverrideSideRodWallSearch
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float, const float> USBEventMoveDataComponent = { 0x274a360, 3 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float, const float> SetOverrideSideRodWallSearch = { 0x274a360, 3 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.SetOverrideRopeMaxLength
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float> USBEventMoveDataComponent = { 0x2749e60, 4 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float> SetOverrideRopeMaxLength = { 0x2749e60, 4 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.SetOverrideBalanceMovingIgnoreDistance
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float, const float> USBEventMoveDataComponent = { 0x274a4e0, 5 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float, const float> SetOverrideBalanceMovingIgnoreDistance = { 0x274a4e0, 5 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.SetEventMoveLeaveLocation
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const FVector&, const FVector&> USBEventMoveDataComponent = { 0x274a740, 6 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const FVector&, const FVector&> SetEventMoveLeaveLocation = { 0x274a740, 6 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.SetEnableRope
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const bool> USBEventMoveDataComponent = { 0x2749d80, 7 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const bool> SetEnableRope = { 0x2749d80, 7 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.SetDisableInteractionFlag
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const bool> USBEventMoveDataComponent = { 0x274a660, 8 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const bool> SetDisableInteractionFlag = { 0x274a660, 8 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.NotifyBPHitEvent
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const bool, const FVector, const FVector, const FVector, const FHitResult&> USBEventMoveDataComponent = { 0x274a8e0, 9 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const bool, const FVector, const FVector, const FVector, const FHitResult&> NotifyBPHitEvent = { 0x274a8e0, 9 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.IsDynamic
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, bool> USBEventMoveDataComponent = { 0x274a340, 10 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, bool> IsDynamic = { 0x274a340, 10 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.GetRopeOverrideLength
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, float> USBEventMoveDataComponent = { 0x274adf0, 11 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, float> GetRopeOverrideLength = { 0x274adf0, 11 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.GetData
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, USBEventMoveData*> USBEventMoveDataComponent = { 0x274ae10, 12 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, USBEventMoveData*> GetData = { 0x274ae10, 12 }; 
 	// Function /Script/SB.SBEventMoveDataComponent.DirtyRopeCable
-	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float> USBEventMoveDataComponent = { 0x2749cb0, 13 }; 
+	constexpr static const FunctionPointer<USBEventMoveDataComponent, void, const float> DirtyRopeCable = { 0x2749cb0, 13 }; 
 };
 
 /// Class /Script/SB.SBExclusiveWaterVolume
@@ -17494,12 +17462,11 @@ public:
 	unsigned char                                      UnknownData01_8[0x20];                                      // 0x0680   (0x0020)  MISSED
 	FString                                            prefixName;                                                 // 0x06A0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/SB.SBFeedbackCommonMessageBoxWidget.OnClickPositive
-	constexpr static const FunctionPointer<USBFeedbackCommonMessageBoxWidget, void> USBFeedbackCommonMessageBoxWidget = { 0x2729500, 0 }; 
+	constexpr static const FunctionPointer<USBFeedbackCommonMessageBoxWidget, void> OnClickPositive = { 0x2729500, 0 }; 
 	// Function /Script/SB.SBFeedbackCommonMessageBoxWidget.OnClickNegative
-	constexpr static const FunctionPointer<USBFeedbackCommonMessageBoxWidget, void> USBFeedbackCommonMessageBoxWidget = { 0x27294b0, 1 }; 
+	constexpr static const FunctionPointer<USBFeedbackCommonMessageBoxWidget, void> OnClickNegative = { 0x27294b0, 1 }; 
 };
 
 /// Class /Script/SB.SBFeedbackIssueAssignWidget
@@ -17525,20 +17492,19 @@ class USBFeedbackIssueInputWidget : public USBUserWidget
 public:
 	unsigned char                                      UnknownData01_1[0x20];                                      // 0x0680   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBFeedbackIssueInputWidget.OnInputActionPriorityPlus
-	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> USBFeedbackIssueInputWidget = { 0x11615e0, 0 }; 
+	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> OnInputActionPriorityPlus = { 0x11615e0, 0 }; 
 	// Function /Script/SB.SBFeedbackIssueInputWidget.OnInputActionPriorityMinus
-	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> USBFeedbackIssueInputWidget = { 0x11615e0, 1 }; 
+	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> OnInputActionPriorityMinus = { 0x11615e0, 1 }; 
 	// Function /Script/SB.SBFeedbackIssueInputWidget.OnInputActionOpenList
-	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> USBFeedbackIssueInputWidget = { 0x11615e0, 2 }; 
+	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> OnInputActionOpenList = { 0x11615e0, 2 }; 
 	// Function /Script/SB.SBFeedbackIssueInputWidget.OnInputActionOK
-	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> USBFeedbackIssueInputWidget = { 0x11615e0, 3 }; 
+	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> OnInputActionOK = { 0x11615e0, 3 }; 
 	// Function /Script/SB.SBFeedbackIssueInputWidget.OnInputActionCloseList
-	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> USBFeedbackIssueInputWidget = { 0x11615e0, 4 }; 
+	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> OnInputActionCloseList = { 0x11615e0, 4 }; 
 	// Function /Script/SB.SBFeedbackIssueInputWidget.OnInputActionClose
-	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> USBFeedbackIssueInputWidget = { 0x11615e0, 5 }; 
+	constexpr static const FunctionPointer<USBFeedbackIssueInputWidget, void> OnInputActionClose = { 0x11615e0, 5 }; 
 };
 
 /// Class /Script/SB.SBFeedbackIssueMoveToItemWidget
@@ -17668,12 +17634,11 @@ public:
 	class USBSaveManager*                              SaveObjectManager;                                          // 0x0220   (0x0008)  
 	unsigned char                                      UnknownData05_7[0xB0];                                      // 0x0228   (0x00B0)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBGameInstance.PreLoadMap
-	constexpr static const FunctionPointer<USBGameInstance, void, const FString> USBGameInstance = { 0x27500c0, 0 }; 
+	constexpr static const FunctionPointer<USBGameInstance, void, const FString> PreLoadMap = { 0x27500c0, 0 }; 
 	// Function /Script/SB.SBGameInstance.PostLoadMap
-	constexpr static const FunctionPointer<USBGameInstance, void, const UWorld*> USBGameInstance = { 0x274ffe0, 1 }; 
+	constexpr static const FunctionPointer<USBGameInstance, void, const UWorld*> PostLoadMap = { 0x274ffe0, 1 }; 
 };
 
 /// Struct /Script/SB.SBGamdeModeSecondaryTickFunction
@@ -18119,18 +18084,17 @@ public:
 	FMulticastInlineDelegate                           CompleteEvent;                                              // 0x06B8   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x8];                                       // 0x06C8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBHoldButton.ResetProgress
-	constexpr static const FunctionPointer<USBHoldButton, void> USBHoldButton = { 0x27543b0, 0 }; 
+	constexpr static const FunctionPointer<USBHoldButton, void> ResetProgress = { 0x27543b0, 0 }; 
 	// Function /Script/SB.SBHoldButton.GetProgress
-	constexpr static const FunctionPointer<USBHoldButton, float> USBHoldButton = { 0x27543e0, 1 }; 
+	constexpr static const FunctionPointer<USBHoldButton, float> GetProgress = { 0x27543e0, 1 }; 
 	// Function /Script/SB.SBHoldButton.GetPrevState
-	constexpr static const FunctionPointer<USBHoldButton, ESBUIHoldButtonStateType> USBHoldButton = { 0x2754370, 2 }; 
+	constexpr static const FunctionPointer<USBHoldButton, ESBUIHoldButtonStateType> GetPrevState = { 0x2754370, 2 }; 
 	// Function /Script/SB.SBHoldButton.GetCurrnetState
-	constexpr static const FunctionPointer<USBHoldButton, ESBUIHoldButtonStateType> USBHoldButton = { 0x2754390, 3 }; 
+	constexpr static const FunctionPointer<USBHoldButton, ESBUIHoldButtonStateType> GetCurrnetState = { 0x2754390, 3 }; 
 	// Function /Script/SB.SBHoldButton.ChangeState
-	constexpr static const FunctionPointer<USBHoldButton, void, const ESBUIHoldButtonStateType> USBHoldButton = { 0x2754480, 4 }; 
+	constexpr static const FunctionPointer<USBHoldButton, void, const ESBUIHoldButtonStateType> ChangeState = { 0x2754480, 4 }; 
 };
 
 /// Struct /Script/SB.SBAspectRatioCropBarInfo
@@ -18210,16 +18174,15 @@ public:
 	unsigned char                                      UnknownData01_6[0x4];                                       // 0x073C   (0x0004)  MISSED
 	TArray<class USBIndicatorButtonBase*>              ButtonWidgetPool;                                           // 0x0740   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/SB.SBIndicator.UpdateLockChannel
-	constexpr static const FunctionPointer<USBIndicator, void, const int32_t> USBIndicator = { 0x27552e0, 0 }; 
+	constexpr static const FunctionPointer<USBIndicator, void, const int32_t> UpdateLockChannel = { 0x27552e0, 0 }; 
 	// Function /Script/SB.SBIndicator.UpdateIndicatorType
-	constexpr static const FunctionPointer<USBIndicator, void, const FName, const int32_t> USBIndicator = { 0x27553c0, 1 }; 
+	constexpr static const FunctionPointer<USBIndicator, void, const FName, const int32_t> UpdateIndicatorType = { 0x27553c0, 1 }; 
 	// Function /Script/SB.SBIndicator.UpdateHiddenChannel
-	constexpr static const FunctionPointer<USBIndicator, void, const int32_t> USBIndicator = { 0x2755200, 2 }; 
+	constexpr static const FunctionPointer<USBIndicator, void, const int32_t> UpdateHiddenChannel = { 0x2755200, 2 }; 
 	// Function /Script/SB.SBIndicator.RefreshIndicator
-	constexpr static const FunctionPointer<USBIndicator, void> USBIndicator = { 0x27551e0, 3 }; 
+	constexpr static const FunctionPointer<USBIndicator, void> RefreshIndicator = { 0x27551e0, 3 }; 
 };
 
 /// Class /Script/SB.SBIndicatorButtonBase
@@ -18229,26 +18192,25 @@ class USBIndicatorButtonBase : public USBUserWidget
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0680   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBIndicatorButtonBase.SetText
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FText&> USBIndicatorButtonBase = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FText&> SetText = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBIndicatorButtonBase.SetTargetLogicType
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const TEnumAsByte<ESBUILogicType>> USBIndicatorButtonBase = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const TEnumAsByte<ESBUILogicType>> SetTargetLogicType = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBIndicatorButtonBase.SetResourceActionArray
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FName, const int32_t> USBIndicatorButtonBase = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FName, const int32_t> SetResourceActionArray = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBIndicatorButtonBase.SetResourceAction2
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FName> USBIndicatorButtonBase = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FName> SetResourceAction2 = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBIndicatorButtonBase.SetResourceAction
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FName> USBIndicatorButtonBase = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FName> SetResourceAction = { 0x2bbb090, 4 }; 
 	// Function /Script/SB.SBIndicatorButtonBase.SetLockImage
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const bool> USBIndicatorButtonBase = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const bool> SetLockImage = { 0x2bbb090, 5 }; 
 	// Function /Script/SB.SBIndicatorButtonBase.SetLeftSpace
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const float> USBIndicatorButtonBase = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const float> SetLeftSpace = { 0x2bbb090, 6 }; 
 	// Function /Script/SB.SBIndicatorButtonBase.SetIndicatorBtnProperties
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FText, const FName, const FName, const TArray<FName>&, const bool, const TEnumAsByte<ESBUILogicType>, const bool> USBIndicatorButtonBase = { 0x2755940, 7 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const FText, const FName, const FName, const TArray<FName>&, const bool, const TEnumAsByte<ESBUILogicType>, const bool> SetIndicatorBtnProperties = { 0x2755940, 7 }; 
 	// Function /Script/SB.SBIndicatorButtonBase.SetButtonClickable
-	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const bool> USBIndicatorButtonBase = { 0x2bbb090, 8 }; 
+	constexpr static const FunctionPointer<USBIndicatorButtonBase, void, const bool> SetButtonClickable = { 0x2bbb090, 8 }; 
 };
 
 /// Class /Script/SB.SBInteractionBreakPoint
@@ -19442,14 +19404,13 @@ public:
 	FVector                                            CachedActorBoundExtents;                                    // 0x04A0   (0x000C)  
 	unsigned char                                      UnknownData27_7[0x4];                                       // 0x04AC   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBItem.GetInteractionDelayTime
-	constexpr static const FunctionPointer<ASBItem, float> ASBItem = { 0x27666e0, 0 }; 
+	constexpr static const FunctionPointer<ASBItem, float> GetInteractionDelayTime = { 0x27666e0, 0 }; 
 	// Function /Script/SB.SBItem.EventUIModeChange
-	constexpr static const FunctionPointer<ASBItem, void, const bool> ASBItem = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<ASBItem, void, const bool> EventUIModeChange = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBItem.EventInitItem
-	constexpr static const FunctionPointer<ASBItem, void> ASBItem = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<ASBItem, void> EventInitItem = { 0x2bbb090, 2 }; 
 };
 
 /// Class /Script/SB.SBItemAssetData
@@ -19552,10 +19513,9 @@ public:
 	TArray<FSBLaserSegment>                            LaserSegmentArray;                                          // 0x0348   (0x0010)  
 	unsigned char                                      UnknownData15_7[0xF8];                                      // 0x0358   (0x00F8)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBLaserComponent.IsActiveLaser
-	constexpr static const FunctionPointer<USBLaserComponent, bool> USBLaserComponent = { 0x27676c0, 0 }; 
+	constexpr static const FunctionPointer<USBLaserComponent, bool> IsActiveLaser = { 0x27676c0, 0 }; 
 };
 
 /// Class /Script/SB.SBLevelEditorGraph
@@ -19583,12 +19543,11 @@ class ASBLevelSequenceActor : public ALevelSequenceActor
 public:
 	unsigned char                                      UnknownData01_1[0x30];                                      // 0x03A8   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBLevelSequenceActor.OnStopEvent
-	constexpr static const FunctionPointer<ASBLevelSequenceActor, void> ASBLevelSequenceActor = { 0x27683e0, 0 }; 
+	constexpr static const FunctionPointer<ASBLevelSequenceActor, void> OnStopEvent = { 0x27683e0, 0 }; 
 	// Function /Script/SB.SBLevelSequenceActor.OnFinishedEvent
-	constexpr static const FunctionPointer<ASBLevelSequenceActor, void> ASBLevelSequenceActor = { 0x27683e0, 1 }; 
+	constexpr static const FunctionPointer<ASBLevelSequenceActor, void> OnFinishedEvent = { 0x27683e0, 1 }; 
 };
 
 /// Struct /Script/SB.SBLevelSequenceAnimTrailSectionData
@@ -20491,10 +20450,9 @@ public:
 	FName                                              KeyName;                                                    // 0x00A0   (0x0008)  
 	unsigned char                                      UnknownData07_7[0x150];                                     // 0x00A8   (0x0150)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBLevelSequenceObserver.OnFinishLevelSequence
-	constexpr static const FunctionPointer<USBLevelSequenceObserver, void> USBLevelSequenceObserver = { 0x2777dc0, 0 }; 
+	constexpr static const FunctionPointer<USBLevelSequenceObserver, void> OnFinishLevelSequence = { 0x2777dc0, 0 }; 
 };
 
 /// Struct /Script/SB.SBLevelSequenceSetAnimBPPropertySectionData
@@ -21107,14 +21065,13 @@ public:
 	TArray<TWeakObjectPtr<AActor*>>                    CachedActors;                                               // 0x0128   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x60];                                      // 0x0138   (0x0060)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBLevelStreamingContext.OnLevelUnloaded
-	constexpr static const FunctionPointer<USBLevelStreamingContext, void> USBLevelStreamingContext = { 0x2781fe0, 0 }; 
+	constexpr static const FunctionPointer<USBLevelStreamingContext, void> OnLevelUnloaded = { 0x2781fe0, 0 }; 
 	// Function /Script/SB.SBLevelStreamingContext.OnLevelShown
-	constexpr static const FunctionPointer<USBLevelStreamingContext, void> USBLevelStreamingContext = { 0x2781fc0, 1 }; 
+	constexpr static const FunctionPointer<USBLevelStreamingContext, void> OnLevelShown = { 0x2781fc0, 1 }; 
 	// Function /Script/SB.SBLevelStreamingContext.OnLevelLoaded
-	constexpr static const FunctionPointer<USBLevelStreamingContext, void> USBLevelStreamingContext = { 0x2782000, 2 }; 
+	constexpr static const FunctionPointer<USBLevelStreamingContext, void> OnLevelLoaded = { 0x2782000, 2 }; 
 };
 
 /// Class /Script/SB.SBLevelStreamProfilerActor
@@ -21124,14 +21081,13 @@ class ASBLevelStreamProfilerActor : public AActor
 public:
 	unsigned char                                      UnknownData01_1[0x150];                                     // 0x02C8   (0x0150)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBLevelStreamProfilerActor.OnLevelUnloadedIterative
-	constexpr static const FunctionPointer<ASBLevelStreamProfilerActor, void> ASBLevelStreamProfilerActor = { 0x2782720, 0 }; 
+	constexpr static const FunctionPointer<ASBLevelStreamProfilerActor, void> OnLevelUnloadedIterative = { 0x2782720, 0 }; 
 	// Function /Script/SB.SBLevelStreamProfilerActor.OnLevelUnloaded
-	constexpr static const FunctionPointer<ASBLevelStreamProfilerActor, void> ASBLevelStreamProfilerActor = { 0x2782740, 1 }; 
+	constexpr static const FunctionPointer<ASBLevelStreamProfilerActor, void> OnLevelUnloaded = { 0x2782740, 1 }; 
 	// Function /Script/SB.SBLevelStreamProfilerActor.OnLevelLoaded
-	constexpr static const FunctionPointer<ASBLevelStreamProfilerActor, void> ASBLevelStreamProfilerActor = { 0x2782760, 2 }; 
+	constexpr static const FunctionPointer<ASBLevelStreamProfilerActor, void> OnLevelLoaded = { 0x2782760, 2 }; 
 };
 
 /// Class /Script/SB.SBLevelVisibilityVolume
@@ -21155,12 +21111,11 @@ public:
 	TArray<TWeakObjectPtr<ALight*>>                    TargetLights;                                               // 0x0320   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0330   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBLightFadeVolume.OnEndOverlapActor
-	constexpr static const FunctionPointer<ASBLightFadeVolume, void, const AActor*, const AActor*> ASBLightFadeVolume = { 0x2782c70, 0 }; 
+	constexpr static const FunctionPointer<ASBLightFadeVolume, void, const AActor*, const AActor*> OnEndOverlapActor = { 0x2782c70, 0 }; 
 	// Function /Script/SB.SBLightFadeVolume.OnBeginOverlapActor
-	constexpr static const FunctionPointer<ASBLightFadeVolume, void, const AActor*, const AActor*> ASBLightFadeVolume = { 0x2782de0, 1 }; 
+	constexpr static const FunctionPointer<ASBLightFadeVolume, void, const AActor*, const AActor*> OnBeginOverlapActor = { 0x2782de0, 1 }; 
 };
 
 /// Class /Script/SB.SBLimitedScanVolume
@@ -21310,24 +21265,23 @@ public:
 	bool                                               bFirstClothReset;                                           // 0x0674   (0x0001)  
 	unsigned char                                      UnknownData13_7[0x5B];                                      // 0x0675   (0x005B)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBMeshStudioActor.SetStaticMeshFromAssetPath
-	constexpr static const FunctionPointer<ASBMeshStudioActor, bool, const FString, const FName> ASBMeshStudioActor = { 0x2786170, 0 }; 
+	constexpr static const FunctionPointer<ASBMeshStudioActor, bool, const FString, const FName> SetStaticMeshFromAssetPath = { 0x2786170, 0 }; 
 	// Function /Script/SB.SBMeshStudioActor.SetSkeletalMeshFromAssetPath
-	constexpr static const FunctionPointer<ASBMeshStudioActor, bool, const FString, const FName> ASBMeshStudioActor = { 0x2785fa0, 1 }; 
+	constexpr static const FunctionPointer<ASBMeshStudioActor, bool, const FString, const FName> SetSkeletalMeshFromAssetPath = { 0x2785fa0, 1 }; 
 	// Function /Script/SB.SBMeshStudioActor.SetMaterialFromAssetPath
-	constexpr static const FunctionPointer<ASBMeshStudioActor, bool, const FString> ASBMeshStudioActor = { 0x2785e50, 2 }; 
+	constexpr static const FunctionPointer<ASBMeshStudioActor, bool, const FString> SetMaterialFromAssetPath = { 0x2785e50, 2 }; 
 	// Function /Script/SB.SBMeshStudioActor.NotifyBP_SetupTarget
-	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const FName> ASBMeshStudioActor = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const FName> NotifyBP_SetupTarget = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBMeshStudioActor.NotifyBP_SetMesh
-	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const FName, const TEnumAsByte<ESBSkelMeshSlot>> ASBMeshStudioActor = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const FName, const TEnumAsByte<ESBSkelMeshSlot>> NotifyBP_SetMesh = { 0x2bbb090, 4 }; 
 	// Function /Script/SB.SBMeshStudioActor.NotifyBP_PreSetMesh
-	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const bool> ASBMeshStudioActor = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const bool> NotifyBP_PreSetMesh = { 0x2bbb090, 5 }; 
 	// Function /Script/SB.SBMeshStudioActor.NotifyBP_PostSetMesh
-	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const bool> ASBMeshStudioActor = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const bool> NotifyBP_PostSetMesh = { 0x2bbb090, 6 }; 
 	// Function /Script/SB.SBMeshStudioActor.ApplyMeshInfo
-	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const FName, const USBSkeletalMeshComponent*, const TEnumAsByte<ESBSkelMeshSlot>> ASBMeshStudioActor = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<ASBMeshStudioActor, void, const FName, const USBSkeletalMeshComponent*, const TEnumAsByte<ESBSkelMeshSlot>> ApplyMeshInfo = { 0x2bbb090, 7 }; 
 };
 
 /// Struct /Script/SB.MoveInfo
@@ -21538,366 +21492,365 @@ class ASBNetworkPlayerController : public ASBPlayerController
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0850   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ZoneTriggerDoEvent
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const TEnumAsByte<ESBConditionResultType>, const int32_t> ASBNetworkPlayerController = { 0x27a4550, 0 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const TEnumAsByte<ESBConditionResultType>, const int32_t> ServerRequest_ZoneTriggerDoEvent = { 0x27a4550, 0 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ZoneEnvChangeState
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t, const bool> ASBNetworkPlayerController = { 0x27a48a0, 1 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t, const bool> ServerRequest_ZoneEnvChangeState = { 0x27a48a0, 1 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_WarpPosition
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const FVector, const FRotator> ASBNetworkPlayerController = { 0x278a4c0, 2 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const FVector, const FRotator> ServerRequest_WarpPosition = { 0x278a4c0, 2 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_UseSkill
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TEnumAsByte<ESBSkillCommandState>, const uint32_t, const FName, const TArray<uint32_t>, const FVector, const FVector> ASBNetworkPlayerController = { 0x27a7c30, 3 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TEnumAsByte<ESBSkillCommandState>, const uint32_t, const FName, const TArray<uint32_t>, const FVector, const FVector> ServerRequest_UseSkill = { 0x27a7c30, 3 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_UpdateSkillTargetLocation
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector> ASBNetworkPlayerController = { 0x279ff30, 4 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector> ServerRequest_UpdateSkillTargetLocation = { 0x279ff30, 4 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_StopSkill
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x27a76d0, 5 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ServerRequest_StopSkill = { 0x27a76d0, 5 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_SetSkillSlot
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TEnumAsByte<ESBSkillSlotType>, const uint32_t> ASBNetworkPlayerController = { 0x27a4be0, 6 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TEnumAsByte<ESBSkillSlotType>, const uint32_t> ServerRequest_SetSkillSlot = { 0x27a4be0, 6 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_SetMeshInfo
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const char, const FName, const FName, const FVector, const FRotator, const char, const FName> ASBNetworkPlayerController = { 0x278bf30, 7 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const char, const FName, const FName, const FVector, const FRotator, const char, const FName> ServerRequest_SetMeshInfo = { 0x278bf30, 7 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_SetAimLockOnTarget
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const TArray<uint32_t>> ASBNetworkPlayerController = { 0x27a1160, 8 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const TArray<uint32_t>> ServerRequest_SetAimLockOnTarget = { 0x27a1160, 8 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_SetActiveWorldObject
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const TEnumAsByte<ESBWorldObjectType>, const FName, const TEnumAsByte<ESBObjectState>> ASBNetworkPlayerController = { 0x27a5270, 9 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const TEnumAsByte<ESBWorldObjectType>, const FName, const TEnumAsByte<ESBObjectState>> ServerRequest_SetActiveWorldObject = { 0x27a5270, 9 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ServerTravel
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const FString, const bool> ASBNetworkPlayerController = { 0x278a290, 10 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const FString, const bool> ServerRequest_ServerTravel = { 0x278a290, 10 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ResetZone
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ASBNetworkPlayerController = { 0x27a0b40, 11 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ServerRequest_ResetZone = { 0x27a0b40, 11 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_RequestPlayerName
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x27a0290, 12 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ServerRequest_RequestPlayerName = { 0x27a0290, 12 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_RequestActorRevive
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ASBNetworkPlayerController = { 0x27a0180, 13 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ServerRequest_RequestActorRevive = { 0x27a0180, 13 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_RegisterSaveGame
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FSBSaveGameData_Actor, const FSBSaveGameData_Env, const FSBSaveGameData_Item, const FSBSaveGameData_Achievement> ASBNetworkPlayerController = { 0x27a0640, 14 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FSBSaveGameData_Actor, const FSBSaveGameData_Env, const FSBSaveGameData_Item, const FSBSaveGameData_Achievement> ServerRequest_RegisterSaveGame = { 0x27a0640, 14 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_PlayTheater
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ASBNetworkPlayerController = { 0x27a1890, 15 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ServerRequest_PlayTheater = { 0x27a1890, 15 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_NextStepWhenHoldAndDualSenseTriggerEffectWeaponFired
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ASBNetworkPlayerController = { 0x27a78f0, 16 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ServerRequest_NextStepWhenHoldAndDualSenseTriggerEffectWeaponFired = { 0x27a78f0, 16 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_NextStepSkill
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ASBNetworkPlayerController = { 0x27a7a90, 17 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ServerRequest_NextStepSkill = { 0x27a7a90, 17 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_MultiPlaySetRemainTime
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const float> ASBNetworkPlayerController = { 0x27a0430, 18 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const float> ServerRequest_MultiPlaySetRemainTime = { 0x27a0430, 18 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_MultiPlayChangeRule
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FName> ASBNetworkPlayerController = { 0x27a0530, 19 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FName> ServerRequest_MultiPlayChangeRule = { 0x27a0530, 19 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_Login
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FVector, const FRotator, const int32_t, const bool> ASBNetworkPlayerController = { 0x27a94b0, 20 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FVector, const FRotator, const int32_t, const bool> ServerRequest_Login = { 0x27a94b0, 20 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_LinkSkillBreak
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x27a0fc0, 21 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ServerRequest_LinkSkillBreak = { 0x27a0fc0, 21 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_LeaveZone
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x27a9050, 22 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ServerRequest_LeaveZone = { 0x27a9050, 22 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ItemBucketSpawn
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FName, const uint32_t, const FVector, const FRotator> ASBNetworkPlayerController = { 0x27a29b0, 23 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FName, const uint32_t, const FVector, const FRotator> ServerRequest_ItemBucketSpawn = { 0x27a29b0, 23 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ItemBucketRewardGroupDrop
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FName, const FVector, const float, const float, const uint32_t> ASBNetworkPlayerController = { 0x27a2de0, 24 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FName, const FVector, const float, const float, const uint32_t> ServerRequest_ItemBucketRewardGroupDrop = { 0x27a2de0, 24 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ItemBucketItemRemove
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FName, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x27a3bb0, 25 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FName, const uint32_t, const int32_t> ServerRequest_ItemBucketItemRemove = { 0x27a3bb0, 25 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ItemBucketItemConsume
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const uint32_t, const FName, const uint32_t, const int32_t, const uint32_t, const FVector, const FName> ASBNetworkPlayerController = { 0x27a35f0, 26 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const uint32_t, const FName, const uint32_t, const int32_t, const uint32_t, const FVector, const FName> ServerRequest_ItemBucketItemConsume = { 0x27a35f0, 26 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ItemBucketItemAdd
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FName, const uint32_t, const uint32_t, const bool, const bool, const bool, const FSBItemInstanceForRPC> ASBNetworkPlayerController = { 0x27a3f00, 27 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FName, const uint32_t, const uint32_t, const bool, const bool, const bool, const FSBItemInstanceForRPC> ServerRequest_ItemBucketItemAdd = { 0x27a3f00, 27 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ItemBucketInteraction
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FGuid, const char, const uint32_t> ASBNetworkPlayerController = { 0x27a3290, 28 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const char, const uint32_t, const FGuid, const char, const uint32_t> ServerRequest_ItemBucketInteraction = { 0x27a3290, 28 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_EnterZone
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x27a9280, 29 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ServerRequest_EnterZone = { 0x27a9280, 29 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_DestructionZoneEventActor
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FName, const FVector, const FVector> ASBNetworkPlayerController = { 0x27a54a0, 30 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FName, const FVector, const FVector> ServerRequest_DestructionZoneEventActor = { 0x27a54a0, 30 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_CreateActor
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FVector, const FRotator, const bool, const bool, const int32_t, const uint32_t, const char, const FName, const bool> ASBNetworkPlayerController = { 0x27a8a10, 31 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FVector, const FRotator, const bool, const bool, const int32_t, const uint32_t, const char, const FName, const bool> ServerRequest_CreateActor = { 0x27a8a10, 31 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_Cheat
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FString, const FString> ASBNetworkPlayerController = { 0x27a0ce0, 32 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FString, const FString> ServerRequest_Cheat = { 0x27a0ce0, 32 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ChangeBulletItem
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ASBNetworkPlayerController = { 0x27a13b0, 33 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ServerRequest_ChangeBulletItem = { 0x27a13b0, 33 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_CancelEventMove
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t> ASBNetworkPlayerController = { 0x278b970, 34 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t> ServerRequest_CancelEventMove = { 0x278b970, 34 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorUnequip
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x27a6760, 35 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t> ServerRequest_ActorUnequip = { 0x27a6760, 35 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorTransform
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FVector, const FRotator> ASBNetworkPlayerController = { 0x27a7470, 36 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FVector, const FRotator> ServerRequest_ActorTransform = { 0x27a7470, 36 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorStopAllCloakingEffect
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ASBNetworkPlayerController = { 0x27a1780, 37 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ServerRequest_ActorStopAllCloakingEffect = { 0x27a1780, 37 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorStancePressCommandKey
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const bool> ASBNetworkPlayerController = { 0x27a6320, 38 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const bool> ServerRequest_ActorStancePressCommandKey = { 0x27a6320, 38 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorRevival
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ASBNetworkPlayerController = { 0x27a58b0, 39 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ServerRequest_ActorRevival = { 0x27a58b0, 39 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorRestoreSkillPoint
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool, const FName> ASBNetworkPlayerController = { 0x27a1550, 40 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool, const FName> ServerRequest_ActorRestoreSkillPoint = { 0x27a1550, 40 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorRespawn
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ASBNetworkPlayerController = { 0x27a5a50, 41 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ServerRequest_ActorRespawn = { 0x27a5a50, 41 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorRemoveTargetedByEnemy
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x27a5d90, 42 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ServerRequest_ActorRemoveTargetedByEnemy = { 0x27a5d90, 42 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorRegister
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TArray<float>> ASBNetworkPlayerController = { 0x27a60d0, 43 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TArray<float>> ServerRequest_ActorRegister = { 0x27a60d0, 43 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorReceiveAchievementReward
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x27a22a0, 44 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ServerRequest_ActorReceiveAchievementReward = { 0x27a22a0, 44 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorProgressAchievementId
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x27a2070, 45 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t> ServerRequest_ActorProgressAchievementId = { 0x27a2070, 45 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorProgressAchievement
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TEnumAsByte<ESBAchievementEventType>, const TEnumAsByte<ESBAchievementCategoryType>, const TArray<int32_t>, const TArray<FString>, const int32_t> ASBNetworkPlayerController = { 0x27a1b40, 46 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TEnumAsByte<ESBAchievementEventType>, const TEnumAsByte<ESBAchievementCategoryType>, const TArray<int32_t>, const TArray<FString>, const int32_t> ServerRequest_ActorProgressAchievement = { 0x27a1b40, 46 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorLockOnTarget
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x27a5bf0, 47 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ServerRequest_ActorLockOnTarget = { 0x27a5bf0, 47 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorLevelUp
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TEnumAsByte<ESBCharacterLevelType>, const uint32_t, const bool, const bool> ASBNetworkPlayerController = { 0x27a2660, 48 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TEnumAsByte<ESBCharacterLevelType>, const uint32_t, const bool, const bool> ServerRequest_ActorLevelUp = { 0x27a2660, 48 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorLanded
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const float, const float> ASBNetworkPlayerController = { 0x27a6e70, 49 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const float, const float> ServerRequest_ActorLanded = { 0x27a6e70, 49 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorJump
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ASBNetworkPlayerController = { 0x279fdc0, 50 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ServerRequest_ActorJump = { 0x279fdc0, 50 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorInteraction
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x27a5710, 51 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ServerRequest_ActorInteraction = { 0x27a5710, 51 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorInfo
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FVector, const FVector, const FVector, const FVector> ASBNetworkPlayerController = { 0x27a70a0, 52 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FVector, const FVector, const FVector, const FVector> ServerRequest_ActorInfo = { 0x27a70a0, 52 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorEquipmentRefresh
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TArray<int32_t>, const TArray<FSBItemInstanceForRPC>> ASBNetworkPlayerController = { 0x27a6bc0, 53 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const TArray<int32_t>, const TArray<FSBItemInstanceForRPC>> ServerRequest_ActorEquipmentRefresh = { 0x27a6bc0, 53 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorEquipment
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const bool> ASBNetworkPlayerController = { 0x27a6540, 54 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const bool> ServerRequest_ActorEquipment = { 0x27a6540, 54 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorEquipBodySuit
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ASBNetworkPlayerController = { 0x27a19a0, 55 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName> ServerRequest_ActorEquipBodySuit = { 0x27a19a0, 55 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorEquip
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t, const FSBItemInstanceForRPC> ASBNetworkPlayerController = { 0x27a6900, 56 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t, const FSBItemInstanceForRPC> ServerRequest_ActorEquip = { 0x27a6900, 56 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorCompleteAchievementEvent
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ASBNetworkPlayerController = { 0x27a1f60, 57 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ServerRequest_ActorCompleteAchievementEvent = { 0x27a1f60, 57 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorCompleteAchievement
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x27a2440, 58 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ServerRequest_ActorCompleteAchievement = { 0x27a2440, 58 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_ActorAddTargetedByEnemy
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x27a5f30, 59 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ServerRequest_ActorAddTargetedByEnemy = { 0x27a5f30, 59 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_AcquireSkillAll
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ASBNetworkPlayerController = { 0x27a4e10, 60 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ServerRequest_AcquireSkillAll = { 0x27a4e10, 60 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_AcquireSkill
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool, const bool> ASBNetworkPlayerController = { 0x27a4fb0, 61 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool, const bool> ServerRequest_AcquireSkill = { 0x27a4fb0, 61 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ServerRequest_AcceptPlayerSession
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const FString> ASBNetworkPlayerController = { 0x278a6e0, 62 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const FString> ServerRequest_AcceptPlayerSession = { 0x278a6e0, 62 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_SetMoveInputBlock
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const bool> ASBNetworkPlayerController = { 0x278b4d0, 63 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const bool> ClientResponse_SetMoveInputBlock = { 0x278b4d0, 63 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_SetMeshInfo
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const char, const FName, const FName, const FVector, const FRotator, const char, const FName> ASBNetworkPlayerController = { 0x278ba80, 64 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t, const char, const FName, const FName, const FVector, const FRotator, const char, const FName> ClientResponse_SetMeshInfo = { 0x278ba80, 64 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_DrawSBDebugSphere
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const float, const int32_t, const FColor> ASBNetworkPlayerController = { 0x278acf0, 65 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const float, const int32_t, const FColor> ClientResponse_DrawSBDebugSphere = { 0x278acf0, 65 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_DrawSBDebugLine
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const FVector, const FColor> ASBNetworkPlayerController = { 0x278ab00, 66 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const FVector, const FColor> ClientResponse_DrawSBDebugLine = { 0x278ab00, 66 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_DrawSBDebugCapsule
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const float, const float, const FQuat, const FColor> ASBNetworkPlayerController = { 0x278af60, 67 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const float, const float, const FQuat, const FColor> ClientResponse_DrawSBDebugCapsule = { 0x278af60, 67 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_DrawSBDebugBox
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const FVector, const FQuat, const FColor> ASBNetworkPlayerController = { 0x278b260, 68 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const FVector, const FQuat, const FColor> ClientResponse_DrawSBDebugBox = { 0x278b260, 68 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_DrawSBDebugArrow
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const FVector, const float, const FColor> ASBNetworkPlayerController = { 0x278a8a0, 69 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const FVector, const FVector, const float, const FColor> ClientResponse_DrawSBDebugArrow = { 0x278a8a0, 69 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_DoJump
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t> ASBNetworkPlayerController = { 0x278b7b0, 70 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t> ClientResponse_DoJump = { 0x278b7b0, 70 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientResponse_CancelEventMove
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t> ASBNetworkPlayerController = { 0x278b890, 71 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const int32_t> ClientResponse_CancelEventMove = { 0x278b890, 71 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneTriggerRegister
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x2792100, 72 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t, const int32_t> ClientBroadcast_ZoneTriggerRegister = { 0x2792100, 72 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneTriggerDoEvent
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FName, const TEnumAsByte<ESBConditionResultType>, const int32_t> ASBNetworkPlayerController = { 0x2792810, 73 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FName, const TEnumAsByte<ESBConditionResultType>, const int32_t> ClientBroadcast_ZoneTriggerDoEvent = { 0x2792810, 73 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneTriggerCreate
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t> ASBNetworkPlayerController = { 0x2797320, 74 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t> ClientBroadcast_ZoneTriggerCreate = { 0x2797320, 74 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEventActorRemove
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2799430, 75 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ClientBroadcast_ZoneEventActorRemove = { 0x2799430, 75 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEventActorPostDestruction
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2798fb0, 76 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ClientBroadcast_ZoneEventActorPostDestruction = { 0x2798fb0, 76 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEventActorDestructionStep
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector, const FVector, const int32_t, const TEnumAsByte<ESBElementType>, const float, const TEnumAsByte<ESBZoneEventHitAttackerType>> ASBNetworkPlayerController = { 0x2798b00, 77 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector, const FVector, const int32_t, const TEnumAsByte<ESBElementType>, const float, const TEnumAsByte<ESBZoneEventHitAttackerType>> ClientBroadcast_ZoneEventActorDestructionStep = { 0x2798b00, 77 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEventActorDestruction
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector, const FVector, const TEnumAsByte<ESBZoneEventHitAttackerType>> ASBNetworkPlayerController = { 0x2799120, 78 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector, const FVector, const TEnumAsByte<ESBZoneEventHitAttackerType>> ClientBroadcast_ZoneEventActorDestruction = { 0x2799120, 78 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEventActorCreate
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const int32_t, const bool, const bool, const bool, const FVector, const FRotator, const bool> ASBNetworkPlayerController = { 0x27995a0, 79 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const int32_t, const bool, const bool, const bool, const FVector, const FRotator, const bool> ClientBroadcast_ZoneEventActorCreate = { 0x27995a0, 79 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEnvRegister
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t, const FName, const TEnumAsByte<ESBObjectState>, const TEnumAsByte<ESBZoneEnvActiveState>> ASBNetworkPlayerController = { 0x2792400, 80 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t, const FName, const TEnumAsByte<ESBObjectState>, const TEnumAsByte<ESBZoneEnvActiveState>> ClientBroadcast_ZoneEnvRegister = { 0x2792400, 80 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEnvCreate
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t> ASBNetworkPlayerController = { 0x2797590, 81 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const FName, const uint32_t> ClientBroadcast_ZoneEnvCreate = { 0x2797590, 81 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEnvChangeState
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const FName, const uint32_t, const bool> ASBNetworkPlayerController = { 0x2792d80, 82 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const FName, const uint32_t, const bool> ClientBroadcast_ZoneEnvChangeState = { 0x2792d80, 82 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ZoneEnvChangeEnable
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBObjectState>> ASBNetworkPlayerController = { 0x2792ba0, 83 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBObjectState>> ClientBroadcast_ZoneEnvChangeEnable = { 0x2792ba0, 83 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_UpdateMultiPlayScore
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const float, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x278da10, 84 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const float, const uint32_t, const uint32_t> ClientBroadcast_UpdateMultiPlayScore = { 0x278da10, 84 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_UpdateMultiPlayRuleState
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const TEnumAsByte<ESBRuleState>, const float, const uint32_t> ASBNetworkPlayerController = { 0x278dd00, 85 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const TEnumAsByte<ESBRuleState>, const float, const uint32_t> ClientBroadcast_UpdateMultiPlayRuleState = { 0x278dd00, 85 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_StopSkill
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x279f070, 86 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const bool> ClientBroadcast_StopSkill = { 0x279f070, 86 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_StopEffect
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x279d8f0, 87 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t> ClientBroadcast_StopEffect = { 0x279d8f0, 87 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_StopActorMoveToTransform
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x279c590, 88 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_StopActorMoveToTransform = { 0x279c590, 88 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_StartSkill
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const TArray<uint32_t>, const FName, const FVector, const TArray<uint32_t>, const float, const FName> ASBNetworkPlayerController = { 0x279f750, 89 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const TArray<uint32_t>, const FName, const FVector, const TArray<uint32_t>, const float, const FName> ClientBroadcast_StartSkill = { 0x279f750, 89 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_StartEffect
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const int32_t, const float, const char, const FVector, const FRotator, const uint32_t, const uint32_t, const FVector, const FVector, const FName, const FName> ASBNetworkPlayerController = { 0x279de20, 90 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const int32_t, const float, const char, const FVector, const FRotator, const uint32_t, const uint32_t, const FVector, const FVector, const FName, const FName> ClientBroadcast_StartEffect = { 0x279de20, 90 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_SkillResultSet
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const char, const float> ASBNetworkPlayerController = { 0x2795e30, 91 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const char, const float> ClientBroadcast_SkillResultSet = { 0x2795e30, 91 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_SkillNextStep
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const TArray<uint32_t>, const bool, const TArray<uint32_t>, const float> ASBNetworkPlayerController = { 0x279f2f0, 92 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const TArray<uint32_t>, const bool, const TArray<uint32_t>, const float> ClientBroadcast_SkillNextStep = { 0x279f2f0, 92 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_SkillHitResult
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const TEnumAsByte<ESBSkillHitResult>, const FName, const FHitResult, const FVector, const FVector, const FName, const FVector, const FVector, const float, const bool, const TEnumAsByte<ESBSkillAttackDirection>, const FName> ASBNetworkPlayerController = { 0x279e6a0, 93 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const TEnumAsByte<ESBSkillHitResult>, const FName, const FHitResult, const FVector, const FVector, const FName, const FVector, const FVector, const float, const bool, const TEnumAsByte<ESBSkillAttackDirection>, const FName> ClientBroadcast_SkillHitResult = { 0x279e6a0, 93 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ShotProjectile
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x279b050, 94 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_ShotProjectile = { 0x279b050, 94 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_SetWorldCustomTimeScale
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const bool, const float> ASBNetworkPlayerController = { 0x278b640, 95 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const bool, const float> ClientBroadcast_SetWorldCustomTimeScale = { 0x278b640, 95 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_SetTargetEncroachment
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const float, const float, const float, const FString, const FString, const float, const bool> ASBNetworkPlayerController = { 0x2790680, 96 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const float, const float, const float, const FString, const FString, const float, const bool> ClientBroadcast_SetTargetEncroachment = { 0x2790680, 96 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_SetSkillSlot
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBSkillSlotType>, const uint32_t> ASBNetworkPlayerController = { 0x2793110, 97 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBSkillSlotType>, const uint32_t> ClientBroadcast_SetSkillSlot = { 0x2793110, 97 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_SetForceFixedLocation
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x2799b70, 98 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ClientBroadcast_SetForceFixedLocation = { 0x2799b70, 98 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_RunZoneEvent
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2796b50, 99 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_RunZoneEvent = { 0x2796b50, 99 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_RetargetingProjectile
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const FVector> ASBNetworkPlayerController = { 0x279a150, 100 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const FVector> ClientBroadcast_RetargetingProjectile = { 0x279a150, 100 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_RespawnActor
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x27a8110, 101 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t> ClientBroadcast_RespawnActor = { 0x27a8110, 101 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ResetZone
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ASBNetworkPlayerController = { 0x278c900, 102 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ClientBroadcast_ResetZone = { 0x278c900, 102 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_RequestPlayerName
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FString, const uint32_t> ASBNetworkPlayerController = { 0x278cd30, 103 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FString, const uint32_t> ClientBroadcast_RequestPlayerName = { 0x278cd30, 103 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_RequestActorRevive
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x278cbc0, 104 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ClientBroadcast_RequestActorRevive = { 0x278cbc0, 104 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_RemoveProjectile
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector, const bool, const bool> ASBNetworkPlayerController = { 0x279aa40, 105 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector, const bool, const bool> ClientBroadcast_RemoveProjectile = { 0x279aa40, 105 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ReleaseActor
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x27a83f0, 106 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t> ClientBroadcast_ReleaseActor = { 0x27a83f0, 106 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_RegisterSaveGame
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FSBSaveGameData_Actor, const FSBSaveGameData_Env> ASBNetworkPlayerController = { 0x2791d00, 107 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FSBSaveGameData_Actor, const FSBSaveGameData_Env> ClientBroadcast_RegisterSaveGame = { 0x2791d00, 107 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ProjectileWaitEnd
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x279ad70, 108 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ClientBroadcast_ProjectileWaitEnd = { 0x279ad70, 108 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ProjectileUpdateDestLocation
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector> ASBNetworkPlayerController = { 0x2799d50, 109 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector> ClientBroadcast_ProjectileUpdateDestLocation = { 0x2799d50, 109 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ProjectileHitResult
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FName, const TEnumAsByte<ESBSkillHitResult>, const FVector, const FVector, const FName, const FVector, const FName> ASBNetworkPlayerController = { 0x279a480, 110 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FName, const TEnumAsByte<ESBSkillHitResult>, const FVector, const FVector, const FName, const FVector, const FName> ClientBroadcast_ProjectileHitResult = { 0x279a480, 110 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ProjectileArrived
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x279aee0, 111 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ClientBroadcast_ProjectileArrived = { 0x279aee0, 111 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_NotifyQuestEvent
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const ESBQuestEventType> ASBNetworkPlayerController = { 0x278c9e0, 112 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const FName, const ESBQuestEventType> ClientBroadcast_NotifyQuestEvent = { 0x278c9e0, 112 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_NightOperationResult
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ASBNetworkPlayerController = { 0x278d8a0, 113 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const bool> ClientBroadcast_NightOperationResult = { 0x278d8a0, 113 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_LeaveZone
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x278ff00, 114 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FName> ClientBroadcast_LeaveZone = { 0x278ff00, 114 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketItemUpdate
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FSBItemInstanceForRPC> ASBNetworkPlayerController = { 0x27936a0, 115 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FSBItemInstanceForRPC> ClientBroadcast_ItemBucketItemUpdate = { 0x27936a0, 115 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketItemSpawn
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FGuid, const uint32_t, const FVector, const FRotator, const FVector, const float, const FSBItemSpawnCasterInfo, const uint32_t, const FName, const float, const bool, const bool, const bool, const bool, const float> ASBNetworkPlayerController = { 0x2793ec0, 116 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FGuid, const uint32_t, const FVector, const FRotator, const FVector, const float, const FSBItemSpawnCasterInfo, const uint32_t, const FName, const float, const bool, const bool, const bool, const bool, const float> ClientBroadcast_ItemBucketItemSpawn = { 0x2793ec0, 116 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketItemRemove
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FGuid, const uint32_t, const bool> ASBNetworkPlayerController = { 0x2794cd0, 117 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FGuid, const uint32_t, const bool> ClientBroadcast_ItemBucketItemRemove = { 0x2794cd0, 117 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketItemDespawn
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FGuid> ASBNetworkPlayerController = { 0x2793cc0, 118 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FGuid> ClientBroadcast_ItemBucketItemDespawn = { 0x2793cc0, 118 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketItemConsume
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FGuid, const uint32_t, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x27948b0, 119 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FGuid, const uint32_t, const uint32_t, const uint32_t, const bool> ClientBroadcast_ItemBucketItemConsume = { 0x27948b0, 119 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketItemAdd
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FSBItemInstanceForRPC, const uint32_t, const bool, const bool> ASBNetworkPlayerController = { 0x2794fe0, 120 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FSBItemInstanceForRPC, const uint32_t, const bool, const bool> ClientBroadcast_ItemBucketItemAdd = { 0x2794fe0, 120 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketInteraction
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const char, const uint32_t, const FGuid, const char, const uint32_t> ASBNetworkPlayerController = { 0x2793930, 121 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const char, const uint32_t, const FGuid, const char, const uint32_t> ClientBroadcast_ItemBucketInteraction = { 0x2793930, 121 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketDestroy
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2795420, 122 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ClientBroadcast_ItemBucketDestroy = { 0x2795420, 122 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ItemBucketCreate
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const char, const uint32_t, const bool> ASBNetworkPlayerController = { 0x2795590, 123 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const char, const uint32_t, const bool> ClientBroadcast_ItemBucketCreate = { 0x2795590, 123 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_HittedProjectile
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector> ASBNetworkPlayerController = { 0x2799f50, 124 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector> ClientBroadcast_HittedProjectile = { 0x2799f50, 124 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_EnterZone
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x2790180, 125 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FName> ClientBroadcast_EnterZone = { 0x2790180, 125 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_EndTurn
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ASBNetworkPlayerController = { 0x278c490, 126 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t> ClientBroadcast_EndTurn = { 0x278c490, 126 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_DespawnActor
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x27a8280, 127 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t> ClientBroadcast_DespawnActor = { 0x27a8280, 127 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_CreateProjectile
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const uint32_t, const uint32_t, const FVector, const FTransform, const FVector, const int32_t, const FName, const FName, const uint32_t> ASBNetworkPlayerController = { 0x279b230, 128 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const uint32_t, const uint32_t, const FVector, const FTransform, const FVector, const int32_t, const FName, const FName, const uint32_t> ClientBroadcast_CreateProjectile = { 0x279b230, 128 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_CreateActor
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t, const int32_t, const FVector, const FRotator, const bool, const int32_t, const bool> ASBNetworkPlayerController = { 0x27a8560, 129 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const int32_t, const int32_t, const FVector, const FRotator, const bool, const int32_t, const bool> ClientBroadcast_CreateActor = { 0x27a8560, 129 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_CompleteZoneInit
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const bool> ASBNetworkPlayerController = { 0x278cfe0, 130 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const bool> ClientBroadcast_CompleteZoneInit = { 0x278cfe0, 130 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ChangeTimeScale
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const char, const float> ASBNetworkPlayerController = { 0x2790400, 131 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const char, const float> ClientBroadcast_ChangeTimeScale = { 0x2790400, 131 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ChangePlayerActor
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x278d260, 132 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_ChangePlayerActor = { 0x278d260, 132 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ApplyEffect
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TArray<uint32_t>, const TArray<float>, const FString> ASBNetworkPlayerController = { 0x279dad0, 133 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TArray<uint32_t>, const TArray<float>, const FString> ClientBroadcast_ApplyEffect = { 0x279dad0, 133 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorUnequip
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t, const FSBItemInstanceForRPC> ASBNetworkPlayerController = { 0x279b940, 134 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t, const FSBItemInstanceForRPC> ClientBroadcast_ActorUnequip = { 0x279b940, 134 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorStatRefresh
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const TArray<float>> ASBNetworkPlayerController = { 0x2797c00, 135 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const TArray<float>> ClientBroadcast_ActorStatRefresh = { 0x2797c00, 135 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorSkillHitResultFromTarget
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBSkillHitResult>, const uint32_t> ASBNetworkPlayerController = { 0x278e7b0, 136 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBSkillHitResult>, const uint32_t> ClientBroadcast_ActorSkillHitResultFromTarget = { 0x278e7b0, 136 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorShowUI
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBUILogicType>> ASBNetworkPlayerController = { 0x2790c80, 137 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBUILogicType>> ClientBroadcast_ActorShowUI = { 0x2790c80, 137 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorSetVisible
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x2791b20, 138 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ClientBroadcast_ActorSetVisible = { 0x2791b20, 138 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorSetStance
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const bool> ASBNetworkPlayerController = { 0x278ea30, 139 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const bool> ClientBroadcast_ActorSetStance = { 0x278ea30, 139 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorSetSpeed
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBActorSpeedType>, const float> ASBNetworkPlayerController = { 0x278ecb0, 140 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBActorSpeedType>, const float> ClientBroadcast_ActorSetSpeed = { 0x278ecb0, 140 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorSetOwnerActor
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x278d6c0, 141 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_ActorSetOwnerActor = { 0x278d6c0, 141 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorSetHitStop
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x278e350, 142 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const bool> ClientBroadcast_ActorSetHitStop = { 0x278e350, 142 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorSetBulletItem
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x278e5d0, 143 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ClientBroadcast_ActorSetBulletItem = { 0x278e5d0, 143 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorSetActive
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x2791940, 144 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ClientBroadcast_ActorSetActive = { 0x2791940, 144 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorRotation
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FRotator> ASBNetworkPlayerController = { 0x2797a00, 145 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FRotator> ClientBroadcast_ActorRotation = { 0x2797a00, 145 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorRootMotion
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const uint32_t, const float, const float, const uint32_t, const float> ASBNetworkPlayerController = { 0x279cc20, 146 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const uint32_t, const float, const float, const uint32_t, const float> ClientBroadcast_ActorRootMotion = { 0x279cc20, 146 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorRevival
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x278e000, 147 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t> ClientBroadcast_ActorRevival = { 0x278e000, 147 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorRestoreSkillPoint
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t> ASBNetworkPlayerController = { 0x278e170, 148 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t> ClientBroadcast_ActorRestoreSkillPoint = { 0x278e170, 148 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorResetSkillUsableGroup
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x278f1e0, 149 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ClientBroadcast_ActorResetSkillUsableGroup = { 0x278f1e0, 149 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorResetSkillCommandUsableCount
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x278f3c0, 150 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ClientBroadcast_ActorResetSkillCommandUsableCount = { 0x278f3c0, 150 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorResetSkillCommandCoolTime
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x278faa0, 151 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ClientBroadcast_ActorResetSkillCommandCoolTime = { 0x278faa0, 151 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorRemoveTargetedByEnemy
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2795a70, 152 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_ActorRemoveTargetedByEnemy = { 0x2795a70, 152 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorRegister
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FVector, const FRotator, const TArray<float>, const uint32_t, const char, const FName, const uint32_t, const uint32_t, const bool, const bool, const bool, const uint32_t, const uint32_t, const TArray<int32_t>, const TArray<FSBItemInstanceForRPC>> ASBNetworkPlayerController = { 0x27960b0, 153 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FVector, const FRotator, const TArray<float>, const uint32_t, const char, const FName, const uint32_t, const uint32_t, const bool, const bool, const bool, const uint32_t, const uint32_t, const TArray<int32_t>, const TArray<FSBItemInstanceForRPC>> ClientBroadcast_ActorRegister = { 0x27960b0, 153 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorReceiveAchievementReward
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2796d30, 154 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_ActorReceiveAchievementReward = { 0x2796d30, 154 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorProgressAchievement
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const bool, const bool, const bool> ASBNetworkPlayerController = { 0x2796f10, 155 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const bool, const bool, const bool> ClientBroadcast_ActorProgressAchievement = { 0x2796f10, 155 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorNextSkill
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2791340, 156 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_ActorNextSkill = { 0x2791340, 156 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorMoveToTransform
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const uint32_t, const uint32_t, const float, const float, const FVector, const FVector, const float, const bool> ASBNetworkPlayerController = { 0x279d0c0, 157 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const uint32_t, const uint32_t, const float, const float, const FVector, const FVector, const float, const bool> ClientBroadcast_ActorMoveToTransform = { 0x279d0c0, 157 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorLookAt
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const float, const float, const float, const uint32_t> ASBNetworkPlayerController = { 0x2791520, 158 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const float, const float, const float, const uint32_t> ClientBroadcast_ActorLookAt = { 0x2791520, 158 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorLockOnTarget
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2795890, 159 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_ActorLockOnTarget = { 0x2795890, 159 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorLocation
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector> ASBNetworkPlayerController = { 0x2797800, 160 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FVector> ClientBroadcast_ActorLocation = { 0x2797800, 160 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorLevelUp
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBCharacterLevelType>, const uint32_t, const bool> ASBNetworkPlayerController = { 0x2790e60, 161 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBCharacterLevelType>, const uint32_t, const bool> ClientBroadcast_ActorLevelUp = { 0x2790e60, 161 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorJump
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ASBNetworkPlayerController = { 0x279d710, 162 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const bool> ClientBroadcast_ActorJump = { 0x279d710, 162 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorHitResult
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FVector, const FVector, const FName, const FVector, const FName> ASBNetworkPlayerController = { 0x279c770, 163 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const FVector, const FVector, const FName, const FVector, const FName> ClientBroadcast_ActorHitResult = { 0x279c770, 163 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorEquipmentRefresh
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TArray<int32_t>, const TArray<FSBItemInstanceForRPC>> ASBNetworkPlayerController = { 0x279c010, 164 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TArray<int32_t>, const TArray<FSBItemInstanceForRPC>> ClientBroadcast_ActorEquipmentRefresh = { 0x279c010, 164 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorEquipment
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const bool> ASBNetworkPlayerController = { 0x279c310, 165 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const bool> ClientBroadcast_ActorEquipment = { 0x279c310, 165 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorEquip
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t, const FSBItemInstanceForRPC, const bool> ASBNetworkPlayerController = { 0x279bc60, 166 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const int32_t, const FSBItemInstanceForRPC, const bool> ClientBroadcast_ActorEquip = { 0x279bc60, 166 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorEnableOverlapCollisions
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TArray<FString>, const bool> ASBNetworkPlayerController = { 0x278ef30, 167 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TArray<FString>, const bool> ClientBroadcast_ActorEnableOverlapCollisions = { 0x278ef30, 167 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorDead
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const bool, const bool> ASBNetworkPlayerController = { 0x2797eb0, 168 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const uint32_t, const bool, const bool> ClientBroadcast_ActorDead = { 0x2797eb0, 168 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorChangeTribe
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ASBNetworkPlayerController = { 0x278d4e0, 169 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName> ClientBroadcast_ActorChangeTribe = { 0x278d4e0, 169 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorApplyState
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBActorState>, const bool, const int32_t> ASBNetworkPlayerController = { 0x2798340, 170 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBActorState>, const bool, const int32_t> ClientBroadcast_ActorApplyState = { 0x2798340, 170 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorApplyStat
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBActorStatType>, const float, const bool, const bool, const uint32_t, const float> ASBNetworkPlayerController = { 0x2798660, 171 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBActorStatType>, const float, const bool, const bool, const uint32_t, const float> ClientBroadcast_ActorApplyStat = { 0x2798660, 171 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorAddTargetedByEnemy
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ASBNetworkPlayerController = { 0x2795c50, 172 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t> ClientBroadcast_ActorAddTargetedByEnemy = { 0x2795c50, 172 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorAdditiveSkillEnergyAmount
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const float> ASBNetworkPlayerController = { 0x278fc80, 173 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const float> ClientBroadcast_ActorAdditiveSkillEnergyAmount = { 0x278fc80, 173 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorAdditiveSkillCoolTime
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const float> ASBNetworkPlayerController = { 0x278f5a0, 174 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const float> ClientBroadcast_ActorAdditiveSkillCoolTime = { 0x278f5a0, 174 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorAdditiveSkillCommandCoolTime
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const float> ASBNetworkPlayerController = { 0x278f820, 175 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const FName, const float> ClientBroadcast_ActorAdditiveSkillCommandCoolTime = { 0x278f820, 175 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorAddedItemAutoLevelUpType
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBCharacterLevelType>, const uint32_t, const int32_t, const int32_t> ASBNetworkPlayerController = { 0x278c570, 176 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBCharacterLevelType>, const uint32_t, const int32_t, const int32_t> ClientBroadcast_ActorAddedItemAutoLevelUpType = { 0x278c570, 176 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_ActorAction
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBActorAction>> ASBNetworkPlayerController = { 0x2791160, 177 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const TEnumAsByte<ESBActorAction>> ClientBroadcast_ActorAction = { 0x2791160, 177 }; 
 	// Function /Script/SB.SBNetworkPlayerController.ClientBroadcast_AcquireSkill
-	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const bool, const uint32_t> ASBNetworkPlayerController = { 0x2793390, 178 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerController, void, const uint32_t, const uint32_t, const uint32_t, const bool, const uint32_t> ClientBroadcast_AcquireSkill = { 0x2793390, 178 }; 
 };
 
 /// Class /Script/SB.SBNetworkPlayerState
@@ -21909,12 +21862,11 @@ public:
 	unsigned char                                      UnknownData01_6[0x4];                                       // 0x03CC   (0x0004)  MISSED
 	FString                                            PlayerSessionId;                                            // 0x03D0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/SB.SBNetworkPlayerState.OnRep_PlayerSessionId
-	constexpr static const FunctionPointer<ASBNetworkPlayerState, void> ASBNetworkPlayerState = { 0x27ade90, 0 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerState, void> OnRep_PlayerSessionId = { 0x27ade90, 0 }; 
 	// Function /Script/SB.SBNetworkPlayerState.OnRep_ActorGuid
-	constexpr static const FunctionPointer<ASBNetworkPlayerState, void> ASBNetworkPlayerState = { 0x27adeb0, 1 }; 
+	constexpr static const FunctionPointer<ASBNetworkPlayerState, void> OnRep_ActorGuid = { 0x27adeb0, 1 }; 
 };
 
 /// Class /Script/SB.SBObjectMaterialData
@@ -21936,12 +21888,11 @@ public:
 	TArray<TWeakObjectPtr<USkeletalMeshComponent*>>    SkeletalMeshComponents;                                     // 0x0328   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0338   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBOccluderTurnOffVolume.OnEndOverlapActor
-	constexpr static const FunctionPointer<ASBOccluderTurnOffVolume, void, const AActor*, const AActor*> ASBOccluderTurnOffVolume = { 0x27ae640, 0 }; 
+	constexpr static const FunctionPointer<ASBOccluderTurnOffVolume, void, const AActor*, const AActor*> OnEndOverlapActor = { 0x27ae640, 0 }; 
 	// Function /Script/SB.SBOccluderTurnOffVolume.OnBeginOverlapActor
-	constexpr static const FunctionPointer<ASBOccluderTurnOffVolume, void, const AActor*, const AActor*> ASBOccluderTurnOffVolume = { 0x27ae7b0, 1 }; 
+	constexpr static const FunctionPointer<ASBOccluderTurnOffVolume, void, const AActor*, const AActor*> OnBeginOverlapActor = { 0x27ae7b0, 1 }; 
 };
 
 /// Class /Script/SB.SBOptimizationActor
@@ -21975,22 +21926,21 @@ public:
 	bool                                               bIsIntervalUpdate;                                          // 0x0420   (0x0001)  
 	unsigned char                                      UnknownData13_7[0xF];                                       // 0x0421   (0x000F)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBOptimizationActor.UpdateWaterHeight
-	constexpr static const FunctionPointer<ASBOptimizationActor, void, const TArray<FName>&, const UStaticMeshComponent*, const float, const float, const float> ASBOptimizationActor = { 0x27ae9e0, 0 }; 
+	constexpr static const FunctionPointer<ASBOptimizationActor, void, const TArray<FName>&, const UStaticMeshComponent*, const float, const float, const float> UpdateWaterHeight = { 0x27ae9e0, 0 }; 
 	// Function /Script/SB.SBOptimizationActor.OnCollisionPhysicsOverlapEnd
-	constexpr static const FunctionPointer<ASBOptimizationActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> ASBOptimizationActor = { 0x27af0d0, 1 }; 
+	constexpr static const FunctionPointer<ASBOptimizationActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> OnCollisionPhysicsOverlapEnd = { 0x27af0d0, 1 }; 
 	// Function /Script/SB.SBOptimizationActor.OnCollisionPhysicsOverlapBegin
-	constexpr static const FunctionPointer<ASBOptimizationActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> ASBOptimizationActor = { 0x27af350, 2 }; 
+	constexpr static const FunctionPointer<ASBOptimizationActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> OnCollisionPhysicsOverlapBegin = { 0x27af350, 2 }; 
 	// Function /Script/SB.SBOptimizationActor.OnCollisionOriginHit
-	constexpr static const FunctionPointer<ASBOptimizationActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> ASBOptimizationActor = { 0x27aed90, 3 }; 
+	constexpr static const FunctionPointer<ASBOptimizationActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> OnCollisionOriginHit = { 0x27aed90, 3 }; 
 	// Function /Script/SB.SBOptimizationActor.NotifyBP_Wake
-	constexpr static const FunctionPointer<ASBOptimizationActor, void> ASBOptimizationActor = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<ASBOptimizationActor, void> NotifyBP_Wake = { 0x2bbb090, 4 }; 
 	// Function /Script/SB.SBOptimizationActor.NotifyBP_Sleep
-	constexpr static const FunctionPointer<ASBOptimizationActor, void> ASBOptimizationActor = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<ASBOptimizationActor, void> NotifyBP_Sleep = { 0x2bbb090, 5 }; 
 	// Function /Script/SB.SBOptimizationActor.EventUnderWater
-	constexpr static const FunctionPointer<ASBOptimizationActor, void, const FVector> ASBOptimizationActor = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<ASBOptimizationActor, void, const FVector> EventUnderWater = { 0x2bbb090, 6 }; 
 };
 
 /// Class /Script/SB.SBParallelTickInterface
@@ -22273,10 +22223,9 @@ class USBPMaterialParticleSet : public UDataAsset
 public:
 	TMap<TEnumAsByte<EPhysicalSurface>, FSBPMatParticleSetInfoArray> PhysParticleMap;                              // 0x0030   (0x0050)  
 
-
 	/// Functions
 	// Function /Script/SB.SBPMaterialParticleSet.GetSBPMatParticleSetInfoArray
-	constexpr static const FunctionPointer<USBPMaterialParticleSet, FSBPMatParticleSetInfoArray, const TEnumAsByte<EPhysicalSurface>> USBPMaterialParticleSet = { 0x27b2f30, 0 }; 
+	constexpr static const FunctionPointer<USBPMaterialParticleSet, FSBPMatParticleSetInfoArray, const TEnumAsByte<EPhysicalSurface>> GetSBPMatParticleSetInfoArray = { 0x27b2f30, 0 }; 
 };
 
 /// Struct /Script/SB.SBPrimaryAssetLabelInfo
@@ -22326,10 +22275,9 @@ class USBPrimitiveListViewItemWidget : public USBUserWidget
 public:
 	unsigned char                                      UnknownData01_1[0x28];                                      // 0x0680   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBPrimitiveListViewItemWidget.OnClickedObjectToggleVisible
-	constexpr static const FunctionPointer<USBPrimitiveListViewItemWidget, void> USBPrimitiveListViewItemWidget = { 0x27b5760, 0 }; 
+	constexpr static const FunctionPointer<USBPrimitiveListViewItemWidget, void> OnClickedObjectToggleVisible = { 0x27b5760, 0 }; 
 };
 
 /// Class /Script/SB.SBProfilingWidget
@@ -22339,34 +22287,33 @@ class USBProfilingWidget : public USBUserWidget
 public:
 	unsigned char                                      UnknownData01_1[0x38];                                      // 0x0680   (0x0038)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBProfilingWidget.OnClickedUnload
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5c40, 0 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedUnload = { 0x27b5c40, 0 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedObjectToggleStaticVisible
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5b50, 1 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedObjectToggleStaticVisible = { 0x27b5b50, 1 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedObjectToggleSkeletalVisible
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5b70, 2 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedObjectToggleSkeletalVisible = { 0x27b5b70, 2 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedObjectToggleAllVisible
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5b90, 3 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedObjectToggleAllVisible = { 0x27b5b90, 3 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedObjectCollect
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5bb0, 4 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedObjectCollect = { 0x27b5bb0, 4 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedMenu_TextureList
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5ce0, 5 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedMenu_TextureList = { 0x27b5ce0, 5 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedMenu_ObjectList
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5cc0, 6 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedMenu_ObjectList = { 0x27b5cc0, 6 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedMenu_LevelStream
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5d00, 7 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedMenu_LevelStream = { 0x27b5d00, 7 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedLoad
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5c60, 8 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedLoad = { 0x27b5c60, 8 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedCollectTextureList
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5bd0, 9 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedCollectTextureList = { 0x27b5bd0, 9 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedClose
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5c80, 10 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedClose = { 0x27b5c80, 10 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedAllUnload
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5c00, 11 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedAllUnload = { 0x27b5c00, 11 }; 
 	// Function /Script/SB.SBProfilingWidget.OnClickedAllLoad
-	constexpr static const FunctionPointer<USBProfilingWidget, void> USBProfilingWidget = { 0x27b5c20, 12 }; 
+	constexpr static const FunctionPointer<USBProfilingWidget, void> OnClickedAllLoad = { 0x27b5c20, 12 }; 
 };
 
 /// Class /Script/SB.SBProgressState
@@ -22379,12 +22326,11 @@ public:
 	float                                              EditorViewProgress;                                         // 0x02D0   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x4];                                       // 0x02D4   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBProgressState.NotifyChangedProgress
-	constexpr static const FunctionPointer<ASBProgressState, void, const float> ASBProgressState = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ASBProgressState, void, const float> NotifyChangedProgress = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBProgressState.ChangeProgress
-	constexpr static const FunctionPointer<ASBProgressState, void, const float> ASBProgressState = { 0x27b63a0, 1 }; 
+	constexpr static const FunctionPointer<ASBProgressState, void, const float> ChangeProgress = { 0x27b63a0, 1 }; 
 };
 
 /// Struct /Script/SB.SBProjectileUpdateInfo
@@ -22473,48 +22419,47 @@ public:
 	float                                              BoidSplineMoveDuration;                                     // 0x0658   (0x0004)  
 	unsigned char                                      UnknownData13_7[0x4];                                       // 0x065C   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBProjectile.SetRotationByDirection
-	constexpr static const FunctionPointer<ASBProjectile, void, const bool> ASBProjectile = { 0x27b73e0, 0 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const bool> SetRotationByDirection = { 0x27b73e0, 0 }; 
 	// Function /Script/SB.SBProjectile.SetDestroyWaitTime
-	constexpr static const FunctionPointer<ASBProjectile, void, const float> ASBProjectile = { 0x27b74c0, 1 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const float> SetDestroyWaitTime = { 0x27b74c0, 1 }; 
 	// Function /Script/SB.SBProjectile.OnPhysicsShapeHit
-	constexpr static const FunctionPointer<ASBProjectile, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> ASBProjectile = { 0x27b6620, 2 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> OnPhysicsShapeHit = { 0x27b6620, 2 }; 
 	// Function /Script/SB.SBProjectile.OnCollisionOriginBeginOverlap
-	constexpr static const FunctionPointer<ASBProjectile, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> ASBProjectile = { 0x27b6fb0, 3 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> OnCollisionOriginBeginOverlap = { 0x27b6fb0, 3 }; 
 	// Function /Script/SB.SBProjectile.NotifyBP_ReleaseActor
-	constexpr static const FunctionPointer<ASBProjectile, void> ASBProjectile = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void> NotifyBP_ReleaseActor = { 0x2bbb090, 4 }; 
 	// Function /Script/SB.SBProjectile.NotifyBP_InitActor
-	constexpr static const FunctionPointer<ASBProjectile, void> ASBProjectile = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void> NotifyBP_InitActor = { 0x2bbb090, 5 }; 
 	// Function /Script/SB.SBProjectile.NotifyBP_ChangeState
-	constexpr static const FunctionPointer<ASBProjectile, void, const TEnumAsByte<ESBProjectileState>> ASBProjectile = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const TEnumAsByte<ESBProjectileState>> NotifyBP_ChangeState = { 0x2bbb090, 6 }; 
 	// Function /Script/SB.SBProjectile.GetStartLocation
-	constexpr static const FunctionPointer<ASBProjectile, FVector> ASBProjectile = { 0x27b7620, 7 }; 
+	constexpr static const FunctionPointer<ASBProjectile, FVector> GetStartLocation = { 0x27b7620, 7 }; 
 	// Function /Script/SB.SBProjectile.GetEndLocation
-	constexpr static const FunctionPointer<ASBProjectile, FVector> ASBProjectile = { 0x27b75b0, 8 }; 
+	constexpr static const FunctionPointer<ASBProjectile, FVector> GetEndLocation = { 0x27b75b0, 8 }; 
 	// Function /Script/SB.SBProjectile.GetCurrentLocation
-	constexpr static const FunctionPointer<ASBProjectile, FVector> ASBProjectile = { 0x27b7670, 9 }; 
+	constexpr static const FunctionPointer<ASBProjectile, FVector> GetCurrentLocation = { 0x27b7670, 9 }; 
 	// Function /Script/SB.SBProjectile.EventShotBoids
-	constexpr static const FunctionPointer<ASBProjectile, void, const int32_t> ASBProjectile = { 0x2bbb090, 10 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const int32_t> EventShotBoids = { 0x2bbb090, 10 }; 
 	// Function /Script/SB.SBProjectile.EventOnHitted
-	constexpr static const FunctionPointer<ASBProjectile, void, const FVector> ASBProjectile = { 0x2bbb090, 11 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const FVector> EventOnHitted = { 0x2bbb090, 11 }; 
 	// Function /Script/SB.SBProjectile.EventOnHitDestruction
-	constexpr static const FunctionPointer<ASBProjectile, void> ASBProjectile = { 0x2bbb090, 12 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void> EventOnHitDestruction = { 0x2bbb090, 12 }; 
 	// Function /Script/SB.SBProjectile.EventOnHit
-	constexpr static const FunctionPointer<ASBProjectile, void, const FVector, const TEnumAsByte<ESBSkillHitResult>> ASBProjectile = { 0x2bbb090, 13 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const FVector, const TEnumAsByte<ESBSkillHitResult>> EventOnHit = { 0x2bbb090, 13 }; 
 	// Function /Script/SB.SBProjectile.EventOnEnd
-	constexpr static const FunctionPointer<ASBProjectile, void> ASBProjectile = { 0x2bbb090, 14 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void> EventOnEnd = { 0x2bbb090, 14 }; 
 	// Function /Script/SB.SBProjectile.EventOnDead
-	constexpr static const FunctionPointer<ASBProjectile, void> ASBProjectile = { 0x2bbb090, 15 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void> EventOnDead = { 0x2bbb090, 15 }; 
 	// Function /Script/SB.SBProjectile.EventOnBounce
-	constexpr static const FunctionPointer<ASBProjectile, void> ASBProjectile = { 0x2bbb090, 16 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void> EventOnBounce = { 0x2bbb090, 16 }; 
 	// Function /Script/SB.SBProjectile.EventOnArrive
-	constexpr static const FunctionPointer<ASBProjectile, void> ASBProjectile = { 0x2bbb090, 17 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void> EventOnArrive = { 0x2bbb090, 17 }; 
 	// Function /Script/SB.SBProjectile.EventCreateBoids
-	constexpr static const FunctionPointer<ASBProjectile, void, const int32_t, const float, const float> ASBProjectile = { 0x2bbb090, 18 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const int32_t, const float, const float> EventCreateBoids = { 0x2bbb090, 18 }; 
 	// Function /Script/SB.SBProjectile.EventBeam
-	constexpr static const FunctionPointer<ASBProjectile, void, const FVector, const FVector, const FVector, const float, const FVector, const FVector, const int32_t> ASBProjectile = { 0x2bbb090, 19 }; 
+	constexpr static const FunctionPointer<ASBProjectile, void, const FVector, const FVector, const FVector, const float, const FVector, const FVector, const int32_t> EventBeam = { 0x2bbb090, 19 }; 
 };
 
 /// Class /Script/SB.SBPuzzleWidget
@@ -22524,46 +22469,45 @@ class USBPuzzleWidget : public USBUserWidget
 public:
 	unsigned char                                      UnknownData01_1[0x18];                                      // 0x0680   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBPuzzleWidget.StartPuzzle
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TArray<bool>&, const TArray<FString>&, const bool> USBPuzzleWidget = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TArray<bool>&, const TArray<FString>&, const bool> StartPuzzle = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBPuzzleWidget.SetVectorBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const FVector> USBPuzzleWidget = { 0x27b8a20, 1 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const FVector> SetVectorBufferData = { 0x27b8a20, 1 }; 
 	// Function /Script/SB.SBPuzzleWidget.SetStringBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const FString> USBPuzzleWidget = { 0x27b8bc0, 2 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const FString> SetStringBufferData = { 0x27b8bc0, 2 }; 
 	// Function /Script/SB.SBPuzzleWidget.SetPuzzleData
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const FString> USBPuzzleWidget = { 0x27b8330, 3 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const FString> SetPuzzleData = { 0x27b8330, 3 }; 
 	// Function /Script/SB.SBPuzzleWidget.SetIntBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const int32_t> USBPuzzleWidget = { 0x27b8710, 4 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const int32_t> SetIntBufferData = { 0x27b8710, 4 }; 
 	// Function /Script/SB.SBPuzzleWidget.SetFloatBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const float> USBPuzzleWidget = { 0x27b8890, 5 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const float> SetFloatBufferData = { 0x27b8890, 5 }; 
 	// Function /Script/SB.SBPuzzleWidget.SetBoolBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const bool> USBPuzzleWidget = { 0x27b8580, 6 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const TEnumAsByte<ESBBufferDataSlot>, const bool> SetBoolBufferData = { 0x27b8580, 6 }; 
 	// Function /Script/SB.SBPuzzleWidget.InputRightAxisY
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float> USBPuzzleWidget = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float> InputRightAxisY = { 0x2bbb090, 7 }; 
 	// Function /Script/SB.SBPuzzleWidget.InputRightAxisX
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float> USBPuzzleWidget = { 0x2bbb090, 8 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float> InputRightAxisX = { 0x2bbb090, 8 }; 
 	// Function /Script/SB.SBPuzzleWidget.InputLeftAxisY
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float> USBPuzzleWidget = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float> InputLeftAxisY = { 0x2bbb090, 9 }; 
 	// Function /Script/SB.SBPuzzleWidget.InputLeftAxisX
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float> USBPuzzleWidget = { 0x2bbb090, 10 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float> InputLeftAxisX = { 0x2bbb090, 10 }; 
 	// Function /Script/SB.SBPuzzleWidget.InputAxis
-	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float, const TEnumAsByte<ESBInputAxisType>> USBPuzzleWidget = { 0x27b7b50, 11 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void, const float, const TEnumAsByte<ESBInputAxisType>> InputAxis = { 0x27b7b50, 11 }; 
 	// Function /Script/SB.SBPuzzleWidget.GetVectorBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, FVector, const TEnumAsByte<ESBBufferDataSlot>> USBPuzzleWidget = { 0x27b80e0, 12 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, FVector, const TEnumAsByte<ESBBufferDataSlot>> GetVectorBufferData = { 0x27b80e0, 12 }; 
 	// Function /Script/SB.SBPuzzleWidget.GetStringBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, FString, const TEnumAsByte<ESBBufferDataSlot>> USBPuzzleWidget = { 0x27b81f0, 13 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, FString, const TEnumAsByte<ESBBufferDataSlot>> GetStringBufferData = { 0x27b81f0, 13 }; 
 	// Function /Script/SB.SBPuzzleWidget.GetPuzzleData
-	constexpr static const FunctionPointer<USBPuzzleWidget, FString> USBPuzzleWidget = { 0x27b7d90, 14 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, FString> GetPuzzleData = { 0x27b7d90, 14 }; 
 	// Function /Script/SB.SBPuzzleWidget.GetIntBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, int32_t, const TEnumAsByte<ESBBufferDataSlot>> USBPuzzleWidget = { 0x27b7f00, 15 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, int32_t, const TEnumAsByte<ESBBufferDataSlot>> GetIntBufferData = { 0x27b7f00, 15 }; 
 	// Function /Script/SB.SBPuzzleWidget.GetFloatBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, float, const TEnumAsByte<ESBBufferDataSlot>> USBPuzzleWidget = { 0x27b7ff0, 16 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, float, const TEnumAsByte<ESBBufferDataSlot>> GetFloatBufferData = { 0x27b7ff0, 16 }; 
 	// Function /Script/SB.SBPuzzleWidget.GetBoolBufferData
-	constexpr static const FunctionPointer<USBPuzzleWidget, bool, const TEnumAsByte<ESBBufferDataSlot>> USBPuzzleWidget = { 0x27b7e10, 17 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, bool, const TEnumAsByte<ESBBufferDataSlot>> GetBoolBufferData = { 0x27b7e10, 17 }; 
 	// Function /Script/SB.SBPuzzleWidget.CompletePuzzle
-	constexpr static const FunctionPointer<USBPuzzleWidget, void> USBPuzzleWidget = { 0x27b7d10, 18 }; 
+	constexpr static const FunctionPointer<USBPuzzleWidget, void> CompletePuzzle = { 0x27b7d10, 18 }; 
 };
 
 /// Class /Script/SB.SBQuestNode
@@ -24209,16 +24153,15 @@ public:
 	int32_t                                            StartFrame;                                                 // 0x06B8   (0x0004)  
 	int32_t                                            SectionStartFrame;                                          // 0x06BC   (0x0004)  
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerBaseWidget.FinishBlock
-	constexpr static const FunctionPointer<USBSequencerBaseWidget, void, const int32_t> USBSequencerBaseWidget = { 0x27d0570, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerBaseWidget, void, const int32_t> FinishBlock = { 0x27d0570, 0 }; 
 	// Function /Script/SB.SBSequencerBaseWidget.EventStartBlock
-	constexpr static const FunctionPointer<USBSequencerBaseWidget, void> USBSequencerBaseWidget = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerBaseWidget, void> EventStartBlock = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBSequencerBaseWidget.EventResetBlock
-	constexpr static const FunctionPointer<USBSequencerBaseWidget, void> USBSequencerBaseWidget = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerBaseWidget, void> EventResetBlock = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBSequencerBaseWidget.EventFinishBlock
-	constexpr static const FunctionPointer<USBSequencerBaseWidget, void, const int32_t> USBSequencerBaseWidget = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBSequencerBaseWidget, void, const int32_t> EventFinishBlock = { 0x2bbb090, 3 }; 
 };
 
 /// Class /Script/SB.SBSequencerAreaWidget
@@ -24237,10 +24180,9 @@ class USBSequencerAttachChildWidget : public USBUserWidget
 public:
 	TArray<FString>                                    Arguments;                                                  // 0x0680   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerAttachChildWidget.EventSetup
-	constexpr static const FunctionPointer<USBSequencerAttachChildWidget, void> USBSequencerAttachChildWidget = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerAttachChildWidget, void> EventSetup = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/SB.SBSequencerAttachWidget
@@ -24252,10 +24194,9 @@ public:
 	FString                                            LastAssetPath;                                              // 0x0708   (0x0010)  
 	class USBSequencerAttachChildWidget*               ChildWidget;                                                // 0x0718   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerAttachWidget.ClearWidget
-	constexpr static const FunctionPointer<USBSequencerAttachWidget, void> USBSequencerAttachWidget = { 0x27cfea0, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerAttachWidget, void> ClearWidget = { 0x27cfea0, 0 }; 
 };
 
 /// Class /Script/SB.SBSequencerBackgroundWidget
@@ -24358,18 +24299,17 @@ public:
 	FString                                            HitEventName;                                               // 0x08B0   (0x0010)  
 	unsigned char                                      UnknownData09_7[0x18];                                      // 0x08C0   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerInputCounterWidget.GetTextureInputType
-	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, UTexture2D*, const USBTextureStyleSetData*, const TEnumAsByte<ESBLevelSequenceTheaterInputCounterType>> USBSequencerInputCounterWidget = { 0x27d1280, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, UTexture2D*, const USBTextureStyleSetData*, const TEnumAsByte<ESBLevelSequenceTheaterInputCounterType>> GetTextureInputType = { 0x27d1280, 0 }; 
 	// Function /Script/SB.SBSequencerInputCounterWidget.GetResult
-	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, bool, const bool> USBSequencerInputCounterWidget = { 0x27d1190, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, bool, const bool> GetResult = { 0x27d1190, 1 }; 
 	// Function /Script/SB.SBSequencerInputCounterWidget.GetProgressPercent
-	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, float> USBSequencerInputCounterWidget = { 0x27d1060, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, float> GetProgressPercent = { 0x27d1060, 2 }; 
 	// Function /Script/SB.SBSequencerInputCounterWidget.GetInputInfoResult
-	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, bool, const int32_t> USBSequencerInputCounterWidget = { 0x27d1090, 3 }; 
+	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, bool, const int32_t> GetInputInfoResult = { 0x27d1090, 3 }; 
 	// Function /Script/SB.SBSequencerInputCounterWidget.ClearWidget
-	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, void> USBSequencerInputCounterWidget = { 0x27d13f0, 4 }; 
+	constexpr static const FunctionPointer<USBSequencerInputCounterWidget, void> ClearWidget = { 0x27d13f0, 4 }; 
 };
 
 /// Struct /Script/SB.SBTheaterInteractionLineData
@@ -24412,24 +24352,23 @@ public:
 	float                                              RemainInputBlockTime;                                       // 0x071C   (0x0004)  
 	unsigned char                                      UnknownData09_7[0x20];                                      // 0x0720   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerInteractionSelectWidget.SetSelectAndFocusIndex
-	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void, const int32_t> USBSequencerInteractionSelectWidget = { 0x27d1a30, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void, const int32_t> SetSelectAndFocusIndex = { 0x27d1a30, 0 }; 
 	// Function /Script/SB.SBSequencerInteractionSelectWidget.RequestSlotFocusChange
-	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void, const int32_t> USBSequencerInteractionSelectWidget = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void, const int32_t> RequestSlotFocusChange = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBSequencerInteractionSelectWidget.IsSelect
-	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, bool> USBSequencerInteractionSelectWidget = { 0x27d1b10, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, bool> IsSelect = { 0x27d1b10, 2 }; 
 	// Function /Script/SB.SBSequencerInteractionSelectWidget.ClickSelect
-	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void, const int32_t> USBSequencerInteractionSelectWidget = { 0x27d1950, 3 }; 
+	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void, const int32_t> ClickSelect = { 0x27d1950, 3 }; 
 	// Function /Script/SB.SBSequencerInteractionSelectWidget.ClickInputAcceptYesNoPositive
-	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void> USBSequencerInteractionSelectWidget = { 0x27d1930, 4 }; 
+	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void> ClickInputAcceptYesNoPositive = { 0x27d1930, 4 }; 
 	// Function /Script/SB.SBSequencerInteractionSelectWidget.ClickInputAcceptYesNoNegative
-	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void> USBSequencerInteractionSelectWidget = { 0x27d1910, 5 }; 
+	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void> ClickInputAcceptYesNoNegative = { 0x27d1910, 5 }; 
 	// Function /Script/SB.SBSequencerInteractionSelectWidget.ClickInputAcceptAdamFusionPositive
-	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void> USBSequencerInteractionSelectWidget = { 0x27d18f0, 6 }; 
+	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void> ClickInputAcceptAdamFusionPositive = { 0x27d18f0, 6 }; 
 	// Function /Script/SB.SBSequencerInteractionSelectWidget.ClickInputAcceptAdamFusionNegative
-	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void> USBSequencerInteractionSelectWidget = { 0x27d18d0, 7 }; 
+	constexpr static const FunctionPointer<USBSequencerInteractionSelectWidget, void> ClickInputAcceptAdamFusionNegative = { 0x27d18d0, 7 }; 
 };
 
 /// Class /Script/SB.SBSequencerMovieWidget
@@ -24447,14 +24386,13 @@ public:
 	TWeakObjectPtr<class UBinkMediaPlayer*>            BinkMoviePlayer;                                            // 0x0704   (0x0008)  
 	unsigned char                                      UnknownData05_7[0xC];                                       // 0x070C   (0x000C)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerMovieWidget.SequenceBinkPlayer
-	constexpr static const FunctionPointer<USBSequencerMovieWidget, UBinkMediaPlayer*> USBSequencerMovieWidget = { 0x27d2090, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerMovieWidget, UBinkMediaPlayer*> SequenceBinkPlayer = { 0x27d2090, 0 }; 
 	// Function /Script/SB.SBSequencerMovieWidget.ReleaseBinkPlayer
-	constexpr static const FunctionPointer<USBSequencerMovieWidget, void> USBSequencerMovieWidget = { 0x27d2040, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerMovieWidget, void> ReleaseBinkPlayer = { 0x27d2040, 1 }; 
 	// Function /Script/SB.SBSequencerMovieWidget.IsValidBinkPlayer
-	constexpr static const FunctionPointer<USBSequencerMovieWidget, bool> USBSequencerMovieWidget = { 0x27d2130, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerMovieWidget, bool> IsValidBinkPlayer = { 0x27d2130, 2 }; 
 };
 
 /// Class /Script/SB.SBSequencerPlayerChoiceSlotWidget
@@ -24464,10 +24402,9 @@ class USBSequencerPlayerChoiceSlotWidget : public USBUserWidget
 public:
 	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0680   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerPlayerChoiceSlotWidget.NotifyClick
-	constexpr static const FunctionPointer<USBSequencerPlayerChoiceSlotWidget, void> USBSequencerPlayerChoiceSlotWidget = { 0x27d2540, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerPlayerChoiceSlotWidget, void> NotifyClick = { 0x27d2540, 0 }; 
 };
 
 /// Class /Script/SB.SBSequencerPlayerChoiceWidget
@@ -24561,18 +24498,17 @@ public:
 	FString                                            HitEventName;                                               // 0x0868   (0x0010)  
 	unsigned char                                      UnknownData09_7[0x18];                                      // 0x0878   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerQTEWidget.GetTextureInputType
-	constexpr static const FunctionPointer<USBSequencerQTEWidget, UTexture2D*, const USBTextureStyleSetData*, const TEnumAsByte<ESBLevelSequenceTheaterQTEType>> USBSequencerQTEWidget = { 0x27d1280, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerQTEWidget, UTexture2D*, const USBTextureStyleSetData*, const TEnumAsByte<ESBLevelSequenceTheaterQTEType>> GetTextureInputType = { 0x27d1280, 0 }; 
 	// Function /Script/SB.SBSequencerQTEWidget.GetResult
-	constexpr static const FunctionPointer<USBSequencerQTEWidget, bool, const bool> USBSequencerQTEWidget = { 0x27d2f70, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerQTEWidget, bool, const bool> GetResult = { 0x27d2f70, 1 }; 
 	// Function /Script/SB.SBSequencerQTEWidget.GetProgressPercent
-	constexpr static const FunctionPointer<USBSequencerQTEWidget, float> USBSequencerQTEWidget = { 0x27d2e20, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerQTEWidget, float> GetProgressPercent = { 0x27d2e20, 2 }; 
 	// Function /Script/SB.SBSequencerQTEWidget.GetInputInfoResult
-	constexpr static const FunctionPointer<USBSequencerQTEWidget, bool, const int32_t> USBSequencerQTEWidget = { 0x27d2e70, 3 }; 
+	constexpr static const FunctionPointer<USBSequencerQTEWidget, bool, const int32_t> GetInputInfoResult = { 0x27d2e70, 3 }; 
 	// Function /Script/SB.SBSequencerQTEWidget.ClearWidget
-	constexpr static const FunctionPointer<USBSequencerQTEWidget, void> USBSequencerQTEWidget = { 0x27d3080, 4 }; 
+	constexpr static const FunctionPointer<USBSequencerQTEWidget, void> ClearWidget = { 0x27d3080, 4 }; 
 };
 
 /// Struct /Script/SB.SBSequencerReactionTriggerBindInfo
@@ -24598,18 +24534,17 @@ public:
 	TArray<FName>                                      CheckInputActionArray;                                      // 0x06F0   (0x0010)  
 	TMap<FName, FSBSequencerReactionTriggerBindInfo>   BindCountMap;                                               // 0x0700   (0x0050)  
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerReactionTriggerWidget.GetTextureInputType
-	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, UTexture2D*, const USBTextureStyleSetData*, const TEnumAsByte<ESBLevelSequenceTheaterReactionTriggerType>> USBSequencerReactionTriggerWidget = { 0x27d4630, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, UTexture2D*, const USBTextureStyleSetData*, const TEnumAsByte<ESBLevelSequenceTheaterReactionTriggerType>> GetTextureInputType = { 0x27d4630, 0 }; 
 	// Function /Script/SB.SBSequencerReactionTriggerWidget.GetProgressPercent
-	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, float> USBSequencerReactionTriggerWidget = { 0x27d45e0, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, float> GetProgressPercent = { 0x27d45e0, 1 }; 
 	// Function /Script/SB.SBSequencerReactionTriggerWidget.EventVisibleProgress
-	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, void, const bool> USBSequencerReactionTriggerWidget = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, void, const bool> EventVisibleProgress = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBSequencerReactionTriggerWidget.EventCompleteProgress
-	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, void> USBSequencerReactionTriggerWidget = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, void> EventCompleteProgress = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBSequencerReactionTriggerWidget.ClearWidget
-	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, void> USBSequencerReactionTriggerWidget = { 0x27d4890, 4 }; 
+	constexpr static const FunctionPointer<USBSequencerReactionTriggerWidget, void> ClearWidget = { 0x27d4890, 4 }; 
 };
 
 /// Class /Script/SB.SBSequencerRootWidget
@@ -24647,12 +24582,11 @@ public:
 	bool                                               bActiveSkipMouseCursor;                                     // 0x0699   (0x0001)  
 	unsigned char                                      UnknownData05_7[0x6];                                       // 0x069A   (0x0006)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerSkipWidget.UpdateSkipHold
-	constexpr static const FunctionPointer<USBSequencerSkipWidget, void, const bool> USBSequencerSkipWidget = { 0x27d5080, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerSkipWidget, void, const bool> UpdateSkipHold = { 0x27d5080, 0 }; 
 	// Function /Script/SB.SBSequencerSkipWidget.UpdateOptionVisibleSkipUI
-	constexpr static const FunctionPointer<USBSequencerSkipWidget, void> USBSequencerSkipWidget = { 0x27d5160, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerSkipWidget, void> UpdateOptionVisibleSkipUI = { 0x27d5160, 1 }; 
 };
 
 /// Class /Script/SB.SBSequencerSubtitle2SlotWidget
@@ -24667,10 +24601,9 @@ public:
 	ESBGameOptionSubtitleSizeType                      SubtitleSizeType;                                           // 0x068A   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x15];                                      // 0x068B   (0x0015)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerSubtitle2SlotWidget.NotifyFoldFinish
-	constexpr static const FunctionPointer<USBSequencerSubtitle2SlotWidget, void> USBSequencerSubtitle2SlotWidget = { 0x27d5570, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle2SlotWidget, void> NotifyFoldFinish = { 0x27d5570, 0 }; 
 };
 
 /// Class /Script/SB.SBSequencerSubtitle2Widget
@@ -24692,14 +24625,13 @@ public:
 	int32_t                                            bindCount;                                                  // 0x07D4   (0x0004)  
 	unsigned char                                      UnknownData07_7[0x20];                                      // 0x07D8   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerSubtitle2Widget.RefreshOptionSubtitleVisible
-	constexpr static const FunctionPointer<USBSequencerSubtitle2Widget, void> USBSequencerSubtitle2Widget = { 0x27d5b10, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle2Widget, void> RefreshOptionSubtitleVisible = { 0x27d5b10, 0 }; 
 	// Function /Script/SB.SBSequencerSubtitle2Widget.RefreshOptionSubtitleSize
-	constexpr static const FunctionPointer<USBSequencerSubtitle2Widget, void> USBSequencerSubtitle2Widget = { 0x27d5a40, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle2Widget, void> RefreshOptionSubtitleSize = { 0x27d5a40, 1 }; 
 	// Function /Script/SB.SBSequencerSubtitle2Widget.RefreshOptionSubtitleBG
-	constexpr static const FunctionPointer<USBSequencerSubtitle2Widget, void> USBSequencerSubtitle2Widget = { 0x27d5980, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle2Widget, void> RefreshOptionSubtitleBG = { 0x27d5980, 2 }; 
 };
 
 /// Class /Script/SB.SBSequencerSubtitle3SlotWidget
@@ -24726,18 +24658,17 @@ public:
 	bool                                               bFinishTypewriter;                                          // 0x0780   (0x0001)  
 	unsigned char                                      UnknownData07_7[0xF];                                       // 0x0781   (0x000F)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerSubtitle3SlotWidget.UpdateText
-	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> USBSequencerSubtitle3SlotWidget = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> UpdateText = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBSequencerSubtitle3SlotWidget.NotifyTypewriterFinish
-	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> USBSequencerSubtitle3SlotWidget = { 0x27d6000, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> NotifyTypewriterFinish = { 0x27d6000, 1 }; 
 	// Function /Script/SB.SBSequencerSubtitle3SlotWidget.EventSlotShow
-	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> USBSequencerSubtitle3SlotWidget = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> EventSlotShow = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBSequencerSubtitle3SlotWidget.EventSlotHide
-	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> USBSequencerSubtitle3SlotWidget = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> EventSlotHide = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBSequencerSubtitle3SlotWidget.EventRequestTypewriterSkip
-	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> USBSequencerSubtitle3SlotWidget = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3SlotWidget, void> EventRequestTypewriterSkip = { 0x2bbb090, 4 }; 
 };
 
 /// Class /Script/SB.SBSequencerSubtitle3Widget
@@ -24763,18 +24694,17 @@ public:
 	TWeakObjectPtr<class ULevelSequencePlayer*>        SequencePlayer;                                             // 0x07A0   (0x0008)  
 	unsigned char                                      UnknownData07_7[0xD0];                                      // 0x07A8   (0x00D0)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSequencerSubtitle3Widget.RefreshOptionSubtitleVisible
-	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, bool> USBSequencerSubtitle3Widget = { 0x27d67a0, 0 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, bool> RefreshOptionSubtitleVisible = { 0x27d67a0, 0 }; 
 	// Function /Script/SB.SBSequencerSubtitle3Widget.RefreshOptionSubtitleSize
-	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, bool> USBSequencerSubtitle3Widget = { 0x27d66a0, 1 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, bool> RefreshOptionSubtitleSize = { 0x27d66a0, 1 }; 
 	// Function /Script/SB.SBSequencerSubtitle3Widget.RefreshOptionSubtitleBG
-	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, bool> USBSequencerSubtitle3Widget = { 0x27d65a0, 2 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, bool> RefreshOptionSubtitleBG = { 0x27d65a0, 2 }; 
 	// Function /Script/SB.SBSequencerSubtitle3Widget.RefreshOptionSubtitleAuthor
-	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, bool> USBSequencerSubtitle3Widget = { 0x27d6490, 3 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, bool> RefreshOptionSubtitleAuthor = { 0x27d6490, 3 }; 
 	// Function /Script/SB.SBSequencerSubtitle3Widget.ClickJumpSubtitle
-	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, void> USBSequencerSubtitle3Widget = { 0x27d6470, 4 }; 
+	constexpr static const FunctionPointer<USBSequencerSubtitle3Widget, void> ClickJumpSubtitle = { 0x27d6470, 4 }; 
 };
 
 /// Class /Script/SB.SBShowKey
@@ -24854,20 +24784,19 @@ class USBShowActorInterface : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SB.SBShowActorInterface.PlaySingleShow
-	constexpr static const FunctionPointer<USBShowActorInterface, bool, const FString, const bool, const FVector> USBShowActorInterface = { 0x27d76c0, 0 }; 
+	constexpr static const FunctionPointer<USBShowActorInterface, bool, const FString, const bool, const FVector> PlaySingleShow = { 0x27d76c0, 0 }; 
 	// Function /Script/SB.SBShowActorInterface.ActorStopCustomAnim
-	constexpr static const FunctionPointer<USBShowActorInterface, void, const FGuid, const FName, const float> USBShowActorInterface = { 0x27d7920, 1 }; 
+	constexpr static const FunctionPointer<USBShowActorInterface, void, const FGuid, const FName, const float> ActorStopCustomAnim = { 0x27d7920, 1 }; 
 	// Function /Script/SB.SBShowActorInterface.ActorPlayCustomAnimSequenceMeshSlot
-	constexpr static const FunctionPointer<USBShowActorInterface, FGuid, const TEnumAsByte<ESBSkelMeshSlot>, const UAnimSequence*, const FName, const float, const float, const float, const float, const float, const bool, const float, const bool> USBShowActorInterface = { 0x27d7b20, 2 }; 
+	constexpr static const FunctionPointer<USBShowActorInterface, FGuid, const TEnumAsByte<ESBSkelMeshSlot>, const UAnimSequence*, const FName, const float, const float, const float, const float, const float, const bool, const float, const bool> ActorPlayCustomAnimSequenceMeshSlot = { 0x27d7b20, 2 }; 
 	// Function /Script/SB.SBShowActorInterface.ActorPlayCustomAnimSequence
-	constexpr static const FunctionPointer<USBShowActorInterface, FGuid, const UAnimSequence*, const FName, const float, const float, const float, const float, const float, const bool, const float, const bool> USBShowActorInterface = { 0x27d8820, 3 }; 
+	constexpr static const FunctionPointer<USBShowActorInterface, FGuid, const UAnimSequence*, const FName, const float, const float, const float, const float, const float, const bool, const float, const bool> ActorPlayCustomAnimSequence = { 0x27d8820, 3 }; 
 	// Function /Script/SB.SBShowActorInterface.ActorPlayCustomAnimNameMeshSlot
-	constexpr static const FunctionPointer<USBShowActorInterface, FGuid, const TEnumAsByte<ESBSkelMeshSlot>, const FString, const FName, const float, const float, const float, const float, const float, const bool, const float, const bool> USBShowActorInterface = { 0x27d8170, 4 }; 
+	constexpr static const FunctionPointer<USBShowActorInterface, FGuid, const TEnumAsByte<ESBSkelMeshSlot>, const FString, const FName, const float, const float, const float, const float, const float, const bool, const float, const bool> ActorPlayCustomAnimNameMeshSlot = { 0x27d8170, 4 }; 
 	// Function /Script/SB.SBShowActorInterface.ActorPlayCustomAnimName
-	constexpr static const FunctionPointer<USBShowActorInterface, FGuid, const FString, const FName, const float, const float, const float, const float, const float, const bool, const float, const bool> USBShowActorInterface = { 0x27d8e00, 5 }; 
+	constexpr static const FunctionPointer<USBShowActorInterface, FGuid, const FString, const FName, const float, const float, const float, const float, const float, const bool, const float, const bool> ActorPlayCustomAnimName = { 0x27d8e00, 5 }; 
 };
 
 /// Class /Script/SB.SBShowActorKey
@@ -26606,10 +26535,9 @@ public:
 	FName                                              BodyCustomAnimNodeName;                                     // 0x02E0   (0x0008)  
 	unsigned char                                      UnknownData03_7[0x70];                                      // 0x02E8   (0x0070)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBShowPlayableActor.GetCurrentCustomAnimAlpha
-	constexpr static const FunctionPointer<ASBShowPlayableActor, float> ASBShowPlayableActor = { 0x27e5be0, 0 }; 
+	constexpr static const FunctionPointer<ASBShowPlayableActor, float> GetCurrentCustomAnimAlpha = { 0x27e5be0, 0 }; 
 };
 
 /// Class /Script/SB.SBShowPlayShowKey
@@ -27392,16 +27320,15 @@ public:
 	FMulticastInlineDelegate                           OnSingleSoundDeactivate;                                    // 0x0288   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x18];                                      // 0x0298   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSingleSoundComponent.IsPlaying
-	constexpr static const FunctionPointer<USBSingleSoundComponent, bool> USBSingleSoundComponent = { 0x27ee350, 0 }; 
+	constexpr static const FunctionPointer<USBSingleSoundComponent, bool> IsPlaying = { 0x27ee350, 0 }; 
 	// Function /Script/SB.SBSingleSoundComponent.IsActiveSingleSound
-	constexpr static const FunctionPointer<USBSingleSoundComponent, bool> USBSingleSoundComponent = { 0x27ee320, 1 }; 
+	constexpr static const FunctionPointer<USBSingleSoundComponent, bool> IsActiveSingleSound = { 0x27ee320, 1 }; 
 	// Function /Script/SB.SBSingleSoundComponent.ChangeSound
-	constexpr static const FunctionPointer<USBSingleSoundComponent, void, const USoundBase*, const float, const float, const bool> USBSingleSoundComponent = { 0x27ee380, 2 }; 
+	constexpr static const FunctionPointer<USBSingleSoundComponent, void, const USoundBase*, const float, const float, const bool> ChangeSound = { 0x27ee380, 2 }; 
 	// Function /Script/SB.SBSingleSoundComponent.AdjustAttenuation
-	constexpr static const FunctionPointer<USBSingleSoundComponent, void, const FSoundAttenuationSettings&> USBSingleSoundComponent = { 0x27ee200, 3 }; 
+	constexpr static const FunctionPointer<USBSingleSoundComponent, void, const FSoundAttenuationSettings&> AdjustAttenuation = { 0x27ee200, 3 }; 
 };
 
 /// Struct /Script/SB.MaterialDefaultInfo
@@ -27507,32 +27434,31 @@ public:
 	float                                              CurrentMassScale;                                           // 0x1534   (0x0004)  
 	unsigned char                                      UnknownData17_7[0x58];                                      // 0x1538   (0x0058)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSkeletalMeshComponent.SetPhysicsBodySimulate
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const FVector, const FName&, const bool, const float, const bool, const bool> USBSkeletalMeshComponent = { 0x27ef7d0, 0 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const FVector, const FName&, const bool, const float, const bool, const bool> SetPhysicsBodySimulate = { 0x27ef7d0, 0 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.SetPhysicsAssetAndKeepTransform
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const UPhysicsAsset*, const bool> USBSkeletalMeshComponent = { 0x27eed60, 1 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const UPhysicsAsset*, const bool> SetPhysicsAssetAndKeepTransform = { 0x27eed60, 1 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.SetEnableGravityPhysicsBones
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const bool, const TArray<FName>&> USBSkeletalMeshComponent = { 0x27ef380, 2 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const bool, const TArray<FName>&> SetEnableGravityPhysicsBones = { 0x27ef380, 2 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.SetCustomAnimWeight
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const float> USBSkeletalMeshComponent = { 0x27ef580, 3 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const float> SetCustomAnimWeight = { 0x27ef580, 3 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.SetCustomAnimStateName
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const FName> USBSkeletalMeshComponent = { 0x27ef670, 4 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const FName> SetCustomAnimStateName = { 0x27ef670, 4 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.SetBlendPhysicsWeight
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const bool, const float> USBSkeletalMeshComponent = { 0x27ef1d0, 5 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const bool, const float> SetBlendPhysicsWeight = { 0x27ef1d0, 5 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.ResetOverrideMaterials
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void> USBSkeletalMeshComponent = { 0x27ef770, 6 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void> ResetOverrideMaterials = { 0x27ef770, 6 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.GetSBSkeletalMeshTag
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, FName> USBSkeletalMeshComponent = { 0x27eed40, 7 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, FName> GetSBSkeletalMeshTag = { 0x27eed40, 7 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.GetCustomAnimWeight
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, float> USBSkeletalMeshComponent = { 0x27ef650, 8 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, float> GetCustomAnimWeight = { 0x27ef650, 8 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.GetCustomAnimStateName
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, FName> USBSkeletalMeshComponent = { 0x27ef750, 9 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, FName> GetCustomAnimStateName = { 0x27ef750, 9 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.FindEventMoveIKData
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const FName, const FSBEventMoveIKData&> USBSkeletalMeshComponent = { 0x27eeed0, 10 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void, const FName, const FSBEventMoveIKData&> FindEventMoveIKData = { 0x27eeed0, 10 }; 
 	// Function /Script/SB.SBSkeletalMeshComponent.ClearBlendPhysicsWeight
-	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void> USBSkeletalMeshComponent = { 0x27ef1a0, 11 }; 
+	constexpr static const FunctionPointer<USBSkeletalMeshComponent, void> ClearBlendPhysicsWeight = { 0x27ef1a0, 11 }; 
 };
 
 /// Struct /Script/SB.SBSkillNavigationPath
@@ -27600,30 +27526,29 @@ public:
 	FName                                              SkillTreeAlias;                                             // 0x07A0   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x30];                                      // 0x07A8   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSkillTreeBase.UnbindToUnlockAnimationFinished
-	constexpr static const FunctionPointer<USBSkillTreeBase, void> USBSkillTreeBase = { 0x27f0850, 0 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, void> UnbindToUnlockAnimationFinished = { 0x27f0850, 0 }; 
 	// Function /Script/SB.SBSkillTreeBase.SetUnlockPresentationProgress
-	constexpr static const FunctionPointer<USBSkillTreeBase, void, const float> USBSkillTreeBase = { 0x27f0ba0, 1 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, void, const float> SetUnlockPresentationProgress = { 0x27f0ba0, 1 }; 
 	// Function /Script/SB.SBSkillTreeBase.ReadyUnlockAnimationByNewGamePlus
-	constexpr static const FunctionPointer<USBSkillTreeBase, void> USBSkillTreeBase = { 0x27f09a0, 2 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, void> ReadyUnlockAnimationByNewGamePlus = { 0x27f09a0, 2 }; 
 	// Function /Script/SB.SBSkillTreeBase.ReadyUnlockAnimationByAchievement
-	constexpr static const FunctionPointer<USBSkillTreeBase, void, const FName> USBSkillTreeBase = { 0x27f0aa0, 3 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, void, const FName> ReadyUnlockAnimationByAchievement = { 0x27f0aa0, 3 }; 
 	// Function /Script/SB.SBSkillTreeBase.PlayUnlockAnimationByNewGamePlus
-	constexpr static const FunctionPointer<USBSkillTreeBase, void> USBSkillTreeBase = { 0x27f0980, 4 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, void> PlayUnlockAnimationByNewGamePlus = { 0x27f0980, 4 }; 
 	// Function /Script/SB.SBSkillTreeBase.PlayUnlockAnimationByAchievement
-	constexpr static const FunctionPointer<USBSkillTreeBase, void, const FName> USBSkillTreeBase = { 0x27f09c0, 5 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, void, const FName> PlayUnlockAnimationByAchievement = { 0x27f09c0, 5 }; 
 	// Function /Script/SB.SBSkillTreeBase.PlayUnlockAnimation
-	constexpr static const FunctionPointer<USBSkillTreeBase, void> USBSkillTreeBase = { 0x27f0b80, 6 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, void> PlayUnlockAnimation = { 0x27f0b80, 6 }; 
 	// Function /Script/SB.SBSkillTreeBase.NavigationTreeCustom
-	constexpr static const FunctionPointer<USBSkillTreeBase, UWidget*, const EUINavigation, const USBSkillSlotBase*, const int32_t> USBSkillTreeBase = { 0x27f0c70, 7 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, UWidget*, const EUINavigation, const USBSkillSlotBase*, const int32_t> NavigationTreeCustom = { 0x27f0c70, 7 }; 
 	// Function /Script/SB.SBSkillTreeBase.NavigationTree
-	constexpr static const FunctionPointer<USBSkillTreeBase, UWidget*, const EUINavigation> USBSkillTreeBase = { 0x27f0e60, 8 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, UWidget*, const EUINavigation> NavigationTree = { 0x27f0e60, 8 }; 
 	// Function /Script/SB.SBSkillTreeBase.GetSkillCategory
-	constexpr static const FunctionPointer<USBSkillTreeBase, USBUserWidget*> USBSkillTreeBase = { 0x27f0f40, 9 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, USBUserWidget*> GetSkillCategory = { 0x27f0f40, 9 }; 
 	// Function /Script/SB.SBSkillTreeBase.BindToUnlockAnimationFinished
-	constexpr static const FunctionPointer<USBSkillTreeBase, void, const FDelegateProperty> USBSkillTreeBase = { 0x27f0890, 10 }; 
+	constexpr static const FunctionPointer<USBSkillTreeBase, void, const FDelegateProperty> BindToUnlockAnimationFinished = { 0x27f0890, 10 }; 
 };
 
 /// Struct /Script/SB.SBSliceSkeletalMeshHeader
@@ -27742,22 +27667,21 @@ public:
 	bool                                               bMuteWhenWarp;                                              // 0x08E9   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x16];                                      // 0x08EA   (0x0016)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSoundComponent.SetStopWhenOwnerDestroyed
-	constexpr static const FunctionPointer<USBSoundComponent, void, const bool> USBSoundComponent = { 0x27f3610, 0 }; 
+	constexpr static const FunctionPointer<USBSoundComponent, void, const bool> SetStopWhenOwnerDestroyed = { 0x27f3610, 0 }; 
 	// Function /Script/SB.SBSoundComponent.OnZoneWarpEvent
-	constexpr static const FunctionPointer<USBSoundComponent, void, const FName&> USBSoundComponent = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<USBSoundComponent, void, const FName&> OnZoneWarpEvent = { 0x2bbb090, 1 }; 
 	// Function /Script/SB.SBSoundComponent.OnStopLevelSequence
-	constexpr static const FunctionPointer<USBSoundComponent, void, const FSoftObjectPath&> USBSoundComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBSoundComponent, void, const FSoftObjectPath&> OnStopLevelSequence = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBSoundComponent.OnPlayLevelSequence
-	constexpr static const FunctionPointer<USBSoundComponent, void, const FSoftObjectPath&> USBSoundComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBSoundComponent, void, const FSoftObjectPath&> OnPlayLevelSequence = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBSoundComponent.OnPendingCreateWidget
-	constexpr static const FunctionPointer<USBSoundComponent, void, const TEnumAsByte<ESBUILogicType>> USBSoundComponent = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<USBSoundComponent, void, const TEnumAsByte<ESBUILogicType>> OnPendingCreateWidget = { 0x2bbb090, 4 }; 
 	// Function /Script/SB.SBSoundComponent.OnDestroyMasterWidget
-	constexpr static const FunctionPointer<USBSoundComponent, void, const TEnumAsByte<ESBUILogicType>> USBSoundComponent = { 0x2bbb090, 5 }; 
+	constexpr static const FunctionPointer<USBSoundComponent, void, const TEnumAsByte<ESBUILogicType>> OnDestroyMasterWidget = { 0x2bbb090, 5 }; 
 	// Function /Script/SB.SBSoundComponent.OnCreateMasterWidget
-	constexpr static const FunctionPointer<USBSoundComponent, void, const TEnumAsByte<ESBUILogicType>> USBSoundComponent = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<USBSoundComponent, void, const TEnumAsByte<ESBUILogicType>> OnCreateMasterWidget = { 0x2bbb090, 6 }; 
 };
 
 /// Class /Script/SB.SBSoundProcedural
@@ -27818,12 +27742,11 @@ class USBQuartzEventObserver : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBQuartzEventObserver.ExecuteQuartzCommandEvent
-	constexpr static const FunctionPointer<USBQuartzEventObserver, void, const EQuartzCommandDelegateSubType, const FName> USBQuartzEventObserver = { 0x27f4370, 0 }; 
+	constexpr static const FunctionPointer<USBQuartzEventObserver, void, const EQuartzCommandDelegateSubType, const FName> ExecuteQuartzCommandEvent = { 0x27f4370, 0 }; 
 	// Function /Script/SB.SBQuartzEventObserver.ExecuteMetronomeEvent
-	constexpr static const FunctionPointer<USBQuartzEventObserver, void, const FName, const EQuartzCommandQuantization, const int32_t, const int32_t, const float> USBQuartzEventObserver = { 0x27f4520, 1 }; 
+	constexpr static const FunctionPointer<USBQuartzEventObserver, void, const FName, const EQuartzCommandQuantization, const int32_t, const int32_t, const float> ExecuteMetronomeEvent = { 0x27f4520, 1 }; 
 };
 
 /// Class /Script/SB.SBSoundDebuggerWidget
@@ -28030,12 +27953,11 @@ class USBQuartzEventObserverV2 : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBQuartzEventObserverV2.ExecuteQuartzCommandEvent
-	constexpr static const FunctionPointer<USBQuartzEventObserverV2, void, const EQuartzCommandDelegateSubType, const FName> USBQuartzEventObserverV2 = { 0x27f8700, 0 }; 
+	constexpr static const FunctionPointer<USBQuartzEventObserverV2, void, const EQuartzCommandDelegateSubType, const FName> ExecuteQuartzCommandEvent = { 0x27f8700, 0 }; 
 	// Function /Script/SB.SBQuartzEventObserverV2.ExecuteMetronomeEvent
-	constexpr static const FunctionPointer<USBQuartzEventObserverV2, void, const FName, const EQuartzCommandQuantization, const int32_t, const int32_t, const float> USBQuartzEventObserverV2 = { 0x27f88a0, 1 }; 
+	constexpr static const FunctionPointer<USBQuartzEventObserverV2, void, const FName, const EQuartzCommandQuantization, const int32_t, const int32_t, const float> ExecuteMetronomeEvent = { 0x27f88a0, 1 }; 
 };
 
 /// Struct /Script/SB.SBSoundControlData
@@ -28199,18 +28121,17 @@ public:
 	TMap<int32_t, int32_t>                             NavigationDataIndex;                                        // 0x03C0   (0x0050)  
 	unsigned char                                      UnknownData07_7[0x30];                                      // 0x0410   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSpiderNavigationVolume.SaveGrid
-	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, void> ASBSpiderNavigationVolume = { 0x11615e0, 0 }; 
+	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, void> SaveGrid = { 0x11615e0, 0 }; 
 	// Function /Script/SB.SBSpiderNavigationVolume.OnEndOverlapActor
-	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, void, const AActor*, const AActor*> ASBSpiderNavigationVolume = { 0x27fba50, 1 }; 
+	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, void, const AActor*, const AActor*> OnEndOverlapActor = { 0x27fba50, 1 }; 
 	// Function /Script/SB.SBSpiderNavigationVolume.OnBeginOverlapActor
-	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, void, const AActor*, const AActor*> ASBSpiderNavigationVolume = { 0x27fbbb0, 2 }; 
+	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, void, const AActor*, const AActor*> OnBeginOverlapActor = { 0x27fbbb0, 2 }; 
 	// Function /Script/SB.SBSpiderNavigationVolume.DrawDebugRelations
-	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, void, const float> ASBSpiderNavigationVolume = { 0x26bf920, 3 }; 
+	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, void, const float> DrawDebugRelations = { 0x26bf920, 3 }; 
 	// Function /Script/SB.SBSpiderNavigationVolume.BuildGrid
-	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, bool, const bool> ASBSpiderNavigationVolume = { 0x27fb960, 4 }; 
+	constexpr static const FunctionPointer<ASBSpiderNavigationVolume, bool, const bool> BuildGrid = { 0x27fb960, 4 }; 
 };
 
 /// Class /Script/SB.SBSpiderNavigationVolume_Point
@@ -28319,10 +28240,9 @@ public:
 	FVector                                            MaxLocation;                                                // 0x02F0   (0x000C)  
 	unsigned char                                      UnknownData03_7[0x4];                                       // 0x02FC   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBSplineTexture.Bake
-	constexpr static const FunctionPointer<ASBSplineTexture, void> ASBSplineTexture = { 0x27fd900, 0 }; 
+	constexpr static const FunctionPointer<ASBSplineTexture, void> Bake = { 0x27fd900, 0 }; 
 };
 
 /// Struct /Script/SB.CameraDollySplineExtra
@@ -28460,10 +28380,9 @@ class USBStudioSequenceObserver : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x38];                                      // 0x0028   (0x0038)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBStudioSequenceObserver.OnFinishLevelSequence
-	constexpr static const FunctionPointer<USBStudioSequenceObserver, void> USBStudioSequenceObserver = { 0x27ff1b0, 0 }; 
+	constexpr static const FunctionPointer<USBStudioSequenceObserver, void> OnFinishLevelSequence = { 0x27ff1b0, 0 }; 
 };
 
 /// Struct /Script/SB.SBStudioShowResourceData
@@ -28567,62 +28486,61 @@ public:
 	int32_t                                            InputMoveStopRemainCount;                                   // 0x09C4   (0x0004)  
 	unsigned char                                      UnknownData33_7[0x88];                                      // 0x09C8   (0x0088)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBStudioActor.UpdateSkelMeshPosition
-	constexpr static const FunctionPointer<ASBStudioActor, void> ASBStudioActor = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void> UpdateSkelMeshPosition = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBStudioActor.StopShow
-	constexpr static const FunctionPointer<ASBStudioActor, void, const FName> ASBStudioActor = { 0x28001a0, 1 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void, const FName> StopShow = { 0x28001a0, 1 }; 
 	// Function /Script/SB.SBStudioActor.StopLevelSequence
-	constexpr static const FunctionPointer<ASBStudioActor, void, const FName> ASBStudioActor = { 0x28005b0, 2 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void, const FName> StopLevelSequence = { 0x28005b0, 2 }; 
 	// Function /Script/SB.SBStudioActor.StopAllShow
-	constexpr static const FunctionPointer<ASBStudioActor, void> ASBStudioActor = { 0x2800180, 3 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void> StopAllShow = { 0x2800180, 3 }; 
 	// Function /Script/SB.SBStudioActor.StopAllLevelSequence
-	constexpr static const FunctionPointer<ASBStudioActor, void> ASBStudioActor = { 0x2800590, 4 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void> StopAllLevelSequence = { 0x2800590, 4 }; 
 	// Function /Script/SB.SBStudioActor.PlayStudioShow
-	constexpr static const FunctionPointer<ASBStudioActor, bool, const FString> ASBStudioActor = { 0x27ffe80, 5 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, bool, const FString> PlayStudioShow = { 0x27ffe80, 5 }; 
 	// Function /Script/SB.SBStudioActor.PlayShow
-	constexpr static const FunctionPointer<ASBStudioActor, bool, const FName, const FSBStudioSequenceParameter, const bool> ASBStudioActor = { 0x2800280, 6 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, bool, const FName, const FSBStudioSequenceParameter, const bool> PlayShow = { 0x2800280, 6 }; 
 	// Function /Script/SB.SBStudioActor.PlayLevelSequence
-	constexpr static const FunctionPointer<ASBStudioActor, bool, const FName, const FSBStudioSequenceParameter, const bool> ASBStudioActor = { 0x2800690, 7 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, bool, const FName, const FSBStudioSequenceParameter, const bool> PlayLevelSequence = { 0x2800690, 7 }; 
 	// Function /Script/SB.SBStudioActor.NotifyBP_SetupTarget
-	constexpr static const FunctionPointer<ASBStudioActor, void, const FName> ASBStudioActor = { 0x2bbb090, 8 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void, const FName> NotifyBP_SetupTarget = { 0x2bbb090, 8 }; 
 	// Function /Script/SB.SBStudioActor.NotifyBP_SetMesh
-	constexpr static const FunctionPointer<ASBStudioActor, void, const FName, const TEnumAsByte<ESBSkelMeshSlot>> ASBStudioActor = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void, const FName, const TEnumAsByte<ESBSkelMeshSlot>> NotifyBP_SetMesh = { 0x2bbb090, 9 }; 
 	// Function /Script/SB.SBStudioActor.NotifyBP_InputMoveStart
-	constexpr static const FunctionPointer<ASBStudioActor, void> ASBStudioActor = { 0x2bbb090, 10 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void> NotifyBP_InputMoveStart = { 0x2bbb090, 10 }; 
 	// Function /Script/SB.SBStudioActor.NotifyBP_InputMoveEnd
-	constexpr static const FunctionPointer<ASBStudioActor, void> ASBStudioActor = { 0x2bbb090, 11 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void> NotifyBP_InputMoveEnd = { 0x2bbb090, 11 }; 
 	// Function /Script/SB.SBStudioActor.ItemVisible
-	constexpr static const FunctionPointer<ASBStudioActor, void, const bool, const bool> ASBStudioActor = { 0x27ff900, 12 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void, const bool, const bool> ItemVisible = { 0x27ff900, 12 }; 
 	// Function /Script/SB.SBStudioActor.IsShortPonyTail
-	constexpr static const FunctionPointer<ASBStudioActor, bool> ASBStudioActor = { 0x27ff8c0, 13 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, bool> IsShortPonyTail = { 0x27ff8c0, 13 }; 
 	// Function /Script/SB.SBStudioActor.IsPlayingShow
-	constexpr static const FunctionPointer<ASBStudioActor, bool, const FName> ASBStudioActor = { 0x2800090, 14 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, bool, const FName> IsPlayingShow = { 0x2800090, 14 }; 
 	// Function /Script/SB.SBStudioActor.IsPlayingLevelSequence
-	constexpr static const FunctionPointer<ASBStudioActor, bool, const FName> ASBStudioActor = { 0x28004a0, 15 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, bool, const FName> IsPlayingLevelSequence = { 0x28004a0, 15 }; 
 	// Function /Script/SB.SBStudioActor.IsPlayingAnyLevelSequence
-	constexpr static const FunctionPointer<ASBStudioActor, bool> ASBStudioActor = { 0x2800470, 16 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, bool> IsPlayingAnyLevelSequence = { 0x2800470, 16 }; 
 	// Function /Script/SB.SBStudioActor.IsDisableIdleAdditiveAnim
-	constexpr static const FunctionPointer<ASBStudioActor, bool> ASBStudioActor = { 0x27ffd60, 17 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, bool> IsDisableIdleAdditiveAnim = { 0x27ffd60, 17 }; 
 	// Function /Script/SB.SBStudioActor.GetKawaiiPhysicsAlpha
-	constexpr static const FunctionPointer<ASBStudioActor, float> ASBStudioActor = { 0x27ff8e0, 18 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, float> GetKawaiiPhysicsAlpha = { 0x27ff8e0, 18 }; 
 	// Function /Script/SB.SBStudioActor.GetIdleAdditiveAnimType
-	constexpr static const FunctionPointer<ASBStudioActor, TEnumAsByte<ESBCharaterAdditiveBodyType>> ASBStudioActor = { 0x27ffd30, 19 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, TEnumAsByte<ESBCharaterAdditiveBodyType>> GetIdleAdditiveAnimType = { 0x27ffd30, 19 }; 
 	// Function /Script/SB.SBStudioActor.GetIdleAdditiveAnimAlpha
-	constexpr static const FunctionPointer<ASBStudioActor, float> ASBStudioActor = { 0x27ffc20, 20 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, float> GetIdleAdditiveAnimAlpha = { 0x27ffc20, 20 }; 
 	// Function /Script/SB.SBStudioActor.GetCurrentCustomAnimByMeshSlotAlpha
-	constexpr static const FunctionPointer<ASBStudioActor, float, const FName, const TEnumAsByte<ESBSkelMeshSlot>> ASBStudioActor = { 0x28009b0, 21 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, float, const FName, const TEnumAsByte<ESBSkelMeshSlot>> GetCurrentCustomAnimByMeshSlotAlpha = { 0x28009b0, 21 }; 
 	// Function /Script/SB.SBStudioActor.GetCurrentCustomAnimAlpha
-	constexpr static const FunctionPointer<ASBStudioActor, float, const FName> ASBStudioActor = { 0x2800b70, 22 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, float, const FName> GetCurrentCustomAnimAlpha = { 0x2800b70, 22 }; 
 	// Function /Script/SB.SBStudioActor.GetCurrentCustomAnimAdditiveAlpha
-	constexpr static const FunctionPointer<ASBStudioActor, float, const FName> ASBStudioActor = { 0x2800880, 23 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, float, const FName> GetCurrentCustomAnimAdditiveAlpha = { 0x2800880, 23 }; 
 	// Function /Script/SB.SBStudioActor.GetBodyMeshName
-	constexpr static const FunctionPointer<ASBStudioActor, FName, const FName> ASBStudioActor = { 0x27ffa70, 24 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, FName, const FName> GetBodyMeshName = { 0x27ffa70, 24 }; 
 	// Function /Script/SB.SBStudioActor.EventNotification
-	constexpr static const FunctionPointer<ASBStudioActor, void, const FName&> ASBStudioActor = { 0x2bbb090, 25 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void, const FName&> EventNotification = { 0x2bbb090, 25 }; 
 	// Function /Script/SB.SBStudioActor.ApplyMeshInfo
-	constexpr static const FunctionPointer<ASBStudioActor, void, const FName, const USBSkeletalMeshComponent*, const TEnumAsByte<ESBSkelMeshSlot>> ASBStudioActor = { 0x2bbb090, 26 }; 
+	constexpr static const FunctionPointer<ASBStudioActor, void, const FName, const USBSkeletalMeshComponent*, const TEnumAsByte<ESBSkelMeshSlot>> ApplyMeshInfo = { 0x2bbb090, 26 }; 
 };
 
 /// Class /Script/SB.SBTableIndexController
@@ -28660,12 +28578,11 @@ public:
 	TMap<FName, FSBTextureStyleInfo>                   actions;                                                    // 0x0030   (0x0050)  
 	TMap<FKey, FSBTextureStyleInfo>                    Keys;                                                       // 0x0080   (0x0050)  
 
-
 	/// Functions
 	// Function /Script/SB.SBTextureStyleSetData.GetTextureFromKey
-	constexpr static const FunctionPointer<USBTextureStyleSetData, UTexture2D*, const FKey&, const TEnumAsByte<ESBTextureStyleType>> USBTextureStyleSetData = { 0x2802950, 0 }; 
+	constexpr static const FunctionPointer<USBTextureStyleSetData, UTexture2D*, const FKey&, const TEnumAsByte<ESBTextureStyleType>> GetTextureFromKey = { 0x2802950, 0 }; 
 	// Function /Script/SB.SBTextureStyleSetData.GetTextureFromAction
-	constexpr static const FunctionPointer<USBTextureStyleSetData, UTexture2D*, const FName&, const TEnumAsByte<ESBTextureStyleType>> USBTextureStyleSetData = { 0x2802b20, 1 }; 
+	constexpr static const FunctionPointer<USBTextureStyleSetData, UTexture2D*, const FName&, const TEnumAsByte<ESBTextureStyleType>> GetTextureFromAction = { 0x2802b20, 1 }; 
 };
 
 /// Class /Script/SB.SBTheaterData
@@ -28707,10 +28624,9 @@ public:
 	bool                                               bStopEndFrame;                                              // 0x0084   (0x0001)  
 	unsigned char                                      UnknownData03_7[0x1B];                                      // 0x0085   (0x001B)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBTheaterLevelSequenceObserver.OnFinishLevelSequence
-	constexpr static const FunctionPointer<USBTheaterLevelSequenceObserver, void> USBTheaterLevelSequenceObserver = { 0x2803830, 0 }; 
+	constexpr static const FunctionPointer<USBTheaterLevelSequenceObserver, void> OnFinishLevelSequence = { 0x2803830, 0 }; 
 };
 
 /// Struct /Script/SB.SBLevelSequenceBookmarkAlias
@@ -30510,20 +30426,19 @@ public:
 	FText                                              CurrentLine;                                                // 0x02A0   (0x0018)  
 	unsigned char                                      UnknownData03_7[0x70];                                      // 0x02B8   (0x0070)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBTypeWriterWidget.SkipToLineEnd
-	constexpr static const FunctionPointer<USBTypeWriterWidget, void> USBTypeWriterWidget = { 0x28122d0, 0 }; 
+	constexpr static const FunctionPointer<USBTypeWriterWidget, void> SkipToLineEnd = { 0x28122d0, 0 }; 
 	// Function /Script/SB.SBTypeWriterWidget.PlayLine
-	constexpr static const FunctionPointer<USBTypeWriterWidget, void, const FText&, const float> USBTypeWriterWidget = { 0x2812460, 1 }; 
+	constexpr static const FunctionPointer<USBTypeWriterWidget, void, const FText&, const float> PlayLine = { 0x2812460, 1 }; 
 	// Function /Script/SB.SBTypeWriterWidget.OnPlayLetter
-	constexpr static const FunctionPointer<USBTypeWriterWidget, void, const bool, const FString> USBTypeWriterWidget = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<USBTypeWriterWidget, void, const bool, const FString> OnPlayLetter = { 0x2bbb090, 2 }; 
 	// Function /Script/SB.SBTypeWriterWidget.OnLineFinishedPlaying
-	constexpr static const FunctionPointer<USBTypeWriterWidget, void> USBTypeWriterWidget = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<USBTypeWriterWidget, void> OnLineFinishedPlaying = { 0x2bbb090, 3 }; 
 	// Function /Script/SB.SBTypeWriterWidget.HasFinishedPlayingLine
-	constexpr static const FunctionPointer<USBTypeWriterWidget, bool> USBTypeWriterWidget = { 0x28122f0, 4 }; 
+	constexpr static const FunctionPointer<USBTypeWriterWidget, bool> HasFinishedPlayingLine = { 0x28122f0, 4 }; 
 	// Function /Script/SB.SBTypeWriterWidget.GetCurrentLine
-	constexpr static const FunctionPointer<USBTypeWriterWidget, void, const FText&> USBTypeWriterWidget = { 0x2812320, 5 }; 
+	constexpr static const FunctionPointer<USBTypeWriterWidget, void, const FText&> GetCurrentLine = { 0x2812320, 5 }; 
 };
 
 /// Class /Script/SB.SBUIListViewBaseDataObject
@@ -30565,10 +30480,9 @@ public:
 	FColor                                             colorLegendary;                                             // 0x0040   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x4];                                       // 0x0044   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBUIItemSettingsData.GetRarityColor
-	constexpr static const FunctionPointer<USBUIItemSettingsData, FColor, const TEnumAsByte<ESBItemRarityType>> USBUIItemSettingsData = { 0x281cf30, 0 }; 
+	constexpr static const FunctionPointer<USBUIItemSettingsData, FColor, const TEnumAsByte<ESBItemRarityType>> GetRarityColor = { 0x281cf30, 0 }; 
 };
 
 /// Class /Script/SB.SBUITileViewBaseDataObject
@@ -30601,20 +30515,19 @@ class USBUserWidgetEventObserver : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x108];                                     // 0x0028   (0x0108)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBUserWidgetEventObserver.OnWidgetListViewEvent
-	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> USBUserWidgetEventObserver = { 0x2828290, 0 }; 
+	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> OnWidgetListViewEvent = { 0x2828290, 0 }; 
 	// Function /Script/SB.SBUserWidgetEventObserver.OnWidgetEvent
-	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void> USBUserWidgetEventObserver = { 0x2828370, 1 }; 
+	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void> OnWidgetEvent = { 0x2828370, 1 }; 
 	// Function /Script/SB.SBUserWidgetEventObserver.NotifyListViewRelease
-	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> USBUserWidgetEventObserver = { 0x2828290, 2 }; 
+	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> NotifyListViewRelease = { 0x2828290, 2 }; 
 	// Function /Script/SB.SBUserWidgetEventObserver.NotifyListViewPress
-	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> USBUserWidgetEventObserver = { 0x2828290, 3 }; 
+	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> NotifyListViewPress = { 0x2828290, 3 }; 
 	// Function /Script/SB.SBUserWidgetEventObserver.NotifyListViewDoubleClick
-	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> USBUserWidgetEventObserver = { 0x2828290, 4 }; 
+	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> NotifyListViewDoubleClick = { 0x2828290, 4 }; 
 	// Function /Script/SB.SBUserWidgetEventObserver.NotifyListViewClick
-	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> USBUserWidgetEventObserver = { 0x2828290, 5 }; 
+	constexpr static const FunctionPointer<USBUserWidgetEventObserver, void, const UObject*> NotifyListViewClick = { 0x2828290, 5 }; 
 };
 
 /// Class /Script/SB.SBUtilLevelNotice
@@ -30626,10 +30539,9 @@ public:
 	FSlateColor                                        textNoticeColor;                                            // 0x02D8   (0x0028)  
 	unsigned char                                      UnknownData01_7[0x10];                                      // 0x0300   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBUtilLevelNotice.EventUpdateWidget
-	constexpr static const FunctionPointer<ASBUtilLevelNotice, void> ASBUtilLevelNotice = { 0x28289a0, 0 }; 
+	constexpr static const FunctionPointer<ASBUtilLevelNotice, void> EventUpdateWidget = { 0x28289a0, 0 }; 
 };
 
 /// Class /Script/SB.SBUtilLevelNoticeWidget
@@ -30641,10 +30553,9 @@ public:
 	FSlateColor                                        noticeTextColor;                                            // 0x0298   (0x0028)  
 	class UTextBlock*                                  TextBlockNotice;                                            // 0x02C0   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/SB.SBUtilLevelNoticeWidget.EventUpdateNotify
-	constexpr static const FunctionPointer<USBUtilLevelNoticeWidget, void> USBUtilLevelNoticeWidget = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USBUtilLevelNoticeWidget, void> EventUpdateNotify = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/SB.SBVertexAnimStaticMeshComponent
@@ -30661,14 +30572,13 @@ public:
 	float                                              CurrentTime;                                                // 0x0600   (0x0004)  
 	unsigned char                                      UnknownData01_7[0xC];                                       // 0x0604   (0x000C)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBVertexAnimStaticMeshComponent.SetVertexAnim
-	constexpr static const FunctionPointer<USBVertexAnimStaticMeshComponent, void, const float, const float, const FName> USBVertexAnimStaticMeshComponent = { 0x28291f0, 0 }; 
+	constexpr static const FunctionPointer<USBVertexAnimStaticMeshComponent, void, const float, const float, const FName> SetVertexAnim = { 0x28291f0, 0 }; 
 	// Function /Script/SB.SBVertexAnimStaticMeshComponent.SetMaterials
-	constexpr static const FunctionPointer<USBVertexAnimStaticMeshComponent, void, const TArray<UMaterialInterface*>> USBVertexAnimStaticMeshComponent = { 0x2828e70, 1 }; 
+	constexpr static const FunctionPointer<USBVertexAnimStaticMeshComponent, void, const TArray<UMaterialInterface*>> SetMaterials = { 0x2828e70, 1 }; 
 	// Function /Script/SB.SBVertexAnimStaticMeshComponent.SetDissolveFade
-	constexpr static const FunctionPointer<USBVertexAnimStaticMeshComponent, void, const float, const float, const FName> USBVertexAnimStaticMeshComponent = { 0x2828ff0, 2 }; 
+	constexpr static const FunctionPointer<USBVertexAnimStaticMeshComponent, void, const float, const float, const FName> SetDissolveFade = { 0x2828ff0, 2 }; 
 };
 
 /// Struct /Script/SB.SBVFXParticle
@@ -30722,30 +30632,29 @@ public:
 	class UForceFeedbackComponent*                     ForceFeedbackComponent;                                     // 0x02B8   (0x0008)  
 	unsigned char                                      UnknownData07_7[0x10];                                      // 0x02C0   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBVibrationComponent.SubscribeSoundParam
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const TArray<ESBSoundParamType>&> USBVibrationComponent = { 0x28299e0, 0 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const TArray<ESBSoundParamType>&> SubscribeSoundParam = { 0x28299e0, 0 }; 
 	// Function /Script/SB.SBVibrationComponent.Stop
-	constexpr static const FunctionPointer<USBVibrationComponent, void> USBVibrationComponent = { 0x282a0b0, 1 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void> Stop = { 0x282a0b0, 1 }; 
 	// Function /Script/SB.SBVibrationComponent.SetWaveParameter
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const FName, const USoundWave*> USBVibrationComponent = { 0x2829ad0, 2 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const FName, const USoundWave*> SetWaveParameter = { 0x2829ad0, 2 }; 
 	// Function /Script/SB.SBVibrationComponent.SetVibration
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const USBVibrationSet*> USBVibrationComponent = { 0x282a610, 3 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const USBVibrationSet*> SetVibration = { 0x282a610, 3 }; 
 	// Function /Script/SB.SBVibrationComponent.SetIntParameter
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const FName, const int32_t> USBVibrationComponent = { 0x2829dd0, 4 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const FName, const int32_t> SetIntParameter = { 0x2829dd0, 4 }; 
 	// Function /Script/SB.SBVibrationComponent.SetFloatParameter
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const FName, const float> USBVibrationComponent = { 0x2829c60, 5 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const FName, const float> SetFloatParameter = { 0x2829c60, 5 }; 
 	// Function /Script/SB.SBVibrationComponent.SetBoolParameter
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const FName, const bool> USBVibrationComponent = { 0x2829f40, 6 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const FName, const bool> SetBoolParameter = { 0x2829f40, 6 }; 
 	// Function /Script/SB.SBVibrationComponent.Play
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const float> USBVibrationComponent = { 0x282a0d0, 7 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const float> Play = { 0x282a0d0, 7 }; 
 	// Function /Script/SB.SBVibrationComponent.IsPlaying
-	constexpr static const FunctionPointer<USBVibrationComponent, bool> USBVibrationComponent = { 0x28299b0, 8 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, bool> IsPlaying = { 0x28299b0, 8 }; 
 	// Function /Script/SB.SBVibrationComponent.FadeOut
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const float, const float, const EAudioFaderCurve> USBVibrationComponent = { 0x282a1a0, 9 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const float, const float, const EAudioFaderCurve> FadeOut = { 0x282a1a0, 9 }; 
 	// Function /Script/SB.SBVibrationComponent.FadeIn
-	constexpr static const FunctionPointer<USBVibrationComponent, void, const float, const float, const float, const EAudioFaderCurve> USBVibrationComponent = { 0x282a390, 10 }; 
+	constexpr static const FunctionPointer<USBVibrationComponent, void, const float, const float, const float, const EAudioFaderCurve> FadeIn = { 0x282a390, 10 }; 
 };
 
 /// Struct /Script/SB.SBVibrationSectionData
@@ -30917,76 +30826,75 @@ public:
 	float                                              BillboardNearDistance;                                      // 0x0660   (0x0004)  
 	unsigned char                                      UnknownData21_7[0x3C];                                      // 0x0664   (0x003C)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBWidgetComponent.SetWindowFocusable
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> USBWidgetComponent = { 0x2831360, 0 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> SetWindowFocusable = { 0x2831360, 0 }; 
 	// Function /Script/SB.SBWidgetComponent.SetWidgetSpace
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const ESBWidgetSpace> USBWidgetComponent = { 0x2831730, 1 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const ESBWidgetSpace> SetWidgetSpace = { 0x2831730, 1 }; 
 	// Function /Script/SB.SBWidgetComponent.SetWidget
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const UUserWidget*> USBWidgetComponent = { 0x2832360, 2 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const UUserWidget*> SetWidget = { 0x2832360, 2 }; 
 	// Function /Script/SB.SBWidgetComponent.SetTwoSided
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> USBWidgetComponent = { 0x2831e60, 3 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> SetTwoSided = { 0x2831e60, 3 }; 
 	// Function /Script/SB.SBWidgetComponent.SetTintColorAndOpacity
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const FLinearColor> USBWidgetComponent = { 0x2831b20, 4 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const FLinearColor> SetTintColorAndOpacity = { 0x2831b20, 4 }; 
 	// Function /Script/SB.SBWidgetComponent.SetTickWhenOffscreen
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> USBWidgetComponent = { 0x2831d60, 5 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> SetTickWhenOffscreen = { 0x2831d60, 5 }; 
 	// Function /Script/SB.SBWidgetComponent.SetRedrawTime
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const float> USBWidgetComponent = { 0x2831820, 6 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const float> SetRedrawTime = { 0x2831820, 6 }; 
 	// Function /Script/SB.SBWidgetComponent.SetPivot
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const FVector2D&> USBWidgetComponent = { 0x2831a10, 7 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const FVector2D&> SetPivot = { 0x2831a10, 7 }; 
 	// Function /Script/SB.SBWidgetComponent.SetOwnerPlayer
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const ULocalPlayer*> USBWidgetComponent = { 0x2832270, 8 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const ULocalPlayer*> SetOwnerPlayer = { 0x2832270, 8 }; 
 	// Function /Script/SB.SBWidgetComponent.SetManuallyRedraw
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> USBWidgetComponent = { 0x2832170, 9 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> SetManuallyRedraw = { 0x2832170, 9 }; 
 	// Function /Script/SB.SBWidgetComponent.SetGeometryMode
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const ESBWidgetGeometryMode> USBWidgetComponent = { 0x2831640, 10 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const ESBWidgetGeometryMode> SetGeometryMode = { 0x2831640, 10 }; 
 	// Function /Script/SB.SBWidgetComponent.SetDrawSize
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const FVector2D> USBWidgetComponent = { 0x2831f90, 11 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const FVector2D> SetDrawSize = { 0x2831f90, 11 }; 
 	// Function /Script/SB.SBWidgetComponent.SetDrawAtDesiredSize
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> USBWidgetComponent = { 0x2831910, 12 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const bool> SetDrawAtDesiredSize = { 0x2831910, 12 }; 
 	// Function /Script/SB.SBWidgetComponent.SetCylinderArcAngle
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const float> USBWidgetComponent = { 0x2831550, 13 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const float> SetCylinderArcAngle = { 0x2831550, 13 }; 
 	// Function /Script/SB.SBWidgetComponent.SetBillboardScale
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const float> USBWidgetComponent = { 0x2831460, 14 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const float> SetBillboardScale = { 0x2831460, 14 }; 
 	// Function /Script/SB.SBWidgetComponent.SetBackgroundColor
-	constexpr static const FunctionPointer<USBWidgetComponent, void, const FLinearColor> USBWidgetComponent = { 0x2831c40, 15 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void, const FLinearColor> SetBackgroundColor = { 0x2831c40, 15 }; 
 	// Function /Script/SB.SBWidgetComponent.RequestRedraw
-	constexpr static const FunctionPointer<USBWidgetComponent, void> USBWidgetComponent = { 0x2831f70, 16 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, void> RequestRedraw = { 0x2831f70, 16 }; 
 	// Function /Script/SB.SBWidgetComponent.GetWindowFocusable
-	constexpr static const FunctionPointer<USBWidgetComponent, bool> USBWidgetComponent = { 0x2831440, 17 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, bool> GetWindowFocusable = { 0x2831440, 17 }; 
 	// Function /Script/SB.SBWidgetComponent.GetWidgetSpace
-	constexpr static const FunctionPointer<USBWidgetComponent, ESBWidgetSpace> USBWidgetComponent = { 0x2831800, 18 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, ESBWidgetSpace> GetWidgetSpace = { 0x2831800, 18 }; 
 	// Function /Script/SB.SBWidgetComponent.GetUserWidgetObject
-	constexpr static const FunctionPointer<USBWidgetComponent, UUserWidget*> USBWidgetComponent = { 0x2832480, 19 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, UUserWidget*> GetUserWidgetObject = { 0x2832480, 19 }; 
 	// Function /Script/SB.SBWidgetComponent.GetTwoSided
-	constexpr static const FunctionPointer<USBWidgetComponent, bool> USBWidgetComponent = { 0x2831f50, 20 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, bool> GetTwoSided = { 0x2831f50, 20 }; 
 	// Function /Script/SB.SBWidgetComponent.GetTickWhenOffscreen
-	constexpr static const FunctionPointer<USBWidgetComponent, bool> USBWidgetComponent = { 0x2831e40, 21 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, bool> GetTickWhenOffscreen = { 0x2831e40, 21 }; 
 	// Function /Script/SB.SBWidgetComponent.GetRenderTarget
-	constexpr static const FunctionPointer<USBWidgetComponent, UTextureRenderTarget2D*> USBWidgetComponent = { 0x2832460, 22 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, UTextureRenderTarget2D*> GetRenderTarget = { 0x2832460, 22 }; 
 	// Function /Script/SB.SBWidgetComponent.GetRedrawTime
-	constexpr static const FunctionPointer<USBWidgetComponent, float> USBWidgetComponent = { 0x28318f0, 23 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, float> GetRedrawTime = { 0x28318f0, 23 }; 
 	// Function /Script/SB.SBWidgetComponent.GetPivot
-	constexpr static const FunctionPointer<USBWidgetComponent, FVector2D> USBWidgetComponent = { 0x2831af0, 24 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, FVector2D> GetPivot = { 0x2831af0, 24 }; 
 	// Function /Script/SB.SBWidgetComponent.GetOwnerPlayer
-	constexpr static const FunctionPointer<USBWidgetComponent, ULocalPlayer*> USBWidgetComponent = { 0x2832100, 25 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, ULocalPlayer*> GetOwnerPlayer = { 0x2832100, 25 }; 
 	// Function /Script/SB.SBWidgetComponent.GetMaterialInstance
-	constexpr static const FunctionPointer<USBWidgetComponent, UMaterialInstanceDynamic*> USBWidgetComponent = { 0x2832440, 26 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, UMaterialInstanceDynamic*> GetMaterialInstance = { 0x2832440, 26 }; 
 	// Function /Script/SB.SBWidgetComponent.GetManuallyRedraw
-	constexpr static const FunctionPointer<USBWidgetComponent, bool> USBWidgetComponent = { 0x2832250, 27 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, bool> GetManuallyRedraw = { 0x2832250, 27 }; 
 	// Function /Script/SB.SBWidgetComponent.GetGeometryMode
-	constexpr static const FunctionPointer<USBWidgetComponent, ESBWidgetGeometryMode> USBWidgetComponent = { 0x2831710, 28 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, ESBWidgetGeometryMode> GetGeometryMode = { 0x2831710, 28 }; 
 	// Function /Script/SB.SBWidgetComponent.GetDrawSize
-	constexpr static const FunctionPointer<USBWidgetComponent, FVector2D> USBWidgetComponent = { 0x28320c0, 29 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, FVector2D> GetDrawSize = { 0x28320c0, 29 }; 
 	// Function /Script/SB.SBWidgetComponent.GetDrawAtDesiredSize
-	constexpr static const FunctionPointer<USBWidgetComponent, bool> USBWidgetComponent = { 0x28319f0, 30 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, bool> GetDrawAtDesiredSize = { 0x28319f0, 30 }; 
 	// Function /Script/SB.SBWidgetComponent.GetCylinderArcAngle
-	constexpr static const FunctionPointer<USBWidgetComponent, float> USBWidgetComponent = { 0x2831620, 31 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, float> GetCylinderArcAngle = { 0x2831620, 31 }; 
 	// Function /Script/SB.SBWidgetComponent.GetCurrentDrawSize
-	constexpr static const FunctionPointer<USBWidgetComponent, FVector2D> USBWidgetComponent = { 0x2832080, 32 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, FVector2D> GetCurrentDrawSize = { 0x2832080, 32 }; 
 	// Function /Script/SB.SBWidgetComponent.GetBillboardScale
-	constexpr static const FunctionPointer<USBWidgetComponent, float> USBWidgetComponent = { 0x2831530, 33 }; 
+	constexpr static const FunctionPointer<USBWidgetComponent, float> GetBillboardScale = { 0x2831530, 33 }; 
 };
 
 /// Class /Script/SB.SBWindVolume
@@ -31231,130 +31139,129 @@ public:
 	TWeakObjectPtr<class UStaticMeshComponent*>        ControlInertiaTensorScaleTargetObject;                      // 0x06F4   (0x0008)  
 	unsigned char                                      UnknownData47_7[0x4];                                       // 0x06FC   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBZoneEnvActor.StartPuzzle
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TArray<bool>&, const TArray<FString>&, const bool> ASBZoneEnvActor = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TArray<bool>&, const TArray<FString>&, const bool> StartPuzzle = { 0x2bbb090, 0 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetVectorBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const FVector> ASBZoneEnvActor = { 0x2835c00, 1 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const FVector> SetVectorBufferData = { 0x2835c00, 1 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetStringBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const FString> ASBZoneEnvActor = { 0x2835da0, 2 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const FString> SetStringBufferData = { 0x2835da0, 2 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetPuzzleData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FString> ASBZoneEnvActor = { 0x2836520, 3 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FString> SetPuzzleData = { 0x2836520, 3 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetPendingCustomDepthStencil
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2834d50, 4 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> SetPendingCustomDepthStencil = { 0x2834d50, 4 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetIntBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const int32_t> ASBZoneEnvActor = { 0x28358f0, 5 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const int32_t> SetIntBufferData = { 0x28358f0, 5 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetFloatBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const float> ASBZoneEnvActor = { 0x2835a70, 6 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const float> SetFloatBufferData = { 0x2835a70, 6 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetEnvActorName
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName> ASBZoneEnvActor = { 0x2836820, 7 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName> SetEnvActorName = { 0x2836820, 7 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetBPTickEnable
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const bool> ASBZoneEnvActor = { 0x2834860, 8 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const bool> SetBPTickEnable = { 0x2834860, 8 }; 
 	// Function /Script/SB.SBZoneEnvActor.SetBoolBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const bool> ASBZoneEnvActor = { 0x2835760, 9 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBBufferDataSlot>, const bool> SetBoolBufferData = { 0x2835760, 9 }; 
 	// Function /Script/SB.SBZoneEnvActor.PlaySingleShow
-	constexpr static const FunctionPointer<ASBZoneEnvActor, bool, const FString, const bool, const FVector> ASBZoneEnvActor = { 0x2834f20, 10 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, bool, const FString, const bool, const FVector> PlaySingleShow = { 0x2834f20, 10 }; 
 	// Function /Script/SB.SBZoneEnvActor.NotifyShowEvent
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const FName> ASBZoneEnvActor = { 0x2bbb090, 11 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const FName> NotifyShowEvent = { 0x2bbb090, 11 }; 
 	// Function /Script/SB.SBZoneEnvActor.NotifyChangeWorldLevel
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2bbb090, 12 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> NotifyChangeWorldLevel = { 0x2bbb090, 12 }; 
 	// Function /Script/SB.SBZoneEnvActor.NotifyBP_ReleaseActor
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2bbb090, 13 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> NotifyBP_ReleaseActor = { 0x2bbb090, 13 }; 
 	// Function /Script/SB.SBZoneEnvActor.NotifyBP_InitActor
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2bbb090, 14 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> NotifyBP_InitActor = { 0x2bbb090, 14 }; 
 	// Function /Script/SB.SBZoneEnvActor.NotifyBP_HitProjectile
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2bbb090, 15 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> NotifyBP_HitProjectile = { 0x2bbb090, 15 }; 
 	// Function /Script/SB.SBZoneEnvActor.NotifyBP_HitLaser
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const bool, const UPrimitiveComponent*> ASBZoneEnvActor = { 0x2bbb090, 16 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const bool, const UPrimitiveComponent*> NotifyBP_HitLaser = { 0x2bbb090, 16 }; 
 	// Function /Script/SB.SBZoneEnvActor.MakeBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2835350, 17 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> MakeBufferData = { 0x2835350, 17 }; 
 	// Function /Script/SB.SBZoneEnvActor.IsPuzzleSuccess
-	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> ASBZoneEnvActor = { 0x28367f0, 18 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> IsPuzzleSuccess = { 0x28367f0, 18 }; 
 	// Function /Script/SB.SBZoneEnvActor.IsGrabAllow
-	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> ASBZoneEnvActor = { 0x2834df0, 19 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> IsGrabAllow = { 0x2834df0, 19 }; 
 	// Function /Script/SB.SBZoneEnvActor.IsGrabActive
-	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> ASBZoneEnvActor = { 0x2834d90, 20 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> IsGrabActive = { 0x2834d90, 20 }; 
 	// Function /Script/SB.SBZoneEnvActor.IsDataEmpty
-	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> ASBZoneEnvActor = { 0x2836960, 21 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> IsDataEmpty = { 0x2836960, 21 }; 
 	// Function /Script/SB.SBZoneEnvActor.InputRightAxisY
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float> ASBZoneEnvActor = { 0x2bbb090, 22 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float> InputRightAxisY = { 0x2bbb090, 22 }; 
 	// Function /Script/SB.SBZoneEnvActor.InputRightAxisX
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float> ASBZoneEnvActor = { 0x2bbb090, 23 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float> InputRightAxisX = { 0x2bbb090, 23 }; 
 	// Function /Script/SB.SBZoneEnvActor.InputLeftAxisY
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float> ASBZoneEnvActor = { 0x2bbb090, 24 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float> InputLeftAxisY = { 0x2bbb090, 24 }; 
 	// Function /Script/SB.SBZoneEnvActor.InputLeftAxisX
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float> ASBZoneEnvActor = { 0x2bbb090, 25 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float> InputLeftAxisX = { 0x2bbb090, 25 }; 
 	// Function /Script/SB.SBZoneEnvActor.InputAxis
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float, const TEnumAsByte<ESBInputAxisType>> ASBZoneEnvActor = { 0x2835190, 26 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const float, const TEnumAsByte<ESBInputAxisType>> InputAxis = { 0x2835190, 26 }; 
 	// Function /Script/SB.SBZoneEnvActor.InitPhysicsChannel
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2836c80, 27 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> InitPhysicsChannel = { 0x2836c80, 27 }; 
 	// Function /Script/SB.SBZoneEnvActor.HaveBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> ASBZoneEnvActor = { 0x2836900, 28 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, bool> HaveBufferData = { 0x2836900, 28 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetVectorBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector, const TEnumAsByte<ESBBufferDataSlot>> ASBZoneEnvActor = { 0x2836220, 29 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector, const TEnumAsByte<ESBBufferDataSlot>> GetVectorBufferData = { 0x2836220, 29 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetStringBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FString, const TEnumAsByte<ESBBufferDataSlot>> ASBZoneEnvActor = { 0x2836330, 30 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FString, const TEnumAsByte<ESBBufferDataSlot>> GetStringBufferData = { 0x2836330, 30 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetStateTagname
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FName> ASBZoneEnvActor = { 0x2836c60, 31 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FName> GetStateTagname = { 0x2836c60, 31 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetStateProgressMaxCount
-	constexpr static const FunctionPointer<ASBZoneEnvActor, int32_t, const FName> ASBZoneEnvActor = { 0x2836a40, 32 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, int32_t, const FName> GetStateProgressMaxCount = { 0x2836a40, 32 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetPuzzleData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FString> ASBZoneEnvActor = { 0x2836770, 33 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FString> GetPuzzleData = { 0x2836770, 33 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetProgressValue
-	constexpr static const FunctionPointer<ASBZoneEnvActor, int32_t, const FName> ASBZoneEnvActor = { 0x2836b30, 34 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, int32_t, const FName> GetProgressValue = { 0x2836b30, 34 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetPendingMovementLocalInputVector
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> ASBZoneEnvActor = { 0x2834a00, 35 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> GetPendingMovementLocalInputVector = { 0x2834a00, 35 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetPendingMovementInputVector
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> ASBZoneEnvActor = { 0x2834a30, 36 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> GetPendingMovementInputVector = { 0x2834a30, 36 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetMovementComponent
-	constexpr static const FunctionPointer<ASBZoneEnvActor, USBZoneEnvMovementComponent*> ASBZoneEnvActor = { 0x2834d20, 37 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, USBZoneEnvMovementComponent*> GetMovementComponent = { 0x2834d20, 37 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetLastMovementLocalInputVector
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> ASBZoneEnvActor = { 0x28349a0, 38 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> GetLastMovementLocalInputVector = { 0x28349a0, 38 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetLastMovementInputVector
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> ASBZoneEnvActor = { 0x28349d0, 39 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> GetLastMovementInputVector = { 0x28349d0, 39 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetIntBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, int32_t, const TEnumAsByte<ESBBufferDataSlot>> ASBZoneEnvActor = { 0x2836040, 40 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, int32_t, const TEnumAsByte<ESBBufferDataSlot>> GetIntBufferData = { 0x2836040, 40 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetFloatBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, float, const TEnumAsByte<ESBBufferDataSlot>> ASBZoneEnvActor = { 0x2836130, 41 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, float, const TEnumAsByte<ESBBufferDataSlot>> GetFloatBufferData = { 0x2836130, 41 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetEnvSkeletalMeshComponent
-	constexpr static const FunctionPointer<ASBZoneEnvActor, USkeletalMeshComponent*> ASBZoneEnvActor = { 0x2834ee0, 42 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, USkeletalMeshComponent*> GetEnvSkeletalMeshComponent = { 0x2834ee0, 42 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetEnvSBSkeletalMeshComponent
-	constexpr static const FunctionPointer<ASBZoneEnvActor, USBSkeletalMeshComponent*> ASBZoneEnvActor = { 0x2834e60, 43 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, USBSkeletalMeshComponent*> GetEnvSBSkeletalMeshComponent = { 0x2834e60, 43 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetEnvGrabComponent
-	constexpr static const FunctionPointer<ASBZoneEnvActor, USBZoneEnvGrabComponent*> ASBZoneEnvActor = { 0x2834e30, 44 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, USBZoneEnvGrabComponent*> GetEnvGrabComponent = { 0x2834e30, 44 }; 
 	// Function /Script/SB.SBZoneEnvActor.GetBoolBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, bool, const TEnumAsByte<ESBBufferDataSlot>> ASBZoneEnvActor = { 0x2835f50, 45 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, bool, const TEnumAsByte<ESBBufferDataSlot>> GetBoolBufferData = { 0x2835f50, 45 }; 
 	// Function /Script/SB.SBZoneEnvActor.EventUpdateProgress
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const int32_t, const float, const float, const float, const float, const float> ASBZoneEnvActor = { 0x2bbb090, 46 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const int32_t, const float, const float, const float, const float, const float> EventUpdateProgress = { 0x2bbb090, 46 }; 
 	// Function /Script/SB.SBZoneEnvActor.EventUpdateBufferData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2bbb090, 47 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> EventUpdateBufferData = { 0x2bbb090, 47 }; 
 	// Function /Script/SB.SBZoneEnvActor.EventTriggerResult
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const bool> ASBZoneEnvActor = { 0x2bbb090, 48 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const bool> EventTriggerResult = { 0x2bbb090, 48 }; 
 	// Function /Script/SB.SBZoneEnvActor.EventResetEnv
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const TEnumAsByte<ESBZoneEnvActiveState>, const TEnumAsByte<ESBObjectState>, const TArray<FSBEnvProgressData>&> ASBZoneEnvActor = { 0x2bbb090, 49 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const TEnumAsByte<ESBZoneEnvActiveState>, const TEnumAsByte<ESBObjectState>, const TArray<FSBEnvProgressData>&> EventResetEnv = { 0x2bbb090, 49 }; 
 	// Function /Script/SB.SBZoneEnvActor.EventResetByWarpSafeLocation
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const TEnumAsByte<ESBZoneEnvActiveState>, const TEnumAsByte<ESBObjectState>, const bool, const bool> ASBZoneEnvActor = { 0x2bbb090, 50 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const TEnumAsByte<ESBZoneEnvActiveState>, const TEnumAsByte<ESBObjectState>, const bool, const bool> EventResetByWarpSafeLocation = { 0x2bbb090, 50 }; 
 	// Function /Script/SB.SBZoneEnvActor.EventResetBySpawnData
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const TEnumAsByte<ESBZoneEnvActiveState>, const TEnumAsByte<ESBObjectState>> ASBZoneEnvActor = { 0x2bbb090, 51 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const TEnumAsByte<ESBZoneEnvActiveState>, const TEnumAsByte<ESBObjectState>> EventResetBySpawnData = { 0x2bbb090, 51 }; 
 	// Function /Script/SB.SBZoneEnvActor.EventInitEnv
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const TEnumAsByte<ESBZoneEnvActiveState>, const TEnumAsByte<ESBObjectState>, const TArray<FSBEnvProgressData>&, const int32_t> ASBZoneEnvActor = { 0x2bbb090, 52 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const TEnumAsByte<ESBZoneEnvActiveState>, const TEnumAsByte<ESBObjectState>, const TArray<FSBEnvProgressData>&, const int32_t> EventInitEnv = { 0x2bbb090, 52 }; 
 	// Function /Script/SB.SBZoneEnvActor.DataInitEvent
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2bbb090, 53 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> DataInitEvent = { 0x2bbb090, 53 }; 
 	// Function /Script/SB.SBZoneEnvActor.ConsumeMovementInputVector
-	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> ASBZoneEnvActor = { 0x2834960, 54 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, FVector> ConsumeMovementInputVector = { 0x2834960, 54 }; 
 	// Function /Script/SB.SBZoneEnvActor.CompletePuzzle
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void> ASBZoneEnvActor = { 0x2836470, 55 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void> CompletePuzzle = { 0x2836470, 55 }; 
 	// Function /Script/SB.SBZoneEnvActor.ChangeStateProgressCount
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const int32_t, const int32_t, const bool> ASBZoneEnvActor = { 0x2bbb090, 56 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const int32_t, const int32_t, const bool> ChangeStateProgressCount = { 0x2bbb090, 56 }; 
 	// Function /Script/SB.SBZoneEnvActor.ChangeEnvState
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const FName> ASBZoneEnvActor = { 0x2bbb090, 57 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FName, const FName> ChangeEnvState = { 0x2bbb090, 57 }; 
 	// Function /Script/SB.SBZoneEnvActor.ChangeEnvActiveState
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBZoneEnvActiveState>> ASBZoneEnvActor = { 0x2bbb090, 58 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const TEnumAsByte<ESBZoneEnvActiveState>> ChangeEnvActiveState = { 0x2bbb090, 58 }; 
 	// Function /Script/SB.SBZoneEnvActor.AddMovementInput
-	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FVector, const FVector, const float, const bool> ASBZoneEnvActor = { 0x2834a60, 59 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, void, const FVector, const FVector, const float, const bool> AddMovementInput = { 0x2834a60, 59 }; 
 	// Function /Script/SB.SBZoneEnvActor.AddEnvProgressInfo
-	constexpr static const FunctionPointer<ASBZoneEnvActor, int32_t, const USplineComponent*, const FRuntimeFloatCurve> ASBZoneEnvActor = { 0x2835390, 60 }; 
+	constexpr static const FunctionPointer<ASBZoneEnvActor, int32_t, const USplineComponent*, const FRuntimeFloatCurve> AddEnvProgressInfo = { 0x2835390, 60 }; 
 };
 
 /// Class /Script/SB.SBZoneEnvBoxActor
@@ -31499,16 +31406,15 @@ public:
 	unsigned char                                      UnknownData21_6[0x4];                                       // 0x034C   (0x0004)  MISSED
 	FQuat                                              LastValidRotation;                                          // 0x0350   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/SB.SBZoneEnvMovementComponent.GetPendingInputVector
-	constexpr static const FunctionPointer<USBZoneEnvMovementComponent, FVector> USBZoneEnvMovementComponent = { 0x2838fd0, 0 }; 
+	constexpr static const FunctionPointer<USBZoneEnvMovementComponent, FVector> GetPendingInputVector = { 0x2838fd0, 0 }; 
 	// Function /Script/SB.SBZoneEnvMovementComponent.GetLastInputVector
-	constexpr static const FunctionPointer<USBZoneEnvMovementComponent, FVector> USBZoneEnvMovementComponent = { 0x2838f50, 1 }; 
+	constexpr static const FunctionPointer<USBZoneEnvMovementComponent, FVector> GetLastInputVector = { 0x2838f50, 1 }; 
 	// Function /Script/SB.SBZoneEnvMovementComponent.ConsumeInputVector
-	constexpr static const FunctionPointer<USBZoneEnvMovementComponent, FVector> USBZoneEnvMovementComponent = { 0x2838f10, 2 }; 
+	constexpr static const FunctionPointer<USBZoneEnvMovementComponent, FVector> ConsumeInputVector = { 0x2838f10, 2 }; 
 	// Function /Script/SB.SBZoneEnvMovementComponent.AddInputVector
-	constexpr static const FunctionPointer<USBZoneEnvMovementComponent, void, const FVector, const FVector, const bool> USBZoneEnvMovementComponent = { 0x2839050, 3 }; 
+	constexpr static const FunctionPointer<USBZoneEnvMovementComponent, void, const FVector, const FVector, const bool> AddInputVector = { 0x2839050, 3 }; 
 };
 
 /// Struct /Script/SB.SBDestructionFromActorAttackTriggerInfo
@@ -31677,52 +31583,51 @@ public:
 	bool                                               bRegisterDestruction;                                       // 0x04A9   (0x0001)  
 	unsigned char                                      UnknownData29_7[0x236];                                     // 0x04AA   (0x0236)  MISSED
 
-
 	/// Functions
 	// Function /Script/SB.SBZoneEventActor.SetStaticZoneEventActor
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const bool> ASBZoneEventActor = { 0x283a980, 0 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const bool> SetStaticZoneEventActor = { 0x283a980, 0 }; 
 	// Function /Script/SB.SBZoneEventActor.SetDestructibleComponent
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const USBDestructibleComponent*> ASBZoneEventActor = { 0x283b0c0, 1 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const USBDestructibleComponent*> SetDestructibleComponent = { 0x283b0c0, 1 }; 
 	// Function /Script/SB.SBZoneEventActor.SetActiveAllCollisionGroup
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const bool> ASBZoneEventActor = { 0x2839d20, 2 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const bool> SetActiveAllCollisionGroup = { 0x2839d20, 2 }; 
 	// Function /Script/SB.SBZoneEventActor.OnCollisionPhysicsOverlapEnd
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> ASBZoneEventActor = { 0x283b260, 3 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t> OnCollisionPhysicsOverlapEnd = { 0x283b260, 3 }; 
 	// Function /Script/SB.SBZoneEventActor.OnCollisionPhysicsOverlapBegin
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> ASBZoneEventActor = { 0x283b510, 4 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> OnCollisionPhysicsOverlapBegin = { 0x283b510, 4 }; 
 	// Function /Script/SB.SBZoneEventActor.OnCollisionOriginHit
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> ASBZoneEventActor = { 0x283a190, 5 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const FVector, const FHitResult&> OnCollisionOriginHit = { 0x283a190, 5 }; 
 	// Function /Script/SB.SBZoneEventActor.OnCollisionOriginBeginOverlap
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> ASBZoneEventActor = { 0x2839e00, 6 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> OnCollisionOriginBeginOverlap = { 0x2839e00, 6 }; 
 	// Function /Script/SB.SBZoneEventActor.NotifyShowEvent
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FName, const FName> ASBZoneEventActor = { 0x2bbb090, 7 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FName, const FName> NotifyShowEvent = { 0x2bbb090, 7 }; 
 	// Function /Script/SB.SBZoneEventActor.GetReactionElement
-	constexpr static const FunctionPointer<ASBZoneEventActor, TEnumAsByte<ESBElementReaction>> ASBZoneEventActor = { 0x283a740, 8 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, TEnumAsByte<ESBElementReaction>> GetReactionElement = { 0x283a740, 8 }; 
 	// Function /Script/SB.SBZoneEventActor.GetElementAmount
-	constexpr static const FunctionPointer<ASBZoneEventActor, float, const TEnumAsByte<ESBElementType>, const bool> ASBZoneEventActor = { 0x283a7b0, 9 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, float, const TEnumAsByte<ESBElementType>, const bool> GetElementAmount = { 0x283a7b0, 9 }; 
 	// Function /Script/SB.SBZoneEventActor.EventUnderWater
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector> ASBZoneEventActor = { 0x2bbb090, 10 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector> EventUnderWater = { 0x2bbb090, 10 }; 
 	// Function /Script/SB.SBZoneEventActor.EventTurnOnElement
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const TEnumAsByte<ESBElementType>> ASBZoneEventActor = { 0x2bbb090, 11 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const TEnumAsByte<ESBElementType>> EventTurnOnElement = { 0x2bbb090, 11 }; 
 	// Function /Script/SB.SBZoneEventActor.EventTurnOffElement
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const TEnumAsByte<ESBElementType>> ASBZoneEventActor = { 0x2bbb090, 12 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const TEnumAsByte<ESBElementType>> EventTurnOffElement = { 0x2bbb090, 12 }; 
 	// Function /Script/SB.SBZoneEventActor.EventSpawnDestructibleComponent
-	constexpr static const FunctionPointer<ASBZoneEventActor, void> ASBZoneEventActor = { 0x2bbb090, 13 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void> EventSpawnDestructibleComponent = { 0x2bbb090, 13 }; 
 	// Function /Script/SB.SBZoneEventActor.EventPostDestruction
-	constexpr static const FunctionPointer<ASBZoneEventActor, void> ASBZoneEventActor = { 0x2bbb090, 14 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void> EventPostDestruction = { 0x2bbb090, 14 }; 
 	// Function /Script/SB.SBZoneEventActor.EventInitElement
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const TEnumAsByte<ESBElementType>, const float, const float> ASBZoneEventActor = { 0x2bbb090, 15 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const TEnumAsByte<ESBElementType>, const float, const float> EventInitElement = { 0x2bbb090, 15 }; 
 	// Function /Script/SB.SBZoneEventActor.EventInitDestructionState
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const bool> ASBZoneEventActor = { 0x2bbb090, 16 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const bool> EventInitDestructionState = { 0x2bbb090, 16 }; 
 	// Function /Script/SB.SBZoneEventActor.EventHit
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const FVector, const TEnumAsByte<ESBZoneEventHitAttackerType>> ASBZoneEventActor = { 0x2bbb090, 17 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const FVector, const TEnumAsByte<ESBZoneEventHitAttackerType>> EventHit = { 0x2bbb090, 17 }; 
 	// Function /Script/SB.SBZoneEventActor.EventDestructionStep
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const FVector, const int32_t, const TEnumAsByte<ESBZoneEventHitAttackerType>> ASBZoneEventActor = { 0x2bbb090, 18 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const FVector, const int32_t, const TEnumAsByte<ESBZoneEventHitAttackerType>> EventDestructionStep = { 0x2bbb090, 18 }; 
 	// Function /Script/SB.SBZoneEventActor.EventDestruction
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const FVector, const TEnumAsByte<ESBZoneEventHitAttackerType>> ASBZoneEventActor = { 0x2bbb090, 19 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const FVector, const TEnumAsByte<ESBZoneEventHitAttackerType>> EventDestruction = { 0x2bbb090, 19 }; 
 	// Function /Script/SB.SBZoneEventActor.AddRadialForce
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const float, const float, const TEnumAsByte<ERadialImpulseFalloff>, const bool> ASBZoneEventActor = { 0x283aa60, 20 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const float, const float, const TEnumAsByte<ERadialImpulseFalloff>, const bool> AddRadialForce = { 0x283aa60, 20 }; 
 	// Function /Script/SB.SBZoneEventActor.AddImpulseAtLocation
-	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const FVector> ASBZoneEventActor = { 0x283ae50, 21 }; 
+	constexpr static const FunctionPointer<ASBZoneEventActor, void, const FVector, const FVector> AddImpulseAtLocation = { 0x283ae50, 21 }; 
 };
 
 /// Class /Script/SB.SBZoneTriggerActor

@@ -22,14 +22,13 @@ public:
 	FString                                            ProxyOverride;                                              // 0x0090   (0x0010)  
 	FDirectoryPath                                     SequencePath;                                               // 0x00A0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/ImgMedia.ImgMediaSource.SetSequencePath
-	constexpr static const FunctionPointer<UImgMediaSource, void, const FString> UImgMediaSource = { 0x191fca0, 0 }; 
+	constexpr static const FunctionPointer<UImgMediaSource, void, const FString> SetSequencePath = { 0x191fca0, 0 }; 
 	// Function /Script/ImgMedia.ImgMediaSource.GetSequencePath
-	constexpr static const FunctionPointer<UImgMediaSource, FString> UImgMediaSource = { 0x191fd90, 1 }; 
+	constexpr static const FunctionPointer<UImgMediaSource, FString> GetSequencePath = { 0x191fd90, 1 }; 
 	// Function /Script/ImgMedia.ImgMediaSource.GetProxies
-	constexpr static const FunctionPointer<UImgMediaSource, void, const TArray<FString>&> UImgMediaSource = { 0x191fe50, 2 }; 
+	constexpr static const FunctionPointer<UImgMediaSource, void, const TArray<FString>&> GetProxies = { 0x191fe50, 2 }; 
 };
 
 #pragma pack(pop)

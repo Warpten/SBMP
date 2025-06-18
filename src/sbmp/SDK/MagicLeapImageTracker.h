@@ -48,12 +48,11 @@ public:
 	FMulticastInlineDelegate                           OnImageTargetUnreliableTracking;                            // 0x02C0   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x10];                                      // 0x02D0   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerComponent.SetTargetAsync
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerComponent, bool, const UTexture2D*> UMagicLeapImageTrackerComponent = { 0x1900af0, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapImageTrackerComponent, bool, const UTexture2D*> SetTargetAsync = { 0x1900af0, 0 }; 
 	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerComponent.RemoveTargetAsync
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerComponent, bool> UMagicLeapImageTrackerComponent = { 0x1900a90, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapImageTrackerComponent, bool> RemoveTargetAsync = { 0x1900a90, 1 }; 
 };
 
 /// Class /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary
@@ -62,16 +61,15 @@ class UMagicLeapImageTrackerFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.SetMaxSimultaneousTargets
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, void, const int32_t> UMagicLeapImageTrackerFunctionLibrary = { 0x1901290, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, void, const int32_t> SetMaxSimultaneousTargets = { 0x1901290, 0 }; 
 	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.IsImageTrackingEnabled
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, bool> UMagicLeapImageTrackerFunctionLibrary = { 0x1901140, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, bool> IsImageTrackingEnabled = { 0x1901140, 1 }; 
 	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.GetMaxSimultaneousTargets
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, int32_t> UMagicLeapImageTrackerFunctionLibrary = { 0x1901260, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, int32_t> GetMaxSimultaneousTargets = { 0x1901260, 2 }; 
 	// Function /Script/MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.EnableImageTracking
-	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, void, const bool> UMagicLeapImageTrackerFunctionLibrary = { 0x1901180, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapImageTrackerFunctionLibrary, void, const bool> EnableImageTracking = { 0x1901180, 3 }; 
 };
 
 /// Struct /Script/MagicLeapImageTracker.MagicLeapImageTargetState

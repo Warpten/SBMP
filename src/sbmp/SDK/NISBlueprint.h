@@ -38,26 +38,25 @@ class UNISLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/NISBlueprint.NISLibrary.SetNISSharpness
-	constexpr static const FunctionPointer<UNISLibrary, void, const float> UNISLibrary = { 0x15638a0, 0 }; 
+	constexpr static const FunctionPointer<UNISLibrary, void, const float> SetNISSharpness = { 0x15638a0, 0 }; 
 	// Function /Script/NISBlueprint.NISLibrary.SetNISMode
-	constexpr static const FunctionPointer<UNISLibrary, void, const UNISMode> UNISLibrary = { 0x1563b20, 1 }; 
+	constexpr static const FunctionPointer<UNISLibrary, void, const UNISMode> SetNISMode = { 0x1563b20, 1 }; 
 	// Function /Script/NISBlueprint.NISLibrary.SetNISCustomScreenPercentage
-	constexpr static const FunctionPointer<UNISLibrary, void, const float> UNISLibrary = { 0x1563a40, 2 }; 
+	constexpr static const FunctionPointer<UNISLibrary, void, const float> SetNISCustomScreenPercentage = { 0x1563a40, 2 }; 
 	// Function /Script/NISBlueprint.NISLibrary.IsNISSupported
-	constexpr static const FunctionPointer<UNISLibrary, bool> UNISLibrary = { 0x1563870, 3 }; 
+	constexpr static const FunctionPointer<UNISLibrary, bool> IsNISSupported = { 0x1563870, 3 }; 
 	// Function /Script/NISBlueprint.NISLibrary.IsNISModeSupported
-	constexpr static const FunctionPointer<UNISLibrary, bool, const UNISMode> UNISLibrary = { 0x1564010, 4 }; 
+	constexpr static const FunctionPointer<UNISLibrary, bool, const UNISMode> IsNISModeSupported = { 0x1564010, 4 }; 
 	// Function /Script/NISBlueprint.NISLibrary.GetSupportedNISModes
-	constexpr static const FunctionPointer<UNISLibrary, TArray<UNISMode>> UNISLibrary = { 0x1563e80, 5 }; 
+	constexpr static const FunctionPointer<UNISLibrary, TArray<UNISMode>> GetSupportedNISModes = { 0x1563e80, 5 }; 
 	// Function /Script/NISBlueprint.NISLibrary.GetNISScreenPercentageRange
-	constexpr static const FunctionPointer<UNISLibrary, void, const float&, const float&> UNISLibrary = { 0x1563be0, 6 }; 
+	constexpr static const FunctionPointer<UNISLibrary, void, const float&, const float&> GetNISScreenPercentageRange = { 0x1563be0, 6 }; 
 	// Function /Script/NISBlueprint.NISLibrary.GetNISRecommendedScreenPercentage
-	constexpr static const FunctionPointer<UNISLibrary, float, const UNISMode> UNISLibrary = { 0x1563db0, 7 }; 
+	constexpr static const FunctionPointer<UNISLibrary, float, const UNISMode> GetNISRecommendedScreenPercentage = { 0x1563db0, 7 }; 
 	// Function /Script/NISBlueprint.NISLibrary.GetDefaultNISMode
-	constexpr static const FunctionPointer<UNISLibrary, UNISMode> UNISLibrary = { 0x1563870, 8 }; 
+	constexpr static const FunctionPointer<UNISLibrary, UNISMode> GetDefaultNISMode = { 0x1563870, 8 }; 
 };
 
 #pragma pack(pop)

@@ -138,36 +138,35 @@ public:
 	FMulticastInlineDelegate                           OnTrailingEvents;                                           // 0x0370   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x110];                                     // 0x0380   (0x0110)  MISSED
 
-
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SortTrailingEvents
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const TArray<FChaosTrailingEventData>&, const EChaosTrailingSortMethod> UChaosDestructionListener = { 0x4c51570, 0 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const TArray<FChaosTrailingEventData>&, const EChaosTrailingSortMethod> SortTrailingEvents = { 0x4c51570, 0 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SortCollisionEvents
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const TArray<FChaosCollisionEventData>&, const EChaosCollisionSortMethod> UChaosDestructionListener = { 0x4c518f0, 1 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const TArray<FChaosCollisionEventData>&, const EChaosCollisionSortMethod> SortCollisionEvents = { 0x4c518f0, 1 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SortBreakingEvents
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const TArray<FChaosBreakingEventData>&, const EChaosBreakingSortMethod> UChaosDestructionListener = { 0x4c51730, 2 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const TArray<FChaosBreakingEventData>&, const EChaosBreakingSortMethod> SortBreakingEvents = { 0x4c51730, 2 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventRequestSettings
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const FChaosTrailingEventRequestSettings&> UChaosDestructionListener = { 0x4c51db0, 3 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const FChaosTrailingEventRequestSettings&> SetTrailingEventRequestSettings = { 0x4c51db0, 3 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventEnabled
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const bool> UChaosDestructionListener = { 0x4c51ae0, 4 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const bool> SetTrailingEventEnabled = { 0x4c51ae0, 4 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventRequestSettings
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const FChaosCollisionEventRequestSettings&> UChaosDestructionListener = { 0x4c51fb0, 5 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const FChaosCollisionEventRequestSettings&> SetCollisionEventRequestSettings = { 0x4c51fb0, 5 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventEnabled
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const bool> UChaosDestructionListener = { 0x4c51cc0, 6 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const bool> SetCollisionEventEnabled = { 0x4c51cc0, 6 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventRequestSettings
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const FChaosBreakingEventRequestSettings&> UChaosDestructionListener = { 0x4c51eb0, 7 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const FChaosBreakingEventRequestSettings&> SetBreakingEventRequestSettings = { 0x4c51eb0, 7 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventEnabled
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const bool> UChaosDestructionListener = { 0x4c51bd0, 8 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const bool> SetBreakingEventEnabled = { 0x4c51bd0, 8 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.RemoveGeometryCollectionActor
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const AGeometryCollectionActor*> UChaosDestructionListener = { 0x4c520b0, 9 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const AGeometryCollectionActor*> RemoveGeometryCollectionActor = { 0x4c520b0, 9 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.RemoveChaosSolverActor
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const AChaosSolverActor*> UChaosDestructionListener = { 0x17a7aa0, 10 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const AChaosSolverActor*> RemoveChaosSolverActor = { 0x17a7aa0, 10 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.IsEventListening
-	constexpr static const FunctionPointer<UChaosDestructionListener, bool> UChaosDestructionListener = { 0x4c51ab0, 11 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, bool> IsEventListening = { 0x4c51ab0, 11 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.AddGeometryCollectionActor
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const AGeometryCollectionActor*> UChaosDestructionListener = { 0x4c521a0, 12 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const AGeometryCollectionActor*> AddGeometryCollectionActor = { 0x4c521a0, 12 }; 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.AddChaosSolverActor
-	constexpr static const FunctionPointer<UChaosDestructionListener, void, const AChaosSolverActor*> UChaosDestructionListener = { 0x17a7aa0, 13 }; 
+	constexpr static const FunctionPointer<UChaosDestructionListener, void, const AChaosSolverActor*> AddChaosSolverActor = { 0x17a7aa0, 13 }; 
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionActor
@@ -178,10 +177,9 @@ public:
 	class UGeometryCollectionComponent*                GeometryCollectionComponent;                                // 0x02C8   (0x0008)  
 	class UGeometryCollectionDebugDrawComponent*       GeometryCollectionDebugDrawComponent;                       // 0x02D0   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionActor.RaycastSingle
-	constexpr static const FunctionPointer<AGeometryCollectionActor, bool, const FVector, const FVector, const FHitResult&> AGeometryCollectionActor = { 0x4c53120, 0 }; 
+	constexpr static const FunctionPointer<AGeometryCollectionActor, bool, const FVector, const FVector, const FHitResult&> RaycastSingle = { 0x4c53120, 0 }; 
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionCache
@@ -286,24 +284,23 @@ public:
 	class UBodySetup*                                  DummyBodySetup;                                             // 0x0A10   (0x0008)  
 	unsigned char                                      UnknownData25_7[0x28];                                      // 0x0A18   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyBreaks
-	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const bool> UGeometryCollectionComponent = { 0x4c53dd0, 0 }; 
+	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const bool> SetNotifyBreaks = { 0x4c53dd0, 0 }; 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ReceivePhysicsCollision
-	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const FChaosPhysicsCollisionInfo&> UGeometryCollectionComponent = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const FChaosPhysicsCollisionInfo&> ReceivePhysicsCollision = { 0x2bbb090, 1 }; 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.OnRep_RepData
-	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const FGeometryCollectionRepData&> UGeometryCollectionComponent = { 0x4c53ce0, 2 }; 
+	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const FGeometryCollectionRepData&> OnRep_RepData = { 0x4c53ce0, 2 }; 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.NotifyGeometryCollectionPhysicsStateChange__DelegateSignature
-	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const UGeometryCollectionComponent*> UGeometryCollectionComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const UGeometryCollectionComponent*> NotifyGeometryCollectionPhysicsStateChange__DelegateSignature = { 0x2bbb090, 3 }; 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature
-	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const UGeometryCollectionComponent*> UGeometryCollectionComponent = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const UGeometryCollectionComponent*> NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature = { 0x2bbb090, 4 }; 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.NetAbandonCluster
-	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const int32_t> UGeometryCollectionComponent = { 0x4c53c00, 5 }; 
+	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const int32_t> NetAbandonCluster = { 0x4c53c00, 5 }; 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyPhysicsField
-	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const bool, const EGeometryCollectionPhysicsTypeEnum, const UFieldSystemMetaData*, const UFieldNodeBase*> UGeometryCollectionComponent = { 0x4c53f00, 6 }; 
+	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const bool, const EGeometryCollectionPhysicsTypeEnum, const UFieldSystemMetaData*, const UFieldNodeBase*> ApplyPhysicsField = { 0x4c53f00, 6 }; 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyKinematicField
-	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const float, const FVector> UGeometryCollectionComponent = { 0x4c54190, 7 }; 
+	constexpr static const FunctionPointer<UGeometryCollectionComponent, void, const float, const FVector> ApplyKinematicField = { 0x4c54190, 7 }; 
 };
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionDebugDrawWarningMessage
@@ -510,10 +507,9 @@ public:
 	FMulticastInlineDelegate                           OnChaosPhysicsCollision;                                    // 0x0128   (0x0010)  
 	unsigned char                                      UnknownData09_7[0x10];                                      // 0x0138   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.SkeletalMeshSimulationComponent.ReceivePhysicsCollision
-	constexpr static const FunctionPointer<USkeletalMeshSimulationComponent, void, const FChaosPhysicsCollisionInfo&> USkeletalMeshSimulationComponent = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<USkeletalMeshSimulationComponent, void, const FChaosPhysicsCollisionInfo&> ReceivePhysicsCollision = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/GeometryCollectionEngine.StaticMeshSimulationComponent
@@ -545,12 +541,11 @@ public:
 	TArray<class UPrimitiveComponent*>                 SimulatedComponents;                                        // 0x0130   (0x0010)  
 	unsigned char                                      UnknownData13_7[0x8];                                       // 0x0140   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.StaticMeshSimulationComponent.ReceivePhysicsCollision
-	constexpr static const FunctionPointer<UStaticMeshSimulationComponent, void, const FChaosPhysicsCollisionInfo&> UStaticMeshSimulationComponent = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UStaticMeshSimulationComponent, void, const FChaosPhysicsCollisionInfo&> ReceivePhysicsCollision = { 0x2bbb090, 0 }; 
 	// Function /Script/GeometryCollectionEngine.StaticMeshSimulationComponent.ForceRecreatePhysicsState
-	constexpr static const FunctionPointer<UStaticMeshSimulationComponent, void> UStaticMeshSimulationComponent = { 0x4c561e0, 1 }; 
+	constexpr static const FunctionPointer<UStaticMeshSimulationComponent, void> ForceRecreatePhysicsState = { 0x4c561e0, 1 }; 
 };
 
 /// Struct /Script/GeometryCollectionEngine.ChaosCollisionEventData

@@ -18,14 +18,13 @@ class ULayersBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.RemoveActorFromLayer
-	constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> ULayersBlueprintLibrary = { 0x196fba0, 0 }; 
+	constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> RemoveActorFromLayer = { 0x196fba0, 0 }; 
 	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.GetActors
-	constexpr static const FunctionPointer<ULayersBlueprintLibrary, TArray<AActor*>, const UObject*, const FActorLayer&> ULayersBlueprintLibrary = { 0x196fee0, 1 }; 
+	constexpr static const FunctionPointer<ULayersBlueprintLibrary, TArray<AActor*>, const UObject*, const FActorLayer&> GetActors = { 0x196fee0, 1 }; 
 	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.AddActorToLayer
-	constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> ULayersBlueprintLibrary = { 0x196fd40, 2 }; 
+	constexpr static const FunctionPointer<ULayersBlueprintLibrary, void, const AActor*, const FActorLayer&> AddActorToLayer = { 0x196fd40, 2 }; 
 };
 
 /// Struct /Script/ActorLayerUtilities.ActorLayer

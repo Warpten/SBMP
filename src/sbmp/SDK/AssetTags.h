@@ -27,20 +27,19 @@ class UAssetTagsSubsystem : public UEngineSubsystem
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetPtr
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const UObject*> UAssetTagsSubsystem = { 0x1978460, 0 }; 
+	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const UObject*> GetCollectionsContainingAssetPtr = { 0x1978460, 0 }; 
 	// Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetData
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const FAssetData&> UAssetTagsSubsystem = { 0x1978880, 1 }; 
+	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const FAssetData&> GetCollectionsContainingAssetData = { 0x1978880, 1 }; 
 	// Function /Script/AssetTags.AssetTagsSubsystem.GetCollectionsContainingAsset
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const FName> UAssetTagsSubsystem = { 0x1978a20, 2 }; 
+	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>, const FName> GetCollectionsContainingAsset = { 0x1978a20, 2 }; 
 	// Function /Script/AssetTags.AssetTagsSubsystem.GetCollections
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>> UAssetTagsSubsystem = { 0x1978cd0, 3 }; 
+	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FName>> GetCollections = { 0x1978cd0, 3 }; 
 	// Function /Script/AssetTags.AssetTagsSubsystem.GetAssetsInCollection
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FAssetData>, const FName> UAssetTagsSubsystem = { 0x1978b40, 4 }; 
+	constexpr static const FunctionPointer<UAssetTagsSubsystem, TArray<FAssetData>, const FName> GetAssetsInCollection = { 0x1978b40, 4 }; 
 	// Function /Script/AssetTags.AssetTagsSubsystem.CollectionExists
-	constexpr static const FunctionPointer<UAssetTagsSubsystem, bool, const FName> UAssetTagsSubsystem = { 0x1978d50, 5 }; 
+	constexpr static const FunctionPointer<UAssetTagsSubsystem, bool, const FName> CollectionExists = { 0x1978d50, 5 }; 
 };
 
 #pragma pack(pop)

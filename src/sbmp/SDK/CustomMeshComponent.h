@@ -19,14 +19,13 @@ class UCustomMeshComponent : public UMeshComponent
 public:
 	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0560   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
-	constexpr static const FunctionPointer<UCustomMeshComponent, bool, const TArray<FCustomMeshTriangle>&> UCustomMeshComponent = { 0x198db30, 0 }; 
+	constexpr static const FunctionPointer<UCustomMeshComponent, bool, const TArray<FCustomMeshTriangle>&> SetCustomMeshTriangles = { 0x198db30, 0 }; 
 	// Function /Script/CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles
-	constexpr static const FunctionPointer<UCustomMeshComponent, void> UCustomMeshComponent = { 0x198d980, 1 }; 
+	constexpr static const FunctionPointer<UCustomMeshComponent, void> ClearCustomMeshTriangles = { 0x198d980, 1 }; 
 	// Function /Script/CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles
-	constexpr static const FunctionPointer<UCustomMeshComponent, void, const TArray<FCustomMeshTriangle>&> UCustomMeshComponent = { 0x198d9e0, 2 }; 
+	constexpr static const FunctionPointer<UCustomMeshComponent, void, const TArray<FCustomMeshTriangle>&> AddCustomMeshTriangles = { 0x198d9e0, 2 }; 
 };
 
 /// Struct /Script/CustomMeshComponent.CustomMeshTriangle

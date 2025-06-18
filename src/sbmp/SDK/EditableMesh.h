@@ -104,266 +104,265 @@ public:
 	int32_t                                            SubdivisionCount;                                           // 0x0520   (0x0004)  
 	unsigned char                                      UnknownData07_7[0x1E4];                                     // 0x0524   (0x01E4)  MISSED
 
-
 	/// Functions
 	// Function /Script/EditableMesh.EditableMesh.WeldVertices
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexID>&, const FVertexID&> UEditableMesh = { 0x18707f0, 0 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexID>&, const FVertexID&> WeldVertices = { 0x18707f0, 0 }; 
 	// Function /Script/EditableMesh.EditableMesh.TryToRemoveVertex
-	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const bool&, const FEdgeID&> UEditableMesh = { 0x1872620, 1 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const bool&, const FEdgeID&> TryToRemoveVertex = { 0x1872620, 1 }; 
 	// Function /Script/EditableMesh.EditableMesh.TryToRemovePolygonEdge
-	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const bool&, const FPolygonID&> UEditableMesh = { 0x1872820, 2 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const bool&, const FPolygonID&> TryToRemovePolygonEdge = { 0x1872820, 2 }; 
 	// Function /Script/EditableMesh.EditableMesh.TriangulatePolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const TArray<FPolygonID>&> UEditableMesh = { 0x1870e20, 3 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const TArray<FPolygonID>&> TriangulatePolygons = { 0x1870e20, 3 }; 
 	// Function /Script/EditableMesh.EditableMesh.TessellatePolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const ETriangleTessellationMode, const TArray<FPolygonID>&> UEditableMesh = { 0x18705e0, 4 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const ETriangleTessellationMode, const TArray<FPolygonID>&> TessellatePolygons = { 0x18705e0, 4 }; 
 	// Function /Script/EditableMesh.EditableMesh.StartModification
-	constexpr static const FunctionPointer<UEditableMesh, void, const EMeshModificationType, const EMeshTopologyChange> UEditableMesh = { 0x187aa30, 5 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const EMeshModificationType, const EMeshTopologyChange> StartModification = { 0x187aa30, 5 }; 
 	// Function /Script/EditableMesh.EditableMesh.SplitPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonToSplit>&, const TArray<FEdgeID>&> UEditableMesh = { 0x18748c0, 6 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonToSplit>&, const TArray<FEdgeID>&> SplitPolygons = { 0x18748c0, 6 }; 
 	// Function /Script/EditableMesh.EditableMesh.SplitPolygonalMesh
-	constexpr static const FunctionPointer<UEditableMesh, void, const FPlane&, const TArray<FPolygonID>&, const TArray<FPolygonID>&, const TArray<FEdgeID>&> UEditableMesh = { 0x1870010, 7 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FPlane&, const TArray<FPolygonID>&, const TArray<FPolygonID>&, const TArray<FEdgeID>&> SplitPolygonalMesh = { 0x1870010, 7 }; 
 	// Function /Script/EditableMesh.EditableMesh.SplitEdge
-	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<float>&, const TArray<FVertexID>&> UEditableMesh = { 0x1874d00, 8 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<float>&, const TArray<FVertexID>&> SplitEdge = { 0x1874d00, 8 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetVerticesCornerSharpness
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexID>&, const TArray<float>&> UEditableMesh = { 0x1871600, 9 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexID>&, const TArray<float>&> SetVerticesCornerSharpness = { 0x1871600, 9 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetVerticesAttributes
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FAttributesForVertex>&> UEditableMesh = { 0x1872f50, 10 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FAttributesForVertex>&> SetVerticesAttributes = { 0x1872f50, 10 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetVertexInstancesAttributes
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FAttributesForVertexInstance>&> UEditableMesh = { 0x1872e30, 11 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FAttributesForVertexInstance>&> SetVertexInstancesAttributes = { 0x1872e30, 11 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetTextureCoordinateCount
-	constexpr static const FunctionPointer<UEditableMesh, void, const int32_t> UEditableMesh = { 0x1870500, 12 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const int32_t> SetTextureCoordinateCount = { 0x1870500, 12 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetSubdivisionCount
-	constexpr static const FunctionPointer<UEditableMesh, void, const int32_t> UEditableMesh = { 0x18751e0, 13 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const int32_t> SetSubdivisionCount = { 0x18751e0, 13 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetPolygonsVertexAttributes
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexAttributesForPolygon>&> UEditableMesh = { 0x1872b80, 14 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexAttributesForPolygon>&> SetPolygonsVertexAttributes = { 0x1872b80, 14 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetEdgesHardnessAutomatically
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const float> UEditableMesh = { 0x18710d0, 15 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const float> SetEdgesHardnessAutomatically = { 0x18710d0, 15 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetEdgesHardness
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const TArray<bool>&> UEditableMesh = { 0x1871280, 16 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const TArray<bool>&> SetEdgesHardness = { 0x1871280, 16 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetEdgesCreaseSharpness
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const TArray<float>&> UEditableMesh = { 0x1871440, 17 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const TArray<float>&> SetEdgesCreaseSharpness = { 0x1871440, 17 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetEdgesAttributes
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FAttributesForEdge>&> UEditableMesh = { 0x1872d10, 18 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FAttributesForEdge>&> SetEdgesAttributes = { 0x1872d10, 18 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetAllowUndo
-	constexpr static const FunctionPointer<UEditableMesh, void, const bool> UEditableMesh = { 0x1878910, 19 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const bool> SetAllowUndo = { 0x1878910, 19 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetAllowSpatialDatabase
-	constexpr static const FunctionPointer<UEditableMesh, void, const bool> UEditableMesh = { 0x18787f0, 20 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const bool> SetAllowSpatialDatabase = { 0x18787f0, 20 }; 
 	// Function /Script/EditableMesh.EditableMesh.SetAllowCompact
-	constexpr static const FunctionPointer<UEditableMesh, void, const bool> UEditableMesh = { 0x18786b0, 21 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const bool> SetAllowCompact = { 0x18786b0, 21 }; 
 	// Function /Script/EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane
-	constexpr static const FunctionPointer<UEditableMesh, void, const FPlane&, const TArray<FPolygonID>&> UEditableMesh = { 0x1875310, 22 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FPlane&, const TArray<FPolygonID>&> SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane = { 0x1875310, 22 }; 
 	// Function /Script/EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment
-	constexpr static const FunctionPointer<UEditableMesh, void, const FVector, const FVector, const TArray<FPolygonID>&> UEditableMesh = { 0x1875690, 23 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FVector, const FVector, const TArray<FPolygonID>&> SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment = { 0x1875690, 23 }; 
 	// Function /Script/EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsInVolume
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPlane>&, const TArray<FPolygonID>&> UEditableMesh = { 0x18754b0, 24 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPlane>&, const TArray<FPolygonID>&> SearchSpatialDatabaseForPolygonsInVolume = { 0x18754b0, 24 }; 
 	// Function /Script/EditableMesh.EditableMesh.RevertInstance
-	constexpr static const FunctionPointer<UEditableMesh, UEditableMesh*> UEditableMesh = { 0x187a680, 25 }; 
+	constexpr static const FunctionPointer<UEditableMesh, UEditableMesh*> RevertInstance = { 0x187a680, 25 }; 
 	// Function /Script/EditableMesh.EditableMesh.Revert
-	constexpr static const FunctionPointer<UEditableMesh, void> UEditableMesh = { 0x11615e0, 26 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void> Revert = { 0x11615e0, 26 }; 
 	// Function /Script/EditableMesh.EditableMesh.RebuildRenderMesh
-	constexpr static const FunctionPointer<UEditableMesh, void> UEditableMesh = { 0x187aba0, 27 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void> RebuildRenderMesh = { 0x187aba0, 27 }; 
 	// Function /Script/EditableMesh.EditableMesh.QuadrangulateMesh
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&> UEditableMesh = { 0x1870410, 28 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&> QuadrangulateMesh = { 0x1870410, 28 }; 
 	// Function /Script/EditableMesh.EditableMesh.PropagateInstanceChanges
-	constexpr static const FunctionPointer<UEditableMesh, void> UEditableMesh = { 0x11615e0, 29 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void> PropagateInstanceChanges = { 0x11615e0, 29 }; 
 	// Function /Script/EditableMesh.EditableMesh.MoveVertices
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexToMove>&> UEditableMesh = { 0x18750f0, 30 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexToMove>&> MoveVertices = { 0x18750f0, 30 }; 
 	// Function /Script/EditableMesh.EditableMesh.MakeVertexID
-	constexpr static const FunctionPointer<UEditableMesh, FVertexID, const int32_t> UEditableMesh = { 0x1878560, 31 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FVertexID, const int32_t> MakeVertexID = { 0x1878560, 31 }; 
 	// Function /Script/EditableMesh.EditableMesh.MakePolygonID
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonID, const int32_t> UEditableMesh = { 0x1878560, 32 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonID, const int32_t> MakePolygonID = { 0x1878560, 32 }; 
 	// Function /Script/EditableMesh.EditableMesh.MakePolygonGroupID
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonGroupID, const int32_t> UEditableMesh = { 0x1878560, 33 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonGroupID, const int32_t> MakePolygonGroupID = { 0x1878560, 33 }; 
 	// Function /Script/EditableMesh.EditableMesh.MakeEdgeID
-	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const int32_t> UEditableMesh = { 0x1878560, 34 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const int32_t> MakeEdgeID = { 0x1878560, 34 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsValidVertex
-	constexpr static const FunctionPointer<UEditableMesh, bool, const FVertexID> UEditableMesh = { 0x187a530, 35 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool, const FVertexID> IsValidVertex = { 0x187a530, 35 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsValidPolygonGroup
-	constexpr static const FunctionPointer<UEditableMesh, bool, const FPolygonGroupID> UEditableMesh = { 0x1879580, 36 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool, const FPolygonGroupID> IsValidPolygonGroup = { 0x1879580, 36 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsValidPolygon
-	constexpr static const FunctionPointer<UEditableMesh, bool, const FPolygonID> UEditableMesh = { 0x1879180, 37 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool, const FPolygonID> IsValidPolygon = { 0x1879180, 37 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsValidEdge
-	constexpr static const FunctionPointer<UEditableMesh, bool, const FEdgeID> UEditableMesh = { 0x1879aa0, 38 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool, const FEdgeID> IsValidEdge = { 0x1879aa0, 38 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsUndoAllowed
-	constexpr static const FunctionPointer<UEditableMesh, bool> UEditableMesh = { 0x18789f0, 39 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool> IsUndoAllowed = { 0x18789f0, 39 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsSpatialDatabaseAllowed
-	constexpr static const FunctionPointer<UEditableMesh, bool> UEditableMesh = { 0x18788f0, 40 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool> IsSpatialDatabaseAllowed = { 0x18788f0, 40 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsPreviewingSubdivisions
-	constexpr static const FunctionPointer<UEditableMesh, bool> UEditableMesh = { 0x1878490, 41 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool> IsPreviewingSubdivisions = { 0x1878490, 41 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsOrphanedVertex
-	constexpr static const FunctionPointer<UEditableMesh, bool, const FVertexID> UEditableMesh = { 0x187a400, 42 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool, const FVertexID> IsOrphanedVertex = { 0x187a400, 42 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsCompactAllowed
-	constexpr static const FunctionPointer<UEditableMesh, bool> UEditableMesh = { 0x1878790, 43 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool> IsCompactAllowed = { 0x1878790, 43 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsCommittedAsInstance
-	constexpr static const FunctionPointer<UEditableMesh, bool> UEditableMesh = { 0x187a830, 44 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool> IsCommittedAsInstance = { 0x187a830, 44 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsCommitted
-	constexpr static const FunctionPointer<UEditableMesh, bool> UEditableMesh = { 0x187a8c0, 45 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool> IsCommitted = { 0x187a8c0, 45 }; 
 	// Function /Script/EditableMesh.EditableMesh.IsBeingModified
-	constexpr static const FunctionPointer<UEditableMesh, bool> UEditableMesh = { 0x1878a10, 46 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool> IsBeingModified = { 0x1878a10, 46 }; 
 	// Function /Script/EditableMesh.EditableMesh.InvalidVertexID
-	constexpr static const FunctionPointer<UEditableMesh, FVertexID> UEditableMesh = { 0x1878690, 47 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FVertexID> InvalidVertexID = { 0x1878690, 47 }; 
 	// Function /Script/EditableMesh.EditableMesh.InvalidPolygonID
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonID> UEditableMesh = { 0x1878630, 48 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonID> InvalidPolygonID = { 0x1878630, 48 }; 
 	// Function /Script/EditableMesh.EditableMesh.InvalidPolygonGroupID
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonGroupID> UEditableMesh = { 0x1878650, 49 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonGroupID> InvalidPolygonGroupID = { 0x1878650, 49 }; 
 	// Function /Script/EditableMesh.EditableMesh.InvalidEdgeID
-	constexpr static const FunctionPointer<UEditableMesh, FEdgeID> UEditableMesh = { 0x1878670, 50 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FEdgeID> InvalidEdgeID = { 0x1878670, 50 }; 
 	// Function /Script/EditableMesh.EditableMesh.InsetPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const float, const float, const EInsetPolygonsMode, const TArray<FPolygonID>&, const TArray<FPolygonID>&> UEditableMesh = { 0x1871b00, 51 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const float, const float, const EInsetPolygonsMode, const TArray<FPolygonID>&, const TArray<FPolygonID>&> InsetPolygons = { 0x1871b00, 51 }; 
 	// Function /Script/EditableMesh.EditableMesh.InsertEdgeLoop
-	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<float>&, const TArray<FEdgeID>&> UEditableMesh = { 0x1874ab0, 52 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<float>&, const TArray<FEdgeID>&> InsertEdgeLoop = { 0x1874ab0, 52 }; 
 	// Function /Script/EditableMesh.EditableMesh.InitializeAdapters
-	constexpr static const FunctionPointer<UEditableMesh, void> UEditableMesh = { 0x187abc0, 53 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void> InitializeAdapters = { 0x187abc0, 53 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexPairEdge
-	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const FVertexID, const FVertexID, const bool&> UEditableMesh = { 0x1877a90, 54 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const FVertexID, const FVertexID, const bool&> GetVertexPairEdge = { 0x1877a90, 54 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexInstanceVertex
-	constexpr static const FunctionPointer<UEditableMesh, FVertexID, const FVertexInstanceID> UEditableMesh = { 0x187a040, 55 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FVertexID, const FVertexInstanceID> GetVertexInstanceVertex = { 0x187a040, 55 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexInstanceCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t> UEditableMesh = { 0x187a130, 56 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t> GetVertexInstanceCount = { 0x187a130, 56 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexInstanceID, const TArray<FPolygonID>&> UEditableMesh = { 0x1877ea0, 57 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexInstanceID, const TArray<FPolygonID>&> GetVertexInstanceConnectedPolygons = { 0x1877ea0, 57 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygonCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FVertexInstanceID> UEditableMesh = { 0x1879e50, 58 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FVertexInstanceID> GetVertexInstanceConnectedPolygonCount = { 0x1879e50, 58 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygon
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonID, const FVertexInstanceID, const int32_t> UEditableMesh = { 0x1879bf0, 59 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonID, const FVertexInstanceID, const int32_t> GetVertexInstanceConnectedPolygon = { 0x1879bf0, 59 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t> UEditableMesh = { 0x187a650, 60 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t> GetVertexCount = { 0x187a650, 60 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexConnectedPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const TArray<FPolygonID>&> UEditableMesh = { 0x1878140, 61 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const TArray<FPolygonID>&> GetVertexConnectedPolygons = { 0x1878140, 61 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexConnectedEdges
-	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const TArray<FEdgeID>&> UEditableMesh = { 0x18782e0, 62 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const TArray<FEdgeID>&> GetVertexConnectedEdges = { 0x18782e0, 62 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexConnectedEdgeCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FVertexID> UEditableMesh = { 0x187a310, 63 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FVertexID> GetVertexConnectedEdgeCount = { 0x187a310, 63 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexConnectedEdge
-	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const FVertexID, const int32_t> UEditableMesh = { 0x187a160, 64 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const FVertexID, const int32_t> GetVertexConnectedEdge = { 0x187a160, 64 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetVertexAdjacentVertices
-	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const TArray<FVertexID>&> UEditableMesh = { 0x1877d00, 65 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const TArray<FVertexID>&> GetVertexAdjacentVertices = { 0x1877d00, 65 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetTextureCoordinateCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t> UEditableMesh = { 0x18784e0, 66 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t> GetTextureCoordinateCount = { 0x18784e0, 66 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetSubdivisionLimitData
-	constexpr static const FunctionPointer<UEditableMesh, FSubdivisionLimitData> UEditableMesh = { 0x1875f00, 67 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FSubdivisionLimitData> GetSubdivisionLimitData = { 0x1875f00, 67 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetSubdivisionCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t> UEditableMesh = { 0x18784c0, 68 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t> GetSubdivisionCount = { 0x18784c0, 68 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonTriangulatedTriangleCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID> UEditableMesh = { 0x1878c00, 69 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID> GetPolygonTriangulatedTriangleCount = { 0x1878c00, 69 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonTriangulatedTriangle
-	constexpr static const FunctionPointer<UEditableMesh, FTriangleID, const FPolygonID, const int32_t> UEditableMesh = { 0x1878a40, 70 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FTriangleID, const FPolygonID, const int32_t> GetPolygonTriangulatedTriangle = { 0x1878a40, 70 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonPerimeterVertices
-	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FVertexID>&> UEditableMesh = { 0x18770c0, 71 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FVertexID>&> GetPolygonPerimeterVertices = { 0x18770c0, 71 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstances
-	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FVertexInstanceID>&> UEditableMesh = { 0x1876f10, 72 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FVertexInstanceID>&> GetPolygonPerimeterVertexInstances = { 0x1876f10, 72 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstance
-	constexpr static const FunctionPointer<UEditableMesh, FVertexInstanceID, const FPolygonID, const int32_t> UEditableMesh = { 0x1878cf0, 73 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FVertexInstanceID, const FPolygonID, const int32_t> GetPolygonPerimeterVertexInstance = { 0x1878cf0, 73 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonPerimeterVertexCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID> UEditableMesh = { 0x1877260, 74 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID> GetPolygonPerimeterVertexCount = { 0x1877260, 74 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonPerimeterVertex
-	constexpr static const FunctionPointer<UEditableMesh, FVertexID, const FPolygonID, const int32_t> UEditableMesh = { 0x1878eb0, 75 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FVertexID, const FPolygonID, const int32_t> GetPolygonPerimeterVertex = { 0x1878eb0, 75 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonPerimeterEdges
-	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FEdgeID>&> UEditableMesh = { 0x1876b50, 76 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FEdgeID>&> GetPolygonPerimeterEdges = { 0x1876b50, 76 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonPerimeterEdgeCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID> UEditableMesh = { 0x1877260, 77 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID> GetPolygonPerimeterEdgeCount = { 0x1877260, 77 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonPerimeterEdge
-	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const FPolygonID, const int32_t, const bool&> UEditableMesh = { 0x1876cf0, 78 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const FPolygonID, const int32_t, const bool&> GetPolygonPerimeterEdge = { 0x1876cf0, 78 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonInGroup
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonID, const FPolygonGroupID, const int32_t> UEditableMesh = { 0x18792e0, 79 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonID, const FPolygonGroupID, const int32_t> GetPolygonInGroup = { 0x18792e0, 79 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonGroupCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t> UEditableMesh = { 0x18796b0, 80 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t> GetPolygonGroupCount = { 0x18796b0, 80 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonCountInGroup
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonGroupID> UEditableMesh = { 0x1879490, 81 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonGroupID> GetPolygonCountInGroup = { 0x1879490, 81 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t> UEditableMesh = { 0x18792b0, 82 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t> GetPolygonCount = { 0x18792b0, 82 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetPolygonAdjacentPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FPolygonID>&> UEditableMesh = { 0x1876840, 83 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FPolygonID>&> GetPolygonAdjacentPolygons = { 0x1876840, 83 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetGroupForPolygon
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonGroupID, const FPolygonID> UEditableMesh = { 0x1879090, 84 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonGroupID, const FPolygonID> GetGroupForPolygon = { 0x1879090, 84 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetFirstValidPolygonGroup
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonGroupID> UEditableMesh = { 0x1878500, 85 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonGroupID> GetFirstValidPolygonGroup = { 0x1878500, 85 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetEdgeVertices
-	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const FVertexID&, const FVertexID&> UEditableMesh = { 0x1877870, 86 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const FVertexID&, const FVertexID&> GetEdgeVertices = { 0x1877870, 86 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetEdgeVertex
-	constexpr static const FunctionPointer<UEditableMesh, FVertexID, const FEdgeID, const int32_t> UEditableMesh = { 0x1879930, 87 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FVertexID, const FEdgeID, const int32_t> GetEdgeVertex = { 0x1879930, 87 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetEdgeThatConnectsVertices
-	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const FVertexID, const FVertexID> UEditableMesh = { 0x1877350, 88 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FEdgeID, const FVertexID, const FVertexID> GetEdgeThatConnectsVertices = { 0x1877350, 88 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetEdgeLoopElements
-	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<FEdgeID>&> UEditableMesh = { 0x1877530, 89 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<FEdgeID>&> GetEdgeLoopElements = { 0x1877530, 89 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetEdgeCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t> UEditableMesh = { 0x1879bc0, 90 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t> GetEdgeCount = { 0x1879bc0, 90 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetEdgeConnectedPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<FPolygonID>&> UEditableMesh = { 0x18776d0, 91 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<FPolygonID>&> GetEdgeConnectedPolygons = { 0x18776d0, 91 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetEdgeConnectedPolygonCount
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FEdgeID> UEditableMesh = { 0x1879850, 92 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FEdgeID> GetEdgeConnectedPolygonCount = { 0x1879850, 92 }; 
 	// Function /Script/EditableMesh.EditableMesh.GetEdgeConnectedPolygon
-	constexpr static const FunctionPointer<UEditableMesh, FPolygonID, const FEdgeID, const int32_t> UEditableMesh = { 0x18796e0, 93 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPolygonID, const FEdgeID, const int32_t> GetEdgeConnectedPolygon = { 0x18796e0, 93 }; 
 	// Function /Script/EditableMesh.EditableMesh.GeneratePolygonTangentsAndNormals
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&> UEditableMesh = { 0x1870320, 94 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&> GeneratePolygonTangentsAndNormals = { 0x1870320, 94 }; 
 	// Function /Script/EditableMesh.EditableMesh.FlipPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&> UEditableMesh = { 0x1870fe0, 95 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&> FlipPolygons = { 0x1870fe0, 95 }; 
 	// Function /Script/EditableMesh.EditableMesh.FindPolygonPerimeterVertexNumberForVertex
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID, const FVertexID> UEditableMesh = { 0x18766d0, 96 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID, const FVertexID> FindPolygonPerimeterVertexNumberForVertex = { 0x18766d0, 96 }; 
 	// Function /Script/EditableMesh.EditableMesh.FindPolygonPerimeterEdgeNumberForVertices
-	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID, const FVertexID, const FVertexID> UEditableMesh = { 0x1876410, 97 }; 
+	constexpr static const FunctionPointer<UEditableMesh, int32_t, const FPolygonID, const FVertexID, const FVertexID> FindPolygonPerimeterEdgeNumberForVertices = { 0x1876410, 97 }; 
 	// Function /Script/EditableMesh.EditableMesh.FindPolygonLoop
-	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<FEdgeID>&, const TArray<FEdgeID>&, const TArray<FEdgeID>&, const TArray<FPolygonID>&> UEditableMesh = { 0x1875990, 98 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const TArray<FEdgeID>&, const TArray<FEdgeID>&, const TArray<FEdgeID>&, const TArray<FPolygonID>&> FindPolygonLoop = { 0x1875990, 98 }; 
 	// Function /Script/EditableMesh.EditableMesh.ExtrudePolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const float, const bool, const TArray<FPolygonID>&> UEditableMesh = { 0x1872370, 99 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const float, const bool, const TArray<FPolygonID>&> ExtrudePolygons = { 0x1872370, 99 }; 
 	// Function /Script/EditableMesh.EditableMesh.ExtendVertices
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexID>&, const bool, const FVector, const TArray<FVertexID>&> UEditableMesh = { 0x1871ec0, 100 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexID>&, const bool, const FVector, const TArray<FVertexID>&> ExtendVertices = { 0x1871ec0, 100 }; 
 	// Function /Script/EditableMesh.EditableMesh.ExtendEdges
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const bool, const TArray<FEdgeID>&> UEditableMesh = { 0x1872160, 101 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const bool, const TArray<FEdgeID>&> ExtendEdges = { 0x1872160, 101 }; 
 	// Function /Script/EditableMesh.EditableMesh.EndModification
-	constexpr static const FunctionPointer<UEditableMesh, void, const bool> UEditableMesh = { 0x187a950, 102 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const bool> EndModification = { 0x187a950, 102 }; 
 	// Function /Script/EditableMesh.EditableMesh.DeleteVertexInstances
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexInstanceID>&, const bool> UEditableMesh = { 0x1873fc0, 103 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexInstanceID>&, const bool> DeleteVertexInstances = { 0x1873fc0, 103 }; 
 	// Function /Script/EditableMesh.EditableMesh.DeleteVertexAndConnectedEdgesAndPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const bool, const bool, const bool, const bool> UEditableMesh = { 0x1874260, 104 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FVertexID, const bool, const bool, const bool, const bool> DeleteVertexAndConnectedEdgesAndPolygons = { 0x1874260, 104 }; 
 	// Function /Script/EditableMesh.EditableMesh.DeletePolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const bool, const bool, const bool, const bool> UEditableMesh = { 0x1873070, 105 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const bool, const bool, const bool, const bool> DeletePolygons = { 0x1873070, 105 }; 
 	// Function /Script/EditableMesh.EditableMesh.DeletePolygonGroups
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonGroupID>&> UEditableMesh = { 0x1870b50, 106 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonGroupID>&> DeletePolygonGroups = { 0x1870b50, 106 }; 
 	// Function /Script/EditableMesh.EditableMesh.DeleteOrphanVertices
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexID>&> UEditableMesh = { 0x1874170, 107 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexID>&> DeleteOrphanVertices = { 0x1874170, 107 }; 
 	// Function /Script/EditableMesh.EditableMesh.DeleteEdges
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const bool> UEditableMesh = { 0x1873e10, 108 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeID>&, const bool> DeleteEdges = { 0x1873e10, 108 }; 
 	// Function /Script/EditableMesh.EditableMesh.DeleteEdgeAndConnectedPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const bool, const bool, const bool, const bool> UEditableMesh = { 0x1874590, 109 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FEdgeID, const bool, const bool, const bool, const bool> DeleteEdgeAndConnectedPolygons = { 0x1874590, 109 }; 
 	// Function /Script/EditableMesh.EditableMesh.CreateVertices
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexToCreate>&, const TArray<FVertexID>&> UEditableMesh = { 0x1873a90, 110 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexToCreate>&, const TArray<FVertexID>&> CreateVertices = { 0x1873a90, 110 }; 
 	// Function /Script/EditableMesh.EditableMesh.CreateVertexInstances
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexInstanceToCreate>&, const TArray<FVertexInstanceID>&> UEditableMesh = { 0x18738a0, 111 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FVertexInstanceToCreate>&, const TArray<FVertexInstanceID>&> CreateVertexInstances = { 0x18738a0, 111 }; 
 	// Function /Script/EditableMesh.EditableMesh.CreatePolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonToCreate>&, const TArray<FPolygonID>&, const TArray<FEdgeID>&> UEditableMesh = { 0x18733f0, 112 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonToCreate>&, const TArray<FPolygonID>&, const TArray<FEdgeID>&> CreatePolygons = { 0x18733f0, 112 }; 
 	// Function /Script/EditableMesh.EditableMesh.CreatePolygonGroups
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonGroupToCreate>&, const TArray<FPolygonGroupID>&> UEditableMesh = { 0x1870c40, 113 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonGroupToCreate>&, const TArray<FPolygonGroupID>&> CreatePolygonGroups = { 0x1870c40, 113 }; 
 	// Function /Script/EditableMesh.EditableMesh.CreateMissingPolygonPerimeterEdges
-	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FEdgeID>&> UEditableMesh = { 0x1874f50, 114 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const FPolygonID, const TArray<FEdgeID>&> CreateMissingPolygonPerimeterEdges = { 0x1874f50, 114 }; 
 	// Function /Script/EditableMesh.EditableMesh.CreateEmptyVertexRange
-	constexpr static const FunctionPointer<UEditableMesh, void, const int32_t, const TArray<FVertexID>&> UEditableMesh = { 0x1873c70, 115 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const int32_t, const TArray<FVertexID>&> CreateEmptyVertexRange = { 0x1873c70, 115 }; 
 	// Function /Script/EditableMesh.EditableMesh.CreateEdges
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeToCreate>&, const TArray<FEdgeID>&> UEditableMesh = { 0x18736b0, 116 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FEdgeToCreate>&, const TArray<FEdgeID>&> CreateEdges = { 0x18736b0, 116 }; 
 	// Function /Script/EditableMesh.EditableMesh.ComputePolygonsSharedEdges
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const TArray<FEdgeID>&> UEditableMesh = { 0x1875d40, 117 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const TArray<FEdgeID>&> ComputePolygonsSharedEdges = { 0x1875d40, 117 }; 
 	// Function /Script/EditableMesh.EditableMesh.ComputePolygonPlane
-	constexpr static const FunctionPointer<UEditableMesh, FPlane, const FPolygonID> UEditableMesh = { 0x1876190, 118 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FPlane, const FPolygonID> ComputePolygonPlane = { 0x1876190, 118 }; 
 	// Function /Script/EditableMesh.EditableMesh.ComputePolygonNormal
-	constexpr static const FunctionPointer<UEditableMesh, FVector, const FPolygonID> UEditableMesh = { 0x1876080, 119 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FVector, const FPolygonID> ComputePolygonNormal = { 0x1876080, 119 }; 
 	// Function /Script/EditableMesh.EditableMesh.ComputePolygonCenter
-	constexpr static const FunctionPointer<UEditableMesh, FVector, const FPolygonID> UEditableMesh = { 0x1876280, 120 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FVector, const FPolygonID> ComputePolygonCenter = { 0x1876280, 120 }; 
 	// Function /Script/EditableMesh.EditableMesh.ComputeBoundingBoxAndSphere
-	constexpr static const FunctionPointer<UEditableMesh, FBoxSphereBounds> UEditableMesh = { 0x1876370, 121 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FBoxSphereBounds> ComputeBoundingBoxAndSphere = { 0x1876370, 121 }; 
 	// Function /Script/EditableMesh.EditableMesh.ComputeBoundingBox
-	constexpr static const FunctionPointer<UEditableMesh, FBox> UEditableMesh = { 0x18763c0, 122 }; 
+	constexpr static const FunctionPointer<UEditableMesh, FBox> ComputeBoundingBox = { 0x18763c0, 122 }; 
 	// Function /Script/EditableMesh.EditableMesh.CommitInstance
-	constexpr static const FunctionPointer<UEditableMesh, UEditableMesh*, const UPrimitiveComponent*> UEditableMesh = { 0x187a6a0, 123 }; 
+	constexpr static const FunctionPointer<UEditableMesh, UEditableMesh*, const UPrimitiveComponent*> CommitInstance = { 0x187a6a0, 123 }; 
 	// Function /Script/EditableMesh.EditableMesh.Commit
-	constexpr static const FunctionPointer<UEditableMesh, void> UEditableMesh = { 0x187a7c0, 124 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void> Commit = { 0x187a7c0, 124 }; 
 	// Function /Script/EditableMesh.EditableMesh.ChangePolygonsVertexInstances
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FChangeVertexInstancesForPolygon>&> UEditableMesh = { 0x1872a20, 125 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FChangeVertexInstancesForPolygon>&> ChangePolygonsVertexInstances = { 0x1872a20, 125 }; 
 	// Function /Script/EditableMesh.EditableMesh.BevelPolygons
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const float, const float, const TArray<FPolygonID>&, const TArray<FPolygonID>&> UEditableMesh = { 0x18717c0, 126 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonID>&, const float, const float, const TArray<FPolygonID>&, const TArray<FPolygonID>&> BevelPolygons = { 0x18717c0, 126 }; 
 	// Function /Script/EditableMesh.EditableMesh.AssignPolygonsToPolygonGroups
-	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonGroupForPolygon>&, const bool> UEditableMesh = { 0x18709a0, 127 }; 
+	constexpr static const FunctionPointer<UEditableMesh, void, const TArray<FPolygonGroupForPolygon>&, const bool> AssignPolygonsToPolygonGroups = { 0x18709a0, 127 }; 
 	// Function /Script/EditableMesh.EditableMesh.AnyChangesToUndo
-	constexpr static const FunctionPointer<UEditableMesh, bool> UEditableMesh = { 0x18787b0, 128 }; 
+	constexpr static const FunctionPointer<UEditableMesh, bool> AnyChangesToUndo = { 0x18787b0, 128 }; 
 };
 
 /// Class /Script/EditableMesh.EditableMeshFactory
@@ -372,10 +371,9 @@ class UEditableMeshFactory : public UObject
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/EditableMesh.EditableMeshFactory.MakeEditableMesh
-	constexpr static const FunctionPointer<UEditableMeshFactory, UEditableMesh*, const UPrimitiveComponent*, const int32_t> UEditableMeshFactory = { 0x187d100, 0 }; 
+	constexpr static const FunctionPointer<UEditableMeshFactory, UEditableMesh*, const UPrimitiveComponent*, const int32_t> MakeEditableMesh = { 0x187d100, 0 }; 
 };
 
 /// Class /Script/EditableMesh.EditableStaticMeshAdapter

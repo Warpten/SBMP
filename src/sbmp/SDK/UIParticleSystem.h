@@ -24,12 +24,11 @@ public:
 	class AActor*                                      WorldParticleActor;                                         // 0x0120   (0x0008)  
 	unsigned char                                      UnknownData03_7[0x10];                                      // 0x0128   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/UIParticleSystem.ParticleSystemWidget.SetReactivate
-	constexpr static const FunctionPointer<UParticleSystemWidget, void, const bool> UParticleSystemWidget = { 0x13f2b70, 0 }; 
+	constexpr static const FunctionPointer<UParticleSystemWidget, void, const bool> SetReactivate = { 0x13f2b70, 0 }; 
 	// Function /Script/UIParticleSystem.ParticleSystemWidget.ActivateParticles
-	constexpr static const FunctionPointer<UParticleSystemWidget, void, const bool, const bool> UParticleSystemWidget = { 0x13f2c90, 1 }; 
+	constexpr static const FunctionPointer<UParticleSystemWidget, void, const bool, const bool> ActivateParticles = { 0x13f2c90, 1 }; 
 };
 
 /// Class /Script/UIParticleSystem.UIParticleComponent

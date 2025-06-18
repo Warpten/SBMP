@@ -18,10 +18,9 @@ class UAutomationUtilsBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AutomationUtils.AutomationUtilsBlueprintLibrary.TakeGameplayAutomationScreenshot
-	constexpr static const FunctionPointer<UAutomationUtilsBlueprintLibrary, void, const FString, const float, const float, const FString> UAutomationUtilsBlueprintLibrary = { 0x17db150, 0 }; 
+	constexpr static const FunctionPointer<UAutomationUtilsBlueprintLibrary, void, const FString, const float, const float, const FString> TakeGameplayAutomationScreenshot = { 0x17db150, 0 }; 
 };
 
 #pragma pack(pop)

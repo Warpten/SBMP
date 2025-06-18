@@ -38,18 +38,17 @@ class UMagicLeapLightEstimationFunctionLibrary : public UBlueprintFunctionLibrar
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapLightEstimation.MagicLeapLightEstimationFunctionLibrary.IsTrackerValid
-	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, bool> UMagicLeapLightEstimationFunctionLibrary = { 0x190dc60, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, bool> IsTrackerValid = { 0x190dc60, 0 }; 
 	// Function /Script/MagicLeapLightEstimation.MagicLeapLightEstimationFunctionLibrary.GetColorTemperatureState
-	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, bool, const FMagicLeapLightEstimationColorTemperatureState&> UMagicLeapLightEstimationFunctionLibrary = { 0x190da60, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, bool, const FMagicLeapLightEstimationColorTemperatureState&> GetColorTemperatureState = { 0x190da60, 1 }; 
 	// Function /Script/MagicLeapLightEstimation.MagicLeapLightEstimationFunctionLibrary.GetAmbientGlobalState
-	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, bool, const FMagicLeapLightEstimationAmbientGlobalState&> UMagicLeapLightEstimationFunctionLibrary = { 0x190db50, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, bool, const FMagicLeapLightEstimationAmbientGlobalState&> GetAmbientGlobalState = { 0x190db50, 2 }; 
 	// Function /Script/MagicLeapLightEstimation.MagicLeapLightEstimationFunctionLibrary.DestroyTracker
-	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, void> UMagicLeapLightEstimationFunctionLibrary = { 0x190dca0, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, void> DestroyTracker = { 0x190dca0, 3 }; 
 	// Function /Script/MagicLeapLightEstimation.MagicLeapLightEstimationFunctionLibrary.CreateTracker
-	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, bool> UMagicLeapLightEstimationFunctionLibrary = { 0x190dcd0, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapLightEstimationFunctionLibrary, bool> CreateTracker = { 0x190dcd0, 4 }; 
 };
 
 /// Struct /Script/MagicLeapLightEstimation.MagicLeapLightEstimationColorTemperatureState

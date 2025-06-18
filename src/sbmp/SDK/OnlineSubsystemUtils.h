@@ -122,12 +122,11 @@ class UAchievementBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress
-	constexpr static const FunctionPointer<UAchievementBlueprintLibrary, void, const UObject*, const APlayerController*, const FName, const bool&, const float&> UAchievementBlueprintLibrary = { 0x14a3850, 0 }; 
+	constexpr static const FunctionPointer<UAchievementBlueprintLibrary, void, const UObject*, const APlayerController*, const FName, const bool&, const float&> GetCachedAchievementProgress = { 0x14a3850, 0 }; 
 	// Function /Script/OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription
-	constexpr static const FunctionPointer<UAchievementBlueprintLibrary, void, const UObject*, const APlayerController*, const FName, const bool&, const FText&, const FText&, const FText&, const bool&> UAchievementBlueprintLibrary = { 0x14a3290, 1 }; 
+	constexpr static const FunctionPointer<UAchievementBlueprintLibrary, void, const UObject*, const APlayerController*, const FName, const bool&, const FText&, const FText&, const FText&, const bool&> GetCachedAchievementDescription = { 0x14a3290, 1 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy
@@ -139,12 +138,11 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x18];                                      // 0x0050   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
-	constexpr static const FunctionPointer<UAchievementQueryCallbackProxy, UAchievementQueryCallbackProxy*, const UObject*, const APlayerController*> UAchievementQueryCallbackProxy = { 0x14a41b0, 0 }; 
+	constexpr static const FunctionPointer<UAchievementQueryCallbackProxy, UAchievementQueryCallbackProxy*, const UObject*, const APlayerController*> CacheAchievements = { 0x14a41b0, 0 }; 
 	// Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
-	constexpr static const FunctionPointer<UAchievementQueryCallbackProxy, UAchievementQueryCallbackProxy*, const UObject*, const APlayerController*> UAchievementQueryCallbackProxy = { 0x14a3f30, 1 }; 
+	constexpr static const FunctionPointer<UAchievementQueryCallbackProxy, UAchievementQueryCallbackProxy*, const UObject*, const APlayerController*> CacheAchievementDescriptions = { 0x14a3f30, 1 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy
@@ -156,10 +154,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x30];                                      // 0x0050   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
-	constexpr static const FunctionPointer<UAchievementWriteCallbackProxy, UAchievementWriteCallbackProxy*, const UObject*, const APlayerController*, const FName, const float, const int32_t> UAchievementWriteCallbackProxy = { 0x14a4810, 0 }; 
+	constexpr static const FunctionPointer<UAchievementWriteCallbackProxy, UAchievementWriteCallbackProxy*, const UObject*, const APlayerController*, const FName, const float, const int32_t> WriteAchievementProgress = { 0x14a4810, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.ConnectionCallbackProxy
@@ -171,10 +168,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
-	constexpr static const FunctionPointer<UConnectionCallbackProxy, UConnectionCallbackProxy*, const UObject*, const APlayerController*> UConnectionCallbackProxy = { 0x14a4ec0, 0 }; 
+	constexpr static const FunctionPointer<UConnectionCallbackProxy, UConnectionCallbackProxy*, const UObject*, const APlayerController*> ConnectToService = { 0x14a4ec0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy
@@ -186,10 +182,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x48];                                      // 0x0050   (0x0048)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession
-	constexpr static const FunctionPointer<UCreateSessionCallbackProxy, UCreateSessionCallbackProxy*, const UObject*, const APlayerController*, const int32_t, const bool> UCreateSessionCallbackProxy = { 0x14a54b0, 0 }; 
+	constexpr static const FunctionPointer<UCreateSessionCallbackProxy, UCreateSessionCallbackProxy*, const UObject*, const APlayerController*, const int32_t, const bool> CreateSession = { 0x14a54b0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy
@@ -201,10 +196,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
-	constexpr static const FunctionPointer<UDestroySessionCallbackProxy, UDestroySessionCallbackProxy*, const UObject*, const APlayerController*> UDestroySessionCallbackProxy = { 0x14a5bb0, 0 }; 
+	constexpr static const FunctionPointer<UDestroySessionCallbackProxy, UDestroySessionCallbackProxy*, const UObject*, const APlayerController*> DestroySession = { 0x14a5bb0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.EndMatchCallbackProxy
@@ -216,10 +210,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x30];                                      // 0x0050   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch
-	constexpr static const FunctionPointer<UEndMatchCallbackProxy, UEndMatchCallbackProxy*, const UObject*, const APlayerController*, const TScriptInterface<Class>, const FString, const TEnumAsByte<EMPMatchOutcome>, const TEnumAsByte<EMPMatchOutcome>> UEndMatchCallbackProxy = { 0x14a61a0, 0 }; 
+	constexpr static const FunctionPointer<UEndMatchCallbackProxy, UEndMatchCallbackProxy*, const UObject*, const APlayerController*, const TScriptInterface<Class>, const FString, const TEnumAsByte<EMPMatchOutcome>, const TEnumAsByte<EMPMatchOutcome>> EndMatch = { 0x14a61a0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.EndTurnCallbackProxy
@@ -231,10 +224,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
-	constexpr static const FunctionPointer<UEndTurnCallbackProxy, UEndTurnCallbackProxy*, const UObject*, const APlayerController*, const FString, const TScriptInterface<Class>> UEndTurnCallbackProxy = { 0x14a6a10, 0 }; 
+	constexpr static const FunctionPointer<UEndTurnCallbackProxy, UEndTurnCallbackProxy*, const UObject*, const APlayerController*, const FString, const TScriptInterface<Class>> EndTurn = { 0x14a6a10, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy
@@ -246,18 +238,17 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x40];                                      // 0x0050   (0x0040)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, FString, const FBlueprintSessionResult&> UFindSessionsCallbackProxy = { 0x14a74c0, 0 }; 
+	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, FString, const FBlueprintSessionResult&> GetServerName = { 0x14a74c0, 0 }; 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> UFindSessionsCallbackProxy = { 0x14a7650, 1 }; 
+	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetPingInMs = { 0x14a7650, 1 }; 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> UFindSessionsCallbackProxy = { 0x14a7280, 2 }; 
+	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetMaxPlayers = { 0x14a7280, 2 }; 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> UFindSessionsCallbackProxy = { 0x14a73a0, 3 }; 
+	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, int32_t, const FBlueprintSessionResult&> GetCurrentPlayers = { 0x14a73a0, 3 }; 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions
-	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, UFindSessionsCallbackProxy*, const UObject*, const APlayerController*, const int32_t, const bool> UFindSessionsCallbackProxy = { 0x14a7770, 4 }; 
+	constexpr static const FunctionPointer<UFindSessionsCallbackProxy, UFindSessionsCallbackProxy*, const UObject*, const APlayerController*, const int32_t, const bool> FindSessions = { 0x14a7770, 4 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
@@ -269,10 +260,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x38];                                      // 0x0050   (0x0038)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
-	constexpr static const FunctionPointer<UFindTurnBasedMatchCallbackProxy, UFindTurnBasedMatchCallbackProxy*, const UObject*, const APlayerController*, const TScriptInterface<Class>, const int32_t, const int32_t, const int32_t, const bool> UFindTurnBasedMatchCallbackProxy = { 0x14a7f60, 0 }; 
+	constexpr static const FunctionPointer<UFindTurnBasedMatchCallbackProxy, UFindTurnBasedMatchCallbackProxy*, const UObject*, const APlayerController*, const TScriptInterface<Class>, const int32_t, const int32_t, const int32_t, const bool> FindTurnBasedMatch = { 0x14a7f60, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy
@@ -284,10 +274,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x38];                                      // 0x0048   (0x0038)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase
-	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy, UInAppPurchaseCallbackProxy*, const APlayerController*, const FInAppPurchaseProductRequest&> UInAppPurchaseCallbackProxy = { 0x14a88d0, 0 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy, UInAppPurchaseCallbackProxy*, const APlayerController*, const FInAppPurchaseProductRequest&> CreateProxyObjectForInAppPurchase = { 0x14a88d0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2
@@ -299,14 +288,13 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x60];                                      // 0x0048   (0x0060)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases
-	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*> UInAppPurchaseCallbackProxy2 = { 0x14a9660, 0 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*> CreateProxyObjectForInAppPurchaseUnprocessedPurchases = { 0x14a9660, 0 }; 
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseQueryOwned
-	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*> UInAppPurchaseCallbackProxy2 = { 0x14a9170, 1 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*> CreateProxyObjectForInAppPurchaseQueryOwned = { 0x14a9170, 1 }; 
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchase
-	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*, const FInAppPurchaseProductRequest2&> UInAppPurchaseCallbackProxy2 = { 0x14a9af0, 2 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseCallbackProxy2, UInAppPurchaseCallbackProxy2*, const APlayerController*, const FInAppPurchaseProductRequest2&> CreateProxyObjectForInAppPurchase = { 0x14a9af0, 2 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy
@@ -318,10 +306,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x48];                                      // 0x0048   (0x0048)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
-	constexpr static const FunctionPointer<UInAppPurchaseQueryCallbackProxy, UInAppPurchaseQueryCallbackProxy*, const APlayerController*, const TArray<FString>&> UInAppPurchaseQueryCallbackProxy = { 0x14aa0f0, 0 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseQueryCallbackProxy, UInAppPurchaseQueryCallbackProxy*, const APlayerController*, const TArray<FString>&> CreateProxyObjectForInAppPurchaseQuery = { 0x14aa0f0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2
@@ -333,10 +320,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
-	constexpr static const FunctionPointer<UInAppPurchaseQueryCallbackProxy2, UInAppPurchaseQueryCallbackProxy2*, const APlayerController*, const TArray<FString>&> UInAppPurchaseQueryCallbackProxy2 = { 0x14aacd0, 0 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseQueryCallbackProxy2, UInAppPurchaseQueryCallbackProxy2*, const APlayerController*, const TArray<FString>&> CreateProxyObjectForInAppPurchaseQuery = { 0x14aacd0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy
@@ -348,10 +334,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x48];                                      // 0x0048   (0x0048)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore
-	constexpr static const FunctionPointer<UInAppPurchaseRestoreCallbackProxy, UInAppPurchaseRestoreCallbackProxy*, const TArray<FInAppPurchaseProductRequest>&, const APlayerController*> UInAppPurchaseRestoreCallbackProxy = { 0x14ab4d0, 0 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseRestoreCallbackProxy, UInAppPurchaseRestoreCallbackProxy*, const TArray<FInAppPurchaseProductRequest>&, const APlayerController*> CreateProxyObjectForInAppPurchaseRestore = { 0x14ab4d0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2
@@ -363,10 +348,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x60];                                      // 0x0048   (0x0060)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore
-	constexpr static const FunctionPointer<UInAppPurchaseRestoreCallbackProxy2, UInAppPurchaseRestoreCallbackProxy2*, const TArray<FInAppPurchaseProductRequest2>&, const APlayerController*> UInAppPurchaseRestoreCallbackProxy2 = { 0x14abf60, 0 }; 
+	constexpr static const FunctionPointer<UInAppPurchaseRestoreCallbackProxy2, UInAppPurchaseRestoreCallbackProxy2*, const TArray<FInAppPurchaseProductRequest2>&, const APlayerController*> CreateProxyObjectForInAppPurchaseRestore = { 0x14abf60, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.IpConnection
@@ -409,10 +393,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x130];                                     // 0x0050   (0x0130)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
-	constexpr static const FunctionPointer<UJoinSessionCallbackProxy, UJoinSessionCallbackProxy*, const UObject*, const APlayerController*, const FBlueprintSessionResult&> UJoinSessionCallbackProxy = { 0x14adce0, 0 }; 
+	constexpr static const FunctionPointer<UJoinSessionCallbackProxy, UJoinSessionCallbackProxy*, const UObject*, const APlayerController*, const FBlueprintSessionResult&> JoinSession = { 0x14adce0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardBlueprintLibrary
@@ -421,10 +404,9 @@ class ULeaderboardBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
-	constexpr static const FunctionPointer<ULeaderboardBlueprintLibrary, bool, const APlayerController*, const FName, const int32_t> ULeaderboardBlueprintLibrary = { 0x14ae3c0, 0 }; 
+	constexpr static const FunctionPointer<ULeaderboardBlueprintLibrary, bool, const APlayerController*, const FName, const int32_t> WriteLeaderboardInteger = { 0x14ae3c0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy
@@ -436,10 +418,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
-	constexpr static const FunctionPointer<ULeaderboardFlushCallbackProxy, ULeaderboardFlushCallbackProxy*, const APlayerController*, const FName> ULeaderboardFlushCallbackProxy = { 0x14aec60, 0 }; 
+	constexpr static const FunctionPointer<ULeaderboardFlushCallbackProxy, ULeaderboardFlushCallbackProxy*, const APlayerController*, const FName> CreateProxyObjectForFlush = { 0x14aec60, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
@@ -451,10 +432,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x50];                                      // 0x0048   (0x0050)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
-	constexpr static const FunctionPointer<ULeaderboardQueryCallbackProxy, ULeaderboardQueryCallbackProxy*, const APlayerController*, const FName> ULeaderboardQueryCallbackProxy = { 0x14af4f0, 0 }; 
+	constexpr static const FunctionPointer<ULeaderboardQueryCallbackProxy, ULeaderboardQueryCallbackProxy*, const APlayerController*, const FName> CreateProxyObjectForIntQuery = { 0x14af4f0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.LogoutCallbackProxy
@@ -466,10 +446,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x18];                                      // 0x0050   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LogoutCallbackProxy.Logout
-	constexpr static const FunctionPointer<ULogoutCallbackProxy, ULogoutCallbackProxy*, const UObject*, const APlayerController*> ULogoutCallbackProxy = { 0x14aff20, 0 }; 
+	constexpr static const FunctionPointer<ULogoutCallbackProxy, ULogoutCallbackProxy*, const UObject*, const APlayerController*> Logout = { 0x14aff20, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeacon
@@ -494,10 +473,9 @@ public:
 	EBeaconConnectionState                             ConnectionState;                                            // 0x0308   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x4F];                                      // 0x0309   (0x004F)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
-	constexpr static const FunctionPointer<AOnlineBeaconClient, void> AOnlineBeaconClient = { 0x14b0940, 0 }; 
+	constexpr static const FunctionPointer<AOnlineBeaconClient, void> ClientOnConnected = { 0x14b0940, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconHost
@@ -599,24 +577,23 @@ public:
 	bool                                               bCancelReservation;                                         // 0x03EA   (0x0001)  
 	unsigned char                                      UnknownData03_7[0x2D];                                      // 0x03EB   (0x002D)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> APartyBeaconClient = { 0x14b21d0, 0 }; 
+	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerUpdateReservationRequest = { 0x14b21d0, 0 }; 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> APartyBeaconClient = { 0x14b24d0, 1 }; 
+	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerReservationRequest = { 0x14b24d0, 1 }; 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> APartyBeaconClient = { 0x14b1ed0, 2 }; 
+	constexpr static const FunctionPointer<APartyBeaconClient, void, const FString, const FPartyReservation> ServerRemoveMemberFromReservationRequest = { 0x14b1ed0, 2 }; 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const FUniqueNetIdRepl> APartyBeaconClient = { 0x14b1d60, 3 }; 
+	constexpr static const FunctionPointer<APartyBeaconClient, void, const FUniqueNetIdRepl> ServerCancelReservationRequest = { 0x14b1d60, 3 }; 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const int32_t> APartyBeaconClient = { 0x14b27f0, 4 }; 
+	constexpr static const FunctionPointer<APartyBeaconClient, void, const int32_t> ClientSendReservationUpdates = { 0x14b27f0, 4 }; 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
-	constexpr static const FunctionPointer<APartyBeaconClient, void> APartyBeaconClient = { 0x14b27d0, 5 }; 
+	constexpr static const FunctionPointer<APartyBeaconClient, void> ClientSendReservationFull = { 0x14b27d0, 5 }; 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const TEnumAsByte<EPartyReservationResult>> APartyBeaconClient = { 0x14b29a0, 6 }; 
+	constexpr static const FunctionPointer<APartyBeaconClient, void, const TEnumAsByte<EPartyReservationResult>> ClientReservationResponse = { 0x14b29a0, 6 }; 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
-	constexpr static const FunctionPointer<APartyBeaconClient, void, const TEnumAsByte<EPartyReservationResult>> APartyBeaconClient = { 0x14b28d0, 7 }; 
+	constexpr static const FunctionPointer<APartyBeaconClient, void, const TEnumAsByte<EPartyReservationResult>> ClientCancelReservationResponse = { 0x14b28d0, 7 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconHost
@@ -662,10 +639,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
-	constexpr static const FunctionPointer<UQuitMatchCallbackProxy, UQuitMatchCallbackProxy*, const UObject*, const APlayerController*, const FString, const TEnumAsByte<EMPMatchOutcome>, const int32_t> UQuitMatchCallbackProxy = { 0x14b3ee0, 0 }; 
+	constexpr static const FunctionPointer<UQuitMatchCallbackProxy, UQuitMatchCallbackProxy*, const UObject*, const APlayerController*, const FString, const TEnumAsByte<EMPMatchOutcome>, const int32_t> QuitMatch = { 0x14b3ee0, 0 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy
@@ -677,10 +653,9 @@ public:
 	FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x10];                                      // 0x0050   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
-	constexpr static const FunctionPointer<UShowLoginUICallbackProxy, UShowLoginUICallbackProxy*, const UObject*, const APlayerController*> UShowLoginUICallbackProxy = { 0x14b4700, 0 }; 
+	constexpr static const FunctionPointer<UShowLoginUICallbackProxy, UShowLoginUICallbackProxy*, const UObject*, const APlayerController*> ShowExternalLoginUI = { 0x14b4700, 0 }; 
 };
 
 /// Struct /Script/OnlineSubsystemUtils.SpectatorReservation
@@ -704,20 +679,19 @@ public:
 	bool                                               bCancelReservation;                                         // 0x0412   (0x0001)  
 	unsigned char                                      UnknownData03_7[0x2D];                                      // 0x0413   (0x002D)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const FString, const FSpectatorReservation> ASpectatorBeaconClient = { 0x14b4de0, 0 }; 
+	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const FString, const FSpectatorReservation> ServerReservationRequest = { 0x14b4de0, 0 }; 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerCancelReservationRequest
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const FUniqueNetIdRepl> ASpectatorBeaconClient = { 0x14b1d60, 1 }; 
+	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const FUniqueNetIdRepl> ServerCancelReservationRequest = { 0x14b1d60, 1 }; 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationUpdates
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const int32_t> ASpectatorBeaconClient = { 0x14b50c0, 2 }; 
+	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const int32_t> ClientSendReservationUpdates = { 0x14b50c0, 2 }; 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationFull
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void> ASpectatorBeaconClient = { 0x14b50a0, 3 }; 
+	constexpr static const FunctionPointer<ASpectatorBeaconClient, void> ClientSendReservationFull = { 0x14b50a0, 3 }; 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientReservationResponse
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const TEnumAsByte<ESpectatorReservationResult>> ASpectatorBeaconClient = { 0x14b5270, 4 }; 
+	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const TEnumAsByte<ESpectatorReservationResult>> ClientReservationResponse = { 0x14b5270, 4 }; 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse
-	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const TEnumAsByte<ESpectatorReservationResult>> ASpectatorBeaconClient = { 0x14b51a0, 5 }; 
+	constexpr static const FunctionPointer<ASpectatorBeaconClient, void, const TEnumAsByte<ESpectatorReservationResult>> ClientCancelReservationResponse = { 0x14b51a0, 5 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconHost
@@ -754,12 +728,11 @@ class ATestBeaconClient : public AOnlineBeaconClient
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.TestBeaconClient.ServerPong
-	constexpr static const FunctionPointer<ATestBeaconClient, void> ATestBeaconClient = { 0x14b70a0, 0 }; 
+	constexpr static const FunctionPointer<ATestBeaconClient, void> ServerPong = { 0x14b70a0, 0 }; 
 	// Function /Script/OnlineSubsystemUtils.TestBeaconClient.ClientPing
-	constexpr static const FunctionPointer<ATestBeaconClient, void> ATestBeaconClient = { 0x14b7100, 1 }; 
+	constexpr static const FunctionPointer<ATestBeaconClient, void> ClientPing = { 0x14b7100, 1 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.TestBeaconHost
@@ -775,16 +748,15 @@ class UTurnBasedBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
-	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const UObject*> UTurnBasedBlueprintLibrary = { 0x14b7910, 0 }; 
+	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const UObject*> RegisterTurnBasedMatchInterfaceObject = { 0x14b7910, 0 }; 
 	// Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName
-	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const int32_t, const FString&> UTurnBasedBlueprintLibrary = { 0x14b75b0, 1 }; 
+	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const int32_t, const FString&> GetPlayerDisplayName = { 0x14b75b0, 1 }; 
 	// Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex
-	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const int32_t&> UTurnBasedBlueprintLibrary = { 0x14b7af0, 2 }; 
+	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const int32_t&> GetMyPlayerIndex = { 0x14b7af0, 2 }; 
 	// Function /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn
-	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const bool&> UTurnBasedBlueprintLibrary = { 0x14b7db0, 3 }; 
+	constexpr static const FunctionPointer<UTurnBasedBlueprintLibrary, void, const UObject*, const APlayerController*, const FString, const bool&> GetIsMyTurn = { 0x14b7db0, 3 }; 
 };
 
 /// Class /Script/OnlineSubsystemUtils.VoipListenerSynthComponent
@@ -794,10 +766,9 @@ class UVoipListenerSynthComponent : public USynthComponent
 public:
 	unsigned char                                      UnknownData01_1[0x60];                                      // 0x0730   (0x0060)  MISSED
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.VoipListenerSynthComponent.IsIdling
-	constexpr static const FunctionPointer<UVoipListenerSynthComponent, bool> UVoipListenerSynthComponent = { 0x14b8490, 0 }; 
+	constexpr static const FunctionPointer<UVoipListenerSynthComponent, bool> IsIdling = { 0x14b8490, 0 }; 
 };
 
 /// Struct /Script/OnlineSubsystemUtils.BlueprintSessionResult

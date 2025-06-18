@@ -17,16 +17,15 @@ class UMagicLeapAudioFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetOnAudioJackUnpluggedDelegate
-	constexpr static const FunctionPointer<UMagicLeapAudioFunctionLibrary, bool, const FDelegateProperty&> UMagicLeapAudioFunctionLibrary = { 0x18e6c70, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapAudioFunctionLibrary, bool, const FDelegateProperty&> SetOnAudioJackUnpluggedDelegate = { 0x18e6c70, 0 }; 
 	// Function /Script/MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetOnAudioJackPluggedDelegate
-	constexpr static const FunctionPointer<UMagicLeapAudioFunctionLibrary, bool, const FDelegateProperty&> UMagicLeapAudioFunctionLibrary = { 0x18e6e10, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapAudioFunctionLibrary, bool, const FDelegateProperty&> SetOnAudioJackPluggedDelegate = { 0x18e6e10, 1 }; 
 	// Function /Script/MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetMicMute
-	constexpr static const FunctionPointer<UMagicLeapAudioFunctionLibrary, bool, const bool> UMagicLeapAudioFunctionLibrary = { 0x18e6ba0, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapAudioFunctionLibrary, bool, const bool> SetMicMute = { 0x18e6ba0, 2 }; 
 	// Function /Script/MagicLeapAudio.MagicLeapAudioFunctionLibrary.IsMicMuted
-	constexpr static const FunctionPointer<UMagicLeapAudioFunctionLibrary, bool> UMagicLeapAudioFunctionLibrary = { 0x113b860, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapAudioFunctionLibrary, bool> IsMicMuted = { 0x113b860, 3 }; 
 };
 
 /// Struct /Script/MagicLeapAudio.MagicLeapAudioDummyStruct

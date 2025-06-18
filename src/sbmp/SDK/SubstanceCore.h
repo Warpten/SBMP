@@ -98,42 +98,41 @@ public:
 	bool                                               bIsFrozen;                                                  // 0x0158   (0x0001)  
 	unsigned char                                      UnknownData03_7[0x1F];                                      // 0x0159   (0x001F)  MISSED
 
-
 	/// Functions
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.SetInputString
-	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const FString> USubstanceGraphInstance = { 0x13405f0, 0 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const FString> SetInputString = { 0x13405f0, 0 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.SetInputInt
-	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const TArray<int32_t>&> USubstanceGraphInstance = { 0x13409c0, 1 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const TArray<int32_t>&> SetInputInt = { 0x13409c0, 1 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.SetInputImg
-	constexpr static const FunctionPointer<USubstanceGraphInstance, bool, const FString, const UObject*> USubstanceGraphInstance = { 0x133efe0, 2 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, bool, const FString, const UObject*> SetInputImg = { 0x133efe0, 2 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.SetInputFloat
-	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const TArray<float>&> USubstanceGraphInstance = { 0x13407d0, 3 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const TArray<float>&> SetInputFloat = { 0x13407d0, 3 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.SetInputColor
-	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const FLinearColor&> USubstanceGraphInstance = { 0x1340410, 4 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const FLinearColor&> SetInputColor = { 0x1340410, 4 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.SetInputBool
-	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const bool> USubstanceGraphInstance = { 0x1340250, 5 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, void, const FString, const bool> SetInputBool = { 0x1340250, 5 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetIntInputDesc
-	constexpr static const FunctionPointer<USubstanceGraphInstance, FSubstanceIntInputDesc, const FString> USubstanceGraphInstance = { 0x133f510, 6 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, FSubstanceIntInputDesc, const FString> GetIntInputDesc = { 0x133f510, 6 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetInstanceDesc
-	constexpr static const FunctionPointer<USubstanceGraphInstance, FSubstanceInstanceDesc> USubstanceGraphInstance = { 0x133f180, 7 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, FSubstanceInstanceDesc> GetInstanceDesc = { 0x133f180, 7 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetInputType
-	constexpr static const FunctionPointer<USubstanceGraphInstance, TEnumAsByte<ESubstanceInputType>, const FString> USubstanceGraphInstance = { 0x1340bb0, 8 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, TEnumAsByte<ESubstanceInputType>, const FString> GetInputType = { 0x1340bb0, 8 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetInputString
-	constexpr static const FunctionPointer<USubstanceGraphInstance, FString, const FString> USubstanceGraphInstance = { 0x133fc00, 9 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, FString, const FString> GetInputString = { 0x133fc00, 9 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetInputNames
-	constexpr static const FunctionPointer<USubstanceGraphInstance, TArray<FString>> USubstanceGraphInstance = { 0x1340db0, 10 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, TArray<FString>> GetInputNames = { 0x1340db0, 10 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetInputInt
-	constexpr static const FunctionPointer<USubstanceGraphInstance, TArray<int32_t>, const FString> USubstanceGraphInstance = { 0x133fff0, 11 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, TArray<int32_t>, const FString> GetInputInt = { 0x133fff0, 11 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetInputFloat
-	constexpr static const FunctionPointer<USubstanceGraphInstance, TArray<float>, const FString> USubstanceGraphInstance = { 0x133fd90, 12 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, TArray<float>, const FString> GetInputFloat = { 0x133fd90, 12 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetInputColor
-	constexpr static const FunctionPointer<USubstanceGraphInstance, FLinearColor, const FString> USubstanceGraphInstance = { 0x133f9a0, 13 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, FLinearColor, const FString> GetInputColor = { 0x133f9a0, 13 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetInputBool
-	constexpr static const FunctionPointer<USubstanceGraphInstance, bool, const FString> USubstanceGraphInstance = { 0x133f770, 14 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, bool, const FString> GetInputBool = { 0x133f770, 14 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetFloatInputDesc
-	constexpr static const FunctionPointer<USubstanceGraphInstance, FSubstanceFloatInputDesc, const FString> USubstanceGraphInstance = { 0x133f2b0, 15 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, FSubstanceFloatInputDesc, const FString> GetFloatInputDesc = { 0x133f2b0, 15 }; 
 	// Function /Script/SubstanceCore.SubstanceGraphInstance.GetDynamicMaterialInstance
-	constexpr static const FunctionPointer<USubstanceGraphInstance, UMaterialInstanceDynamic*, const FName, const UMaterial*> USubstanceGraphInstance = { 0x1340e30, 16 }; 
+	constexpr static const FunctionPointer<USubstanceGraphInstance, UMaterialInstanceDynamic*, const FName, const UMaterial*> GetDynamicMaterialInstance = { 0x1340e30, 16 }; 
 };
 
 /// Class /Script/SubstanceCore.SubstanceInstanceFactory
@@ -197,42 +196,41 @@ class USubstanceUtility : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/SubstanceCore.SubstanceUtility.SyncRendering
-	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*> USubstanceUtility = { 0x1342a30, 0 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*> SyncRendering = { 0x1342a30, 0 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.SetGraphInstanceOutputSizeInt
-	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*, const int32_t, const int32_t> USubstanceUtility = { 0x1343100, 1 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*, const int32_t, const int32_t> SetGraphInstanceOutputSizeInt = { 0x1343100, 1 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.SetGraphInstanceOutputSize
-	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*, const TEnumAsByte<ESubstanceTextureSize>, const TEnumAsByte<ESubstanceTextureSize>> USubstanceUtility = { 0x1343580, 2 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*, const TEnumAsByte<ESubstanceTextureSize>, const TEnumAsByte<ESubstanceTextureSize>> SetGraphInstanceOutputSize = { 0x1343580, 2 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.ResetInputParameters
-	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*> USubstanceUtility = { 0x1343950, 3 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*> ResetInputParameters = { 0x1343950, 3 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.GetSubstanceTextures
-	constexpr static const FunctionPointer<USubstanceUtility, TArray<UTexture2D*>, const USubstanceGraphInstance*> USubstanceUtility = { 0x1344c70, 4 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, TArray<UTexture2D*>, const USubstanceGraphInstance*> GetSubstanceTextures = { 0x1344c70, 4 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.GetSubstances
-	constexpr static const FunctionPointer<USubstanceUtility, TArray<USubstanceGraphInstance*>, const UMaterialInterface*> USubstanceUtility = { 0x1344e50, 5 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, TArray<USubstanceGraphInstance*>, const UMaterialInterface*> GetSubstances = { 0x1344e50, 5 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.GetSubstanceLoadingProgress
-	constexpr static const FunctionPointer<USubstanceUtility, float> USubstanceUtility = { 0x13448e0, 6 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, float> GetSubstanceLoadingProgress = { 0x13448e0, 6 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.GetGraphName
-	constexpr static const FunctionPointer<USubstanceUtility, FString, const USubstanceGraphInstance*> USubstanceUtility = { 0x1344ac0, 7 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, FString, const USubstanceGraphInstance*> GetGraphName = { 0x1344ac0, 7 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.GetFactoryName
-	constexpr static const FunctionPointer<USubstanceUtility, FString, const USubstanceGraphInstance*> USubstanceUtility = { 0x1344930, 8 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, FString, const USubstanceGraphInstance*> GetFactoryName = { 0x1344930, 8 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.EnableInstanceOutputs
-	constexpr static const FunctionPointer<USubstanceUtility, void, const UObject*, const USubstanceGraphInstance*, const TArray<int32_t>> USubstanceUtility = { 0x1343e40, 9 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void, const UObject*, const USubstanceGraphInstance*, const TArray<int32_t>> EnableInstanceOutputs = { 0x1343e40, 9 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.DuplicateGraphInstance
-	constexpr static const FunctionPointer<USubstanceUtility, USubstanceGraphInstance*, const UObject*, const USubstanceGraphInstance*> USubstanceUtility = { 0x1344180, 10 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, USubstanceGraphInstance*, const UObject*, const USubstanceGraphInstance*> DuplicateGraphInstance = { 0x1344180, 10 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.DisableInstanceOutputs
-	constexpr static const FunctionPointer<USubstanceUtility, void, const UObject*, const USubstanceGraphInstance*, const TArray<int32_t>> USubstanceUtility = { 0x1343ba0, 11 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void, const UObject*, const USubstanceGraphInstance*, const TArray<int32_t>> DisableInstanceOutputs = { 0x1343ba0, 11 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.CreateGraphInstance
-	constexpr static const FunctionPointer<USubstanceUtility, USubstanceGraphInstance*, const UObject*, const USubstanceInstanceFactory*, const int32_t, const UMaterial*, const FString> USubstanceUtility = { 0x1344470, 12 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, USubstanceGraphInstance*, const UObject*, const USubstanceInstanceFactory*, const int32_t, const UMaterial*, const FString> CreateGraphInstance = { 0x1344470, 12 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.CreateAggregateSubstanceFactory
-	constexpr static const FunctionPointer<USubstanceUtility, USubstanceInstanceFactory*, const USubstanceInstanceFactory*, const int32_t, const USubstanceInstanceFactory*, const int32_t, const TArray<FSubstanceConnection>&> USubstanceUtility = { 0x1342da0, 13 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, USubstanceInstanceFactory*, const USubstanceInstanceFactory*, const int32_t, const USubstanceInstanceFactory*, const int32_t, const TArray<FSubstanceConnection>&> CreateAggregateSubstanceFactory = { 0x1342da0, 13 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.CopyInputParameters
-	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*, const USubstanceGraphInstance*> USubstanceUtility = { 0x1343a50, 14 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*, const USubstanceGraphInstance*> CopyInputParameters = { 0x1343a50, 14 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.ClearCache
-	constexpr static const FunctionPointer<USubstanceUtility, void> USubstanceUtility = { 0x13430e0, 15 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void> ClearCache = { 0x13430e0, 15 }; 
 	// Function /Script/SubstanceCore.SubstanceUtility.AsyncRendering
-	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*> USubstanceUtility = { 0x1342bd0, 16 }; 
+	constexpr static const FunctionPointer<USubstanceUtility, void, const USubstanceGraphInstance*> AsyncRendering = { 0x1342bd0, 16 }; 
 };
 
 /// Struct /Script/SubstanceCore.SubstanceInputDesc

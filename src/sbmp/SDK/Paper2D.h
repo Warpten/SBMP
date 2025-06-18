@@ -125,22 +125,21 @@ public:
 	TEnumAsByte<EFlipbookCollisionMode>                CollisionSource;                                            // 0x0048   (0x0001)  
 	unsigned char                                      UnknownData03_7[0x7];                                       // 0x0049   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/Paper2D.PaperFlipbook.IsValidKeyFrameIndex
-	constexpr static const FunctionPointer<UPaperFlipbook, bool, const int32_t> UPaperFlipbook = { 0x177d320, 0 }; 
+	constexpr static const FunctionPointer<UPaperFlipbook, bool, const int32_t> IsValidKeyFrameIndex = { 0x177d320, 0 }; 
 	// Function /Script/Paper2D.PaperFlipbook.GetTotalDuration
-	constexpr static const FunctionPointer<UPaperFlipbook, float> UPaperFlipbook = { 0x177d830, 1 }; 
+	constexpr static const FunctionPointer<UPaperFlipbook, float> GetTotalDuration = { 0x177d830, 1 }; 
 	// Function /Script/Paper2D.PaperFlipbook.GetSpriteAtTime
-	constexpr static const FunctionPointer<UPaperFlipbook, UPaperSprite*, const float, const bool> UPaperFlipbook = { 0x177d520, 2 }; 
+	constexpr static const FunctionPointer<UPaperFlipbook, UPaperSprite*, const float, const bool> GetSpriteAtTime = { 0x177d520, 2 }; 
 	// Function /Script/Paper2D.PaperFlipbook.GetSpriteAtFrame
-	constexpr static const FunctionPointer<UPaperFlipbook, UPaperSprite*, const int32_t> UPaperFlipbook = { 0x177d410, 3 }; 
+	constexpr static const FunctionPointer<UPaperFlipbook, UPaperSprite*, const int32_t> GetSpriteAtFrame = { 0x177d410, 3 }; 
 	// Function /Script/Paper2D.PaperFlipbook.GetNumKeyFrames
-	constexpr static const FunctionPointer<UPaperFlipbook, int32_t> UPaperFlipbook = { 0x163be10, 4 }; 
+	constexpr static const FunctionPointer<UPaperFlipbook, int32_t> GetNumKeyFrames = { 0x163be10, 4 }; 
 	// Function /Script/Paper2D.PaperFlipbook.GetNumFrames
-	constexpr static const FunctionPointer<UPaperFlipbook, int32_t> UPaperFlipbook = { 0x177d890, 5 }; 
+	constexpr static const FunctionPointer<UPaperFlipbook, int32_t> GetNumFrames = { 0x177d890, 5 }; 
 	// Function /Script/Paper2D.PaperFlipbook.GetKeyFrameIndexAtTime
-	constexpr static const FunctionPointer<UPaperFlipbook, int32_t, const float, const bool> UPaperFlipbook = { 0x177d6c0, 6 }; 
+	constexpr static const FunctionPointer<UPaperFlipbook, int32_t, const float, const bool> GetKeyFrameIndexAtTime = { 0x177d6c0, 6 }; 
 };
 
 /// Class /Script/Paper2D.PaperFlipbookActor
@@ -170,56 +169,55 @@ public:
 	FMulticastInlineDelegate                           OnFinishedPlaying;                                          // 0x0598   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x8];                                       // 0x05A8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/Paper2D.PaperFlipbookComponent.Stop
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> UPaperFlipbookComponent = { 0x177e9f0, 0 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> Stop = { 0x177e9f0, 0 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.SetSpriteColor
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const FLinearColor> UPaperFlipbookComponent = { 0x177eba0, 1 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const FLinearColor> SetSpriteColor = { 0x177eba0, 1 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.SetPlayRate
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const float> UPaperFlipbookComponent = { 0x177e3f0, 2 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const float> SetPlayRate = { 0x177e3f0, 2 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.SetPlaybackPositionInFrames
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const int32_t, const bool> UPaperFlipbookComponent = { 0x177e7f0, 3 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const int32_t, const bool> SetPlaybackPositionInFrames = { 0x177e7f0, 3 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.SetPlaybackPosition
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const float, const bool> UPaperFlipbookComponent = { 0x177e5f0, 4 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const float, const bool> SetPlaybackPosition = { 0x177e5f0, 4 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.SetNewTime
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const float> UPaperFlipbookComponent = { 0x177e2f0, 5 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const float> SetNewTime = { 0x177e2f0, 5 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.SetLooping
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const bool> UPaperFlipbookComponent = { 0x177e4f0, 6 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const bool> SetLooping = { 0x177e4f0, 6 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.SetFlipbook
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, bool, const UPaperFlipbook*> UPaperFlipbookComponent = { 0x177ed70, 7 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, bool, const UPaperFlipbook*> SetFlipbook = { 0x177ed70, 7 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.ReverseFromEnd
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> UPaperFlipbookComponent = { 0x177ea10, 8 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> ReverseFromEnd = { 0x177ea10, 8 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.Reverse
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> UPaperFlipbookComponent = { 0x177eaa0, 9 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> Reverse = { 0x177eaa0, 9 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.PlayFromStart
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> UPaperFlipbookComponent = { 0x177eae0, 10 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> PlayFromStart = { 0x177eae0, 10 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.Play
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> UPaperFlipbookComponent = { 0x177eb50, 11 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void> Play = { 0x177eb50, 11 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.OnRep_SourceFlipbook
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const UPaperFlipbook*> UPaperFlipbookComponent = { 0x177e100, 12 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, void, const UPaperFlipbook*> OnRep_SourceFlipbook = { 0x177e100, 12 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.IsReversing
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, bool> UPaperFlipbookComponent = { 0x177e990, 13 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, bool> IsReversing = { 0x177e990, 13 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.IsPlaying
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, bool> UPaperFlipbookComponent = { 0x177e9c0, 14 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, bool> IsPlaying = { 0x177e9c0, 14 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.IsLooping
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, bool> UPaperFlipbookComponent = { 0x177e4c0, 15 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, bool> IsLooping = { 0x177e4c0, 15 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetSpriteColor
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, FLinearColor> UPaperFlipbookComponent = { 0x177ed10, 16 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, FLinearColor> GetSpriteColor = { 0x177ed10, 16 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetPlayRate
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, float> UPaperFlipbookComponent = { 0x177e3d0, 17 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, float> GetPlayRate = { 0x177e3d0, 17 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetPlaybackPositionInFrames
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, int32_t> UPaperFlipbookComponent = { 0x177e770, 18 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, int32_t> GetPlaybackPositionInFrames = { 0x177e770, 18 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetPlaybackPosition
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, float> UPaperFlipbookComponent = { 0x177e5d0, 19 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, float> GetPlaybackPosition = { 0x177e5d0, 19 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetFlipbookLengthInFrames
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, int32_t> UPaperFlipbookComponent = { 0x177e230, 20 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, int32_t> GetFlipbookLengthInFrames = { 0x177e230, 20 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetFlipbookLength
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, float> UPaperFlipbookComponent = { 0x177e280, 21 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, float> GetFlipbookLength = { 0x177e280, 21 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetFlipbookFramerate
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, float> UPaperFlipbookComponent = { 0x177e1f0, 22 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, float> GetFlipbookFramerate = { 0x177e1f0, 22 }; 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetFlipbook
-	constexpr static const FunctionPointer<UPaperFlipbookComponent, UPaperFlipbook*> UPaperFlipbookComponent = { 0x177ed40, 23 }; 
+	constexpr static const FunctionPointer<UPaperFlipbookComponent, UPaperFlipbook*> GetFlipbook = { 0x177ed40, 23 }; 
 };
 
 /// Class /Script/Paper2D.PaperGroupedSpriteActor
@@ -249,24 +247,23 @@ public:
 	TArray<FSpriteInstanceData>                        PerInstanceSpriteData;                                      // 0x0570   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x10];                                      // 0x0580   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.UpdateInstanceTransform
-	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, bool, const int32_t, const FTransform&, const bool, const bool, const bool> UPaperGroupedSpriteComponent = { 0x177ffb0, 0 }; 
+	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, bool, const int32_t, const FTransform&, const bool, const bool, const bool> UpdateInstanceTransform = { 0x177ffb0, 0 }; 
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.UpdateInstanceColor
-	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, bool, const int32_t, const FLinearColor, const bool> UPaperGroupedSpriteComponent = { 0x177fdb0, 1 }; 
+	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, bool, const int32_t, const FLinearColor, const bool> UpdateInstanceColor = { 0x177fdb0, 1 }; 
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.SortInstancesAlongAxis
-	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, void, const FVector> UPaperGroupedSpriteComponent = { 0x177fbc0, 2 }; 
+	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, void, const FVector> SortInstancesAlongAxis = { 0x177fbc0, 2 }; 
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.RemoveInstance
-	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, bool, const int32_t> UPaperGroupedSpriteComponent = { 0x177fcc0, 3 }; 
+	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, bool, const int32_t> RemoveInstance = { 0x177fcc0, 3 }; 
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.GetInstanceTransform
-	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, bool, const int32_t, const FTransform&, const bool> UPaperGroupedSpriteComponent = { 0x1780330, 4 }; 
+	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, bool, const int32_t, const FTransform&, const bool> GetInstanceTransform = { 0x1780330, 4 }; 
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.GetInstanceCount
-	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, int32_t> UPaperGroupedSpriteComponent = { 0x177e5d0, 5 }; 
+	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, int32_t> GetInstanceCount = { 0x177e5d0, 5 }; 
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.ClearInstances
-	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, void> UPaperGroupedSpriteComponent = { 0x177fca0, 6 }; 
+	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, void> ClearInstances = { 0x177fca0, 6 }; 
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.AddInstance
-	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, int32_t, const FTransform&, const UPaperSprite*, const bool, const FLinearColor> UPaperGroupedSpriteComponent = { 0x1780570, 7 }; 
+	constexpr static const FunctionPointer<UPaperGroupedSpriteComponent, int32_t, const FTransform&, const UPaperSprite*, const bool, const FLinearColor> AddInstance = { 0x1780570, 7 }; 
 };
 
 /// Class /Script/Paper2D.PaperRuntimeSettings
@@ -332,10 +329,9 @@ class UPaperSpriteBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Paper2D.PaperSpriteBlueprintLibrary.MakeBrushFromSprite
-	constexpr static const FunctionPointer<UPaperSpriteBlueprintLibrary, FSlateBrush, const UPaperSprite*, const int32_t, const int32_t> UPaperSpriteBlueprintLibrary = { 0x1781d60, 0 }; 
+	constexpr static const FunctionPointer<UPaperSpriteBlueprintLibrary, FSlateBrush, const UPaperSprite*, const int32_t, const int32_t> MakeBrushFromSprite = { 0x1781d60, 0 }; 
 };
 
 /// Class /Script/Paper2D.PaperSpriteComponent
@@ -347,14 +343,13 @@ public:
 	class UMaterialInterface*                          MaterialOverride;                                           // 0x0568   (0x0008)  
 	FLinearColor                                       SpriteColor;                                                // 0x0570   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/Paper2D.PaperSpriteComponent.SetSpriteColor
-	constexpr static const FunctionPointer<UPaperSpriteComponent, void, const FLinearColor> UPaperSpriteComponent = { 0x17824d0, 0 }; 
+	constexpr static const FunctionPointer<UPaperSpriteComponent, void, const FLinearColor> SetSpriteColor = { 0x17824d0, 0 }; 
 	// Function /Script/Paper2D.PaperSpriteComponent.SetSprite
-	constexpr static const FunctionPointer<UPaperSpriteComponent, bool, const UPaperSprite*> UPaperSpriteComponent = { 0x177ed70, 1 }; 
+	constexpr static const FunctionPointer<UPaperSpriteComponent, bool, const UPaperSprite*> SetSprite = { 0x177ed70, 1 }; 
 	// Function /Script/Paper2D.PaperSpriteComponent.GetSprite
-	constexpr static const FunctionPointer<UPaperSpriteComponent, UPaperSprite*> UPaperSpriteComponent = { 0x177ed40, 2 }; 
+	constexpr static const FunctionPointer<UPaperSpriteComponent, UPaperSprite*> GetSprite = { 0x177ed40, 2 }; 
 };
 
 /// Class /Script/Paper2D.PaperTerrainActor
@@ -388,10 +383,9 @@ public:
 	class UBodySetup*                                  CachedBodySetup;                                            // 0x0578   (0x0008)  
 	unsigned char                                      UnknownData07_7[0x10];                                      // 0x0580   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/Paper2D.PaperTerrainComponent.SetTerrainColor
-	constexpr static const FunctionPointer<UPaperTerrainComponent, void, const FLinearColor> UPaperTerrainComponent = { 0x1782d60, 0 }; 
+	constexpr static const FunctionPointer<UPaperTerrainComponent, void, const FLinearColor> SetTerrainColor = { 0x1782d60, 0 }; 
 };
 
 /// Struct /Script/Paper2D.PaperTerrainMaterialRule
@@ -514,46 +508,45 @@ public:
 	unsigned char                                      UnknownData01_6[0x3];                                       // 0x05A5   (0x0003)  MISSED
 	class UPaperTileMap*                               TileMap;                                                    // 0x05A8   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/Paper2D.PaperTileMapComponent.SetTileMapColor
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const FLinearColor> UPaperTileMapComponent = { 0x1785a10, 0 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const FLinearColor> SetTileMapColor = { 0x1785a10, 0 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.SetTileMap
-	constexpr static const FunctionPointer<UPaperTileMapComponent, bool, const UPaperTileMap*> UPaperTileMapComponent = { 0x177ed70, 1 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, bool, const UPaperTileMap*> SetTileMap = { 0x177ed70, 1 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.SetTile
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const int32_t, const int32_t, const FPaperTileInfo> UPaperTileMapComponent = { 0x1785d60, 2 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const int32_t, const int32_t, const FPaperTileInfo> SetTile = { 0x1785d60, 2 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.SetLayerColor
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const FLinearColor, const int32_t> UPaperTileMapComponent = { 0x1785770, 3 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const FLinearColor, const int32_t> SetLayerColor = { 0x1785770, 3 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.SetLayerCollision
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const bool, const bool, const float, const bool, const float, const bool> UPaperTileMapComponent = { 0x1784670, 4 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const bool, const bool, const float, const bool, const float, const bool> SetLayerCollision = { 0x1784670, 4 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.SetDefaultCollisionThickness
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const float, const bool> UPaperTileMapComponent = { 0x1784ad0, 5 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const float, const bool> SetDefaultCollisionThickness = { 0x1784ad0, 5 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.ResizeMap
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const int32_t> UPaperTileMapComponent = { 0x1785bb0, 6 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const int32_t> ResizeMap = { 0x1785bb0, 6 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.RebuildCollision
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void> UPaperTileMapComponent = { 0x1784650, 7 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void> RebuildCollision = { 0x1784650, 7 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.OwnsTileMap
-	constexpr static const FunctionPointer<UPaperTileMapComponent, bool> UPaperTileMapComponent = { 0x17864e0, 8 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, bool> OwnsTileMap = { 0x17864e0, 8 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.MakeTileMapEditable
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void> UPaperTileMapComponent = { 0x1785710, 9 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void> MakeTileMapEditable = { 0x1785710, 9 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.GetTilePolygon
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const int32_t, const TArray<FVector>&, const int32_t, const bool> UPaperTileMapComponent = { 0x1784ca0, 10 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const int32_t, const TArray<FVector>&, const int32_t, const bool> GetTilePolygon = { 0x1784ca0, 10 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.GetTileMapColor
-	constexpr static const FunctionPointer<UPaperTileMapComponent, FLinearColor> UPaperTileMapComponent = { 0x1785ae0, 11 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, FLinearColor> GetTileMapColor = { 0x1785ae0, 11 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.GetTileCornerPosition
-	constexpr static const FunctionPointer<UPaperTileMapComponent, FVector, const int32_t, const int32_t, const int32_t, const bool> UPaperTileMapComponent = { 0x1785380, 12 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, FVector, const int32_t, const int32_t, const int32_t, const bool> GetTileCornerPosition = { 0x1785380, 12 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.GetTileCenterPosition
-	constexpr static const FunctionPointer<UPaperTileMapComponent, FVector, const int32_t, const int32_t, const int32_t, const bool> UPaperTileMapComponent = { 0x1784ff0, 13 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, FVector, const int32_t, const int32_t, const int32_t, const bool> GetTileCenterPosition = { 0x1784ff0, 13 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.GetTile
-	constexpr static const FunctionPointer<UPaperTileMapComponent, FPaperTileInfo, const int32_t, const int32_t, const int32_t> UPaperTileMapComponent = { 0x1786020, 14 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, FPaperTileInfo, const int32_t, const int32_t, const int32_t> GetTile = { 0x1786020, 14 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.GetMapSize
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t&, const int32_t&, const int32_t&> UPaperTileMapComponent = { 0x1786280, 15 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t&, const int32_t&, const int32_t&> GetMapSize = { 0x1786280, 15 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.GetLayerColor
-	constexpr static const FunctionPointer<UPaperTileMapComponent, FLinearColor, const int32_t> UPaperTileMapComponent = { 0x1785900, 16 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, FLinearColor, const int32_t> GetLayerColor = { 0x1785900, 16 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.CreateNewTileMap
-	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const int32_t, const int32_t, const int32_t, const float, const bool> UPaperTileMapComponent = { 0x1786520, 17 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, void, const int32_t, const int32_t, const int32_t, const int32_t, const float, const bool> CreateNewTileMap = { 0x1786520, 17 }; 
 	// Function /Script/Paper2D.PaperTileMapComponent.AddNewLayer
-	constexpr static const FunctionPointer<UPaperTileMapComponent, UPaperTileLayer*> UPaperTileMapComponent = { 0x1785b10, 18 }; 
+	constexpr static const FunctionPointer<UPaperTileMapComponent, UPaperTileLayer*> AddNewLayer = { 0x1785b10, 18 }; 
 };
 
 /// Struct /Script/Paper2D.IntMargin
@@ -645,16 +638,15 @@ class UTileMapBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Paper2D.TileMapBlueprintLibrary.MakeTile
-	constexpr static const FunctionPointer<UTileMapBlueprintLibrary, FPaperTileInfo, const int32_t, const UPaperTileSet*, const bool, const bool, const bool> UTileMapBlueprintLibrary = { 0x1787cd0, 0 }; 
+	constexpr static const FunctionPointer<UTileMapBlueprintLibrary, FPaperTileInfo, const int32_t, const UPaperTileSet*, const bool, const bool, const bool> MakeTile = { 0x1787cd0, 0 }; 
 	// Function /Script/Paper2D.TileMapBlueprintLibrary.GetTileUserData
-	constexpr static const FunctionPointer<UTileMapBlueprintLibrary, FName, const FPaperTileInfo> UTileMapBlueprintLibrary = { 0x1788520, 1 }; 
+	constexpr static const FunctionPointer<UTileMapBlueprintLibrary, FName, const FPaperTileInfo> GetTileUserData = { 0x1788520, 1 }; 
 	// Function /Script/Paper2D.TileMapBlueprintLibrary.GetTileTransform
-	constexpr static const FunctionPointer<UTileMapBlueprintLibrary, FTransform, const FPaperTileInfo> UTileMapBlueprintLibrary = { 0x1788400, 2 }; 
+	constexpr static const FunctionPointer<UTileMapBlueprintLibrary, FTransform, const FPaperTileInfo> GetTileTransform = { 0x1788400, 2 }; 
 	// Function /Script/Paper2D.TileMapBlueprintLibrary.BreakTile
-	constexpr static const FunctionPointer<UTileMapBlueprintLibrary, void, const FPaperTileInfo, const int32_t&, const UPaperTileSet*&, const bool&, const bool&, const bool&> UTileMapBlueprintLibrary = { 0x1788020, 3 }; 
+	constexpr static const FunctionPointer<UTileMapBlueprintLibrary, void, const FPaperTileInfo, const int32_t&, const UPaperTileSet*&, const bool&, const bool&, const bool&> BreakTile = { 0x1788020, 3 }; 
 };
 
 /// Struct /Script/Paper2D.PaperSpriteAtlasSlot

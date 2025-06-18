@@ -73,12 +73,11 @@ class UTurnBasedMatchInterface : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
-	constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString, const bool> UTurnBasedMatchInterface = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString, const bool> OnMatchReceivedTurn = { 0x2bbb090, 0 }; 
 	// Function /Script/OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
-	constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString> UTurnBasedMatchInterface = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UTurnBasedMatchInterface, void, const FString> OnMatchEnded = { 0x2bbb090, 1 }; 
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseProductInfo

@@ -266,24 +266,23 @@ public:
 	TEnumAsByte<ENavigationOptionFlag>                 RecalculateOnInvalidation;                                  // 0x0048   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x3F];                                      // 0x0049   (0x003F)  MISSED
 
-
 	/// Functions
 	// Function /Script/NavigationSystem.NavigationPath.IsValid
-	constexpr static const FunctionPointer<UNavigationPath, bool> UNavigationPath = { 0x4afd3c0, 0 }; 
+	constexpr static const FunctionPointer<UNavigationPath, bool> IsValid = { 0x4afd3c0, 0 }; 
 	// Function /Script/NavigationSystem.NavigationPath.IsStringPulled
-	constexpr static const FunctionPointer<UNavigationPath, bool> UNavigationPath = { 0x113b860, 1 }; 
+	constexpr static const FunctionPointer<UNavigationPath, bool> IsStringPulled = { 0x113b860, 1 }; 
 	// Function /Script/NavigationSystem.NavigationPath.IsPartial
-	constexpr static const FunctionPointer<UNavigationPath, bool> UNavigationPath = { 0x4afd3e0, 2 }; 
+	constexpr static const FunctionPointer<UNavigationPath, bool> IsPartial = { 0x4afd3e0, 2 }; 
 	// Function /Script/NavigationSystem.NavigationPath.GetPathLength
-	constexpr static const FunctionPointer<UNavigationPath, float> UNavigationPath = { 0x4afd470, 3 }; 
+	constexpr static const FunctionPointer<UNavigationPath, float> GetPathLength = { 0x4afd470, 3 }; 
 	// Function /Script/NavigationSystem.NavigationPath.GetPathCost
-	constexpr static const FunctionPointer<UNavigationPath, float> UNavigationPath = { 0x4afd420, 4 }; 
+	constexpr static const FunctionPointer<UNavigationPath, float> GetPathCost = { 0x4afd420, 4 }; 
 	// Function /Script/NavigationSystem.NavigationPath.GetDebugString
-	constexpr static const FunctionPointer<UNavigationPath, FString> UNavigationPath = { 0x4afd770, 5 }; 
+	constexpr static const FunctionPointer<UNavigationPath, FString> GetDebugString = { 0x4afd770, 5 }; 
 	// Function /Script/NavigationSystem.NavigationPath.EnableRecalculationOnInvalidation
-	constexpr static const FunctionPointer<UNavigationPath, void, const TEnumAsByte<ENavigationOptionFlag>> UNavigationPath = { 0x4afd4f0, 6 }; 
+	constexpr static const FunctionPointer<UNavigationPath, void, const TEnumAsByte<ENavigationOptionFlag>> EnableRecalculationOnInvalidation = { 0x4afd4f0, 6 }; 
 	// Function /Script/NavigationSystem.NavigationPath.EnableDebugDrawing
-	constexpr static const FunctionPointer<UNavigationPath, void, const bool, const FLinearColor> UNavigationPath = { 0x4afd5f0, 7 }; 
+	constexpr static const FunctionPointer<UNavigationPath, void, const bool, const FLinearColor> EnableDebugDrawing = { 0x4afd5f0, 7 }; 
 };
 
 /// Class /Script/NavigationSystem.NavigationPathGenerator
@@ -378,56 +377,55 @@ public:
 	float                                              DirtyAreasUpdateFreq;                                       // 0x15BC   (0x0004)  
 	unsigned char                                      UnknownData15_7[0x20];                                      // 0x15C0   (0x0020)  MISSED
 
-
 	/// Functions
 	// Function /Script/NavigationSystem.NavigationSystemV1.UnregisterNavigationInvoker
-	constexpr static const FunctionPointer<UNavigationSystemV1, void, const AActor*> UNavigationSystemV1 = { 0x4b00030, 0 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, void, const AActor*> UnregisterNavigationInvoker = { 0x4b00030, 0 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.SimpleMoveToLocation
-	constexpr static const FunctionPointer<UNavigationSystemV1, void, const AController*, const FVector&> UNavigationSystemV1 = { 0x4afe960, 1 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, void, const AController*, const FVector&> SimpleMoveToLocation = { 0x4afe960, 1 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.SimpleMoveToActor
-	constexpr static const FunctionPointer<UNavigationSystemV1, void, const AController*, const AActor*> UNavigationSystemV1 = { 0x267feb0, 2 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, void, const AController*, const AActor*> SimpleMoveToActor = { 0x267feb0, 2 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.SetMaxSimultaneousTileGenerationJobsCount
-	constexpr static const FunctionPointer<UNavigationSystemV1, void, const int32_t> UNavigationSystemV1 = { 0x4b00400, 3 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, void, const int32_t> SetMaxSimultaneousTileGenerationJobsCount = { 0x4b00400, 3 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.SetGeometryGatheringMode
-	constexpr static const FunctionPointer<UNavigationSystemV1, void, const ENavDataGatheringModeConfig> UNavigationSystemV1 = { 0x4afff50, 4 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, void, const ENavDataGatheringModeConfig> SetGeometryGatheringMode = { 0x4afff50, 4 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.ResetMaxSimultaneousTileGenerationJobsCount
-	constexpr static const FunctionPointer<UNavigationSystemV1, void> UNavigationSystemV1 = { 0x4b00310, 5 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, void> ResetMaxSimultaneousTileGenerationJobsCount = { 0x4b00310, 5 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.RegisterNavigationInvoker
-	constexpr static const FunctionPointer<UNavigationSystemV1, void, const AActor*, const float, const float> UNavigationSystemV1 = { 0x4b00110, 6 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, void, const AActor*, const float, const float> RegisterNavigationInvoker = { 0x4b00110, 6 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.ProjectPointToNavigation
-	constexpr static const FunctionPointer<UNavigationSystemV1, FVector, const UObject*, const FVector&, const ANavigationData*, const UClass*, const FVector> UNavigationSystemV1 = { 0x4aff390, 7 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, FVector, const UObject*, const FVector&, const ANavigationData*, const UClass*, const FVector> ProjectPointToNavigation = { 0x4aff390, 7 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.OnNavigationBoundsUpdated
-	constexpr static const FunctionPointer<UNavigationSystemV1, void, const ANavMeshBoundsVolume*> UNavigationSystemV1 = { 0x4aff7f0, 8 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, void, const ANavMeshBoundsVolume*> OnNavigationBoundsUpdated = { 0x4aff7f0, 8 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.NavigationRaycast
-	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const FVector&, const UClass*, const AController*> UNavigationSystemV1 = { 0x4b00560, 9 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const FVector&, const UClass*, const AController*> NavigationRaycast = { 0x4b00560, 9 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_ReplaceAreaInOctreeData
-	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const UClass*, const UClass*> UNavigationSystemV1 = { 0x4aff970, 10 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const UClass*, const UClass*> K2_ReplaceAreaInOctreeData = { 0x4aff970, 10 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_ProjectPointToNavigation
-	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const ANavigationData*, const UClass*, const FVector> UNavigationSystemV1 = { 0x4b02770, 11 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const ANavigationData*, const UClass*, const FVector> K2_ProjectPointToNavigation = { 0x4b02770, 11 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_GetRandomReachablePointInRadius
-	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const float, const ANavigationData*, const UClass*> UNavigationSystemV1 = { 0x4b02270, 12 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const float, const ANavigationData*, const UClass*> K2_GetRandomReachablePointInRadius = { 0x4b02270, 12 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_GetRandomPointInNavigableRadius
-	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const float, const ANavigationData*, const UClass*> UNavigationSystemV1 = { 0x4afe5b0, 13 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const float, const ANavigationData*, const UClass*> K2_GetRandomPointInNavigableRadius = { 0x4afe5b0, 13 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_GetRandomLocationInNavigableRadius
-	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const float, const ANavigationData*, const UClass*> UNavigationSystemV1 = { 0x4b01ec0, 14 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*, const FVector&, const FVector&, const float, const ANavigationData*, const UClass*> K2_GetRandomLocationInNavigableRadius = { 0x4b01ec0, 14 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.IsNavigationBeingBuiltOrLocked
-	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*> UNavigationSystemV1 = { 0x4b012c0, 15 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*> IsNavigationBeingBuiltOrLocked = { 0x4b012c0, 15 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.IsNavigationBeingBuilt
-	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*> UNavigationSystemV1 = { 0x4b013e0, 16 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, bool, const UObject*> IsNavigationBeingBuilt = { 0x4b013e0, 16 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.GetRandomReachablePointInRadius
-	constexpr static const FunctionPointer<UNavigationSystemV1, FVector, const UObject*, const FVector&, const float, const ANavigationData*, const UClass*> UNavigationSystemV1 = { 0x4afef20, 17 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, FVector, const UObject*, const FVector&, const float, const ANavigationData*, const UClass*> GetRandomReachablePointInRadius = { 0x4afef20, 17 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.GetRandomPointInNavigableRadius
-	constexpr static const FunctionPointer<UNavigationSystemV1, FVector, const UObject*, const FVector&, const float, const ANavigationData*, const UClass*> UNavigationSystemV1 = { 0x4afeab0, 18 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, FVector, const UObject*, const FVector&, const float, const ANavigationData*, const UClass*> GetRandomPointInNavigableRadius = { 0x4afeab0, 18 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.GetPathLength
-	constexpr static const FunctionPointer<UNavigationSystemV1, TEnumAsByte<ENavigationQueryResult>, const UObject*, const FVector&, const FVector&, const float&, const ANavigationData*, const UClass*> UNavigationSystemV1 = { 0x4b01500, 19 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, TEnumAsByte<ENavigationQueryResult>, const UObject*, const FVector&, const FVector&, const float&, const ANavigationData*, const UClass*> GetPathLength = { 0x4b01500, 19 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.GetPathCost
-	constexpr static const FunctionPointer<UNavigationSystemV1, TEnumAsByte<ENavigationQueryResult>, const UObject*, const FVector&, const FVector&, const float&, const ANavigationData*, const UClass*> UNavigationSystemV1 = { 0x4b019e0, 20 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, TEnumAsByte<ENavigationQueryResult>, const UObject*, const FVector&, const FVector&, const float&, const ANavigationData*, const UClass*> GetPathCost = { 0x4b019e0, 20 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.GetNavigationSystem
-	constexpr static const FunctionPointer<UNavigationSystemV1, UNavigationSystemV1*, const UObject*> UNavigationSystemV1 = { 0x4b02c30, 21 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, UNavigationSystemV1*, const UObject*> GetNavigationSystem = { 0x4b02c30, 21 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.FindPathToLocationSynchronously
-	constexpr static const FunctionPointer<UNavigationSystemV1, UNavigationPath*, const UObject*, const FVector&, const FVector&, const AActor*, const UClass*> UNavigationSystemV1 = { 0x4b00f90, 22 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, UNavigationPath*, const UObject*, const FVector&, const FVector&, const AActor*, const UClass*> FindPathToLocationSynchronously = { 0x4b00f90, 22 }; 
 	// Function /Script/NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously
-	constexpr static const FunctionPointer<UNavigationSystemV1, UNavigationPath*, const UObject*, const FVector&, const AActor*, const float, const AActor*, const UClass*> UNavigationSystemV1 = { 0x4b00ab0, 23 }; 
+	constexpr static const FunctionPointer<UNavigationSystemV1, UNavigationPath*, const UObject*, const FVector&, const AActor*, const float, const AActor*, const UClass*> FindPathToActorSynchronously = { 0x4b00ab0, 23 }; 
 };
 
 /// Class /Script/NavigationSystem.NavigationSystemModuleConfig
@@ -507,10 +505,9 @@ public:
 	unsigned char                                      UnknownData03_5[0x3];                                       // 0x00E5   (0x0003)  MISSED
 	class UObject*                                     CachedNavParent;                                            // 0x00E8   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
-	constexpr static const FunctionPointer<UNavRelevantComponent, void, const bool> UNavRelevantComponent = { 0x4b06880, 0 }; 
+	constexpr static const FunctionPointer<UNavRelevantComponent, void, const bool> SetNavigationRelevancy = { 0x4b06880, 0 }; 
 };
 
 /// Class /Script/NavigationSystem.NavLinkCustomComponent
@@ -603,10 +600,9 @@ public:
 	class USceneComponent*                             MoveComponent;                                              // 0x0160   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x8];                                       // 0x0168   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/NavigationSystem.NavModifierComponent.SetAreaClass
-	constexpr static const FunctionPointer<UNavModifierComponent, void, const UClass*> UNavModifierComponent = { 0x4b05d60, 0 }; 
+	constexpr static const FunctionPointer<UNavModifierComponent, void, const UClass*> SetAreaClass = { 0x4b05d60, 0 }; 
 };
 
 /// Class /Script/NavigationSystem.NavModifierVolume
@@ -619,10 +615,9 @@ public:
 	bool                                               bMaskFillCollisionUnderneathForNavmesh;                     // 0x0328   (0x0001)  
 	unsigned char                                      UnknownData03_7[0x7];                                       // 0x0329   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/NavigationSystem.NavModifierVolume.SetAreaClass
-	constexpr static const FunctionPointer<ANavModifierVolume, void, const UClass*> ANavModifierVolume = { 0x4b06330, 0 }; 
+	constexpr static const FunctionPointer<ANavModifierVolume, void, const UClass*> SetAreaClass = { 0x4b06330, 0 }; 
 };
 
 /// Class /Script/NavigationSystem.NavNodeInterface
@@ -727,10 +722,9 @@ public:
 	float                                              VerticalDeviationFromGroundCompensation;                    // 0x054C   (0x0004)  
 	unsigned char                                      UnknownData09_7[0x30];                                      // 0x0550   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
-	constexpr static const FunctionPointer<ARecastNavMesh, bool, const FBox, const UClass*, const UClass*, const bool> ARecastNavMesh = { 0x4b079d0, 0 }; 
+	constexpr static const FunctionPointer<ARecastNavMesh, bool, const FBox, const UClass*, const UClass*, const bool> K2_ReplaceAreaInTileBounds = { 0x4b079d0, 0 }; 
 };
 
 /// Class /Script/NavigationSystem.RecastNavMeshDataChunk

@@ -558,72 +558,71 @@ public:
 	class UMaterialInterface*                          DefaultMeshMaterial;                                        // 0x0100   (0x0008)  
 	class UMaterialInterface*                          DefaultWireframeMeshMaterial;                               // 0x0108   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARSessionConfig.ShouldResetTrackedObjects
-	constexpr static const FunctionPointer<UARSessionConfig, bool> UARSessionConfig = { 0x3843920, 0 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, bool> ShouldResetTrackedObjects = { 0x3843920, 0 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.ShouldResetCameraTracking
-	constexpr static const FunctionPointer<UARSessionConfig, bool> UARSessionConfig = { 0x3843a10, 1 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, bool> ShouldResetCameraTracking = { 0x3843a10, 1 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.ShouldRenderCameraOverlay
-	constexpr static const FunctionPointer<UARSessionConfig, bool> UARSessionConfig = { 0x3843b40, 2 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, bool> ShouldRenderCameraOverlay = { 0x3843b40, 2 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.ShouldEnableCameraTracking
-	constexpr static const FunctionPointer<UARSessionConfig, bool> UARSessionConfig = { 0x3843b20, 3 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, bool> ShouldEnableCameraTracking = { 0x3843b20, 3 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.ShouldEnableAutoFocus
-	constexpr static const FunctionPointer<UARSessionConfig, bool> UARSessionConfig = { 0x3843b00, 4 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, bool> ShouldEnableAutoFocus = { 0x3843b00, 4 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetWorldMapData
-	constexpr static const FunctionPointer<UARSessionConfig, void, const TArray<char>> UARSessionConfig = { 0x38434e0, 5 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const TArray<char>> SetWorldMapData = { 0x38434e0, 5 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetSessionTrackingFeatureToEnable
-	constexpr static const FunctionPointer<UARSessionConfig, void, const EARSessionTrackingFeature> UARSessionConfig = { 0x3842eb0, 6 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const EARSessionTrackingFeature> SetSessionTrackingFeatureToEnable = { 0x3842eb0, 6 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetSceneReconstructionMethod
-	constexpr static const FunctionPointer<UARSessionConfig, void, const EARSceneReconstruction> UARSessionConfig = { 0x3842de0, 7 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const EARSceneReconstruction> SetSceneReconstructionMethod = { 0x3842de0, 7 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetResetTrackedObjects
-	constexpr static const FunctionPointer<UARSessionConfig, void, const bool> UARSessionConfig = { 0x3843850, 8 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const bool> SetResetTrackedObjects = { 0x3843850, 8 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetResetCameraTracking
-	constexpr static const FunctionPointer<UARSessionConfig, void, const bool> UARSessionConfig = { 0x3843940, 9 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const bool> SetResetCameraTracking = { 0x3843940, 9 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetFaceTrackingUpdate
-	constexpr static const FunctionPointer<UARSessionConfig, void, const EARFaceTrackingUpdate> UARSessionConfig = { 0x3842fc0, 10 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const EARFaceTrackingUpdate> SetFaceTrackingUpdate = { 0x3842fc0, 10 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetFaceTrackingDirection
-	constexpr static const FunctionPointer<UARSessionConfig, void, const EARFaceTrackingDirection> UARSessionConfig = { 0x38430b0, 11 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const EARFaceTrackingDirection> SetFaceTrackingDirection = { 0x38430b0, 11 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetEnableAutoFocus
-	constexpr static const FunctionPointer<UARSessionConfig, void, const bool> UARSessionConfig = { 0x3843a30, 12 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const bool> SetEnableAutoFocus = { 0x3843a30, 12 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetDesiredVideoFormat
-	constexpr static const FunctionPointer<UARSessionConfig, void, const FARVideoFormat> UARSessionConfig = { 0x38431a0, 13 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const FARVideoFormat> SetDesiredVideoFormat = { 0x38431a0, 13 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.SetCandidateObjectList
-	constexpr static const FunctionPointer<UARSessionConfig, void, const TArray<UARCandidateObject*>&> UARSessionConfig = { 0x38433c0, 14 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const TArray<UARCandidateObject*>&> SetCandidateObjectList = { 0x38433c0, 14 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetWorldMapData
-	constexpr static const FunctionPointer<UARSessionConfig, TArray<char>> UARSessionConfig = { 0x3843650, 15 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, TArray<char>> GetWorldMapData = { 0x3843650, 15 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetWorldAlignment
-	constexpr static const FunctionPointer<UARSessionConfig, EARWorldAlignment> UARSessionConfig = { 0x3843bf0, 16 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARWorldAlignment> GetWorldAlignment = { 0x3843bf0, 16 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetSessionType
-	constexpr static const FunctionPointer<UARSessionConfig, EARSessionType> UARSessionConfig = { 0x3843bd0, 17 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARSessionType> GetSessionType = { 0x3843bd0, 17 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetSceneReconstructionMethod
-	constexpr static const FunctionPointer<UARSessionConfig, EARSceneReconstruction> UARSessionConfig = { 0x3842f80, 18 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARSceneReconstruction> GetSceneReconstructionMethod = { 0x3842f80, 18 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetPlaneDetectionMode
-	constexpr static const FunctionPointer<UARSessionConfig, EARPlaneDetectionMode> UARSessionConfig = { 0x3843ba0, 19 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARPlaneDetectionMode> GetPlaneDetectionMode = { 0x3843ba0, 19 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetMaxNumSimultaneousImagesTracked
-	constexpr static const FunctionPointer<UARSessionConfig, int32_t> UARSessionConfig = { 0x38436a0, 20 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, int32_t> GetMaxNumSimultaneousImagesTracked = { 0x38436a0, 20 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetLightEstimationMode
-	constexpr static const FunctionPointer<UARSessionConfig, EARLightEstimationMode> UARSessionConfig = { 0x3843b80, 21 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARLightEstimationMode> GetLightEstimationMode = { 0x3843b80, 21 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetFrameSyncMode
-	constexpr static const FunctionPointer<UARSessionConfig, EARFrameSyncMode> UARSessionConfig = { 0x3843b60, 22 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARFrameSyncMode> GetFrameSyncMode = { 0x3843b60, 22 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetFaceTrackingUpdate
-	constexpr static const FunctionPointer<UARSessionConfig, EARFaceTrackingUpdate> UARSessionConfig = { 0x3843090, 23 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARFaceTrackingUpdate> GetFaceTrackingUpdate = { 0x3843090, 23 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetFaceTrackingDirection
-	constexpr static const FunctionPointer<UARSessionConfig, EARFaceTrackingDirection> UARSessionConfig = { 0x3843180, 24 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARFaceTrackingDirection> GetFaceTrackingDirection = { 0x3843180, 24 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetEnvironmentCaptureProbeType
-	constexpr static const FunctionPointer<UARSessionConfig, EAREnvironmentCaptureProbeType> UARSessionConfig = { 0x3843680, 25 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EAREnvironmentCaptureProbeType> GetEnvironmentCaptureProbeType = { 0x3843680, 25 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetEnabledSessionTrackingFeature
-	constexpr static const FunctionPointer<UARSessionConfig, EARSessionTrackingFeature> UARSessionConfig = { 0x3842fa0, 26 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, EARSessionTrackingFeature> GetEnabledSessionTrackingFeature = { 0x3842fa0, 26 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetDesiredVideoFormat
-	constexpr static const FunctionPointer<UARSessionConfig, FARVideoFormat> UARSessionConfig = { 0x3843290, 27 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, FARVideoFormat> GetDesiredVideoFormat = { 0x3843290, 27 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetCandidateObjectList
-	constexpr static const FunctionPointer<UARSessionConfig, TArray<UARCandidateObject*>> UARSessionConfig = { 0x38434b0, 28 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, TArray<UARCandidateObject*>> GetCandidateObjectList = { 0x38434b0, 28 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.GetCandidateImageList
-	constexpr static const FunctionPointer<UARSessionConfig, TArray<UARCandidateImage*>> UARSessionConfig = { 0x38437c0, 29 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, TArray<UARCandidateImage*>> GetCandidateImageList = { 0x38437c0, 29 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.AddCandidateObject
-	constexpr static const FunctionPointer<UARSessionConfig, void, const UARCandidateObject*> UARSessionConfig = { 0x38432c0, 30 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const UARCandidateObject*> AddCandidateObject = { 0x38432c0, 30 }; 
 	// Function /Script/AugmentedReality.ARSessionConfig.AddCandidateImage
-	constexpr static const FunctionPointer<UARSessionConfig, void, const UARCandidateImage*> UARSessionConfig = { 0x38436c0, 31 }; 
+	constexpr static const FunctionPointer<UARSessionConfig, void, const UARCandidateImage*> AddCandidateImage = { 0x38436c0, 31 }; 
 };
 
 /// Class /Script/AugmentedReality.ARLightEstimate
@@ -642,14 +641,13 @@ public:
 	float                                              AmbientColorTemperatureKelvin;                              // 0x002C   (0x0004)  
 	FLinearColor                                       AmbientColor;                                               // 0x0030   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARBasicLightEstimate.GetAmbientIntensityLumens
-	constexpr static const FunctionPointer<UARBasicLightEstimate, float> UARBasicLightEstimate = { 0x3841550, 0 }; 
+	constexpr static const FunctionPointer<UARBasicLightEstimate, float> GetAmbientIntensityLumens = { 0x3841550, 0 }; 
 	// Function /Script/AugmentedReality.ARBasicLightEstimate.GetAmbientColorTemperatureKelvin
-	constexpr static const FunctionPointer<UARBasicLightEstimate, float> UARBasicLightEstimate = { 0x3841530, 1 }; 
+	constexpr static const FunctionPointer<UARBasicLightEstimate, float> GetAmbientColorTemperatureKelvin = { 0x3841530, 1 }; 
 	// Function /Script/AugmentedReality.ARBasicLightEstimate.GetAmbientColor
-	constexpr static const FunctionPointer<UARBasicLightEstimate, FLinearColor> UARBasicLightEstimate = { 0x3841510, 2 }; 
+	constexpr static const FunctionPointer<UARBasicLightEstimate, FLinearColor> GetAmbientColor = { 0x3841510, 2 }; 
 };
 
 /// Class /Script/AugmentedReality.ARCandidateImage
@@ -664,18 +662,17 @@ public:
 	EARCandidateImageOrientation                       Orientation;                                                // 0x0050   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x7];                                       // 0x0051   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARCandidateImage.GetPhysicalWidth
-	constexpr static const FunctionPointer<UARCandidateImage, float> UARCandidateImage = { 0x166b8f0, 0 }; 
+	constexpr static const FunctionPointer<UARCandidateImage, float> GetPhysicalWidth = { 0x166b8f0, 0 }; 
 	// Function /Script/AugmentedReality.ARCandidateImage.GetPhysicalHeight
-	constexpr static const FunctionPointer<UARCandidateImage, float> UARCandidateImage = { 0x384c790, 1 }; 
+	constexpr static const FunctionPointer<UARCandidateImage, float> GetPhysicalHeight = { 0x384c790, 1 }; 
 	// Function /Script/AugmentedReality.ARCandidateImage.GetOrientation
-	constexpr static const FunctionPointer<UARCandidateImage, EARCandidateImageOrientation> UARCandidateImage = { 0x384c770, 2 }; 
+	constexpr static const FunctionPointer<UARCandidateImage, EARCandidateImageOrientation> GetOrientation = { 0x384c770, 2 }; 
 	// Function /Script/AugmentedReality.ARCandidateImage.GetFriendlyName
-	constexpr static const FunctionPointer<UARCandidateImage, FString> UARCandidateImage = { 0x384c7b0, 3 }; 
+	constexpr static const FunctionPointer<UARCandidateImage, FString> GetFriendlyName = { 0x384c7b0, 3 }; 
 	// Function /Script/AugmentedReality.ARCandidateImage.GetCandidateTexture
-	constexpr static const FunctionPointer<UARCandidateImage, UTexture2D*> UARCandidateImage = { 0x3841fd0, 4 }; 
+	constexpr static const FunctionPointer<UARCandidateImage, UTexture2D*> GetCandidateTexture = { 0x3841fd0, 4 }; 
 };
 
 /// Class /Script/AugmentedReality.ARActor
@@ -684,10 +681,9 @@ class AARActor : public AActor
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARActor.AddARComponent
-	constexpr static const FunctionPointer<AARActor, UARComponent*, const UClass*, const FGuid&> AARActor = { 0x382edc0, 0 }; 
+	constexpr static const FunctionPointer<AARActor, UARComponent*, const UClass*, const FGuid&> AddARComponent = { 0x382edc0, 0 }; 
 };
 
 /// Class /Script/AugmentedReality.ARBlueprintLibrary
@@ -696,130 +692,129 @@ class UARBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.UnpinComponent
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const USceneComponent*> UARBlueprintLibrary = { 0x3831730, 0 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const USceneComponent*> UnpinComponent = { 0x3831730, 0 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.ToggleARCapture
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const bool, const EARCaptureType> UARBlueprintLibrary = { 0x38335a0, 1 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const bool, const EARCaptureType> ToggleARCapture = { 0x38335a0, 1 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.StopARSession
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void> UARBlueprintLibrary = { 0x3833890, 2 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void> StopARSession = { 0x3833890, 2 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.StartARSession
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const UARSessionConfig*> UARBlueprintLibrary = { 0x38339b0, 3 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const UARSessionConfig*> StartARSession = { 0x38339b0, 3 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.SetEnabledXRCamera
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const bool> UARBlueprintLibrary = { 0x38334d0, 4 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const bool> SetEnabledXRCamera = { 0x38334d0, 4 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.SetARWorldScale
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const float> UARBlueprintLibrary = { 0x382fc40, 5 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const float> SetARWorldScale = { 0x382fc40, 5 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.SetARWorldOriginLocationAndRotation
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const FVector, const FRotator, const bool, const bool> UARBlueprintLibrary = { 0x382fd10, 6 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const FVector, const FRotator, const bool, const bool> SetARWorldOriginLocationAndRotation = { 0x382fd10, 6 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.SetAlignmentTransform
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const FTransform&> UARBlueprintLibrary = { 0x38332d0, 7 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const FTransform&> SetAlignmentTransform = { 0x38332d0, 7 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.SaveARPinToLocalStore
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FName, const UARPin*> UARBlueprintLibrary = { 0x3831280, 8 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FName, const UARPin*> SaveARPinToLocalStore = { 0x3831280, 8 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.ResizeXRCamera
-	constexpr static const FunctionPointer<UARBlueprintLibrary, FIntPoint, const FIntPoint&> UARBlueprintLibrary = { 0x38333e0, 9 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, FIntPoint, const FIntPoint&> ResizeXRCamera = { 0x38333e0, 9 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.RemovePin
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const UARPin*> UARBlueprintLibrary = { 0x38315a0, 10 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const UARPin*> RemovePin = { 0x38315a0, 10 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.RemoveARPinFromLocalStore
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const FName> UARBlueprintLibrary = { 0x38310f0, 11 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const FName> RemoveARPinFromLocalStore = { 0x38310f0, 11 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.RemoveAllARPinsFromLocalStore
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void> UARBlueprintLibrary = { 0x3830fe0, 12 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void> RemoveAllARPinsFromLocalStore = { 0x3830fe0, 12 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.PinComponentToTraceResult
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARPin*, const USceneComponent*, const FARTraceResult&, const FName> UARBlueprintLibrary = { 0x3831970, 13 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARPin*, const USceneComponent*, const FARTraceResult&, const FName> PinComponentToTraceResult = { 0x3831970, 13 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.PinComponentToARPin
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const USceneComponent*, const UARPin*> UARBlueprintLibrary = { 0x3831800, 14 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const USceneComponent*, const UARPin*> PinComponentToARPin = { 0x3831800, 14 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.PinComponent
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARPin*, const USceneComponent*, const FTransform&, const UARTrackedGeometry*, const FName> UARBlueprintLibrary = { 0x3831c30, 15 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARPin*, const USceneComponent*, const FTransform&, const UARTrackedGeometry*, const FName> PinComponent = { 0x3831c30, 15 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.PauseARSession
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void> UARBlueprintLibrary = { 0x3833990, 16 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void> PauseARSession = { 0x3833990, 16 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.LoadARPinsFromLocalStore
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TMap<FName, UARPin*>> UARBlueprintLibrary = { 0x38313f0, 17 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TMap<FName, UARPin*>> LoadARPinsFromLocalStore = { 0x38313f0, 17 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.LineTraceTrackedObjects3D
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FARTraceResult>, const FVector, const FVector, const bool, const bool, const bool, const bool> UARBlueprintLibrary = { 0x3832bd0, 18 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FARTraceResult>, const FVector, const FVector, const bool, const bool, const bool, const bool> LineTraceTrackedObjects3D = { 0x3832bd0, 18 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.LineTraceTrackedObjects
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FARTraceResult>, const FVector2D, const bool, const bool, const bool, const bool> UARBlueprintLibrary = { 0x3832f90, 19 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FARTraceResult>, const FVector2D, const bool, const bool, const bool, const bool> LineTraceTrackedObjects = { 0x3832f90, 19 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.IsSessionTypeSupported
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const EARSessionType> UARBlueprintLibrary = { 0x38325c0, 20 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const EARSessionType> IsSessionTypeSupported = { 0x38325c0, 20 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.IsSessionTrackingFeatureSupported
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const EARSessionType, const EARSessionTrackingFeature> UARBlueprintLibrary = { 0x3830670, 21 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const EARSessionType, const EARSessionTrackingFeature> IsSessionTrackingFeatureSupported = { 0x3830670, 21 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.IsSceneReconstructionSupported
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const EARSessionType, const EARSceneReconstruction> UARBlueprintLibrary = { 0x3830510, 22 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const EARSessionType, const EARSceneReconstruction> IsSceneReconstructionSupported = { 0x3830510, 22 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.IsARSupported
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool> UARBlueprintLibrary = { 0x3833b50, 23 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool> IsARSupported = { 0x3833b50, 23 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.IsARPinLocalStoreSupported
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool> UARBlueprintLibrary = { 0x38314f0, 24 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool> IsARPinLocalStoreSupported = { 0x38314f0, 24 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.IsARPinLocalStoreReady
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool> UARBlueprintLibrary = { 0x38314c0, 25 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool> IsARPinLocalStoreReady = { 0x38314c0, 25 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetWorldMappingStatus
-	constexpr static const FunctionPointer<UARBlueprintLibrary, EARWorldMappingState> UARBlueprintLibrary = { 0x3830c20, 26 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, EARWorldMappingState> GetWorldMappingStatus = { 0x3830c20, 26 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetTrackingQualityReason
-	constexpr static const FunctionPointer<UARBlueprintLibrary, EARTrackingQualityReason> UARBlueprintLibrary = { 0x3832b70, 27 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, EARTrackingQualityReason> GetTrackingQualityReason = { 0x3832b70, 27 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetTrackingQuality
-	constexpr static const FunctionPointer<UARBlueprintLibrary, EARTrackingQuality> UARBlueprintLibrary = { 0x3832ba0, 28 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, EARTrackingQuality> GetTrackingQuality = { 0x3832ba0, 28 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetSupportedVideoFormats
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FARVideoFormat>, const EARSessionType> UARBlueprintLibrary = { 0x3830a90, 29 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FARVideoFormat>, const EARSessionType> GetSupportedVideoFormats = { 0x3830a90, 29 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetSessionConfig
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARSessionConfig*> UARBlueprintLibrary = { 0x3833710, 30 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARSessionConfig*> GetSessionConfig = { 0x3833710, 30 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetPointCloud
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FVector>> UARBlueprintLibrary = { 0x3830ba0, 31 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FVector>> GetPointCloud = { 0x3830ba0, 31 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetPersonSegmentationImage
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTexture*> UARBlueprintLibrary = { 0x3830320, 32 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTexture*> GetPersonSegmentationImage = { 0x3830320, 32 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetPersonSegmentationDepthImage
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTexture*> UARBlueprintLibrary = { 0x38302f0, 33 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTexture*> GetPersonSegmentationDepthImage = { 0x38302f0, 33 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetObjectClassificationAtLocation
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FVector&, const EARObjectClassification&, const FVector&, const float> UARBlueprintLibrary = { 0x382ffb0, 34 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FVector&, const EARObjectClassification&, const FVector&, const float> GetObjectClassificationAtLocation = { 0x382ffb0, 34 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetNumberOfTrackedFacesSupported
-	constexpr static const FunctionPointer<UARBlueprintLibrary, int32_t> UARBlueprintLibrary = { 0x382f2c0, 35 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, int32_t> GetNumberOfTrackedFacesSupported = { 0x382f2c0, 35 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetCurrentLightEstimate
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARLightEstimate*> UARBlueprintLibrary = { 0x3831ef0, 36 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARLightEstimate*> GetCurrentLightEstimate = { 0x3831ef0, 36 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetCameraIntrinsics
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FARCameraIntrinsics&> UARBlueprintLibrary = { 0x382f1b0, 37 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FARCameraIntrinsics&> GetCameraIntrinsics = { 0x382f1b0, 37 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetCameraImage
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTextureCameraImage*> UARBlueprintLibrary = { 0x38327e0, 38 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTextureCameraImage*> GetCameraImage = { 0x38327e0, 38 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetCameraDepth
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTextureCameraDepth*> UARBlueprintLibrary = { 0x3832760, 39 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTextureCameraDepth*> GetCameraDepth = { 0x3832760, 39 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetARWorldScale
-	constexpr static const FunctionPointer<UARBlueprintLibrary, float> UARBlueprintLibrary = { 0x382fc00, 40 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, float> GetARWorldScale = { 0x382fc00, 40 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetARTexture
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTexture*, const EARTextureType> UARBlueprintLibrary = { 0x3832690, 41 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARTexture*, const EARTextureType> GetARTexture = { 0x3832690, 41 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetARSessionStatus
-	constexpr static const FunctionPointer<UARBlueprintLibrary, FARSessionStatus> UARBlueprintLibrary = { 0x3833800, 42 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, FARSessionStatus> GetARSessionStatus = { 0x3833800, 42 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllTrackedPoses
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedPose*>> UARBlueprintLibrary = { 0x3830350, 43 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedPose*>> GetAllTrackedPoses = { 0x3830350, 43 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllTrackedPoints
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedPoint*>> UARBlueprintLibrary = { 0x3830ee0, 44 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedPoint*>> GetAllTrackedPoints = { 0x3830ee0, 44 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllTrackedPlanes
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARPlaneGeometry*>> UARBlueprintLibrary = { 0x3830f60, 45 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARPlaneGeometry*>> GetAllTrackedPlanes = { 0x3830f60, 45 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllTrackedImages
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedImage*>> UARBlueprintLibrary = { 0x3830e60, 46 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedImage*>> GetAllTrackedImages = { 0x3830e60, 46 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllTrackedEnvironmentCaptureProbes
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UAREnvironmentCaptureProbe*>> UARBlueprintLibrary = { 0x3830de0, 47 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UAREnvironmentCaptureProbe*>> GetAllTrackedEnvironmentCaptureProbes = { 0x3830de0, 47 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllTracked2DPoses
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FARPose2D>> UARBlueprintLibrary = { 0x38303d0, 48 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<FARPose2D>> GetAllTracked2DPoses = { 0x38303d0, 48 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllPins
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARPin*>> UARBlueprintLibrary = { 0x3831520, 49 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARPin*>> GetAllPins = { 0x3831520, 49 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllGeometriesByClass
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedGeometry*>, const UClass*> UARBlueprintLibrary = { 0x3832860, 50 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedGeometry*>, const UClass*> GetAllGeometriesByClass = { 0x3832860, 50 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAllGeometries
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedGeometry*>> UARBlueprintLibrary = { 0x3832af0, 51 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedGeometry*>> GetAllGeometries = { 0x3832af0, 51 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.GetAlignmentTransform
-	constexpr static const FunctionPointer<UARBlueprintLibrary, FTransform> UARBlueprintLibrary = { 0x382fbb0, 52 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, FTransform> GetAlignmentTransform = { 0x382fbb0, 52 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.FindTrackedPointsByName
-	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedPoint*>, const FString> UARBlueprintLibrary = { 0x382f800, 53 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, TArray<UARTrackedPoint*>, const FString> FindTrackedPointsByName = { 0x382f800, 53 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.DebugDrawTrackedGeometry
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const UARTrackedGeometry*, const UObject*, const FLinearColor, const float, const float> UARBlueprintLibrary = { 0x3832270, 54 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const UARTrackedGeometry*, const UObject*, const FLinearColor, const float, const float> DebugDrawTrackedGeometry = { 0x3832270, 54 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.DebugDrawPin
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const UARPin*, const UObject*, const FLinearColor, const float, const float> UARBlueprintLibrary = { 0x3831f20, 55 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const UARPin*, const UObject*, const FLinearColor, const float, const float> DebugDrawPin = { 0x3831f20, 55 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.CalculateClosestIntersection
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const TArray<FVector>&, const TArray<FVector>&, const FVector&> UARBlueprintLibrary = { 0x382f5c0, 56 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const TArray<FVector>&, const TArray<FVector>&, const FVector&> CalculateClosestIntersection = { 0x382f5c0, 56 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.CalculateAlignmentTransform
-	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const FTransform&, const FTransform&, const FTransform&> UARBlueprintLibrary = { 0x382f2f0, 57 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, void, const FTransform&, const FTransform&, const FTransform&> CalculateAlignmentTransform = { 0x382f2f0, 57 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.AddTrackedPointWithName
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FTransform&, const FString, const bool> UARBlueprintLibrary = { 0x382f930, 58 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FTransform&, const FString, const bool> AddTrackedPointWithName = { 0x382f930, 58 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.AddRuntimeCandidateImage
-	constexpr static const FunctionPointer<UARBlueprintLibrary, UARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float> UARBlueprintLibrary = { 0x38307d0, 59 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, UARCandidateImage*, const UARSessionConfig*, const UTexture2D*, const FString, const float> AddRuntimeCandidateImage = { 0x38307d0, 59 }; 
 	// Function /Script/AugmentedReality.ARBlueprintLibrary.AddManualEnvironmentCaptureProbe
-	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FVector, const FVector> UARBlueprintLibrary = { 0x3830c50, 60 }; 
+	constexpr static const FunctionPointer<UARBlueprintLibrary, bool, const FVector, const FVector> AddManualEnvironmentCaptureProbe = { 0x3830c50, 60 }; 
 };
 
 /// Class /Script/AugmentedReality.ARTraceResultLibrary
@@ -828,20 +823,19 @@ class UARTraceResultLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARTraceResultLibrary.GetTrackedGeometry
-	constexpr static const FunctionPointer<UARTraceResultLibrary, UARTrackedGeometry*, const FARTraceResult&> UARTraceResultLibrary = { 0x3834bd0, 0 }; 
+	constexpr static const FunctionPointer<UARTraceResultLibrary, UARTrackedGeometry*, const FARTraceResult&> GetTrackedGeometry = { 0x3834bd0, 0 }; 
 	// Function /Script/AugmentedReality.ARTraceResultLibrary.GetTraceChannel
-	constexpr static const FunctionPointer<UARTraceResultLibrary, EARLineTraceChannels, const FARTraceResult&> UARTraceResultLibrary = { 0x3834a40, 1 }; 
+	constexpr static const FunctionPointer<UARTraceResultLibrary, EARLineTraceChannels, const FARTraceResult&> GetTraceChannel = { 0x3834a40, 1 }; 
 	// Function /Script/AugmentedReality.ARTraceResultLibrary.GetLocalTransform
-	constexpr static const FunctionPointer<UARTraceResultLibrary, FTransform, const FARTraceResult&> UARTraceResultLibrary = { 0x3834d60, 2 }; 
+	constexpr static const FunctionPointer<UARTraceResultLibrary, FTransform, const FARTraceResult&> GetLocalTransform = { 0x3834d60, 2 }; 
 	// Function /Script/AugmentedReality.ARTraceResultLibrary.GetLocalToWorldTransform
-	constexpr static const FunctionPointer<UARTraceResultLibrary, FTransform, const FARTraceResult&> UARTraceResultLibrary = { 0x3834f00, 3 }; 
+	constexpr static const FunctionPointer<UARTraceResultLibrary, FTransform, const FARTraceResult&> GetLocalToWorldTransform = { 0x3834f00, 3 }; 
 	// Function /Script/AugmentedReality.ARTraceResultLibrary.GetLocalToTrackingTransform
-	constexpr static const FunctionPointer<UARTraceResultLibrary, FTransform, const FARTraceResult&> UARTraceResultLibrary = { 0x38350b0, 4 }; 
+	constexpr static const FunctionPointer<UARTraceResultLibrary, FTransform, const FARTraceResult&> GetLocalToTrackingTransform = { 0x38350b0, 4 }; 
 	// Function /Script/AugmentedReality.ARTraceResultLibrary.GetDistanceFromCamera
-	constexpr static const FunctionPointer<UARTraceResultLibrary, float, const FARTraceResult&> UARTraceResultLibrary = { 0x3835260, 5 }; 
+	constexpr static const FunctionPointer<UARTraceResultLibrary, float, const FARTraceResult&> GetDistanceFromCamera = { 0x3835260, 5 }; 
 };
 
 /// Class /Script/AugmentedReality.ARBaseAsyncTaskBlueprintProxy
@@ -861,10 +855,9 @@ public:
 	FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x10];                                      // 0x0070   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARSaveWorldAsyncTaskBlueprintProxy.ARSaveWorld
-	constexpr static const FunctionPointer<UARSaveWorldAsyncTaskBlueprintProxy, UARSaveWorldAsyncTaskBlueprintProxy*, const UObject*> UARSaveWorldAsyncTaskBlueprintProxy = { 0x3835d80, 0 }; 
+	constexpr static const FunctionPointer<UARSaveWorldAsyncTaskBlueprintProxy, UARSaveWorldAsyncTaskBlueprintProxy*, const UObject*> ARSaveWorld = { 0x3835d80, 0 }; 
 };
 
 /// Class /Script/AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy
@@ -876,10 +869,9 @@ public:
 	FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x28];                                      // 0x0070   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy.ARGetCandidateObject
-	constexpr static const FunctionPointer<UARGetCandidateObjectAsyncTaskBlueprintProxy, UARGetCandidateObjectAsyncTaskBlueprintProxy*, const UObject*, const FVector, const FVector> UARGetCandidateObjectAsyncTaskBlueprintProxy = { 0x3836240, 0 }; 
+	constexpr static const FunctionPointer<UARGetCandidateObjectAsyncTaskBlueprintProxy, UARGetCandidateObjectAsyncTaskBlueprintProxy*, const UObject*, const FVector, const FVector> ARGetCandidateObject = { 0x3836240, 0 }; 
 };
 
 /// Class /Script/AugmentedReality.ARComponent
@@ -897,18 +889,17 @@ public:
 	class UARTrackedGeometry*                          MyTrackedGeometry;                                          // 0x02C0   (0x0008)  
 	unsigned char                                      UnknownData05_7[0x18];                                      // 0x02C8   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARComponent.UpdateVisualization
-	constexpr static const FunctionPointer<UARComponent, void> UARComponent = { 0x3837ba0, 0 }; 
+	constexpr static const FunctionPointer<UARComponent, void> UpdateVisualization = { 0x3837ba0, 0 }; 
 	// Function /Script/AugmentedReality.ARComponent.SetNativeID
-	constexpr static const FunctionPointer<UARComponent, void, const FGuid> UARComponent = { 0x3837be0, 1 }; 
+	constexpr static const FunctionPointer<UARComponent, void, const FGuid> SetNativeID = { 0x3837be0, 1 }; 
 	// Function /Script/AugmentedReality.ARComponent.ReceiveRemove
-	constexpr static const FunctionPointer<UARComponent, void> UARComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARComponent, void> ReceiveRemove = { 0x2bbb090, 2 }; 
 	// Function /Script/AugmentedReality.ARComponent.OnRep_Payload
-	constexpr static const FunctionPointer<UARComponent, void> UARComponent = { 0x282a0b0, 3 }; 
+	constexpr static const FunctionPointer<UARComponent, void> OnRep_Payload = { 0x282a0b0, 3 }; 
 	// Function /Script/AugmentedReality.ARComponent.GetMRMesh
-	constexpr static const FunctionPointer<UARComponent, UMRMeshComponent*> UARComponent = { 0x3837bc0, 4 }; 
+	constexpr static const FunctionPointer<UARComponent, UMRMeshComponent*> GetMRMesh = { 0x3837bc0, 4 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARSessionPayload
@@ -942,20 +933,19 @@ class UARPlaneComponent : public UARComponent
 public:
 	FARPlaneUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0080)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARPlaneComponent.SetPlaneComponentDebugMode
-	constexpr static const FunctionPointer<UARPlaneComponent, void, const EPlaneComponentDebugMode> UARPlaneComponent = { 0x3838560, 0 }; 
+	constexpr static const FunctionPointer<UARPlaneComponent, void, const EPlaneComponentDebugMode> SetPlaneComponentDebugMode = { 0x3838560, 0 }; 
 	// Function /Script/AugmentedReality.ARPlaneComponent.SetObjectClassificationDebugColors
-	constexpr static const FunctionPointer<UARPlaneComponent, void, const TMap<EARObjectClassification, FLinearColor>&> UARPlaneComponent = { 0x38383d0, 1 }; 
+	constexpr static const FunctionPointer<UARPlaneComponent, void, const TMap<EARObjectClassification, FLinearColor>&> SetObjectClassificationDebugColors = { 0x38383d0, 1 }; 
 	// Function /Script/AugmentedReality.ARPlaneComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARPlaneComponent, void, const FARPlaneUpdatePayload> UARPlaneComponent = { 0x3838200, 2 }; 
+	constexpr static const FunctionPointer<UARPlaneComponent, void, const FARPlaneUpdatePayload> ServerUpdatePayload = { 0x3838200, 2 }; 
 	// Function /Script/AugmentedReality.ARPlaneComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARPlaneComponent, void, const FARPlaneUpdatePayload&> UARPlaneComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UARPlaneComponent, void, const FARPlaneUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 3 }; 
 	// Function /Script/AugmentedReality.ARPlaneComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARPlaneComponent, void, const FARPlaneUpdatePayload&> UARPlaneComponent = { 0x2bbb090, 4 }; 
+	constexpr static const FunctionPointer<UARPlaneComponent, void, const FARPlaneUpdatePayload&> ReceiveAdd = { 0x2bbb090, 4 }; 
 	// Function /Script/AugmentedReality.ARPlaneComponent.GetObjectClassificationDebugColors
-	constexpr static const FunctionPointer<UARPlaneComponent, TMap<EARObjectClassification, FLinearColor>> UARPlaneComponent = { 0x38383a0, 5 }; 
+	constexpr static const FunctionPointer<UARPlaneComponent, TMap<EARObjectClassification, FLinearColor>> GetObjectClassificationDebugColors = { 0x38383a0, 5 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARPointUpdatePayload
@@ -973,14 +963,13 @@ public:
 	FARPointUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0001)  
 	unsigned char                                      UnknownData01_7[0xF];                                       // 0x02E1   (0x000F)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARPointComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARPointComponent, void, const FARPointUpdatePayload> UARPointComponent = { 0x3838ce0, 0 }; 
+	constexpr static const FunctionPointer<UARPointComponent, void, const FARPointUpdatePayload> ServerUpdatePayload = { 0x3838ce0, 0 }; 
 	// Function /Script/AugmentedReality.ARPointComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARPointComponent, void, const FARPointUpdatePayload&> UARPointComponent = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UARPointComponent, void, const FARPointUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 1 }; 
 	// Function /Script/AugmentedReality.ARPointComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARPointComponent, void, const FARPointUpdatePayload&> UARPointComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARPointComponent, void, const FARPointUpdatePayload&> ReceiveAdd = { 0x2bbb090, 2 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARFaceUpdatePayload
@@ -1006,16 +995,15 @@ public:
 	FARFaceUpdatePayload                               ReplicatedPayload;                                          // 0x02E8   (0x0040)  
 	unsigned char                                      UnknownData03_7[0x28];                                      // 0x0328   (0x0028)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARFaceComponent.SetFaceComponentDebugMode
-	constexpr static const FunctionPointer<UARFaceComponent, void, const EFaceComponentDebugMode> UARFaceComponent = { 0x38393e0, 0 }; 
+	constexpr static const FunctionPointer<UARFaceComponent, void, const EFaceComponentDebugMode> SetFaceComponentDebugMode = { 0x38393e0, 0 }; 
 	// Function /Script/AugmentedReality.ARFaceComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARFaceComponent, void, const FARFaceUpdatePayload> UARFaceComponent = { 0x38392c0, 1 }; 
+	constexpr static const FunctionPointer<UARFaceComponent, void, const FARFaceUpdatePayload> ServerUpdatePayload = { 0x38392c0, 1 }; 
 	// Function /Script/AugmentedReality.ARFaceComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARFaceComponent, void, const FARFaceUpdatePayload&> UARFaceComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARFaceComponent, void, const FARFaceUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 2 }; 
 	// Function /Script/AugmentedReality.ARFaceComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARFaceComponent, void, const FARFaceUpdatePayload&> UARFaceComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UARFaceComponent, void, const FARFaceUpdatePayload&> ReceiveAdd = { 0x2bbb090, 3 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARImageUpdatePayload
@@ -1036,16 +1024,15 @@ class UARImageComponent : public UARComponent
 public:
 	FARImageUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0060)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARImageComponent.SetImageComponentDebugMode
-	constexpr static const FunctionPointer<UARImageComponent, void, const EImageComponentDebugMode> UARImageComponent = { 0x3839c00, 0 }; 
+	constexpr static const FunctionPointer<UARImageComponent, void, const EImageComponentDebugMode> SetImageComponentDebugMode = { 0x3839c00, 0 }; 
 	// Function /Script/AugmentedReality.ARImageComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARImageComponent, void, const FARImageUpdatePayload> UARImageComponent = { 0x3839a80, 1 }; 
+	constexpr static const FunctionPointer<UARImageComponent, void, const FARImageUpdatePayload> ServerUpdatePayload = { 0x3839a80, 1 }; 
 	// Function /Script/AugmentedReality.ARImageComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARImageComponent, void, const FARImageUpdatePayload&> UARImageComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARImageComponent, void, const FARImageUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 2 }; 
 	// Function /Script/AugmentedReality.ARImageComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARImageComponent, void, const FARImageUpdatePayload&> UARImageComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UARImageComponent, void, const FARImageUpdatePayload&> ReceiveAdd = { 0x2bbb090, 3 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARQRCodeUpdatePayload
@@ -1067,16 +1054,15 @@ class UARQRCodeComponent : public UARComponent
 public:
 	FARQRCodeUpdatePayload                             ReplicatedPayload;                                          // 0x02E0   (0x0070)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARQRCodeComponent.SetQRCodeComponentDebugMode
-	constexpr static const FunctionPointer<UARQRCodeComponent, void, const EQRCodeComponentDebugMode> UARQRCodeComponent = { 0x383a440, 0 }; 
+	constexpr static const FunctionPointer<UARQRCodeComponent, void, const EQRCodeComponentDebugMode> SetQRCodeComponentDebugMode = { 0x383a440, 0 }; 
 	// Function /Script/AugmentedReality.ARQRCodeComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARQRCodeComponent, void, const FARQRCodeUpdatePayload> UARQRCodeComponent = { 0x383a2d0, 1 }; 
+	constexpr static const FunctionPointer<UARQRCodeComponent, void, const FARQRCodeUpdatePayload> ServerUpdatePayload = { 0x383a2d0, 1 }; 
 	// Function /Script/AugmentedReality.ARQRCodeComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARQRCodeComponent, void, const FARQRCodeUpdatePayload&> UARQRCodeComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARQRCodeComponent, void, const FARQRCodeUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 2 }; 
 	// Function /Script/AugmentedReality.ARQRCodeComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARQRCodeComponent, void, const FARQRCodeUpdatePayload&> UARQRCodeComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UARQRCodeComponent, void, const FARQRCodeUpdatePayload&> ReceiveAdd = { 0x2bbb090, 3 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARPoseUpdatePayload
@@ -1094,16 +1080,15 @@ class UARPoseComponent : public UARComponent
 public:
 	FARPoseUpdatePayload                               ReplicatedPayload;                                          // 0x02E0   (0x0040)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARPoseComponent.SetPoseComponentDebugMode
-	constexpr static const FunctionPointer<UARPoseComponent, void, const EPoseComponentDebugMode> UARPoseComponent = { 0x383aca0, 0 }; 
+	constexpr static const FunctionPointer<UARPoseComponent, void, const EPoseComponentDebugMode> SetPoseComponentDebugMode = { 0x383aca0, 0 }; 
 	// Function /Script/AugmentedReality.ARPoseComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARPoseComponent, void, const FARPoseUpdatePayload> UARPoseComponent = { 0x383ab40, 1 }; 
+	constexpr static const FunctionPointer<UARPoseComponent, void, const FARPoseUpdatePayload> ServerUpdatePayload = { 0x383ab40, 1 }; 
 	// Function /Script/AugmentedReality.ARPoseComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARPoseComponent, void, const FARPoseUpdatePayload&> UARPoseComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARPoseComponent, void, const FARPoseUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 2 }; 
 	// Function /Script/AugmentedReality.ARPoseComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARPoseComponent, void, const FARPoseUpdatePayload&> UARPoseComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UARPoseComponent, void, const FARPoseUpdatePayload&> ReceiveAdd = { 0x2bbb090, 3 }; 
 };
 
 /// Struct /Script/AugmentedReality.AREnvironmentProbeUpdatePayload
@@ -1120,14 +1105,13 @@ class UAREnvironmentProbeComponent : public UARComponent
 public:
 	FAREnvironmentProbeUpdatePayload                   ReplicatedPayload;                                          // 0x02E0   (0x0030)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.AREnvironmentProbeComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UAREnvironmentProbeComponent, void, const FAREnvironmentProbeUpdatePayload> UAREnvironmentProbeComponent = { 0x383b360, 0 }; 
+	constexpr static const FunctionPointer<UAREnvironmentProbeComponent, void, const FAREnvironmentProbeUpdatePayload> ServerUpdatePayload = { 0x383b360, 0 }; 
 	// Function /Script/AugmentedReality.AREnvironmentProbeComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UAREnvironmentProbeComponent, void, const FAREnvironmentProbeUpdatePayload&> UAREnvironmentProbeComponent = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UAREnvironmentProbeComponent, void, const FAREnvironmentProbeUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 1 }; 
 	// Function /Script/AugmentedReality.AREnvironmentProbeComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UAREnvironmentProbeComponent, void, const FAREnvironmentProbeUpdatePayload&> UAREnvironmentProbeComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UAREnvironmentProbeComponent, void, const FAREnvironmentProbeUpdatePayload&> ReceiveAdd = { 0x2bbb090, 2 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARObjectUpdatePayload
@@ -1144,14 +1128,13 @@ class UARObjectComponent : public UARComponent
 public:
 	FARObjectUpdatePayload                             ReplicatedPayload;                                          // 0x02E0   (0x0030)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARObjectComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARObjectComponent, void, const FARObjectUpdatePayload> UARObjectComponent = { 0x383b360, 0 }; 
+	constexpr static const FunctionPointer<UARObjectComponent, void, const FARObjectUpdatePayload> ServerUpdatePayload = { 0x383b360, 0 }; 
 	// Function /Script/AugmentedReality.ARObjectComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARObjectComponent, void, const FARObjectUpdatePayload&> UARObjectComponent = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UARObjectComponent, void, const FARObjectUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 1 }; 
 	// Function /Script/AugmentedReality.ARObjectComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARObjectComponent, void, const FARObjectUpdatePayload&> UARObjectComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARObjectComponent, void, const FARObjectUpdatePayload&> ReceiveAdd = { 0x2bbb090, 2 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARMeshUpdatePayload
@@ -1172,14 +1155,13 @@ class UARMeshComponent : public UARComponent
 public:
 	FARMeshUpdatePayload                               ReplicatedPayload;                                          // 0x02E0   (0x0060)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARMeshComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARMeshComponent, void, const FARMeshUpdatePayload> UARMeshComponent = { 0x383bf40, 0 }; 
+	constexpr static const FunctionPointer<UARMeshComponent, void, const FARMeshUpdatePayload> ServerUpdatePayload = { 0x383bf40, 0 }; 
 	// Function /Script/AugmentedReality.ARMeshComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARMeshComponent, void, const FARMeshUpdatePayload&> UARMeshComponent = { 0x2bbb090, 1 }; 
+	constexpr static const FunctionPointer<UARMeshComponent, void, const FARMeshUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 1 }; 
 	// Function /Script/AugmentedReality.ARMeshComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARMeshComponent, void, const FARMeshUpdatePayload&> UARMeshComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARMeshComponent, void, const FARMeshUpdatePayload&> ReceiveAdd = { 0x2bbb090, 2 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARGeoAnchorUpdatePayload
@@ -1204,16 +1186,15 @@ class UARGeoAnchorComponent : public UARComponent
 public:
 	FARGeoAnchorUpdatePayload                          ReplicatedPayload;                                          // 0x02E0   (0x0070)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARGeoAnchorComponent.SetGeoAnchorComponentDebugMode
-	constexpr static const FunctionPointer<UARGeoAnchorComponent, void, const EGeoAnchorComponentDebugMode> UARGeoAnchorComponent = { 0x383c7a0, 0 }; 
+	constexpr static const FunctionPointer<UARGeoAnchorComponent, void, const EGeoAnchorComponentDebugMode> SetGeoAnchorComponentDebugMode = { 0x383c7a0, 0 }; 
 	// Function /Script/AugmentedReality.ARGeoAnchorComponent.ServerUpdatePayload
-	constexpr static const FunctionPointer<UARGeoAnchorComponent, void, const FARGeoAnchorUpdatePayload> UARGeoAnchorComponent = { 0x383c620, 1 }; 
+	constexpr static const FunctionPointer<UARGeoAnchorComponent, void, const FARGeoAnchorUpdatePayload> ServerUpdatePayload = { 0x383c620, 1 }; 
 	// Function /Script/AugmentedReality.ARGeoAnchorComponent.ReceiveUpdate
-	constexpr static const FunctionPointer<UARGeoAnchorComponent, void, const FARGeoAnchorUpdatePayload&> UARGeoAnchorComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARGeoAnchorComponent, void, const FARGeoAnchorUpdatePayload&> ReceiveUpdate = { 0x2bbb090, 2 }; 
 	// Function /Script/AugmentedReality.ARGeoAnchorComponent.ReceiveAdd
-	constexpr static const FunctionPointer<UARGeoAnchorComponent, void, const FARGeoAnchorUpdatePayload&> UARGeoAnchorComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UARGeoAnchorComponent, void, const FARGeoAnchorUpdatePayload&> ReceiveAdd = { 0x2bbb090, 3 }; 
 };
 
 /// Class /Script/AugmentedReality.ARDependencyHandler
@@ -1222,18 +1203,17 @@ class UARDependencyHandler : public UObject
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARDependencyHandler.StartARSessionLatent
-	constexpr static const FunctionPointer<UARDependencyHandler, void, const UObject*, const UARSessionConfig*, const FLatentActionInfo> UARDependencyHandler = { 0x383d2d0, 0 }; 
+	constexpr static const FunctionPointer<UARDependencyHandler, void, const UObject*, const UARSessionConfig*, const FLatentActionInfo> StartARSessionLatent = { 0x383d2d0, 0 }; 
 	// Function /Script/AugmentedReality.ARDependencyHandler.RequestARSessionPermission
-	constexpr static const FunctionPointer<UARDependencyHandler, void, const UObject*, const UARSessionConfig*, const FLatentActionInfo, const EARServicePermissionRequestResult&> UARDependencyHandler = { 0x383d500, 1 }; 
+	constexpr static const FunctionPointer<UARDependencyHandler, void, const UObject*, const UARSessionConfig*, const FLatentActionInfo, const EARServicePermissionRequestResult&> RequestARSessionPermission = { 0x383d500, 1 }; 
 	// Function /Script/AugmentedReality.ARDependencyHandler.InstallARService
-	constexpr static const FunctionPointer<UARDependencyHandler, void, const UObject*, const FLatentActionInfo, const EARServiceInstallRequestResult&> UARDependencyHandler = { 0x383d790, 2 }; 
+	constexpr static const FunctionPointer<UARDependencyHandler, void, const UObject*, const FLatentActionInfo, const EARServiceInstallRequestResult&> InstallARService = { 0x383d790, 2 }; 
 	// Function /Script/AugmentedReality.ARDependencyHandler.GetARDependencyHandler
-	constexpr static const FunctionPointer<UARDependencyHandler, UARDependencyHandler*> UARDependencyHandler = { 0x383dbf0, 3 }; 
+	constexpr static const FunctionPointer<UARDependencyHandler, UARDependencyHandler*> GetARDependencyHandler = { 0x383dbf0, 3 }; 
 	// Function /Script/AugmentedReality.ARDependencyHandler.CheckARServiceAvailability
-	constexpr static const FunctionPointer<UARDependencyHandler, void, const UObject*, const FLatentActionInfo, const EARServiceAvailability&> UARDependencyHandler = { 0x383d9c0, 4 }; 
+	constexpr static const FunctionPointer<UARDependencyHandler, void, const UObject*, const FLatentActionInfo, const EARServiceAvailability&> CheckARServiceAvailability = { 0x383d9c0, 4 }; 
 };
 
 /// Class /Script/AugmentedReality.ARGeoTrackingSupport
@@ -1242,20 +1222,19 @@ class UARGeoTrackingSupport : public UObject
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingSupport
-	constexpr static const FunctionPointer<UARGeoTrackingSupport, UARGeoTrackingSupport*> UARGeoTrackingSupport = { 0x383ebf0, 0 }; 
+	constexpr static const FunctionPointer<UARGeoTrackingSupport, UARGeoTrackingSupport*> GetGeoTrackingSupport = { 0x383ebf0, 0 }; 
 	// Function /Script/AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingStateReason
-	constexpr static const FunctionPointer<UARGeoTrackingSupport, EARGeoTrackingStateReason> UARGeoTrackingSupport = { 0x3817070, 1 }; 
+	constexpr static const FunctionPointer<UARGeoTrackingSupport, EARGeoTrackingStateReason> GetGeoTrackingStateReason = { 0x3817070, 1 }; 
 	// Function /Script/AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingState
-	constexpr static const FunctionPointer<UARGeoTrackingSupport, EARGeoTrackingState> UARGeoTrackingSupport = { 0x38170a0, 2 }; 
+	constexpr static const FunctionPointer<UARGeoTrackingSupport, EARGeoTrackingState> GetGeoTrackingState = { 0x38170a0, 2 }; 
 	// Function /Script/AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingAccuracy
-	constexpr static const FunctionPointer<UARGeoTrackingSupport, EARGeoTrackingAccuracy> UARGeoTrackingSupport = { 0x383ebc0, 3 }; 
+	constexpr static const FunctionPointer<UARGeoTrackingSupport, EARGeoTrackingAccuracy> GetGeoTrackingAccuracy = { 0x383ebc0, 3 }; 
 	// Function /Script/AugmentedReality.ARGeoTrackingSupport.AddGeoAnchorAtLocationWithAltitude
-	constexpr static const FunctionPointer<UARGeoTrackingSupport, bool, const float, const float, const float, const FString> UARGeoTrackingSupport = { 0x383e6b0, 4 }; 
+	constexpr static const FunctionPointer<UARGeoTrackingSupport, bool, const float, const float, const float, const FString> AddGeoAnchorAtLocationWithAltitude = { 0x383e6b0, 4 }; 
 	// Function /Script/AugmentedReality.ARGeoTrackingSupport.AddGeoAnchorAtLocation
-	constexpr static const FunctionPointer<UARGeoTrackingSupport, bool, const float, const float, const FString> UARGeoTrackingSupport = { 0x383e970, 5 }; 
+	constexpr static const FunctionPointer<UARGeoTrackingSupport, bool, const float, const float, const FString> AddGeoAnchorAtLocation = { 0x383e970, 5 }; 
 };
 
 /// Class /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy
@@ -1267,14 +1246,13 @@ public:
 	FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x30];                                      // 0x0070   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.GeoTrackingAvailabilityDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy, void, const bool, const FString> UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy, void, const bool, const FString> GeoTrackingAvailabilityDelegate__DelegateSignature = { 0x2bbb090, 0 }; 
 	// Function /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.CheckGeoTrackingAvailabilityAtLocation
-	constexpr static const FunctionPointer<UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy, UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy*, const UObject*, const float, const float> UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy = { 0x383f090, 1 }; 
+	constexpr static const FunctionPointer<UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy, UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy*, const UObject*, const float, const float> CheckGeoTrackingAvailabilityAtLocation = { 0x383f090, 1 }; 
 	// Function /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.CheckGeoTrackingAvailability
-	constexpr static const FunctionPointer<UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy, UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy*, const UObject*> UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy = { 0x383f330, 2 }; 
+	constexpr static const FunctionPointer<UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy, UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy*, const UObject*> CheckGeoTrackingAvailability = { 0x383f330, 2 }; 
 };
 
 /// Class /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy
@@ -1286,12 +1264,11 @@ public:
 	FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x30];                                      // 0x0070   (0x0030)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy.GetGeoLocationDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UGetGeoLocationAsyncTaskBlueprintProxy, void, const float, const float, const float, const FString> UGetGeoLocationAsyncTaskBlueprintProxy = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UGetGeoLocationAsyncTaskBlueprintProxy, void, const float, const float, const float, const FString> GetGeoLocationDelegate__DelegateSignature = { 0x2bbb090, 0 }; 
 	// Function /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy.GetGeoLocationAtWorldPosition
-	constexpr static const FunctionPointer<UGetGeoLocationAsyncTaskBlueprintProxy, UGetGeoLocationAsyncTaskBlueprintProxy*, const UObject*, const FVector&> UGetGeoLocationAsyncTaskBlueprintProxy = { 0x383f820, 1 }; 
+	constexpr static const FunctionPointer<UGetGeoLocationAsyncTaskBlueprintProxy, UGetGeoLocationAsyncTaskBlueprintProxy*, const UObject*, const FVector&> GetGeoLocationAtWorldPosition = { 0x383f820, 1 }; 
 };
 
 /// Class /Script/AugmentedReality.ARLifeCycleComponent
@@ -1303,16 +1280,15 @@ public:
 	FMulticastInlineDelegate                           OnARActorToBeDestroyedDelegate;                             // 0x0270   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x10];                                      // 0x0280   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARLifeCycleComponent.ServerSpawnARActor
-	constexpr static const FunctionPointer<UARLifeCycleComponent, void, const UClass*, const FGuid> UARLifeCycleComponent = { 0x3840c60, 0 }; 
+	constexpr static const FunctionPointer<UARLifeCycleComponent, void, const UClass*, const FGuid> ServerSpawnARActor = { 0x3840c60, 0 }; 
 	// Function /Script/AugmentedReality.ARLifeCycleComponent.ServerDestroyARActor
-	constexpr static const FunctionPointer<UARLifeCycleComponent, void, const AARActor*> UARLifeCycleComponent = { 0x3840b50, 1 }; 
+	constexpr static const FunctionPointer<UARLifeCycleComponent, void, const AARActor*> ServerDestroyARActor = { 0x3840b50, 1 }; 
 	// Function /Script/AugmentedReality.ARLifeCycleComponent.InstanceARActorToBeDestroyedDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UARLifeCycleComponent, void, const AARActor*> UARLifeCycleComponent = { 0x2bbb090, 2 }; 
+	constexpr static const FunctionPointer<UARLifeCycleComponent, void, const AARActor*> InstanceARActorToBeDestroyedDelegate__DelegateSignature = { 0x2bbb090, 2 }; 
 	// Function /Script/AugmentedReality.ARLifeCycleComponent.InstanceARActorSpawnedDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UARLifeCycleComponent, void, const UClass*, const FGuid, const AARActor*> UARLifeCycleComponent = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UARLifeCycleComponent, void, const UClass*, const FGuid, const AARActor*> InstanceARActorSpawnedDelegate__DelegateSignature = { 0x2bbb090, 3 }; 
 };
 
 /// Class /Script/AugmentedReality.ARPin
@@ -1331,22 +1307,21 @@ public:
 	FMulticastInlineDelegate                           OnARTransformUpdated;                                       // 0x00D0   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x10];                                      // 0x00E0   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARPin.GetTrackingState
-	constexpr static const FunctionPointer<UARPin, EARTrackingState> UARPin = { 0x3842010, 0 }; 
+	constexpr static const FunctionPointer<UARPin, EARTrackingState> GetTrackingState = { 0x3842010, 0 }; 
 	// Function /Script/AugmentedReality.ARPin.GetTrackedGeometry
-	constexpr static const FunctionPointer<UARPin, UARTrackedGeometry*> UARPin = { 0x3841ff0, 1 }; 
+	constexpr static const FunctionPointer<UARPin, UARTrackedGeometry*> GetTrackedGeometry = { 0x3841ff0, 1 }; 
 	// Function /Script/AugmentedReality.ARPin.GetPinnedComponent
-	constexpr static const FunctionPointer<UARPin, USceneComponent*> UARPin = { 0x3841fd0, 2 }; 
+	constexpr static const FunctionPointer<UARPin, USceneComponent*> GetPinnedComponent = { 0x3841fd0, 2 }; 
 	// Function /Script/AugmentedReality.ARPin.GetLocalToWorldTransform
-	constexpr static const FunctionPointer<UARPin, FTransform> UARPin = { 0x3842030, 3 }; 
+	constexpr static const FunctionPointer<UARPin, FTransform> GetLocalToWorldTransform = { 0x3842030, 3 }; 
 	// Function /Script/AugmentedReality.ARPin.GetLocalToTrackingTransform
-	constexpr static const FunctionPointer<UARPin, FTransform> UARPin = { 0x3842090, 4 }; 
+	constexpr static const FunctionPointer<UARPin, FTransform> GetLocalToTrackingTransform = { 0x3842090, 4 }; 
 	// Function /Script/AugmentedReality.ARPin.GetDebugName
-	constexpr static const FunctionPointer<UARPin, FName> UARPin = { 0x3841d20, 5 }; 
+	constexpr static const FunctionPointer<UARPin, FName> GetDebugName = { 0x3841d20, 5 }; 
 	// Function /Script/AugmentedReality.ARPin.DebugDraw
-	constexpr static const FunctionPointer<UARPin, void, const UWorld*, const FLinearColor&, const float, const float> UARPin = { 0x3841d40, 6 }; 
+	constexpr static const FunctionPointer<UARPin, void, const UWorld*, const FLinearColor&, const float, const float> DebugDraw = { 0x3841d40, 6 }; 
 };
 
 /// Class /Script/AugmentedReality.ARSharedWorldGameMode
@@ -1357,16 +1332,15 @@ public:
 	int32_t                                            BufferSizePerChunk;                                         // 0x03B0   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x64];                                      // 0x03B4   (0x0064)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARSharedWorldGameMode.SetPreviewImageData
-	constexpr static const FunctionPointer<AARSharedWorldGameMode, void, const TArray<char>> AARSharedWorldGameMode = { 0x3844900, 0 }; 
+	constexpr static const FunctionPointer<AARSharedWorldGameMode, void, const TArray<char>> SetPreviewImageData = { 0x3844900, 0 }; 
 	// Function /Script/AugmentedReality.ARSharedWorldGameMode.SetARWorldSharingIsReady
-	constexpr static const FunctionPointer<AARSharedWorldGameMode, void> AARSharedWorldGameMode = { 0x3844750, 1 }; 
+	constexpr static const FunctionPointer<AARSharedWorldGameMode, void> SetARWorldSharingIsReady = { 0x3844750, 1 }; 
 	// Function /Script/AugmentedReality.ARSharedWorldGameMode.SetARSharedWorldData
-	constexpr static const FunctionPointer<AARSharedWorldGameMode, void, const TArray<char>> AARSharedWorldGameMode = { 0x3844780, 2 }; 
+	constexpr static const FunctionPointer<AARSharedWorldGameMode, void, const TArray<char>> SetARSharedWorldData = { 0x3844780, 2 }; 
 	// Function /Script/AugmentedReality.ARSharedWorldGameMode.GetARSharedWorldGameState
-	constexpr static const FunctionPointer<AARSharedWorldGameMode, AARSharedWorldGameState*> AARSharedWorldGameMode = { 0x3844730, 3 }; 
+	constexpr static const FunctionPointer<AARSharedWorldGameMode, AARSharedWorldGameState*> GetARSharedWorldGameState = { 0x3844730, 3 }; 
 };
 
 /// Class /Script/AugmentedReality.ARSharedWorldGameState
@@ -1382,10 +1356,9 @@ public:
 	int32_t                                            ARWorldBytesDelivered;                                      // 0x0364   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0368   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARSharedWorldGameState.K2_OnARWorldMapIsReady
-	constexpr static const FunctionPointer<AARSharedWorldGameState, void> AARSharedWorldGameState = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<AARSharedWorldGameState, void> K2_OnARWorldMapIsReady = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/AugmentedReality.ARSharedWorldPlayerController
@@ -1395,16 +1368,15 @@ class AARSharedWorldPlayerController : public APlayerController
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0668   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARSharedWorldPlayerController.ServerMarkReadyForReceiving
-	constexpr static const FunctionPointer<AARSharedWorldPlayerController, void> AARSharedWorldPlayerController = { 0x3845420, 0 }; 
+	constexpr static const FunctionPointer<AARSharedWorldPlayerController, void> ServerMarkReadyForReceiving = { 0x3845420, 0 }; 
 	// Function /Script/AugmentedReality.ARSharedWorldPlayerController.ClientUpdatePreviewImageData
-	constexpr static const FunctionPointer<AARSharedWorldPlayerController, void, const int32_t, const TArray<char>> AARSharedWorldPlayerController = { 0x38450c0, 1 }; 
+	constexpr static const FunctionPointer<AARSharedWorldPlayerController, void, const int32_t, const TArray<char>> ClientUpdatePreviewImageData = { 0x38450c0, 1 }; 
 	// Function /Script/AugmentedReality.ARSharedWorldPlayerController.ClientUpdateARWorldData
-	constexpr static const FunctionPointer<AARSharedWorldPlayerController, void, const int32_t, const TArray<char>> AARSharedWorldPlayerController = { 0x3844f00, 2 }; 
+	constexpr static const FunctionPointer<AARSharedWorldPlayerController, void, const int32_t, const TArray<char>> ClientUpdateARWorldData = { 0x3844f00, 2 }; 
 	// Function /Script/AugmentedReality.ARSharedWorldPlayerController.ClientInitSharedWorld
-	constexpr static const FunctionPointer<AARSharedWorldPlayerController, void, const int32_t, const int32_t> AARSharedWorldPlayerController = { 0x3845280, 3 }; 
+	constexpr static const FunctionPointer<AARSharedWorldPlayerController, void, const int32_t, const int32_t> ClientInitSharedWorld = { 0x3845280, 3 }; 
 };
 
 /// Class /Script/AugmentedReality.ARSkyLight
@@ -1415,10 +1387,9 @@ public:
 	class UAREnvironmentCaptureProbe*                  CaptureProbe;                                               // 0x02D8   (0x0008)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x02E0   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARSkyLight.SetEnvironmentCaptureProbe
-	constexpr static const FunctionPointer<AARSkyLight, void, const UAREnvironmentCaptureProbe*> AARSkyLight = { 0x3845720, 0 }; 
+	constexpr static const FunctionPointer<AARSkyLight, void, const UAREnvironmentCaptureProbe*> SetEnvironmentCaptureProbe = { 0x3845720, 0 }; 
 };
 
 /// Class /Script/AugmentedReality.ARTexture
@@ -1489,28 +1460,27 @@ public:
 	FName                                              DebugName;                                                  // 0x00E0   (0x0008)  
 	unsigned char                                      UnknownData09_7[0x10];                                      // 0x00E8   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARTrackedGeometry.IsTracked
-	constexpr static const FunctionPointer<UARTrackedGeometry, bool> UARTrackedGeometry = { 0x38476b0, 0 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, bool> IsTracked = { 0x38476b0, 0 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetUnderlyingMesh
-	constexpr static const FunctionPointer<UARTrackedGeometry, UMRMeshComponent*> UARTrackedGeometry = { 0x38475f0, 1 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, UMRMeshComponent*> GetUnderlyingMesh = { 0x38475f0, 1 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetTrackingState
-	constexpr static const FunctionPointer<UARTrackedGeometry, EARTrackingState> UARTrackedGeometry = { 0x3842010, 2 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, EARTrackingState> GetTrackingState = { 0x3842010, 2 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetObjectClassification
-	constexpr static const FunctionPointer<UARTrackedGeometry, EARObjectClassification> UARTrackedGeometry = { 0x38475d0, 3 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, EARObjectClassification> GetObjectClassification = { 0x38475d0, 3 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetName
-	constexpr static const FunctionPointer<UARTrackedGeometry, FString> UARTrackedGeometry = { 0x3847660, 4 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, FString> GetName = { 0x3847660, 4 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetLocalToWorldTransform
-	constexpr static const FunctionPointer<UARTrackedGeometry, FTransform> UARTrackedGeometry = { 0x38476e0, 5 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, FTransform> GetLocalToWorldTransform = { 0x38476e0, 5 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetLocalToTrackingTransform
-	constexpr static const FunctionPointer<UARTrackedGeometry, FTransform> UARTrackedGeometry = { 0x3842090, 6 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, FTransform> GetLocalToTrackingTransform = { 0x3842090, 6 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetLastUpdateTimestamp
-	constexpr static const FunctionPointer<UARTrackedGeometry, float> UARTrackedGeometry = { 0x3847610, 7 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, float> GetLastUpdateTimestamp = { 0x3847610, 7 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetLastUpdateFrameNumber
-	constexpr static const FunctionPointer<UARTrackedGeometry, int32_t> UARTrackedGeometry = { 0x3847640, 8 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, int32_t> GetLastUpdateFrameNumber = { 0x3847640, 8 }; 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetDebugName
-	constexpr static const FunctionPointer<UARTrackedGeometry, FName> UARTrackedGeometry = { 0x3847690, 9 }; 
+	constexpr static const FunctionPointer<UARTrackedGeometry, FName> GetDebugName = { 0x3847690, 9 }; 
 };
 
 /// Class /Script/AugmentedReality.ARPlaneGeometry
@@ -1526,18 +1496,17 @@ public:
 	TArray<FVector>                                    BoundaryPolygon;                                            // 0x0118   (0x0010)  
 	class UARPlaneGeometry*                            SubsumedBy;                                                 // 0x0128   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARPlaneGeometry.GetSubsumedBy
-	constexpr static const FunctionPointer<UARPlaneGeometry, UARPlaneGeometry*> UARPlaneGeometry = { 0x3847c90, 0 }; 
+	constexpr static const FunctionPointer<UARPlaneGeometry, UARPlaneGeometry*> GetSubsumedBy = { 0x3847c90, 0 }; 
 	// Function /Script/AugmentedReality.ARPlaneGeometry.GetOrientation
-	constexpr static const FunctionPointer<UARPlaneGeometry, EARPlaneOrientation> UARPlaneGeometry = { 0x3847c70, 1 }; 
+	constexpr static const FunctionPointer<UARPlaneGeometry, EARPlaneOrientation> GetOrientation = { 0x3847c70, 1 }; 
 	// Function /Script/AugmentedReality.ARPlaneGeometry.GetExtent
-	constexpr static const FunctionPointer<UARPlaneGeometry, FVector> UARPlaneGeometry = { 0x3847d70, 2 }; 
+	constexpr static const FunctionPointer<UARPlaneGeometry, FVector> GetExtent = { 0x3847d70, 2 }; 
 	// Function /Script/AugmentedReality.ARPlaneGeometry.GetCenter
-	constexpr static const FunctionPointer<UARPlaneGeometry, FVector> UARPlaneGeometry = { 0x3847da0, 3 }; 
+	constexpr static const FunctionPointer<UARPlaneGeometry, FVector> GetCenter = { 0x3847da0, 3 }; 
 	// Function /Script/AugmentedReality.ARPlaneGeometry.GetBoundaryPolygonInLocalSpace
-	constexpr static const FunctionPointer<UARPlaneGeometry, TArray<FVector>> UARPlaneGeometry = { 0x3847cb0, 4 }; 
+	constexpr static const FunctionPointer<UARPlaneGeometry, TArray<FVector>> GetBoundaryPolygonInLocalSpace = { 0x3847cb0, 4 }; 
 };
 
 /// Class /Script/AugmentedReality.ARTrackedPoint
@@ -1556,12 +1525,11 @@ public:
 	class UARCandidateImage*                           DetectedImage;                                              // 0x00F8   (0x0008)  
 	FVector2D                                          EstimatedSize;                                              // 0x0100   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARTrackedImage.GetEstimateSize
-	constexpr static const FunctionPointer<UARTrackedImage, FVector2D> UARTrackedImage = { 0x3848540, 0 }; 
+	constexpr static const FunctionPointer<UARTrackedImage, FVector2D> GetEstimateSize = { 0x3848540, 0 }; 
 	// Function /Script/AugmentedReality.ARTrackedImage.GetDetectedImage
-	constexpr static const FunctionPointer<UARTrackedImage, UARCandidateImage*> UARTrackedImage = { 0x3848570, 1 }; 
+	constexpr static const FunctionPointer<UARTrackedImage, UARCandidateImage*> GetDetectedImage = { 0x3848570, 1 }; 
 };
 
 /// Class /Script/AugmentedReality.ARTrackedQRCode
@@ -1587,16 +1555,15 @@ public:
 	FTransform                                         LeftEyeTransform;                                           // 0x0190   (0x0030)  
 	FTransform                                         RightEyeTransform;                                          // 0x01C0   (0x0030)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARFaceGeometry.GetWorldSpaceEyeTransform
-	constexpr static const FunctionPointer<UARFaceGeometry, FTransform, const EAREye> UARFaceGeometry = { 0x3848c70, 0 }; 
+	constexpr static const FunctionPointer<UARFaceGeometry, FTransform, const EAREye> GetWorldSpaceEyeTransform = { 0x3848c70, 0 }; 
 	// Function /Script/AugmentedReality.ARFaceGeometry.GetLocalSpaceEyeTransform
-	constexpr static const FunctionPointer<UARFaceGeometry, FTransform, const EAREye> UARFaceGeometry = { 0x3848d80, 1 }; 
+	constexpr static const FunctionPointer<UARFaceGeometry, FTransform, const EAREye> GetLocalSpaceEyeTransform = { 0x3848d80, 1 }; 
 	// Function /Script/AugmentedReality.ARFaceGeometry.GetBlendShapeValue
-	constexpr static const FunctionPointer<UARFaceGeometry, float, const EARFaceBlendShape> UARFaceGeometry = { 0x3848f80, 2 }; 
+	constexpr static const FunctionPointer<UARFaceGeometry, float, const EARFaceBlendShape> GetBlendShapeValue = { 0x3848f80, 2 }; 
 	// Function /Script/AugmentedReality.ARFaceGeometry.GetBlendShapes
-	constexpr static const FunctionPointer<UARFaceGeometry, TMap<EARFaceBlendShape, float>> UARFaceGeometry = { 0x3848e80, 3 }; 
+	constexpr static const FunctionPointer<UARFaceGeometry, TMap<EARFaceBlendShape, float>> GetBlendShapes = { 0x3848e80, 3 }; 
 };
 
 /// Class /Script/AugmentedReality.AREnvironmentCaptureProbe
@@ -1608,12 +1575,11 @@ public:
 	unsigned char                                      UnknownData01_6[0x4];                                       // 0x0104   (0x0004)  MISSED
 	class UAREnvironmentCaptureProbeTexture*           EnvironmentCaptureTexture;                                  // 0x0108   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.AREnvironmentCaptureProbe.GetExtent
-	constexpr static const FunctionPointer<UAREnvironmentCaptureProbe, FVector> UAREnvironmentCaptureProbe = { 0x3849550, 0 }; 
+	constexpr static const FunctionPointer<UAREnvironmentCaptureProbe, FVector> GetExtent = { 0x3849550, 0 }; 
 	// Function /Script/AugmentedReality.AREnvironmentCaptureProbe.GetEnvironmentCaptureTexture
-	constexpr static const FunctionPointer<UAREnvironmentCaptureProbe, UAREnvironmentCaptureProbeTexture*> UAREnvironmentCaptureProbe = { 0x3849530, 1 }; 
+	constexpr static const FunctionPointer<UAREnvironmentCaptureProbe, UAREnvironmentCaptureProbeTexture*> GetEnvironmentCaptureTexture = { 0x3849530, 1 }; 
 };
 
 /// Class /Script/AugmentedReality.ARTrackedObject
@@ -1623,10 +1589,9 @@ class UARTrackedObject : public UARTrackedGeometry
 public:
 	class UARCandidateObject*                          DetectedObject;                                             // 0x00F8   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARTrackedObject.GetDetectedObject
-	constexpr static const FunctionPointer<UARTrackedObject, UARCandidateObject*> UARTrackedObject = { 0x3848570, 0 }; 
+	constexpr static const FunctionPointer<UARTrackedObject, UARCandidateObject*> GetDetectedObject = { 0x3848570, 0 }; 
 };
 
 /// Struct /Script/AugmentedReality.ARSkeletonDefinition
@@ -1658,10 +1623,9 @@ public:
 	FARPose3D                                          TrackedPose;                                                // 0x00F8   (0x0050)  
 	unsigned char                                      UnknownData01_7[0x8];                                       // 0x0148   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARTrackedPose.GetTrackedPoseData
-	constexpr static const FunctionPointer<UARTrackedPose, FARPose3D> UARTrackedPose = { 0x3849cb0, 0 }; 
+	constexpr static const FunctionPointer<UARTrackedPose, FARPose3D> GetTrackedPoseData = { 0x3849cb0, 0 }; 
 };
 
 /// Class /Script/AugmentedReality.ARMeshGeometry
@@ -1671,10 +1635,9 @@ class UARMeshGeometry : public UARTrackedGeometry
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x00F8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARMeshGeometry.GetObjectClassificationAtLocation
-	constexpr static const FunctionPointer<UARMeshGeometry, bool, const FVector&, const EARObjectClassification&, const FVector&, const float> UARMeshGeometry = { 0x384a0c0, 0 }; 
+	constexpr static const FunctionPointer<UARMeshGeometry, bool, const FVector&, const EARObjectClassification&, const FVector&, const float> GetObjectClassificationAtLocation = { 0x384a0c0, 0 }; 
 };
 
 /// Class /Script/AugmentedReality.ARGeoAnchor
@@ -1684,16 +1647,15 @@ class UARGeoAnchor : public UARTrackedGeometry
 public:
 	unsigned char                                      UnknownData01_1[0x18];                                      // 0x00F8   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARGeoAnchor.GetLongitude
-	constexpr static const FunctionPointer<UARGeoAnchor, float> UARGeoAnchor = { 0x384a770, 0 }; 
+	constexpr static const FunctionPointer<UARGeoAnchor, float> GetLongitude = { 0x384a770, 0 }; 
 	// Function /Script/AugmentedReality.ARGeoAnchor.GetLatitude
-	constexpr static const FunctionPointer<UARGeoAnchor, float> UARGeoAnchor = { 0x384a750, 1 }; 
+	constexpr static const FunctionPointer<UARGeoAnchor, float> GetLatitude = { 0x384a750, 1 }; 
 	// Function /Script/AugmentedReality.ARGeoAnchor.GetAltitudeSource
-	constexpr static const FunctionPointer<UARGeoAnchor, EARAltitudeSource> UARGeoAnchor = { 0x384a710, 2 }; 
+	constexpr static const FunctionPointer<UARGeoAnchor, EARAltitudeSource> GetAltitudeSource = { 0x384a710, 2 }; 
 	// Function /Script/AugmentedReality.ARGeoAnchor.GetAltitudeMeters
-	constexpr static const FunctionPointer<UARGeoAnchor, float> UARGeoAnchor = { 0x384a730, 3 }; 
+	constexpr static const FunctionPointer<UARGeoAnchor, float> GetAltitudeMeters = { 0x384a730, 3 }; 
 };
 
 /// Class /Script/AugmentedReality.ARTrackableNotifyComponent
@@ -1741,20 +1703,19 @@ public:
 	FBox                                               BoundingBox;                                                // 0x0050   (0x001C)  
 	unsigned char                                      UnknownData01_7[0x4];                                       // 0x006C   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/AugmentedReality.ARCandidateObject.SetFriendlyName
-	constexpr static const FunctionPointer<UARCandidateObject, void, const FString> UARCandidateObject = { 0x384cd40, 0 }; 
+	constexpr static const FunctionPointer<UARCandidateObject, void, const FString> SetFriendlyName = { 0x384cd40, 0 }; 
 	// Function /Script/AugmentedReality.ARCandidateObject.SetCandidateObjectData
-	constexpr static const FunctionPointer<UARCandidateObject, void, const TArray<char>&> UARCandidateObject = { 0x384ceb0, 1 }; 
+	constexpr static const FunctionPointer<UARCandidateObject, void, const TArray<char>&> SetCandidateObjectData = { 0x384ceb0, 1 }; 
 	// Function /Script/AugmentedReality.ARCandidateObject.SetBoundingBox
-	constexpr static const FunctionPointer<UARCandidateObject, void, const FBox&> UARCandidateObject = { 0x384cc20, 2 }; 
+	constexpr static const FunctionPointer<UARCandidateObject, void, const FBox&> SetBoundingBox = { 0x384cc20, 2 }; 
 	// Function /Script/AugmentedReality.ARCandidateObject.GetFriendlyName
-	constexpr static const FunctionPointer<UARCandidateObject, FString> UARCandidateObject = { 0x384ce80, 3 }; 
+	constexpr static const FunctionPointer<UARCandidateObject, FString> GetFriendlyName = { 0x384ce80, 3 }; 
 	// Function /Script/AugmentedReality.ARCandidateObject.GetCandidateObjectData
-	constexpr static const FunctionPointer<UARCandidateObject, TArray<char>> UARCandidateObject = { 0x384cfa0, 4 }; 
+	constexpr static const FunctionPointer<UARCandidateObject, TArray<char>> GetCandidateObjectData = { 0x384cfa0, 4 }; 
 	// Function /Script/AugmentedReality.ARCandidateObject.GetBoundingBox
-	constexpr static const FunctionPointer<UARCandidateObject, FBox> UARCandidateObject = { 0x384cd10, 5 }; 
+	constexpr static const FunctionPointer<UARCandidateObject, FBox> GetBoundingBox = { 0x384cd10, 5 }; 
 };
 
 /// Struct /Script/AugmentedReality.TrackedGeometryGroup

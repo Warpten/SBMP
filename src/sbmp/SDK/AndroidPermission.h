@@ -27,12 +27,11 @@ class UAndroidPermissionFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission
-	constexpr static const FunctionPointer<UAndroidPermissionFunctionLibrary, bool, const FString> UAndroidPermissionFunctionLibrary = { 0x19067c0, 0 }; 
+	constexpr static const FunctionPointer<UAndroidPermissionFunctionLibrary, bool, const FString> CheckPermission = { 0x19067c0, 0 }; 
 	// Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions
-	constexpr static const FunctionPointer<UAndroidPermissionFunctionLibrary, UAndroidPermissionCallbackProxy*, const TArray<FString>&> UAndroidPermissionFunctionLibrary = { 0x1970c10, 1 }; 
+	constexpr static const FunctionPointer<UAndroidPermissionFunctionLibrary, UAndroidPermissionCallbackProxy*, const TArray<FString>&> AcquirePermissions = { 0x1970c10, 1 }; 
 };
 
 #pragma pack(pop)

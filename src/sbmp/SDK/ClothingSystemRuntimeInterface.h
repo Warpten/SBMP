@@ -32,30 +32,29 @@ class UClothingSimulationInteractor : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetAnimDriveSpringStiffness
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, void, const float> UClothingSimulationInteractor = { 0x3f064d0, 0 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, void, const float> SetAnimDriveSpringStiffness = { 0x3f064d0, 0 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.PhysicsAssetUpdated
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, void> UClothingSimulationInteractor = { 0x3817110, 1 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, void> PhysicsAssetUpdated = { 0x3817110, 1 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetSimulationTime
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, float> UClothingSimulationInteractor = { 0x3f062a0, 2 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, float> GetSimulationTime = { 0x3f062a0, 2 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumSubsteps
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> UClothingSimulationInteractor = { 0x3f062e0, 3 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> GetNumSubsteps = { 0x3f062e0, 3 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumKinematicParticles
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> UClothingSimulationInteractor = { 0x3f06370, 4 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> GetNumKinematicParticles = { 0x3f06370, 4 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumIterations
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> UClothingSimulationInteractor = { 0x3f06310, 5 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> GetNumIterations = { 0x3f06310, 5 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumDynamicParticles
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> UClothingSimulationInteractor = { 0x3f06340, 6 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> GetNumDynamicParticles = { 0x3f06340, 6 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumCloths
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> UClothingSimulationInteractor = { 0x3f063a0, 7 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, int32_t> GetNumCloths = { 0x3f063a0, 7 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.EnableGravityOverride
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, void, const FVector&> UClothingSimulationInteractor = { 0x3f063f0, 8 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, void, const FVector&> EnableGravityOverride = { 0x3f063f0, 8 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.DisableGravityOverride
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, void> UClothingSimulationInteractor = { 0x3f063d0, 9 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, void> DisableGravityOverride = { 0x3f063d0, 9 }; 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.ClothConfigUpdated
-	constexpr static const FunctionPointer<UClothingSimulationInteractor, void> UClothingSimulationInteractor = { 0x38170f0, 10 }; 
+	constexpr static const FunctionPointer<UClothingSimulationInteractor, void> ClothConfigUpdated = { 0x38170f0, 10 }; 
 };
 
 /// Class /Script/ClothingSystemRuntimeInterface.ClothSharedSimConfigBase

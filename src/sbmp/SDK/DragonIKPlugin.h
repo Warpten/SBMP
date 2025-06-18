@@ -61,16 +61,15 @@ class UDragonIK_Library : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/DragonIKPlugin.DragonIK_Library.QuatLookXatLocation
-	constexpr static const FunctionPointer<UDragonIK_Library, FTransform, const FTransform&, const FVector&> UDragonIK_Library = { 0x13264e0, 0 }; 
+	constexpr static const FunctionPointer<UDragonIK_Library, FTransform, const FTransform&, const FVector&> QuatLookXatLocation = { 0x13264e0, 0 }; 
 	// Function /Script/DragonIKPlugin.DragonIK_Library.LookAtVector_V2
-	constexpr static const FunctionPointer<UDragonIK_Library, FRotator, const FVector, const FVector, const FVector> UDragonIK_Library = { 0x13266c0, 1 }; 
+	constexpr static const FunctionPointer<UDragonIK_Library, FRotator, const FVector, const FVector, const FVector> LookAtVector_V2 = { 0x13266c0, 1 }; 
 	// Function /Script/DragonIKPlugin.DragonIK_Library.LookAtRotation_V3
-	constexpr static const FunctionPointer<UDragonIK_Library, FRotator, const FVector, const FVector, const FVector> UDragonIK_Library = { 0x13262b0, 2 }; 
+	constexpr static const FunctionPointer<UDragonIK_Library, FRotator, const FVector, const FVector, const FVector> LookAtRotation_V3 = { 0x13262b0, 2 }; 
 	// Function /Script/DragonIKPlugin.DragonIK_Library.CustomLookRotation
-	constexpr static const FunctionPointer<UDragonIK_Library, FRotator, const FVector, const FVector> UDragonIK_Library = { 0x1326900, 3 }; 
+	constexpr static const FunctionPointer<UDragonIK_Library, FRotator, const FVector, const FVector> CustomLookRotation = { 0x1326900, 3 }; 
 };
 
 /// Struct /Script/DragonIKPlugin.AnimNode_DragonControlBase

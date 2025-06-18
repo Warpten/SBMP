@@ -70,68 +70,67 @@ class UBlueprintGameplayTagLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.RemoveGameplayTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3ea89e0, 0 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTag> RemoveGameplayTag = { 0x3ea89e0, 0 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.NotEqual_TagTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FString> UBlueprintGameplayTagLibrary = { 0x3ea7190, 1 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FString> NotEqual_TagTag = { 0x3ea7190, 1 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.NotEqual_TagContainerTagContainer
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer, const FString> UBlueprintGameplayTagLibrary = { 0x3ea6ef0, 2 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer, const FString> NotEqual_TagContainerTagContainer = { 0x3ea6ef0, 2 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.NotEqual_GameplayTagContainer
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&> UBlueprintGameplayTagLibrary = { 0x3ea8320, 3 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&> NotEqual_GameplayTagContainer = { 0x3ea8320, 3 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.NotEqual_GameplayTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3eaa2e0, 4 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag> NotEqual_GameplayTag = { 0x3eaa2e0, 4 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MatchesTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag, const bool> UBlueprintGameplayTagLibrary = { 0x3eaa850, 5 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag, const bool> MatchesTag = { 0x3eaa850, 5 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MatchesAnyTags
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTagContainer&, const bool> UBlueprintGameplayTagLibrary = { 0x3eaa5c0, 6 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTagContainer&, const bool> MatchesAnyTags = { 0x3eaa5c0, 6 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeLiteralGameplayTagContainer
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const FGameplayTagContainer> UBlueprintGameplayTagLibrary = { 0x3ea80d0, 7 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const FGameplayTagContainer> MakeLiteralGameplayTagContainer = { 0x3ea80d0, 7 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeLiteralGameplayTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTag, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3eaa040, 8 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTag, const FGameplayTag> MakeLiteralGameplayTag = { 0x3eaa040, 8 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagQuery
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagQuery, const FGameplayTagQuery> UBlueprintGameplayTagLibrary = { 0x3ea78a0, 9 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagQuery, const FGameplayTagQuery> MakeGameplayTagQuery = { 0x3ea78a0, 9 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3ea7d80, 10 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const FGameplayTag> MakeGameplayTagContainerFromTag = { 0x3ea7d80, 10 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromArray
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const TArray<FGameplayTag>&> UBlueprintGameplayTagLibrary = { 0x3ea7f00, 11 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FGameplayTagContainer, const TArray<FGameplayTag>&> MakeGameplayTagContainerFromArray = { 0x3ea7f00, 11 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.IsTagQueryEmpty
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagQuery&> UBlueprintGameplayTagLibrary = { 0x3ea94d0, 12 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagQuery&> IsTagQueryEmpty = { 0x3ea94d0, 12 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.IsGameplayTagValid
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3eaa1f0, 13 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag> IsGameplayTagValid = { 0x3eaa1f0, 13 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.HasTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTag, const bool> UBlueprintGameplayTagLibrary = { 0x3ea9c70, 14 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTag, const bool> HasTag = { 0x3ea9c70, 14 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.HasAnyTags
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&, const bool> UBlueprintGameplayTagLibrary = { 0x3ea9940, 15 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&, const bool> HasAnyTags = { 0x3ea9940, 15 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.HasAllTags
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&, const bool> UBlueprintGameplayTagLibrary = { 0x3ea9610, 16 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&, const bool> HasAllTags = { 0x3ea9610, 16 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.HasAllMatchingGameplayTags
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const TScriptInterface<Class>, const FGameplayTagContainer&> UBlueprintGameplayTagLibrary = { 0x3ea7620, 17 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const TScriptInterface<Class>, const FGameplayTagContainer&> HasAllMatchingGameplayTags = { 0x3ea7620, 17 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetTagName
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FName, const FGameplayTag&> UBlueprintGameplayTagLibrary = { 0x3eaa110, 18 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FName, const FGameplayTag&> GetTagName = { 0x3eaa110, 18 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetNumGameplayTagsInContainer
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, int32_t, const FGameplayTagContainer&> UBlueprintGameplayTagLibrary = { 0x3ea9f30, 19 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, int32_t, const FGameplayTagContainer&> GetNumGameplayTagsInContainer = { 0x3ea9f30, 19 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetDebugStringFromGameplayTagContainer
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FString, const FGameplayTagContainer&> UBlueprintGameplayTagLibrary = { 0x3ea6da0, 20 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FString, const FGameplayTagContainer&> GetDebugStringFromGameplayTagContainer = { 0x3ea6da0, 20 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetDebugStringFromGameplayTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FString, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3ea6c10, 21 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, FString, const FGameplayTag> GetDebugStringFromGameplayTag = { 0x3ea6c10, 21 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.GetAllActorsOfClassMatchingTagQuery
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const UObject*, const UClass*, const FGameplayTagQuery&, const TArray<AActor*>&> UBlueprintGameplayTagLibrary = { 0x3ea8da0, 22 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const UObject*, const UClass*, const FGameplayTagQuery&, const TArray<AActor*>&> GetAllActorsOfClassMatchingTagQuery = { 0x3ea8da0, 22 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.EqualEqual_GameplayTagContainer
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&> UBlueprintGameplayTagLibrary = { 0x3ea8560, 23 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagContainer&> EqualEqual_GameplayTagContainer = { 0x3ea8560, 23 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.EqualEqual_GameplayTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3eaa450, 24 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTag, const FGameplayTag> EqualEqual_GameplayTag = { 0x3eaa450, 24 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.DoesTagAssetInterfaceHaveTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const TScriptInterface<Class>, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3ea73d0, 25 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const TScriptInterface<Class>, const FGameplayTag> DoesTagAssetInterfaceHaveTag = { 0x3ea73d0, 25 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.DoesContainerMatchTagQuery
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagQuery&> UBlueprintGameplayTagLibrary = { 0x3ea92a0, 26 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, bool, const FGameplayTagContainer&, const FGameplayTagQuery&> DoesContainerMatchTagQuery = { 0x3ea92a0, 26 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.BreakGameplayTagContainer
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const TArray<FGameplayTag>&> UBlueprintGameplayTagLibrary = { 0x3ea7bb0, 27 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const TArray<FGameplayTag>&> BreakGameplayTagContainer = { 0x3ea7bb0, 27 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.AppendGameplayTagContainers
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const FGameplayTagContainer&> UBlueprintGameplayTagLibrary = { 0x3ea87a0, 28 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const FGameplayTagContainer&> AppendGameplayTagContainers = { 0x3ea87a0, 28 }; 
 	// Function /Script/GameplayTags.BlueprintGameplayTagLibrary.AddGameplayTag
-	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const FGameplayTag> UBlueprintGameplayTagLibrary = { 0x3ea8be0, 29 }; 
+	constexpr static const FunctionPointer<UBlueprintGameplayTagLibrary, void, const FGameplayTagContainer&, const FGameplayTag> AddGameplayTag = { 0x3ea8be0, 29 }; 
 };
 
 /// Class /Script/GameplayTags.GameplayTagAssetInterface
@@ -140,16 +139,15 @@ class UGameplayTagAssetInterface : public UInterface
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
-	constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTag> UGameplayTagAssetInterface = { 0x3eab5d0, 0 }; 
+	constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTag> HasMatchingGameplayTag = { 0x3eab5d0, 0 }; 
 	// Function /Script/GameplayTags.GameplayTagAssetInterface.HasAnyMatchingGameplayTags
-	constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTagContainer&> UGameplayTagAssetInterface = { 0x3eab390, 1 }; 
+	constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTagContainer&> HasAnyMatchingGameplayTags = { 0x3eab390, 1 }; 
 	// Function /Script/GameplayTags.GameplayTagAssetInterface.HasAllMatchingGameplayTags
-	constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTagContainer&> UGameplayTagAssetInterface = { 0x3eab4b0, 2 }; 
+	constexpr static const FunctionPointer<UGameplayTagAssetInterface, bool, const FGameplayTagContainer&> HasAllMatchingGameplayTags = { 0x3eab4b0, 2 }; 
 	// Function /Script/GameplayTags.GameplayTagAssetInterface.GetOwnedGameplayTags
-	constexpr static const FunctionPointer<UGameplayTagAssetInterface, void, const FGameplayTagContainer&> UGameplayTagAssetInterface = { 0x3eab6c0, 3 }; 
+	constexpr static const FunctionPointer<UGameplayTagAssetInterface, void, const FGameplayTagContainer&> GetOwnedGameplayTags = { 0x3eab6c0, 3 }; 
 };
 
 /// Struct /Script/GameplayTags.GameplayTag

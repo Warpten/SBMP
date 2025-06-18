@@ -512,10 +512,9 @@ class UModularSynthLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Synthesis.ModularSynthLibrary.AddModularSynthPresetToBankAsset
-	constexpr static const FunctionPointer<UModularSynthLibrary, void, const UModularSynthPresetBank*, const FModularSynthPreset&, const FString> UModularSynthLibrary = { 0x19d5de0, 0 }; 
+	constexpr static const FunctionPointer<UModularSynthLibrary, void, const UModularSynthPresetBank*, const FModularSynthPreset&, const FString> AddModularSynthPresetToBankAsset = { 0x19d5de0, 0 }; 
 };
 
 /// Class /Script/Synthesis.ModularSynthComponent
@@ -526,126 +525,125 @@ public:
 	int32_t                                            VoiceCount;                                                 // 0x0730   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x6BC];                                     // 0x0734   (0x06BC)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.ModularSynthComponent.SetSynthPreset
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const FModularSynthPreset&> UModularSynthComponent = { 0x19d6870, 0 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const FModularSynthPreset&> SetSynthPreset = { 0x19d6870, 0 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetSustainGain
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d88c0, 1 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetSustainGain = { 0x19d88c0, 1 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetStereoDelayWetlevel
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d6fe0, 2 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetStereoDelayWetlevel = { 0x19d6fe0, 2 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetStereoDelayTime
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d7180, 3 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetStereoDelayTime = { 0x19d7180, 3 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetStereoDelayRatio
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d6f10, 4 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetStereoDelayRatio = { 0x19d6f10, 4 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetStereoDelayMode
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthStereoDelayMode> UModularSynthComponent = { 0x19d72c0, 5 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthStereoDelayMode> SetStereoDelayMode = { 0x19d72c0, 5 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetStereoDelayIsEnabled
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19d7390, 6 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetStereoDelayIsEnabled = { 0x19d7390, 6 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetStereoDelayFeedback
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d70b0, 7 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetStereoDelayFeedback = { 0x19d70b0, 7 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetSpread
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d9950, 8 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetSpread = { 0x19d9950, 8 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetReleaseTime
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d87f0, 9 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetReleaseTime = { 0x19d87f0, 9 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetPortamento
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d9f00, 10 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetPortamento = { 0x19d9f00, 10 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetPitchBend
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19da040, 11 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetPitchBend = { 0x19da040, 11 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetPan
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d9a20, 12 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetPan = { 0x19d9a20, 12 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscType
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const ESynth1OscType> UModularSynthComponent = { 0x19da6b0, 13 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const ESynth1OscType> SetOscType = { 0x19da6b0, 13 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscSync
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19d9b60, 14 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetOscSync = { 0x19d9b60, 14 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscSemitones
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19da2f0, 15 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetOscSemitones = { 0x19da2f0, 15 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscPulsewidth
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19d9d90, 16 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetOscPulsewidth = { 0x19d9d90, 16 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscOctave
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19da4d0, 17 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetOscOctave = { 0x19da4d0, 17 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscGainMod
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19daa00, 18 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetOscGainMod = { 0x19daa00, 18 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscGain
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19dabe0, 19 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetOscGain = { 0x19dabe0, 19 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscFrequencyMod
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19da820, 20 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetOscFrequencyMod = { 0x19da820, 20 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetOscCents
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19da180, 21 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetOscCents = { 0x19da180, 21 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvSustainGain
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d7db0, 22 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetModEnvSustainGain = { 0x19d7db0, 22 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvReleaseTime
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d7c70, 23 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetModEnvReleaseTime = { 0x19d7c70, 23 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvPatch
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthModEnvPatch> UModularSynthComponent = { 0x19d86a0, 24 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthModEnvPatch> SetModEnvPatch = { 0x19d86a0, 24 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvInvert
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19d8400, 25 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetModEnvInvert = { 0x19d8400, 25 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvDepth
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d8170, 26 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetModEnvDepth = { 0x19d8170, 26 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvDecayTime
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d7ef0, 27 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetModEnvDecayTime = { 0x19d7ef0, 27 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvBiasPatch
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthModEnvBiasPatch> UModularSynthComponent = { 0x19d8550, 28 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthModEnvBiasPatch> SetModEnvBiasPatch = { 0x19d8550, 28 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvBiasInvert
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19d82b0, 29 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetModEnvBiasInvert = { 0x19d82b0, 29 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetModEnvAttackTime
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d8030, 30 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetModEnvAttackTime = { 0x19d8030, 30 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetLFOType
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const ESynthLFOType> UModularSynthComponent = { 0x19d8fe0, 31 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const ESynthLFOType> SetLFOType = { 0x19d8fe0, 31 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetLFOPatch
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const ESynthLFOPatchType> UModularSynthComponent = { 0x19d8c00, 32 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const ESynthLFOPatchType> SetLFOPatch = { 0x19d8c00, 32 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetLFOMode
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const ESynthLFOMode> UModularSynthComponent = { 0x19d8df0, 33 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const ESynthLFOMode> SetLFOMode = { 0x19d8df0, 33 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetLFOGainMod
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19d91d0, 34 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetLFOGainMod = { 0x19d91d0, 34 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetLFOGain
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19d93b0, 35 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetLFOGain = { 0x19d93b0, 35 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetLFOFrequencyMod
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19d9590, 36 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetLFOFrequencyMod = { 0x19d9590, 36 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetLFOFrequency
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> UModularSynthComponent = { 0x19d9770, 37 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const int32_t, const float> SetLFOFrequency = { 0x19d9770, 37 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetGainDb
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d8b30, 38 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetGainDb = { 0x19d8b30, 38 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetFilterType
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthFilterType> UModularSynthComponent = { 0x19d7540, 39 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthFilterType> SetFilterType = { 0x19d7540, 39 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetFilterQMod
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d7690, 40 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetFilterQMod = { 0x19d7690, 40 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetFilterQ
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d77d0, 41 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetFilterQ = { 0x19d77d0, 41 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetFilterFrequencyMod
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d78a0, 42 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetFilterFrequencyMod = { 0x19d78a0, 42 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetFilterFrequency
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d79e0, 43 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetFilterFrequency = { 0x19d79e0, 43 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetFilterAlgorithm
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthFilterAlgorithm> UModularSynthComponent = { 0x19d7470, 44 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const ESynthFilterAlgorithm> SetFilterAlgorithm = { 0x19d7470, 44 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetEnableUnison
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19d9cb0, 45 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetEnableUnison = { 0x19d9cb0, 45 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetEnableRetrigger
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19d7ab0, 46 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetEnableRetrigger = { 0x19d7ab0, 46 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetEnablePolyphony
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19dadc0, 47 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetEnablePolyphony = { 0x19dadc0, 47 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetEnablePatch
-	constexpr static const FunctionPointer<UModularSynthComponent, bool, const FPatchId, const bool> UModularSynthComponent = { 0x19d63b0, 48 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, bool, const FPatchId, const bool> SetEnablePatch = { 0x19d63b0, 48 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetEnableLegato
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19d7b90, 49 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetEnableLegato = { 0x19d7b90, 49 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetDecayTime
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d8990, 50 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetDecayTime = { 0x19d8990, 50 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetChorusFrequency
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d6a70, 51 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetChorusFrequency = { 0x19d6a70, 51 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetChorusFeedback
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d6bb0, 52 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetChorusFeedback = { 0x19d6bb0, 52 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetChorusEnabled
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> UModularSynthComponent = { 0x19d6e30, 53 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const bool> SetChorusEnabled = { 0x19d6e30, 53 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetChorusDepth
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d6cf0, 54 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetChorusDepth = { 0x19d6cf0, 54 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.SetAttackTime
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> UModularSynthComponent = { 0x19d8a60, 55 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float> SetAttackTime = { 0x19d8a60, 55 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.NoteOn
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float, const int32_t, const float> UModularSynthComponent = { 0x19db120, 56 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float, const int32_t, const float> NoteOn = { 0x19db120, 56 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.NoteOff
-	constexpr static const FunctionPointer<UModularSynthComponent, void, const float, const bool, const bool> UModularSynthComponent = { 0x19daea0, 57 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, void, const float, const bool, const bool> NoteOff = { 0x19daea0, 57 }; 
 	// Function /Script/Synthesis.ModularSynthComponent.CreatePatch
-	constexpr static const FunctionPointer<UModularSynthComponent, FPatchId, const ESynth1PatchSource, const TArray<FSynth1PatchCable>&, const bool> UModularSynthComponent = { 0x19d65d0, 58 }; 
+	constexpr static const FunctionPointer<UModularSynthComponent, FPatchId, const ESynth1PatchSource, const TArray<FSynth1PatchCable>&, const bool> CreatePatch = { 0x19d65d0, 58 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectBitCrusherSettings
@@ -668,20 +666,19 @@ public:
 	unsigned char                                      UnknownData01_8[0x58];                                      // 0x0068   (0x0058)  MISSED
 	FSourceEffectBitCrusherSettings                    Settings;                                                   // 0x00C0   (0x0030)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectBitCrusherPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const FSourceEffectBitCrusherBaseSettings&> USourceEffectBitCrusherPreset = { 0x19dda80, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const FSourceEffectBitCrusherBaseSettings&> SetSettings = { 0x19dda80, 0 }; 
 	// Function /Script/Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator
-	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const USoundModulatorBase*> USourceEffectBitCrusherPreset = { 0x19ddba0, 1 }; 
+	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const USoundModulatorBase*> SetSampleRateModulator = { 0x19ddba0, 1 }; 
 	// Function /Script/Synthesis.SourceEffectBitCrusherPreset.SetSampleRate
-	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const float> USourceEffectBitCrusherPreset = { 0x19ddca0, 2 }; 
+	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const float> SetSampleRate = { 0x19ddca0, 2 }; 
 	// Function /Script/Synthesis.SourceEffectBitCrusherPreset.SetModulationSettings
-	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const FSourceEffectBitCrusherSettings&> USourceEffectBitCrusherPreset = { 0x19dd930, 3 }; 
+	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const FSourceEffectBitCrusherSettings&> SetModulationSettings = { 0x19dd930, 3 }; 
 	// Function /Script/Synthesis.SourceEffectBitCrusherPreset.SetBits
-	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const float> USourceEffectBitCrusherPreset = { 0x19ddea0, 4 }; 
+	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const float> SetBits = { 0x19ddea0, 4 }; 
 	// Function /Script/Synthesis.SourceEffectBitCrusherPreset.SetBitModulator
-	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const USoundModulatorBase*> USourceEffectBitCrusherPreset = { 0x19ddda0, 5 }; 
+	constexpr static const FunctionPointer<USourceEffectBitCrusherPreset, void, const USoundModulatorBase*> SetBitModulator = { 0x19ddda0, 5 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectChorusSettings
@@ -710,36 +707,35 @@ public:
 	unsigned char                                      UnknownData01_8[0xA0];                                      // 0x0068   (0x00A0)  MISSED
 	FSourceEffectChorusSettings                        Settings;                                                   // 0x0108   (0x0078)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetWetModulator
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> USourceEffectChorusPreset = { 0x19df050, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> SetWetModulator = { 0x19df050, 0 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetWet
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> USourceEffectChorusPreset = { 0x19df150, 1 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> SetWet = { 0x19df150, 1 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetSpreadModulator
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> USourceEffectChorusPreset = { 0x19dec50, 2 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> SetSpreadModulator = { 0x19dec50, 2 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetSpread
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> USourceEffectChorusPreset = { 0x19ded50, 3 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> SetSpread = { 0x19ded50, 3 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const FSourceEffectChorusBaseSettings&> USourceEffectChorusPreset = { 0x19deb20, 4 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const FSourceEffectChorusBaseSettings&> SetSettings = { 0x19deb20, 4 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetModulationSettings
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const FSourceEffectChorusSettings&> USourceEffectChorusPreset = { 0x19de960, 5 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const FSourceEffectChorusSettings&> SetModulationSettings = { 0x19de960, 5 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetFrequencyModulator
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> USourceEffectChorusPreset = { 0x19df250, 6 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> SetFrequencyModulator = { 0x19df250, 6 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetFrequency
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> USourceEffectChorusPreset = { 0x19df350, 7 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> SetFrequency = { 0x19df350, 7 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetFeedbackModulator
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> USourceEffectChorusPreset = { 0x19df450, 8 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> SetFeedbackModulator = { 0x19df450, 8 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetFeedback
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> USourceEffectChorusPreset = { 0x19df550, 9 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> SetFeedback = { 0x19df550, 9 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetDryModulator
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> USourceEffectChorusPreset = { 0x19dee50, 10 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> SetDryModulator = { 0x19dee50, 10 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetDry
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> USourceEffectChorusPreset = { 0x19def50, 11 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> SetDry = { 0x19def50, 11 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetDepthModulator
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> USourceEffectChorusPreset = { 0x19df650, 12 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const USoundModulatorBase*> SetDepthModulator = { 0x19df650, 12 }; 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetDepth
-	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> USourceEffectChorusPreset = { 0x19df750, 13 }; 
+	constexpr static const FunctionPointer<USourceEffectChorusPreset, void, const float> SetDepth = { 0x19df750, 13 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectDynamicsProcessorSettings
@@ -770,10 +766,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x50];                                      // 0x0068   (0x0050)  MISSED
 	FSourceEffectDynamicsProcessorSettings             Settings;                                                   // 0x00B8   (0x0028)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectDynamicsProcessorPreset, void, const FSourceEffectDynamicsProcessorSettings&> USourceEffectDynamicsProcessorPreset = { 0x19e02a0, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectDynamicsProcessorPreset, void, const FSourceEffectDynamicsProcessorSettings&> SetSettings = { 0x19e02a0, 0 }; 
 };
 
 /// Class /Script/Synthesis.EnvelopeFollowerListener
@@ -804,14 +799,13 @@ public:
 	unsigned char                                      UnknownData01_8[0x34];                                      // 0x0068   (0x0034)  MISSED
 	FSourceEffectEnvelopeFollowerSettings              Settings;                                                   // 0x009C   (0x000C)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener
-	constexpr static const FunctionPointer<USourceEffectEnvelopeFollowerPreset, void, const UEnvelopeFollowerListener*> USourceEffectEnvelopeFollowerPreset = { 0x19e0f00, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectEnvelopeFollowerPreset, void, const UEnvelopeFollowerListener*> UnregisterEnvelopeFollowerListener = { 0x19e0f00, 0 }; 
 	// Function /Script/Synthesis.SourceEffectEnvelopeFollowerPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectEnvelopeFollowerPreset, void, const FSourceEffectEnvelopeFollowerSettings&> USourceEffectEnvelopeFollowerPreset = { 0x19e10d0, 1 }; 
+	constexpr static const FunctionPointer<USourceEffectEnvelopeFollowerPreset, void, const FSourceEffectEnvelopeFollowerSettings&> SetSettings = { 0x19e10d0, 1 }; 
 	// Function /Script/Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
-	constexpr static const FunctionPointer<USourceEffectEnvelopeFollowerPreset, void, const UEnvelopeFollowerListener*> USourceEffectEnvelopeFollowerPreset = { 0x19e0ff0, 2 }; 
+	constexpr static const FunctionPointer<USourceEffectEnvelopeFollowerPreset, void, const UEnvelopeFollowerListener*> RegisterEnvelopeFollowerListener = { 0x19e0ff0, 2 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectEQBand
@@ -840,10 +834,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x38];                                      // 0x0068   (0x0038)  MISSED
 	FSourceEffectEQSettings                            Settings;                                                   // 0x00A0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectEQPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectEQPreset, void, const FSourceEffectEQSettings&> USourceEffectEQPreset = { 0x19e1a10, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectEQPreset, void, const FSourceEffectEQSettings&> SetSettings = { 0x19e1a10, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectFilterAudioBusModulationSettings
@@ -883,10 +876,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x48];                                      // 0x0068   (0x0048)  MISSED
 	FSourceEffectFilterSettings                        Settings;                                                   // 0x00B0   (0x0020)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectFilterPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectFilterPreset, void, const FSourceEffectFilterSettings&> USourceEffectFilterPreset = { 0x19e2560, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectFilterPreset, void, const FSourceEffectFilterSettings&> SetSettings = { 0x19e2560, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectFoldbackDistortionSettings
@@ -906,10 +898,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x34];                                      // 0x0068   (0x0034)  MISSED
 	FSourceEffectFoldbackDistortionSettings            Settings;                                                   // 0x009C   (0x000C)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectFoldbackDistortionPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectFoldbackDistortionPreset, void, const FSourceEffectFoldbackDistortionSettings&> USourceEffectFoldbackDistortionPreset = { 0x19e2c20, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectFoldbackDistortionPreset, void, const FSourceEffectFoldbackDistortionSettings&> SetSettings = { 0x19e2c20, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectMidSideSpreaderSettings
@@ -931,10 +922,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x30];                                      // 0x0068   (0x0030)  MISSED
 	FSourceEffectMidSideSpreaderSettings               Settings;                                                   // 0x0098   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectMidSideSpreaderPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectMidSideSpreaderPreset, void, const FSourceEffectMidSideSpreaderSettings&> USourceEffectMidSideSpreaderPreset = { 0x19e3460, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectMidSideSpreaderPreset, void, const FSourceEffectMidSideSpreaderSettings&> SetSettings = { 0x19e3460, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectPannerSettings
@@ -953,10 +943,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x30];                                      // 0x0068   (0x0030)  MISSED
 	FSourceEffectPannerSettings                        Settings;                                                   // 0x0098   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectPannerPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectPannerPreset, void, const FSourceEffectPannerSettings&> USourceEffectPannerPreset = { 0x19e3b70, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectPannerPreset, void, const FSourceEffectPannerSettings&> SetSettings = { 0x19e3b70, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectPhaserSettings
@@ -979,10 +968,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x38];                                      // 0x0068   (0x0038)  MISSED
 	FSourceEffectPhaserSettings                        Settings;                                                   // 0x00A0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectPhaserPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectPhaserPreset, void, const FSourceEffectPhaserSettings&> USourceEffectPhaserPreset = { 0x19e43e0, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectPhaserPreset, void, const FSourceEffectPhaserSettings&> SetSettings = { 0x19e43e0, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectRingModulationSettings
@@ -1007,10 +995,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x48];                                      // 0x0068   (0x0048)  MISSED
 	FSourceEffectRingModulationSettings                Settings;                                                   // 0x00B0   (0x0020)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectRingModulationPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectRingModulationPreset, void, const FSourceEffectRingModulationSettings&> USourceEffectRingModulationPreset = { 0x19e4cd0, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectRingModulationPreset, void, const FSourceEffectRingModulationSettings&> SetSettings = { 0x19e4cd0, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectSimpleDelaySettings
@@ -1034,10 +1021,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x40];                                      // 0x0068   (0x0040)  MISSED
 	FSourceEffectSimpleDelaySettings                   Settings;                                                   // 0x00A8   (0x0018)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectSimpleDelayPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectSimpleDelayPreset, void, const FSourceEffectSimpleDelaySettings&> USourceEffectSimpleDelayPreset = { 0x19e6710, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectSimpleDelayPreset, void, const FSourceEffectSimpleDelaySettings&> SetSettings = { 0x19e6710, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectStereoDelaySettings
@@ -1066,10 +1052,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x4C];                                      // 0x0068   (0x004C)  MISSED
 	FSourceEffectStereoDelaySettings                   Settings;                                                   // 0x00B4   (0x0024)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectStereoDelayPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectStereoDelayPreset, void, const FSourceEffectStereoDelaySettings&> USourceEffectStereoDelayPreset = { 0x19e7100, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectStereoDelayPreset, void, const FSourceEffectStereoDelaySettings&> SetSettings = { 0x19e7100, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SourceEffectWaveShaperSettings
@@ -1088,10 +1073,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x30];                                      // 0x0068   (0x0030)  MISSED
 	FSourceEffectWaveShaperSettings                    Settings;                                                   // 0x0098   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectWaveShaperPreset.SetSettings
-	constexpr static const FunctionPointer<USourceEffectWaveShaperPreset, void, const FSourceEffectWaveShaperSettings&> USourceEffectWaveShaperPreset = { 0x19e3b70, 0 }; 
+	constexpr static const FunctionPointer<USourceEffectWaveShaperPreset, void, const FSourceEffectWaveShaperSettings&> SetSettings = { 0x19e3b70, 0 }; 
 };
 
 /// Class /Script/Synthesis.AudioImpulseResponse
@@ -1139,12 +1123,11 @@ public:
 	bool                                               bEnableHardwareAcceleration;                                // 0x0099   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x56];                                      // 0x009A   (0x0056)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectConvolutionReverbPreset.SetSettings
-	constexpr static const FunctionPointer<USubmixEffectConvolutionReverbPreset, void, const FSubmixEffectConvolutionReverbSettings&> USubmixEffectConvolutionReverbPreset = { 0x19e8130, 0 }; 
+	constexpr static const FunctionPointer<USubmixEffectConvolutionReverbPreset, void, const FSubmixEffectConvolutionReverbSettings&> SetSettings = { 0x19e8130, 0 }; 
 	// Function /Script/Synthesis.SubmixEffectConvolutionReverbPreset.SetImpulseResponse
-	constexpr static const FunctionPointer<USubmixEffectConvolutionReverbPreset, void, const UAudioImpulseResponse*> USubmixEffectConvolutionReverbPreset = { 0x19e8040, 1 }; 
+	constexpr static const FunctionPointer<USubmixEffectConvolutionReverbPreset, void, const UAudioImpulseResponse*> SetImpulseResponse = { 0x19e8040, 1 }; 
 };
 
 /// Struct /Script/Synthesis.SubmixEffectDelaySettings
@@ -1166,16 +1149,15 @@ public:
 	FSubmixEffectDelaySettings                         DynamicSettings;                                            // 0x00A8   (0x000C)  
 	unsigned char                                      UnknownData03_7[0x4];                                       // 0x00B4   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectDelayPreset.SetSettings
-	constexpr static const FunctionPointer<USubmixEffectDelayPreset, void, const FSubmixEffectDelaySettings&> USubmixEffectDelayPreset = { 0x19e8b40, 0 }; 
+	constexpr static const FunctionPointer<USubmixEffectDelayPreset, void, const FSubmixEffectDelaySettings&> SetSettings = { 0x19e8b40, 0 }; 
 	// Function /Script/Synthesis.SubmixEffectDelayPreset.SetInterpolationTime
-	constexpr static const FunctionPointer<USubmixEffectDelayPreset, void, const float> USubmixEffectDelayPreset = { 0x19e8a20, 1 }; 
+	constexpr static const FunctionPointer<USubmixEffectDelayPreset, void, const float> SetInterpolationTime = { 0x19e8a20, 1 }; 
 	// Function /Script/Synthesis.SubmixEffectDelayPreset.SetDelay
-	constexpr static const FunctionPointer<USubmixEffectDelayPreset, void, const float> USubmixEffectDelayPreset = { 0x19e8920, 2 }; 
+	constexpr static const FunctionPointer<USubmixEffectDelayPreset, void, const float> SetDelay = { 0x19e8920, 2 }; 
 	// Function /Script/Synthesis.SubmixEffectDelayPreset.GetMaxDelayInMilliseconds
-	constexpr static const FunctionPointer<USubmixEffectDelayPreset, float> USubmixEffectDelayPreset = { 0x19e8b20, 3 }; 
+	constexpr static const FunctionPointer<USubmixEffectDelayPreset, float> GetMaxDelayInMilliseconds = { 0x19e8b20, 3 }; 
 };
 
 /// Struct /Script/Synthesis.SubmixEffectFilterSettings
@@ -1197,22 +1179,21 @@ public:
 	unsigned char                                      UnknownData01_8[0x34];                                      // 0x0068   (0x0034)  MISSED
 	FSubmixEffectFilterSettings                        Settings;                                                   // 0x009C   (0x000C)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectFilterPreset.SetSettings
-	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const FSubmixEffectFilterSettings&> USubmixEffectFilterPreset = { 0x19e9b80, 0 }; 
+	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const FSubmixEffectFilterSettings&> SetSettings = { 0x19e9b80, 0 }; 
 	// Function /Script/Synthesis.SubmixEffectFilterPreset.SetFilterType
-	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const ESubmixFilterType> USubmixEffectFilterPreset = { 0x19e9a80, 1 }; 
+	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const ESubmixFilterType> SetFilterType = { 0x19e9a80, 1 }; 
 	// Function /Script/Synthesis.SubmixEffectFilterPreset.SetFilterQMod
-	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const float> USubmixEffectFilterPreset = { 0x19e9580, 2 }; 
+	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const float> SetFilterQMod = { 0x19e9580, 2 }; 
 	// Function /Script/Synthesis.SubmixEffectFilterPreset.SetFilterQ
-	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const float> USubmixEffectFilterPreset = { 0x19e9680, 3 }; 
+	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const float> SetFilterQ = { 0x19e9680, 3 }; 
 	// Function /Script/Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequencyMod
-	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const float> USubmixEffectFilterPreset = { 0x19e9780, 4 }; 
+	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const float> SetFilterCutoffFrequencyMod = { 0x19e9780, 4 }; 
 	// Function /Script/Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequency
-	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const float> USubmixEffectFilterPreset = { 0x19e9880, 5 }; 
+	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const float> SetFilterCutoffFrequency = { 0x19e9880, 5 }; 
 	// Function /Script/Synthesis.SubmixEffectFilterPreset.SetFilterAlgorithm
-	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const ESubmixFilterAlgorithm> USubmixEffectFilterPreset = { 0x19e9980, 6 }; 
+	constexpr static const FunctionPointer<USubmixEffectFilterPreset, void, const ESubmixFilterAlgorithm> SetFilterAlgorithm = { 0x19e9980, 6 }; 
 };
 
 /// Struct /Script/Synthesis.SubmixEffectFlexiverbSettings
@@ -1233,10 +1214,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x38];                                      // 0x0068   (0x0038)  MISSED
 	FSubmixEffectFlexiverbSettings                     Settings;                                                   // 0x00A0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectFlexiverbPreset.SetSettings
-	constexpr static const FunctionPointer<USubmixEffectFlexiverbPreset, void, const FSubmixEffectFlexiverbSettings&> USubmixEffectFlexiverbPreset = { 0x19ea460, 0 }; 
+	constexpr static const FunctionPointer<USubmixEffectFlexiverbPreset, void, const FSubmixEffectFlexiverbSettings&> SetSettings = { 0x19ea460, 0 }; 
 };
 
 /// Struct /Script/Synthesis.DynamicsBandSettings
@@ -1276,10 +1256,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x48];                                      // 0x0068   (0x0048)  MISSED
 	FSubmixEffectMultibandCompressorSettings           Settings;                                                   // 0x00B0   (0x0020)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings
-	constexpr static const FunctionPointer<USubmixEffectMultibandCompressorPreset, void, const FSubmixEffectMultibandCompressorSettings&> USubmixEffectMultibandCompressorPreset = { 0x19eaf70, 0 }; 
+	constexpr static const FunctionPointer<USubmixEffectMultibandCompressorPreset, void, const FSubmixEffectMultibandCompressorSettings&> SetSettings = { 0x19eaf70, 0 }; 
 };
 
 /// Struct /Script/Synthesis.SubmixEffectStereoDelaySettings
@@ -1308,10 +1287,9 @@ public:
 	unsigned char                                      UnknownData01_8[0x4C];                                      // 0x0068   (0x004C)  MISSED
 	FSubmixEffectStereoDelaySettings                   Settings;                                                   // 0x00B4   (0x0024)  
 
-
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectStereoDelayPreset.SetSettings
-	constexpr static const FunctionPointer<USubmixEffectStereoDelayPreset, void, const FSubmixEffectStereoDelaySettings&> USubmixEffectStereoDelayPreset = { 0x19e7100, 0 }; 
+	constexpr static const FunctionPointer<USubmixEffectStereoDelayPreset, void, const FSubmixEffectStereoDelaySettings&> SetSettings = { 0x19e7100, 0 }; 
 };
 
 /// Struct /Script/Synthesis.TapDelayInfo
@@ -1345,24 +1323,23 @@ public:
 	FSubmixEffectTapDelaySettings                      Settings;                                                   // 0x00A8   (0x0018)  
 	unsigned char                                      UnknownData03_7[0x18];                                      // 0x00C0   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.SetTap
-	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const int32_t, const FTapDelayInfo&> USubmixEffectTapDelayPreset = { 0x19ec3f0, 0 }; 
+	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const int32_t, const FTapDelayInfo&> SetTap = { 0x19ec3f0, 0 }; 
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.SetSettings
-	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const FSubmixEffectTapDelaySettings&> USubmixEffectTapDelayPreset = { 0x19ec970, 1 }; 
+	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const FSubmixEffectTapDelaySettings&> SetSettings = { 0x19ec970, 1 }; 
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.SetInterpolationTime
-	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const float> USubmixEffectTapDelayPreset = { 0x19ebfa0, 2 }; 
+	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const float> SetInterpolationTime = { 0x19ebfa0, 2 }; 
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.RemoveTap
-	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const int32_t> USubmixEffectTapDelayPreset = { 0x19ec690, 3 }; 
+	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const int32_t> RemoveTap = { 0x19ec690, 3 }; 
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.GetTapIds
-	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const TArray<int32_t>&> USubmixEffectTapDelayPreset = { 0x19ec0c0, 4 }; 
+	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const TArray<int32_t>&> GetTapIds = { 0x19ec0c0, 4 }; 
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.GetTap
-	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const int32_t, const FTapDelayInfo&> USubmixEffectTapDelayPreset = { 0x19ec200, 5 }; 
+	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const int32_t, const FTapDelayInfo&> GetTap = { 0x19ec200, 5 }; 
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.GetMaxDelayInMilliseconds
-	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, float> USubmixEffectTapDelayPreset = { 0x19ec0a0, 6 }; 
+	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, float> GetMaxDelayInMilliseconds = { 0x19ec0a0, 6 }; 
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.AddTap
-	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const int32_t&> USubmixEffectTapDelayPreset = { 0x19ec7d0, 7 }; 
+	constexpr static const FunctionPointer<USubmixEffectTapDelayPreset, void, const int32_t&> AddTap = { 0x19ec7d0, 7 }; 
 };
 
 /// Struct /Script/Synthesis.Synth2DSliderStyle
@@ -1403,20 +1380,19 @@ public:
 	FMulticastInlineDelegate                           OnValueChangedY;                                            // 0x0480   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x10];                                      // 0x0490   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.Synth2DSlider.SetValue
-	constexpr static const FunctionPointer<USynth2DSlider, void, const FVector2D> USynth2DSlider = { 0x19ed5a0, 0 }; 
+	constexpr static const FunctionPointer<USynth2DSlider, void, const FVector2D> SetValue = { 0x19ed5a0, 0 }; 
 	// Function /Script/Synthesis.Synth2DSlider.SetStepSize
-	constexpr static const FunctionPointer<USynth2DSlider, void, const float> USynth2DSlider = { 0x19ed1b0, 1 }; 
+	constexpr static const FunctionPointer<USynth2DSlider, void, const float> SetStepSize = { 0x19ed1b0, 1 }; 
 	// Function /Script/Synthesis.Synth2DSlider.SetSliderHandleColor
-	constexpr static const FunctionPointer<USynth2DSlider, void, const FLinearColor> USynth2DSlider = { 0x19ed0c0, 2 }; 
+	constexpr static const FunctionPointer<USynth2DSlider, void, const FLinearColor> SetSliderHandleColor = { 0x19ed0c0, 2 }; 
 	// Function /Script/Synthesis.Synth2DSlider.SetLocked
-	constexpr static const FunctionPointer<USynth2DSlider, void, const bool> USynth2DSlider = { 0x19ed300, 3 }; 
+	constexpr static const FunctionPointer<USynth2DSlider, void, const bool> SetLocked = { 0x19ed300, 3 }; 
 	// Function /Script/Synthesis.Synth2DSlider.SetIndentHandle
-	constexpr static const FunctionPointer<USynth2DSlider, void, const bool> USynth2DSlider = { 0x19ed450, 4 }; 
+	constexpr static const FunctionPointer<USynth2DSlider, void, const bool> SetIndentHandle = { 0x19ed450, 4 }; 
 	// Function /Script/Synthesis.Synth2DSlider.GetValue
-	constexpr static const FunctionPointer<USynth2DSlider, FVector2D> USynth2DSlider = { 0x19ed670, 5 }; 
+	constexpr static const FunctionPointer<USynth2DSlider, FVector2D> GetValue = { 0x19ed670, 5 }; 
 };
 
 /// Class /Script/Synthesis.GranularSynth
@@ -1427,48 +1403,47 @@ public:
 	class USoundWave*                                  GranulatedSoundWave;                                        // 0x0730   (0x0008)  
 	unsigned char                                      UnknownData01_7[0x3B8];                                     // 0x0738   (0x03B8)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.GranularSynth.SetSustainGain
-	constexpr static const FunctionPointer<UGranularSynth, void, const float> UGranularSynth = { 0x19f0350, 0 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float> SetSustainGain = { 0x19f0350, 0 }; 
 	// Function /Script/Synthesis.GranularSynth.SetSoundWave
-	constexpr static const FunctionPointer<UGranularSynth, void, const USoundWave*> UGranularSynth = { 0x19f05d0, 1 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const USoundWave*> SetSoundWave = { 0x19f05d0, 1 }; 
 	// Function /Script/Synthesis.GranularSynth.SetScrubMode
-	constexpr static const FunctionPointer<UGranularSynth, void, const bool> UGranularSynth = { 0x19eef20, 2 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const bool> SetScrubMode = { 0x19eef20, 2 }; 
 	// Function /Script/Synthesis.GranularSynth.SetReleaseTimeMsec
-	constexpr static const FunctionPointer<UGranularSynth, void, const float> UGranularSynth = { 0x19f0210, 3 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float> SetReleaseTimeMsec = { 0x19f0210, 3 }; 
 	// Function /Script/Synthesis.GranularSynth.SetPlayheadTime
-	constexpr static const FunctionPointer<UGranularSynth, void, const float, const float, const EGranularSynthSeekType> UGranularSynth = { 0x19eeca0, 4 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float, const float, const EGranularSynthSeekType> SetPlayheadTime = { 0x19eeca0, 4 }; 
 	// Function /Script/Synthesis.GranularSynth.SetPlaybackSpeed
-	constexpr static const FunctionPointer<UGranularSynth, void, const float> UGranularSynth = { 0x19ef890, 5 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float> SetPlaybackSpeed = { 0x19ef890, 5 }; 
 	// Function /Script/Synthesis.GranularSynth.SetGrainVolume
-	constexpr static const FunctionPointer<UGranularSynth, void, const float, const FVector2D> UGranularSynth = { 0x19ef490, 6 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float, const FVector2D> SetGrainVolume = { 0x19ef490, 6 }; 
 	// Function /Script/Synthesis.GranularSynth.SetGrainsPerSecond
-	constexpr static const FunctionPointer<UGranularSynth, void, const float> UGranularSynth = { 0x19efc60, 7 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float> SetGrainsPerSecond = { 0x19efc60, 7 }; 
 	// Function /Script/Synthesis.GranularSynth.SetGrainProbability
-	constexpr static const FunctionPointer<UGranularSynth, void, const float> UGranularSynth = { 0x19efb20, 8 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float> SetGrainProbability = { 0x19efb20, 8 }; 
 	// Function /Script/Synthesis.GranularSynth.SetGrainPitch
-	constexpr static const FunctionPointer<UGranularSynth, void, const float, const FVector2D> UGranularSynth = { 0x19ef690, 9 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float, const FVector2D> SetGrainPitch = { 0x19ef690, 9 }; 
 	// Function /Script/Synthesis.GranularSynth.SetGrainPan
-	constexpr static const FunctionPointer<UGranularSynth, void, const float, const FVector2D> UGranularSynth = { 0x19ef290, 10 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float, const FVector2D> SetGrainPan = { 0x19ef290, 10 }; 
 	// Function /Script/Synthesis.GranularSynth.SetGrainEnvelopeType
-	constexpr static const FunctionPointer<UGranularSynth, void, const EGranularSynthEnvelopeType> UGranularSynth = { 0x19ef9d0, 11 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const EGranularSynthEnvelopeType> SetGrainEnvelopeType = { 0x19ef9d0, 11 }; 
 	// Function /Script/Synthesis.GranularSynth.SetGrainDuration
-	constexpr static const FunctionPointer<UGranularSynth, void, const float, const FVector2D> UGranularSynth = { 0x19ef090, 12 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float, const FVector2D> SetGrainDuration = { 0x19ef090, 12 }; 
 	// Function /Script/Synthesis.GranularSynth.SetDecayTime
-	constexpr static const FunctionPointer<UGranularSynth, void, const float> UGranularSynth = { 0x19f0490, 13 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float> SetDecayTime = { 0x19f0490, 13 }; 
 	// Function /Script/Synthesis.GranularSynth.SetAttackTime
-	constexpr static const FunctionPointer<UGranularSynth, void, const float> UGranularSynth = { 0x19f0490, 14 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float> SetAttackTime = { 0x19f0490, 14 }; 
 	// Function /Script/Synthesis.GranularSynth.NoteOn
-	constexpr static const FunctionPointer<UGranularSynth, void, const float, const int32_t, const float> UGranularSynth = { 0x19effa0, 15 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float, const int32_t, const float> NoteOn = { 0x19effa0, 15 }; 
 	// Function /Script/Synthesis.GranularSynth.NoteOff
-	constexpr static const FunctionPointer<UGranularSynth, void, const float, const bool> UGranularSynth = { 0x19efda0, 16 }; 
+	constexpr static const FunctionPointer<UGranularSynth, void, const float, const bool> NoteOff = { 0x19efda0, 16 }; 
 	// Function /Script/Synthesis.GranularSynth.IsLoaded
-	constexpr static const FunctionPointer<UGranularSynth, bool> UGranularSynth = { 0x19eec60, 17 }; 
+	constexpr static const FunctionPointer<UGranularSynth, bool> IsLoaded = { 0x19eec60, 17 }; 
 	// Function /Script/Synthesis.GranularSynth.GetSampleDuration
-	constexpr static const FunctionPointer<UGranularSynth, float> UGranularSynth = { 0x19ef070, 18 }; 
+	constexpr static const FunctionPointer<UGranularSynth, float> GetSampleDuration = { 0x19ef070, 18 }; 
 	// Function /Script/Synthesis.GranularSynth.GetCurrentPlayheadTime
-	constexpr static const FunctionPointer<UGranularSynth, float> UGranularSynth = { 0x19eec80, 19 }; 
+	constexpr static const FunctionPointer<UGranularSynth, float> GetCurrentPlayheadTime = { 0x19eec80, 19 }; 
 };
 
 /// Class /Script/Synthesis.MonoWaveTableSynthPreset
@@ -1497,96 +1472,95 @@ public:
 	class UMonoWaveTableSynthPreset*                   CurrentPreset;                                              // 0x0750   (0x0008)  
 	unsigned char                                      UnknownData01_7[0x718];                                     // 0x0758   (0x0718)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetWaveTablePosition
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f4140, 0 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetWaveTablePosition = { 0x19f4140, 0 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetSustainPedalState
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> USynthComponentMonoWaveTable = { 0x19f4590, 1 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> SetSustainPedalState = { 0x19f4590, 1 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPosLfoType
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const ESynthLFOType> USynthComponentMonoWaveTable = { 0x19f3c80, 2 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const ESynthLFOType> SetPosLfoType = { 0x19f3c80, 2 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPosLfoFrequency
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f3f10, 3 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetPosLfoFrequency = { 0x19f3f10, 3 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPosLfoDepth
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f3dd0, 4 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetPosLfoDepth = { 0x19f3dd0, 4 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeSustainGain
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2340, 5 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetPositionEnvelopeSustainGain = { 0x19f2340, 5 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeReleaseTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2200, 6 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetPositionEnvelopeReleaseTime = { 0x19f2200, 6 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeInvert
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> USynthComponentMonoWaveTable = { 0x19f20b0, 7 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> SetPositionEnvelopeInvert = { 0x19f20b0, 7 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDepth
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f1e20, 8 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetPositionEnvelopeDepth = { 0x19f1e20, 8 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDecayTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2480, 9 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetPositionEnvelopeDecayTime = { 0x19f2480, 9 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasInvert
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> USynthComponentMonoWaveTable = { 0x19f1f60, 10 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> SetPositionEnvelopeBiasInvert = { 0x19f1f60, 10 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasDepth
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f1ce0, 11 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetPositionEnvelopeBiasDepth = { 0x19f1ce0, 11 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeAttackTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f25c0, 12 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetPositionEnvelopeAttackTime = { 0x19f25c0, 12 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetLowPassFilterResonance
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f3b40, 13 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetLowPassFilterResonance = { 0x19f3b40, 13 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFrequencyWithMidiNote
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f4280, 14 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFrequencyWithMidiNote = { 0x19f4280, 14 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFrequencyPitchBend
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f4380, 15 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFrequencyPitchBend = { 0x19f4380, 15 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFrequency
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f44c0, 16 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFrequency = { 0x19f44c0, 16 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeSustainGain
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2d60, 17 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFilterEnvelopeSustainGain = { 0x19f2d60, 17 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeReleaseTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2c20, 18 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFilterEnvelopeReleaseTime = { 0x19f2c20, 18 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopenDecayTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2ea0, 19 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFilterEnvelopenDecayTime = { 0x19f2ea0, 19 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeInvert
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> USynthComponentMonoWaveTable = { 0x19f2ad0, 20 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> SetFilterEnvelopeInvert = { 0x19f2ad0, 20 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeDepth
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2840, 21 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFilterEnvelopeDepth = { 0x19f2840, 21 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasInvert
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> USynthComponentMonoWaveTable = { 0x19f2980, 22 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> SetFilterEnvelopeBiasInvert = { 0x19f2980, 22 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasDepth
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2700, 23 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFilterEnvelopeBiasDepth = { 0x19f2700, 23 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeAttackTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f2fe0, 24 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetFilterEnvelopeAttackTime = { 0x19f2fe0, 24 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetCurveValue
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, bool, const int32_t, const int32_t, const float> USynthComponentMonoWaveTable = { 0x19f1a00, 25 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, bool, const int32_t, const int32_t, const float> SetCurveValue = { 0x19f1a00, 25 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetCurveTangent
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, bool, const int32_t, const float> USynthComponentMonoWaveTable = { 0x19f15a0, 26 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, bool, const int32_t, const float> SetCurveTangent = { 0x19f15a0, 26 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetCurveInterpolationType
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, bool, const CurveInterpolationType, const int32_t> USynthComponentMonoWaveTable = { 0x19f17e0, 27 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, bool, const CurveInterpolationType, const int32_t> SetCurveInterpolationType = { 0x19f17e0, 27 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeSustainGain
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f3780, 28 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetAmpEnvelopeSustainGain = { 0x19f3780, 28 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeReleaseTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f3640, 29 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetAmpEnvelopeReleaseTime = { 0x19f3640, 29 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeInvert
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> USynthComponentMonoWaveTable = { 0x19f34f0, 30 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> SetAmpEnvelopeInvert = { 0x19f34f0, 30 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDepth
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f3260, 31 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetAmpEnvelopeDepth = { 0x19f3260, 31 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDecayTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f38c0, 32 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetAmpEnvelopeDecayTime = { 0x19f38c0, 32 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasInvert
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> USynthComponentMonoWaveTable = { 0x19f33a0, 33 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const bool> SetAmpEnvelopeBiasInvert = { 0x19f33a0, 33 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasDepth
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f3120, 34 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetAmpEnvelopeBiasDepth = { 0x19f3120, 34 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeAttackTime
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f3a00, 35 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> SetAmpEnvelopeAttackTime = { 0x19f3a00, 35 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.RefreshWaveTable
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const int32_t> USynthComponentMonoWaveTable = { 0x19f4070, 36 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const int32_t> RefreshWaveTable = { 0x19f4070, 36 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.RefreshAllWaveTables
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void> USynthComponentMonoWaveTable = { 0x19f4050, 37 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void> RefreshAllWaveTables = { 0x19f4050, 37 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.NoteOn
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float, const float> USynthComponentMonoWaveTable = { 0x19f4850, 38 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float, const float> NoteOn = { 0x19f4850, 38 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.NoteOff
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> USynthComponentMonoWaveTable = { 0x19f46e0, 39 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, void, const float> NoteOff = { 0x19f46e0, 39 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.GetNumTableEntries
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, int32_t> USynthComponentMonoWaveTable = { 0x19f4a60, 40 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, int32_t> GetNumTableEntries = { 0x19f4a60, 40 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.GetMaxTableIndex
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, int32_t> USynthComponentMonoWaveTable = { 0x19f1ca0, 41 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, int32_t> GetMaxTableIndex = { 0x19f1ca0, 41 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.GetKeyFrameValuesForTable
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, TArray<float>, const float> USynthComponentMonoWaveTable = { 0x19f1350, 42 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, TArray<float>, const float> GetKeyFrameValuesForTable = { 0x19f1350, 42 }; 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.GetCurveTangent
-	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, float, const int32_t> USynthComponentMonoWaveTable = { 0x19f1480, 43 }; 
+	constexpr static const FunctionPointer<USynthComponentMonoWaveTable, float, const int32_t> GetCurveTangent = { 0x19f1480, 43 }; 
 };
 
 /// Class /Script/Synthesis.SynthComponentToneGenerator
@@ -1598,12 +1572,11 @@ public:
 	float                                              Volume;                                                     // 0x0734   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x18];                                      // 0x0738   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.SynthComponentToneGenerator.SetVolume
-	constexpr static const FunctionPointer<USynthComponentToneGenerator, void, const float> USynthComponentToneGenerator = { 0x19f5630, 0 }; 
+	constexpr static const FunctionPointer<USynthComponentToneGenerator, void, const float> SetVolume = { 0x19f5630, 0 }; 
 	// Function /Script/Synthesis.SynthComponentToneGenerator.SetFrequency
-	constexpr static const FunctionPointer<USynthComponentToneGenerator, void, const float> USynthComponentToneGenerator = { 0x19f5760, 1 }; 
+	constexpr static const FunctionPointer<USynthComponentToneGenerator, void, const float> SetFrequency = { 0x19f5760, 1 }; 
 };
 
 /// Class /Script/Synthesis.SynthSamplePlayer
@@ -1616,26 +1589,25 @@ public:
 	FMulticastInlineDelegate                           OnSamplePlaybackProgress;                                   // 0x0748   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x108];                                     // 0x0758   (0x0108)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.SynthSamplePlayer.SetSoundWave
-	constexpr static const FunctionPointer<USynthSamplePlayer, void, const USoundWave*> USynthSamplePlayer = { 0x19f6550, 0 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, void, const USoundWave*> SetSoundWave = { 0x19f6550, 0 }; 
 	// Function /Script/Synthesis.SynthSamplePlayer.SetScrubTimeWidth
-	constexpr static const FunctionPointer<USynthSamplePlayer, void, const float> USynthSamplePlayer = { 0x19f5e40, 1 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, void, const float> SetScrubTimeWidth = { 0x19f5e40, 1 }; 
 	// Function /Script/Synthesis.SynthSamplePlayer.SetScrubMode
-	constexpr static const FunctionPointer<USynthSamplePlayer, void, const bool> USynthSamplePlayer = { 0x19f5f80, 2 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, void, const bool> SetScrubMode = { 0x19f5f80, 2 }; 
 	// Function /Script/Synthesis.SynthSamplePlayer.SetPitch
-	constexpr static const FunctionPointer<USynthSamplePlayer, void, const float, const float> USynthSamplePlayer = { 0x19f6370, 3 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, void, const float, const float> SetPitch = { 0x19f6370, 3 }; 
 	// Function /Script/Synthesis.SynthSamplePlayer.SeekToTime
-	constexpr static const FunctionPointer<USynthSamplePlayer, void, const float, const ESamplePlayerSeekType, const bool> USynthSamplePlayer = { 0x19f60d0, 4 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, void, const float, const ESamplePlayerSeekType, const bool> SeekToTime = { 0x19f60d0, 4 }; 
 	// Function /Script/Synthesis.SynthSamplePlayer.IsLoaded
-	constexpr static const FunctionPointer<USynthSamplePlayer, bool> USynthSamplePlayer = { 0x19f5da0, 5 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, bool> IsLoaded = { 0x19f5da0, 5 }; 
 	// Function /Script/Synthesis.SynthSamplePlayer.GetSampleDuration
-	constexpr static const FunctionPointer<USynthSamplePlayer, float> USynthSamplePlayer = { 0x19f5e20, 6 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, float> GetSampleDuration = { 0x19f5e20, 6 }; 
 	// Function /Script/Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressTime
-	constexpr static const FunctionPointer<USynthSamplePlayer, float> USynthSamplePlayer = { 0x19f5e00, 7 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, float> GetCurrentPlaybackProgressTime = { 0x19f5e00, 7 }; 
 	// Function /Script/Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressPercent
-	constexpr static const FunctionPointer<USynthSamplePlayer, float> USynthSamplePlayer = { 0x19f5dc0, 8 }; 
+	constexpr static const FunctionPointer<USynthSamplePlayer, float> GetCurrentPlaybackProgressPercent = { 0x19f5dc0, 8 }; 
 };
 
 /// Class /Script/Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary
@@ -1644,12 +1616,11 @@ class USynthesisUtilitiesBlueprintFunctionLibrary : public UBlueprintFunctionLib
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLogFrequency
-	constexpr static const FunctionPointer<USynthesisUtilitiesBlueprintFunctionLibrary, float, const float, const float, const float, const float, const float> USynthesisUtilitiesBlueprintFunctionLibrary = { 0x19f6f80, 0 }; 
+	constexpr static const FunctionPointer<USynthesisUtilitiesBlueprintFunctionLibrary, float, const float, const float, const float, const float, const float> GetLogFrequency = { 0x19f6f80, 0 }; 
 	// Function /Script/Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLinearFrequency
-	constexpr static const FunctionPointer<USynthesisUtilitiesBlueprintFunctionLibrary, float, const float, const float, const float, const float, const float> USynthesisUtilitiesBlueprintFunctionLibrary = { 0x19f6b80, 1 }; 
+	constexpr static const FunctionPointer<USynthesisUtilitiesBlueprintFunctionLibrary, float, const float, const float, const float, const float, const float> GetLinearFrequency = { 0x19f6b80, 1 }; 
 };
 
 /// Struct /Script/Synthesis.SynthKnobStyle
@@ -1691,16 +1662,15 @@ public:
 	FMulticastInlineDelegate                           OnValueChanged;                                             // 0x0400   (0x0010)  
 	unsigned char                                      UnknownData05_7[0x10];                                      // 0x0410   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/Synthesis.SynthKnob.SetValue
-	constexpr static const FunctionPointer<USynthKnob, void, const float> USynthKnob = { 0x19f7e30, 0 }; 
+	constexpr static const FunctionPointer<USynthKnob, void, const float> SetValue = { 0x19f7e30, 0 }; 
 	// Function /Script/Synthesis.SynthKnob.SetStepSize
-	constexpr static const FunctionPointer<USynthKnob, void, const float> USynthKnob = { 0x19f7c00, 1 }; 
+	constexpr static const FunctionPointer<USynthKnob, void, const float> SetStepSize = { 0x19f7c00, 1 }; 
 	// Function /Script/Synthesis.SynthKnob.SetLocked
-	constexpr static const FunctionPointer<USynthKnob, void, const bool> USynthKnob = { 0x19f7ce0, 2 }; 
+	constexpr static const FunctionPointer<USynthKnob, void, const bool> SetLocked = { 0x19f7ce0, 2 }; 
 	// Function /Script/Synthesis.SynthKnob.GetValue
-	constexpr static const FunctionPointer<USynthKnob, float> USynthKnob = { 0x19f7f80, 3 }; 
+	constexpr static const FunctionPointer<USynthKnob, float> GetValue = { 0x19f7f80, 3 }; 
 };
 
 /// Struct /Script/Synthesis.PatchId

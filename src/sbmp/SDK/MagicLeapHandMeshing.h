@@ -19,14 +19,13 @@ class UMagicLeapHandMeshingComponent : public UActorComponent
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapHandMeshing.MagicLeapHandMeshingComponent.SetUseWeightedNormals
-	constexpr static const FunctionPointer<UMagicLeapHandMeshingComponent, void, const bool> UMagicLeapHandMeshingComponent = { 0x1908ee0, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandMeshingComponent, void, const bool> SetUseWeightedNormals = { 0x1908ee0, 0 }; 
 	// Function /Script/MagicLeapHandMeshing.MagicLeapHandMeshingComponent.DisconnectMRMesh
-	constexpr static const FunctionPointer<UMagicLeapHandMeshingComponent, bool, const UMRMeshComponent*> UMagicLeapHandMeshingComponent = { 0x1908fc0, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandMeshingComponent, bool, const UMRMeshComponent*> DisconnectMRMesh = { 0x1908fc0, 1 }; 
 	// Function /Script/MagicLeapHandMeshing.MagicLeapHandMeshingComponent.ConnectMRMesh
-	constexpr static const FunctionPointer<UMagicLeapHandMeshingComponent, bool, const UMRMeshComponent*> UMagicLeapHandMeshingComponent = { 0x19090e0, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandMeshingComponent, bool, const UMRMeshComponent*> ConnectMRMesh = { 0x19090e0, 2 }; 
 };
 
 /// Class /Script/MagicLeapHandMeshing.MagicLeapHandMeshingFunctionLibrary
@@ -35,16 +34,15 @@ class UMagicLeapHandMeshingFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/MagicLeapHandMeshing.MagicLeapHandMeshingFunctionLibrary.DisconnectMRMesh
-	constexpr static const FunctionPointer<UMagicLeapHandMeshingFunctionLibrary, bool, const UMRMeshComponent*> UMagicLeapHandMeshingFunctionLibrary = { 0x1908fc0, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandMeshingFunctionLibrary, bool, const UMRMeshComponent*> DisconnectMRMesh = { 0x1908fc0, 0 }; 
 	// Function /Script/MagicLeapHandMeshing.MagicLeapHandMeshingFunctionLibrary.DestroyClient
-	constexpr static const FunctionPointer<UMagicLeapHandMeshingFunctionLibrary, bool> UMagicLeapHandMeshingFunctionLibrary = { 0x1909600, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandMeshingFunctionLibrary, bool> DestroyClient = { 0x1909600, 1 }; 
 	// Function /Script/MagicLeapHandMeshing.MagicLeapHandMeshingFunctionLibrary.CreateClient
-	constexpr static const FunctionPointer<UMagicLeapHandMeshingFunctionLibrary, bool> UMagicLeapHandMeshingFunctionLibrary = { 0x1909640, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandMeshingFunctionLibrary, bool> CreateClient = { 0x1909640, 2 }; 
 	// Function /Script/MagicLeapHandMeshing.MagicLeapHandMeshingFunctionLibrary.ConnectMRMesh
-	constexpr static const FunctionPointer<UMagicLeapHandMeshingFunctionLibrary, bool, const UMRMeshComponent*> UMagicLeapHandMeshingFunctionLibrary = { 0x19090e0, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapHandMeshingFunctionLibrary, bool, const UMRMeshComponent*> ConnectMRMesh = { 0x19090e0, 3 }; 
 };
 
 /// Struct /Script/MagicLeapHandMeshing.MagicLeapHandMeshBlock

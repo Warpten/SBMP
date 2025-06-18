@@ -20,16 +20,15 @@ class UAudioCapture : public UAudioGenerator
 public:
 	unsigned char                                      UnknownData01_1[0x8];                                       // 0x00A8   (0x0008)  MISSED
 
-
 	/// Functions
 	// Function /Script/AudioCapture.AudioCapture.StopCapturingAudio
-	constexpr static const FunctionPointer<UAudioCapture, void> UAudioCapture = { 0x1979f00, 0 }; 
+	constexpr static const FunctionPointer<UAudioCapture, void> StopCapturingAudio = { 0x1979f00, 0 }; 
 	// Function /Script/AudioCapture.AudioCapture.StartCapturingAudio
-	constexpr static const FunctionPointer<UAudioCapture, void> UAudioCapture = { 0x1979f60, 1 }; 
+	constexpr static const FunctionPointer<UAudioCapture, void> StartCapturingAudio = { 0x1979f60, 1 }; 
 	// Function /Script/AudioCapture.AudioCapture.IsCapturingAudio
-	constexpr static const FunctionPointer<UAudioCapture, bool> UAudioCapture = { 0x1979eb0, 2 }; 
+	constexpr static const FunctionPointer<UAudioCapture, bool> IsCapturingAudio = { 0x1979eb0, 2 }; 
 	// Function /Script/AudioCapture.AudioCapture.GetAudioCaptureDeviceInfo
-	constexpr static const FunctionPointer<UAudioCapture, bool, const FAudioCaptureDeviceInfo&> UAudioCapture = { 0x1979fc0, 3 }; 
+	constexpr static const FunctionPointer<UAudioCapture, bool, const FAudioCaptureDeviceInfo&> GetAudioCaptureDeviceInfo = { 0x1979fc0, 3 }; 
 };
 
 /// Class /Script/AudioCapture.AudioCaptureFunctionLibrary
@@ -38,10 +37,9 @@ class UAudioCaptureFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture
-	constexpr static const FunctionPointer<UAudioCaptureFunctionLibrary, UAudioCapture*> UAudioCaptureFunctionLibrary = { 0x197a600, 0 }; 
+	constexpr static const FunctionPointer<UAudioCaptureFunctionLibrary, UAudioCapture*> CreateAudioCapture = { 0x197a600, 0 }; 
 };
 
 /// Class /Script/AudioCapture.AudioCaptureComponent

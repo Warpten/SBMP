@@ -82,16 +82,15 @@ public:
 	unsigned char                                      UnknownData03_6[0xC];                                       // 0x01D4   (0x000C)  MISSED
 	FQuat                                              PreviewOriginRotation;                                      // 0x01E0   (0x0010)  
 
-
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequence.RemoveMetaDataByClass
-	constexpr static const FunctionPointer<ULevelSequence, void, const UClass*> ULevelSequence = { 0x17a7aa0, 0 }; 
+	constexpr static const FunctionPointer<ULevelSequence, void, const UClass*> RemoveMetaDataByClass = { 0x17a7aa0, 0 }; 
 	// Function /Script/LevelSequence.LevelSequence.FindOrAddMetaDataByClass
-	constexpr static const FunctionPointer<ULevelSequence, UObject*, const UClass*> ULevelSequence = { 0x3f3eb70, 1 }; 
+	constexpr static const FunctionPointer<ULevelSequence, UObject*, const UClass*> FindOrAddMetaDataByClass = { 0x3f3eb70, 1 }; 
 	// Function /Script/LevelSequence.LevelSequence.FindMetaDataByClass
-	constexpr static const FunctionPointer<ULevelSequence, UObject*, const UClass*> ULevelSequence = { 0x3f3eb70, 2 }; 
+	constexpr static const FunctionPointer<ULevelSequence, UObject*, const UClass*> FindMetaDataByClass = { 0x3f3eb70, 2 }; 
 	// Function /Script/LevelSequence.LevelSequence.CopyMetaData
-	constexpr static const FunctionPointer<ULevelSequence, UObject*, const UObject*> ULevelSequence = { 0x3f3eb70, 3 }; 
+	constexpr static const FunctionPointer<ULevelSequence, UObject*, const UObject*> CopyMetaData = { 0x3f3eb70, 3 }; 
 };
 
 /// Struct /Script/LevelSequence.LevelSequenceCameraSettings
@@ -129,44 +128,43 @@ public:
 	bool                                               bShowBurnin;                                                // 0x03A0   (0x0001)  
 	unsigned char                                      UnknownData11_7[0x7];                                       // 0x03A1   (0x0007)  MISSED
 
-
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceActor.ShowBurnin
-	constexpr static const FunctionPointer<ALevelSequenceActor, void> ALevelSequenceActor = { 0x3f409b0, 0 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void> ShowBurnin = { 0x3f409b0, 0 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.SetSequence
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const ULevelSequence*> ALevelSequenceActor = { 0x3f40b30, 1 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const ULevelSequence*> SetSequence = { 0x3f40b30, 1 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.SetReplicatePlayback
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const bool> ALevelSequenceActor = { 0x3f40a40, 2 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const bool> SetReplicatePlayback = { 0x3f40a40, 2 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.SetBindingByTag
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FName, const TArray<AActor*>&, const bool> ALevelSequenceActor = { 0x3f40530, 3 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FName, const TArray<AActor*>&, const bool> SetBindingByTag = { 0x3f40530, 3 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.SetBinding
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FMovieSceneObjectBindingID, const TArray<AActor*>&, const bool> ALevelSequenceActor = { 0x3f40760, 4 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FMovieSceneObjectBindingID, const TArray<AActor*>&, const bool> SetBinding = { 0x3f40760, 4 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.ResetBindings
-	constexpr static const FunctionPointer<ALevelSequenceActor, void> ALevelSequenceActor = { 0x3f3fcd0, 5 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void> ResetBindings = { 0x3f3fcd0, 5 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.ResetBinding
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FMovieSceneObjectBindingID> ALevelSequenceActor = { 0x3f3fcf0, 6 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FMovieSceneObjectBindingID> ResetBinding = { 0x3f3fcf0, 6 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.RemoveBindingByTag
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FName, const AActor*> ALevelSequenceActor = { 0x3f3fe00, 7 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FName, const AActor*> RemoveBindingByTag = { 0x3f3fe00, 7 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.RemoveBinding
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FMovieSceneObjectBindingID, const AActor*> ALevelSequenceActor = { 0x3f3ff70, 8 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FMovieSceneObjectBindingID, const AActor*> RemoveBinding = { 0x3f3ff70, 8 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.OnLevelSequenceLoaded__DelegateSignature
-	constexpr static const FunctionPointer<ALevelSequenceActor, void> ALevelSequenceActor = { 0x2bbb090, 9 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void> OnLevelSequenceLoaded__DelegateSignature = { 0x2bbb090, 9 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.LoadSequence
-	constexpr static const FunctionPointer<ALevelSequenceActor, ULevelSequence*> ALevelSequenceActor = { 0x3f40c10, 10 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, ULevelSequence*> LoadSequence = { 0x3f40c10, 10 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.HideBurnin
-	constexpr static const FunctionPointer<ALevelSequenceActor, void> ALevelSequenceActor = { 0x3f409e0, 11 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void> HideBurnin = { 0x3f409e0, 11 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.GetSequencePlayer
-	constexpr static const FunctionPointer<ALevelSequenceActor, ULevelSequencePlayer*> ALevelSequenceActor = { 0x3f40a00, 12 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, ULevelSequencePlayer*> GetSequencePlayer = { 0x3f40a00, 12 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.GetSequence
-	constexpr static const FunctionPointer<ALevelSequenceActor, ULevelSequence*> ALevelSequenceActor = { 0x3f40c90, 13 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, ULevelSequence*> GetSequence = { 0x3f40c90, 13 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.FindNamedBindings
-	constexpr static const FunctionPointer<ALevelSequenceActor, TArray<FMovieSceneObjectBindingID>, const FName> ALevelSequenceActor = { 0x3f3fa40, 14 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, TArray<FMovieSceneObjectBindingID>, const FName> FindNamedBindings = { 0x3f3fa40, 14 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.FindNamedBinding
-	constexpr static const FunctionPointer<ALevelSequenceActor, FMovieSceneObjectBindingID, const FName> ALevelSequenceActor = { 0x3f3fba0, 15 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, FMovieSceneObjectBindingID, const FName> FindNamedBinding = { 0x3f3fba0, 15 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.AddBindingByTag
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FName, const AActor*, const bool> ALevelSequenceActor = { 0x3f40110, 16 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FName, const AActor*, const bool> AddBindingByTag = { 0x3f40110, 16 }; 
 	// Function /Script/LevelSequence.LevelSequenceActor.AddBinding
-	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FMovieSceneObjectBindingID, const AActor*, const bool> ALevelSequenceActor = { 0x3f40300, 17 }; 
+	constexpr static const FunctionPointer<ALevelSequenceActor, void, const FMovieSceneObjectBindingID, const AActor*, const bool> AddBinding = { 0x3f40300, 17 }; 
 };
 
 /// Class /Script/LevelSequence.AnimSequenceLevelSequenceLink
@@ -213,10 +211,9 @@ public:
 	FSoftClassPath                                     BurnInClass;                                                // 0x0030   (0x0018)  
 	class ULevelSequenceBurnInInitSettings*            Settings;                                                   // 0x0048   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-	constexpr static const FunctionPointer<ULevelSequenceBurnInOptions, void, const FSoftClassPath> ULevelSequenceBurnInOptions = { 0x3f3f560, 0 }; 
+	constexpr static const FunctionPointer<ULevelSequenceBurnInOptions, void, const FSoftClassPath> SetBurnIn = { 0x3f3f560, 0 }; 
 };
 
 /// Struct /Script/LevelSequence.LevelSequenceAnimSequenceLinkItem
@@ -276,12 +273,11 @@ public:
 	FLevelSequencePlayerSnapshot                       FrameInformation;                                           // 0x0280   (0x00B8)  
 	class ALevelSequenceActor*                         LevelSequenceActor;                                         // 0x0338   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceBurnIn.SetSettings
-	constexpr static const FunctionPointer<ULevelSequenceBurnIn, void, const UObject*> ULevelSequenceBurnIn = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ULevelSequenceBurnIn, void, const UObject*> SetSettings = { 0x2bbb090, 0 }; 
 	// Function /Script/LevelSequence.LevelSequenceBurnIn.GetSettingsClass
-	constexpr static const FunctionPointer<ULevelSequenceBurnIn, UClass*> ULevelSequenceBurnIn = { 0x3f41900, 1 }; 
+	constexpr static const FunctionPointer<ULevelSequenceBurnIn, UClass*> GetSettingsClass = { 0x3f41900, 1 }; 
 };
 
 /// Class /Script/LevelSequence.LevelSequenceDirector
@@ -291,10 +287,9 @@ class ULevelSequenceDirector : public UObject
 public:
 	class ULevelSequencePlayer*                        Player;                                                     // 0x0028   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceDirector.OnCreated
-	constexpr static const FunctionPointer<ULevelSequenceDirector, void> ULevelSequenceDirector = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<ULevelSequenceDirector, void> OnCreated = { 0x2bbb090, 0 }; 
 };
 
 /// Class /Script/LevelSequence.LegacyLevelSequenceDirectorBlueprint
@@ -312,12 +307,11 @@ public:
 	FMulticastInlineDelegate                           OnCameraCut;                                                // 0x06D8   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x110];                                     // 0x06E8   (0x0110)  MISSED
 
-
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequencePlayer.GetActiveCameraComponent
-	constexpr static const FunctionPointer<ULevelSequencePlayer, UCameraComponent*> ULevelSequencePlayer = { 0x3f42920, 0 }; 
+	constexpr static const FunctionPointer<ULevelSequencePlayer, UCameraComponent*> GetActiveCameraComponent = { 0x3f42920, 0 }; 
 	// Function /Script/LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
-	constexpr static const FunctionPointer<ULevelSequencePlayer, ULevelSequencePlayer*, const UObject*, const ULevelSequence*, const FMovieSceneSequencePlaybackSettings, const ALevelSequenceActor*&> ULevelSequencePlayer = { 0x3f42950, 1 }; 
+	constexpr static const FunctionPointer<ULevelSequencePlayer, ULevelSequencePlayer*, const UObject*, const ULevelSequence*, const FMovieSceneSequencePlaybackSettings, const ALevelSequenceActor*&> CreateLevelSequencePlayer = { 0x3f42950, 1 }; 
 };
 
 /// Class /Script/LevelSequence.LevelSequenceMediaController
@@ -331,18 +325,17 @@ public:
 	float                                              ServerStartTimeSeconds;                                     // 0x02E0   (0x0004)  
 	unsigned char                                      UnknownData03_7[0xC];                                       // 0x02E4   (0x000C)  MISSED
 
-
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceMediaController.SynchronizeToServer
-	constexpr static const FunctionPointer<ALevelSequenceMediaController, void, const float> ALevelSequenceMediaController = { 0x3f43490, 0 }; 
+	constexpr static const FunctionPointer<ALevelSequenceMediaController, void, const float> SynchronizeToServer = { 0x3f43490, 0 }; 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.Play
-	constexpr static const FunctionPointer<ALevelSequenceMediaController, void> ALevelSequenceMediaController = { 0x3f43660, 1 }; 
+	constexpr static const FunctionPointer<ALevelSequenceMediaController, void> Play = { 0x3f43660, 1 }; 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.OnRep_ServerStartTimeSeconds
-	constexpr static const FunctionPointer<ALevelSequenceMediaController, void> ALevelSequenceMediaController = { 0x3f43470, 2 }; 
+	constexpr static const FunctionPointer<ALevelSequenceMediaController, void> OnRep_ServerStartTimeSeconds = { 0x3f43470, 2 }; 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.GetSequence
-	constexpr static const FunctionPointer<ALevelSequenceMediaController, ALevelSequenceActor*> ALevelSequenceMediaController = { 0x3f43640, 3 }; 
+	constexpr static const FunctionPointer<ALevelSequenceMediaController, ALevelSequenceActor*> GetSequence = { 0x3f43640, 3 }; 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.GetMediaComponent
-	constexpr static const FunctionPointer<ALevelSequenceMediaController, UMediaComponent*> ALevelSequenceMediaController = { 0x3dc8750, 4 }; 
+	constexpr static const FunctionPointer<ALevelSequenceMediaController, UMediaComponent*> GetMediaComponent = { 0x3dc8750, 4 }; 
 };
 
 /// Struct /Script/LevelSequence.BoundActorProxy

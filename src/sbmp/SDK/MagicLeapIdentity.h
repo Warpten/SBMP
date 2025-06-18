@@ -56,22 +56,21 @@ class UMagicLeapIdentity : public UObject
 public:
 	unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010)  MISSED
 
-
 	/// Functions
 	// Function /Script/MagicLeapIdentity.MagicLeapIdentity.RequestIdentityAttributeValueDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<FMagicLeapIdentityAttribute>&> UMagicLeapIdentity = { 0x2bbb090, 0 }; 
+	constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<FMagicLeapIdentityAttribute>&> RequestIdentityAttributeValueDelegate__DelegateSignature = { 0x2bbb090, 0 }; 
 	// Function /Script/MagicLeapIdentity.MagicLeapIdentity.RequestAttributeValueAsync
-	constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&, const FDelegateProperty&> UMagicLeapIdentity = { 0x18fd280, 1 }; 
+	constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&, const FDelegateProperty&> RequestAttributeValueAsync = { 0x18fd280, 1 }; 
 	// Function /Script/MagicLeapIdentity.MagicLeapIdentity.RequestAttributeValue
-	constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&, const TArray<FMagicLeapIdentityAttribute>&> UMagicLeapIdentity = { 0x18fd3e0, 2 }; 
+	constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&, const TArray<FMagicLeapIdentityAttribute>&> RequestAttributeValue = { 0x18fd3e0, 2 }; 
 	// Function /Script/MagicLeapIdentity.MagicLeapIdentity.ModifyIdentityAttributeValueDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> UMagicLeapIdentity = { 0x2bbb090, 3 }; 
+	constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> ModifyIdentityAttributeValueDelegate__DelegateSignature = { 0x2bbb090, 3 }; 
 	// Function /Script/MagicLeapIdentity.MagicLeapIdentity.GetAllAvailableAttributesAsync
-	constexpr static const FunctionPointer<UMagicLeapIdentity, void, const FDelegateProperty&> UMagicLeapIdentity = { 0x18fd580, 4 }; 
+	constexpr static const FunctionPointer<UMagicLeapIdentity, void, const FDelegateProperty&> GetAllAvailableAttributesAsync = { 0x18fd580, 4 }; 
 	// Function /Script/MagicLeapIdentity.MagicLeapIdentity.GetAllAvailableAttributes
-	constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> UMagicLeapIdentity = { 0x18fd640, 5 }; 
+	constexpr static const FunctionPointer<UMagicLeapIdentity, EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> GetAllAvailableAttributes = { 0x18fd640, 5 }; 
 	// Function /Script/MagicLeapIdentity.MagicLeapIdentity.AvailableIdentityAttributesDelegate__DelegateSignature
-	constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> UMagicLeapIdentity = { 0x2bbb090, 6 }; 
+	constexpr static const FunctionPointer<UMagicLeapIdentity, void, const EMagicLeapIdentityError, const TArray<EMagicLeapIdentityKey>&> AvailableIdentityAttributesDelegate__DelegateSignature = { 0x2bbb090, 6 }; 
 };
 
 /// Struct /Script/MagicLeapIdentity.MagicLeapIdentityAttribute

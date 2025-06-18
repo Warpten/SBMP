@@ -66,34 +66,33 @@ public:
 	unsigned char                                      UnknownData09_6[0x10];                                      // 0x0200   (0x0010)  MISSED
 	class UTextureRenderTarget2D*                      MaskMaterialRenderTarget;                                   // 0x0210   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetVerticalAlignment
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const TEnumAsByte<EVerticalAlignment>> UBackgroundBlurWithMask = { 0x1548bb0, 0 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const TEnumAsByte<EVerticalAlignment>> SetVerticalAlignment = { 0x1548bb0, 0 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetUseMaskMaterial
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const bool> UBackgroundBlurWithMask = { 0x1548870, 1 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const bool> SetUseMaskMaterial = { 0x1548870, 1 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetPadding
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const FMargin> UBackgroundBlurWithMask = { 0x1548d90, 2 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const FMargin> SetPadding = { 0x1548d90, 2 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetMaskTextureChannel
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const TEnumAsByte<EMaskTextureChannel>> UBackgroundBlurWithMask = { 0x15484f0, 3 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const TEnumAsByte<EMaskTextureChannel>> SetMaskTextureChannel = { 0x15484f0, 3 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetMaskTexture
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const UTexture2D*> UBackgroundBlurWithMask = { 0x1548770, 4 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const UTexture2D*> SetMaskTexture = { 0x1548770, 4 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetMaskMaterialSetting
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const FMaskMaterialSetting&> UBackgroundBlurWithMask = { 0x15485e0, 5 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const FMaskMaterialSetting&> SetMaskMaterialSetting = { 0x15485e0, 5 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetLowQualityFallbackBrush
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const FSlateBrush&> UBackgroundBlurWithMask = { 0x1548220, 6 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const FSlateBrush&> SetLowQualityFallbackBrush = { 0x1548220, 6 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetHorizontalAlignment
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const TEnumAsByte<EHorizontalAlignment>> UBackgroundBlurWithMask = { 0x1548ca0, 7 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const TEnumAsByte<EHorizontalAlignment>> SetHorizontalAlignment = { 0x1548ca0, 7 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetBlurStrength
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const float> UBackgroundBlurWithMask = { 0x1548420, 8 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const float> SetBlurStrength = { 0x1548420, 8 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetBlurRadius
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const int32_t> UBackgroundBlurWithMask = { 0x15489e0, 9 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const int32_t> SetBlurRadius = { 0x15489e0, 9 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetApplyAlphaToBlur
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const bool> UBackgroundBlurWithMask = { 0x1548ab0, 10 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void, const bool> SetApplyAlphaToBlur = { 0x1548ab0, 10 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.RedrawMaskMaterial
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void> UBackgroundBlurWithMask = { 0x1548200, 11 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, void> RedrawMaskMaterial = { 0x1548200, 11 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.GetMaskTextureInUse
-	constexpr static const FunctionPointer<UBackgroundBlurWithMask, UTexture*> UBackgroundBlurWithMask = { 0x15481c0, 12 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMask, UTexture*> GetMaskTextureInUse = { 0x15481c0, 12 }; 
 };
 
 /// Class /Script/BackgroundBlurWithMask.BackgroundBlurWithMaskSlot
@@ -106,14 +105,13 @@ public:
 	TEnumAsByte<EVerticalAlignment>                    VerticalAlignment;                                          // 0x0049   (0x0001)  
 	unsigned char                                      UnknownData01_7[0x16];                                      // 0x004A   (0x0016)  MISSED
 
-
 	/// Functions
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMaskSlot.SetVerticalAlignment
-	constexpr static const FunctionPointer<UBackgroundBlurWithMaskSlot, void, const TEnumAsByte<EVerticalAlignment>> UBackgroundBlurWithMaskSlot = { 0x1549790, 0 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMaskSlot, void, const TEnumAsByte<EVerticalAlignment>> SetVerticalAlignment = { 0x1549790, 0 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMaskSlot.SetPadding
-	constexpr static const FunctionPointer<UBackgroundBlurWithMaskSlot, void, const FMargin> UBackgroundBlurWithMaskSlot = { 0x1549970, 1 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMaskSlot, void, const FMargin> SetPadding = { 0x1549970, 1 }; 
 	// Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMaskSlot.SetHorizontalAlignment
-	constexpr static const FunctionPointer<UBackgroundBlurWithMaskSlot, void, const TEnumAsByte<EHorizontalAlignment>> UBackgroundBlurWithMaskSlot = { 0x1549880, 2 }; 
+	constexpr static const FunctionPointer<UBackgroundBlurWithMaskSlot, void, const TEnumAsByte<EHorizontalAlignment>> SetHorizontalAlignment = { 0x1549880, 2 }; 
 };
 
 #pragma pack(pop)

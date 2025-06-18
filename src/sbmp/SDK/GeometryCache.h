@@ -32,10 +32,9 @@ class AGeometryCacheActor : public AActor
 public:
 	class UGeometryCacheComponent*                     GeometryCacheComponent;                                     // 0x02C8   (0x0008)  
 
-
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
-	constexpr static const FunctionPointer<AGeometryCacheActor, UGeometryCacheComponent*> AGeometryCacheActor = { 0x17d0710, 0 }; 
+	constexpr static const FunctionPointer<AGeometryCacheActor, UGeometryCacheComponent*> GetGeometryCacheComponent = { 0x17d0710, 0 }; 
 };
 
 /// Class /Script/GeometryCache.GeometryCacheCodecBase
@@ -81,48 +80,47 @@ public:
 	bool                                               bManualTick;                                                // 0x05B0   (0x0001)  
 	unsigned char                                      UnknownData05_7[0xF];                                       // 0x05B1   (0x000F)  MISSED
 
-
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheComponent.TickAtThisTime
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void, const float, const bool, const bool, const bool> UGeometryCacheComponent = { 0x17d1270, 0 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void, const float, const bool, const bool, const bool> TickAtThisTime = { 0x17d1270, 0 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.Stop
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void> UGeometryCacheComponent = { 0x17d1a90, 1 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void> Stop = { 0x17d1a90, 1 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetStartTimeOffset
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void, const float> UGeometryCacheComponent = { 0x17d15e0, 2 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void, const float> SetStartTimeOffset = { 0x17d15e0, 2 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void, const float> UGeometryCacheComponent = { 0x17d17e0, 3 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void, const float> SetPlaybackSpeed = { 0x17d17e0, 3 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetLooping
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void, const bool> UGeometryCacheComponent = { 0x17d1930, 4 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void, const bool> SetLooping = { 0x17d1930, 4 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetGeometryCache
-	constexpr static const FunctionPointer<UGeometryCacheComponent, bool, const UGeometryCache*> UGeometryCacheComponent = { 0x17d16f0, 5 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, bool, const UGeometryCache*> SetGeometryCache = { 0x17d16f0, 5 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.PlayReversedFromEnd
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void> UGeometryCacheComponent = { 0x17d1ae0, 6 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void> PlayReversedFromEnd = { 0x17d1ae0, 6 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.PlayReversed
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void> UGeometryCacheComponent = { 0x17d1b40, 7 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void> PlayReversed = { 0x17d1b40, 7 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.PlayFromStart
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void> UGeometryCacheComponent = { 0x17d1b90, 8 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void> PlayFromStart = { 0x17d1b90, 8 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.Play
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void> UGeometryCacheComponent = { 0x17d1bf0, 9 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void> Play = { 0x17d1bf0, 9 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.Pause
-	constexpr static const FunctionPointer<UGeometryCacheComponent, void> UGeometryCacheComponent = { 0x17d1ab0, 10 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, void> Pause = { 0x17d1ab0, 10 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.IsPlayingReversed
-	constexpr static const FunctionPointer<UGeometryCacheComponent, bool> UGeometryCacheComponent = { 0x17d1a30, 11 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, bool> IsPlayingReversed = { 0x17d1a30, 11 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.IsPlaying
-	constexpr static const FunctionPointer<UGeometryCacheComponent, bool> UGeometryCacheComponent = { 0x17d1a70, 12 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, bool> IsPlaying = { 0x17d1a70, 12 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.IsLooping
-	constexpr static const FunctionPointer<UGeometryCacheComponent, bool> UGeometryCacheComponent = { 0x17d1a10, 13 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, bool> IsLooping = { 0x17d1a10, 13 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetStartTimeOffset
-	constexpr static const FunctionPointer<UGeometryCacheComponent, float> UGeometryCacheComponent = { 0x17d16d0, 14 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, float> GetStartTimeOffset = { 0x17d16d0, 14 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetPlaybackSpeed
-	constexpr static const FunctionPointer<UGeometryCacheComponent, float> UGeometryCacheComponent = { 0x17d18f0, 15 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, float> GetPlaybackSpeed = { 0x17d18f0, 15 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetPlaybackDirection
-	constexpr static const FunctionPointer<UGeometryCacheComponent, float> UGeometryCacheComponent = { 0x17d1570, 16 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, float> GetPlaybackDirection = { 0x17d1570, 16 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetNumberOfFrames
-	constexpr static const FunctionPointer<UGeometryCacheComponent, int32_t> UGeometryCacheComponent = { 0x17d1510, 17 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, int32_t> GetNumberOfFrames = { 0x17d1510, 17 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetDuration
-	constexpr static const FunctionPointer<UGeometryCacheComponent, float> UGeometryCacheComponent = { 0x17d1550, 18 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, float> GetDuration = { 0x17d1550, 18 }; 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetAnimationTime
-	constexpr static const FunctionPointer<UGeometryCacheComponent, float> UGeometryCacheComponent = { 0x17d1590, 19 }; 
+	constexpr static const FunctionPointer<UGeometryCacheComponent, float> GetAnimationTime = { 0x17d1590, 19 }; 
 };
 
 /// Class /Script/GeometryCache.GeometryCacheTrack
@@ -142,10 +140,9 @@ public:
 	uint32_t                                           NumMeshSamples;                                             // 0x0058   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x24];                                      // 0x005C   (0x0024)  MISSED
 
-
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
-	constexpr static const FunctionPointer<UGeometryCacheTrack_FlipbookAnimation, void, const FGeometryCacheMeshData&, const float> UGeometryCacheTrack_FlipbookAnimation = { 0x17d2930, 0 }; 
+	constexpr static const FunctionPointer<UGeometryCacheTrack_FlipbookAnimation, void, const FGeometryCacheMeshData&, const float> AddMeshSample = { 0x17d2930, 0 }; 
 };
 
 /// Class /Script/GeometryCache.GeometryCacheTrackStreamable
@@ -166,10 +163,9 @@ class UGeometryCacheTrack_TransformAnimation : public UGeometryCacheTrack
 public:
 	unsigned char                                      UnknownData01_1[0xA8];                                      // 0x0058   (0x00A8)  MISSED
 
-
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
-	constexpr static const FunctionPointer<UGeometryCacheTrack_TransformAnimation, void, const FGeometryCacheMeshData&> UGeometryCacheTrack_TransformAnimation = { 0x17d3350, 0 }; 
+	constexpr static const FunctionPointer<UGeometryCacheTrack_TransformAnimation, void, const FGeometryCacheMeshData&> SetMesh = { 0x17d3350, 0 }; 
 };
 
 /// Class /Script/GeometryCache.GeometryCacheTrack_TransformGroupAnimation
@@ -179,10 +175,9 @@ class UGeometryCacheTrack_TransformGroupAnimation : public UGeometryCacheTrack
 public:
 	unsigned char                                      UnknownData01_1[0xA8];                                      // 0x0058   (0x00A8)  MISSED
 
-
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
-	constexpr static const FunctionPointer<UGeometryCacheTrack_TransformGroupAnimation, void, const FGeometryCacheMeshData&> UGeometryCacheTrack_TransformGroupAnimation = { 0x17d3350, 0 }; 
+	constexpr static const FunctionPointer<UGeometryCacheTrack_TransformGroupAnimation, void, const FGeometryCacheMeshData&> SetMesh = { 0x17d3350, 0 }; 
 };
 
 /// Struct /Script/GeometryCache.TrackRenderData

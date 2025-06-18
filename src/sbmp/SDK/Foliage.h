@@ -81,12 +81,11 @@ class UFoliageStatistics : public UBlueprintFunctionLibrary
 { 
 public:
 
-
 	/// Functions
 	// Function /Script/Foliage.FoliageStatistics.FoliageOverlappingSphereCount
-	constexpr static const FunctionPointer<UFoliageStatistics, int32_t, const UObject*, const UStaticMesh*, const FVector, const float> UFoliageStatistics = { 0x3a8b880, 0 }; 
+	constexpr static const FunctionPointer<UFoliageStatistics, int32_t, const UObject*, const UStaticMesh*, const FVector, const float> FoliageOverlappingSphereCount = { 0x3a8b880, 0 }; 
 	// Function /Script/Foliage.FoliageStatistics.FoliageOverlappingBoxCount
-	constexpr static const FunctionPointer<UFoliageStatistics, int32_t, const UObject*, const UStaticMesh*, const FBox> UFoliageStatistics = { 0x3a8b660, 1 }; 
+	constexpr static const FunctionPointer<UFoliageStatistics, int32_t, const UObject*, const UStaticMesh*, const FBox> FoliageOverlappingBoxCount = { 0x3a8b660, 1 }; 
 };
 
 /// Struct /Script/Foliage.FoliageVertexColorChannelMask
@@ -266,10 +265,9 @@ public:
 	float                                              Mass;                                                       // 0x0330   (0x0004)  
 	unsigned char                                      UnknownData01_7[0x4];                                       // 0x0334   (0x0004)  MISSED
 
-
 	/// Functions
 	// Function /Script/Foliage.InteractiveFoliageActor.CapsuleTouched
-	constexpr static const FunctionPointer<AInteractiveFoliageActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> AInteractiveFoliageActor = { 0x3a8d4a0, 0 }; 
+	constexpr static const FunctionPointer<AInteractiveFoliageActor, void, const UPrimitiveComponent*, const AActor*, const UPrimitiveComponent*, const int32_t, const bool, const FHitResult&> CapsuleTouched = { 0x3a8d4a0, 0 }; 
 };
 
 /// Class /Script/Foliage.InteractiveFoliageComponent
@@ -324,10 +322,9 @@ public:
 	TArray<FFoliageTypeObject>                         FoliageTypes;                                               // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x18];                                      // 0x0050   (0x0018)  MISSED
 
-
 	/// Functions
 	// Function /Script/Foliage.ProceduralFoliageSpawner.Simulate
-	constexpr static const FunctionPointer<UProceduralFoliageSpawner, void, const int32_t> UProceduralFoliageSpawner = { 0x3a8e760, 0 }; 
+	constexpr static const FunctionPointer<UProceduralFoliageSpawner, void, const int32_t> Simulate = { 0x3a8e760, 0 }; 
 };
 
 /// Struct /Script/Foliage.ProceduralFoliageInstance
