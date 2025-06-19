@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,8 +24,11 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MagicLeapController.EMagicLeapTouchpadGestureDirection
-/// Size: 0x01 (1 bytes)
+class UMagicLeapControllerFunctionLibrary;
+class UMagicLeapTouchpadGesturesComponent;
+struct FMagicLeapTouchpadGesture;
+
+/// Enum /Script/MagicLeapController.EMagicLeapTouchpadGestureDirection -  1 (1 bytes)
 enum class EMagicLeapTouchpadGestureDirection : uint8_t
 {
     None                                                                             = 0,
@@ -30,8 +42,7 @@ enum class EMagicLeapTouchpadGestureDirection : uint8_t
     CounterClockwise                                                                 = 8
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapTouchpadGestureType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapTouchpadGestureType -  1 (1 bytes)
 enum class EMagicLeapTouchpadGestureType : uint8_t
 {
     None                                                                             = 0,
@@ -47,16 +58,14 @@ enum class EMagicLeapTouchpadGestureType : uint8_t
     Pinch                                                                            = 10
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapControllerTrackingMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapControllerTrackingMode -  1 (1 bytes)
 enum class EMagicLeapControllerTrackingMode : uint8_t
 {
     InputService                                                                     = 0,
     CoordinateFrameUID                                                               = 1
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapControllerHapticIntensity
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapControllerHapticIntensity -  1 (1 bytes)
 enum class EMagicLeapControllerHapticIntensity : uint8_t
 {
     Low                                                                              = 0,
@@ -64,8 +73,7 @@ enum class EMagicLeapControllerHapticIntensity : uint8_t
     High                                                                             = 2
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapControllerHapticPattern
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapControllerHapticPattern -  1 (1 bytes)
 enum class EMagicLeapControllerHapticPattern : uint8_t
 {
     None                                                                             = 0,
@@ -80,8 +88,7 @@ enum class EMagicLeapControllerHapticPattern : uint8_t
     SecondForceDown                                                                  = 9
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapControllerLEDSpeed
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapControllerLEDSpeed -  1 (1 bytes)
 enum class EMagicLeapControllerLEDSpeed : uint8_t
 {
     Slow                                                                             = 0,
@@ -89,8 +96,7 @@ enum class EMagicLeapControllerLEDSpeed : uint8_t
     Fast                                                                             = 2
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapControllerLEDColor
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapControllerLEDColor -  1 (1 bytes)
 enum class EMagicLeapControllerLEDColor : uint8_t
 {
     BrightMissionRed                                                                 = 0,
@@ -111,8 +117,7 @@ enum class EMagicLeapControllerLEDColor : uint8_t
     PastelShaggleGreen                                                               = 15
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapControllerLEDEffect
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapControllerLEDEffect -  1 (1 bytes)
 enum class EMagicLeapControllerLEDEffect : uint8_t
 {
     RotateCW                                                                         = 0,
@@ -123,8 +128,7 @@ enum class EMagicLeapControllerLEDEffect : uint8_t
     Blink                                                                            = 5
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapControllerLEDPattern
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapControllerLEDPattern -  1 (1 bytes)
 enum class EMagicLeapControllerLEDPattern : uint8_t
 {
     None                                                                             = 0,
@@ -148,8 +152,7 @@ enum class EMagicLeapControllerLEDPattern : uint8_t
     Clock0619                                                                        = 18
 };
 
-/// Enum /Script/MagicLeapController.EMagicLeapControllerType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapController.EMagicLeapControllerType -  1 (1 bytes)
 enum class EMagicLeapControllerType : uint8_t
 {
     None                                                                             = 0,
@@ -158,7 +161,7 @@ enum class EMagicLeapControllerType : uint8_t
 };
 
 /// Class /Script/MagicLeapController.MagicLeapControllerFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMagicLeapControllerFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -237,38 +240,52 @@ public:
 };
 
 /// Class /Script/MagicLeapController.MagicLeapTouchpadGesturesComponent
-/// Size: 0x0150 (336 bytes) (0x0000C0 - 0x000150) align 8 MaxSize: 0x0150
+/// Size: 0x0150 (336 bytes) (0x0000C0 - 0x000150) align n/a MaxSize: 0x0150
 class UMagicLeapTouchpadGesturesComponent : public UActorComponent
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x00C0   (0x0008) MISSED
-    FMulticastInlineDelegate                           OnTouchpadGestureStart;                                     // 0x00C8   (0x0010)
-    FMulticastInlineDelegate                           OnTouchpadGestureContinue;                                  // 0x00D8   (0x0010)
-    FMulticastInlineDelegate                           OnTouchpadGestureEnd;                                       // 0x00E8   (0x0010)
-    unsigned char                                      UnknownData01_7[0x58];                                      // 0x00F8   (0x0058) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x8];                                       // 0x00C0   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnTouchpadGestureStart;                                     // 0x00C8   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnTouchpadGestureContinue;                                  // 0x00D8   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnTouchpadGestureEnd;                                       // 0x00E8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0x58];                                      // 0x00F8   (0x0058) MISSED
 };
 
 /// Struct /Script/MagicLeapController.MagicLeapTouchpadGesture
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 4 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FMagicLeapTouchpadGesture
 { 
-    EControllerHand                                    Hand;                                                       // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    FName                                              MotionSource;                                               // 0x0004   (0x0008)
-    EMagicLeapTouchpadGestureType                      Type;                                                       // 0x000C   (0x0001)
-    EMagicLeapTouchpadGestureDirection                 Direction;                                                  // 0x000D   (0x0001)
-    unsigned char                                      UnknownData01_6[0x2];                                       // 0x000E   (0x0002) MISSED
-    FVector                                            PositionAndForce;                                           // 0x0010   (0x000C)
-    float                                              Speed;                                                      // 0x001C   (0x0004)
-    float                                              Distance;                                                   // 0x0020   (0x0004)
-    float                                              FingerGap;                                                  // 0x0024   (0x0004)
-    float                                              Radius;                                                     // 0x0028   (0x0004)
-    float                                              angle;                                                      // 0x002C   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EControllerHand                                    Hand;                                                       // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              MotionSource;                                               // 0x0004   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapTouchpadGestureType                      Type;                                                       // 0x000C   (0x0001)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapTouchpadGestureDirection                 Direction;                                                  // 0x000D   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x2];                                       // 0x000E   (0x0002) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            PositionAndForce;                                           // 0x0010   (0x000C)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Speed;                                                      // 0x001C   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Distance;                                                   // 0x0020   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FingerGap;                                                  // 0x0024   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Radius;                                                     // 0x0028   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              angle;                                                      // 0x002C   (0x0004)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMagicLeapControllerFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UMagicLeapTouchpadGesturesComponent) == 0x0150); // 336 bytes (0x0000C0 - 0x000150)
 static_assert(sizeof(FMagicLeapTouchpadGesture) == 0x0030); // 48 bytes (0x000000 - 0x000030)
@@ -277,3 +294,4 @@ static_assert(offsetof(FMagicLeapTouchpadGesture, MotionSource) == 0x0004);
 static_assert(offsetof(FMagicLeapTouchpadGesture, Type) == 0x000C);
 static_assert(offsetof(FMagicLeapTouchpadGesture, Direction) == 0x000D);
 static_assert(offsetof(FMagicLeapTouchpadGesture, PositionAndForce) == 0x0010);
+#endif

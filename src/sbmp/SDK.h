@@ -9,8 +9,6 @@
 /// If there are still structs missing, read the Engine/Generation/BasicType file.
 /// All manual defined structs are in BasicType.h
 
-#include <string>
-
 #define SDK_UNDEFINED(__ssize__, __cnt__, ...) char undefined##__cnt__[__ssize__]; //
 #define __um(...) // x
 
@@ -45,6 +43,7 @@
 #include "SDK/ApexDestruction.h"
 #include "SDK/AppleImageUtils.h"
 #include "SDK/ArchVisCharacter.h"
+#include "SDK/BinkMediaPlayer.h"
 #include "SDK/MediaUtils.h"
 #include "SDK/MediaAssets.h"
 #include "SDK/LevelSequence.h"
@@ -56,13 +55,13 @@
 #include "SDK/NiagaraShader.h"
 #include "SDK/Niagara.h"
 #include "SDK/ProceduralMeshComponent.h"
-#include "SDK/BinkMediaPlayer.h"
 #include "SDK/CableComponent.h"
 #include "SDK/CinematicCamera.h"
 #include "SDK/Foliage.h"
 #include "SDK/SBAnimation.h"
 #include "SDK/SignificanceManager.h"
 #include "SDK/SB.h"
+#include "SDK/UIParticleSystem.h"
 #include "SDK/Art.h"
 #include "SDK/AssetRegistry.h"
 #include "SDK/AssetTags.h"
@@ -82,6 +81,7 @@
 #include "SDK/ClothingSystemRuntimeNv.h"
 #include "SDK/CustomMeshComponent.h"
 #include "SDK/DatasmithContent.h"
+#include "SDK/DLC_2.h"
 #include "SDK/DLSS.h"
 #include "SDK/DLSSBlueprint.h"
 #include "SDK/FieldSystemEngine.h"
@@ -94,6 +94,7 @@
 #include "SDK/FacialAnimation.h"
 #include "SDK/FFXFSR3Settings.h"
 #include "SDK/FullBodyIK.h"
+#include "SDK/GameDesign.h"
 #include "SDK/GamepadUMGPlugin.h"
 #include "SDK/GeometryCache.h"
 #include "SDK/GeometryCacheTracks.h"
@@ -168,7 +169,6 @@
 #include "SDK/TcpMessaging.h"
 #include "SDK/TemplateSequence.h"
 #include "SDK/UdpMessaging.h"
-#include "SDK/UIParticleSystem.h"
 #include "SDK/UObjectPlugin.h"
 #include "SDK/VariantManagerContent.h"
 #include "SDK/VectorVM.h"

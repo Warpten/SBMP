@@ -2,19 +2,37 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MeshDescription.EComputeNTBsOptions
-/// Size: 0x01 (1 bytes)
+class UMeshDescription;
+class UMeshDescriptionBase;
+struct FEdgeID;
+struct FElementID;
+struct FPolygonGroupID;
+struct FPolygonID;
+struct FTriangleID;
+struct FVertexID;
+struct FVertexInstanceID;
+
+/// Enum /Script/MeshDescription.EComputeNTBsOptions -  1 (1 bytes)
 enum class EComputeNTBsOptions : uint8_t
 {
     None                                                                             = 0,
@@ -24,18 +42,18 @@ enum class EComputeNTBsOptions : uint8_t
 };
 
 /// Class /Script/MeshDescription.MeshDescription
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMeshDescription : public UObject
 { 
 public:
 };
 
 /// Class /Script/MeshDescription.MeshDescriptionBase
-/// Size: 0x0390 (912 bytes) (0x000028 - 0x000390) align 8 MaxSize: 0x0390
+/// Size: 0x0390 (912 bytes) (0x000028 - 0x000390) align n/a MaxSize: 0x0390
 class UMeshDescriptionBase : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x368];                                     // 0x0028   (0x0368) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x368];                                     // 0x0028   (0x0368) MISSED
 
     /// Functions
     // Function /Script/MeshDescription.MeshDescriptionBase.SetVertexPosition
@@ -346,44 +364,45 @@ public:
 };
 
 /// Struct /Script/MeshDescription.ElementID
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FElementID
 { 
-    int32_t                                            IDValue;                                                    // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            IDValue;                                                    // 0x0000   (0x0004)
 };
 
 /// Struct /Script/MeshDescription.PolygonGroupID
-/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align n/a MaxSize: 0x0004
 struct FPolygonGroupID : FElementID
 { 
 };
 
 /// Struct /Script/MeshDescription.PolygonID
-/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align n/a MaxSize: 0x0004
 struct FPolygonID : FElementID
 { 
 };
 
 /// Struct /Script/MeshDescription.VertexID
-/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align n/a MaxSize: 0x0004
 struct FVertexID : FElementID
 { 
 };
 
 /// Struct /Script/MeshDescription.VertexInstanceID
-/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align n/a MaxSize: 0x0004
 struct FVertexInstanceID : FElementID
 { 
 };
 
 /// Struct /Script/MeshDescription.EdgeID
-/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align n/a MaxSize: 0x0004
 struct FEdgeID : FElementID
 { 
 };
 
 /// Struct /Script/MeshDescription.TriangleID
-/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align n/a MaxSize: 0x0004
 struct FTriangleID : FElementID
 { 
 };
@@ -391,6 +410,7 @@ struct FTriangleID : FElementID
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMeshDescription) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UMeshDescriptionBase) == 0x0390); // 912 bytes (0x000028 - 0x000390)
 static_assert(sizeof(FElementID) == 0x0004); // 4 bytes (0x000000 - 0x000004)
@@ -400,3 +420,4 @@ static_assert(sizeof(FVertexID) == 0x0004); // 4 bytes (0x000004 - 0x000004)
 static_assert(sizeof(FVertexInstanceID) == 0x0004); // 4 bytes (0x000004 - 0x000004)
 static_assert(sizeof(FEdgeID) == 0x0004); // 4 bytes (0x000004 - 0x000004)
 static_assert(sizeof(FTriangleID) == 0x0004); // 4 bytes (0x000004 - 0x000004)
+#endif

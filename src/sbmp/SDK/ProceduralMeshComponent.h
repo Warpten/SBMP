@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,13 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/ProceduralMeshComponent.EProcMeshSliceCapOption
-/// Size: 0x01 (1 bytes)
+class UKismetProceduralMeshLibrary;
+class UProceduralMeshComponent;
+struct FProcMeshSection;
+struct FProcMeshTangent;
+struct FProcMeshVertex;
+
+/// Enum /Script/ProceduralMeshComponent.EProcMeshSliceCapOption -  1 (1 bytes)
 enum class EProcMeshSliceCapOption : uint8_t
 {
     NoCap                                                                            = 0,
@@ -23,8 +37,7 @@ enum class EProcMeshSliceCapOption : uint8_t
     UseLastSectionForCap                                                             = 2
 };
 
-/// Enum /Script/ProceduralMeshComponent.EProcMeshVertexType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/ProceduralMeshComponent.EProcMeshVertexType -  1 (1 bytes)
 enum class EProcMeshVertexType : uint8_t
 {
     ProcMeshVertexType_Static                                                        = 0,
@@ -33,7 +46,7 @@ enum class EProcMeshVertexType : uint8_t
 };
 
 /// Class /Script/ProceduralMeshComponent.KismetProceduralMeshLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UKismetProceduralMeshLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -141,64 +154,93 @@ public:
 };
 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshTangent
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FProcMeshTangent
 { 
-    FVector                                            TangentX;                                                   // 0x0000   (0x000C)
-    bool                                               bFlipTangentY;                                              // 0x000C   (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x000D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            TangentX;                                                   // 0x0000   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFlipTangentY;                                              // 0x000C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x000D   (0x0003) MISSED
 };
 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshVertex
-/// Size: 0x0080 (128 bytes) (0x000000 - 0x000080) align 4 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000000 - 0x000080) align n/a MaxSize: 0x0080
 struct FProcMeshVertex
 { 
-    FVector                                            position;                                                   // 0x0000   (0x000C)
-    int32_t                                            VertexIndex;                                                // 0x000C   (0x0004)
-    float                                              SkinWeight;                                                 // 0x0010   (0x0004)
-    FVector                                            OrigPosition;                                               // 0x0014   (0x000C)
-    TEnumAsByte<EProcMeshVertexType>                   VertexType;                                                 // 0x0020   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0021   (0x0003) MISSED
-    FVector                                            Normal;                                                     // 0x0024   (0x000C)
-    FProcMeshTangent                                   Tangent;                                                    // 0x0030   (0x0010)
-    FVector                                            OrigNormal;                                                 // 0x0040   (0x000C)
-    FProcMeshTangent                                   OrigTangent;                                                // 0x004C   (0x0010)
-    FColor                                             Color;                                                      // 0x005C   (0x0004)
-    FVector2D                                          UV0;                                                        // 0x0060   (0x0008)
-    FVector2D                                          UV1;                                                        // 0x0068   (0x0008)
-    FVector2D                                          UV2;                                                        // 0x0070   (0x0008)
-    FVector2D                                          UV3;                                                        // 0x0078   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            position;                                                   // 0x0000   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            VertexIndex;                                                // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SkinWeight;                                                 // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            OrigPosition;                                               // 0x0014   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EProcMeshVertexType>                   VertexType;                                                 // 0x0020   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0021   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Normal;                                                     // 0x0024   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FProcMeshTangent                                   Tangent;                                                    // 0x0030   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            OrigNormal;                                                 // 0x0040   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FProcMeshTangent                                   OrigTangent;                                                // 0x004C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FColor                                             Color;                                                      // 0x005C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          UV0;                                                        // 0x0060   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          UV1;                                                        // 0x0068   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          UV2;                                                        // 0x0070   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          UV3;                                                        // 0x0078   (0x0008)
 };
 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshSection
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FProcMeshSection
 { 
-    TArray<FProcMeshVertex>                            ProcVertexBuffer;                                           // 0x0000   (0x0010)
-    TArray<uint32_t>                                   ProcIndexBuffer;                                            // 0x0010   (0x0010)
-    FBox                                               SectionLocalBox;                                            // 0x0020   (0x001C)
-    bool                                               bEnableCollision;                                           // 0x003C   (0x0001)
-    bool                                               bSectionVisible;                                            // 0x003D   (0x0001)
-    bool                                               bIsCap;                                                     // 0x003E   (0x0001)
-    unsigned char                                      UnknownData00_7[0x1];                                       // 0x003F   (0x0001) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FProcMeshVertex>                            ProcVertexBuffer;                                           // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<uint32_t>                                   ProcIndexBuffer;                                            // 0x0010   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBox                                               SectionLocalBox;                                            // 0x0020   (0x001C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableCollision;                                           // 0x003C   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSectionVisible;                                            // 0x003D   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsCap;                                                     // 0x003E   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x1];                                       // 0x003F   (0x0001) MISSED
 };
 
 /// Class /Script/ProceduralMeshComponent.ProceduralMeshComponent
-/// Size: 0x05D0 (1488 bytes) (0x000560 - 0x0005D0) align 16 MaxSize: 0x05D0
+/// Size: 0x05D0 (1488 bytes) (0x000560 - 0x0005D0) align n/a MaxSize: 0x05D0
 class UProceduralMeshComponent : public UMeshComponent
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0560   (0x0008) MISSED
-    bool                                               bUseComplexAsSimpleCollision;                               // 0x0568   (0x0001)
-    bool                                               bUseAsyncCooking;                                           // 0x0569   (0x0001)
-    unsigned char                                      UnknownData01_6[0x6];                                       // 0x056A   (0x0006) MISSED
-    class UBodySetup*                                  ProcMeshBodySetup;                                          // 0x0570   (0x0008)
-    TArray<FProcMeshSection>                           ProcMeshSections;                                           // 0x0578   (0x0010)
-    TArray<FKConvexElem>                               CollisionConvexElems;                                       // 0x0588   (0x0010)
-    FBoxSphereBounds                                   LocalBounds;                                                // 0x0598   (0x001C)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x05B4   (0x0004) MISSED
-    TArray<class UBodySetup*>                          AsyncBodySetupQueue;                                        // 0x05B8   (0x0010)
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x05C8   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData04_8[0x8];                                       // 0x0560   (0x0008) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseComplexAsSimpleCollision;                               // 0x0568   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseAsyncCooking;                                           // 0x0569   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x6];                                       // 0x056A   (0x0006) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBodySetup*                                  ProcMeshBodySetup;                                          // 0x0570   (0x0008)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FProcMeshSection>                           ProcMeshSections;                                           // 0x0578   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FKConvexElem>                               CollisionConvexElems;                                       // 0x0588   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+    /* private   */ FBoxSphereBounds                                   LocalBounds;                                                // 0x0598   (0x001C)
+    /* public    */ unsigned char                                      UnknownData06_6[0x4];                                       // 0x05B4   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UBodySetup*>                          AsyncBodySetupQueue;                                        // 0x05B8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData07_7[0x8];                                       // 0x05C8   (0x0008) MISSED
 
     /// Functions
     // Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection_LinearColor
@@ -267,6 +309,7 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UKismetProceduralMeshLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(FProcMeshTangent) == 0x0010); // 16 bytes (0x000000 - 0x000010)
 static_assert(sizeof(FProcMeshVertex) == 0x0080); // 128 bytes (0x000000 - 0x000080)
@@ -293,3 +336,4 @@ static_assert(offsetof(UProceduralMeshComponent, ProcMeshSections) == 0x0578);
 static_assert(offsetof(UProceduralMeshComponent, CollisionConvexElems) == 0x0588);
 static_assert(offsetof(UProceduralMeshComponent, LocalBounds) == 0x0598);
 static_assert(offsetof(UProceduralMeshComponent, AsyncBodySetupQueue) == 0x05B8);
+#endif

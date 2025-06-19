@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -16,16 +25,51 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/EditableMesh.ETriangleTessellationMode
-/// Size: 0x01 (1 bytes)
+class UEditableGeometryCollectionAdapter;
+class UEditableMesh;
+class UEditableMeshAdapter;
+class UEditableMeshFactory;
+class UEditableStaticMeshAdapter;
+struct FAdaptorPolygon;
+struct FAdaptorPolygon2Group;
+struct FAdaptorTriangleID;
+struct FAttributesForEdge;
+struct FAttributesForVertex;
+struct FAttributesForVertexInstance;
+struct FChangeVertexInstancesForPolygon;
+struct FEdgeToCreate;
+struct FMeshElementAttributeData;
+struct FMeshElementAttributeList;
+struct FMeshElementAttributeValue;
+struct FPolygonGroupForPolygon;
+struct FPolygonGroupToCreate;
+struct FPolygonToCreate;
+struct FPolygonToSplit;
+struct FRenderingPolygon;
+struct FRenderingPolygonGroup;
+struct FSubdividedQuad;
+struct FSubdividedQuadVertex;
+struct FSubdividedWireEdge;
+struct FSubdivisionLimitData;
+struct FSubdivisionLimitSection;
+struct FVertexAndAttributes;
+struct FVertexAttributesForPolygon;
+struct FVertexAttributesForPolygonHole;
+struct FVertexIndexAndInstanceID;
+struct FVertexInstanceToCreate;
+struct FVertexInstancesForPolygonHole;
+struct FVertexPair;
+struct FVertexToCreate;
+struct FVertexToMove;
+
+/// Enum /Script/EditableMesh.ETriangleTessellationMode -  1 (1 bytes)
 enum class ETriangleTessellationMode : uint8_t
 {
     ThreeTriangles                                                                   = 0,
     FourTriangles                                                                    = 1
 };
 
-/// Enum /Script/EditableMesh.EInsetPolygonsMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/EditableMesh.EInsetPolygonsMode -  1 (1 bytes)
 enum class EInsetPolygonsMode : uint8_t
 {
     All                                                                              = 0,
@@ -33,8 +77,7 @@ enum class EInsetPolygonsMode : uint8_t
     SidePolygonsOnly                                                                 = 2
 };
 
-/// Enum /Script/EditableMesh.EPolygonEdgeHardness
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/EditableMesh.EPolygonEdgeHardness -  1 (1 bytes)
 enum class EPolygonEdgeHardness : uint8_t
 {
     NewEdgesSoft                                                                     = 0,
@@ -43,8 +86,7 @@ enum class EPolygonEdgeHardness : uint8_t
     AllEdgesHard                                                                     = 3
 };
 
-/// Enum /Script/EditableMesh.EMeshElementAttributeType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/EditableMesh.EMeshElementAttributeType -  1 (1 bytes)
 enum class EMeshElementAttributeType : uint8_t
 {
     None                                                                             = 0,
@@ -57,16 +99,14 @@ enum class EMeshElementAttributeType : uint8_t
     FName                                                                            = 7
 };
 
-/// Enum /Script/EditableMesh.EMeshTopologyChange
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/EditableMesh.EMeshTopologyChange -  1 (1 bytes)
 enum class EMeshTopologyChange : uint8_t
 {
     NoTopologyChange                                                                 = 0,
     TopologyChange                                                                   = 1
 };
 
-/// Enum /Script/EditableMesh.EMeshModificationType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/EditableMesh.EMeshModificationType -  1 (1 bytes)
 enum class EMeshModificationType : uint8_t
 {
     FirstInterim                                                                     = 0,
@@ -75,36 +115,43 @@ enum class EMeshModificationType : uint8_t
 };
 
 /// Class /Script/EditableMesh.EditableMeshAdapter
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEditableMeshAdapter : public UObject
 { 
 public:
 };
 
 /// Class /Script/EditableMesh.EditableGeometryCollectionAdapter
-/// Size: 0x00D8 (216 bytes) (0x000028 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x000028 - 0x0000D8) align n/a MaxSize: 0x00D8
 class UEditableGeometryCollectionAdapter : public UEditableMeshAdapter
 { 
 public:
-    class UGeometryCollection*                         GeometryCollection;                                         // 0x0028   (0x0008)
-    class UGeometryCollection*                         OriginalGeometryCollection;                                 // 0x0030   (0x0008)
-    int32_t                                            GeometryCollectionLODIndex;                                 // 0x0038   (0x0004)
-    unsigned char                                      UnknownData00_7[0x9C];                                      // 0x003C   (0x009C) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UGeometryCollection*                         GeometryCollection;                                         // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UGeometryCollection*                         OriginalGeometryCollection;                                 // 0x0030   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            GeometryCollectionLODIndex;                                 // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x9C];                                      // 0x003C   (0x009C) MISSED
 };
 
 /// Class /Script/EditableMesh.EditableMesh
-/// Size: 0x0708 (1800 bytes) (0x000028 - 0x000708) align 8 MaxSize: 0x0708
+/// Size: 0x0708 (1800 bytes) (0x000028 - 0x000708) align n/a MaxSize: 0x0708
 class UEditableMesh : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x390];                                     // 0x0028   (0x0390) MISSED
-    TArray<class UEditableMeshAdapter*>                Adapters;                                                   // 0x03B8   (0x0010)
-    unsigned char                                      UnknownData01_6[0x8];                                       // 0x03C8   (0x0008) MISSED
-    int32_t                                            TextureCoordinateCount;                                     // 0x03D0   (0x0004)
-    unsigned char                                      UnknownData02_6[0x148];                                     // 0x03D4   (0x0148) MISSED
-    int32_t                                            PendingCompactCounter;                                      // 0x051C   (0x0004)
-    int32_t                                            SubdivisionCount;                                           // 0x0520   (0x0004)
-    unsigned char                                      UnknownData03_7[0x1E4];                                     // 0x0524   (0x01E4) MISSED
+    /* public    */ unsigned char                                      UnknownData04_8[0x390];                                     // 0x0028   (0x0390) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UEditableMeshAdapter*>                Adapters;                                                   // 0x03B8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_6[0x8];                                       // 0x03C8   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            TextureCoordinateCount;                                     // 0x03D0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData06_6[0x148];                                     // 0x03D4   (0x0148) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PendingCompactCounter;                                      // 0x051C   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SubdivisionCount;                                           // 0x0520   (0x0004)
+    /* public    */ unsigned char                                      UnknownData07_7[0x1E4];                                     // 0x0524   (0x01E4) MISSED
 
     /// Functions
     // Function /Script/EditableMesh.EditableMesh.WeldVertices
@@ -566,7 +613,7 @@ public:
 };
 
 /// Class /Script/EditableMesh.EditableMeshFactory
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEditableMeshFactory : public UObject
 { 
 public:
@@ -579,298 +626,375 @@ public:
 };
 
 /// Class /Script/EditableMesh.EditableStaticMeshAdapter
-/// Size: 0x00E0 (224 bytes) (0x000028 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x000028 - 0x0000E0) align n/a MaxSize: 0x00E0
 class UEditableStaticMeshAdapter : public UEditableMeshAdapter
 { 
 public:
-    class UStaticMesh*                                 StaticMesh;                                                 // 0x0028   (0x0008)
-    class UStaticMesh*                                 OriginalStaticMesh;                                         // 0x0030   (0x0008)
-    int32_t                                            StaticMeshLODIndex;                                         // 0x0038   (0x0004)
-    unsigned char                                      UnknownData00_7[0xA4];                                      // 0x003C   (0x00A4) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UStaticMesh*                                 StaticMesh;                                                 // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UStaticMesh*                                 OriginalStaticMesh;                                         // 0x0030   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            StaticMeshLODIndex;                                         // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0xA4];                                      // 0x003C   (0x00A4) MISSED
 };
 
 /// Struct /Script/EditableMesh.AdaptorPolygon2Group
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FAdaptorPolygon2Group
 { 
-    uint32_t                                           RenderingSectionIndex;                                      // 0x0000   (0x0004)
-    int32_t                                            MaterialIndex;                                              // 0x0004   (0x0004)
-    int32_t                                            MaxTriangles;                                               // 0x0008   (0x0004)
-    unsigned char                                      UnknownData00_7[0x3C];                                      // 0x000C   (0x003C) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ uint32_t                                           RenderingSectionIndex;                                      // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaterialIndex;                                              // 0x0004   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxTriangles;                                               // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3C];                                      // 0x000C   (0x003C) MISSED
 };
 
 /// Struct /Script/EditableMesh.AdaptorTriangleID
-/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000004 - 0x000004) align n/a MaxSize: 0x0004
 struct FAdaptorTriangleID : FElementID
 { 
 };
 
 /// Struct /Script/EditableMesh.AdaptorPolygon
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FAdaptorPolygon
 { 
-    FPolygonGroupID                                    PolygonGroupID;                                             // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<FAdaptorTriangleID>                         TriangulatedPolygonTriangleIndices;                         // 0x0008   (0x0010)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonGroupID                                    PolygonGroupID;                                             // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAdaptorTriangleID>                         TriangulatedPolygonTriangleIndices;                         // 0x0008   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.PolygonGroupForPolygon
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FPolygonGroupForPolygon
 { 
-    FPolygonID                                         PolygonID;                                                  // 0x0000   (0x0004)
-    FPolygonGroupID                                    PolygonGroupID;                                             // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonID                                         PolygonID;                                                  // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonGroupID                                    PolygonGroupID;                                             // 0x0004   (0x0004)
 };
 
 /// Struct /Script/EditableMesh.MeshElementAttributeValue
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 16 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FMeshElementAttributeValue
 { 
-    unsigned char                                      UnknownData00_2[0x50];                                      // 0x0000   (0x0050) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x50];                                      // 0x0000   (0x0050) MISSED
 };
 
 /// Struct /Script/EditableMesh.MeshElementAttributeData
-/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align 16 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FMeshElementAttributeData
 { 
-    FName                                              AttributeName;                                              // 0x0000   (0x0008)
-    int32_t                                            AttributeIndex;                                             // 0x0008   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x000C   (0x0004) MISSED
-    FMeshElementAttributeValue                         AttributeValue;                                             // 0x0010   (0x0050)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              AttributeName;                                              // 0x0000   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            AttributeIndex;                                             // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeValue                         AttributeValue;                                             // 0x0010   (0x0050)
 };
 
 /// Struct /Script/EditableMesh.MeshElementAttributeList
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FMeshElementAttributeList
 { 
-    TArray<FMeshElementAttributeData>                  Attributes;                                                 // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FMeshElementAttributeData>                  Attributes;                                                 // 0x0000   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.PolygonGroupToCreate
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FPolygonGroupToCreate
 { 
-    FMeshElementAttributeList                          PolygonGroupAttributes;                                     // 0x0000   (0x0010)
-    FPolygonGroupID                                    OriginalPolygonGroupID;                                     // 0x0010   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0014   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeList                          PolygonGroupAttributes;                                     // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonGroupID                                    OriginalPolygonGroupID;                                     // 0x0010   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0014   (0x0004) MISSED
 };
 
 /// Struct /Script/EditableMesh.VertexToMove
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FVertexToMove
 { 
-    FVertexID                                          VertexID;                                                   // 0x0000   (0x0004)
-    FVector                                            NewVertexPosition;                                          // 0x0004   (0x000C)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          VertexID;                                                   // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            NewVertexPosition;                                          // 0x0004   (0x000C)
 };
 
 /// Struct /Script/EditableMesh.VertexIndexAndInstanceID
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FVertexIndexAndInstanceID
 { 
-    int32_t                                            ContourIndex;                                               // 0x0000   (0x0004)
-    FVertexInstanceID                                  VertexInstanceID;                                           // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ContourIndex;                                               // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexInstanceID                                  VertexInstanceID;                                           // 0x0004   (0x0004)
 };
 
 /// Struct /Script/EditableMesh.VertexInstancesForPolygonHole
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FVertexInstancesForPolygonHole
 { 
-    TArray<FVertexIndexAndInstanceID>                  VertexIndicesAndInstanceIDs;                                // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVertexIndexAndInstanceID>                  VertexIndicesAndInstanceIDs;                                // 0x0000   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.ChangeVertexInstancesForPolygon
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FChangeVertexInstancesForPolygon
 { 
-    FPolygonID                                         PolygonID;                                                  // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<FVertexIndexAndInstanceID>                  PerimeterVertexIndicesAndInstanceIDs;                       // 0x0008   (0x0010)
-    TArray<FVertexInstancesForPolygonHole>             VertexIndicesAndInstanceIDsForEachHole;                     // 0x0018   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonID                                         PolygonID;                                                  // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVertexIndexAndInstanceID>                  PerimeterVertexIndicesAndInstanceIDs;                       // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVertexInstancesForPolygonHole>             VertexIndicesAndInstanceIDsForEachHole;                     // 0x0018   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.VertexAttributesForPolygonHole
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FVertexAttributesForPolygonHole
 { 
-    TArray<FMeshElementAttributeList>                  VertexAttributeList;                                        // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FMeshElementAttributeList>                  VertexAttributeList;                                        // 0x0000   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.VertexAttributesForPolygon
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FVertexAttributesForPolygon
 { 
-    FPolygonID                                         PolygonID;                                                  // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<FMeshElementAttributeList>                  PerimeterVertexAttributeLists;                              // 0x0008   (0x0010)
-    TArray<FVertexAttributesForPolygonHole>            VertexAttributeListsForEachHole;                            // 0x0018   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonID                                         PolygonID;                                                  // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FMeshElementAttributeList>                  PerimeterVertexAttributeLists;                              // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVertexAttributesForPolygonHole>            VertexAttributeListsForEachHole;                            // 0x0018   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.AttributesForEdge
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FAttributesForEdge
 { 
-    FEdgeID                                            EdgeID;                                                     // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    FMeshElementAttributeList                          EdgeAttributes;                                             // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FEdgeID                                            EdgeID;                                                     // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeList                          EdgeAttributes;                                             // 0x0008   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.AttributesForVertexInstance
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FAttributesForVertexInstance
 { 
-    FVertexInstanceID                                  VertexInstanceID;                                           // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    FMeshElementAttributeList                          VertexInstanceAttributes;                                   // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexInstanceID                                  VertexInstanceID;                                           // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeList                          VertexInstanceAttributes;                                   // 0x0008   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.AttributesForVertex
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FAttributesForVertex
 { 
-    FVertexID                                          VertexID;                                                   // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    FMeshElementAttributeList                          VertexAttributes;                                           // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          VertexID;                                                   // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeList                          VertexAttributes;                                           // 0x0008   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.VertexPair
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FVertexPair
 { 
-    FVertexID                                          VertexID0;                                                  // 0x0000   (0x0004)
-    FVertexID                                          VertexID1;                                                  // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          VertexID0;                                                  // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          VertexID1;                                                  // 0x0004   (0x0004)
 };
 
 /// Struct /Script/EditableMesh.PolygonToSplit
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FPolygonToSplit
 { 
-    FPolygonID                                         PolygonID;                                                  // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<FVertexPair>                                VertexPairsToSplitAt;                                       // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonID                                         PolygonID;                                                  // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVertexPair>                                VertexPairsToSplitAt;                                       // 0x0008   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.VertexAndAttributes
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FVertexAndAttributes
 { 
-    FVertexInstanceID                                  VertexInstanceID;                                           // 0x0000   (0x0004)
-    FVertexID                                          VertexID;                                                   // 0x0004   (0x0004)
-    FMeshElementAttributeList                          PolygonVertexAttributes;                                    // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexInstanceID                                  VertexInstanceID;                                           // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          VertexID;                                                   // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeList                          PolygonVertexAttributes;                                    // 0x0008   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.PolygonToCreate
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FPolygonToCreate
 { 
-    FPolygonGroupID                                    PolygonGroupID;                                             // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<FVertexAndAttributes>                       PerimeterVertices;                                          // 0x0008   (0x0010)
-    FPolygonID                                         OriginalPolygonID;                                          // 0x0018   (0x0004)
-    EPolygonEdgeHardness                               PolygonEdgeHardness;                                        // 0x001C   (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x001D   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonGroupID                                    PolygonGroupID;                                             // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVertexAndAttributes>                       PerimeterVertices;                                          // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonID                                         OriginalPolygonID;                                          // 0x0018   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EPolygonEdgeHardness                               PolygonEdgeHardness;                                        // 0x001C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x001D   (0x0003) MISSED
 };
 
 /// Struct /Script/EditableMesh.EdgeToCreate
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FEdgeToCreate
 { 
-    FVertexID                                          VertexID0;                                                  // 0x0000   (0x0004)
-    FVertexID                                          VertexID1;                                                  // 0x0004   (0x0004)
-    FMeshElementAttributeList                          EdgeAttributes;                                             // 0x0008   (0x0010)
-    FEdgeID                                            OriginalEdgeID;                                             // 0x0018   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x001C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          VertexID0;                                                  // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          VertexID1;                                                  // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeList                          EdgeAttributes;                                             // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FEdgeID                                            OriginalEdgeID;                                             // 0x0018   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x001C   (0x0004) MISSED
 };
 
 /// Struct /Script/EditableMesh.VertexInstanceToCreate
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FVertexInstanceToCreate
 { 
-    FVertexID                                          VertexID;                                                   // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    FMeshElementAttributeList                          VertexInstanceAttributes;                                   // 0x0008   (0x0010)
-    FVertexInstanceID                                  OriginalVertexInstanceID;                                   // 0x0018   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x001C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          VertexID;                                                   // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeList                          VertexInstanceAttributes;                                   // 0x0008   (0x0010)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexInstanceID                                  OriginalVertexInstanceID;                                   // 0x0018   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x001C   (0x0004) MISSED
 };
 
 /// Struct /Script/EditableMesh.VertexToCreate
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FVertexToCreate
 { 
-    FMeshElementAttributeList                          VertexAttributes;                                           // 0x0000   (0x0010)
-    FVertexID                                          OriginalVertexID;                                           // 0x0010   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0014   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMeshElementAttributeList                          VertexAttributes;                                           // 0x0000   (0x0010)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVertexID                                          OriginalVertexID;                                           // 0x0010   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0014   (0x0004) MISSED
 };
 
 /// Struct /Script/EditableMesh.SubdividedQuadVertex
-/// Size: 0x0034 (52 bytes) (0x000000 - 0x000034) align 4 MaxSize: 0x0034
+/// Size: 0x0034 (52 bytes) (0x000000 - 0x000034) align n/a MaxSize: 0x0034
 struct FSubdividedQuadVertex
 { 
-    int32_t                                            VertexPositionIndex;                                        // 0x0000   (0x0004)
-    FVector2D                                          TextureCoordinate0;                                         // 0x0004   (0x0008)
-    FVector2D                                          TextureCoordinate1;                                         // 0x000C   (0x0008)
-    FColor                                             VertexColor;                                                // 0x0014   (0x0004)
-    FVector                                            VertexNormal;                                               // 0x0018   (0x000C)
-    FVector                                            VertexTangent;                                              // 0x0024   (0x000C)
-    float                                              VertexBinormalSign;                                         // 0x0030   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            VertexPositionIndex;                                        // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          TextureCoordinate0;                                         // 0x0004   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          TextureCoordinate1;                                         // 0x000C   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FColor                                             VertexColor;                                                // 0x0014   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            VertexNormal;                                               // 0x0018   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            VertexTangent;                                              // 0x0024   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              VertexBinormalSign;                                         // 0x0030   (0x0004)
 };
 
 /// Struct /Script/EditableMesh.SubdividedQuad
-/// Size: 0x00D0 (208 bytes) (0x000000 - 0x0000D0) align 4 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000000 - 0x0000D0) align n/a MaxSize: 0x00D0
 struct FSubdividedQuad
 { 
-    FSubdividedQuadVertex                              QuadVertex0;                                                // 0x0000   (0x0034)
-    FSubdividedQuadVertex                              QuadVertex1;                                                // 0x0034   (0x0034)
-    FSubdividedQuadVertex                              QuadVertex2;                                                // 0x0068   (0x0034)
-    FSubdividedQuadVertex                              QuadVertex3;                                                // 0x009C   (0x0034)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubdividedQuadVertex                              QuadVertex0;                                                // 0x0000   (0x0034)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubdividedQuadVertex                              QuadVertex1;                                                // 0x0034   (0x0034)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubdividedQuadVertex                              QuadVertex2;                                                // 0x0068   (0x0034)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubdividedQuadVertex                              QuadVertex3;                                                // 0x009C   (0x0034)
 };
 
 /// Struct /Script/EditableMesh.SubdivisionLimitSection
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSubdivisionLimitSection
 { 
-    TArray<FSubdividedQuad>                            SubdividedQuads;                                            // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSubdividedQuad>                            SubdividedQuads;                                            // 0x0000   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.SubdividedWireEdge
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FSubdividedWireEdge
 { 
-    int32_t                                            EdgeVertex0PositionIndex;                                   // 0x0000   (0x0004)
-    int32_t                                            EdgeVertex1PositionIndex;                                   // 0x0004   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0008   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            EdgeVertex0PositionIndex;                                   // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            EdgeVertex1PositionIndex;                                   // 0x0004   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0008   (0x0004) MISSED
 };
 
 /// Struct /Script/EditableMesh.SubdivisionLimitData
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FSubdivisionLimitData
 { 
-    TArray<FVector>                                    VertexPositions;                                            // 0x0000   (0x0010)
-    TArray<FSubdivisionLimitSection>                   Sections;                                                   // 0x0010   (0x0010)
-    TArray<FSubdividedWireEdge>                        SubdividedWireEdges;                                        // 0x0020   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector>                                    VertexPositions;                                            // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSubdivisionLimitSection>                   Sections;                                                   // 0x0010   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSubdividedWireEdge>                        SubdividedWireEdges;                                        // 0x0020   (0x0010)
 };
 
 /// Struct /Script/EditableMesh.RenderingPolygonGroup
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FRenderingPolygonGroup
 { 
-    uint32_t                                           RenderingSectionIndex;                                      // 0x0000   (0x0004)
-    int32_t                                            MaterialIndex;                                              // 0x0004   (0x0004)
-    int32_t                                            MaxTriangles;                                               // 0x0008   (0x0004)
-    unsigned char                                      UnknownData00_7[0x3C];                                      // 0x000C   (0x003C) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ uint32_t                                           RenderingSectionIndex;                                      // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaterialIndex;                                              // 0x0004   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxTriangles;                                               // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3C];                                      // 0x000C   (0x003C) MISSED
 };
 
 /// Struct /Script/EditableMesh.RenderingPolygon
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FRenderingPolygon
 { 
-    FPolygonGroupID                                    PolygonGroupID;                                             // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<FTriangleID>                                TriangulatedPolygonTriangleIndices;                         // 0x0008   (0x0010)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FPolygonGroupID                                    PolygonGroupID;                                             // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FTriangleID>                                TriangulatedPolygonTriangleIndices;                         // 0x0008   (0x0010)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UEditableMeshAdapter) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UEditableGeometryCollectionAdapter) == 0x00D8); // 216 bytes (0x000028 - 0x0000D8)
 static_assert(sizeof(UEditableMesh) == 0x0708); // 1800 bytes (0x000028 - 0x000708)
@@ -973,3 +1097,4 @@ static_assert(offsetof(FSubdivisionLimitData, Sections) == 0x0010);
 static_assert(offsetof(FSubdivisionLimitData, SubdividedWireEdges) == 0x0020);
 static_assert(offsetof(FRenderingPolygon, PolygonGroupID) == 0x0000);
 static_assert(offsetof(FRenderingPolygon, TriangulatedPolygonTriangleIndices) == 0x0008);
+#endif

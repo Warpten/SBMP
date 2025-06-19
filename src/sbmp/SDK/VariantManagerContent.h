@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,25 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/VariantManagerContent.EPropertyValueCategory
-/// Size: 0x01 (1 bytes)
+class ALevelVariantSetsActor;
+class ASwitchActor;
+class ULevelVariantSets;
+class ULevelVariantSetsFunctionDirector;
+class UPropertyValue;
+class UPropertyValueColor;
+class UPropertyValueMaterial;
+class UPropertyValueOption;
+class UPropertyValueSoftObject;
+class UPropertyValueTransform;
+class UPropertyValueVisibility;
+class UVariant;
+class UVariantObjectBinding;
+class UVariantSet;
+struct FCapturedPropSegment;
+struct FFunctionCaller;
+struct FVariantDependency;
+
+/// Enum /Script/VariantManagerContent.EPropertyValueCategory -  1 (1 bytes)
 enum class EPropertyValueCategory : uint8_t
 {
     Undefined                                                                        = 0,
@@ -30,13 +56,15 @@ enum class EPropertyValueCategory : uint8_t
 };
 
 /// Class /Script/VariantManagerContent.LevelVariantSets
-/// Size: 0x0090 (144 bytes) (0x000028 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000028 - 0x000090) align n/a MaxSize: 0x0090
 class ULevelVariantSets : public UObject
 { 
 public:
-    class UBlueprintGeneratedClass*                    DirectorClass;                                              // 0x0028   (0x0008)
-    TArray<class UVariantSet*>                         VariantSets;                                                // 0x0030   (0x0010)
-    unsigned char                                      UnknownData00_7[0x50];                                      // 0x0040   (0x0050) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UBlueprintGeneratedClass*                    DirectorClass;                                              // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UVariantSet*>                         VariantSets;                                                // 0x0030   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x50];                                      // 0x0040   (0x0050) MISSED
 
     /// Functions
     // Function /Script/VariantManagerContent.LevelVariantSets.GetVariantSetByName
@@ -50,11 +78,12 @@ public:
 };
 
 /// Class /Script/VariantManagerContent.LevelVariantSetsActor
-/// Size: 0x02E0 (736 bytes) (0x0002C8 - 0x0002E0) align 8 MaxSize: 0x02E0
+/// Size: 0x02E0 (736 bytes) (0x0002C8 - 0x0002E0) align n/a MaxSize: 0x02E0
 class ALevelVariantSetsActor : public AActor
 { 
 public:
-    FSoftObjectPath                                    LevelVariantSets;                                           // 0x02C8   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FSoftObjectPath                                    LevelVariantSets;                                           // 0x02C8   (0x0018)
 
     /// Functions
     // Function /Script/VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByName
@@ -74,42 +103,57 @@ public:
 };
 
 /// Class /Script/VariantManagerContent.LevelVariantSetsFunctionDirector
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class ULevelVariantSetsFunctionDirector : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x18];                                      // 0x0028   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x18];                                      // 0x0028   (0x0018) MISSED
 };
 
 /// Struct /Script/VariantManagerContent.CapturedPropSegment
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FCapturedPropSegment
 { 
-    FString                                            PropertyName;                                               // 0x0000   (0x0010)
-    int32_t                                            PropertyIndex;                                              // 0x0010   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0014   (0x0004) MISSED
-    FString                                            ComponentName;                                              // 0x0018   (0x0010)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            PropertyName;                                               // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PropertyIndex;                                              // 0x0010   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0014   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ComponentName;                                              // 0x0018   (0x0010)
 };
 
+struct Properties;
+
 /// Class /Script/VariantManagerContent.PropertyValue
-/// Size: 0x01B8 (440 bytes) (0x000028 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x000028 - 0x0001B8) align n/a MaxSize: 0x01B8
 class UPropertyValue : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x60];                                      // 0x0028   (0x0060) MISSED
-    TArray<Properties>                                 Properties;                                                 // 0x0088   (0x0010)
-    TArray<int32_t>                                    PropertyIndices;                                            // 0x0098   (0x0010)
-    TArray<FCapturedPropSegment>                       CapturedPropSegments;                                       // 0x00A8   (0x0010)
-    FString                                            FullDisplayString;                                          // 0x00B8   (0x0010)
-    FName                                              PropertySetterName;                                         // 0x00C8   (0x0008)
-    TMap<FString, FString>                             PropertySetterParameterDefaults;                            // 0x00D0   (0x0050)
-    bool                                               bHasRecordedData;                                           // 0x0120   (0x0001)
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0121   (0x0007) MISSED
-    class UClass*                                      LeafPropertyClass;                                          // 0x0128   (0x0008)
-    unsigned char                                      UnknownData02_6[0x8];                                       // 0x0130   (0x0008) MISSED
-    TArray<char>                                       ValueBytes;                                                 // 0x0138   (0x0010)
-    EPropertyValueCategory                             PropCategory;                                               // 0x0148   (0x0001)
-    unsigned char                                      UnknownData03_7[0x6F];                                      // 0x0149   (0x006F) MISSED
+    /* public    */ unsigned char                                      UnknownData04_8[0x60];                                      // 0x0028   (0x0060) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<Properties>                                 Properties;                                                 // 0x0088   (0x0010)
+    UPROPERTY(ZeroConstructor, Deprecated, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<int32_t>                                    PropertyIndices;                                            // 0x0098   (0x0010)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FCapturedPropSegment>                       CapturedPropSegments;                                       // 0x00A8   (0x0010)
+    UPROPERTY(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            FullDisplayString;                                          // 0x00B8   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FName                                              PropertySetterName;                                         // 0x00C8   (0x0008)
+    UPROPERTY(Protected, NativeAccessSpecifierProtected)
+    /* protected */ TMap<FString, FString>                             PropertySetterParameterDefaults;                            // 0x00D0   (0x0050)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bHasRecordedData;                                           // 0x0120   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x7];                                       // 0x0121   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      LeafPropertyClass;                                          // 0x0128   (0x0008)
+    /* public    */ unsigned char                                      UnknownData06_6[0x8];                                       // 0x0130   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<char>                                       ValueBytes;                                                 // 0x0138   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EPropertyValueCategory                             PropCategory;                                               // 0x0148   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_7[0x6F];                                      // 0x0149   (0x006F) MISSED
 
     /// Functions
     // Function /Script/VariantManagerContent.PropertyValue.HasRecordedData
@@ -121,56 +165,58 @@ public:
 };
 
 /// Class /Script/VariantManagerContent.PropertyValueTransform
-/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align n/a MaxSize: 0x01B8
 class UPropertyValueTransform : public UPropertyValue
 { 
 public:
 };
 
 /// Class /Script/VariantManagerContent.PropertyValueVisibility
-/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align n/a MaxSize: 0x01B8
 class UPropertyValueVisibility : public UPropertyValue
 { 
 public:
 };
 
 /// Class /Script/VariantManagerContent.PropertyValueColor
-/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align n/a MaxSize: 0x01B8
 class UPropertyValueColor : public UPropertyValue
 { 
 public:
 };
 
 /// Class /Script/VariantManagerContent.PropertyValueMaterial
-/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align n/a MaxSize: 0x01B8
 class UPropertyValueMaterial : public UPropertyValue
 { 
 public:
 };
 
 /// Class /Script/VariantManagerContent.PropertyValueOption
-/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align n/a MaxSize: 0x01B8
 class UPropertyValueOption : public UPropertyValue
 { 
 public:
 };
 
 /// Class /Script/VariantManagerContent.PropertyValueSoftObject
-/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x0001B8 - 0x0001B8) align n/a MaxSize: 0x01B8
 class UPropertyValueSoftObject : public UPropertyValue
 { 
 public:
 };
 
 /// Class /Script/VariantManagerContent.SwitchActor
-/// Size: 0x02F0 (752 bytes) (0x0002C8 - 0x0002F0) align 8 MaxSize: 0x02F0
+/// Size: 0x02F0 (752 bytes) (0x0002C8 - 0x0002F0) align n/a MaxSize: 0x02F0
 class ASwitchActor : public AActor
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x18];                                      // 0x02C8   (0x0018) MISSED
-    class USceneComponent*                             SceneComponent;                                             // 0x02E0   (0x0008)
-    int32_t                                            LastSelectedOption;                                         // 0x02E8   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x02EC   (0x0004) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x18];                                      // 0x02C8   (0x0018) MISSED
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             SceneComponent;                                             // 0x02E0   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            LastSelectedOption;                                         // 0x02E8   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x02EC   (0x0004) MISSED
 
     /// Functions
     // Function /Script/VariantManagerContent.SwitchActor.SelectOption
@@ -183,27 +229,34 @@ public:
 };
 
 /// Struct /Script/VariantManagerContent.VariantDependency
-/// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align n/a MaxSize: 0x0058
 struct FVariantDependency
 { 
-    TWeakObjectPtr<class UVariantSet*>                 VariantSet;                                                 // 0x0000   (0x0008)
-    unsigned char                                      UnknownData00_6[0x20];                                      // 0x0008   (0x0020) MISSED
-    TWeakObjectPtr<class UVariant*>                    Variant;                                                    // 0x0028   (0x0008)
-    unsigned char                                      UnknownData01_6[0x20];                                      // 0x0030   (0x0020) MISSED
-    bool                                               bEnabled;                                                   // 0x0050   (0x0001)
-    unsigned char                                      UnknownData02_7[0x7];                                       // 0x0051   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class UVariantSet*>                 VariantSet;                                                 // 0x0000   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_6[0x20];                                      // 0x0008   (0x0020) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class UVariant*>                    Variant;                                                    // 0x0028   (0x0008)
+    /* public    */ unsigned char                                      UnknownData04_6[0x20];                                      // 0x0030   (0x0020) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnabled;                                                   // 0x0050   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x7];                                       // 0x0051   (0x0007) MISSED
 };
 
 /// Class /Script/VariantManagerContent.Variant
-/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align n/a MaxSize: 0x0080
 class UVariant : public UObject
 { 
 public:
-    TArray<FVariantDependency>                         Dependencies;                                               // 0x0028   (0x0010)
-    FText                                              DisplayText;                                                // 0x0038   (0x0018)
-    unsigned char                                      UnknownData00_6[0x18];                                      // 0x0050   (0x0018) MISSED
-    TArray<class UVariantObjectBinding*>               ObjectBindings;                                             // 0x0068   (0x0010)
-    class UTexture2D*                                  Thumbnail;                                                  // 0x0078   (0x0008)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FVariantDependency>                         Dependencies;                                               // 0x0028   (0x0010)
+    UPROPERTY(Deprecated, NativeAccessSpecifierPrivate)
+    /* private   */ FText                                              DisplayText;                                                // 0x0038   (0x0018)
+    /* public    */ unsigned char                                      UnknownData01_6[0x18];                                      // 0x0050   (0x0018) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UVariantObjectBinding*>               ObjectBindings;                                             // 0x0068   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UTexture2D*                                  Thumbnail;                                                  // 0x0078   (0x0008)
 
     /// Functions
     // Function /Script/VariantManagerContent.Variant.SwitchOn
@@ -261,36 +314,46 @@ public:
 };
 
 /// Struct /Script/VariantManagerContent.FunctionCaller
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FFunctionCaller
 { 
-    FName                                              FunctionName;                                               // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              FunctionName;                                               // 0x0000   (0x0008)
 };
 
 /// Class /Script/VariantManagerContent.VariantObjectBinding
-/// Size: 0x0090 (144 bytes) (0x000028 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000028 - 0x000090) align n/a MaxSize: 0x0090
 class UVariantObjectBinding : public UObject
 { 
 public:
-    FString                                            CachedActorLabel;                                           // 0x0028   (0x0010)
-    FSoftObjectPath                                    ObjectPtr;                                                  // 0x0038   (0x0018)
-    TLazyObjectPtr<class UObject*>                     LazyObjectPtr;                                              // 0x0050   (0x001C)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x006C   (0x0004) MISSED
-    TArray<class UPropertyValue*>                      CapturedProperties;                                         // 0x0070   (0x0010)
-    TArray<FFunctionCaller>                            FunctionCallers;                                            // 0x0080   (0x0010)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FString                                            CachedActorLabel;                                           // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FSoftObjectPath                                    ObjectPtr;                                                  // 0x0038   (0x0018)
+    UPROPERTY(IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ TLazyObjectPtr<class UObject*>                     LazyObjectPtr;                                              // 0x0050   (0x001C)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UPropertyValue*>                      CapturedProperties;                                         // 0x0070   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FFunctionCaller>                            FunctionCallers;                                            // 0x0080   (0x0010)
 };
 
 /// Class /Script/VariantManagerContent.VariantSet
-/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align n/a MaxSize: 0x0078
 class UVariantSet : public UObject
 { 
 public:
-    FText                                              DisplayText;                                                // 0x0028   (0x0018)
-    unsigned char                                      UnknownData00_6[0x18];                                      // 0x0040   (0x0018) MISSED
-    bool                                               bExpanded;                                                  // 0x0058   (0x0001)
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0059   (0x0007) MISSED
-    TArray<class UVariant*>                            Variants;                                                   // 0x0060   (0x0010)
-    class UTexture2D*                                  Thumbnail;                                                  // 0x0070   (0x0008)
+    UPROPERTY(Deprecated, NativeAccessSpecifierPrivate)
+    /* private   */ FText                                              DisplayText;                                                // 0x0028   (0x0018)
+    /* public    */ unsigned char                                      UnknownData02_6[0x18];                                      // 0x0040   (0x0018) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bExpanded;                                                  // 0x0058   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x7];                                       // 0x0059   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UVariant*>                            Variants;                                                   // 0x0060   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UTexture2D*                                  Thumbnail;                                                  // 0x0070   (0x0008)
 
     /// Functions
     // Function /Script/VariantManagerContent.VariantSet.SetThumbnailFromTexture
@@ -330,6 +393,7 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(ULevelVariantSets) == 0x0090); // 144 bytes (0x000028 - 0x000090)
 static_assert(sizeof(ALevelVariantSetsActor) == 0x02E0); // 736 bytes (0x0002C8 - 0x0002E0)
 static_assert(sizeof(ULevelVariantSetsFunctionDirector) == 0x0040); // 64 bytes (0x000028 - 0x000040)
@@ -376,3 +440,4 @@ static_assert(offsetof(UVariantObjectBinding, FunctionCallers) == 0x0080);
 static_assert(offsetof(UVariantSet, DisplayText) == 0x0028);
 static_assert(offsetof(UVariantSet, Variants) == 0x0060);
 static_assert(offsetof(UVariantSet, Thumbnail) == 0x0070);
+#endif

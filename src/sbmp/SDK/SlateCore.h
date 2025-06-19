@@ -2,19 +2,83 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/SlateCore.EUINavigation
-/// Size: 0x01 (1 bytes)
+class UFontBulkData;
+class UFontFaceInterface;
+class UFontProviderInterface;
+class USlateTypes;
+class USlateWidgetStyleAsset;
+class USlateWidgetStyleContainerBase;
+class USlateWidgetStyleContainerInterface;
+struct FAnalogInputEvent;
+struct FButtonStyle;
+struct FCaptureLostEvent;
+struct FCharacterEvent;
+struct FCheckBoxStyle;
+struct FComboBoxStyle;
+struct FComboButtonStyle;
+struct FCompositeFallbackFont;
+struct FCompositeFont;
+struct FCompositeSubFont;
+struct FDockTabStyle;
+struct FEditableTextBoxStyle;
+struct FEditableTextStyle;
+struct FExpandableAreaStyle;
+struct FFocusEvent;
+struct FFontData;
+struct FFontOutlineSettings;
+struct FGeometry;
+struct FHeaderRowStyle;
+struct FHyperlinkStyle;
+struct FInlineEditableTextBlockStyle;
+struct FInlineTextImageStyle;
+struct FInputEvent;
+struct FKeyEvent;
+struct FMargin;
+struct FMotionEvent;
+struct FNavigationEvent;
+struct FPointerEvent;
+struct FProgressBarStyle;
+struct FScrollBarStyle;
+struct FScrollBorderStyle;
+struct FScrollBoxStyle;
+struct FSearchBoxStyle;
+struct FSlateBrush;
+struct FSlateColor;
+struct FSlateFontInfo;
+struct FSlateSound;
+struct FSlateWidgetStyle;
+struct FSliderStyle;
+struct FSpinBoxStyle;
+struct FSplitterStyle;
+struct FTableColumnHeaderStyle;
+struct FTableRowStyle;
+struct FTextBlockStyle;
+struct FTypeface;
+struct FTypefaceEntry;
+struct FVolumeControlStyle;
+struct FWindowStyle;
+
+/// Enum /Script/SlateCore.EUINavigation -  1 (1 bytes)
 enum class EUINavigation : uint8_t
 {
     Left                                                                             = 0,
@@ -27,8 +91,7 @@ enum class EUINavigation : uint8_t
     Invalid                                                                          = 7
 };
 
-/// Enum /Script/SlateCore.ECheckBoxState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ECheckBoxState -  1 (1 bytes)
 enum class ECheckBoxState : uint8_t
 {
     Unchecked                                                                        = 0,
@@ -36,8 +99,7 @@ enum class ECheckBoxState : uint8_t
     Undetermined                                                                     = 2
 };
 
-/// Enum /Script/SlateCore.EWidgetClipping
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EWidgetClipping -  1 (1 bytes)
 enum class EWidgetClipping : uint8_t
 {
     Inherit                                                                          = 0,
@@ -47,8 +109,7 @@ enum class EWidgetClipping : uint8_t
     OnDemand                                                                         = 4
 };
 
-/// Enum /Script/SlateCore.ESlateBrushImageType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateBrushImageType -  1 (1 bytes)
 enum class ESlateBrushImageType : uint8_t
 {
     NoImage                                                                          = 0,
@@ -56,8 +117,7 @@ enum class ESlateBrushImageType : uint8_t
     Linear                                                                           = 2
 };
 
-/// Enum /Script/SlateCore.ESlateBrushMirrorType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateBrushMirrorType -  1 (1 bytes)
 enum class ESlateBrushMirrorType : uint8_t
 {
     NoMirror                                                                         = 0,
@@ -66,8 +126,7 @@ enum class ESlateBrushMirrorType : uint8_t
     Both                                                                             = 3
 };
 
-/// Enum /Script/SlateCore.ESlateBrushTileType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateBrushTileType -  1 (1 bytes)
 enum class ESlateBrushTileType : uint8_t
 {
     NoTile                                                                           = 0,
@@ -76,8 +135,7 @@ enum class ESlateBrushTileType : uint8_t
     Both                                                                             = 3
 };
 
-/// Enum /Script/SlateCore.ESlateBrushDrawType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateBrushDrawType -  1 (1 bytes)
 enum class ESlateBrushDrawType : uint8_t
 {
     NoDrawType                                                                       = 0,
@@ -86,8 +144,7 @@ enum class ESlateBrushDrawType : uint8_t
     Image                                                                            = 3
 };
 
-/// Enum /Script/SlateCore.ESlateColorStylingMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateColorStylingMode -  1 (1 bytes)
 enum class ESlateColorStylingMode : uint8_t
 {
     UseColor_Specified                                                               = 0,
@@ -96,8 +153,7 @@ enum class ESlateColorStylingMode : uint8_t
     UseColor_Foreground_Subdued                                                      = 3
 };
 
-/// Enum /Script/SlateCore.EUINavigationRule
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EUINavigationRule -  1 (1 bytes)
 enum class EUINavigationRule : uint8_t
 {
     Escape                                                                           = 0,
@@ -109,8 +165,7 @@ enum class EUINavigationRule : uint8_t
     Invalid                                                                          = 6
 };
 
-/// Enum /Script/SlateCore.EFlowDirectionPreference
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EFlowDirectionPreference -  1 (1 bytes)
 enum class EFlowDirectionPreference : uint8_t
 {
     Inherit                                                                          = 0,
@@ -119,8 +174,7 @@ enum class EFlowDirectionPreference : uint8_t
     RightToLeft                                                                      = 3
 };
 
-/// Enum /Script/SlateCore.EColorVisionDeficiency
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EColorVisionDeficiency -  1 (1 bytes)
 enum class EColorVisionDeficiency : uint8_t
 {
     NormalVision                                                                     = 0,
@@ -129,8 +183,7 @@ enum class EColorVisionDeficiency : uint8_t
     Tritanope                                                                        = 3
 };
 
-/// Enum /Script/SlateCore.ESelectInfo
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESelectInfo -  1 (1 bytes)
 enum class ESelectInfo : uint8_t
 {
     OnKeyPress                                                                       = 0,
@@ -139,8 +192,7 @@ enum class ESelectInfo : uint8_t
     Direct                                                                           = 3
 };
 
-/// Enum /Script/SlateCore.ETextCommit
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ETextCommit -  1 (1 bytes)
 enum class ETextCommit : uint8_t
 {
     Default                                                                          = 0,
@@ -149,8 +201,7 @@ enum class ETextCommit : uint8_t
     OnCleared                                                                        = 3
 };
 
-/// Enum /Script/SlateCore.ETextShapingMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ETextShapingMethod -  1 (1 bytes)
 enum class ETextShapingMethod : uint8_t
 {
     Auto                                                                             = 0,
@@ -158,8 +209,7 @@ enum class ETextShapingMethod : uint8_t
     FullShaping                                                                      = 2
 };
 
-/// Enum /Script/SlateCore.EMenuPlacement
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EMenuPlacement -  1 (1 bytes)
 enum class EMenuPlacement : uint8_t
 {
     MenuPlacement_BelowAnchor                                                        = 0,
@@ -177,16 +227,14 @@ enum class EMenuPlacement : uint8_t
     MenuPlacement_MatchBottomLeft                                                    = 12
 };
 
-/// Enum /Script/SlateCore.EFontLayoutMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EFontLayoutMethod -  1 (1 bytes)
 enum class EFontLayoutMethod : uint8_t
 {
     Metrics                                                                          = 0,
     BoundingBox                                                                      = 1
 };
 
-/// Enum /Script/SlateCore.EFontLoadingPolicy
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EFontLoadingPolicy -  1 (1 bytes)
 enum class EFontLoadingPolicy : uint8_t
 {
     LazyLoad                                                                         = 0,
@@ -194,8 +242,7 @@ enum class EFontLoadingPolicy : uint8_t
     Inline                                                                           = 2
 };
 
-/// Enum /Script/SlateCore.EFontHinting
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EFontHinting -  1 (1 bytes)
 enum class EFontHinting : uint8_t
 {
     Default                                                                          = 0,
@@ -205,8 +252,7 @@ enum class EFontHinting : uint8_t
     None                                                                             = 4
 };
 
-/// Enum /Script/SlateCore.EFocusCause
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EFocusCause -  1 (1 bytes)
 enum class EFocusCause : uint8_t
 {
     Mouse                                                                            = 0,
@@ -217,8 +263,7 @@ enum class EFocusCause : uint8_t
     WindowActivate                                                                   = 5
 };
 
-/// Enum /Script/SlateCore.ESlateDebuggingFocusEvent
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateDebuggingFocusEvent -  1 (1 bytes)
 enum class ESlateDebuggingFocusEvent : uint8_t
 {
     FocusChanging                                                                    = 0,
@@ -226,8 +271,7 @@ enum class ESlateDebuggingFocusEvent : uint8_t
     FocusReceived                                                                    = 2
 };
 
-/// Enum /Script/SlateCore.ESlateDebuggingNavigationMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateDebuggingNavigationMethod -  1 (1 bytes)
 enum class ESlateDebuggingNavigationMethod : uint8_t
 {
     Unknown                                                                          = 0,
@@ -238,16 +282,14 @@ enum class ESlateDebuggingNavigationMethod : uint8_t
     HitTestGrid                                                                      = 5
 };
 
-/// Enum /Script/SlateCore.ESlateDebuggingStateChangeEvent
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateDebuggingStateChangeEvent -  1 (1 bytes)
 enum class ESlateDebuggingStateChangeEvent : uint8_t
 {
     MouseCaptureGained                                                               = 0,
     MouseCaptureLost                                                                 = 1
 };
 
-/// Enum /Script/SlateCore.ESlateDebuggingInputEvent
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateDebuggingInputEvent -  1 (1 bytes)
 enum class ESlateDebuggingInputEvent : uint8_t
 {
     MouseMove                                                                        = 0,
@@ -278,8 +320,7 @@ enum class ESlateDebuggingInputEvent : uint8_t
     MotionDetected                                                                   = 25
 };
 
-/// Enum /Script/SlateCore.ESlateInputActionType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateInputActionType -  1 (1 bytes)
 enum class ESlateInputActionType : uint8_t
 {
     Press                                                                            = 0,
@@ -287,8 +328,7 @@ enum class ESlateInputActionType : uint8_t
     Move                                                                             = 2
 };
 
-/// Enum /Script/SlateCore.ESlateInputEventType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateInputEventType -  1 (1 bytes)
 enum class ESlateInputEventType : uint8_t
 {
     Keyboard                                                                         = 0,
@@ -296,8 +336,7 @@ enum class ESlateInputEventType : uint8_t
     Controller                                                                       = 2
 };
 
-/// Enum /Script/SlateCore.ESlateBrushResourceType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateBrushResourceType -  1 (1 bytes)
 enum class ESlateBrushResourceType : uint8_t
 {
     Default                                                                          = 0,
@@ -309,24 +348,21 @@ enum class ESlateBrushResourceType : uint8_t
     XBox                                                                             = 6
 };
 
-/// Enum /Script/SlateCore.EScrollDirection
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EScrollDirection -  1 (1 bytes)
 enum class EScrollDirection : uint8_t
 {
     Scroll_Down                                                                      = 0,
     Scroll_Up                                                                        = 1
 };
 
-/// Enum /Script/SlateCore.EOrientation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EOrientation -  1 (1 bytes)
 enum class EOrientation : uint8_t
 {
     Orient_Horizontal                                                                = 0,
     Orient_Vertical                                                                  = 1
 };
 
-/// Enum /Script/SlateCore.EVerticalAlignment
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EVerticalAlignment -  1 (1 bytes)
 enum class EVerticalAlignment : uint8_t
 {
     VAlign_Fill                                                                      = 0,
@@ -335,8 +371,7 @@ enum class EVerticalAlignment : uint8_t
     VAlign_Bottom                                                                    = 3
 };
 
-/// Enum /Script/SlateCore.EHorizontalAlignment
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EHorizontalAlignment -  1 (1 bytes)
 enum class EHorizontalAlignment : uint8_t
 {
     HAlign_Fill                                                                      = 0,
@@ -345,8 +380,7 @@ enum class EHorizontalAlignment : uint8_t
     HAlign_Right                                                                     = 3
 };
 
-/// Enum /Script/SlateCore.ENavigationGenesis
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ENavigationGenesis -  1 (1 bytes)
 enum class ENavigationGenesis : uint8_t
 {
     Keyboard                                                                         = 0,
@@ -354,16 +388,14 @@ enum class ENavigationGenesis : uint8_t
     User                                                                             = 2
 };
 
-/// Enum /Script/SlateCore.ENavigationSource
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ENavigationSource -  1 (1 bytes)
 enum class ENavigationSource : uint8_t
 {
     FocusedWidget                                                                    = 0,
     WidgetUnderCursor                                                                = 1
 };
 
-/// Enum /Script/SlateCore.EUINavigationAction
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EUINavigationAction -  1 (1 bytes)
 enum class EUINavigationAction : uint8_t
 {
     Accept                                                                           = 0,
@@ -372,8 +404,7 @@ enum class EUINavigationAction : uint8_t
     Invalid                                                                          = 3
 };
 
-/// Enum /Script/SlateCore.EButtonPressMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EButtonPressMethod -  1 (1 bytes)
 enum class EButtonPressMethod : uint8_t
 {
     DownAndUp                                                                        = 0,
@@ -381,8 +412,7 @@ enum class EButtonPressMethod : uint8_t
     ButtonRelease                                                                    = 2
 };
 
-/// Enum /Script/SlateCore.EButtonTouchMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EButtonTouchMethod -  1 (1 bytes)
 enum class EButtonTouchMethod : uint8_t
 {
     DownAndUp                                                                        = 0,
@@ -390,8 +420,7 @@ enum class EButtonTouchMethod : uint8_t
     PreciseTap                                                                       = 2
 };
 
-/// Enum /Script/SlateCore.EButtonClickMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EButtonClickMethod -  1 (1 bytes)
 enum class EButtonClickMethod : uint8_t
 {
     DownAndUp                                                                        = 0,
@@ -400,24 +429,21 @@ enum class EButtonClickMethod : uint8_t
     PreciseClick                                                                     = 3
 };
 
-/// Enum /Script/SlateCore.ESlateCheckBoxType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateCheckBoxType -  1 (1 bytes)
 enum class ESlateCheckBoxType : uint8_t
 {
     CheckBox                                                                         = 0,
     ToggleButton                                                                     = 1
 };
 
-/// Enum /Script/SlateCore.ESlateParentWindowSearchMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.ESlateParentWindowSearchMethod -  1 (1 bytes)
 enum class ESlateParentWindowSearchMethod : uint8_t
 {
     ActiveWindow                                                                     = 0,
     MainWindow                                                                       = 1
 };
 
-/// Enum /Script/SlateCore.EConsumeMouseWheel
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SlateCore.EConsumeMouseWheel -  1 (1 bytes)
 enum class EConsumeMouseWheel : uint8_t
 {
     WhenScrollingPossible                                                            = 0,
@@ -426,595 +452,817 @@ enum class EConsumeMouseWheel : uint8_t
 };
 
 /// Class /Script/SlateCore.FontBulkData
-/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align n/a MaxSize: 0x0078
 class UFontBulkData : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x50];                                      // 0x0028   (0x0050) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x50];                                      // 0x0028   (0x0050) MISSED
 };
 
 /// Class /Script/SlateCore.FontFaceInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UFontFaceInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/SlateCore.FontProviderInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UFontProviderInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/SlateCore.SlateTypes
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class USlateTypes : public UObject
 { 
 public:
 };
 
 /// Class /Script/SlateCore.SlateWidgetStyleAsset
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class USlateWidgetStyleAsset : public UObject
 { 
 public:
-    class USlateWidgetStyleContainerBase*              CustomStyle;                                                // 0x0028   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USlateWidgetStyleContainerBase*              CustomStyle;                                                // 0x0028   (0x0008)
 };
 
 /// Class /Script/SlateCore.SlateWidgetStyleContainerBase
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class USlateWidgetStyleContainerBase : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/SlateCore.SlateWidgetStyleContainerInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class USlateWidgetStyleContainerInterface : public UInterface
 { 
 public:
 };
 
 /// Struct /Script/SlateCore.Geometry
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 4 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FGeometry
 { 
-    unsigned char                                      UnknownData00_2[0x38];                                      // 0x0000   (0x0038) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x38];                                      // 0x0000   (0x0038) MISSED
 };
 
 /// Struct /Script/SlateCore.Margin
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FMargin
 { 
-    float                                              Left;                                                       // 0x0000   (0x0004)
-    float                                              Top;                                                        // 0x0004   (0x0004)
-    float                                              Right;                                                      // 0x0008   (0x0004)
-    float                                              Bottom;                                                     // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Left;                                                       // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Top;                                                        // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Right;                                                      // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Bottom;                                                     // 0x000C   (0x0004)
 };
 
 /// Struct /Script/SlateCore.SlateColor
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FSlateColor
 { 
-    FLinearColor                                       SpecifiedColor;                                             // 0x0000   (0x0010)
-    TEnumAsByte<ESlateColorStylingMode>                ColorUseRule;                                               // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_7[0x17];                                      // 0x0011   (0x0017) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FLinearColor                                       SpecifiedColor;                                             // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<ESlateColorStylingMode>                ColorUseRule;                                               // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x17];                                      // 0x0011   (0x0017) MISSED
 };
 
 /// Struct /Script/SlateCore.SlateBrush
-/// Size: 0x0090 (144 bytes) (0x000000 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000000 - 0x000090) align n/a MaxSize: 0x0090
 struct FSlateBrush
 { 
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0000   (0x0008) MISSED
-    FVector2D                                          ImageSize;                                                  // 0x0008   (0x0008)
-    FMargin                                            Margin;                                                     // 0x0010   (0x0010)
-    FSlateColor                                        TintColor;                                                  // 0x0020   (0x0028)
-    class UObject*                                     ResourceObject;                                             // 0x0048   (0x0008)
-    class UObject*                                     AsyncResourceObject;                                        // 0x0050   (0x0008)
-    FName                                              ResourceName;                                               // 0x0058   (0x0008)
-    FBox2D                                             UVRegion;                                                   // 0x0060   (0x0014)
-    TEnumAsByte<ESlateBrushDrawType>                   DrawAs;                                                     // 0x0074   (0x0001)
-    TEnumAsByte<ESlateBrushTileType>                   Tiling;                                                     // 0x0075   (0x0001)
-    TEnumAsByte<ESlateBrushMirrorType>                 Mirroring;                                                  // 0x0076   (0x0001)
-    TEnumAsByte<ESlateBrushImageType>                  ImageType;                                                  // 0x0077   (0x0001)
-    unsigned char                                      UnknownData01_6[0x10];                                      // 0x0078   (0x0010) MISSED
-    bool                                               bIsDynamicallyLoaded : 1;                                   // 0x0088:0 (0x0001)
-    bool                                               bHasUObject : 1;                                            // 0x0088:1 (0x0001)
-    unsigned char                                      UnknownData02_7[0x7];                                       // 0x0089   (0x0007) MISSED
+    /* public    */ unsigned char                                      UnknownData03_7[0x8];                                       // 0x0000   (0x0008) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          ImageSize;                                                  // 0x0008   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            Margin;                                                     // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        TintColor;                                                  // 0x0020   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UObject*                                     ResourceObject;                                             // 0x0048   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UObject*                                     AsyncResourceObject;                                        // 0x0050   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FName                                              ResourceName;                                               // 0x0058   (0x0008)
+    UPROPERTY(ZeroConstructor, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBox2D                                             UVRegion;                                                   // 0x0060   (0x0014)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESlateBrushDrawType>                   DrawAs;                                                     // 0x0074   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESlateBrushTileType>                   Tiling;                                                     // 0x0075   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESlateBrushMirrorType>                 Mirroring;                                                  // 0x0076   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESlateBrushImageType>                  ImageType;                                                  // 0x0077   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x10];                                      // 0x0078   (0x0010) MISSED
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bIsDynamicallyLoaded : 1;                                   // 0x0088:0 (0x0001)
+    UPROPERTY(Deprecated, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bHasUObject : 1;                                            // 0x0088:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x7];                                       // 0x0089   (0x0007) MISSED
 };
 
 /// Struct /Script/SlateCore.InputEvent
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInputEvent
 { 
-    unsigned char                                      UnknownData00_2[0x18];                                      // 0x0000   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x18];                                      // 0x0000   (0x0018) MISSED
 };
 
 /// Struct /Script/SlateCore.PointerEvent
-/// Size: 0x0070 (112 bytes) (0x000018 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000018 - 0x000070) align n/a MaxSize: 0x0070
 struct FPointerEvent : FInputEvent
 { 
-    unsigned char                                      UnknownData00_1[0x58];                                      // 0x0018   (0x0058) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x58];                                      // 0x0018   (0x0058) MISSED
 };
 
 /// Struct /Script/SlateCore.CharacterEvent
-/// Size: 0x0020 (32 bytes) (0x000018 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000018 - 0x000020) align n/a MaxSize: 0x0020
 struct FCharacterEvent : FInputEvent
 { 
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0018   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0018   (0x0008) MISSED
 };
 
 /// Struct /Script/SlateCore.KeyEvent
-/// Size: 0x0038 (56 bytes) (0x000018 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000018 - 0x000038) align n/a MaxSize: 0x0038
 struct FKeyEvent : FInputEvent
 { 
-    unsigned char                                      UnknownData00_1[0x20];                                      // 0x0018   (0x0020) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x20];                                      // 0x0018   (0x0020) MISSED
 };
 
 /// Struct /Script/SlateCore.NavigationEvent
-/// Size: 0x0020 (32 bytes) (0x000018 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000018 - 0x000020) align n/a MaxSize: 0x0020
 struct FNavigationEvent : FInputEvent
 { 
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0018   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0018   (0x0008) MISSED
 };
 
 /// Struct /Script/SlateCore.AnalogInputEvent
-/// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align n/a MaxSize: 0x0040
 struct FAnalogInputEvent : FKeyEvent
 { 
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0038   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0038   (0x0008) MISSED
 };
 
 /// Struct /Script/SlateCore.FontOutlineSettings
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FFontOutlineSettings
 { 
-    int32_t                                            OutlineSize;                                                // 0x0000   (0x0004)
-    int32_t                                            OutlineBlur;                                                // 0x0004   (0x0004)
-    bool                                               bSeparateFillAlpha;                                         // 0x0008   (0x0001)
-    bool                                               bApplyOutlineToDropShadows;                                 // 0x0009   (0x0001)
-    unsigned char                                      UnknownData00_6[0x6];                                       // 0x000A   (0x0006) MISSED
-    class UObject*                                     OutlineMaterial;                                            // 0x0010   (0x0008)
-    FLinearColor                                       OutlineColor;                                               // 0x0018   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            OutlineSize;                                                // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            OutlineBlur;                                                // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSeparateFillAlpha;                                         // 0x0008   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bApplyOutlineToDropShadows;                                 // 0x0009   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x6];                                       // 0x000A   (0x0006) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UObject*                                     OutlineMaterial;                                            // 0x0010   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       OutlineColor;                                               // 0x0018   (0x0010)
 };
 
 /// Struct /Script/SlateCore.SlateFontInfo
-/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FSlateFontInfo
 { 
-    class UObject*                                     FontObject;                                                 // 0x0000   (0x0008)
-    class UObject*                                     FontMaterial;                                               // 0x0008   (0x0008)
-    FFontOutlineSettings                               OutlineSettings;                                            // 0x0010   (0x0028)
-    unsigned char                                      UnknownData00_6[0x10];                                      // 0x0038   (0x0010) MISSED
-    FName                                              TypefaceFontName;                                           // 0x0048   (0x0008)
-    int32_t                                            Size;                                                       // 0x0050   (0x0004)
-    int32_t                                            LetterSpacing;                                              // 0x0054   (0x0004)
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0058   (0x0008) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UObject*                                     FontObject;                                                 // 0x0000   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UObject*                                     FontMaterial;                                               // 0x0008   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFontOutlineSettings                               OutlineSettings;                                            // 0x0010   (0x0028)
+    /* public    */ unsigned char                                      UnknownData02_6[0x10];                                      // 0x0038   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              TypefaceFontName;                                           // 0x0048   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Size;                                                       // 0x0050   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            LetterSpacing;                                              // 0x0054   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x8];                                       // 0x0058   (0x0008) MISSED
 };
 
 /// Struct /Script/SlateCore.SlateWidgetStyle
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 8 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FSlateWidgetStyle
 { 
-    unsigned char                                      UnknownData00_2[0x8];                                       // 0x0000   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008) MISSED
 };
 
 /// Struct /Script/SlateCore.TableRowStyle
-/// Size: 0x0838 (2104 bytes) (0x000008 - 0x000838) align 8 MaxSize: 0x0838
+/// Size: 0x0838 (2104 bytes) (0x000008 - 0x000838) align n/a MaxSize: 0x0838
 struct FTableRowStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        SelectorFocusedBrush;                                       // 0x0008   (0x0090)
-    FSlateBrush                                        ActiveHoveredBrush;                                         // 0x0098   (0x0090)
-    FSlateBrush                                        ActiveBrush;                                                // 0x0128   (0x0090)
-    FSlateBrush                                        InactiveHoveredBrush;                                       // 0x01B8   (0x0090)
-    FSlateBrush                                        InactiveBrush;                                              // 0x0248   (0x0090)
-    FSlateBrush                                        EvenRowBackgroundHoveredBrush;                              // 0x02D8   (0x0090)
-    FSlateBrush                                        EvenRowBackgroundBrush;                                     // 0x0368   (0x0090)
-    FSlateBrush                                        OddRowBackgroundHoveredBrush;                               // 0x03F8   (0x0090)
-    FSlateBrush                                        OddRowBackgroundBrush;                                      // 0x0488   (0x0090)
-    FSlateColor                                        TextColor;                                                  // 0x0518   (0x0028)
-    FSlateColor                                        SelectedTextColor;                                          // 0x0540   (0x0028)
-    FSlateBrush                                        DropIndicator_Above;                                        // 0x0568   (0x0090)
-    FSlateBrush                                        DropIndicator_Onto;                                         // 0x05F8   (0x0090)
-    FSlateBrush                                        DropIndicator_Below;                                        // 0x0688   (0x0090)
-    FSlateBrush                                        ActiveHighlightedBrush;                                     // 0x0718   (0x0090)
-    FSlateBrush                                        InactiveHighlightedBrush;                                   // 0x07A8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        SelectorFocusedBrush;                                       // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ActiveHoveredBrush;                                         // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ActiveBrush;                                                // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        InactiveHoveredBrush;                                       // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        InactiveBrush;                                              // 0x0248   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        EvenRowBackgroundHoveredBrush;                              // 0x02D8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        EvenRowBackgroundBrush;                                     // 0x0368   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        OddRowBackgroundHoveredBrush;                               // 0x03F8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        OddRowBackgroundBrush;                                      // 0x0488   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        TextColor;                                                  // 0x0518   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        SelectedTextColor;                                          // 0x0540   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DropIndicator_Above;                                        // 0x0568   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DropIndicator_Onto;                                         // 0x05F8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DropIndicator_Below;                                        // 0x0688   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ActiveHighlightedBrush;                                     // 0x0718   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        InactiveHighlightedBrush;                                   // 0x07A8   (0x0090)
 };
 
 /// Struct /Script/SlateCore.SlateSound
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FSlateSound
 { 
-    class UObject*                                     ResourceObject;                                             // 0x0000   (0x0008)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0008   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UObject*                                     ResourceObject;                                             // 0x0000   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0008   (0x0010) MISSED
 };
 
 /// Struct /Script/SlateCore.ButtonStyle
-/// Size: 0x0298 (664 bytes) (0x000008 - 0x000298) align 8 MaxSize: 0x0298
+/// Size: 0x0298 (664 bytes) (0x000008 - 0x000298) align n/a MaxSize: 0x0298
 struct FButtonStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        Normal;                                                     // 0x0008   (0x0090)
-    FSlateBrush                                        Hovered;                                                    // 0x0098   (0x0090)
-    FSlateBrush                                        Pressed;                                                    // 0x0128   (0x0090)
-    FSlateBrush                                        Disabled;                                                   // 0x01B8   (0x0090)
-    FMargin                                            NormalPadding;                                              // 0x0248   (0x0010)
-    FMargin                                            PressedPadding;                                             // 0x0258   (0x0010)
-    FSlateSound                                        PressedSlateSound;                                          // 0x0268   (0x0018)
-    FSlateSound                                        HoveredSlateSound;                                          // 0x0280   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        Normal;                                                     // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        Hovered;                                                    // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        Pressed;                                                    // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        Disabled;                                                   // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            NormalPadding;                                              // 0x0248   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            PressedPadding;                                             // 0x0258   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSlateSound                                        PressedSlateSound;                                          // 0x0268   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSlateSound                                        HoveredSlateSound;                                          // 0x0280   (0x0018)
 };
 
 /// Struct /Script/SlateCore.ComboButtonStyle
-/// Size: 0x03E8 (1000 bytes) (0x000008 - 0x0003E8) align 8 MaxSize: 0x03E8
+/// Size: 0x03E8 (1000 bytes) (0x000008 - 0x0003E8) align n/a MaxSize: 0x03E8
 struct FComboButtonStyle : FSlateWidgetStyle
 { 
-    FButtonStyle                                       ButtonStyle;                                                // 0x0008   (0x0298)
-    FSlateBrush                                        DownArrowImage;                                             // 0x02A0   (0x0090)
-    FVector2D                                          ShadowOffset;                                               // 0x0330   (0x0008)
-    FLinearColor                                       ShadowColorAndOpacity;                                      // 0x0338   (0x0010)
-    FSlateBrush                                        MenuBorderBrush;                                            // 0x0348   (0x0090)
-    FMargin                                            MenuBorderPadding;                                          // 0x03D8   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FButtonStyle                                       ButtonStyle;                                                // 0x0008   (0x0298)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DownArrowImage;                                             // 0x02A0   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          ShadowOffset;                                               // 0x0330   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       ShadowColorAndOpacity;                                      // 0x0338   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MenuBorderBrush;                                            // 0x0348   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            MenuBorderPadding;                                          // 0x03D8   (0x0010)
 };
 
 /// Struct /Script/SlateCore.ComboBoxStyle
-/// Size: 0x0420 (1056 bytes) (0x000008 - 0x000420) align 8 MaxSize: 0x0420
+/// Size: 0x0420 (1056 bytes) (0x000008 - 0x000420) align n/a MaxSize: 0x0420
 struct FComboBoxStyle : FSlateWidgetStyle
 { 
-    FComboButtonStyle                                  ComboButtonStyle;                                           // 0x0008   (0x03E8)
-    FSlateSound                                        PressedSlateSound;                                          // 0x03F0   (0x0018)
-    FSlateSound                                        SelectionChangeSlateSound;                                  // 0x0408   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FComboButtonStyle                                  ComboButtonStyle;                                           // 0x0008   (0x03E8)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSlateSound                                        PressedSlateSound;                                          // 0x03F0   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSlateSound                                        SelectionChangeSlateSound;                                  // 0x0408   (0x0018)
 };
 
 /// Struct /Script/SlateCore.EditableTextStyle
-/// Size: 0x0240 (576 bytes) (0x000008 - 0x000240) align 8 MaxSize: 0x0240
+/// Size: 0x0240 (576 bytes) (0x000008 - 0x000240) align n/a MaxSize: 0x0240
 struct FEditableTextStyle : FSlateWidgetStyle
 { 
-    FSlateFontInfo                                     Font;                                                       // 0x0008   (0x0060)
-    FSlateColor                                        ColorAndOpacity;                                            // 0x0068   (0x0028)
-    FSlateBrush                                        BackgroundImageSelected;                                    // 0x0090   (0x0090)
-    FSlateBrush                                        BackgroundImageComposing;                                   // 0x0120   (0x0090)
-    FSlateBrush                                        CaretImage;                                                 // 0x01B0   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FSlateFontInfo                                     Font;                                                       // 0x0008   (0x0060)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        ColorAndOpacity;                                            // 0x0068   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundImageSelected;                                    // 0x0090   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundImageComposing;                                   // 0x0120   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        CaretImage;                                                 // 0x01B0   (0x0090)
 };
 
 /// Struct /Script/SlateCore.ScrollBarStyle
-/// Size: 0x0518 (1304 bytes) (0x000008 - 0x000518) align 8 MaxSize: 0x0518
+/// Size: 0x0518 (1304 bytes) (0x000008 - 0x000518) align n/a MaxSize: 0x0518
 struct FScrollBarStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        HorizontalBackgroundImage;                                  // 0x0008   (0x0090)
-    FSlateBrush                                        VerticalBackgroundImage;                                    // 0x0098   (0x0090)
-    FSlateBrush                                        VerticalTopSlotImage;                                       // 0x0128   (0x0090)
-    FSlateBrush                                        HorizontalTopSlotImage;                                     // 0x01B8   (0x0090)
-    FSlateBrush                                        VerticalBottomSlotImage;                                    // 0x0248   (0x0090)
-    FSlateBrush                                        HorizontalBottomSlotImage;                                  // 0x02D8   (0x0090)
-    FSlateBrush                                        NormalThumbImage;                                           // 0x0368   (0x0090)
-    FSlateBrush                                        HoveredThumbImage;                                          // 0x03F8   (0x0090)
-    FSlateBrush                                        DraggedThumbImage;                                          // 0x0488   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HorizontalBackgroundImage;                                  // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        VerticalBackgroundImage;                                    // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        VerticalTopSlotImage;                                       // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HorizontalTopSlotImage;                                     // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        VerticalBottomSlotImage;                                    // 0x0248   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HorizontalBottomSlotImage;                                  // 0x02D8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        NormalThumbImage;                                           // 0x0368   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HoveredThumbImage;                                          // 0x03F8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DraggedThumbImage;                                          // 0x0488   (0x0090)
 };
 
 /// Struct /Script/SlateCore.EditableTextBoxStyle
-/// Size: 0x0868 (2152 bytes) (0x000008 - 0x000868) align 8 MaxSize: 0x0868
+/// Size: 0x0868 (2152 bytes) (0x000008 - 0x000868) align n/a MaxSize: 0x0868
 struct FEditableTextBoxStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        BackgroundImageNormal;                                      // 0x0008   (0x0090)
-    FSlateBrush                                        BackgroundImageHovered;                                     // 0x0098   (0x0090)
-    FSlateBrush                                        BackgroundImageFocused;                                     // 0x0128   (0x0090)
-    FSlateBrush                                        BackgroundImageReadOnly;                                    // 0x01B8   (0x0090)
-    FMargin                                            Padding;                                                    // 0x0248   (0x0010)
-    FSlateFontInfo                                     Font;                                                       // 0x0258   (0x0060)
-    FSlateColor                                        ForegroundColor;                                            // 0x02B8   (0x0028)
-    FSlateColor                                        BackgroundColor;                                            // 0x02E0   (0x0028)
-    FSlateColor                                        ReadOnlyForegroundColor;                                    // 0x0308   (0x0028)
-    FMargin                                            HScrollBarPadding;                                          // 0x0330   (0x0010)
-    FMargin                                            VScrollBarPadding;                                          // 0x0340   (0x0010)
-    FScrollBarStyle                                    ScrollBarStyle;                                             // 0x0350   (0x0518)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundImageNormal;                                      // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundImageHovered;                                     // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundImageFocused;                                     // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundImageReadOnly;                                    // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            Padding;                                                    // 0x0248   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FSlateFontInfo                                     Font;                                                       // 0x0258   (0x0060)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        ForegroundColor;                                            // 0x02B8   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        BackgroundColor;                                            // 0x02E0   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        ReadOnlyForegroundColor;                                    // 0x0308   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            HScrollBarPadding;                                          // 0x0330   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            VScrollBarPadding;                                          // 0x0340   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FScrollBarStyle                                    ScrollBarStyle;                                             // 0x0350   (0x0518)
 };
 
 /// Struct /Script/SlateCore.TextBlockStyle
-/// Size: 0x0290 (656 bytes) (0x000008 - 0x000290) align 8 MaxSize: 0x0290
+/// Size: 0x0290 (656 bytes) (0x000008 - 0x000290) align n/a MaxSize: 0x0290
 struct FTextBlockStyle : FSlateWidgetStyle
 { 
-    FSlateFontInfo                                     Font;                                                       // 0x0008   (0x0060)
-    FSlateColor                                        ColorAndOpacity;                                            // 0x0068   (0x0028)
-    FVector2D                                          ShadowOffset;                                               // 0x0090   (0x0008)
-    FLinearColor                                       ShadowColorAndOpacity;                                      // 0x0098   (0x0010)
-    FSlateColor                                        SelectedBackgroundColor;                                    // 0x00A8   (0x0028)
-    FLinearColor                                       HighlightColor;                                             // 0x00D0   (0x0010)
-    FSlateBrush                                        HighlightShape;                                             // 0x00E0   (0x0090)
-    FSlateBrush                                        StrikeBrush;                                                // 0x0170   (0x0090)
-    FSlateBrush                                        UnderlineBrush;                                             // 0x0200   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FSlateFontInfo                                     Font;                                                       // 0x0008   (0x0060)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        ColorAndOpacity;                                            // 0x0068   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          ShadowOffset;                                               // 0x0090   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       ShadowColorAndOpacity;                                      // 0x0098   (0x0010)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        SelectedBackgroundColor;                                    // 0x00A8   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       HighlightColor;                                             // 0x00D0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HighlightShape;                                             // 0x00E0   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        StrikeBrush;                                                // 0x0170   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        UnderlineBrush;                                             // 0x0200   (0x0090)
 };
 
 /// Struct /Script/SlateCore.SpinBoxStyle
-/// Size: 0x0310 (784 bytes) (0x000008 - 0x000310) align 8 MaxSize: 0x0310
+/// Size: 0x0310 (784 bytes) (0x000008 - 0x000310) align n/a MaxSize: 0x0310
 struct FSpinBoxStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        BackgroundBrush;                                            // 0x0008   (0x0090)
-    FSlateBrush                                        HoveredBackgroundBrush;                                     // 0x0098   (0x0090)
-    FSlateBrush                                        ActiveFillBrush;                                            // 0x0128   (0x0090)
-    FSlateBrush                                        InactiveFillBrush;                                          // 0x01B8   (0x0090)
-    FSlateBrush                                        ArrowsImage;                                                // 0x0248   (0x0090)
-    FSlateColor                                        ForegroundColor;                                            // 0x02D8   (0x0028)
-    FMargin                                            TextPadding;                                                // 0x0300   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundBrush;                                            // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HoveredBackgroundBrush;                                     // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ActiveFillBrush;                                            // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        InactiveFillBrush;                                          // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ArrowsImage;                                                // 0x0248   (0x0090)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        ForegroundColor;                                            // 0x02D8   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            TextPadding;                                                // 0x0300   (0x0010)
 };
 
 /// Struct /Script/SlateCore.FontData
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FFontData
 { 
-    FString                                            FontFilename;                                               // 0x0000   (0x0010)
-    EFontHinting                                       Hinting;                                                    // 0x0010   (0x0001)
-    EFontLoadingPolicy                                 LoadingPolicy;                                              // 0x0011   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0012   (0x0002) MISSED
-    int32_t                                            SubFaceIndex;                                               // 0x0014   (0x0004)
-    class UObject*                                     FontFaceAsset;                                              // 0x0018   (0x0008)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FString                                            FontFilename;                                               // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ EFontHinting                                       Hinting;                                                    // 0x0010   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ EFontLoadingPolicy                                 LoadingPolicy;                                              // 0x0011   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x2];                                       // 0x0012   (0x0002) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            SubFaceIndex;                                               // 0x0014   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UObject*                                     FontFaceAsset;                                              // 0x0018   (0x0008)
 };
 
 /// Struct /Script/SlateCore.TypefaceEntry
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FTypefaceEntry
 { 
-    FName                                              Name;                                                       // 0x0000   (0x0008)
-    FFontData                                          Font;                                                       // 0x0008   (0x0020)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              Name;                                                       // 0x0000   (0x0008)
+    UPROPERTY(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFontData                                          Font;                                                       // 0x0008   (0x0020)
 };
 
 /// Struct /Script/SlateCore.Typeface
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FTypeface
 { 
-    TArray<FTypefaceEntry>                             Fonts;                                                      // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FTypefaceEntry>                             Fonts;                                                      // 0x0000   (0x0010)
 };
 
 /// Struct /Script/SlateCore.CompositeFallbackFont
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FCompositeFallbackFont
 { 
-    FTypeface                                          Typeface;                                                   // 0x0000   (0x0010)
-    float                                              ScalingFactor;                                              // 0x0010   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0014   (0x0004) MISSED
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ FTypeface                                          Typeface;                                                   // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ScalingFactor;                                              // 0x0010   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0014   (0x0004) MISSED
 };
 
 /// Struct /Script/SlateCore.CompositeSubFont
-/// Size: 0x0038 (56 bytes) (0x000018 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000018 - 0x000038) align n/a MaxSize: 0x0038
 struct FCompositeSubFont : FCompositeFallbackFont
 { 
-    TArray<FInt32Range>                                CharacterRanges;                                            // 0x0018   (0x0010)
-    FString                                            Cultures;                                                   // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FInt32Range>                                CharacterRanges;                                            // 0x0018   (0x0010)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Cultures;                                                   // 0x0028   (0x0010)
 };
 
 /// Struct /Script/SlateCore.CompositeFont
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FCompositeFont
 { 
-    FTypeface                                          DefaultTypeface;                                            // 0x0000   (0x0010)
-    FCompositeFallbackFont                             FallbackTypeface;                                           // 0x0010   (0x0018)
-    TArray<FCompositeSubFont>                          SubTypefaces;                                               // 0x0028   (0x0010)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ FTypeface                                          DefaultTypeface;                                            // 0x0000   (0x0010)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ FCompositeFallbackFont                             FallbackTypeface;                                           // 0x0010   (0x0018)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FCompositeSubFont>                          SubTypefaces;                                               // 0x0028   (0x0010)
 };
 
 /// Struct /Script/SlateCore.MotionEvent
-/// Size: 0x0048 (72 bytes) (0x000018 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000018 - 0x000048) align n/a MaxSize: 0x0048
 struct FMotionEvent : FInputEvent
 { 
-    unsigned char                                      UnknownData00_1[0x30];                                      // 0x0018   (0x0030) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x30];                                      // 0x0018   (0x0030) MISSED
 };
 
 /// Struct /Script/SlateCore.CaptureLostEvent
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FCaptureLostEvent
 { 
-    unsigned char                                      UnknownData00_2[0x8];                                       // 0x0000   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008) MISSED
 };
 
 /// Struct /Script/SlateCore.FocusEvent
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FFocusEvent
 { 
-    unsigned char                                      UnknownData00_2[0x8];                                       // 0x0000   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x8];                                       // 0x0000   (0x0008) MISSED
 };
 
 /// Struct /Script/SlateCore.WindowStyle
-/// Size: 0x1138 (4408 bytes) (0x000008 - 0x001138) align 8 MaxSize: 0x1138
+/// Size: 0x1138 (4408 bytes) (0x000008 - 0x001138) align n/a MaxSize: 0x1138
 struct FWindowStyle : FSlateWidgetStyle
 { 
-    FButtonStyle                                       MinimizeButtonStyle;                                        // 0x0008   (0x0298)
-    FButtonStyle                                       MaximizeButtonStyle;                                        // 0x02A0   (0x0298)
-    FButtonStyle                                       RestoreButtonStyle;                                         // 0x0538   (0x0298)
-    FButtonStyle                                       CloseButtonStyle;                                           // 0x07D0   (0x0298)
-    FTextBlockStyle                                    TitleTextStyle;                                             // 0x0A68   (0x0290)
-    FSlateBrush                                        ActiveTitleBrush;                                           // 0x0CF8   (0x0090)
-    FSlateBrush                                        InactiveTitleBrush;                                         // 0x0D88   (0x0090)
-    FSlateBrush                                        FlashTitleBrush;                                            // 0x0E18   (0x0090)
-    FSlateColor                                        BackgroundColor;                                            // 0x0EA8   (0x0028)
-    FSlateBrush                                        OutlineBrush;                                               // 0x0ED0   (0x0090)
-    FSlateColor                                        OutlineColor;                                               // 0x0F60   (0x0028)
-    FSlateBrush                                        BorderBrush;                                                // 0x0F88   (0x0090)
-    FSlateBrush                                        BackgroundBrush;                                            // 0x1018   (0x0090)
-    FSlateBrush                                        ChildBackgroundBrush;                                       // 0x10A8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FButtonStyle                                       MinimizeButtonStyle;                                        // 0x0008   (0x0298)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FButtonStyle                                       MaximizeButtonStyle;                                        // 0x02A0   (0x0298)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FButtonStyle                                       RestoreButtonStyle;                                         // 0x0538   (0x0298)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FButtonStyle                                       CloseButtonStyle;                                           // 0x07D0   (0x0298)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FTextBlockStyle                                    TitleTextStyle;                                             // 0x0A68   (0x0290)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ActiveTitleBrush;                                           // 0x0CF8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        InactiveTitleBrush;                                         // 0x0D88   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        FlashTitleBrush;                                            // 0x0E18   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        BackgroundColor;                                            // 0x0EA8   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        OutlineBrush;                                               // 0x0ED0   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        OutlineColor;                                               // 0x0F60   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BorderBrush;                                                // 0x0F88   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundBrush;                                            // 0x1018   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ChildBackgroundBrush;                                       // 0x10A8   (0x0090)
 };
 
 /// Struct /Script/SlateCore.ScrollBorderStyle
-/// Size: 0x0128 (296 bytes) (0x000008 - 0x000128) align 8 MaxSize: 0x0128
+/// Size: 0x0128 (296 bytes) (0x000008 - 0x000128) align n/a MaxSize: 0x0128
 struct FScrollBorderStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        TopShadowBrush;                                             // 0x0008   (0x0090)
-    FSlateBrush                                        BottomShadowBrush;                                          // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        TopShadowBrush;                                             // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BottomShadowBrush;                                          // 0x0098   (0x0090)
 };
 
 /// Struct /Script/SlateCore.ScrollBoxStyle
-/// Size: 0x0248 (584 bytes) (0x000008 - 0x000248) align 8 MaxSize: 0x0248
+/// Size: 0x0248 (584 bytes) (0x000008 - 0x000248) align n/a MaxSize: 0x0248
 struct FScrollBoxStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        TopShadowBrush;                                             // 0x0008   (0x0090)
-    FSlateBrush                                        BottomShadowBrush;                                          // 0x0098   (0x0090)
-    FSlateBrush                                        LeftShadowBrush;                                            // 0x0128   (0x0090)
-    FSlateBrush                                        RightShadowBrush;                                           // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        TopShadowBrush;                                             // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BottomShadowBrush;                                          // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        LeftShadowBrush;                                            // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        RightShadowBrush;                                           // 0x01B8   (0x0090)
 };
 
 /// Struct /Script/SlateCore.DockTabStyle
-/// Size: 0x0760 (1888 bytes) (0x000008 - 0x000760) align 8 MaxSize: 0x0760
+/// Size: 0x0760 (1888 bytes) (0x000008 - 0x000760) align n/a MaxSize: 0x0760
 struct FDockTabStyle : FSlateWidgetStyle
 { 
-    FButtonStyle                                       CloseButtonStyle;                                           // 0x0008   (0x0298)
-    FSlateBrush                                        NormalBrush;                                                // 0x02A0   (0x0090)
-    FSlateBrush                                        ActiveBrush;                                                // 0x0330   (0x0090)
-    FSlateBrush                                        ColorOverlayTabBrush;                                       // 0x03C0   (0x0090)
-    FSlateBrush                                        ColorOverlayIconBrush;                                      // 0x0450   (0x0090)
-    FSlateBrush                                        ForegroundBrush;                                            // 0x04E0   (0x0090)
-    FSlateBrush                                        HoveredBrush;                                               // 0x0570   (0x0090)
-    FSlateBrush                                        ContentAreaBrush;                                           // 0x0600   (0x0090)
-    FSlateBrush                                        TabWellBrush;                                               // 0x0690   (0x0090)
-    FMargin                                            TabPadding;                                                 // 0x0720   (0x0010)
-    float                                              OverlapWidth;                                               // 0x0730   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0734   (0x0004) MISSED
-    FSlateColor                                        FlashColor;                                                 // 0x0738   (0x0028)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FButtonStyle                                       CloseButtonStyle;                                           // 0x0008   (0x0298)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        NormalBrush;                                                // 0x02A0   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ActiveBrush;                                                // 0x0330   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ColorOverlayTabBrush;                                       // 0x03C0   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ColorOverlayIconBrush;                                      // 0x0450   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ForegroundBrush;                                            // 0x04E0   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HoveredBrush;                                               // 0x0570   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ContentAreaBrush;                                           // 0x0600   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        TabWellBrush;                                               // 0x0690   (0x0090)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            TabPadding;                                                 // 0x0720   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              OverlapWidth;                                               // 0x0730   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0734   (0x0004) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        FlashColor;                                                 // 0x0738   (0x0028)
 };
 
 /// Struct /Script/SlateCore.TableColumnHeaderStyle
-/// Size: 0x0518 (1304 bytes) (0x000008 - 0x000518) align 8 MaxSize: 0x0518
+/// Size: 0x0518 (1304 bytes) (0x000008 - 0x000518) align n/a MaxSize: 0x0518
 struct FTableColumnHeaderStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        SortPrimaryAscendingImage;                                  // 0x0008   (0x0090)
-    FSlateBrush                                        SortPrimaryDescendingImage;                                 // 0x0098   (0x0090)
-    FSlateBrush                                        SortSecondaryAscendingImage;                                // 0x0128   (0x0090)
-    FSlateBrush                                        SortSecondaryDescendingImage;                               // 0x01B8   (0x0090)
-    FSlateBrush                                        NormalBrush;                                                // 0x0248   (0x0090)
-    FSlateBrush                                        HoveredBrush;                                               // 0x02D8   (0x0090)
-    FSlateBrush                                        MenuDropdownImage;                                          // 0x0368   (0x0090)
-    FSlateBrush                                        MenuDropdownNormalBorderBrush;                              // 0x03F8   (0x0090)
-    FSlateBrush                                        MenuDropdownHoveredBorderBrush;                             // 0x0488   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        SortPrimaryAscendingImage;                                  // 0x0008   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        SortPrimaryDescendingImage;                                 // 0x0098   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        SortSecondaryAscendingImage;                                // 0x0128   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        SortSecondaryDescendingImage;                               // 0x01B8   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        NormalBrush;                                                // 0x0248   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HoveredBrush;                                               // 0x02D8   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MenuDropdownImage;                                          // 0x0368   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MenuDropdownNormalBorderBrush;                              // 0x03F8   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MenuDropdownHoveredBorderBrush;                             // 0x0488   (0x0090)
 };
 
 /// Struct /Script/SlateCore.SplitterStyle
-/// Size: 0x0128 (296 bytes) (0x000008 - 0x000128) align 8 MaxSize: 0x0128
+/// Size: 0x0128 (296 bytes) (0x000008 - 0x000128) align n/a MaxSize: 0x0128
 struct FSplitterStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        HandleNormalBrush;                                          // 0x0008   (0x0090)
-    FSlateBrush                                        HandleHighlightBrush;                                       // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HandleNormalBrush;                                          // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HandleHighlightBrush;                                       // 0x0098   (0x0090)
 };
 
 /// Struct /Script/SlateCore.HeaderRowStyle
-/// Size: 0x0C18 (3096 bytes) (0x000008 - 0x000C18) align 8 MaxSize: 0x0C18
+/// Size: 0x0C18 (3096 bytes) (0x000008 - 0x000C18) align n/a MaxSize: 0x0C18
 struct FHeaderRowStyle : FSlateWidgetStyle
 { 
-    FTableColumnHeaderStyle                            ColumnStyle;                                                // 0x0008   (0x0518)
-    FTableColumnHeaderStyle                            LastColumnStyle;                                            // 0x0520   (0x0518)
-    FSplitterStyle                                     ColumnSplitterStyle;                                        // 0x0A38   (0x0128)
-    FSlateBrush                                        BackgroundBrush;                                            // 0x0B60   (0x0090)
-    FSlateColor                                        ForegroundColor;                                            // 0x0BF0   (0x0028)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FTableColumnHeaderStyle                            ColumnStyle;                                                // 0x0008   (0x0518)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FTableColumnHeaderStyle                            LastColumnStyle;                                            // 0x0520   (0x0518)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSplitterStyle                                     ColumnSplitterStyle;                                        // 0x0A38   (0x0128)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundBrush;                                            // 0x0B60   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        ForegroundColor;                                            // 0x0BF0   (0x0028)
 };
 
 /// Struct /Script/SlateCore.InlineTextImageStyle
-/// Size: 0x00A0 (160 bytes) (0x000008 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000008 - 0x0000A0) align n/a MaxSize: 0x00A0
 struct FInlineTextImageStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        Image;                                                      // 0x0008   (0x0090)
-    int16_t                                            Baseline;                                                   // 0x0098   (0x0002)
-    unsigned char                                      UnknownData00_7[0x6];                                       // 0x009A   (0x0006) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        Image;                                                      // 0x0008   (0x0090)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int16_t                                            Baseline;                                                   // 0x0098   (0x0002)
+    /* public    */ unsigned char                                      UnknownData01_7[0x6];                                       // 0x009A   (0x0006) MISSED
 };
 
 /// Struct /Script/SlateCore.SliderStyle
-/// Size: 0x0370 (880 bytes) (0x000008 - 0x000370) align 8 MaxSize: 0x0370
+/// Size: 0x0370 (880 bytes) (0x000008 - 0x000370) align n/a MaxSize: 0x0370
 struct FSliderStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        NormalBarImage;                                             // 0x0008   (0x0090)
-    FSlateBrush                                        HoveredBarImage;                                            // 0x0098   (0x0090)
-    FSlateBrush                                        DisabledBarImage;                                           // 0x0128   (0x0090)
-    FSlateBrush                                        NormalThumbImage;                                           // 0x01B8   (0x0090)
-    FSlateBrush                                        HoveredThumbImage;                                          // 0x0248   (0x0090)
-    FSlateBrush                                        DisabledThumbImage;                                         // 0x02D8   (0x0090)
-    float                                              BarThickness;                                               // 0x0368   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x036C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        NormalBarImage;                                             // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HoveredBarImage;                                            // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DisabledBarImage;                                           // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        NormalThumbImage;                                           // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HoveredThumbImage;                                          // 0x0248   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DisabledThumbImage;                                         // 0x02D8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BarThickness;                                               // 0x0368   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x036C   (0x0004) MISSED
 };
 
 /// Struct /Script/SlateCore.VolumeControlStyle
-/// Size: 0x0648 (1608 bytes) (0x000008 - 0x000648) align 8 MaxSize: 0x0648
+/// Size: 0x0648 (1608 bytes) (0x000008 - 0x000648) align n/a MaxSize: 0x0648
 struct FVolumeControlStyle : FSlateWidgetStyle
 { 
-    FSliderStyle                                       SliderStyle;                                                // 0x0008   (0x0370)
-    FSlateBrush                                        HighVolumeImage;                                            // 0x0378   (0x0090)
-    FSlateBrush                                        MidVolumeImage;                                             // 0x0408   (0x0090)
-    FSlateBrush                                        LowVolumeImage;                                             // 0x0498   (0x0090)
-    FSlateBrush                                        NoVolumeImage;                                              // 0x0528   (0x0090)
-    FSlateBrush                                        MutedImage;                                                 // 0x05B8   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSliderStyle                                       SliderStyle;                                                // 0x0008   (0x0370)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        HighVolumeImage;                                            // 0x0378   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MidVolumeImage;                                             // 0x0408   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        LowVolumeImage;                                             // 0x0498   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        NoVolumeImage;                                              // 0x0528   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MutedImage;                                                 // 0x05B8   (0x0090)
 };
 
 /// Struct /Script/SlateCore.SearchBoxStyle
-/// Size: 0x0B28 (2856 bytes) (0x000008 - 0x000B28) align 8 MaxSize: 0x0B28
+/// Size: 0x0B28 (2856 bytes) (0x000008 - 0x000B28) align n/a MaxSize: 0x0B28
 struct FSearchBoxStyle : FSlateWidgetStyle
 { 
-    FEditableTextBoxStyle                              TextBoxStyle;                                               // 0x0008   (0x0868)
-    FSlateFontInfo                                     ActiveFontInfo;                                             // 0x0870   (0x0060)
-    FSlateBrush                                        UpArrowImage;                                               // 0x08D0   (0x0090)
-    FSlateBrush                                        DownArrowImage;                                             // 0x0960   (0x0090)
-    FSlateBrush                                        GlassImage;                                                 // 0x09F0   (0x0090)
-    FSlateBrush                                        ClearImage;                                                 // 0x0A80   (0x0090)
-    FMargin                                            ImagePadding;                                               // 0x0B10   (0x0010)
-    bool                                               bLeftAlignButtons;                                          // 0x0B20   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0B21   (0x0007) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FEditableTextBoxStyle                              TextBoxStyle;                                               // 0x0008   (0x0868)
+    UPROPERTY(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FSlateFontInfo                                     ActiveFontInfo;                                             // 0x0870   (0x0060)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        UpArrowImage;                                               // 0x08D0   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DownArrowImage;                                             // 0x0960   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        GlassImage;                                                 // 0x09F0   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ClearImage;                                                 // 0x0A80   (0x0090)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            ImagePadding;                                               // 0x0B10   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLeftAlignButtons;                                          // 0x0B20   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0B21   (0x0007) MISSED
 };
 
 /// Struct /Script/SlateCore.ExpandableAreaStyle
-/// Size: 0x0130 (304 bytes) (0x000008 - 0x000130) align 8 MaxSize: 0x0130
+/// Size: 0x0130 (304 bytes) (0x000008 - 0x000130) align n/a MaxSize: 0x0130
 struct FExpandableAreaStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        CollapsedImage;                                             // 0x0008   (0x0090)
-    FSlateBrush                                        ExpandedImage;                                              // 0x0098   (0x0090)
-    float                                              RolloutAnimationSeconds;                                    // 0x0128   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x012C   (0x0004) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        CollapsedImage;                                             // 0x0008   (0x0090)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        ExpandedImage;                                              // 0x0098   (0x0090)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RolloutAnimationSeconds;                                    // 0x0128   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x012C   (0x0004) MISSED
 };
 
 /// Struct /Script/SlateCore.ProgressBarStyle
-/// Size: 0x01B8 (440 bytes) (0x000008 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x000008 - 0x0001B8) align n/a MaxSize: 0x01B8
 struct FProgressBarStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        BackgroundImage;                                            // 0x0008   (0x0090)
-    FSlateBrush                                        FillImage;                                                  // 0x0098   (0x0090)
-    FSlateBrush                                        MarqueeImage;                                               // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundImage;                                            // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        FillImage;                                                  // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MarqueeImage;                                               // 0x0128   (0x0090)
 };
 
 /// Struct /Script/SlateCore.InlineEditableTextBlockStyle
-/// Size: 0x0B00 (2816 bytes) (0x000008 - 0x000B00) align 8 MaxSize: 0x0B00
+/// Size: 0x0B00 (2816 bytes) (0x000008 - 0x000B00) align n/a MaxSize: 0x0B00
 struct FInlineEditableTextBlockStyle : FSlateWidgetStyle
 { 
-    FEditableTextBoxStyle                              EditableTextBoxStyle;                                       // 0x0008   (0x0868)
-    FTextBlockStyle                                    TextStyle;                                                  // 0x0870   (0x0290)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FEditableTextBoxStyle                              EditableTextBoxStyle;                                       // 0x0008   (0x0868)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FTextBlockStyle                                    TextStyle;                                                  // 0x0870   (0x0290)
 };
 
 /// Struct /Script/SlateCore.HyperlinkStyle
-/// Size: 0x0540 (1344 bytes) (0x000008 - 0x000540) align 8 MaxSize: 0x0540
+/// Size: 0x0540 (1344 bytes) (0x000008 - 0x000540) align n/a MaxSize: 0x0540
 struct FHyperlinkStyle : FSlateWidgetStyle
 { 
-    FButtonStyle                                       UnderlineStyle;                                             // 0x0008   (0x0298)
-    FTextBlockStyle                                    TextStyle;                                                  // 0x02A0   (0x0290)
-    FMargin                                            Padding;                                                    // 0x0530   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FButtonStyle                                       UnderlineStyle;                                             // 0x0008   (0x0298)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FTextBlockStyle                                    TextStyle;                                                  // 0x02A0   (0x0290)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            Padding;                                                    // 0x0530   (0x0010)
 };
 
 /// Struct /Script/SlateCore.CheckBoxStyle
-/// Size: 0x05C8 (1480 bytes) (0x000008 - 0x0005C8) align 8 MaxSize: 0x05C8
+/// Size: 0x05C8 (1480 bytes) (0x000008 - 0x0005C8) align n/a MaxSize: 0x05C8
 struct FCheckBoxStyle : FSlateWidgetStyle
 { 
-    TEnumAsByte<ESlateCheckBoxType>                    CheckBoxType;                                               // 0x0008   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0009   (0x0007) MISSED
-    FSlateBrush                                        UncheckedImage;                                             // 0x0010   (0x0090)
-    FSlateBrush                                        UncheckedHoveredImage;                                      // 0x00A0   (0x0090)
-    FSlateBrush                                        UncheckedPressedImage;                                      // 0x0130   (0x0090)
-    FSlateBrush                                        CheckedImage;                                               // 0x01C0   (0x0090)
-    FSlateBrush                                        CheckedHoveredImage;                                        // 0x0250   (0x0090)
-    FSlateBrush                                        CheckedPressedImage;                                        // 0x02E0   (0x0090)
-    FSlateBrush                                        UndeterminedImage;                                          // 0x0370   (0x0090)
-    FSlateBrush                                        UndeterminedHoveredImage;                                   // 0x0400   (0x0090)
-    FSlateBrush                                        UndeterminedPressedImage;                                   // 0x0490   (0x0090)
-    FMargin                                            Padding;                                                    // 0x0520   (0x0010)
-    FSlateColor                                        ForegroundColor;                                            // 0x0530   (0x0028)
-    FSlateColor                                        BorderBackgroundColor;                                      // 0x0558   (0x0028)
-    FSlateSound                                        CheckedSlateSound;                                          // 0x0580   (0x0018)
-    FSlateSound                                        UncheckedSlateSound;                                        // 0x0598   (0x0018)
-    FSlateSound                                        HoveredSlateSound;                                          // 0x05B0   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESlateCheckBoxType>                    CheckBoxType;                                               // 0x0008   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0009   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        UncheckedImage;                                             // 0x0010   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        UncheckedHoveredImage;                                      // 0x00A0   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        UncheckedPressedImage;                                      // 0x0130   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        CheckedImage;                                               // 0x01C0   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        CheckedHoveredImage;                                        // 0x0250   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        CheckedPressedImage;                                        // 0x02E0   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        UndeterminedImage;                                          // 0x0370   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        UndeterminedHoveredImage;                                   // 0x0400   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        UndeterminedPressedImage;                                   // 0x0490   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            Padding;                                                    // 0x0520   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        ForegroundColor;                                            // 0x0530   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateColor                                        BorderBackgroundColor;                                      // 0x0558   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSlateSound                                        CheckedSlateSound;                                          // 0x0580   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSlateSound                                        UncheckedSlateSound;                                        // 0x0598   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSlateSound                                        HoveredSlateSound;                                          // 0x05B0   (0x0018)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UFontBulkData) == 0x0078); // 120 bytes (0x000028 - 0x000078)
 static_assert(sizeof(UFontFaceInterface) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UFontProviderInterface) == 0x0028); // 40 bytes (0x000028 - 0x000028)
@@ -1272,3 +1520,4 @@ static_assert(offsetof(FCheckBoxStyle, BorderBackgroundColor) == 0x0558);
 static_assert(offsetof(FCheckBoxStyle, CheckedSlateSound) == 0x0580);
 static_assert(offsetof(FCheckBoxStyle, UncheckedSlateSound) == 0x0598);
 static_assert(offsetof(FCheckBoxStyle, HoveredSlateSound) == 0x05B0);
+#endif

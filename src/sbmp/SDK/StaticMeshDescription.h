@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,11 @@
 
 #pragma pack(push, 0x1)
 
+class UStaticMeshDescription;
+struct FUVMapSettings;
+
 /// Class /Script/StaticMeshDescription.StaticMeshDescription
-/// Size: 0x0390 (912 bytes) (0x000390 - 0x000390) align 8 MaxSize: 0x0390
+/// Size: 0x0390 (912 bytes) (0x000390 - 0x000390) align n/a MaxSize: 0x0390
 class UStaticMeshDescription : public UMeshDescriptionBase
 { 
 public:
@@ -48,19 +60,25 @@ public:
 };
 
 /// Struct /Script/StaticMeshDescription.UVMapSettings
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 4 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FUVMapSettings
 { 
-    FVector                                            Size;                                                       // 0x0000   (0x000C)
-    FVector2D                                          UVTile;                                                     // 0x000C   (0x0008)
-    FVector                                            position;                                                   // 0x0014   (0x000C)
-    FRotator                                           Rotation;                                                   // 0x0020   (0x000C)
-    FVector                                            Scale;                                                      // 0x002C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Size;                                                       // 0x0000   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          UVTile;                                                     // 0x000C   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            position;                                                   // 0x0014   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FRotator                                           Rotation;                                                   // 0x0020   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Scale;                                                      // 0x002C   (0x000C)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UStaticMeshDescription) == 0x0390); // 912 bytes (0x000390 - 0x000390)
 static_assert(sizeof(FUVMapSettings) == 0x0038); // 56 bytes (0x000000 - 0x000038)
 static_assert(offsetof(FUVMapSettings, Size) == 0x0000);
@@ -68,3 +86,4 @@ static_assert(offsetof(FUVMapSettings, UVTile) == 0x000C);
 static_assert(offsetof(FUVMapSettings, position) == 0x0014);
 static_assert(offsetof(FUVMapSettings, Rotation) == 0x0020);
 static_assert(offsetof(FUVMapSettings, Scale) == 0x002C);
+#endif

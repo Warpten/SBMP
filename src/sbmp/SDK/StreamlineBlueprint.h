@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,14 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/StreamlineBlueprint.EStreamlineFeatureRequirementsFlags
-/// Size: 0x01 (1 bytes)
+class UStreamlineLibrary;
+class UStreamlineLibraryDLSSG;
+class UStreamlineLibraryDeepDVC;
+class UStreamlineLibraryReflex;
+struct FStreamlineFeatureRequirements;
+struct FStreamlineVersion;
+
+/// Enum /Script/StreamlineBlueprint.EStreamlineFeatureRequirementsFlags -  1 (1 bytes)
 enum class EStreamlineFeatureRequirementsFlags : uint8_t
 {
     None                                                                             = 0,
@@ -26,8 +41,7 @@ enum class EStreamlineFeatureRequirementsFlags : uint8_t
     HardwareSchedulingRequired                                                       = 16
 };
 
-/// Enum /Script/StreamlineBlueprint.EStreamlineFeatureSupport
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/StreamlineBlueprint.EStreamlineFeatureSupport -  1 (1 bytes)
 enum class EStreamlineFeatureSupport : uint8_t
 {
     Supported                                                                        = 0,
@@ -41,8 +55,7 @@ enum class EStreamlineFeatureSupport : uint8_t
     NotSupportedIncompatibleAPICaptureToolActive                                     = 8
 };
 
-/// Enum /Script/StreamlineBlueprint.EStreamlineFeature
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/StreamlineBlueprint.EStreamlineFeature -  1 (1 bytes)
 enum class EStreamlineFeature : uint8_t
 {
     DLSSG                                                                            = 0,
@@ -52,16 +65,14 @@ enum class EStreamlineFeature : uint8_t
     Count                                                                            = 4
 };
 
-/// Enum /Script/StreamlineBlueprint.EStreamlineDeepDVCMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/StreamlineBlueprint.EStreamlineDeepDVCMode -  1 (1 bytes)
 enum class EStreamlineDeepDVCMode : uint8_t
 {
     Off                                                                              = 0,
     On                                                                               = 1
 };
 
-/// Enum /Script/StreamlineBlueprint.EStreamlineDLSSGMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/StreamlineBlueprint.EStreamlineDLSSGMode -  1 (1 bytes)
 enum class EStreamlineDLSSGMode : uint8_t
 {
     Off                                                                              = 0,
@@ -71,8 +82,7 @@ enum class EStreamlineDLSSGMode : uint8_t
     On4X                                                                             = 31
 };
 
-/// Enum /Script/StreamlineBlueprint.EStreamlineReflexMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/StreamlineBlueprint.EStreamlineReflexMode -  1 (1 bytes)
 enum class EStreamlineReflexMode : uint8_t
 {
     Off                                                                              = 0,
@@ -81,7 +91,7 @@ enum class EStreamlineReflexMode : uint8_t
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UStreamlineLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -107,7 +117,7 @@ public:
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibraryDeepDVC
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UStreamlineLibraryDeepDVC : public UBlueprintFunctionLibrary
 { 
 public:
@@ -142,7 +152,7 @@ public:
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibraryDLSSG
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UStreamlineLibraryDLSSG : public UBlueprintFunctionLibrary
 { 
 public:
@@ -171,7 +181,7 @@ public:
 };
 
 /// Class /Script/StreamlineBlueprint.StreamlineLibraryReflex
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UStreamlineLibraryReflex : public UBlueprintFunctionLibrary
 { 
 public:
@@ -202,30 +212,40 @@ public:
 };
 
 /// Struct /Script/StreamlineBlueprint.StreamlineVersion
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FStreamlineVersion
 { 
-    int32_t                                            Major;                                                      // 0x0000   (0x0004)
-    int32_t                                            Minor;                                                      // 0x0004   (0x0004)
-    int32_t                                            Build;                                                      // 0x0008   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Major;                                                      // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Minor;                                                      // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Build;                                                      // 0x0008   (0x0004)
 };
 
 /// Struct /Script/StreamlineBlueprint.StreamlineFeatureRequirements
-/// Size: 0x0034 (52 bytes) (0x000000 - 0x000034) align 4 MaxSize: 0x0034
+/// Size: 0x0034 (52 bytes) (0x000000 - 0x000034) align n/a MaxSize: 0x0034
 struct FStreamlineFeatureRequirements
 { 
-    EStreamlineFeatureSupport                          Support;                                                    // 0x0000   (0x0001)
-    EStreamlineFeatureRequirementsFlags                Requirements;                                               // 0x0001   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0002   (0x0002) MISSED
-    FStreamlineVersion                                 RequiredOperatingSystemVersion;                             // 0x0004   (0x000C)
-    FStreamlineVersion                                 DetectedOperatingSystemVersion;                             // 0x0010   (0x000C)
-    FStreamlineVersion                                 RequiredDriverVersion;                                      // 0x001C   (0x000C)
-    FStreamlineVersion                                 DetectedDriverVersion;                                      // 0x0028   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EStreamlineFeatureSupport                          Support;                                                    // 0x0000   (0x0001)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EStreamlineFeatureRequirementsFlags                Requirements;                                               // 0x0001   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x2];                                       // 0x0002   (0x0002) MISSED
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FStreamlineVersion                                 RequiredOperatingSystemVersion;                             // 0x0004   (0x000C)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FStreamlineVersion                                 DetectedOperatingSystemVersion;                             // 0x0010   (0x000C)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FStreamlineVersion                                 RequiredDriverVersion;                                      // 0x001C   (0x000C)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FStreamlineVersion                                 DetectedDriverVersion;                                      // 0x0028   (0x000C)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UStreamlineLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UStreamlineLibraryDeepDVC) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UStreamlineLibraryDLSSG) == 0x0028); // 40 bytes (0x000028 - 0x000028)
@@ -238,3 +258,4 @@ static_assert(offsetof(FStreamlineFeatureRequirements, RequiredOperatingSystemVe
 static_assert(offsetof(FStreamlineFeatureRequirements, DetectedOperatingSystemVersion) == 0x0010);
 static_assert(offsetof(FStreamlineFeatureRequirements, RequiredDriverVersion) == 0x001C);
 static_assert(offsetof(FStreamlineFeatureRequirements, DetectedDriverVersion) == 0x0028);
+#endif

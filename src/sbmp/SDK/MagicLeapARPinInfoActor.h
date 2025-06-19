@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "CoreUObject.h"
 #include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
@@ -14,29 +23,49 @@
 
 #pragma pack(push, 0x1)
 
+class AMagicLeapARPinInfoActor_C;
+
 /// Class /MagicLeapPassableWorld/MagicLeapARPinInfoActor.MagicLeapARPinInfoActor_C
-/// Size: 0x036C (876 bytes) (0x0002E0 - 0x00036C) align 8 MaxSize: 0x036C
+/// Size: 0x036C (876 bytes) (0x0002E0 - 0x00036C) align n/a MaxSize: 0x036C
 class AMagicLeapARPinInfoActor_C : public AMagicLeapARPinInfoActorBase
 { 
 public:
-    FPointerToUberGraphFrame                           UberGraphFrame;                                             // 0x02E0   (0x0008)
-    class UStaticMeshComponent*                        Right;                                                      // 0x02E8   (0x0008)
-    class UStaticMeshComponent*                        Forward;                                                    // 0x02F0   (0x0008)
-    class UStaticMeshComponent*                        Up;                                                         // 0x02F8   (0x0008)
-    class USphereComponent*                            ValidRadiusVisualizer;                                      // 0x0300   (0x0008)
-    class USceneComponent*                             AxisRoot;                                                   // 0x0308   (0x0008)
-    class USceneComponent*                             VisualizerRoot;                                             // 0x0310   (0x0008)
-    class UTextRenderComponent*                        TypeValue;                                                  // 0x0318   (0x0008)
-    class UTextRenderComponent*                        TransErrValue;                                              // 0x0320   (0x0008)
-    class UTextRenderComponent*                        RotErrValue;                                                // 0x0328   (0x0008)
-    class UTextRenderComponent*                        ConfidenceValue;                                            // 0x0330   (0x0008)
-    class UTextRenderComponent*                        TransErrLabel;                                              // 0x0338   (0x0008)
-    class UTextRenderComponent*                        RotErrLabel;                                                // 0x0340   (0x0008)
-    class UTextRenderComponent*                        ConfidenceLabel;                                            // 0x0348   (0x0008)
-    class UTextRenderComponent*                        PinIDValue;                                                 // 0x0350   (0x0008)
-    class USceneComponent*                             InfoRoot;                                                   // 0x0358   (0x0008)
-    class USceneComponent*                             Root;                                                       // 0x0360   (0x0008)
-    float                                              RotationSmoothSpeed;                                        // 0x0368   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, DuplicateTransient)
+    /* public    */ FPointerToUberGraphFrame                           UberGraphFrame;                                             // 0x02E0   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UStaticMeshComponent*                        Right;                                                      // 0x02E8   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UStaticMeshComponent*                        Forward;                                                    // 0x02F0   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UStaticMeshComponent*                        Up;                                                         // 0x02F8   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class USphereComponent*                            ValidRadiusVisualizer;                                      // 0x0300   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class USceneComponent*                             AxisRoot;                                                   // 0x0308   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class USceneComponent*                             VisualizerRoot;                                             // 0x0310   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UTextRenderComponent*                        TypeValue;                                                  // 0x0318   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UTextRenderComponent*                        TransErrValue;                                              // 0x0320   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UTextRenderComponent*                        RotErrValue;                                                // 0x0328   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UTextRenderComponent*                        ConfidenceValue;                                            // 0x0330   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UTextRenderComponent*                        TransErrLabel;                                              // 0x0338   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UTextRenderComponent*                        RotErrLabel;                                                // 0x0340   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UTextRenderComponent*                        ConfidenceLabel;                                            // 0x0348   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class UTextRenderComponent*                        PinIDValue;                                                 // 0x0350   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class USceneComponent*                             InfoRoot;                                                   // 0x0358   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+    /* public    */ class USceneComponent*                             Root;                                                       // 0x0360   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+    /* public    */ float                                              RotationSmoothSpeed;                                        // 0x0368   (0x0004)
 
     /// Functions
     // Function /MagicLeapPassableWorld/MagicLeapARPinInfoActor.MagicLeapARPinInfoActor_C.UpdatePinState
@@ -56,6 +85,7 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(AMagicLeapARPinInfoActor_C) == 0x036C); // 876 bytes (0x0002E0 - 0x00036C)
 static_assert(offsetof(AMagicLeapARPinInfoActor_C, UberGraphFrame) == 0x02E0);
 static_assert(offsetof(AMagicLeapARPinInfoActor_C, Right) == 0x02E8);
@@ -74,3 +104,4 @@ static_assert(offsetof(AMagicLeapARPinInfoActor_C, ConfidenceLabel) == 0x0348);
 static_assert(offsetof(AMagicLeapARPinInfoActor_C, PinIDValue) == 0x0350);
 static_assert(offsetof(AMagicLeapARPinInfoActor_C, InfoRoot) == 0x0358);
 static_assert(offsetof(AMagicLeapARPinInfoActor_C, Root) == 0x0360);
+#endif

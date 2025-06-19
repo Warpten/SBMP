@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,8 +24,44 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/Paper2D.EFlipbookCollisionMode
-/// Size: 0x01 (1 bytes)
+class APaperCharacter;
+class APaperFlipbookActor;
+class APaperGroupedSpriteActor;
+class APaperSpriteActor;
+class APaperTerrainActor;
+class APaperTileMapActor;
+class UMaterialExpressionSpriteTextureSampler;
+class UPaperFlipbook;
+class UPaperFlipbookComponent;
+class UPaperGroupedSpriteComponent;
+class UPaperRuntimeSettings;
+class UPaperSprite;
+class UPaperSpriteAtlas;
+class UPaperSpriteBlueprintLibrary;
+class UPaperSpriteComponent;
+class UPaperTerrainComponent;
+class UPaperTerrainMaterial;
+class UPaperTerrainSplineComponent;
+class UPaperTileLayer;
+class UPaperTileMap;
+class UPaperTileMapComponent;
+class UPaperTileSet;
+class UTileMapBlueprintLibrary;
+struct FIntMargin;
+struct FPaperFlipbookKeyFrame;
+struct FPaperSpriteAtlasSlot;
+struct FPaperSpriteSocket;
+struct FPaperTerrainMaterialRule;
+struct FPaperTileInfo;
+struct FPaperTileMetadata;
+struct FPaperTileSetTerrain;
+struct FSpriteAssetInitParameters;
+struct FSpriteDrawCallRecord;
+struct FSpriteGeometryCollection;
+struct FSpriteGeometryShape;
+struct FSpriteInstanceData;
+
+/// Enum /Script/Paper2D.EFlipbookCollisionMode -  1 (1 bytes)
 enum class EFlipbookCollisionMode : uint8_t
 {
     NoCollision                                                                      = 0,
@@ -24,16 +69,14 @@ enum class EFlipbookCollisionMode : uint8_t
     EachFrameCollision                                                               = 2
 };
 
-/// Enum /Script/Paper2D.EPaperSpriteAtlasPadding
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Paper2D.EPaperSpriteAtlasPadding -  1 (1 bytes)
 enum class EPaperSpriteAtlasPadding : uint8_t
 {
     DilateBorder                                                                     = 0,
     PadWithZero                                                                      = 1
 };
 
-/// Enum /Script/Paper2D.ETileMapProjectionMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Paper2D.ETileMapProjectionMode -  1 (1 bytes)
 enum class ETileMapProjectionMode : uint8_t
 {
     Orthogonal                                                                       = 0,
@@ -42,8 +85,7 @@ enum class ETileMapProjectionMode : uint8_t
     HexagonalStaggered                                                               = 3
 };
 
-/// Enum /Script/Paper2D.ESpritePivotMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Paper2D.ESpritePivotMode -  1 (1 bytes)
 enum class ESpritePivotMode : uint8_t
 {
     Top_Left                                                                         = 0,
@@ -58,8 +100,7 @@ enum class ESpritePivotMode : uint8_t
     Custom                                                                           = 9
 };
 
-/// Enum /Script/Paper2D.ESpritePolygonMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Paper2D.ESpritePolygonMode -  1 (1 bytes)
 enum class ESpritePolygonMode : uint8_t
 {
     SourceBoundingBox                                                                = 0,
@@ -69,8 +110,7 @@ enum class ESpritePolygonMode : uint8_t
     Diced                                                                            = 4
 };
 
-/// Enum /Script/Paper2D.ESpriteShapeType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Paper2D.ESpriteShapeType -  1 (1 bytes)
 enum class ESpriteShapeType : uint8_t
 {
     Box                                                                              = 0,
@@ -78,8 +118,7 @@ enum class ESpriteShapeType : uint8_t
     Polygon                                                                          = 2
 };
 
-/// Enum /Script/Paper2D.ESpriteCollisionMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Paper2D.ESpriteCollisionMode -  1 (1 bytes)
 enum class ESpriteCollisionMode : uint8_t
 {
     None                                                                             = 0,
@@ -88,44 +127,54 @@ enum class ESpriteCollisionMode : uint8_t
 };
 
 /// Class /Script/Paper2D.MaterialExpressionSpriteTextureSampler
-/// Size: 0x00A0 (160 bytes) (0x000080 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000080 - 0x0000A0) align n/a MaxSize: 0x00A0
 class UMaterialExpressionSpriteTextureSampler : public UMaterialExpressionTextureSampleParameter2D
 { 
 public:
-    bool                                               bSampleAdditionalTextures;                                  // 0x0080   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0081   (0x0003) MISSED
-    int32_t                                            AdditionalSlotIndex;                                        // 0x0084   (0x0004)
-    FText                                              SlotDisplayName;                                            // 0x0088   (0x0018)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSampleAdditionalTextures;                                  // 0x0080   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0081   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            AdditionalSlotIndex;                                        // 0x0084   (0x0004)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              SlotDisplayName;                                            // 0x0088   (0x0018)
 };
 
 /// Class /Script/Paper2D.PaperCharacter
-/// Size: 0x0560 (1376 bytes) (0x000558 - 0x000560) align 16 MaxSize: 0x0560
+/// Size: 0x0560 (1376 bytes) (0x000558 - 0x000560) align n/a MaxSize: 0x0560
 class APaperCharacter : public ACharacter
 { 
 public:
-    class UPaperFlipbookComponent*                     Sprite;                                                     // 0x0558   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperFlipbookComponent*                     Sprite;                                                     // 0x0558   (0x0008)
 };
 
 /// Struct /Script/Paper2D.PaperFlipbookKeyFrame
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FPaperFlipbookKeyFrame
 { 
-    class UPaperSprite*                                Sprite;                                                     // 0x0000   (0x0008)
-    int32_t                                            FrameRun;                                                   // 0x0008   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x000C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperSprite*                                Sprite;                                                     // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            FrameRun;                                                   // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x000C   (0x0004) MISSED
 };
 
 /// Class /Script/Paper2D.PaperFlipbook
-/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align n/a MaxSize: 0x0050
 class UPaperFlipbook : public UObject
 { 
 public:
-    float                                              FramesPerSecond;                                            // 0x0028   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x002C   (0x0004) MISSED
-    TArray<FPaperFlipbookKeyFrame>                     KeyFrames;                                                  // 0x0030   (0x0010)
-    class UMaterialInterface*                          DefaultMaterial;                                            // 0x0040   (0x0008)
-    TEnumAsByte<EFlipbookCollisionMode>                CollisionSource;                                            // 0x0048   (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              FramesPerSecond;                                            // 0x0028   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x002C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FPaperFlipbookKeyFrame>                     KeyFrames;                                                  // 0x0030   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          DefaultMaterial;                                            // 0x0040   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<EFlipbookCollisionMode>                CollisionSource;                                            // 0x0048   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x0049   (0x0007) MISSED
 
     /// Functions
     // Function /Script/Paper2D.PaperFlipbook.IsValidKeyFrameIndex
@@ -151,31 +200,43 @@ public:
 };
 
 /// Class /Script/Paper2D.PaperFlipbookActor
-/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align 8 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align n/a MaxSize: 0x02D0
 class APaperFlipbookActor : public AActor
 { 
 public:
-    class UPaperFlipbookComponent*                     RenderComponent;                                            // 0x02C8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperFlipbookComponent*                     RenderComponent;                                            // 0x02C8   (0x0008)
 };
 
 /// Class /Script/Paper2D.PaperFlipbookComponent
-/// Size: 0x05B0 (1456 bytes) (0x000560 - 0x0005B0) align 16 MaxSize: 0x05B0
+/// Size: 0x05B0 (1456 bytes) (0x000560 - 0x0005B0) align n/a MaxSize: 0x05B0
 class UPaperFlipbookComponent : public UMeshComponent
 { 
 public:
-    class UPaperFlipbook*                              SourceFlipbook;                                             // 0x0560   (0x0008)
-    class UMaterialInterface*                          Material;                                                   // 0x0568   (0x0008)
-    float                                              PlayRate;                                                   // 0x0570   (0x0004)
-    bool                                               bLooping : 1;                                               // 0x0574:0 (0x0001)
-    bool                                               bReversePlayback : 1;                                       // 0x0574:1 (0x0001)
-    bool                                               bPlaying : 1;                                               // 0x0574:2 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0575   (0x0003) MISSED
-    float                                              AccumulatedTime;                                            // 0x0578   (0x0004)
-    int32_t                                            CachedFrameIndex;                                           // 0x057C   (0x0004)
-    FLinearColor                                       SpriteColor;                                                // 0x0580   (0x0010)
-    class UBodySetup*                                  CachedBodySetup;                                            // 0x0590   (0x0008)
-    FMulticastInlineDelegate                           OnFinishedPlaying;                                          // 0x0598   (0x0010)
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x05A8   (0x0008) MISSED
+    UPROPERTY(Edit, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UPaperFlipbook*                              SourceFlipbook;                                             // 0x0560   (0x0008)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          Material;                                                   // 0x0568   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              PlayRate;                                                   // 0x0570   (0x0004)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bLooping : 1;                                               // 0x0574:0 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bReversePlayback : 1;                                       // 0x0574:1 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bPlaying : 1;                                               // 0x0574:2 (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_5[0x3];                                       // 0x0575   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              AccumulatedTime;                                            // 0x0578   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            CachedFrameIndex;                                           // 0x057C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FLinearColor                                       SpriteColor;                                                // 0x0580   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBodySetup*                                  CachedBodySetup;                                            // 0x0590   (0x0008)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFinishedPlaying;                                          // 0x0598   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0x8];                                       // 0x05A8   (0x0008) MISSED
 
     /// Functions
     // Function /Script/Paper2D.PaperFlipbookComponent.Stop
@@ -239,31 +300,38 @@ public:
 };
 
 /// Class /Script/Paper2D.PaperGroupedSpriteActor
-/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align 8 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align n/a MaxSize: 0x02D0
 class APaperGroupedSpriteActor : public AActor
 { 
 public:
-    class UPaperGroupedSpriteComponent*                RenderComponent;                                            // 0x02C8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperGroupedSpriteComponent*                RenderComponent;                                            // 0x02C8   (0x0008)
 };
 
 /// Struct /Script/Paper2D.SpriteInstanceData
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 16 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FSpriteInstanceData
 { 
-    FMatrix                                            Transform;                                                  // 0x0000   (0x0040)
-    class UPaperSprite*                                SourceSprite;                                               // 0x0040   (0x0008)
-    FColor                                             VertexColor;                                                // 0x0048   (0x0004)
-    int32_t                                            MaterialIndex;                                              // 0x004C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMatrix                                            Transform;                                                  // 0x0000   (0x0040)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperSprite*                                SourceSprite;                                               // 0x0040   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FColor                                             VertexColor;                                                // 0x0048   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaterialIndex;                                              // 0x004C   (0x0004)
 };
 
 /// Class /Script/Paper2D.PaperGroupedSpriteComponent
-/// Size: 0x0590 (1424 bytes) (0x000560 - 0x000590) align 16 MaxSize: 0x0590
+/// Size: 0x0590 (1424 bytes) (0x000560 - 0x000590) align n/a MaxSize: 0x0590
 class UPaperGroupedSpriteComponent : public UMeshComponent
 { 
 public:
-    TArray<class UMaterialInterface*>                  InstanceMaterials;                                          // 0x0560   (0x0010)
-    TArray<FSpriteInstanceData>                        PerInstanceSpriteData;                                      // 0x0570   (0x0010)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0580   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UMaterialInterface*>                  InstanceMaterials;                                          // 0x0560   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FSpriteInstanceData>                        PerInstanceSpriteData;                                      // 0x0570   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0580   (0x0010) MISSED
 
     /// Functions
     // Function /Script/Paper2D.PaperGroupedSpriteComponent.UpdateInstanceTransform
@@ -302,64 +370,82 @@ public:
 };
 
 /// Class /Script/Paper2D.PaperRuntimeSettings
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class UPaperRuntimeSettings : public UObject
 { 
 public:
-    bool                                               bEnableSpriteAtlasGroups;                                   // 0x0028   (0x0001)
-    bool                                               bEnableTerrainSplineEditing;                                // 0x0029   (0x0001)
-    bool                                               bResizeSpriteDataToMatchTextures;                           // 0x002A   (0x0001)
-    unsigned char                                      UnknownData00_7[0x5];                                       // 0x002B   (0x0005) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableSpriteAtlasGroups;                                   // 0x0028   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableTerrainSplineEditing;                                // 0x0029   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bResizeSpriteDataToMatchTextures;                           // 0x002A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x5];                                       // 0x002B   (0x0005) MISSED
 };
 
 /// Struct /Script/Paper2D.PaperSpriteSocket
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 16 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FPaperSpriteSocket
 { 
-    FTransform                                         LocalTransform;                                             // 0x0000   (0x0030)
-    FName                                              SocketName;                                                 // 0x0030   (0x0008)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0038   (0x0008) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         LocalTransform;                                             // 0x0000   (0x0030)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              SocketName;                                                 // 0x0030   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0038   (0x0008) MISSED
 };
 
 /// Class /Script/Paper2D.PaperSprite
-/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align n/a MaxSize: 0x00A8
 class UPaperSprite : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x10];                                      // 0x0028   (0x0010) MISSED
-    TArray<class UTexture*>                            AdditionalSourceTextures;                                   // 0x0038   (0x0010)
-    FVector2D                                          BakedSourceUV;                                              // 0x0048   (0x0008)
-    FVector2D                                          BakedSourceDimension;                                       // 0x0050   (0x0008)
-    class UTexture2D*                                  BakedSourceTexture;                                         // 0x0058   (0x0008)
-    class UMaterialInterface*                          DefaultMaterial;                                            // 0x0060   (0x0008)
-    class UMaterialInterface*                          AlternateMaterial;                                          // 0x0068   (0x0008)
-    TArray<FPaperSpriteSocket>                         Sockets;                                                    // 0x0070   (0x0010)
-    TEnumAsByte<ESpriteCollisionMode>                  SpriteCollisionDomain;                                      // 0x0080   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0081   (0x0003) MISSED
-    float                                              PixelsPerUnrealUnit;                                        // 0x0084   (0x0004)
-    class UBodySetup*                                  BodySetup;                                                  // 0x0088   (0x0008)
-    int32_t                                            AlternateMaterialSplitIndex;                                // 0x0090   (0x0004)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0094   (0x0004) MISSED
-    TArray<FVector4>                                   BakedRenderData;                                            // 0x0098   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_8[0x10];                                      // 0x0028   (0x0010) MISSED
+    UPROPERTY(Edit, ZeroConstructor, AssetRegistrySearchable, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UTexture*>                            AdditionalSourceTextures;                                   // 0x0038   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FVector2D                                          BakedSourceUV;                                              // 0x0048   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FVector2D                                          BakedSourceDimension;                                       // 0x0050   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UTexture2D*                                  BakedSourceTexture;                                         // 0x0058   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          DefaultMaterial;                                            // 0x0060   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          AlternateMaterial;                                          // 0x0068   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FPaperSpriteSocket>                         Sockets;                                                    // 0x0070   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<ESpriteCollisionMode>                  SpriteCollisionDomain;                                      // 0x0080   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x0081   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              PixelsPerUnrealUnit;                                        // 0x0084   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBodySetup*                                  BodySetup;                                                  // 0x0088   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            AlternateMaterialSplitIndex;                                // 0x0090   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_6[0x4];                                       // 0x0094   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector4>                                   BakedRenderData;                                            // 0x0098   (0x0010)
 };
 
 /// Class /Script/Paper2D.PaperSpriteActor
-/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align 8 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align n/a MaxSize: 0x02D0
 class APaperSpriteActor : public AActor
 { 
 public:
-    class UPaperSpriteComponent*                       RenderComponent;                                            // 0x02C8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperSpriteComponent*                       RenderComponent;                                            // 0x02C8   (0x0008)
 };
 
 /// Class /Script/Paper2D.PaperSpriteAtlas
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UPaperSpriteAtlas : public UObject
 { 
 public:
 };
 
 /// Class /Script/Paper2D.PaperSpriteBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UPaperSpriteBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -373,13 +459,16 @@ public:
 };
 
 /// Class /Script/Paper2D.PaperSpriteComponent
-/// Size: 0x0580 (1408 bytes) (0x000560 - 0x000580) align 16 MaxSize: 0x0580
+/// Size: 0x0580 (1408 bytes) (0x000560 - 0x000580) align n/a MaxSize: 0x0580
 class UPaperSpriteComponent : public UMeshComponent
 { 
 public:
-    class UPaperSprite*                                SourceSprite;                                               // 0x0560   (0x0008)
-    class UMaterialInterface*                          MaterialOverride;                                           // 0x0568   (0x0008)
-    FLinearColor                                       SpriteColor;                                                // 0x0570   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UPaperSprite*                                SourceSprite;                                               // 0x0560   (0x0008)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          MaterialOverride;                                           // 0x0568   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FLinearColor                                       SpriteColor;                                                // 0x0570   (0x0010)
 
     /// Functions
     // Function /Script/Paper2D.PaperSpriteComponent.SetSpriteColor
@@ -393,35 +482,49 @@ public:
 };
 
 /// Class /Script/Paper2D.PaperTerrainActor
-/// Size: 0x02E0 (736 bytes) (0x0002C8 - 0x0002E0) align 8 MaxSize: 0x02E0
+/// Size: 0x02E0 (736 bytes) (0x0002C8 - 0x0002E0) align n/a MaxSize: 0x02E0
 class APaperTerrainActor : public AActor
 { 
 public:
-    class USceneComponent*                             DummyRoot;                                                  // 0x02C8   (0x0008)
-    class UPaperTerrainSplineComponent*                SplineComponent;                                            // 0x02D0   (0x0008)
-    class UPaperTerrainComponent*                      RenderComponent;                                            // 0x02D8   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             DummyRoot;                                                  // 0x02C8   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperTerrainSplineComponent*                SplineComponent;                                            // 0x02D0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperTerrainComponent*                      RenderComponent;                                            // 0x02D8   (0x0008)
 };
 
 /// Class /Script/Paper2D.PaperTerrainComponent
-/// Size: 0x0590 (1424 bytes) (0x000538 - 0x000590) align 16 MaxSize: 0x0590
+/// Size: 0x0590 (1424 bytes) (0x000538 - 0x000590) align n/a MaxSize: 0x0590
 class UPaperTerrainComponent : public UPrimitiveComponent
 { 
 public:
-    class UPaperTerrainMaterial*                       TerrainMaterial;                                            // 0x0538   (0x0008)
-    bool                                               bClosedSpline;                                              // 0x0540   (0x0001)
-    bool                                               bFilledSpline;                                              // 0x0541   (0x0001)
-    unsigned char                                      UnknownData00_6[0x6];                                       // 0x0542   (0x0006) MISSED
-    class UPaperTerrainSplineComponent*                AssociatedSpline;                                           // 0x0548   (0x0008)
-    int32_t                                            RandomSeed;                                                 // 0x0550   (0x0004)
-    float                                              SegmentOverlapAmount;                                       // 0x0554   (0x0004)
-    FLinearColor                                       TerrainColor;                                               // 0x0558   (0x0010)
-    int32_t                                            ReparamStepsPerSegment;                                     // 0x0568   (0x0004)
-    TEnumAsByte<ESpriteCollisionMode>                  SpriteCollisionDomain;                                      // 0x056C   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x056D   (0x0003) MISSED
-    float                                              CollisionThickness;                                         // 0x0570   (0x0004)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0574   (0x0004) MISSED
-    class UBodySetup*                                  CachedBodySetup;                                            // 0x0578   (0x0008)
-    unsigned char                                      UnknownData03_7[0x10];                                      // 0x0580   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperTerrainMaterial*                       TerrainMaterial;                                            // 0x0538   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bClosedSpline;                                              // 0x0540   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFilledSpline;                                              // 0x0541   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x6];                                       // 0x0542   (0x0006) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperTerrainSplineComponent*                AssociatedSpline;                                           // 0x0548   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            RandomSeed;                                                 // 0x0550   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SegmentOverlapAmount;                                       // 0x0554   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FLinearColor                                       TerrainColor;                                               // 0x0558   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            ReparamStepsPerSegment;                                     // 0x0568   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<ESpriteCollisionMode>                  SpriteCollisionDomain;                                      // 0x056C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x3];                                       // 0x056D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              CollisionThickness;                                         // 0x0570   (0x0004)
+    /* public    */ unsigned char                                      UnknownData06_6[0x4];                                       // 0x0574   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBodySetup*                                  CachedBodySetup;                                            // 0x0578   (0x0008)
+    /* public    */ unsigned char                                      UnknownData07_7[0x10];                                      // 0x0580   (0x0010) MISSED
 
     /// Functions
     // Function /Script/Paper2D.PaperTerrainComponent.SetTerrainColor
@@ -430,124 +533,180 @@ public:
 };
 
 /// Struct /Script/Paper2D.PaperTerrainMaterialRule
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FPaperTerrainMaterialRule
 { 
-    class UPaperSprite*                                StartCap;                                                   // 0x0000   (0x0008)
-    TArray<class UPaperSprite*>                        Body;                                                       // 0x0008   (0x0010)
-    class UPaperSprite*                                EndCap;                                                     // 0x0018   (0x0008)
-    float                                              MinimumAngle;                                               // 0x0020   (0x0004)
-    float                                              MaximumAngle;                                               // 0x0024   (0x0004)
-    bool                                               bEnableCollision;                                           // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0029   (0x0003) MISSED
-    float                                              CollisionOffset;                                            // 0x002C   (0x0004)
-    int32_t                                            DrawOrder;                                                  // 0x0030   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperSprite*                                StartCap;                                                   // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UPaperSprite*>                        Body;                                                       // 0x0008   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperSprite*                                EndCap;                                                     // 0x0018   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinimumAngle;                                               // 0x0020   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaximumAngle;                                               // 0x0024   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableCollision;                                           // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CollisionOffset;                                            // 0x002C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            DrawOrder;                                                  // 0x0030   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 /// Class /Script/Paper2D.PaperTerrainMaterial
-/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align n/a MaxSize: 0x0048
 class UPaperTerrainMaterial : public UDataAsset
 { 
 public:
-    TArray<FPaperTerrainMaterialRule>                  Rules;                                                      // 0x0030   (0x0010)
-    class UPaperSprite*                                InteriorFill;                                               // 0x0040   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FPaperTerrainMaterialRule>                  Rules;                                                      // 0x0030   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperSprite*                                InteriorFill;                                               // 0x0040   (0x0008)
 };
 
 /// Class /Script/Paper2D.PaperTerrainSplineComponent
-/// Size: 0x0640 (1600 bytes) (0x000630 - 0x000640) align 16 MaxSize: 0x0640
+/// Size: 0x0640 (1600 bytes) (0x000630 - 0x000640) align n/a MaxSize: 0x0640
 class UPaperTerrainSplineComponent : public USplineComponent
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0630   (0x0010) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x10];                                      // 0x0630   (0x0010) MISSED
 };
 
 /// Struct /Script/Paper2D.PaperTileInfo
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FPaperTileInfo
 { 
-    class UPaperTileSet*                               TileSet;                                                    // 0x0000   (0x0008)
-    int32_t                                            PackedTileIndex;                                            // 0x0008   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x000C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperTileSet*                               TileSet;                                                    // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PackedTileIndex;                                            // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x000C   (0x0004) MISSED
 };
 
 /// Class /Script/Paper2D.PaperTileLayer
-/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align n/a MaxSize: 0x0098
 class UPaperTileLayer : public UObject
 { 
 public:
-    FText                                              LayerName;                                                  // 0x0028   (0x0018)
-    int32_t                                            LayerWidth;                                                 // 0x0040   (0x0004)
-    int32_t                                            LayerHeight;                                                // 0x0044   (0x0004)
-    bool                                               bHiddenInGame : 1;                                          // 0x0048:0 (0x0001)
-    bool                                               bLayerCollides : 1;                                         // 0x0048:1 (0x0001)
-    bool                                               bOverrideCollisionThickness : 1;                            // 0x0048:2 (0x0001)
-    bool                                               bOverrideCollisionOffset : 1;                               // 0x0048:3 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0049   (0x0003) MISSED
-    float                                              CollisionThicknessOverride;                                 // 0x004C   (0x0004)
-    float                                              CollisionOffsetOverride;                                    // 0x0050   (0x0004)
-    FLinearColor                                       LayerColor;                                                 // 0x0054   (0x0010)
-    int32_t                                            AllocatedWidth;                                             // 0x0064   (0x0004)
-    int32_t                                            AllocatedHeight;                                            // 0x0068   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x006C   (0x0004) MISSED
-    TArray<FPaperTileInfo>                             AllocatedCells;                                             // 0x0070   (0x0010)
-    class UPaperTileSet*                               TileSet;                                                    // 0x0080   (0x0008)
-    TArray<int32_t>                                    AllocatedGrid;                                              // 0x0088   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              LayerName;                                                  // 0x0028   (0x0018)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            LayerWidth;                                                 // 0x0040   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            LayerHeight;                                                // 0x0044   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bHiddenInGame : 1;                                          // 0x0048:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bLayerCollides : 1;                                         // 0x0048:1 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bOverrideCollisionThickness : 1;                            // 0x0048:2 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bOverrideCollisionOffset : 1;                               // 0x0048:3 (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_5[0x3];                                       // 0x0049   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ float                                              CollisionThicknessOverride;                                 // 0x004C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ float                                              CollisionOffsetOverride;                                    // 0x0050   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FLinearColor                                       LayerColor;                                                 // 0x0054   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            AllocatedWidth;                                             // 0x0064   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            AllocatedHeight;                                            // 0x0068   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FPaperTileInfo>                             AllocatedCells;                                             // 0x0070   (0x0010)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperTileSet*                               TileSet;                                                    // 0x0080   (0x0008)
+    UPROPERTY(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<int32_t>                                    AllocatedGrid;                                              // 0x0088   (0x0010)
 };
 
 /// Class /Script/Paper2D.PaperTileMap
-/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align n/a MaxSize: 0x00A8
 class UPaperTileMap : public UObject
 { 
 public:
-    int32_t                                            MapWidth;                                                   // 0x0028   (0x0004)
-    int32_t                                            MapHeight;                                                  // 0x002C   (0x0004)
-    int32_t                                            TileWidth;                                                  // 0x0030   (0x0004)
-    int32_t                                            TileHeight;                                                 // 0x0034   (0x0004)
-    float                                              PixelsPerUnrealUnit;                                        // 0x0038   (0x0004)
-    float                                              SeparationPerTileX;                                         // 0x003C   (0x0004)
-    float                                              SeparationPerTileY;                                         // 0x0040   (0x0004)
-    float                                              SeparationPerLayer;                                         // 0x0044   (0x0004)
-    TWeakObjectPtr<class UPaperTileSet*>               SelectedTileSet;                                            // 0x0048   (0x0008)
-    unsigned char                                      UnknownData00_6[0x20];                                      // 0x0050   (0x0020) MISSED
-    class UMaterialInterface*                          Material;                                                   // 0x0070   (0x0008)
-    TArray<class UPaperTileLayer*>                     TileLayers;                                                 // 0x0078   (0x0010)
-    float                                              CollisionThickness;                                         // 0x0088   (0x0004)
-    TEnumAsByte<ESpriteCollisionMode>                  SpriteCollisionDomain;                                      // 0x008C   (0x0001)
-    TEnumAsByte<ETileMapProjectionMode>                ProjectionMode;                                             // 0x008D   (0x0001)
-    unsigned char                                      UnknownData01_6[0x2];                                       // 0x008E   (0x0002) MISSED
-    int32_t                                            HexSideLength;                                              // 0x0090   (0x0004)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0094   (0x0004) MISSED
-    class UBodySetup*                                  BodySetup;                                                  // 0x0098   (0x0008)
-    int32_t                                            LayerNameIndex;                                             // 0x00A0   (0x0004)
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x00A4   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MapWidth;                                                   // 0x0028   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MapHeight;                                                  // 0x002C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            TileWidth;                                                  // 0x0030   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            TileHeight;                                                 // 0x0034   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PixelsPerUnrealUnit;                                        // 0x0038   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SeparationPerTileX;                                         // 0x003C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SeparationPerTileY;                                         // 0x0040   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SeparationPerLayer;                                         // 0x0044   (0x0004)
+    UPROPERTY(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class UPaperTileSet*>               SelectedTileSet;                                            // 0x0048   (0x0008)
+    /* public    */ unsigned char                                      UnknownData04_6[0x20];                                      // 0x0050   (0x0020) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          Material;                                                   // 0x0070   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UPaperTileLayer*>                     TileLayers;                                                 // 0x0078   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              CollisionThickness;                                         // 0x0088   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<ESpriteCollisionMode>                  SpriteCollisionDomain;                                      // 0x008C   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ETileMapProjectionMode>                ProjectionMode;                                             // 0x008D   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x2];                                       // 0x008E   (0x0002) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            HexSideLength;                                              // 0x0090   (0x0004)
+    /* public    */ unsigned char                                      UnknownData06_6[0x4];                                       // 0x0094   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBodySetup*                                  BodySetup;                                                  // 0x0098   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            LayerNameIndex;                                             // 0x00A0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData07_7[0x4];                                       // 0x00A4   (0x0004) MISSED
 };
 
 /// Class /Script/Paper2D.PaperTileMapActor
-/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align 8 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align n/a MaxSize: 0x02D0
 class APaperTileMapActor : public AActor
 { 
 public:
-    class UPaperTileMapComponent*                      RenderComponent;                                            // 0x02C8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperTileMapComponent*                      RenderComponent;                                            // 0x02C8   (0x0008)
 };
 
 /// Class /Script/Paper2D.PaperTileMapComponent
-/// Size: 0x05B0 (1456 bytes) (0x000560 - 0x0005B0) align 16 MaxSize: 0x05B0
+/// Size: 0x05B0 (1456 bytes) (0x000560 - 0x0005B0) align n/a MaxSize: 0x05B0
 class UPaperTileMapComponent : public UMeshComponent
 { 
 public:
-    int32_t                                            MapWidth;                                                   // 0x0560   (0x0004)
-    int32_t                                            MapHeight;                                                  // 0x0564   (0x0004)
-    int32_t                                            TileWidth;                                                  // 0x0568   (0x0004)
-    int32_t                                            TileHeight;                                                 // 0x056C   (0x0004)
-    class UPaperTileSet*                               DefaultLayerTileSet;                                        // 0x0570   (0x0008)
-    class UMaterialInterface*                          Material;                                                   // 0x0578   (0x0008)
-    TArray<class UPaperTileLayer*>                     TileLayers;                                                 // 0x0580   (0x0010)
-    FLinearColor                                       TileMapColor;                                               // 0x0590   (0x0010)
-    int32_t                                            UseSingleLayerIndex;                                        // 0x05A0   (0x0004)
-    bool                                               bUseSingleLayer;                                            // 0x05A4   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x05A5   (0x0003) MISSED
-    class UPaperTileMap*                               TileMap;                                                    // 0x05A8   (0x0008)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            MapWidth;                                                   // 0x0560   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            MapHeight;                                                  // 0x0564   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            TileWidth;                                                  // 0x0568   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            TileHeight;                                                 // 0x056C   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPaperTileSet*                               DefaultLayerTileSet;                                        // 0x0570   (0x0008)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMaterialInterface*                          Material;                                                   // 0x0578   (0x0008)
+    UPROPERTY(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UPaperTileLayer*>                     TileLayers;                                                 // 0x0580   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FLinearColor                                       TileMapColor;                                               // 0x0590   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            UseSingleLayerIndex;                                        // 0x05A0   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bUseSingleLayer;                                            // 0x05A4   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x05A5   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPaperTileMap*                               TileMap;                                                    // 0x05A8   (0x0008)
 
     /// Functions
     // Function /Script/Paper2D.PaperTileMapComponent.SetTileMapColor
@@ -636,90 +795,129 @@ public:
 };
 
 /// Struct /Script/Paper2D.IntMargin
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FIntMargin
 { 
-    int32_t                                            Left;                                                       // 0x0000   (0x0004)
-    int32_t                                            Top;                                                        // 0x0004   (0x0004)
-    int32_t                                            Right;                                                      // 0x0008   (0x0004)
-    int32_t                                            Bottom;                                                     // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Left;                                                       // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Top;                                                        // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Right;                                                      // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Bottom;                                                     // 0x000C   (0x0004)
 };
 
 /// Struct /Script/Paper2D.SpriteGeometryShape
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FSpriteGeometryShape
 { 
-    ESpriteShapeType                                   ShapeType;                                                  // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007) MISSED
-    TArray<FVector2D>                                  Vertices;                                                   // 0x0008   (0x0010)
-    FVector2D                                          BoxSize;                                                    // 0x0018   (0x0008)
-    FVector2D                                          BoxPosition;                                                // 0x0020   (0x0008)
-    float                                              Rotation;                                                   // 0x0028   (0x0004)
-    bool                                               bNegativeWinding;                                           // 0x002C   (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x002D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESpriteShapeType                                   ShapeType;                                                  // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector2D>                                  Vertices;                                                   // 0x0008   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          BoxSize;                                                    // 0x0018   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          BoxPosition;                                                // 0x0020   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Rotation;                                                   // 0x0028   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bNegativeWinding;                                           // 0x002C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x002D   (0x0003) MISSED
 };
 
 /// Struct /Script/Paper2D.SpriteGeometryCollection
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FSpriteGeometryCollection
 { 
-    TArray<FSpriteGeometryShape>                       Shapes;                                                     // 0x0000   (0x0010)
-    TEnumAsByte<ESpritePolygonMode>                    GeometryType;                                               // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    int32_t                                            PixelsPerSubdivisionX;                                      // 0x0014   (0x0004)
-    int32_t                                            PixelsPerSubdivisionY;                                      // 0x0018   (0x0004)
-    bool                                               bAvoidVertexMerging;                                        // 0x001C   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x001D   (0x0003) MISSED
-    float                                              AlphaThreshold;                                             // 0x0020   (0x0004)
-    float                                              DetailAmount;                                               // 0x0024   (0x0004)
-    float                                              SimplifyEpsilon;                                            // 0x0028   (0x0004)
-    unsigned char                                      UnknownData02_7[0x4];                                       // 0x002C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSpriteGeometryShape>                       Shapes;                                                     // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESpritePolygonMode>                    GeometryType;                                               // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PixelsPerSubdivisionX;                                      // 0x0014   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PixelsPerSubdivisionY;                                      // 0x0018   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAvoidVertexMerging;                                        // 0x001C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x001D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AlphaThreshold;                                             // 0x0020   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DetailAmount;                                               // 0x0024   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SimplifyEpsilon;                                            // 0x0028   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Struct /Script/Paper2D.PaperTileMetadata
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FPaperTileMetadata
 { 
-    FName                                              UserDataName;                                               // 0x0000   (0x0008)
-    FSpriteGeometryCollection                          CollisionData;                                              // 0x0008   (0x0030)
-    char                                               TerrainMembership[4];                                       // 0x0038   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x003C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              UserDataName;                                               // 0x0000   (0x0008)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSpriteGeometryCollection                          CollisionData;                                              // 0x0008   (0x0030)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               TerrainMembership[4];                                       // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x003C   (0x0004) MISSED
 };
 
 /// Struct /Script/Paper2D.PaperTileSetTerrain
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FPaperTileSetTerrain
 { 
-    FString                                            TerrainName;                                                // 0x0000   (0x0010)
-    int32_t                                            CenterTileIndex;                                            // 0x0010   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0014   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            TerrainName;                                                // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CenterTileIndex;                                            // 0x0010   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0014   (0x0004) MISSED
 };
 
 /// Class /Script/Paper2D.PaperTileSet
-/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align n/a MaxSize: 0x00A8
 class UPaperTileSet : public UObject
 { 
 public:
-    FIntPoint                                          TileSize;                                                   // 0x0028   (0x0008)
-    class UTexture2D*                                  TileSheet;                                                  // 0x0030   (0x0008)
-    TArray<class UTexture*>                            AdditionalSourceTextures;                                   // 0x0038   (0x0010)
-    FIntMargin                                         BorderMargin;                                               // 0x0048   (0x0010)
-    FIntPoint                                          PerTileSpacing;                                             // 0x0058   (0x0008)
-    FIntPoint                                          DrawingOffset;                                              // 0x0060   (0x0008)
-    int32_t                                            WidthInTiles;                                               // 0x0068   (0x0004)
-    int32_t                                            HeightInTiles;                                              // 0x006C   (0x0004)
-    int32_t                                            AllocatedWidth;                                             // 0x0070   (0x0004)
-    int32_t                                            AllocatedHeight;                                            // 0x0074   (0x0004)
-    TArray<FPaperTileMetadata>                         PerTileData;                                                // 0x0078   (0x0010)
-    TArray<FPaperTileSetTerrain>                       Terrains;                                                   // 0x0088   (0x0010)
-    int32_t                                            TileWidth;                                                  // 0x0098   (0x0004)
-    int32_t                                            TileHeight;                                                 // 0x009C   (0x0004)
-    int32_t                                            Margin;                                                     // 0x00A0   (0x0004)
-    int32_t                                            Spacing;                                                    // 0x00A4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FIntPoint                                          TileSize;                                                   // 0x0028   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UTexture2D*                                  TileSheet;                                                  // 0x0030   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, AssetRegistrySearchable, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UTexture*>                            AdditionalSourceTextures;                                   // 0x0038   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPrivate)
+    /* private   */ FIntMargin                                         BorderMargin;                                               // 0x0048   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FIntPoint                                          PerTileSpacing;                                             // 0x0058   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FIntPoint                                          DrawingOffset;                                              // 0x0060   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            WidthInTiles;                                               // 0x0068   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            HeightInTiles;                                              // 0x006C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            AllocatedWidth;                                             // 0x0070   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            AllocatedHeight;                                            // 0x0074   (0x0004)
+    UPROPERTY(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FPaperTileMetadata>                         PerTileData;                                                // 0x0078   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FPaperTileSetTerrain>                       Terrains;                                                   // 0x0088   (0x0010)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            TileWidth;                                                  // 0x0098   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            TileHeight;                                                 // 0x009C   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            Margin;                                                     // 0x00A0   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            Spacing;                                                    // 0x00A4   (0x0004)
 };
 
 /// Class /Script/Paper2D.TileMapBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UTileMapBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -749,41 +947,51 @@ public:
 };
 
 /// Struct /Script/Paper2D.PaperSpriteAtlasSlot
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FPaperSpriteAtlasSlot
 { 
-    TWeakObjectPtr<class UPaperSprite*>                SpriteRef;                                                  // 0x0000   (0x0008)
-    unsigned char                                      UnknownData00_6[0x20];                                      // 0x0008   (0x0020) MISSED
-    int32_t                                            AtlasIndex;                                                 // 0x0028   (0x0004)
-    int32_t                                            X;                                                          // 0x002C   (0x0004)
-    int32_t                                            Y;                                                          // 0x0030   (0x0004)
-    int32_t                                            Width;                                                      // 0x0034   (0x0004)
-    int32_t                                            Height;                                                     // 0x0038   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x003C   (0x0004) MISSED
+    UPROPERTY(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class UPaperSprite*>                SpriteRef;                                                  // 0x0000   (0x0008)
+    /* public    */ unsigned char                                      UnknownData02_6[0x20];                                      // 0x0008   (0x0020) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            AtlasIndex;                                                 // 0x0028   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            X;                                                          // 0x002C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Y;                                                          // 0x0030   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Width;                                                      // 0x0034   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Height;                                                     // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x003C   (0x0004) MISSED
 };
 
 /// Struct /Script/Paper2D.SpriteDrawCallRecord
-/// Size: 0x00D0 (208 bytes) (0x000000 - 0x0000D0) align 16 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000000 - 0x0000D0) align n/a MaxSize: 0x00D0
 struct FSpriteDrawCallRecord
 { 
-    FVector                                            Destination;                                                // 0x0000   (0x000C)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x000C   (0x0004) MISSED
-    class UTexture*                                    BaseTexture;                                                // 0x0010   (0x0008)
-    unsigned char                                      UnknownData01_6[0x30];                                      // 0x0018   (0x0030) MISSED
-    FColor                                             Color;                                                      // 0x0048   (0x0004)
-    unsigned char                                      UnknownData02_7[0x84];                                      // 0x004C   (0x0084) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Destination;                                                // 0x0000   (0x000C)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture*                                    BaseTexture;                                                // 0x0010   (0x0008)
+    /* public    */ unsigned char                                      UnknownData04_6[0x30];                                      // 0x0018   (0x0030) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FColor                                             Color;                                                      // 0x0048   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_7[0x84];                                      // 0x004C   (0x0084) MISSED
 };
 
 /// Struct /Script/Paper2D.SpriteAssetInitParameters
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FSpriteAssetInitParameters
 { 
-    unsigned char                                      UnknownData00_2[0x40];                                      // 0x0000   (0x0040) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x40];                                      // 0x0000   (0x0040) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMaterialExpressionSpriteTextureSampler) == 0x00A0); // 160 bytes (0x000080 - 0x0000A0)
 static_assert(sizeof(APaperCharacter) == 0x0560); // 1376 bytes (0x000558 - 0x000560)
 static_assert(sizeof(FPaperFlipbookKeyFrame) == 0x0010); // 16 bytes (0x000000 - 0x000010)
@@ -905,3 +1113,4 @@ static_assert(offsetof(FPaperSpriteAtlasSlot, SpriteRef) == 0x0000);
 static_assert(offsetof(FSpriteDrawCallRecord, Destination) == 0x0000);
 static_assert(offsetof(FSpriteDrawCallRecord, BaseTexture) == 0x0010);
 static_assert(offsetof(FSpriteDrawCallRecord, Color) == 0x0048);
+#endif

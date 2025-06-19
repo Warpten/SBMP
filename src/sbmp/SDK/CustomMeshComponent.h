@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,12 +23,15 @@
 
 #pragma pack(push, 0x1)
 
+class UCustomMeshComponent;
+struct FCustomMeshTriangle;
+
 /// Class /Script/CustomMeshComponent.CustomMeshComponent
-/// Size: 0x0570 (1392 bytes) (0x000560 - 0x000570) align 16 MaxSize: 0x0570
+/// Size: 0x0570 (1392 bytes) (0x000560 - 0x000570) align n/a MaxSize: 0x0570
 class UCustomMeshComponent : public UMeshComponent
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0560   (0x0010) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x10];                                      // 0x0560   (0x0010) MISSED
 
     /// Functions
     // Function /Script/CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
@@ -33,19 +45,24 @@ public:
 };
 
 /// Struct /Script/CustomMeshComponent.CustomMeshTriangle
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FCustomMeshTriangle
 { 
-    FVector                                            Vertex0;                                                    // 0x0000   (0x000C)
-    FVector                                            Vertex1;                                                    // 0x000C   (0x000C)
-    FVector                                            Vertex2;                                                    // 0x0018   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Vertex0;                                                    // 0x0000   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Vertex1;                                                    // 0x000C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Vertex2;                                                    // 0x0018   (0x000C)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UCustomMeshComponent) == 0x0570); // 1392 bytes (0x000560 - 0x000570)
 static_assert(sizeof(FCustomMeshTriangle) == 0x0024); // 36 bytes (0x000000 - 0x000024)
 static_assert(offsetof(FCustomMeshTriangle, Vertex0) == 0x0000);
 static_assert(offsetof(FCustomMeshTriangle, Vertex1) == 0x000C);
 static_assert(offsetof(FCustomMeshTriangle, Vertex2) == 0x0018);
+#endif

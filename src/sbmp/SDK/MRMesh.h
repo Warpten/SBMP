@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,12 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MRMesh.EMeshTrackerVertexColorMode
-/// Size: 0x01 (1 bytes)
+class UMRMeshComponent;
+class UMeshReconstructorBase;
+class UMockDataMeshTrackerComponent;
+struct FMRMeshConfiguration;
+
+/// Enum /Script/MRMesh.EMeshTrackerVertexColorMode -  1 (1 bytes)
 enum class EMeshTrackerVertexColorMode : uint8_t
 {
     None                                                                             = 0,
@@ -24,7 +37,7 @@ enum class EMeshTrackerVertexColorMode : uint8_t
 };
 
 /// Class /Script/MRMesh.MeshReconstructorBase
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMeshReconstructorBase : public UObject
 { 
 public:
@@ -48,23 +61,33 @@ public:
 };
 
 /// Class /Script/MRMesh.MockDataMeshTrackerComponent
-/// Size: 0x02D0 (720 bytes) (0x000260 - 0x0002D0) align 16 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x000260 - 0x0002D0) align n/a MaxSize: 0x02D0
 class UMockDataMeshTrackerComponent : public USceneComponent
 { 
 public:
-    FMulticastInlineDelegate                           OnMeshTrackerUpdated;                                       // 0x0260   (0x0010)
-    bool                                               ScanWorld;                                                  // 0x0270   (0x0001)
-    bool                                               RequestNormals;                                             // 0x0271   (0x0001)
-    bool                                               RequestVertexConfidence;                                    // 0x0272   (0x0001)
-    EMeshTrackerVertexColorMode                        VertexColorMode;                                            // 0x0273   (0x0001)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0274   (0x0004) MISSED
-    TArray<FColor>                                     BlockVertexColors;                                          // 0x0278   (0x0010)
-    FLinearColor                                       VertexColorFromConfidenceZero;                              // 0x0288   (0x0010)
-    FLinearColor                                       VertexColorFromConfidenceOne;                               // 0x0298   (0x0010)
-    float                                              UpdateInterval;                                             // 0x02A8   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x02AC   (0x0004) MISSED
-    class UMRMeshComponent*                            MRMesh;                                                     // 0x02B0   (0x0008)
-    unsigned char                                      UnknownData02_7[0x18];                                      // 0x02B8   (0x0018) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMeshTrackerUpdated;                                       // 0x0260   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               ScanWorld;                                                  // 0x0270   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               RequestNormals;                                             // 0x0271   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               RequestVertexConfidence;                                    // 0x0272   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMeshTrackerVertexColorMode                        VertexColorMode;                                            // 0x0273   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x0274   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FColor>                                     BlockVertexColors;                                          // 0x0278   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       VertexColorFromConfidenceZero;                              // 0x0288   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       VertexColorFromConfidenceOne;                               // 0x0298   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              UpdateInterval;                                             // 0x02A8   (0x0004)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x02AC   (0x0004) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMRMeshComponent*                            MRMesh;                                                     // 0x02B0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData05_7[0x18];                                      // 0x02B8   (0x0018) MISSED
 
     /// Functions
     // Function /Script/MRMesh.MockDataMeshTrackerComponent.OnMockDataMeshTrackerUpdated__DelegateSignature
@@ -83,20 +106,27 @@ public:
 };
 
 /// Class /Script/MRMesh.MRMeshComponent
-/// Size: 0x05F0 (1520 bytes) (0x000538 - 0x0005F0) align 16 MaxSize: 0x05F0
+/// Size: 0x05F0 (1520 bytes) (0x000538 - 0x0005F0) align n/a MaxSize: 0x05F0
 class UMRMeshComponent : public UPrimitiveComponent
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x10];                                      // 0x0538   (0x0010) MISSED
-    class UMaterialInterface*                          Material;                                                   // 0x0548   (0x0008)
-    class UMaterialInterface*                          WireframeMaterial;                                          // 0x0550   (0x0008)
-    bool                                               bCreateMeshProxySections;                                   // 0x0558   (0x0001)
-    bool                                               bUpdateNavMeshOnMeshUpdate;                                 // 0x0559   (0x0001)
-    bool                                               bNeverCreateCollisionMesh;                                  // 0x055A   (0x0001)
-    unsigned char                                      UnknownData01_6[0x5];                                       // 0x055B   (0x0005) MISSED
-    class UBodySetup*                                  CachedBodySetup;                                            // 0x0560   (0x0008)
-    TArray<class UBodySetup*>                          BodySetups;                                                 // 0x0568   (0x0010)
-    unsigned char                                      UnknownData02_7[0x78];                                      // 0x0578   (0x0078) MISSED
+    /* public    */ unsigned char                                      UnknownData03_8[0x10];                                      // 0x0538   (0x0010) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMaterialInterface*                          Material;                                                   // 0x0548   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMaterialInterface*                          WireframeMaterial;                                          // 0x0550   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bCreateMeshProxySections;                                   // 0x0558   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bUpdateNavMeshOnMeshUpdate;                                 // 0x0559   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bNeverCreateCollisionMesh;                                  // 0x055A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x5];                                       // 0x055B   (0x0005) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UBodySetup*                                  CachedBodySetup;                                            // 0x0560   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UBodySetup*>                          BodySetups;                                                 // 0x0568   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x78];                                      // 0x0578   (0x0078) MISSED
 
     /// Functions
     // Function /Script/MRMesh.MRMeshComponent.SetWireframeMaterial
@@ -126,15 +156,16 @@ public:
 };
 
 /// Struct /Script/MRMesh.MRMeshConfiguration
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FMRMeshConfiguration
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMeshReconstructorBase) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UMockDataMeshTrackerComponent) == 0x02D0); // 720 bytes (0x000260 - 0x0002D0)
 static_assert(sizeof(UMRMeshComponent) == 0x05F0); // 1520 bytes (0x000538 - 0x0005F0)
@@ -148,3 +179,4 @@ static_assert(offsetof(UMRMeshComponent, Material) == 0x0548);
 static_assert(offsetof(UMRMeshComponent, WireframeMaterial) == 0x0550);
 static_assert(offsetof(UMRMeshComponent, CachedBodySetup) == 0x0560);
 static_assert(offsetof(UMRMeshComponent, BodySetups) == 0x0568);
+#endif

@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,19 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/SubstanceCore.ESubstanceInputType
-/// Size: 0x01 (1 bytes)
+class USubstanceGraphInstance;
+class USubstanceInstanceFactory;
+class USubstanceOutputData;
+class USubstanceSettings;
+class USubstanceTexture2D;
+class USubstanceUtility;
+struct FSubstanceConnection;
+struct FSubstanceFloatInputDesc;
+struct FSubstanceInputDesc;
+struct FSubstanceInstanceDesc;
+struct FSubstanceIntInputDesc;
+
+/// Enum /Script/SubstanceCore.ESubstanceInputType -  1 (1 bytes)
 enum class ESubstanceInputType : uint8_t
 {
     SIT_Float                                                                        = 0,
@@ -31,8 +51,7 @@ enum class ESubstanceInputType : uint8_t
     SIT_Integer4                                                                     = 10
 };
 
-/// Enum /Script/SubstanceCore.ESubstanceGenerationMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SubstanceCore.ESubstanceGenerationMode -  1 (1 bytes)
 enum class ESubstanceGenerationMode : uint8_t
 {
     SGM_PlatformDefault                                                              = 0,
@@ -43,8 +62,7 @@ enum class ESubstanceGenerationMode : uint8_t
     SGM_OnLoadAsyncAndCache                                                          = 5
 };
 
-/// Enum /Script/SubstanceCore.EDefaultSubstanceTextureSize
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SubstanceCore.EDefaultSubstanceTextureSize -  1 (1 bytes)
 enum class EDefaultSubstanceTextureSize : uint8_t
 {
     Size                                                                             = 0,
@@ -59,16 +77,14 @@ enum class EDefaultSubstanceTextureSize : uint8_t
     Size10                                                                           = 12
 };
 
-/// Enum /Script/SubstanceCore.ESubstanceEngineType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SubstanceCore.ESubstanceEngineType -  1 (1 bytes)
 enum class ESubstanceEngineType : uint8_t
 {
     SET_CPU                                                                          = 0,
     SET_GPU                                                                          = 1
 };
 
-/// Enum /Script/SubstanceCore.ESubstanceTextureSize
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SubstanceCore.ESubstanceTextureSize -  1 (1 bytes)
 enum class ESubstanceTextureSize : uint8_t
 {
     ERL                                                                              = 0,
@@ -84,21 +100,30 @@ enum class ESubstanceTextureSize : uint8_t
 };
 
 /// Class /Script/SubstanceCore.SubstanceGraphInstance
-/// Size: 0x0178 (376 bytes) (0x000028 - 0x000178) align 8 MaxSize: 0x0178
+/// Size: 0x0178 (376 bytes) (0x000028 - 0x000178) align n/a MaxSize: 0x0178
 class USubstanceGraphInstance : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x10];                                      // 0x0028   (0x0010) MISSED
-    FString                                            PackageURL;                                                 // 0x0038   (0x0010)
-    class USubstanceInstanceFactory*                   ParentFactory;                                              // 0x0048   (0x0008)
-    TMap<uint32_t, class UTexture2D*>                  ImageSources;                                               // 0x0050   (0x0050)
-    class UMaterial*                                   CreatedMaterial;                                            // 0x00A0   (0x0008)
-    class UMaterialInstanceConstant*                   ConstantCreatedMaterial;                                    // 0x00A8   (0x0008)
-    class UMaterialInstanceDynamic*                    DynamicCreatedMaterial;                                     // 0x00B0   (0x0008)
-    TMap<int32_t, FGuid>                               OutputTextureLinkData;                                      // 0x00B8   (0x0050)
-    TMap<uint32_t, class USubstanceOutputData*>        OutputInstances;                                            // 0x0108   (0x0050)
-    bool                                               bIsFrozen;                                                  // 0x0158   (0x0001)
-    unsigned char                                      UnknownData01_7[0x1F];                                      // 0x0159   (0x001F) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x10];                                      // 0x0028   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            PackageURL;                                                 // 0x0038   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USubstanceInstanceFactory*                   ParentFactory;                                              // 0x0048   (0x0008)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ TMap<uint32_t, class UTexture2D*>                  ImageSources;                                               // 0x0050   (0x0050)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterial*                                   CreatedMaterial;                                            // 0x00A0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInstanceConstant*                   ConstantCreatedMaterial;                                    // 0x00A8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInstanceDynamic*                    DynamicCreatedMaterial;                                     // 0x00B0   (0x0008)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ TMap<int32_t, FGuid>                               OutputTextureLinkData;                                      // 0x00B8   (0x0050)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ TMap<uint32_t, class USubstanceOutputData*>        OutputInstances;                                            // 0x0108   (0x0050)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsFrozen;                                                  // 0x0158   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x1F];                                      // 0x0159   (0x001F) MISSED
 
     /// Functions
     // Function /Script/SubstanceCore.SubstanceGraphInstance.SetInputString
@@ -160,62 +185,83 @@ public:
 };
 
 /// Class /Script/SubstanceCore.SubstanceInstanceFactory
-/// Size: 0x0088 (136 bytes) (0x000028 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000028 - 0x000088) align n/a MaxSize: 0x0088
 class USubstanceInstanceFactory : public UObject
 { 
 public:
-    TArray<class USubstanceGraphInstance*>             mGraphInstances;                                            // 0x0028   (0x0010)
-    unsigned char                                      UnknownData00_6[0x18];                                      // 0x0038   (0x0018) MISSED
-    FString                                            RelativeSourceFilePath;                                     // 0x0050   (0x0010)
-    FString                                            AbsoluteSourceFilePath;                                     // 0x0060   (0x0010)
-    FString                                            SourceFileTimestamp;                                        // 0x0070   (0x0010)
-    TEnumAsByte<ESubstanceGenerationMode>              GenerationMode;                                             // 0x0080   (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0081   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, DuplicateTransient, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class USubstanceGraphInstance*>             mGraphInstances;                                            // 0x0028   (0x0010)
+    /* public    */ unsigned char                                      UnknownData02_6[0x18];                                      // 0x0038   (0x0018) MISSED
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            RelativeSourceFilePath;                                     // 0x0050   (0x0010)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            AbsoluteSourceFilePath;                                     // 0x0060   (0x0010)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            SourceFileTimestamp;                                        // 0x0070   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESubstanceGenerationMode>              GenerationMode;                                             // 0x0080   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x0081   (0x0007) MISSED
 };
 
 /// Class /Script/SubstanceCore.SubstanceOutputData
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 class USubstanceOutputData : public UObject
 { 
 public:
-    class UObject*                                     ConnectedObject;                                            // 0x0028   (0x0008)
-    FMaterialParameterInfo                             ParamInfo;                                                  // 0x0030   (0x0010)
-    class USubstanceGraphInstance*                     ParentInstance;                                             // 0x0040   (0x0008)
-    FGuid                                              CacheGuid;                                                  // 0x0048   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UObject*                                     ConnectedObject;                                            // 0x0028   (0x0008)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FMaterialParameterInfo                             ParamInfo;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USubstanceGraphInstance*                     ParentInstance;                                             // 0x0040   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              CacheGuid;                                                  // 0x0048   (0x0010)
 };
 
 /// Class /Script/SubstanceCore.SubstanceSettings
-/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align n/a MaxSize: 0x0068
 class USubstanceSettings : public UObject
 { 
 public:
-    int32_t                                            MemoryBudgetMb;                                             // 0x0028   (0x0004)
-    int32_t                                            CPUCores;                                                   // 0x002C   (0x0004)
-    int32_t                                            AsyncLoadMipClip;                                           // 0x0030   (0x0004)
-    int32_t                                            MaxAsyncSubstancesRenderedPerFrame;                         // 0x0034   (0x0004)
-    TEnumAsByte<ESubstanceEngineType>                  SubstanceEngine;                                            // 0x0038   (0x0001)
-    TEnumAsByte<EDefaultSubstanceTextureSize>          DefaultSubstanceOutputSizeX;                                // 0x0039   (0x0001)
-    TEnumAsByte<EDefaultSubstanceTextureSize>          DefaultSubstanceOutputSizeY;                                // 0x003A   (0x0001)
-    unsigned char                                      UnknownData00_6[0x5];                                       // 0x003B   (0x0005) MISSED
-    TWeakObjectPtr<class UMaterialInterface*>          DefaultTemplateMaterial;                                    // 0x0040   (0x0008)
-    unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MemoryBudgetMb;                                             // 0x0028   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CPUCores;                                                   // 0x002C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            AsyncLoadMipClip;                                           // 0x0030   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxAsyncSubstancesRenderedPerFrame;                         // 0x0034   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESubstanceEngineType>                  SubstanceEngine;                                            // 0x0038   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EDefaultSubstanceTextureSize>          DefaultSubstanceOutputSizeX;                                // 0x0039   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EDefaultSubstanceTextureSize>          DefaultSubstanceOutputSizeY;                                // 0x003A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x5];                                       // 0x003B   (0x0005) MISSED
+    UPROPERTY(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class UMaterialInterface*>          DefaultTemplateMaterial;                                    // 0x0040   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x20];                                      // 0x0048   (0x0020) MISSED
 };
 
 /// Class /Script/SubstanceCore.SubstanceTexture2D
-/// Size: 0x0150 (336 bytes) (0x0000F8 - 0x000150) align 8 MaxSize: 0x0150
+/// Size: 0x0150 (336 bytes) (0x0000F8 - 0x000150) align n/a MaxSize: 0x0150
 class USubstanceTexture2D : public UTexture2DDynamic
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x30];                                      // 0x00F8   (0x0030) MISSED
-    class USubstanceGraphInstance*                     ParentInstance;                                             // 0x0128   (0x0008)
-    TEnumAsByte<TextureAddress>                        AddressX;                                                   // 0x0130   (0x0001)
-    TEnumAsByte<TextureAddress>                        AddressY;                                                   // 0x0131   (0x0001)
-    bool                                               bCooked;                                                    // 0x0132   (0x0001)
-    unsigned char                                      UnknownData01_7[0x1D];                                      // 0x0133   (0x001D) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x30];                                      // 0x00F8   (0x0030) MISSED
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USubstanceGraphInstance*                     ParentInstance;                                             // 0x0128   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<TextureAddress>                        AddressX;                                                   // 0x0130   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<TextureAddress>                        AddressY;                                                   // 0x0131   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCooked;                                                    // 0x0132   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x1D];                                      // 0x0133   (0x001D) MISSED
 };
 
 /// Class /Script/SubstanceCore.SubstanceUtility
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class USubstanceUtility : public UBlueprintFunctionLibrary
 { 
 public:
@@ -291,51 +337,64 @@ public:
 };
 
 /// Struct /Script/SubstanceCore.SubstanceInputDesc
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FSubstanceInputDesc
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010)
-    TEnumAsByte<ESubstanceInputType>                   Type;                                                       // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0011   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Name;                                                       // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESubstanceInputType>                   Type;                                                       // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 /// Struct /Script/SubstanceCore.SubstanceInstanceDesc
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FSubstanceInstanceDesc
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010)
-    TArray<FSubstanceInputDesc>                        Inputs;                                                     // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Name;                                                       // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSubstanceInputDesc>                        Inputs;                                                     // 0x0010   (0x0010)
 };
 
 /// Struct /Script/SubstanceCore.SubstanceFloatInputDesc
-/// Size: 0x0048 (72 bytes) (0x000018 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000018 - 0x000048) align n/a MaxSize: 0x0048
 struct FSubstanceFloatInputDesc : FSubstanceInputDesc
 { 
-    TArray<float>                                      Min;                                                        // 0x0018   (0x0010)
-    TArray<float>                                      Max;                                                        // 0x0028   (0x0010)
-    TArray<float>                                      Default;                                                    // 0x0038   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      Min;                                                        // 0x0018   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      Max;                                                        // 0x0028   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      Default;                                                    // 0x0038   (0x0010)
 };
 
 /// Struct /Script/SubstanceCore.SubstanceIntInputDesc
-/// Size: 0x0048 (72 bytes) (0x000018 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000018 - 0x000048) align n/a MaxSize: 0x0048
 struct FSubstanceIntInputDesc : FSubstanceInputDesc
 { 
-    TArray<int32_t>                                    Min;                                                        // 0x0018   (0x0010)
-    TArray<int32_t>                                    Max;                                                        // 0x0028   (0x0010)
-    TArray<int32_t>                                    Default;                                                    // 0x0038   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int32_t>                                    Min;                                                        // 0x0018   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int32_t>                                    Max;                                                        // 0x0028   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int32_t>                                    Default;                                                    // 0x0038   (0x0010)
 };
 
 /// Struct /Script/SubstanceCore.SubstanceConnection
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FSubstanceConnection
 { 
-    FString                                            OutputIdentifier;                                           // 0x0000   (0x0010)
-    FString                                            InputImageIdentifier;                                       // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            OutputIdentifier;                                           // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            InputImageIdentifier;                                       // 0x0010   (0x0010)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(USubstanceGraphInstance) == 0x0178); // 376 bytes (0x000028 - 0x000178)
 static_assert(sizeof(USubstanceInstanceFactory) == 0x0088); // 136 bytes (0x000028 - 0x000088)
 static_assert(sizeof(USubstanceOutputData) == 0x0058); // 88 bytes (0x000028 - 0x000058)
@@ -383,3 +442,4 @@ static_assert(offsetof(FSubstanceIntInputDesc, Max) == 0x0028);
 static_assert(offsetof(FSubstanceIntInputDesc, Default) == 0x0038);
 static_assert(offsetof(FSubstanceConnection, OutputIdentifier) == 0x0000);
 static_assert(offsetof(FSubstanceConnection, InputImageIdentifier) == 0x0010);
+#endif

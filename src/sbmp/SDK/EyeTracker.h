@@ -2,19 +2,31 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "CoreUObject.h"
 #include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/EyeTracker.EEyeTrackerStatus
-/// Size: 0x01 (1 bytes)
+class UEyeTrackerFunctionLibrary;
+struct FEyeTrackerGazeData;
+struct FEyeTrackerStereoGazeData;
+
+/// Enum /Script/EyeTracker.EEyeTrackerStatus -  1 (1 bytes)
 enum class EEyeTrackerStatus : uint8_t
 {
     NotConnected                                                                     = 0,
@@ -23,7 +35,7 @@ enum class EEyeTrackerStatus : uint8_t
 };
 
 /// Class /Script/EyeTracker.EyeTrackerFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEyeTrackerFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -45,30 +57,41 @@ public:
 };
 
 /// Struct /Script/EyeTracker.EyeTrackerStereoGazeData
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 4 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FEyeTrackerStereoGazeData
 { 
-    FVector                                            LeftEyeOrigin;                                              // 0x0000   (0x000C)
-    FVector                                            LeftEyeDirection;                                           // 0x000C   (0x000C)
-    FVector                                            RightEyeOrigin;                                             // 0x0018   (0x000C)
-    FVector                                            RightEyeDirection;                                          // 0x0024   (0x000C)
-    FVector                                            FixationPoint;                                              // 0x0030   (0x000C)
-    float                                              ConfidenceValue;                                            // 0x003C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LeftEyeOrigin;                                              // 0x0000   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LeftEyeDirection;                                           // 0x000C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            RightEyeOrigin;                                             // 0x0018   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            RightEyeDirection;                                          // 0x0024   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            FixationPoint;                                              // 0x0030   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ConfidenceValue;                                            // 0x003C   (0x0004)
 };
 
 /// Struct /Script/EyeTracker.EyeTrackerGazeData
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 4 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FEyeTrackerGazeData
 { 
-    FVector                                            GazeOrigin;                                                 // 0x0000   (0x000C)
-    FVector                                            GazeDirection;                                              // 0x000C   (0x000C)
-    FVector                                            FixationPoint;                                              // 0x0018   (0x000C)
-    float                                              ConfidenceValue;                                            // 0x0024   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            GazeOrigin;                                                 // 0x0000   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            GazeDirection;                                              // 0x000C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            FixationPoint;                                              // 0x0018   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ConfidenceValue;                                            // 0x0024   (0x0004)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UEyeTrackerFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(FEyeTrackerStereoGazeData) == 0x0040); // 64 bytes (0x000000 - 0x000040)
 static_assert(sizeof(FEyeTrackerGazeData) == 0x0028); // 40 bytes (0x000000 - 0x000028)
@@ -80,3 +103,4 @@ static_assert(offsetof(FEyeTrackerStereoGazeData, FixationPoint) == 0x0030);
 static_assert(offsetof(FEyeTrackerGazeData, GazeOrigin) == 0x0000);
 static_assert(offsetof(FEyeTrackerGazeData, GazeDirection) == 0x000C);
 static_assert(offsetof(FEyeTrackerGazeData, FixationPoint) == 0x0018);
+#endif

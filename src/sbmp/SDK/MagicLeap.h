@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -16,8 +25,27 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MagicLeap.PurchaseType
-/// Size: 0x01 (1 bytes)
+class UInAppPurchaseComponent;
+class ULuminApplicationLifecycleComponent;
+class UMagicLeapHMDFunctionLibrary;
+class UMagicLeapHeadTrackingNotificationsComponent;
+class UMagicLeapMeshBlockSelectorInterface;
+class UMagicLeapMeshTrackerComponent;
+class UMagicLeapRaycastComponent;
+class UMagicLeapRaycastFunctionLibrary;
+class UMagicLeapSettings;
+struct FMagicLeapGraphicsClientPerformanceInfo;
+struct FMagicLeapHeadTrackingState;
+struct FMagicLeapMeshBlockInfo;
+struct FMagicLeapMeshBlockRequest;
+struct FMagicLeapRaycastHitResult;
+struct FMagicLeapRaycastQueryParams;
+struct FMagicLeapResult;
+struct FMagicLeapTrackingMeshInfo;
+struct FPurchaseConfirmation;
+struct FPurchaseItemDetails;
+
+/// Enum /Script/MagicLeap.PurchaseType -  1 (1 bytes)
 enum class PurchaseType : uint8_t
 {
     Consumable                                                                       = 0,
@@ -25,16 +53,14 @@ enum class PurchaseType : uint8_t
     Undefined                                                                        = 2
 };
 
-/// Enum /Script/MagicLeap.EFocusLostReason
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EFocusLostReason -  1 (1 bytes)
 enum class EFocusLostReason : uint8_t
 {
     EFocusLostReason_Invalid                                                         = 0,
     EFocusLostReason_System                                                          = 1
 };
 
-/// Enum /Script/MagicLeap.EMagicLeapMeshLOD
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EMagicLeapMeshLOD -  1 (1 bytes)
 enum class EMagicLeapMeshLOD : uint8_t
 {
     Minimum                                                                          = 0,
@@ -42,8 +68,7 @@ enum class EMagicLeapMeshLOD : uint8_t
     Maximum                                                                          = 2
 };
 
-/// Enum /Script/MagicLeap.EMagicLeapMeshState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EMagicLeapMeshState -  1 (1 bytes)
 enum class EMagicLeapMeshState : uint8_t
 {
     New                                                                              = 0,
@@ -52,8 +77,7 @@ enum class EMagicLeapMeshState : uint8_t
     Unchanged                                                                        = 3
 };
 
-/// Enum /Script/MagicLeap.EMagicLeapMeshVertexColorMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EMagicLeapMeshVertexColorMode -  1 (1 bytes)
 enum class EMagicLeapMeshVertexColorMode : uint8_t
 {
     None                                                                             = 0,
@@ -62,16 +86,14 @@ enum class EMagicLeapMeshVertexColorMode : uint8_t
     LOD                                                                              = 3
 };
 
-/// Enum /Script/MagicLeap.EMagicLeapMeshType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EMagicLeapMeshType -  1 (1 bytes)
 enum class EMagicLeapMeshType : uint8_t
 {
     Triangles                                                                        = 0,
     PointCloud                                                                       = 1
 };
 
-/// Enum /Script/MagicLeap.EMagicLeapRaycastResultState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EMagicLeapRaycastResultState -  1 (1 bytes)
 enum class EMagicLeapRaycastResultState : uint8_t
 {
     RequestFailed                                                                    = 0,
@@ -80,16 +102,14 @@ enum class EMagicLeapRaycastResultState : uint8_t
     HitObserved                                                                      = 3
 };
 
-/// Enum /Script/MagicLeap.CloudStatus
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.CloudStatus -  1 (1 bytes)
 enum class CloudStatus : uint8_t
 {
     CloudStatus_NotDone                                                              = 0,
     CloudStatus_Done                                                                 = 1
 };
 
-/// Enum /Script/MagicLeap.EMagicLeapHeadTrackingMapEvent
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EMagicLeapHeadTrackingMapEvent -  1 (1 bytes)
 enum class EMagicLeapHeadTrackingMapEvent : uint8_t
 {
     Lost                                                                             = 0,
@@ -98,8 +118,7 @@ enum class EMagicLeapHeadTrackingMapEvent : uint8_t
     NewSession                                                                       = 3
 };
 
-/// Enum /Script/MagicLeap.EMagicLeapHeadTrackingMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EMagicLeapHeadTrackingMode -  1 (1 bytes)
 enum class EMagicLeapHeadTrackingMode : uint8_t
 {
     PositionAndOrientation                                                           = 0,
@@ -107,8 +126,7 @@ enum class EMagicLeapHeadTrackingMode : uint8_t
     Unknown                                                                          = 2
 };
 
-/// Enum /Script/MagicLeap.EMagicLeapHeadTrackingError
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeap.EMagicLeapHeadTrackingError -  1 (1 bytes)
 enum class EMagicLeapHeadTrackingError : uint8_t
 {
     None                                                                             = 0,
@@ -118,18 +136,25 @@ enum class EMagicLeapHeadTrackingError : uint8_t
 };
 
 /// Class /Script/MagicLeap.InAppPurchaseComponent
-/// Size: 0x0138 (312 bytes) (0x0000C0 - 0x000138) align 8 MaxSize: 0x0138
+/// Size: 0x0138 (312 bytes) (0x0000C0 - 0x000138) align n/a MaxSize: 0x0138
 class UInAppPurchaseComponent : public UActorComponent
 { 
 public:
-    FMulticastInlineDelegate                           InAppPurchaseLogMessage;                                    // 0x00C0   (0x0010)
-    FMulticastInlineDelegate                           GetItemsDetailsSuccess;                                     // 0x00D0   (0x0010)
-    FMulticastInlineDelegate                           GetItemsDetailsFailure;                                     // 0x00E0   (0x0010)
-    FMulticastInlineDelegate                           PurchaseConfirmationSuccess;                                // 0x00F0   (0x0010)
-    FMulticastInlineDelegate                           PurchaseConfirmationFailure;                                // 0x0100   (0x0010)
-    FMulticastInlineDelegate                           GetPurchaseHistorySuccess;                                  // 0x0110   (0x0010)
-    FMulticastInlineDelegate                           GetPurchaseHistoryFailure;                                  // 0x0120   (0x0010)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0130   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           InAppPurchaseLogMessage;                                    // 0x00C0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           GetItemsDetailsSuccess;                                     // 0x00D0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           GetItemsDetailsFailure;                                     // 0x00E0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           PurchaseConfirmationSuccess;                                // 0x00F0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           PurchaseConfirmationFailure;                                // 0x0100   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           GetPurchaseHistorySuccess;                                  // 0x0110   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           GetPurchaseHistoryFailure;                                  // 0x0120   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0130   (0x0008) MISSED
 
     /// Functions
     // Function /Script/MagicLeap.InAppPurchaseComponent.TryPurchaseItemAsync
@@ -162,31 +187,40 @@ public:
 };
 
 /// Class /Script/MagicLeap.LuminApplicationLifecycleComponent
-/// Size: 0x01A0 (416 bytes) (0x000150 - 0x0001A0) align 8 MaxSize: 0x01A0
+/// Size: 0x01A0 (416 bytes) (0x000150 - 0x0001A0) align n/a MaxSize: 0x01A0
 class ULuminApplicationLifecycleComponent : public UApplicationLifecycleComponent
 { 
 public:
-    FMulticastInlineDelegate                           DeviceHasReactivatedDelegate;                               // 0x0150   (0x0010)
-    FMulticastInlineDelegate                           DeviceWillEnterRealityModeDelegate;                         // 0x0160   (0x0010)
-    FMulticastInlineDelegate                           DeviceWillGoInStandbyDelegate;                              // 0x0170   (0x0010)
-    FMulticastInlineDelegate                           FocusLostDelegate;                                          // 0x0180   (0x0010)
-    FMulticastInlineDelegate                           FocusGainedDelegate;                                        // 0x0190   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           DeviceHasReactivatedDelegate;                               // 0x0150   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           DeviceWillEnterRealityModeDelegate;                         // 0x0160   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           DeviceWillGoInStandbyDelegate;                              // 0x0170   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           FocusLostDelegate;                                          // 0x0180   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           FocusGainedDelegate;                                        // 0x0190   (0x0010)
 };
 
 /// Class /Script/MagicLeap.MagicLeapHeadTrackingNotificationsComponent
-/// Size: 0x01E0 (480 bytes) (0x000150 - 0x0001E0) align 8 MaxSize: 0x01E0
+/// Size: 0x01E0 (480 bytes) (0x000150 - 0x0001E0) align n/a MaxSize: 0x01E0
 class UMagicLeapHeadTrackingNotificationsComponent : public UVRNotificationsComponent
 { 
 public:
-    FMulticastInlineDelegate                           OnHeadTrackingLost;                                         // 0x0150   (0x0010)
-    FMulticastInlineDelegate                           OnHeadTrackingRecovered;                                    // 0x0160   (0x0010)
-    FMulticastInlineDelegate                           OnHeadTrackingRecoveryFailed;                               // 0x0170   (0x0010)
-    FMulticastInlineDelegate                           OnHeadTrackingNewSessionStarted;                            // 0x0180   (0x0010)
-    unsigned char                                      UnknownData00_7[0x50];                                      // 0x0190   (0x0050) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+    /* private   */ FMulticastInlineDelegate                           OnHeadTrackingLost;                                         // 0x0150   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+    /* private   */ FMulticastInlineDelegate                           OnHeadTrackingRecovered;                                    // 0x0160   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+    /* private   */ FMulticastInlineDelegate                           OnHeadTrackingRecoveryFailed;                               // 0x0170   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+    /* private   */ FMulticastInlineDelegate                           OnHeadTrackingNewSessionStarted;                            // 0x0180   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x50];                                      // 0x0190   (0x0050) MISSED
 };
 
 /// Class /Script/MagicLeap.MagicLeapHMDFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMagicLeapHMDFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -237,34 +271,51 @@ public:
 };
 
 /// Class /Script/MagicLeap.MagicLeapMeshTrackerComponent
-/// Size: 0x0300 (768 bytes) (0x000260 - 0x000300) align 16 MaxSize: 0x0300
+/// Size: 0x0300 (768 bytes) (0x000260 - 0x000300) align n/a MaxSize: 0x0300
 class UMagicLeapMeshTrackerComponent : public USceneComponent
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0260   (0x0008) MISSED
-    FMulticastInlineDelegate                           OnMeshTrackerUpdated;                                       // 0x0268   (0x0010)
-    bool                                               ScanWorld;                                                  // 0x0278   (0x0001)
-    EMagicLeapMeshType                                 MeshType;                                                   // 0x0279   (0x0001)
-    unsigned char                                      UnknownData01_6[0x6];                                       // 0x027A   (0x0006) MISSED
-    class UBoxComponent*                               BoundingVolume;                                             // 0x0280   (0x0008)
-    EMagicLeapMeshLOD                                  LevelOfDetail;                                              // 0x0288   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0289   (0x0003) MISSED
-    float                                              PerimeterOfGapsToFill;                                      // 0x028C   (0x0004)
-    bool                                               Planarize;                                                  // 0x0290   (0x0001)
-    unsigned char                                      UnknownData03_6[0x3];                                       // 0x0291   (0x0003) MISSED
-    float                                              DisconnectedSectionArea;                                    // 0x0294   (0x0004)
-    bool                                               RequestNormals;                                             // 0x0298   (0x0001)
-    bool                                               RequestVertexConfidence;                                    // 0x0299   (0x0001)
-    EMagicLeapMeshVertexColorMode                      VertexColorMode;                                            // 0x029A   (0x0001)
-    unsigned char                                      UnknownData04_6[0x5];                                       // 0x029B   (0x0005) MISSED
-    TArray<FColor>                                     BlockVertexColors;                                          // 0x02A0   (0x0010)
-    FLinearColor                                       VertexColorFromConfidenceZero;                              // 0x02B0   (0x0010)
-    FLinearColor                                       VertexColorFromConfidenceOne;                               // 0x02C0   (0x0010)
-    bool                                               RemoveOverlappingTriangles;                                 // 0x02D0   (0x0001)
-    unsigned char                                      UnknownData05_6[0x7];                                       // 0x02D1   (0x0007) MISSED
-    class UMRMeshComponent*                            MRMesh;                                                     // 0x02D8   (0x0008)
-    int32_t                                            BricksPerFrame;                                             // 0x02E0   (0x0004)
-    unsigned char                                      UnknownData06_7[0x1C];                                      // 0x02E4   (0x001C) MISSED
+    /* public    */ unsigned char                                      UnknownData07_8[0x8];                                       // 0x0260   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMeshTrackerUpdated;                                       // 0x0268   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               ScanWorld;                                                  // 0x0278   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapMeshType                                 MeshType;                                                   // 0x0279   (0x0001)
+    /* public    */ unsigned char                                      UnknownData08_6[0x6];                                       // 0x027A   (0x0006) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBoxComponent*                               BoundingVolume;                                             // 0x0280   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapMeshLOD                                  LevelOfDetail;                                              // 0x0288   (0x0001)
+    /* public    */ unsigned char                                      UnknownData09_6[0x3];                                       // 0x0289   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PerimeterOfGapsToFill;                                      // 0x028C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Planarize;                                                  // 0x0290   (0x0001)
+    /* public    */ unsigned char                                      UnknownData10_6[0x3];                                       // 0x0291   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DisconnectedSectionArea;                                    // 0x0294   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               RequestNormals;                                             // 0x0298   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               RequestVertexConfidence;                                    // 0x0299   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapMeshVertexColorMode                      VertexColorMode;                                            // 0x029A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData11_6[0x5];                                       // 0x029B   (0x0005) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FColor>                                     BlockVertexColors;                                          // 0x02A0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       VertexColorFromConfidenceZero;                              // 0x02B0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       VertexColorFromConfidenceOne;                               // 0x02C0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               RemoveOverlappingTriangles;                                 // 0x02D0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData12_6[0x7];                                       // 0x02D1   (0x0007) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMRMeshComponent*                            MRMesh;                                                     // 0x02D8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            BricksPerFrame;                                             // 0x02E0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData13_7[0x1C];                                      // 0x02E4   (0x001C) MISSED
 
     /// Functions
     // Function /Script/MagicLeap.MagicLeapMeshTrackerComponent.SelectMeshBlocks
@@ -294,18 +345,21 @@ public:
 };
 
 /// Class /Script/MagicLeap.MagicLeapSettings
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class UMagicLeapSettings : public UObject
 { 
 public:
-    bool                                               bEnableZI;                                                  // 0x0028   (0x0001)
-    bool                                               bUseVulkanForZI;                                            // 0x0029   (0x0001)
-    bool                                               bUseMLAudioForZI;                                           // 0x002A   (0x0001)
-    unsigned char                                      UnknownData00_7[0x5];                                       // 0x002B   (0x0005) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableZI;                                                  // 0x0028   (0x0001)
+    UPROPERTY(ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseVulkanForZI;                                            // 0x0029   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseMLAudioForZI;                                           // 0x002A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x5];                                       // 0x002B   (0x0005) MISSED
 };
 
 /// Class /Script/MagicLeap.MagicLeapMeshBlockSelectorInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMagicLeapMeshBlockSelectorInterface : public UInterface
 { 
 public:
@@ -318,11 +372,11 @@ public:
 };
 
 /// Class /Script/MagicLeap.MagicLeapRaycastComponent
-/// Size: 0x0128 (296 bytes) (0x0000C0 - 0x000128) align 8 MaxSize: 0x0128
+/// Size: 0x0128 (296 bytes) (0x0000C0 - 0x000128) align n/a MaxSize: 0x0128
 class UMagicLeapRaycastComponent : public UActorComponent
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x68];                                      // 0x00C0   (0x0068) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x68];                                      // 0x00C0   (0x0068) MISSED
 
     /// Functions
     // Function /Script/MagicLeap.MagicLeapRaycastComponent.RequestRaycast
@@ -335,7 +389,7 @@ public:
 };
 
 /// Class /Script/MagicLeap.MagicLeapRaycastFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMagicLeapRaycastFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -354,120 +408,161 @@ public:
 };
 
 /// Struct /Script/MagicLeap.PurchaseItemDetails
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FPurchaseItemDetails
 { 
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    FString                                            Price;                                                      // 0x0010   (0x0010)
-    FString                                            Name;                                                       // 0x0020   (0x0010)
-    PurchaseType                                       Type;                                                       // 0x0030   (0x0001)
-    unsigned char                                      UnknownData01_7[0xF];                                       // 0x0031   (0x000F) MISSED
+    /* public    */ unsigned char                                      UnknownData02_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Price;                                                      // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Name;                                                       // 0x0020   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ PurchaseType                                       Type;                                                       // 0x0030   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0xF];                                       // 0x0031   (0x000F) MISSED
 };
 
 /// Struct /Script/MagicLeap.PurchaseConfirmation
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FPurchaseConfirmation
 { 
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    FString                                            PackageName;                                                // 0x0010   (0x0010)
-    unsigned char                                      UnknownData01_6[0x28];                                      // 0x0020   (0x0028) MISSED
-    PurchaseType                                       Type;                                                       // 0x0048   (0x0001)
-    unsigned char                                      UnknownData02_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    /* public    */ unsigned char                                      UnknownData03_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            PackageName;                                                // 0x0010   (0x0010)
+    /* public    */ unsigned char                                      UnknownData04_6[0x28];                                      // 0x0020   (0x0028) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ PurchaseType                                       Type;                                                       // 0x0048   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Struct /Script/MagicLeap.MagicLeapMeshBlockRequest
-/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align 4 MaxSize: 0x0014
+/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
 struct FMagicLeapMeshBlockRequest
 { 
-    FGuid                                              BlockID;                                                    // 0x0000   (0x0010)
-    EMagicLeapMeshLOD                                  LevelOfDetail;                                              // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0011   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              BlockID;                                                    // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapMeshLOD                                  LevelOfDetail;                                              // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003) MISSED
 };
 
 /// Struct /Script/MagicLeap.MagicLeapMeshBlockInfo
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FMagicLeapMeshBlockInfo
 { 
-    FGuid                                              BlockID;                                                    // 0x0000   (0x0010)
-    FVector                                            BlockPosition;                                              // 0x0010   (0x000C)
-    FRotator                                           BlockOrientation;                                           // 0x001C   (0x000C)
-    FVector                                            BlockDimensions;                                            // 0x0028   (0x000C)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0034   (0x0004) MISSED
-    FTimespan                                          Timestamp;                                                  // 0x0038   (0x0008)
-    EMagicLeapMeshState                                BlockState;                                                 // 0x0040   (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0041   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              BlockID;                                                    // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            BlockPosition;                                              // 0x0010   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FRotator                                           BlockOrientation;                                           // 0x001C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            BlockDimensions;                                            // 0x0028   (0x000C)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x0034   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FTimespan                                          Timestamp;                                                  // 0x0038   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapMeshState                                BlockState;                                                 // 0x0040   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x0041   (0x0007) MISSED
 };
 
 /// Struct /Script/MagicLeap.MagicLeapTrackingMeshInfo
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FMagicLeapTrackingMeshInfo
 { 
-    FTimespan                                          Timestamp;                                                  // 0x0000   (0x0008)
-    TArray<FMagicLeapMeshBlockInfo>                    BlockData;                                                  // 0x0008   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FTimespan                                          Timestamp;                                                  // 0x0000   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FMagicLeapMeshBlockInfo>                    BlockData;                                                  // 0x0008   (0x0010)
 };
 
 /// Struct /Script/MagicLeap.MagicLeapRaycastHitResult
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FMagicLeapRaycastHitResult
 { 
-    EMagicLeapRaycastResultState                       HitState;                                                   // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    FVector                                            HitPoint;                                                   // 0x0004   (0x000C)
-    FVector                                            Normal;                                                     // 0x0010   (0x000C)
-    float                                              Confidence;                                                 // 0x001C   (0x0004)
-    int32_t                                            UserData;                                                   // 0x0020   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapRaycastResultState                       HitState;                                                   // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            HitPoint;                                                   // 0x0004   (0x000C)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Normal;                                                     // 0x0010   (0x000C)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Confidence;                                                 // 0x001C   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            UserData;                                                   // 0x0020   (0x0004)
 };
 
 /// Struct /Script/MagicLeap.MagicLeapRaycastQueryParams
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 4 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FMagicLeapRaycastQueryParams
 { 
-    FVector                                            position;                                                   // 0x0000   (0x000C)
-    FVector                                            Direction;                                                  // 0x000C   (0x000C)
-    FVector                                            UpVector;                                                   // 0x0018   (0x000C)
-    int32_t                                            Width;                                                      // 0x0024   (0x0004)
-    int32_t                                            Height;                                                     // 0x0028   (0x0004)
-    float                                              HorizontalFovDegrees;                                       // 0x002C   (0x0004)
-    bool                                               CollideWithUnobserved;                                      // 0x0030   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0031   (0x0003) MISSED
-    int32_t                                            UserData;                                                   // 0x0034   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            position;                                                   // 0x0000   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Direction;                                                  // 0x000C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            UpVector;                                                   // 0x0018   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Width;                                                      // 0x0024   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Height;                                                     // 0x0028   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HorizontalFovDegrees;                                       // 0x002C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               CollideWithUnobserved;                                      // 0x0030   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0031   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            UserData;                                                   // 0x0034   (0x0004)
 };
 
 /// Struct /Script/MagicLeap.MagicLeapGraphicsClientPerformanceInfo
-/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align 4 MaxSize: 0x001C
+/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
 struct FMagicLeapGraphicsClientPerformanceInfo
 { 
-    float                                              FrameStartCPUCompAcquireCPUTimeMs;                          // 0x0000   (0x0004)
-    float                                              FrameStartCPUFrameEndGPUTimeMs;                             // 0x0004   (0x0004)
-    float                                              FrameStartCPUFrameStartCPUTimeMs;                           // 0x0008   (0x0004)
-    float                                              FrameDurationCPUTimeMs;                                     // 0x000C   (0x0004)
-    float                                              FrameDurationGPUTimeMs;                                     // 0x0010   (0x0004)
-    float                                              FrameInternalDurationCPUTimeMs;                             // 0x0014   (0x0004)
-    float                                              FrameInternalDurationGPUTimeMs;                             // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrameStartCPUCompAcquireCPUTimeMs;                          // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrameStartCPUFrameEndGPUTimeMs;                             // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrameStartCPUFrameStartCPUTimeMs;                           // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrameDurationCPUTimeMs;                                     // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrameDurationGPUTimeMs;                                     // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrameInternalDurationCPUTimeMs;                             // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrameInternalDurationGPUTimeMs;                             // 0x0018   (0x0004)
 };
 
 /// Struct /Script/MagicLeap.MagicLeapHeadTrackingState
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FMagicLeapHeadTrackingState
 { 
-    EMagicLeapHeadTrackingMode                         Mode;                                                       // 0x0000   (0x0001)
-    EMagicLeapHeadTrackingError                        Error;                                                      // 0x0001   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0002   (0x0002) MISSED
-    float                                              Confidence;                                                 // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapHeadTrackingMode                         Mode;                                                       // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapHeadTrackingError                        Error;                                                      // 0x0001   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x2];                                       // 0x0002   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Confidence;                                                 // 0x0004   (0x0004)
 };
 
 /// Struct /Script/MagicLeap.MagicLeapResult
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FMagicLeapResult
 { 
-    bool                                               bSuccess;                                                   // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007) MISSED
-    FString                                            AdditionalInfo;                                             // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSuccess;                                                   // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            AdditionalInfo;                                             // 0x0008   (0x0010)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UInAppPurchaseComponent) == 0x0138); // 312 bytes (0x0000C0 - 0x000138)
 static_assert(sizeof(ULuminApplicationLifecycleComponent) == 0x01A0); // 416 bytes (0x000150 - 0x0001A0)
 static_assert(sizeof(UMagicLeapHeadTrackingNotificationsComponent) == 0x01E0); // 480 bytes (0x000150 - 0x0001E0)
@@ -519,3 +614,4 @@ static_assert(offsetof(FMagicLeapRaycastQueryParams, UpVector) == 0x0018);
 static_assert(offsetof(FMagicLeapHeadTrackingState, Mode) == 0x0000);
 static_assert(offsetof(FMagicLeapHeadTrackingState, Error) == 0x0001);
 static_assert(offsetof(FMagicLeapResult, AdditionalInfo) == 0x0008);
+#endif

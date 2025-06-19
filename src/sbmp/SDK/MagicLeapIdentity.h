@@ -2,19 +2,30 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MagicLeapIdentity.EMagicLeapIdentityKey
-/// Size: 0x01 (1 bytes)
+class UMagicLeapIdentity;
+struct FMagicLeapIdentityAttribute;
+
+/// Enum /Script/MagicLeapIdentity.EMagicLeapIdentityKey -  1 (1 bytes)
 enum class EMagicLeapIdentityKey : uint8_t
 {
     GivenName                                                                        = 0,
@@ -27,8 +38,7 @@ enum class EMagicLeapIdentityKey : uint8_t
     Unknown                                                                          = 7
 };
 
-/// Enum /Script/MagicLeapIdentity.EMagicLeapIdentityError
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapIdentity.EMagicLeapIdentityError -  1 (1 bytes)
 enum class EMagicLeapIdentityError : uint8_t
 {
     Ok                                                                               = 0,
@@ -52,11 +62,11 @@ enum class EMagicLeapIdentityError : uint8_t
 };
 
 /// Class /Script/MagicLeapIdentity.MagicLeapIdentity
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class UMagicLeapIdentity : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0028   (0x0010) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x10];                                      // 0x0028   (0x0010) MISSED
 
     /// Functions
     // Function /Script/MagicLeapIdentity.MagicLeapIdentity.RequestIdentityAttributeValueDelegate__DelegateSignature
@@ -88,18 +98,22 @@ public:
 };
 
 /// Struct /Script/MagicLeapIdentity.MagicLeapIdentityAttribute
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FMagicLeapIdentityAttribute
 { 
-    EMagicLeapIdentityKey                              Attribute;                                                  // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007) MISSED
-    FString                                            Value;                                                      // 0x0008   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapIdentityKey                              Attribute;                                                  // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Value;                                                      // 0x0008   (0x0010)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMagicLeapIdentity) == 0x0038); // 56 bytes (0x000028 - 0x000038)
 static_assert(sizeof(FMagicLeapIdentityAttribute) == 0x0018); // 24 bytes (0x000000 - 0x000018)
 static_assert(offsetof(FMagicLeapIdentityAttribute, Attribute) == 0x0000);
 static_assert(offsetof(FMagicLeapIdentityAttribute, Value) == 0x0008);
+#endif

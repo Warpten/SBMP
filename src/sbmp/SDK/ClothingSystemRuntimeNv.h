@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "ClothingSystemRuntimeCommon.h"
@@ -15,8 +24,13 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/ClothingSystemRuntimeNv.EClothingWindMethodNv
-/// Size: 0x01 (1 bytes)
+class UClothConfigNv;
+class UClothPhysicalMeshDataNv_Legacy;
+class UClothingSimulationFactoryNv;
+class UClothingSimulationInteractorNv;
+struct FClothConstraintSetupNv;
+
+/// Enum /Script/ClothingSystemRuntimeNv.EClothingWindMethodNv -  1 (1 bytes)
 enum class EClothingWindMethodNv : uint8_t
 {
     Legacy                                                                           = 0,
@@ -24,71 +38,108 @@ enum class EClothingWindMethodNv : uint8_t
 };
 
 /// Struct /Script/ClothingSystemRuntimeNv.ClothConstraintSetupNv
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FClothConstraintSetupNv
 { 
-    float                                              Stiffness;                                                  // 0x0000   (0x0004)
-    float                                              StiffnessMultiplier;                                        // 0x0004   (0x0004)
-    float                                              StretchLimit;                                               // 0x0008   (0x0004)
-    float                                              CompressionLimit;                                           // 0x000C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Stiffness;                                                  // 0x0000   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StiffnessMultiplier;                                        // 0x0004   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StretchLimit;                                               // 0x0008   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CompressionLimit;                                           // 0x000C   (0x0004)
 };
 
 /// Class /Script/ClothingSystemRuntimeNv.ClothConfigNv
-/// Size: 0x0140 (320 bytes) (0x000028 - 0x000140) align 8 MaxSize: 0x0140
+/// Size: 0x0140 (320 bytes) (0x000028 - 0x000140) align n/a MaxSize: 0x0140
 class UClothConfigNv : public UClothConfigCommon
 { 
 public:
-    EClothingWindMethodNv                              ClothingWindMethod;                                         // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0029   (0x0003) MISSED
-    FClothConstraintSetupNv                            VerticalConstraint;                                         // 0x002C   (0x0010)
-    FClothConstraintSetupNv                            HorizontalConstraint;                                       // 0x003C   (0x0010)
-    FClothConstraintSetupNv                            BendConstraint;                                             // 0x004C   (0x0010)
-    FClothConstraintSetupNv                            ShearConstraint;                                            // 0x005C   (0x0010)
-    float                                              SelfCollisionRadius;                                        // 0x006C   (0x0004)
-    float                                              SelfCollisionStiffness;                                     // 0x0070   (0x0004)
-    float                                              SelfCollisionCullScale;                                     // 0x0074   (0x0004)
-    FVector                                            Damping;                                                    // 0x0078   (0x000C)
-    float                                              Friction;                                                   // 0x0084   (0x0004)
-    float                                              WindDragCoefficient;                                        // 0x0088   (0x0004)
-    float                                              WindLiftCoefficient;                                        // 0x008C   (0x0004)
-    FVector                                            LinearDrag;                                                 // 0x0090   (0x000C)
-    FVector                                            AngularDrag;                                                // 0x009C   (0x000C)
-    FVector                                            LinearInertiaScale;                                         // 0x00A8   (0x000C)
-    FVector                                            AngularInertiaScale;                                        // 0x00B4   (0x000C)
-    FVector                                            CentrifugalInertiaScale;                                    // 0x00C0   (0x000C)
-    float                                              SolverFrequency;                                            // 0x00CC   (0x0004)
-    float                                              StiffnessFrequency;                                         // 0x00D0   (0x0004)
-    float                                              GravityScale;                                               // 0x00D4   (0x0004)
-    FVector                                            GravityOverride;                                            // 0x00D8   (0x000C)
-    bool                                               bUseGravityOverride;                                        // 0x00E4   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00E5   (0x0003) MISSED
-    float                                              TetherStiffness;                                            // 0x00E8   (0x0004)
-    float                                              TetherLimit;                                                // 0x00EC   (0x0004)
-    float                                              CollisionThickness;                                         // 0x00F0   (0x0004)
-    float                                              AnimDriveSpringStiffness;                                   // 0x00F4   (0x0004)
-    float                                              AnimDriveDamperStiffness;                                   // 0x00F8   (0x0004)
-    EClothingWindMethod_Legacy                         WindMethod;                                                 // 0x00FC   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x00FD   (0x0003) MISSED
-    FClothConstraintSetup_Legacy                       VerticalConstraintConfig;                                   // 0x0100   (0x0010)
-    FClothConstraintSetup_Legacy                       HorizontalConstraintConfig;                                 // 0x0110   (0x0010)
-    FClothConstraintSetup_Legacy                       BendConstraintConfig;                                       // 0x0120   (0x0010)
-    FClothConstraintSetup_Legacy                       ShearConstraintConfig;                                      // 0x0130   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EClothingWindMethodNv                              ClothingWindMethod;                                         // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FClothConstraintSetupNv                            VerticalConstraint;                                         // 0x002C   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FClothConstraintSetupNv                            HorizontalConstraint;                                       // 0x003C   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FClothConstraintSetupNv                            BendConstraint;                                             // 0x004C   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FClothConstraintSetupNv                            ShearConstraint;                                            // 0x005C   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SelfCollisionRadius;                                        // 0x006C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SelfCollisionStiffness;                                     // 0x0070   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SelfCollisionCullScale;                                     // 0x0074   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Damping;                                                    // 0x0078   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Friction;                                                   // 0x0084   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WindDragCoefficient;                                        // 0x0088   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WindLiftCoefficient;                                        // 0x008C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LinearDrag;                                                 // 0x0090   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            AngularDrag;                                                // 0x009C   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LinearInertiaScale;                                         // 0x00A8   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            AngularInertiaScale;                                        // 0x00B4   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            CentrifugalInertiaScale;                                    // 0x00C0   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SolverFrequency;                                            // 0x00CC   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StiffnessFrequency;                                         // 0x00D0   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              GravityScale;                                               // 0x00D4   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            GravityOverride;                                            // 0x00D8   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseGravityOverride;                                        // 0x00E4   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x00E5   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TetherStiffness;                                            // 0x00E8   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TetherLimit;                                                // 0x00EC   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CollisionThickness;                                         // 0x00F0   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AnimDriveSpringStiffness;                                   // 0x00F4   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AnimDriveDamperStiffness;                                   // 0x00F8   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EClothingWindMethod_Legacy                         WindMethod;                                                 // 0x00FC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x3];                                       // 0x00FD   (0x0003) MISSED
+    UPROPERTY(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FClothConstraintSetup_Legacy                       VerticalConstraintConfig;                                   // 0x0100   (0x0010)
+    UPROPERTY(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FClothConstraintSetup_Legacy                       HorizontalConstraintConfig;                                 // 0x0110   (0x0010)
+    UPROPERTY(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FClothConstraintSetup_Legacy                       BendConstraintConfig;                                       // 0x0120   (0x0010)
+    UPROPERTY(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FClothConstraintSetup_Legacy                       ShearConstraintConfig;                                      // 0x0130   (0x0010)
 };
 
 /// Class /Script/ClothingSystemRuntimeNv.ClothingSimulationFactoryNv
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UClothingSimulationFactoryNv : public UClothingSimulationFactory
 { 
 public:
 };
 
 /// Class /Script/ClothingSystemRuntimeNv.ClothingSimulationInteractorNv
-/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align n/a MaxSize: 0x0050
 class UClothingSimulationInteractorNv : public UClothingSimulationInteractor
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x10];                                      // 0x0030   (0x0010) MISSED
-    TArray<class UObject*>                             ReferencedObjectsArray;                                     // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_8[0x10];                                      // 0x0030   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UObject*>                             ReferencedObjectsArray;                                     // 0x0040   (0x0010)
 
     /// Functions
     // Function /Script/ClothingSystemRuntimeNv.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness
@@ -97,19 +148,24 @@ public:
 };
 
 /// Class /Script/ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy
-/// Size: 0x0120 (288 bytes) (0x0000E0 - 0x000120) align 8 MaxSize: 0x0120
+/// Size: 0x0120 (288 bytes) (0x0000E0 - 0x000120) align n/a MaxSize: 0x0120
 class UClothPhysicalMeshDataNv_Legacy : public UClothPhysicalMeshDataBase_Legacy
 { 
 public:
-    TArray<float>                                      MaxDistances;                                               // 0x00E0   (0x0010)
-    TArray<float>                                      BackstopDistances;                                          // 0x00F0   (0x0010)
-    TArray<float>                                      BackstopRadiuses;                                           // 0x0100   (0x0010)
-    TArray<float>                                      AnimDriveMultipliers;                                       // 0x0110   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      MaxDistances;                                               // 0x00E0   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      BackstopDistances;                                          // 0x00F0   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      BackstopRadiuses;                                           // 0x0100   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      AnimDriveMultipliers;                                       // 0x0110   (0x0010)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FClothConstraintSetupNv) == 0x0010); // 16 bytes (0x000000 - 0x000010)
 static_assert(sizeof(UClothConfigNv) == 0x0140); // 320 bytes (0x000028 - 0x000140)
 static_assert(sizeof(UClothingSimulationFactoryNv) == 0x0028); // 40 bytes (0x000028 - 0x000028)
@@ -137,3 +193,4 @@ static_assert(offsetof(UClothPhysicalMeshDataNv_Legacy, MaxDistances) == 0x00E0)
 static_assert(offsetof(UClothPhysicalMeshDataNv_Legacy, BackstopDistances) == 0x00F0);
 static_assert(offsetof(UClothPhysicalMeshDataNv_Legacy, BackstopRadiuses) == 0x0100);
 static_assert(offsetof(UClothPhysicalMeshDataNv_Legacy, AnimDriveMultipliers) == 0x0110);
+#endif

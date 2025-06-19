@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -16,16 +25,75 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/Landscape.ELandscapeBlendMode
-/// Size: 0x01 (1 bytes)
+class AControlPointMeshActor;
+class ALandscape;
+class ALandscapeBlueprintBrushBase;
+class ALandscapeGizmoActiveActor;
+class ALandscapeGizmoActor;
+class ALandscapeMeshProxyActor;
+class ALandscapeProxy;
+class ALandscapeStreamingProxy;
+class UControlPointMeshComponent;
+class ULandscapeComponent;
+class ULandscapeGizmoRenderComponent;
+class ULandscapeGrassType;
+class ULandscapeHeightfieldCollisionComponent;
+class ULandscapeInfo;
+class ULandscapeInfoMap;
+class ULandscapeLODStreamingProxy;
+class ULandscapeLayerInfoObject;
+class ULandscapeMaterialInstanceConstant;
+class ULandscapeMeshCollisionComponent;
+class ULandscapeMeshProxyComponent;
+class ULandscapeSettings;
+class ULandscapeSplineControlPoint;
+class ULandscapeSplineSegment;
+class ULandscapeSplinesComponent;
+class ULandscapeSubsystem;
+class ULandscapeWeightmapUsage;
+class UMaterialExpressionLandscapeGrassOutput;
+class UMaterialExpressionLandscapeLayerBlend;
+class UMaterialExpressionLandscapeLayerCoords;
+class UMaterialExpressionLandscapeLayerSample;
+class UMaterialExpressionLandscapeLayerSwitch;
+class UMaterialExpressionLandscapeLayerWeight;
+class UMaterialExpressionLandscapePhysicalMaterialOutput;
+class UMaterialExpressionLandscapeVisibilityMask;
+struct FForeignControlPointData;
+struct FForeignSplineSegmentData;
+struct FForeignWorldSplineData;
+struct FGizmoSelectData;
+struct FGrassInput;
+struct FGrassVariety;
+struct FHeightmapData;
+struct FLandscapeComponentMaterialOverride;
+struct FLandscapeEditToolRenderData;
+struct FLandscapeEditorLayerSettings;
+struct FLandscapeImportLayerInfo;
+struct FLandscapeInfoLayerSettings;
+struct FLandscapeLayer;
+struct FLandscapeLayerBrush;
+struct FLandscapeLayerComponentData;
+struct FLandscapeLayerStruct;
+struct FLandscapeMaterialTextureStreamingInfo;
+struct FLandscapeProxyMaterialOverride;
+struct FLandscapeSplineConnection;
+struct FLandscapeSplineInterpPoint;
+struct FLandscapeSplineMeshEntry;
+struct FLandscapeSplineSegmentConnection;
+struct FLayerBlendInput;
+struct FPhysicalMaterialInput;
+struct FWeightmapData;
+struct FWeightmapLayerAllocationInfo;
+
+/// Enum /Script/Landscape.ELandscapeBlendMode -  1 (1 bytes)
 enum class ELandscapeBlendMode : uint8_t
 {
     LSBM_AdditiveBlend                                                               = 0,
     LSBM_AlphaBlend                                                                  = 1
 };
 
-/// Enum /Script/Landscape.ELandscapeSetupErrors
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeSetupErrors -  1 (1 bytes)
 enum class ELandscapeSetupErrors : uint8_t
 {
     LSE_None                                                                         = 0,
@@ -34,8 +102,7 @@ enum class ELandscapeSetupErrors : uint8_t
     LSE_NoLayerInfo                                                                  = 3
 };
 
-/// Enum /Script/Landscape.ELandscapeClearMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeClearMode -  1 (1 bytes)
 enum class ELandscapeClearMode : uint8_t
 {
     Clear_Weightmap                                                                  = 1,
@@ -43,8 +110,7 @@ enum class ELandscapeClearMode : uint8_t
     Clear_All                                                                        = 3
 };
 
-/// Enum /Script/Landscape.ELandscapeGizmoType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeGizmoType -  1 (1 bytes)
 enum class ELandscapeGizmoType : uint8_t
 {
     LGT_None                                                                         = 0,
@@ -52,8 +118,7 @@ enum class ELandscapeGizmoType : uint8_t
     LGT_Weight                                                                       = 2
 };
 
-/// Enum /Script/Landscape.EGrassScaling
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.EGrassScaling -  1 (1 bytes)
 enum class EGrassScaling : uint8_t
 {
     Uniform                                                                          = 0,
@@ -61,8 +126,7 @@ enum class EGrassScaling : uint8_t
     LockXY                                                                           = 2
 };
 
-/// Enum /Script/Landscape.ESplineModulationColorMask
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ESplineModulationColorMask -  1 (1 bytes)
 enum class ESplineModulationColorMask : uint8_t
 {
     Red                                                                              = 0,
@@ -71,16 +135,14 @@ enum class ESplineModulationColorMask : uint8_t
     Alpha                                                                            = 3
 };
 
-/// Enum /Script/Landscape.ELandscapeLODFalloff
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeLODFalloff -  1 (1 bytes)
 enum class ELandscapeLODFalloff : uint8_t
 {
     Linear                                                                           = 0,
     SquareRoot                                                                       = 1
 };
 
-/// Enum /Script/Landscape.ELandscapeLayerDisplayMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeLayerDisplayMode -  1 (1 bytes)
 enum class ELandscapeLayerDisplayMode : uint8_t
 {
     Default                                                                          = 0,
@@ -88,8 +150,7 @@ enum class ELandscapeLayerDisplayMode : uint8_t
     UserSpecific                                                                     = 2
 };
 
-/// Enum /Script/Landscape.ELandscapeLayerPaintingRestriction
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeLayerPaintingRestriction -  1 (1 bytes)
 enum class ELandscapeLayerPaintingRestriction : uint8_t
 {
     None                                                                             = 0,
@@ -98,24 +159,21 @@ enum class ELandscapeLayerPaintingRestriction : uint8_t
     UseComponentWhitelist                                                            = 3
 };
 
-/// Enum /Script/Landscape.ELandscapeImportAlphamapType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeImportAlphamapType -  1 (1 bytes)
 enum class ELandscapeImportAlphamapType : uint8_t
 {
     Additive                                                                         = 0,
     Layered                                                                          = 1
 };
 
-/// Enum /Script/Landscape.LandscapeSplineMeshOrientation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.LandscapeSplineMeshOrientation -  1 (1 bytes)
 enum class LandscapeSplineMeshOrientation : uint8_t
 {
     LSMO_XUp                                                                         = 0,
     LSMO_YUp                                                                         = 1
 };
 
-/// Enum /Script/Landscape.ELandscapeLayerBlendType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeLayerBlendType -  1 (1 bytes)
 enum class ELandscapeLayerBlendType : uint8_t
 {
     LB_WeightBlend                                                                   = 0,
@@ -123,8 +181,7 @@ enum class ELandscapeLayerBlendType : uint8_t
     LB_HeightBlend                                                                   = 2
 };
 
-/// Enum /Script/Landscape.ELandscapeCustomizedCoordType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ELandscapeCustomizedCoordType -  1 (1 bytes)
 enum class ELandscapeCustomizedCoordType : uint8_t
 {
     LCCT_None                                                                        = 0,
@@ -134,8 +191,7 @@ enum class ELandscapeCustomizedCoordType : uint8_t
     LCCT_WeightMapUV                                                                 = 4
 };
 
-/// Enum /Script/Landscape.ETerrainCoordMappingType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Landscape.ETerrainCoordMappingType -  1 (1 bytes)
 enum class ETerrainCoordMappingType : uint8_t
 {
     TCMT_Auto                                                                        = 0,
@@ -145,118 +201,185 @@ enum class ETerrainCoordMappingType : uint8_t
 };
 
 /// Class /Script/Landscape.ControlPointMeshActor
-/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align 8 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align n/a MaxSize: 0x02D0
 class AControlPointMeshActor : public AActor
 { 
 public:
-    class UControlPointMeshComponent*                  ControlPointMeshComponent;                                  // 0x02C8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UControlPointMeshComponent*                  ControlPointMeshComponent;                                  // 0x02C8   (0x0008)
 };
 
 /// Class /Script/Landscape.ControlPointMeshComponent
-/// Size: 0x05F0 (1520 bytes) (0x0005E0 - 0x0005F0) align 16 MaxSize: 0x05F0
+/// Size: 0x05F0 (1520 bytes) (0x0005E0 - 0x0005F0) align n/a MaxSize: 0x05F0
 class UControlPointMeshComponent : public UStaticMeshComponent
 { 
 public:
-    float                                              VirtualTextureMainPassMaxDrawDistance;                      // 0x05E0   (0x0004)
-    unsigned char                                      UnknownData00_7[0xC];                                       // 0x05E4   (0x000C) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              VirtualTextureMainPassMaxDrawDistance;                      // 0x05E0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0xC];                                       // 0x05E4   (0x000C) MISSED
 };
 
 /// Struct /Script/Landscape.LandscapeProxyMaterialOverride
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FLandscapeProxyMaterialOverride
 { 
-    FPerPlatformInt                                    LODIndex;                                                   // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    class UMaterialInterface*                          Material;                                                   // 0x0008   (0x0008)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FPerPlatformInt                                    LODIndex;                                                   // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          Material;                                                   // 0x0008   (0x0008)
 };
 
 /// Class /Script/Landscape.LandscapeProxy
-/// Size: 0x0690 (1680 bytes) (0x0002C8 - 0x000690) align 8 MaxSize: 0x0690
+/// Size: 0x0690 (1680 bytes) (0x0002C8 - 0x000690) align n/a MaxSize: 0x0690
 class ALandscapeProxy : public AActor
 { 
 public:
-    class ULandscapeSplinesComponent*                  SplineComponent;                                            // 0x02C8   (0x0008)
-    FGuid                                              LandscapeGuid;                                              // 0x02D0   (0x0010)
-    FIntPoint                                          LandscapeSectionOffset;                                     // 0x02E0   (0x0008)
-    int32_t                                            MaxLODLevel;                                                // 0x02E8   (0x0004)
-    float                                              LODDistanceFactor;                                          // 0x02EC   (0x0004)
-    TEnumAsByte<ELandscapeLODFalloff>                  LODFalloff;                                                 // 0x02F0   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x02F1   (0x0003) MISSED
-    float                                              ComponentScreenSizeToUseSubSections;                        // 0x02F4   (0x0004)
-    float                                              Lod0ScreenSize;                                             // 0x02F8   (0x0004)
-    float                                              LOD0DistributionSetting;                                    // 0x02FC   (0x0004)
-    float                                              LODDistributionSetting;                                     // 0x0300   (0x0004)
-    float                                              TessellationComponentScreenSize;                            // 0x0304   (0x0004)
-    bool                                               UseTessellationComponentScreenSizeFalloff;                  // 0x0308   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0309   (0x0003) MISSED
-    float                                              TessellationComponentScreenSizeFalloff;                     // 0x030C   (0x0004)
-    int32_t                                            OccluderGeometryLOD;                                        // 0x0310   (0x0004)
-    int32_t                                            StaticLightingLOD;                                          // 0x0314   (0x0004)
-    class UPhysicalMaterial*                           DefaultPhysMaterial;                                        // 0x0318   (0x0008)
-    float                                              StreamingDistanceMultiplier;                                // 0x0320   (0x0004)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0324   (0x0004) MISSED
-    class UMaterialInterface*                          LandscapeMaterial;                                          // 0x0328   (0x0008)
-    unsigned char                                      UnknownData03_6[0x20];                                      // 0x0330   (0x0020) MISSED
-    class UMaterialInterface*                          LandscapeHoleMaterial;                                      // 0x0350   (0x0008)
-    TArray<FLandscapeProxyMaterialOverride>            LandscapeMaterialsOverride;                                 // 0x0358   (0x0010)
-    bool                                               bMeshHoles;                                                 // 0x0368   (0x0001)
-    char                                               MeshHolesMaxLod;                                            // 0x0369   (0x0001)
-    unsigned char                                      UnknownData04_6[0x6];                                       // 0x036A   (0x0006) MISSED
-    TArray<class URuntimeVirtualTexture*>              RuntimeVirtualTextures;                                     // 0x0370   (0x0010)
-    int32_t                                            VirtualTextureNumLods;                                      // 0x0380   (0x0004)
-    int32_t                                            VirtualTextureLodBias;                                      // 0x0384   (0x0004)
-    ERuntimeVirtualTextureMainPassType                 VirtualTextureRenderPassType;                               // 0x0388   (0x0001)
-    unsigned char                                      UnknownData05_6[0x3];                                       // 0x0389   (0x0003) MISSED
-    float                                              NegativeZBoundsExtension;                                   // 0x038C   (0x0004)
-    float                                              PositiveZBoundsExtension;                                   // 0x0390   (0x0004)
-    unsigned char                                      UnknownData06_6[0x4];                                       // 0x0394   (0x0004) MISSED
-    TArray<class ULandscapeComponent*>                 LandscapeComponents;                                        // 0x0398   (0x0010)
-    TArray<class ULandscapeHeightfieldCollisionComponent*> CollisionComponents;                                    // 0x03A8   (0x0010)
-    TArray<class UHierarchicalInstancedStaticMeshComponent*> FoliageComponents;                                    // 0x03B8   (0x0010)
-    unsigned char                                      UnknownData07_6[0x64];                                      // 0x03C8   (0x0064) MISSED
-    bool                                               bHasLandscapeGrass;                                         // 0x042C   (0x0001)
-    unsigned char                                      UnknownData08_6[0x3];                                       // 0x042D   (0x0003) MISSED
-    float                                              StaticLightingResolution;                                   // 0x0430   (0x0004)
-    bool                                               CastShadow : 1;                                             // 0x0434:0 (0x0001)
-    bool                                               bCastDynamicShadow : 1;                                     // 0x0434:1 (0x0001)
-    bool                                               bCastStaticShadow : 1;                                      // 0x0434:2 (0x0001)
-    unsigned char                                      UnknownData09_3[0x3];                                       // 0x0435   (0x0003) MISSED
-    bool                                               bCastFarShadow : 1;                                         // 0x0438:0 (0x0001)
-    unsigned char                                      UnknownData10_3[0x3];                                       // 0x0439   (0x0003) MISSED
-    bool                                               bCastHiddenShadow : 1;                                      // 0x043C:0 (0x0001)
-    unsigned char                                      UnknownData11_3[0x3];                                       // 0x043D   (0x0003) MISSED
-    bool                                               bCastShadowAsTwoSided : 1;                                  // 0x0440:0 (0x0001)
-    unsigned char                                      UnknownData12_3[0x3];                                       // 0x0441   (0x0003) MISSED
-    bool                                               bAffectDistanceFieldLighting : 1;                           // 0x0444:0 (0x0001)
-    FLightingChannels                                  LightingChannels;                                           // 0x0445   (0x0001)
-    unsigned char                                      UnknownData13_6[0x2];                                       // 0x0446   (0x0002) MISSED
-    bool                                               bUseMaterialPositionOffsetInStaticLighting : 1;             // 0x0448:0 (0x0001)
-    bool                                               bRenderCustomDepth : 1;                                     // 0x0448:1 (0x0001)
-    unsigned char                                      UnknownData14_5[0x3];                                       // 0x0449   (0x0003) MISSED
-    ERendererStencilMask                               CustomDepthStencilWriteMask;                                // 0x044C   (0x0001)
-    unsigned char                                      UnknownData15_6[0x3];                                       // 0x044D   (0x0003) MISSED
-    int32_t                                            CustomDepthStencilValue;                                    // 0x0450   (0x0004)
-    float                                              LDMaxDrawDistance;                                          // 0x0454   (0x0004)
-    FLightmassPrimitiveSettings                        LightmassSettings;                                          // 0x0458   (0x0018)
-    int32_t                                            CollisionMipLevel;                                          // 0x0470   (0x0004)
-    int32_t                                            SimpleCollisionMipLevel;                                    // 0x0474   (0x0004)
-    float                                              CollisionThickness;                                         // 0x0478   (0x0004)
-    unsigned char                                      UnknownData16_6[0x4];                                       // 0x047C   (0x0004) MISSED
-    FBodyInstance                                      BodyInstance;                                               // 0x0480   (0x01A8)
-    bool                                               bGenerateOverlapEvents : 1;                                 // 0x0628:0 (0x0001)
-    bool                                               bBakeMaterialPositionOffsetIntoCollision : 1;               // 0x0628:1 (0x0001)
-    unsigned char                                      UnknownData17_5[0x3];                                       // 0x0629   (0x0003) MISSED
-    int32_t                                            ComponentSizeQuads;                                         // 0x062C   (0x0004)
-    int32_t                                            SubsectionSizeQuads;                                        // 0x0630   (0x0004)
-    int32_t                                            NumSubsections;                                             // 0x0634   (0x0004)
-    bool                                               bUsedForNavigation : 1;                                     // 0x0638:0 (0x0001)
-    bool                                               bFillCollisionUnderLandscapeForNavmesh : 1;                 // 0x0638:1 (0x0001)
-    unsigned char                                      UnknownData18_5[0x3];                                       // 0x0639   (0x0003) MISSED
-    bool                                               bUseDynamicMaterialInstance;                                // 0x063C   (0x0001)
-    ENavDataGatheringMode                              NavigationGeometryGatheringMode;                            // 0x063D   (0x0001)
-    bool                                               bUseLandscapeForCullingInvisibleHLODVertices;               // 0x063E   (0x0001)
-    bool                                               bHasLayersContent;                                          // 0x063F   (0x0001)
-    TMap<class UTexture2D*, class ULandscapeWeightmapUsage*> WeightmapUsageMap;                                    // 0x0640   (0x0050)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULandscapeSplinesComponent*                  SplineComponent;                                            // 0x02C8   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FGuid                                              LandscapeGuid;                                              // 0x02D0   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FIntPoint                                          LandscapeSectionOffset;                                     // 0x02E0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxLODLevel;                                                // 0x02E8   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LODDistanceFactor;                                          // 0x02EC   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ELandscapeLODFalloff>                  LODFalloff;                                                 // 0x02F0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData19_6[0x3];                                       // 0x02F1   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ComponentScreenSizeToUseSubSections;                        // 0x02F4   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Lod0ScreenSize;                                             // 0x02F8   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LOD0DistributionSetting;                                    // 0x02FC   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LODDistributionSetting;                                     // 0x0300   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TessellationComponentScreenSize;                            // 0x0304   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               UseTessellationComponentScreenSizeFalloff;                  // 0x0308   (0x0001)
+    /* public    */ unsigned char                                      UnknownData20_6[0x3];                                       // 0x0309   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TessellationComponentScreenSizeFalloff;                     // 0x030C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            OccluderGeometryLOD;                                        // 0x0310   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            StaticLightingLOD;                                          // 0x0314   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPhysicalMaterial*                           DefaultPhysMaterial;                                        // 0x0318   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StreamingDistanceMultiplier;                                // 0x0320   (0x0004)
+    /* public    */ unsigned char                                      UnknownData21_6[0x4];                                       // 0x0324   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          LandscapeMaterial;                                          // 0x0328   (0x0008)
+    /* public    */ unsigned char                                      UnknownData22_6[0x20];                                      // 0x0330   (0x0020) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          LandscapeHoleMaterial;                                      // 0x0350   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLandscapeProxyMaterialOverride>            LandscapeMaterialsOverride;                                 // 0x0358   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bMeshHoles;                                                 // 0x0368   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               MeshHolesMaxLod;                                            // 0x0369   (0x0001)
+    /* public    */ unsigned char                                      UnknownData23_6[0x6];                                       // 0x036A   (0x0006) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class URuntimeVirtualTexture*>              RuntimeVirtualTextures;                                     // 0x0370   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            VirtualTextureNumLods;                                      // 0x0380   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            VirtualTextureLodBias;                                      // 0x0384   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ERuntimeVirtualTextureMainPassType                 VirtualTextureRenderPassType;                               // 0x0388   (0x0001)
+    /* public    */ unsigned char                                      UnknownData24_6[0x3];                                       // 0x0389   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              NegativeZBoundsExtension;                                   // 0x038C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PositiveZBoundsExtension;                                   // 0x0390   (0x0004)
+    /* public    */ unsigned char                                      UnknownData25_6[0x4];                                       // 0x0394   (0x0004) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ULandscapeComponent*>                 LandscapeComponents;                                        // 0x0398   (0x0010)
+    UPROPERTY(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ULandscapeHeightfieldCollisionComponent*> CollisionComponents;                                    // 0x03A8   (0x0010)
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, DuplicateTransient, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UHierarchicalInstancedStaticMeshComponent*> FoliageComponents;                                    // 0x03B8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData26_6[0x64];                                      // 0x03C8   (0x0064) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bHasLandscapeGrass;                                         // 0x042C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData27_6[0x3];                                       // 0x042D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StaticLightingResolution;                                   // 0x0430   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               CastShadow : 1;                                             // 0x0434:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCastDynamicShadow : 1;                                     // 0x0434:1 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCastStaticShadow : 1;                                      // 0x0434:2 (0x0001)
+    /* public    */ unsigned char                                      UnknownData28_3[0x3];                                       // 0x0435   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCastFarShadow : 1;                                         // 0x0438:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData29_3[0x3];                                       // 0x0439   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCastHiddenShadow : 1;                                      // 0x043C:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData30_3[0x3];                                       // 0x043D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCastShadowAsTwoSided : 1;                                  // 0x0440:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData31_3[0x3];                                       // 0x0441   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAffectDistanceFieldLighting : 1;                           // 0x0444:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FLightingChannels                                  LightingChannels;                                           // 0x0445   (0x0001)
+    /* public    */ unsigned char                                      UnknownData32_6[0x2];                                       // 0x0446   (0x0002) MISSED
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseMaterialPositionOffsetInStaticLighting : 1;             // 0x0448:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bRenderCustomDepth : 1;                                     // 0x0448:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData33_5[0x3];                                       // 0x0449   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ERendererStencilMask                               CustomDepthStencilWriteMask;                                // 0x044C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData34_6[0x3];                                       // 0x044D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CustomDepthStencilValue;                                    // 0x0450   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LDMaxDrawDistance;                                          // 0x0454   (0x0004)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FLightmassPrimitiveSettings                        LightmassSettings;                                          // 0x0458   (0x0018)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CollisionMipLevel;                                          // 0x0470   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SimpleCollisionMipLevel;                                    // 0x0474   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CollisionThickness;                                         // 0x0478   (0x0004)
+    /* public    */ unsigned char                                      UnknownData35_6[0x4];                                       // 0x047C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FBodyInstance                                      BodyInstance;                                               // 0x0480   (0x01A8)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bGenerateOverlapEvents : 1;                                 // 0x0628:0 (0x0001)
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bBakeMaterialPositionOffsetIntoCollision : 1;               // 0x0628:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData36_5[0x3];                                       // 0x0629   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ComponentSizeQuads;                                         // 0x062C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SubsectionSizeQuads;                                        // 0x0630   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            NumSubsections;                                             // 0x0634   (0x0004)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUsedForNavigation : 1;                                     // 0x0638:0 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFillCollisionUnderLandscapeForNavmesh : 1;                 // 0x0638:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData37_5[0x3];                                       // 0x0639   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseDynamicMaterialInstance;                                // 0x063C   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ENavDataGatheringMode                              NavigationGeometryGatheringMode;                            // 0x063D   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseLandscapeForCullingInvisibleHLODVertices;               // 0x063E   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bHasLayersContent;                                          // 0x063F   (0x0001)
+    UPROPERTY(Transient, NativeAccessSpecifierPublic)
+    /* public    */ TMap<class UTexture2D*, class ULandscapeWeightmapUsage*> WeightmapUsageMap;                                    // 0x0640   (0x0050)
 
     /// Functions
     // Function /Script/Landscape.LandscapeProxy.SetLandscapeMaterialVectorParameterValue
@@ -311,14 +434,14 @@ public:
 };
 
 /// Class /Script/Landscape.Landscape
-/// Size: 0x0690 (1680 bytes) (0x000690 - 0x000690) align 8 MaxSize: 0x0690
+/// Size: 0x0690 (1680 bytes) (0x000690 - 0x000690) align n/a MaxSize: 0x0690
 class ALandscape : public ALandscapeProxy
 { 
 public:
 };
 
 /// Class /Script/Landscape.LandscapeBlueprintBrushBase
-/// Size: 0x02C8 (712 bytes) (0x0002C8 - 0x0002C8) align 8 MaxSize: 0x02C8
+/// Size: 0x02C8 (712 bytes) (0x0002C8 - 0x0002C8) align n/a MaxSize: 0x02C8
 class ALandscapeBlueprintBrushBase : public AActor
 { 
 public:
@@ -342,81 +465,124 @@ public:
 };
 
 /// Class /Script/Landscape.LandscapeLODStreamingProxy
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
 class ULandscapeLODStreamingProxy : public UStreamableRenderAsset
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0068   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0068   (0x0008) MISSED
 };
 
 /// Struct /Script/Landscape.LandscapeComponentMaterialOverride
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FLandscapeComponentMaterialOverride
 { 
-    FPerPlatformInt                                    LODIndex;                                                   // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    class UMaterialInterface*                          Material;                                                   // 0x0008   (0x0008)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FPerPlatformInt                                    LODIndex;                                                   // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          Material;                                                   // 0x0008   (0x0008)
 };
 
 /// Struct /Script/Landscape.WeightmapLayerAllocationInfo
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FWeightmapLayerAllocationInfo
 { 
-    class ULandscapeLayerInfoObject*                   LayerInfo;                                                  // 0x0000   (0x0008)
-    char                                               WeightmapTextureIndex;                                      // 0x0008   (0x0001)
-    char                                               WeightmapTextureChannel;                                    // 0x0009   (0x0001)
-    unsigned char                                      UnknownData00_7[0x6];                                       // 0x000A   (0x0006) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULandscapeLayerInfoObject*                   LayerInfo;                                                  // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               WeightmapTextureIndex;                                      // 0x0008   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               WeightmapTextureChannel;                                    // 0x0009   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x6];                                       // 0x000A   (0x0006) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeComponent
-/// Size: 0x0760 (1888 bytes) (0x000538 - 0x000760) align 16 MaxSize: 0x0760
+/// Size: 0x0760 (1888 bytes) (0x000538 - 0x000760) align n/a MaxSize: 0x0760
 class ULandscapeComponent : public UPrimitiveComponent
 { 
 public:
-    int32_t                                            SectionBaseX;                                               // 0x0538   (0x0004)
-    int32_t                                            SectionBaseY;                                               // 0x053C   (0x0004)
-    int32_t                                            ComponentSizeQuads;                                         // 0x0540   (0x0004)
-    int32_t                                            SubsectionSizeQuads;                                        // 0x0544   (0x0004)
-    int32_t                                            NumSubsections;                                             // 0x0548   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x054C   (0x0004) MISSED
-    class UMaterialInterface*                          OverrideMaterial;                                           // 0x0550   (0x0008)
-    class UMaterialInterface*                          OverrideHoleMaterial;                                       // 0x0558   (0x0008)
-    TArray<FLandscapeComponentMaterialOverride>        OverrideMaterials;                                          // 0x0560   (0x0010)
-    TArray<class UMaterialInstanceConstant*>           MaterialInstances;                                          // 0x0570   (0x0010)
-    TArray<class UMaterialInstanceDynamic*>            MaterialInstancesDynamic;                                   // 0x0580   (0x0010)
-    TArray<int8_t>                                     LODIndexToMaterialIndex;                                    // 0x0590   (0x0010)
-    TArray<int8_t>                                     MaterialIndexToDisabledTessellationMaterial;                // 0x05A0   (0x0010)
-    class UTexture2D*                                  XYOffsetmapTexture;                                         // 0x05B0   (0x0008)
-    unsigned char                                      UnknownData01_6[0x8];                                       // 0x05B8   (0x0008) MISSED
-    FVector4                                           WeightmapScaleBias;                                         // 0x05C0   (0x0010)
-    float                                              WeightmapSubsectionOffset;                                  // 0x05D0   (0x0004)
-    unsigned char                                      UnknownData02_6[0xC];                                       // 0x05D4   (0x000C) MISSED
-    FVector4                                           HeightmapScaleBias;                                         // 0x05E0   (0x0010)
-    FBox                                               CachedLocalBox;                                             // 0x05F0   (0x001C)
-    TLazyObjectPtr<class ULandscapeHeightfieldCollisionComponent*> CollisionComponent;                             // 0x060C   (0x001C)
-    class UTexture2D*                                  HeightmapTexture;                                           // 0x0628   (0x0008)
-    TArray<FWeightmapLayerAllocationInfo>              WeightmapLayerAllocations;                                  // 0x0630   (0x0010)
-    TArray<class UTexture2D*>                          WeightmapTextures;                                          // 0x0640   (0x0010)
-    class ULandscapeLODStreamingProxy*                 LODStreamingProxy;                                          // 0x0650   (0x0008)
-    FGuid                                              MapBuildDataId;                                             // 0x0658   (0x0010)
-    TArray<FGuid>                                      IrrelevantLights;                                           // 0x0668   (0x0010)
-    int32_t                                            CollisionMipLevel;                                          // 0x0678   (0x0004)
-    int32_t                                            SimpleCollisionMipLevel;                                    // 0x067C   (0x0004)
-    float                                              NegativeZBoundsExtension;                                   // 0x0680   (0x0004)
-    float                                              PositiveZBoundsExtension;                                   // 0x0684   (0x0004)
-    float                                              StaticLightingResolution;                                   // 0x0688   (0x0004)
-    int32_t                                            ForcedLOD;                                                  // 0x068C   (0x0004)
-    int32_t                                            LODBias;                                                    // 0x0690   (0x0004)
-    FGuid                                              StateId;                                                    // 0x0694   (0x0010)
-    FGuid                                              BakedTextureMaterialGuid;                                   // 0x06A4   (0x0010)
-    unsigned char                                      UnknownData03_6[0x4];                                       // 0x06B4   (0x0004) MISSED
-    class UTexture2D*                                  GIBakedBaseColorTexture;                                    // 0x06B8   (0x0008)
-    char                                               MobileBlendableLayerMask;                                   // 0x06C0   (0x0001)
-    unsigned char                                      UnknownData04_6[0x7];                                       // 0x06C1   (0x0007) MISSED
-    class UMaterialInterface*                          MobileMaterialInterface;                                    // 0x06C8   (0x0008)
-    TArray<class UMaterialInterface*>                  MobileMaterialInterfaces;                                   // 0x06D0   (0x0010)
-    TArray<class UTexture2D*>                          MobileWeightmapTextures;                                    // 0x06E0   (0x0010)
-    unsigned char                                      UnknownData05_7[0x70];                                      // 0x06F0   (0x0070) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SectionBaseX;                                               // 0x0538   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SectionBaseY;                                               // 0x053C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ComponentSizeQuads;                                         // 0x0540   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SubsectionSizeQuads;                                        // 0x0544   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            NumSubsections;                                             // 0x0548   (0x0004)
+    /* public    */ unsigned char                                      UnknownData06_6[0x4];                                       // 0x054C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          OverrideMaterial;                                           // 0x0550   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          OverrideHoleMaterial;                                       // 0x0558   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLandscapeComponentMaterialOverride>        OverrideMaterials;                                          // 0x0560   (0x0010)
+    UPROPERTY(ZeroConstructor, TextExportTransient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UMaterialInstanceConstant*>           MaterialInstances;                                          // 0x0570   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, TextExportTransient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UMaterialInstanceDynamic*>            MaterialInstancesDynamic;                                   // 0x0580   (0x0010)
+    UPROPERTY(ZeroConstructor, TextExportTransient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int8_t>                                     LODIndexToMaterialIndex;                                    // 0x0590   (0x0010)
+    UPROPERTY(ZeroConstructor, TextExportTransient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int8_t>                                     MaterialIndexToDisabledTessellationMaterial;                // 0x05A0   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture2D*                                  XYOffsetmapTexture;                                         // 0x05B0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData07_6[0x8];                                       // 0x05B8   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector4                                           WeightmapScaleBias;                                         // 0x05C0   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WeightmapSubsectionOffset;                                  // 0x05D0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData08_6[0xC];                                       // 0x05D4   (0x000C) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector4                                           HeightmapScaleBias;                                         // 0x05E0   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBox                                               CachedLocalBox;                                             // 0x05F0   (0x001C)
+    UPROPERTY(ExportObject, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TLazyObjectPtr<class ULandscapeHeightfieldCollisionComponent*> CollisionComponent;                             // 0x060C   (0x001C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UTexture2D*                                  HeightmapTexture;                                           // 0x0628   (0x0008)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FWeightmapLayerAllocationInfo>              WeightmapLayerAllocations;                                  // 0x0630   (0x0010)
+    UPROPERTY(ZeroConstructor, TextExportTransient, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class UTexture2D*>                          WeightmapTextures;                                          // 0x0640   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class ULandscapeLODStreamingProxy*                 LODStreamingProxy;                                          // 0x0650   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              MapBuildDataId;                                             // 0x0658   (0x0010)
+    UPROPERTY(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FGuid>                                      IrrelevantLights;                                           // 0x0668   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CollisionMipLevel;                                          // 0x0678   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SimpleCollisionMipLevel;                                    // 0x067C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              NegativeZBoundsExtension;                                   // 0x0680   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PositiveZBoundsExtension;                                   // 0x0684   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StaticLightingResolution;                                   // 0x0688   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ForcedLOD;                                                  // 0x068C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            LODBias;                                                    // 0x0690   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              StateId;                                                    // 0x0694   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              BakedTextureMaterialGuid;                                   // 0x06A4   (0x0010)
+    /* public    */ unsigned char                                      UnknownData09_6[0x4];                                       // 0x06B4   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture2D*                                  GIBakedBaseColorTexture;                                    // 0x06B8   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               MobileBlendableLayerMask;                                   // 0x06C0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData10_6[0x7];                                       // 0x06C1   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, NonPIEDuplicateTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          MobileMaterialInterface;                                    // 0x06C8   (0x0008)
+    UPROPERTY(ZeroConstructor, NonPIEDuplicateTransient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UMaterialInterface*>                  MobileMaterialInterfaces;                                   // 0x06D0   (0x0010)
+    UPROPERTY(ZeroConstructor, NonPIEDuplicateTransient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UTexture2D*>                          MobileWeightmapTextures;                                    // 0x06E0   (0x0010)
+    /* public    */ unsigned char                                      UnknownData11_7[0x70];                                      // 0x06F0   (0x0070) MISSED
 
     /// Functions
     // Function /Script/Landscape.LandscapeComponent.GetMaterialInstanceDynamic
@@ -433,93 +599,132 @@ public:
 };
 
 /// Class /Script/Landscape.LandscapeGizmoActor
-/// Size: 0x02C8 (712 bytes) (0x0002C8 - 0x0002C8) align 8 MaxSize: 0x02C8
+/// Size: 0x02C8 (712 bytes) (0x0002C8 - 0x0002C8) align n/a MaxSize: 0x02C8
 class ALandscapeGizmoActor : public AActor
 { 
 public:
 };
 
 /// Class /Script/Landscape.LandscapeGizmoActiveActor
-/// Size: 0x0318 (792 bytes) (0x0002C8 - 0x000318) align 8 MaxSize: 0x0318
+/// Size: 0x0318 (792 bytes) (0x0002C8 - 0x000318) align n/a MaxSize: 0x0318
 class ALandscapeGizmoActiveActor : public ALandscapeGizmoActor
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x50];                                      // 0x02C8   (0x0050) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x50];                                      // 0x02C8   (0x0050) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeGizmoRenderComponent
-/// Size: 0x0540 (1344 bytes) (0x000538 - 0x000540) align 16 MaxSize: 0x0540
+/// Size: 0x0540 (1344 bytes) (0x000538 - 0x000540) align n/a MaxSize: 0x0540
 class ULandscapeGizmoRenderComponent : public UPrimitiveComponent
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0538   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0538   (0x0008) MISSED
 };
 
 /// Struct /Script/Landscape.GrassVariety
-/// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align n/a MaxSize: 0x0058
 struct FGrassVariety
 { 
-    class UStaticMesh*                                 GrassMesh;                                                  // 0x0000   (0x0008)
-    TArray<class UMaterialInterface*>                  OverrideMaterials;                                          // 0x0008   (0x0010)
-    FPerPlatformFloat                                  GrassDensity;                                               // 0x0018   (0x0004)
-    bool                                               bUseGrid;                                                   // 0x001C   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x001D   (0x0003) MISSED
-    float                                              PlacementJitter;                                            // 0x0020   (0x0004)
-    FPerPlatformInt                                    StartCullDistance;                                          // 0x0024   (0x0004)
-    FPerPlatformInt                                    EndCullDistance;                                            // 0x0028   (0x0004)
-    int32_t                                            MinLOD;                                                     // 0x002C   (0x0004)
-    EGrassScaling                                      Scaling;                                                    // 0x0030   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0031   (0x0003) MISSED
-    FFloatInterval                                     ScaleX;                                                     // 0x0034   (0x0008)
-    FFloatInterval                                     ScaleY;                                                     // 0x003C   (0x0008)
-    FFloatInterval                                     ScaleZ;                                                     // 0x0044   (0x0008)
-    bool                                               RandomRotation;                                             // 0x004C   (0x0001)
-    bool                                               AlignToSurface;                                             // 0x004D   (0x0001)
-    bool                                               bUseLandscapeLightmap;                                      // 0x004E   (0x0001)
-    FLightingChannels                                  LightingChannels;                                           // 0x004F   (0x0001)
-    bool                                               bReceivesDecals;                                            // 0x0050   (0x0001)
-    bool                                               bCastDynamicShadow;                                         // 0x0051   (0x0001)
-    bool                                               bKeepInstanceBufferCPUCopy;                                 // 0x0052   (0x0001)
-    unsigned char                                      UnknownData02_7[0x5];                                       // 0x0053   (0x0005) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMesh*                                 GrassMesh;                                                  // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UMaterialInterface*>                  OverrideMaterials;                                          // 0x0008   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FPerPlatformFloat                                  GrassDensity;                                               // 0x0018   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseGrid;                                                   // 0x001C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x001D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PlacementJitter;                                            // 0x0020   (0x0004)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FPerPlatformInt                                    StartCullDistance;                                          // 0x0024   (0x0004)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FPerPlatformInt                                    EndCullDistance;                                            // 0x0028   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MinLOD;                                                     // 0x002C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EGrassScaling                                      Scaling;                                                    // 0x0030   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x0031   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFloatInterval                                     ScaleX;                                                     // 0x0034   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFloatInterval                                     ScaleY;                                                     // 0x003C   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFloatInterval                                     ScaleZ;                                                     // 0x0044   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               RandomRotation;                                             // 0x004C   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               AlignToSurface;                                             // 0x004D   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseLandscapeLightmap;                                      // 0x004E   (0x0001)
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FLightingChannels                                  LightingChannels;                                           // 0x004F   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bReceivesDecals;                                            // 0x0050   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCastDynamicShadow;                                         // 0x0051   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bKeepInstanceBufferCPUCopy;                                 // 0x0052   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x5];                                       // 0x0053   (0x0005) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeGrassType
-/// Size: 0x0060 (96 bytes) (0x000028 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000028 - 0x000060) align n/a MaxSize: 0x0060
 class ULandscapeGrassType : public UObject
 { 
 public:
-    TArray<FGrassVariety>                              GrassVarieties;                                             // 0x0028   (0x0010)
-    bool                                               bEnableDensityScaling : 1;                                  // 0x0038:0 (0x0001)
-    unsigned char                                      UnknownData00_5[0x7];                                       // 0x0039   (0x0007) MISSED
-    class UStaticMesh*                                 GrassMesh;                                                  // 0x0040   (0x0008)
-    float                                              GrassDensity;                                               // 0x0048   (0x0004)
-    float                                              PlacementJitter;                                            // 0x004C   (0x0004)
-    int32_t                                            StartCullDistance;                                          // 0x0050   (0x0004)
-    int32_t                                            EndCullDistance;                                            // 0x0054   (0x0004)
-    bool                                               RandomRotation;                                             // 0x0058   (0x0001)
-    bool                                               AlignToSurface;                                             // 0x0059   (0x0001)
-    unsigned char                                      UnknownData01_7[0x6];                                       // 0x005A   (0x0006) MISSED
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FGrassVariety>                              GrassVarieties;                                             // 0x0028   (0x0010)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableDensityScaling : 1;                                  // 0x0038:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_5[0x7];                                       // 0x0039   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMesh*                                 GrassMesh;                                                  // 0x0040   (0x0008)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              GrassDensity;                                               // 0x0048   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PlacementJitter;                                            // 0x004C   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            StartCullDistance;                                          // 0x0050   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            EndCullDistance;                                            // 0x0054   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               RandomRotation;                                             // 0x0058   (0x0001)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               AlignToSurface;                                             // 0x0059   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x6];                                       // 0x005A   (0x0006) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeHeightfieldCollisionComponent
-/// Size: 0x0620 (1568 bytes) (0x000538 - 0x000620) align 16 MaxSize: 0x0618
+/// Size: 0x0620 (1568 bytes) (0x000538 - 0x000620) align n/a MaxSize: 0x0618
 class ULandscapeHeightfieldCollisionComponent : public UPrimitiveComponent
 { 
 public:
-    TArray<class ULandscapeLayerInfoObject*>           ComponentLayerInfos;                                        // 0x0538   (0x0010)
-    int32_t                                            SectionBaseX;                                               // 0x0548   (0x0004)
-    int32_t                                            SectionBaseY;                                               // 0x054C   (0x0004)
-    int32_t                                            CollisionSizeQuads;                                         // 0x0550   (0x0004)
-    float                                              CollisionScale;                                             // 0x0554   (0x0004)
-    int32_t                                            SimpleCollisionSizeQuads;                                   // 0x0558   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x055C   (0x0004) MISSED
-    TArray<char>                                       CollisionQuadFlags;                                         // 0x0560   (0x0010)
-    FGuid                                              HeightfieldGuid;                                            // 0x0570   (0x0010)
-    FBox                                               CachedLocalBox;                                             // 0x0580   (0x001C)
-    TLazyObjectPtr<class ULandscapeComponent*>         RenderComponent;                                            // 0x059C   (0x001C)
-    unsigned char                                      UnknownData01_6[0x10];                                      // 0x05B8   (0x0010) MISSED
-    TArray<class UPhysicalMaterial*>                   CookedPhysicalMaterials;                                    // 0x05C8   (0x0010)
-    unsigned char                                      UnknownData02_7[0x40];                                      // 0x05D8   (0x0040) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ULandscapeLayerInfoObject*>           ComponentLayerInfos;                                        // 0x0538   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SectionBaseX;                                               // 0x0548   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SectionBaseY;                                               // 0x054C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CollisionSizeQuads;                                         // 0x0550   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CollisionScale;                                             // 0x0554   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SimpleCollisionSizeQuads;                                   // 0x0558   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x055C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       CollisionQuadFlags;                                         // 0x0560   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              HeightfieldGuid;                                            // 0x0570   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBox                                               CachedLocalBox;                                             // 0x0580   (0x001C)
+    UPROPERTY(ExportObject, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TLazyObjectPtr<class ULandscapeComponent*>         RenderComponent;                                            // 0x059C   (0x001C)
+    /* public    */ unsigned char                                      UnknownData04_6[0x10];                                      // 0x05B8   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UPhysicalMaterial*>                   CookedPhysicalMaterials;                                    // 0x05C8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x40];                                      // 0x05D8   (0x0040) MISSED
 
     /// Functions
     // Function /Script/Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent
@@ -527,108 +732,135 @@ public:
 };
 
 /// Class /Script/Landscape.LandscapeInfo
-/// Size: 0x0210 (528 bytes) (0x000028 - 0x000210) align 8 MaxSize: 0x0210
+/// Size: 0x0210 (528 bytes) (0x000028 - 0x000210) align n/a MaxSize: 0x0210
 class ULandscapeInfo : public UObject
 { 
 public:
-    TLazyObjectPtr<class ALandscape*>                  LandscapeActor;                                             // 0x0028   (0x001C)
-    FGuid                                              LandscapeGuid;                                              // 0x0044   (0x0010)
-    int32_t                                            ComponentSizeQuads;                                         // 0x0054   (0x0004)
-    int32_t                                            SubsectionSizeQuads;                                        // 0x0058   (0x0004)
-    int32_t                                            ComponentNumSubsections;                                    // 0x005C   (0x0004)
-    FVector                                            DrawScale;                                                  // 0x0060   (0x000C)
-    unsigned char                                      UnknownData00_6[0xA4];                                      // 0x006C   (0x00A4) MISSED
-    TArray<class ALandscapeStreamingProxy*>            Proxies;                                                    // 0x0110   (0x0010)
-    unsigned char                                      UnknownData01_7[0xF0];                                      // 0x0120   (0x00F0) MISSED
+    UPROPERTY(IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TLazyObjectPtr<class ALandscape*>                  LandscapeActor;                                             // 0x0028   (0x001C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              LandscapeGuid;                                              // 0x0044   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ComponentSizeQuads;                                         // 0x0054   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SubsectionSizeQuads;                                        // 0x0058   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ComponentNumSubsections;                                    // 0x005C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            DrawScale;                                                  // 0x0060   (0x000C)
+    /* public    */ unsigned char                                      UnknownData02_6[0xA4];                                      // 0x006C   (0x00A4) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ALandscapeStreamingProxy*>            Proxies;                                                    // 0x0110   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0xF0];                                      // 0x0120   (0x00F0) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeInfoMap
-/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align n/a MaxSize: 0x0080
 class ULandscapeInfoMap : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x58];                                      // 0x0028   (0x0058) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x58];                                      // 0x0028   (0x0058) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeLayerInfoObject
-/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align n/a MaxSize: 0x0050
 class ULandscapeLayerInfoObject : public UObject
 { 
 public:
-    FName                                              LayerName;                                                  // 0x0028   (0x0008)
-    class UPhysicalMaterial*                           PhysMaterial;                                               // 0x0030   (0x0008)
-    float                                              Hardness;                                                   // 0x0038   (0x0004)
-    FLinearColor                                       LayerUsageDebugColor;                                       // 0x003C   (0x0010)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x004C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              LayerName;                                                  // 0x0028   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPhysicalMaterial*                           PhysMaterial;                                               // 0x0030   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Hardness;                                                   // 0x0038   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       LayerUsageDebugColor;                                       // 0x003C   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x004C   (0x0004) MISSED
 };
 
 /// Struct /Script/Landscape.LandscapeMaterialTextureStreamingInfo
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FLandscapeMaterialTextureStreamingInfo
 { 
-    FName                                              TextureName;                                                // 0x0000   (0x0008)
-    float                                              TexelFactor;                                                // 0x0008   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              TextureName;                                                // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TexelFactor;                                                // 0x0008   (0x0004)
 };
 
 /// Class /Script/Landscape.LandscapeMaterialInstanceConstant
-/// Size: 0x0380 (896 bytes) (0x000368 - 0x000380) align 8 MaxSize: 0x0380
+/// Size: 0x0380 (896 bytes) (0x000368 - 0x000380) align n/a MaxSize: 0x0380
 class ULandscapeMaterialInstanceConstant : public UMaterialInstanceConstant
 { 
 public:
-    TArray<FLandscapeMaterialTextureStreamingInfo>     TextureStreamingInfo;                                       // 0x0368   (0x0010)
-    bool                                               bIsLayerThumbnail : 1;                                      // 0x0378:0 (0x0001)
-    bool                                               bDisableTessellation : 1;                                   // 0x0378:1 (0x0001)
-    bool                                               bMobile : 1;                                                // 0x0378:2 (0x0001)
-    bool                                               bEditorToolUsage : 1;                                       // 0x0378:3 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0379   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLandscapeMaterialTextureStreamingInfo>     TextureStreamingInfo;                                       // 0x0368   (0x0010)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsLayerThumbnail : 1;                                      // 0x0378:0 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDisableTessellation : 1;                                   // 0x0378:1 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bMobile : 1;                                                // 0x0378:2 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEditorToolUsage : 1;                                       // 0x0378:3 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0379   (0x0007) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeMeshCollisionComponent
-/// Size: 0x0630 (1584 bytes) (0x000618 - 0x000630) align 16 MaxSize: 0x0630
+/// Size: 0x0630 (1584 bytes) (0x000618 - 0x000630) align n/a MaxSize: 0x0630
 class ULandscapeMeshCollisionComponent : public ULandscapeHeightfieldCollisionComponent
 { 
 public:
-    FGuid                                              MeshGuid;                                                   // 0x0618   (0x0010)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0628   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              MeshGuid;                                                   // 0x0618   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0628   (0x0008) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeMeshProxyActor
-/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align 8 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align n/a MaxSize: 0x02D0
 class ALandscapeMeshProxyActor : public AActor
 { 
 public:
-    class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                                // 0x02C8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                                // 0x02C8   (0x0008)
 };
 
 /// Class /Script/Landscape.LandscapeMeshProxyComponent
-/// Size: 0x0610 (1552 bytes) (0x0005E0 - 0x000610) align 16 MaxSize: 0x0610
+/// Size: 0x0610 (1552 bytes) (0x0005E0 - 0x000610) align n/a MaxSize: 0x0610
 class ULandscapeMeshProxyComponent : public UStaticMeshComponent
 { 
 public:
-    FGuid                                              LandscapeGuid;                                              // 0x05E0   (0x0010)
-    TArray<FIntPoint>                                  ProxyComponentBases;                                        // 0x05F0   (0x0010)
-    int8_t                                             ProxyLOD;                                                   // 0x0600   (0x0001)
-    unsigned char                                      UnknownData00_7[0xF];                                       // 0x0601   (0x000F) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FGuid                                              LandscapeGuid;                                              // 0x05E0   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FIntPoint>                                  ProxyComponentBases;                                        // 0x05F0   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int8_t                                             ProxyLOD;                                                   // 0x0600   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0xF];                                       // 0x0601   (0x000F) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeSettings
-/// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000038 - 0x000040) align n/a MaxSize: 0x0040
 class ULandscapeSettings : public UDeveloperSettings
 { 
 public:
-    int32_t                                            MaxNumberOfLayers;                                          // 0x0038   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x003C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxNumberOfLayers;                                          // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x003C   (0x0004) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeSplinesComponent
-/// Size: 0x0570 (1392 bytes) (0x000538 - 0x000570) align 16 MaxSize: 0x0570
+/// Size: 0x0570 (1392 bytes) (0x000538 - 0x000570) align n/a MaxSize: 0x0570
 class ULandscapeSplinesComponent : public UPrimitiveComponent
 { 
 public:
-    TArray<class ULandscapeSplineControlPoint*>        ControlPoints;                                              // 0x0538   (0x0010)
-    TArray<class ULandscapeSplineSegment*>             Segments;                                                   // 0x0548   (0x0010)
-    TArray<class UMeshComponent*>                      CookedForeignMeshComponents;                                // 0x0558   (0x0010)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0568   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, Protected, TextExportTransient, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class ULandscapeSplineControlPoint*>        ControlPoints;                                              // 0x0538   (0x0010)
+    UPROPERTY(ZeroConstructor, Protected, TextExportTransient, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class ULandscapeSplineSegment*>             Segments;                                                   // 0x0548   (0x0010)
+    UPROPERTY(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, TextExportTransient, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UMeshComponent*>                      CookedForeignMeshComponents;                                // 0x0558   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0568   (0x0008) MISSED
 
     /// Functions
     // Function /Script/Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
@@ -636,367 +868,478 @@ public:
 };
 
 /// Struct /Script/Landscape.LandscapeSplineConnection
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FLandscapeSplineConnection
 { 
-    class ULandscapeSplineSegment*                     Segment;                                                    // 0x0000   (0x0008)
-    bool                                               End : 1;                                                    // 0x0008:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0009   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULandscapeSplineSegment*                     Segment;                                                    // 0x0000   (0x0008)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               End : 1;                                                    // 0x0008:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0009   (0x0007) MISSED
 };
 
 /// Struct /Script/Landscape.LandscapeSplineInterpPoint
-/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align 4 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align n/a MaxSize: 0x0070
 struct FLandscapeSplineInterpPoint
 { 
-    FVector                                            Center;                                                     // 0x0000   (0x000C)
-    FVector                                            Left;                                                       // 0x000C   (0x000C)
-    FVector                                            Right;                                                      // 0x0018   (0x000C)
-    FVector                                            FalloffLeft;                                                // 0x0024   (0x000C)
-    FVector                                            FalloffRight;                                               // 0x0030   (0x000C)
-    FVector                                            LayerLeft;                                                  // 0x003C   (0x000C)
-    FVector                                            LayerRight;                                                 // 0x0048   (0x000C)
-    FVector                                            LayerFalloffLeft;                                           // 0x0054   (0x000C)
-    FVector                                            LayerFalloffRight;                                          // 0x0060   (0x000C)
-    float                                              StartEndFalloff;                                            // 0x006C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Center;                                                     // 0x0000   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Left;                                                       // 0x000C   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Right;                                                      // 0x0018   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            FalloffLeft;                                                // 0x0024   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            FalloffRight;                                               // 0x0030   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LayerLeft;                                                  // 0x003C   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LayerRight;                                                 // 0x0048   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LayerFalloffLeft;                                           // 0x0054   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LayerFalloffRight;                                          // 0x0060   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StartEndFalloff;                                            // 0x006C   (0x0004)
 };
 
 /// Class /Script/Landscape.LandscapeSplineControlPoint
-/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align n/a MaxSize: 0x00A8
 class ULandscapeSplineControlPoint : public UObject
 { 
 public:
-    FVector                                            Location;                                                   // 0x0028   (0x000C)
-    FRotator                                           Rotation;                                                   // 0x0034   (0x000C)
-    float                                              Width;                                                      // 0x0040   (0x0004)
-    float                                              LayerWidthRatio;                                            // 0x0044   (0x0004)
-    float                                              SideFalloff;                                                // 0x0048   (0x0004)
-    float                                              LeftSideFalloffFactor;                                      // 0x004C   (0x0004)
-    float                                              RightSideFalloffFactor;                                     // 0x0050   (0x0004)
-    float                                              LeftSideLayerFalloffFactor;                                 // 0x0054   (0x0004)
-    float                                              RightSideLayerFalloffFactor;                                // 0x0058   (0x0004)
-    float                                              EndFalloff;                                                 // 0x005C   (0x0004)
-    TArray<FLandscapeSplineConnection>                 ConnectedSegments;                                          // 0x0060   (0x0010)
-    TArray<FLandscapeSplineInterpPoint>                Points;                                                     // 0x0070   (0x0010)
-    FBox                                               Bounds;                                                     // 0x0080   (0x001C)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x009C   (0x0004) MISSED
-    class UControlPointMeshComponent*                  LocalMeshComponent;                                         // 0x00A0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Location;                                                   // 0x0028   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FRotator                                           Rotation;                                                   // 0x0034   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Width;                                                      // 0x0040   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LayerWidthRatio;                                            // 0x0044   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SideFalloff;                                                // 0x0048   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LeftSideFalloffFactor;                                      // 0x004C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RightSideFalloffFactor;                                     // 0x0050   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LeftSideLayerFalloffFactor;                                 // 0x0054   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RightSideLayerFalloffFactor;                                // 0x0058   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              EndFalloff;                                                 // 0x005C   (0x0004)
+    UPROPERTY(ZeroConstructor, TextExportTransient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLandscapeSplineConnection>                 ConnectedSegments;                                          // 0x0060   (0x0010)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FLandscapeSplineInterpPoint>                Points;                                                     // 0x0070   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBox                                               Bounds;                                                     // 0x0080   (0x001C)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x009C   (0x0004) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UControlPointMeshComponent*                  LocalMeshComponent;                                         // 0x00A0   (0x0008)
 };
 
 /// Struct /Script/Landscape.LandscapeSplineSegmentConnection
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FLandscapeSplineSegmentConnection
 { 
-    class ULandscapeSplineControlPoint*                ControlPoint;                                               // 0x0000   (0x0008)
-    float                                              TangentLen;                                                 // 0x0008   (0x0004)
-    FName                                              SocketName;                                                 // 0x000C   (0x0008)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0014   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULandscapeSplineControlPoint*                ControlPoint;                                               // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TangentLen;                                                 // 0x0008   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              SocketName;                                                 // 0x000C   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0014   (0x0004) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeSplineSegment
-/// Size: 0x00B0 (176 bytes) (0x000028 - 0x0000B0) align 8 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000028 - 0x0000B0) align n/a MaxSize: 0x00B0
 class ULandscapeSplineSegment : public UObject
 { 
 public:
-    FLandscapeSplineSegmentConnection                  Connections[2];                                             // 0x0028   (0x0030)
-    FInterpCurveVector                                 SplineInfo;                                                 // 0x0058   (0x0018)
-    TArray<FLandscapeSplineInterpPoint>                Points;                                                     // 0x0070   (0x0010)
-    FBox                                               Bounds;                                                     // 0x0080   (0x001C)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x009C   (0x0004) MISSED
-    TArray<class USplineMeshComponent*>                LocalMeshComponents;                                        // 0x00A0   (0x0010)
+    UPROPERTY(Edit, EditFixedSize, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FLandscapeSplineSegmentConnection                  Connections[2];                                             // 0x0028   (0x0030)
+    UPROPERTY(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FInterpCurveVector                                 SplineInfo;                                                 // 0x0058   (0x0018)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FLandscapeSplineInterpPoint>                Points;                                                     // 0x0070   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBox                                               Bounds;                                                     // 0x0080   (0x001C)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x009C   (0x0004) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, TextExportTransient, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class USplineMeshComponent*>                LocalMeshComponents;                                        // 0x00A0   (0x0010)
 };
 
 /// Class /Script/Landscape.LandscapeStreamingProxy
-/// Size: 0x06B0 (1712 bytes) (0x000690 - 0x0006B0) align 8 MaxSize: 0x06B0
+/// Size: 0x06B0 (1712 bytes) (0x000690 - 0x0006B0) align n/a MaxSize: 0x06B0
 class ALandscapeStreamingProxy : public ALandscapeProxy
 { 
 public:
-    TLazyObjectPtr<class ALandscape*>                  LandscapeActor;                                             // 0x0690   (0x001C)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x06AC   (0x0004) MISSED
+    UPROPERTY(Edit, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TLazyObjectPtr<class ALandscape*>                  LandscapeActor;                                             // 0x0690   (0x001C)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x06AC   (0x0004) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeSubsystem
-/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align n/a MaxSize: 0x0048
 class ULandscapeSubsystem : public UWorldSubsystem
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x18];                                      // 0x0030   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x18];                                      // 0x0030   (0x0018) MISSED
 };
 
 /// Class /Script/Landscape.LandscapeWeightmapUsage
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 class ULandscapeWeightmapUsage : public UObject
 { 
 public:
-    class ULandscapeComponent*                         ChannelUsage[4];                                            // 0x0028   (0x0020)
-    FGuid                                              LayerGuid;                                                  // 0x0048   (0x0010)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULandscapeComponent*                         ChannelUsage[4];                                            // 0x0028   (0x0020)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              LayerGuid;                                                  // 0x0048   (0x0010)
 };
 
 /// Struct /Script/Landscape.GrassInput
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FGrassInput
 { 
-    FName                                              Name;                                                       // 0x0000   (0x0008)
-    class ULandscapeGrassType*                         GrassType;                                                  // 0x0008   (0x0008)
-    FExpressionInput                                   Input;                                                      // 0x0010   (0x000C)
-    unsigned char                                      UnknownData00_7[0xC];                                       // 0x001C   (0x000C) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              Name;                                                       // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULandscapeGrassType*                         GrassType;                                                  // 0x0008   (0x0008)
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FExpressionInput                                   Input;                                                      // 0x0010   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_7[0xC];                                       // 0x001C   (0x000C) MISSED
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeGrassOutput
-/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align n/a MaxSize: 0x0050
 class UMaterialExpressionLandscapeGrassOutput : public UMaterialExpressionCustomOutput
 { 
 public:
-    TArray<FGrassInput>                                GrassTypes;                                                 // 0x0040   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FGrassInput>                                GrassTypes;                                                 // 0x0040   (0x0010)
 };
 
 /// Struct /Script/Landscape.LayerBlendInput
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 4 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FLayerBlendInput
 { 
-    FName                                              LayerName;                                                  // 0x0000   (0x0008)
-    TEnumAsByte<ELandscapeLayerBlendType>              BlendType;                                                  // 0x0008   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0009   (0x0003) MISSED
-    FExpressionInput                                   LayerInput;                                                 // 0x000C   (0x000C)
-    unsigned char                                      UnknownData01_6[0x8];                                       // 0x0018   (0x0008) MISSED
-    FExpressionInput                                   HeightInput;                                                // 0x0020   (0x000C)
-    unsigned char                                      UnknownData02_6[0x8];                                       // 0x002C   (0x0008) MISSED
-    float                                              PreviewWeight;                                              // 0x0034   (0x0004)
-    FVector                                            ConstLayerInput;                                            // 0x0038   (0x000C)
-    float                                              ConstHeightInput;                                           // 0x0044   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              LayerName;                                                  // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ELandscapeLayerBlendType>              BlendType;                                                  // 0x0008   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x0009   (0x0003) MISSED
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FExpressionInput                                   LayerInput;                                                 // 0x000C   (0x000C)
+    /* public    */ unsigned char                                      UnknownData04_6[0x8];                                       // 0x0018   (0x0008) MISSED
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FExpressionInput                                   HeightInput;                                                // 0x0020   (0x000C)
+    /* public    */ unsigned char                                      UnknownData05_6[0x8];                                       // 0x002C   (0x0008) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PreviewWeight;                                              // 0x0034   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            ConstLayerInput;                                            // 0x0038   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ConstHeightInput;                                           // 0x0044   (0x0004)
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerBlend
-/// Size: 0x0060 (96 bytes) (0x000040 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000040 - 0x000060) align n/a MaxSize: 0x0060
 class UMaterialExpressionLandscapeLayerBlend : public UMaterialExpression
 { 
 public:
-    TArray<FLayerBlendInput>                           Layers;                                                     // 0x0040   (0x0010)
-    FGuid                                              ExpressionGUID;                                             // 0x0050   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLayerBlendInput>                           Layers;                                                     // 0x0040   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ExpressionGUID;                                             // 0x0050   (0x0010)
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerCoords
-/// Size: 0x0058 (88 bytes) (0x000040 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000040 - 0x000058) align n/a MaxSize: 0x0058
 class UMaterialExpressionLandscapeLayerCoords : public UMaterialExpression
 { 
 public:
-    TEnumAsByte<ETerrainCoordMappingType>              MappingType;                                                // 0x0040   (0x0001)
-    TEnumAsByte<ELandscapeCustomizedCoordType>         CustomUVType;                                               // 0x0041   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0042   (0x0002) MISSED
-    float                                              MappingScale;                                               // 0x0044   (0x0004)
-    float                                              MappingRotation;                                            // 0x0048   (0x0004)
-    float                                              MappingPanU;                                                // 0x004C   (0x0004)
-    float                                              MappingPanV;                                                // 0x0050   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0054   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ETerrainCoordMappingType>              MappingType;                                                // 0x0040   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ELandscapeCustomizedCoordType>         CustomUVType;                                               // 0x0041   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x2];                                       // 0x0042   (0x0002) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MappingScale;                                               // 0x0044   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MappingRotation;                                            // 0x0048   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MappingPanU;                                                // 0x004C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MappingPanV;                                                // 0x0050   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x0054   (0x0004) MISSED
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerSample
-/// Size: 0x0060 (96 bytes) (0x000040 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000040 - 0x000060) align n/a MaxSize: 0x0060
 class UMaterialExpressionLandscapeLayerSample : public UMaterialExpression
 { 
 public:
-    FName                                              ParameterName;                                              // 0x0040   (0x0008)
-    float                                              PreviewWeight;                                              // 0x0048   (0x0004)
-    FGuid                                              ExpressionGUID;                                             // 0x004C   (0x0010)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x005C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ParameterName;                                              // 0x0040   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PreviewWeight;                                              // 0x0048   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ExpressionGUID;                                             // 0x004C   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x005C   (0x0004) MISSED
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerSwitch
-/// Size: 0x0088 (136 bytes) (0x000040 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000040 - 0x000088) align n/a MaxSize: 0x0088
 class UMaterialExpressionLandscapeLayerSwitch : public UMaterialExpression
 { 
 public:
-    FExpressionInput                                   LayerUsed;                                                  // 0x0040   (0x000C)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x004C   (0x0008) MISSED
-    FExpressionInput                                   LayerNotUsed;                                               // 0x0054   (0x000C)
-    unsigned char                                      UnknownData01_6[0x8];                                       // 0x0060   (0x0008) MISSED
-    FName                                              ParameterName;                                              // 0x0068   (0x0008)
-    bool                                               PreviewUsed : 1;                                            // 0x0070:0 (0x0001)
-    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0071   (0x0003) MISSED
-    FGuid                                              ExpressionGUID;                                             // 0x0074   (0x0010)
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0084   (0x0004) MISSED
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FExpressionInput                                   LayerUsed;                                                  // 0x0040   (0x000C)
+    /* public    */ unsigned char                                      UnknownData04_6[0x8];                                       // 0x004C   (0x0008) MISSED
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FExpressionInput                                   LayerNotUsed;                                               // 0x0054   (0x000C)
+    /* public    */ unsigned char                                      UnknownData05_6[0x8];                                       // 0x0060   (0x0008) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ParameterName;                                              // 0x0068   (0x0008)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               PreviewUsed : 1;                                            // 0x0070:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_5[0x3];                                       // 0x0071   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ExpressionGUID;                                             // 0x0074   (0x0010)
+    /* public    */ unsigned char                                      UnknownData07_7[0x4];                                       // 0x0084   (0x0004) MISSED
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerWeight
-/// Size: 0x0090 (144 bytes) (0x000040 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000040 - 0x000090) align n/a MaxSize: 0x0090
 class UMaterialExpressionLandscapeLayerWeight : public UMaterialExpression
 { 
 public:
-    FExpressionInput                                   Base;                                                       // 0x0040   (0x000C)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x004C   (0x0008) MISSED
-    FExpressionInput                                   Layer;                                                      // 0x0054   (0x000C)
-    unsigned char                                      UnknownData01_6[0x8];                                       // 0x0060   (0x0008) MISSED
-    FName                                              ParameterName;                                              // 0x0068   (0x0008)
-    float                                              PreviewWeight;                                              // 0x0070   (0x0004)
-    FVector                                            ConstBase;                                                  // 0x0074   (0x000C)
-    FGuid                                              ExpressionGUID;                                             // 0x0080   (0x0010)
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FExpressionInput                                   Base;                                                       // 0x0040   (0x000C)
+    /* public    */ unsigned char                                      UnknownData02_6[0x8];                                       // 0x004C   (0x0008) MISSED
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FExpressionInput                                   Layer;                                                      // 0x0054   (0x000C)
+    /* public    */ unsigned char                                      UnknownData03_6[0x8];                                       // 0x0060   (0x0008) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ParameterName;                                              // 0x0068   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PreviewWeight;                                              // 0x0070   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            ConstBase;                                                  // 0x0074   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ExpressionGUID;                                             // 0x0080   (0x0010)
 };
 
 /// Struct /Script/Landscape.PhysicalMaterialInput
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FPhysicalMaterialInput
 { 
-    class UPhysicalMaterial*                           PhysicalMaterial;                                           // 0x0000   (0x0008)
-    FExpressionInput                                   Input;                                                      // 0x0008   (0x000C)
-    unsigned char                                      UnknownData00_7[0xC];                                       // 0x0014   (0x000C) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPhysicalMaterial*                           PhysicalMaterial;                                           // 0x0000   (0x0008)
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FExpressionInput                                   Input;                                                      // 0x0008   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_7[0xC];                                       // 0x0014   (0x000C) MISSED
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapePhysicalMaterialOutput
-/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align n/a MaxSize: 0x0050
 class UMaterialExpressionLandscapePhysicalMaterialOutput : public UMaterialExpressionCustomOutput
 { 
 public:
-    TArray<FPhysicalMaterialInput>                     Inputs;                                                     // 0x0040   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FPhysicalMaterialInput>                     Inputs;                                                     // 0x0040   (0x0010)
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeVisibilityMask
-/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align n/a MaxSize: 0x0050
 class UMaterialExpressionLandscapeVisibilityMask : public UMaterialExpression
 { 
 public:
-    FGuid                                              ExpressionGUID;                                             // 0x0040   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ExpressionGUID;                                             // 0x0040   (0x0010)
 };
 
 /// Struct /Script/Landscape.LandscapeLayerBrush
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FLandscapeLayerBrush
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/Landscape.LandscapeLayer
-/// Size: 0x0088 (136 bytes) (0x000000 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000000 - 0x000088) align n/a MaxSize: 0x0088
 struct FLandscapeLayer
 { 
-    FGuid                                              Guid;                                                       // 0x0000   (0x0010)
-    FName                                              Name;                                                       // 0x0010   (0x0008)
-    bool                                               bVisible;                                                   // 0x0018   (0x0001)
-    bool                                               bLocked;                                                    // 0x0019   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x001A   (0x0002) MISSED
-    float                                              HeightmapAlpha;                                             // 0x001C   (0x0004)
-    float                                              WeightmapAlpha;                                             // 0x0020   (0x0004)
-    TEnumAsByte<ELandscapeBlendMode>                   BlendMode;                                                  // 0x0024   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0025   (0x0003) MISSED
-    TArray<FLandscapeLayerBrush>                       Brushes;                                                    // 0x0028   (0x0010)
-    TMap<class ULandscapeLayerInfoObject*, bool>       WeightmapLayerAllocationBlend;                              // 0x0038   (0x0050)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              Guid;                                                       // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              Name;                                                       // 0x0010   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bVisible;                                                   // 0x0018   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLocked;                                                    // 0x0019   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x2];                                       // 0x001A   (0x0002) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HeightmapAlpha;                                             // 0x001C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WeightmapAlpha;                                             // 0x0020   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ELandscapeBlendMode>                   BlendMode;                                                  // 0x0024   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x0025   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLandscapeLayerBrush>                       Brushes;                                                    // 0x0028   (0x0010)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ TMap<class ULandscapeLayerInfoObject*, bool>       WeightmapLayerAllocationBlend;                              // 0x0038   (0x0050)
 };
 
 /// Struct /Script/Landscape.HeightmapData
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 8 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FHeightmapData
 { 
-    class UTexture2D*                                  Texture;                                                    // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture2D*                                  Texture;                                                    // 0x0000   (0x0008)
 };
 
 /// Struct /Script/Landscape.WeightmapData
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FWeightmapData
 { 
-    TArray<class UTexture2D*>                          Textures;                                                   // 0x0000   (0x0010)
-    TArray<FWeightmapLayerAllocationInfo>              LayerAllocations;                                           // 0x0010   (0x0010)
-    TArray<class ULandscapeWeightmapUsage*>            TextureUsages;                                              // 0x0020   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UTexture2D*>                          Textures;                                                   // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FWeightmapLayerAllocationInfo>              LayerAllocations;                                           // 0x0010   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ULandscapeWeightmapUsage*>            TextureUsages;                                              // 0x0020   (0x0010)
 };
 
 /// Struct /Script/Landscape.LandscapeLayerComponentData
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FLandscapeLayerComponentData
 { 
-    FHeightmapData                                     HeightmapData;                                              // 0x0000   (0x0008)
-    FWeightmapData                                     WeightmapData;                                              // 0x0008   (0x0030)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FHeightmapData                                     HeightmapData;                                              // 0x0000   (0x0008)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ FWeightmapData                                     WeightmapData;                                              // 0x0008   (0x0030)
 };
 
 /// Struct /Script/Landscape.LandscapeEditToolRenderData
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FLandscapeEditToolRenderData
 { 
-    class UMaterialInterface*                          ToolMaterial;                                               // 0x0000   (0x0008)
-    class UMaterialInterface*                          GizmoMaterial;                                              // 0x0008   (0x0008)
-    int32_t                                            SelectedType;                                               // 0x0010   (0x0004)
-    int32_t                                            DebugChannelR;                                              // 0x0014   (0x0004)
-    int32_t                                            DebugChannelG;                                              // 0x0018   (0x0004)
-    int32_t                                            DebugChannelB;                                              // 0x001C   (0x0004)
-    class UTexture2D*                                  DataTexture;                                                // 0x0020   (0x0008)
-    class UTexture2D*                                  LayerContributionTexture;                                   // 0x0028   (0x0008)
-    class UTexture2D*                                  DirtyTexture;                                               // 0x0030   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          ToolMaterial;                                               // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          GizmoMaterial;                                              // 0x0008   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SelectedType;                                               // 0x0010   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            DebugChannelR;                                              // 0x0014   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            DebugChannelG;                                              // 0x0018   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            DebugChannelB;                                              // 0x001C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture2D*                                  DataTexture;                                                // 0x0020   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture2D*                                  LayerContributionTexture;                                   // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture2D*                                  DirtyTexture;                                               // 0x0030   (0x0008)
 };
 
 /// Struct /Script/Landscape.GizmoSelectData
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FGizmoSelectData
 { 
-    unsigned char                                      UnknownData00_2[0x50];                                      // 0x0000   (0x0050) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x50];                                      // 0x0000   (0x0050) MISSED
 };
 
 /// Struct /Script/Landscape.LandscapeInfoLayerSettings
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FLandscapeInfoLayerSettings
 { 
-    class ULandscapeLayerInfoObject*                   LayerInfoObj;                                               // 0x0000   (0x0008)
-    FName                                              LayerName;                                                  // 0x0008   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULandscapeLayerInfoObject*                   LayerInfoObj;                                               // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              LayerName;                                                  // 0x0008   (0x0008)
 };
 
 /// Struct /Script/Landscape.LandscapeImportLayerInfo
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FLandscapeImportLayerInfo
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/Landscape.LandscapeLayerStruct
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 8 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FLandscapeLayerStruct
 { 
-    class ULandscapeLayerInfoObject*                   LayerInfoObj;                                               // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULandscapeLayerInfoObject*                   LayerInfoObj;                                               // 0x0000   (0x0008)
 };
 
 /// Struct /Script/Landscape.LandscapeEditorLayerSettings
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FLandscapeEditorLayerSettings
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/Landscape.ForeignWorldSplineData
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FForeignWorldSplineData
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/Landscape.ForeignSplineSegmentData
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FForeignSplineSegmentData
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/Landscape.ForeignControlPointData
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FForeignControlPointData
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Struct /Script/Landscape.LandscapeSplineMeshEntry
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FLandscapeSplineMeshEntry
 { 
-    class UStaticMesh*                                 Mesh;                                                       // 0x0000   (0x0008)
-    TArray<class UMaterialInterface*>                  MaterialOverrides;                                          // 0x0008   (0x0010)
-    bool                                               bCenterH : 1;                                               // 0x0018:0 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0019   (0x0003) MISSED
-    FVector2D                                          CenterAdjust;                                               // 0x001C   (0x0008)
-    bool                                               bScaleToWidth : 1;                                          // 0x0024:0 (0x0001)
-    unsigned char                                      UnknownData01_5[0x3];                                       // 0x0025   (0x0003) MISSED
-    FVector                                            Scale;                                                      // 0x0028   (0x000C)
-    TEnumAsByte<LandscapeSplineMeshOrientation>        Orientation;                                                // 0x0034   (0x0001)
-    TEnumAsByte<ESplineMeshAxis>                       ForwardAxis;                                                // 0x0035   (0x0001)
-    TEnumAsByte<ESplineMeshAxis>                       UpAxis;                                                     // 0x0036   (0x0001)
-    unsigned char                                      UnknownData02_7[0x1];                                       // 0x0037   (0x0001) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMesh*                                 Mesh;                                                       // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UMaterialInterface*>                  MaterialOverrides;                                          // 0x0008   (0x0010)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCenterH : 1;                                               // 0x0018:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_5[0x3];                                       // 0x0019   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          CenterAdjust;                                               // 0x001C   (0x0008)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bScaleToWidth : 1;                                          // 0x0024:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_5[0x3];                                       // 0x0025   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Scale;                                                      // 0x0028   (0x000C)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<LandscapeSplineMeshOrientation>        Orientation;                                                // 0x0034   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESplineMeshAxis>                       ForwardAxis;                                                // 0x0035   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESplineMeshAxis>                       UpAxis;                                                     // 0x0036   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x1];                                       // 0x0037   (0x0001) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(AControlPointMeshActor) == 0x02D0); // 720 bytes (0x0002C8 - 0x0002D0)
 static_assert(sizeof(UControlPointMeshComponent) == 0x05F0); // 1520 bytes (0x0005E0 - 0x0005F0)
 static_assert(sizeof(FLandscapeProxyMaterialOverride) == 0x0010); // 16 bytes (0x000000 - 0x000010)
@@ -1220,3 +1563,4 @@ static_assert(offsetof(FLandscapeSplineMeshEntry, Scale) == 0x0028);
 static_assert(offsetof(FLandscapeSplineMeshEntry, Orientation) == 0x0034);
 static_assert(offsetof(FLandscapeSplineMeshEntry, ForwardAxis) == 0x0035);
 static_assert(offsetof(FLandscapeSplineMeshEntry, UpAxis) == 0x0036);
+#endif

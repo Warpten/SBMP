@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -17,8 +26,220 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/AIModule.EPathFollowingResult
-/// Size: 0x01 (1 bytes)
+class AAIController;
+class ADetourCrowdAIController;
+class AEQSTestingPawn;
+class AGridPathAIController;
+class ANavLinkProxy;
+class UAIAsyncTaskBlueprintProxy;
+class UAIBlueprintHelperLibrary;
+class UAIDataProvider;
+class UAIDataProvider_QueryParams;
+class UAIDataProvider_Random;
+class UAIHotSpotManager;
+class UAIPerceptionComponent;
+class UAIPerceptionListenerInterface;
+class UAIPerceptionStimuliSourceComponent;
+class UAIPerceptionSystem;
+class UAIResourceInterface;
+class UAIResource_Logic;
+class UAIResource_Movement;
+class UAISense;
+class UAISenseBlueprintListener;
+class UAISenseConfig;
+class UAISenseConfig_Blueprint;
+class UAISenseConfig_Damage;
+class UAISenseConfig_Hearing;
+class UAISenseConfig_Prediction;
+class UAISenseConfig_Sight;
+class UAISenseConfig_Team;
+class UAISenseConfig_Touch;
+class UAISenseEvent;
+class UAISenseEvent_Damage;
+class UAISenseEvent_Hearing;
+class UAISense_Blueprint;
+class UAISense_Damage;
+class UAISense_Hearing;
+class UAISense_Prediction;
+class UAISense_Sight;
+class UAISense_Team;
+class UAISense_Touch;
+class UAISightTargetInterface;
+class UAISubsystem;
+class UAISystem;
+class UAITask;
+class UAITask_LockLogic;
+class UAITask_MoveTo;
+class UAITask_RunEQS;
+class UBTAuxiliaryNode;
+class UBTCompositeNode;
+class UBTComposite_Selector;
+class UBTComposite_Sequence;
+class UBTComposite_SimpleParallel;
+class UBTDecorator;
+class UBTDecorator_Blackboard;
+class UBTDecorator_BlackboardBase;
+class UBTDecorator_BlueprintBase;
+class UBTDecorator_CheckGameplayTagsOnActor;
+class UBTDecorator_CompareBBEntries;
+class UBTDecorator_ConditionalLoop;
+class UBTDecorator_ConeCheck;
+class UBTDecorator_Cooldown;
+class UBTDecorator_DoesPathExist;
+class UBTDecorator_ForceSuccess;
+class UBTDecorator_IsAtLocation;
+class UBTDecorator_IsBBEntryOfClass;
+class UBTDecorator_KeepInCone;
+class UBTDecorator_Loop;
+class UBTDecorator_ReachedMoveGoal;
+class UBTDecorator_SetTagCooldown;
+class UBTDecorator_TagCooldown;
+class UBTDecorator_TimeLimit;
+class UBTFunctionLibrary;
+class UBTNode;
+class UBTService;
+class UBTService_BlackboardBase;
+class UBTService_BlueprintBase;
+class UBTService_DefaultFocus;
+class UBTService_RunEQS;
+class UBTTaskNode;
+class UBTTask_BlackboardBase;
+class UBTTask_BlueprintBase;
+class UBTTask_FinishWithResult;
+class UBTTask_GameplayTaskBase;
+class UBTTask_MakeNoise;
+class UBTTask_MoveDirectlyToward;
+class UBTTask_MoveTo;
+class UBTTask_PawnActionBase;
+class UBTTask_PlayAnimation;
+class UBTTask_PlaySound;
+class UBTTask_PushPawnAction;
+class UBTTask_RotateToFaceBBEntry;
+class UBTTask_RunBehavior;
+class UBTTask_RunBehaviorDynamic;
+class UBTTask_RunEQSQuery;
+class UBTTask_SetTagCooldown;
+class UBTTask_Wait;
+class UBTTask_WaitBlackboardTime;
+class UBehaviorTree;
+class UBehaviorTreeComponent;
+class UBehaviorTreeManager;
+class UBehaviorTreeTypes;
+class UBlackboardAssetProvider;
+class UBlackboardComponent;
+class UBlackboardData;
+class UBlackboardKeyType;
+class UBlackboardKeyType_Bool;
+class UBlackboardKeyType_Class;
+class UBlackboardKeyType_Enum;
+class UBlackboardKeyType_Float;
+class UBlackboardKeyType_Int;
+class UBlackboardKeyType_Name;
+class UBlackboardKeyType_NativeEnum;
+class UBlackboardKeyType_Object;
+class UBlackboardKeyType_Rotator;
+class UBlackboardKeyType_String;
+class UBlackboardKeyType_Vector;
+class UBrainComponent;
+class UCrowdAgentInterface;
+class UCrowdFollowingComponent;
+class UCrowdManager;
+class UEQSQueryResultSourceInterface;
+class UEQSRenderingComponent;
+class UEnvQuery;
+class UEnvQueryContext;
+class UEnvQueryContext_BlueprintBase;
+class UEnvQueryContext_Item;
+class UEnvQueryContext_Querier;
+class UEnvQueryDebugHelpers;
+class UEnvQueryGenerator;
+class UEnvQueryGenerator_ActorsOfClass;
+class UEnvQueryGenerator_BlueprintBase;
+class UEnvQueryGenerator_Composite;
+class UEnvQueryGenerator_Cone;
+class UEnvQueryGenerator_CurrentLocation;
+class UEnvQueryGenerator_Donut;
+class UEnvQueryGenerator_OnCircle;
+class UEnvQueryGenerator_PathingGrid;
+class UEnvQueryGenerator_ProjectedPoints;
+class UEnvQueryGenerator_SimpleGrid;
+class UEnvQueryInstanceBlueprintWrapper;
+class UEnvQueryItemType;
+class UEnvQueryItemType_Actor;
+class UEnvQueryItemType_ActorBase;
+class UEnvQueryItemType_Direction;
+class UEnvQueryItemType_Point;
+class UEnvQueryItemType_VectorBase;
+class UEnvQueryManager;
+class UEnvQueryNode;
+class UEnvQueryOption;
+class UEnvQueryTest;
+class UEnvQueryTest_Distance;
+class UEnvQueryTest_Dot;
+class UEnvQueryTest_GameplayTags;
+class UEnvQueryTest_Overlap;
+class UEnvQueryTest_Pathfinding;
+class UEnvQueryTest_PathfindingBatch;
+class UEnvQueryTest_Project;
+class UEnvQueryTest_Random;
+class UEnvQueryTest_Trace;
+class UEnvQueryTest_Volume;
+class UEnvQueryTypes;
+class UGenericTeamAgentInterface;
+class UGridPathFollowingComponent;
+class UNavFilter_AIControllerDefault;
+class UNavLocalGridManager;
+class UPathFollowingComponent;
+class UPathFollowingManager;
+class UPawnAction;
+class UPawnAction_BlueprintBase;
+class UPawnAction_Move;
+class UPawnAction_Repeat;
+class UPawnAction_Sequence;
+class UPawnAction_Wait;
+class UPawnActionsComponent;
+class UPawnSensingComponent;
+class UVisualLoggerExtension;
+struct FAIDamageEvent;
+struct FAIDataProviderBoolValue;
+struct FAIDataProviderFloatValue;
+struct FAIDataProviderIntValue;
+struct FAIDataProviderStructValue;
+struct FAIDataProviderTypedValue;
+struct FAIDataProviderValue;
+struct FAIDynamicParam;
+struct FAIMoveRequest;
+struct FAINoiseEvent;
+struct FAIPredictionEvent;
+struct FAIRequestID;
+struct FAISenseAffiliationFilter;
+struct FAISightEvent;
+struct FAIStimulus;
+struct FAITeamStimulusEvent;
+struct FAITouchEvent;
+struct FActorPerceptionBlueprintInfo;
+struct FActorPerceptionUpdateInfo;
+struct FBTCompositeChild;
+struct FBTDecoratorLogic;
+struct FBehaviorTreeTemplateInfo;
+struct FBlackboardEntry;
+struct FBlackboardKeySelector;
+struct FCrowdAvoidanceConfig;
+struct FCrowdAvoidanceSamplingPattern;
+struct FEQSParametrizedQueryExecutionRequest;
+struct FEnvDirection;
+struct FEnvNamedValue;
+struct FEnvOverlapData;
+struct FEnvQueryInstanceCache;
+struct FEnvQueryRequest;
+struct FEnvQueryResult;
+struct FEnvTraceData;
+struct FGenericTeamId;
+struct FIntervalCountdown;
+struct FPawnActionEvent;
+struct FPawnActionStack;
+
+/// Enum /Script/AIModule.EPathFollowingResult -  1 (1 bytes)
 enum class EPathFollowingResult : uint8_t
 {
     Success                                                                          = 0,
@@ -29,8 +250,7 @@ enum class EPathFollowingResult : uint8_t
     Invalid                                                                          = 5
 };
 
-/// Enum /Script/AIModule.EEnvQueryStatus
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvQueryStatus -  1 (1 bytes)
 enum class EEnvQueryStatus : uint8_t
 {
     Processing                                                                       = 0,
@@ -41,16 +261,14 @@ enum class EEnvQueryStatus : uint8_t
     MissingParam                                                                     = 5
 };
 
-/// Enum /Script/AIModule.EAISenseNotifyType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EAISenseNotifyType -  1 (1 bytes)
 enum class EAISenseNotifyType : uint8_t
 {
     OnEveryPerception                                                                = 0,
     OnPerceptionChange                                                               = 1
 };
 
-/// Enum /Script/AIModule.EAITaskPriority
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EAITaskPriority -  1 (1 bytes)
 enum class EAITaskPriority : uint8_t
 {
     Lowest                                                                           = 0,
@@ -60,8 +278,7 @@ enum class EAITaskPriority : uint8_t
     Ultimate                                                                         = 254
 };
 
-/// Enum /Script/AIModule.EGenericAICheck
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EGenericAICheck -  1 (1 bytes)
 enum class EGenericAICheck : uint8_t
 {
     Less                                                                             = 0,
@@ -73,8 +290,7 @@ enum class EGenericAICheck : uint8_t
     IsTrue                                                                           = 6
 };
 
-/// Enum /Script/AIModule.EAILockSource
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EAILockSource -  1 (1 bytes)
 enum class EAILockSource : uint8_t
 {
     Animation                                                                        = 0,
@@ -83,8 +299,7 @@ enum class EAILockSource : uint8_t
     Gameplay                                                                         = 3
 };
 
-/// Enum /Script/AIModule.EAIRequestPriority
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EAIRequestPriority -  1 (1 bytes)
 enum class EAIRequestPriority : uint8_t
 {
     SoftScript                                                                       = 0,
@@ -94,8 +309,7 @@ enum class EAIRequestPriority : uint8_t
     Ultimate                                                                         = 4
 };
 
-/// Enum /Script/AIModule.EPawnActionEventType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPawnActionEventType -  1 (1 bytes)
 enum class EPawnActionEventType : uint8_t
 {
     Invalid                                                                          = 0,
@@ -106,8 +320,7 @@ enum class EPawnActionEventType : uint8_t
     Push                                                                             = 5
 };
 
-/// Enum /Script/AIModule.EPawnActionResult
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPawnActionResult -  1 (1 bytes)
 enum class EPawnActionResult : uint8_t
 {
     NotStarted                                                                       = 0,
@@ -117,8 +330,7 @@ enum class EPawnActionResult : uint8_t
     Aborted                                                                          = 4
 };
 
-/// Enum /Script/AIModule.EPawnActionAbortState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPawnActionAbortState -  1 (1 bytes)
 enum class EPawnActionAbortState : uint8_t
 {
     NeverStarted                                                                     = 0,
@@ -128,8 +340,7 @@ enum class EPawnActionAbortState : uint8_t
     AbortDone                                                                        = 4
 };
 
-/// Enum /Script/AIModule.FAIDistanceType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.FAIDistanceType -  1 (1 bytes)
 enum class FAIDistanceType : uint8_t
 {
     Distance3D                                                                       = 0,
@@ -137,8 +348,7 @@ enum class FAIDistanceType : uint8_t
     DistanceZ                                                                        = 2
 };
 
-/// Enum /Script/AIModule.EAIOptionFlag
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EAIOptionFlag -  1 (1 bytes)
 enum class EAIOptionFlag : uint8_t
 {
     Default                                                                          = 0,
@@ -146,8 +356,7 @@ enum class EAIOptionFlag : uint8_t
     Disable                                                                          = 2
 };
 
-/// Enum /Script/AIModule.EBTFlowAbortMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EBTFlowAbortMode -  1 (1 bytes)
 enum class EBTFlowAbortMode : uint8_t
 {
     None                                                                             = 0,
@@ -156,8 +365,7 @@ enum class EBTFlowAbortMode : uint8_t
     Both                                                                             = 3
 };
 
-/// Enum /Script/AIModule.EBTNodeResult
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EBTNodeResult -  1 (1 bytes)
 enum class EBTNodeResult : uint8_t
 {
     Succeeded                                                                        = 0,
@@ -166,8 +374,7 @@ enum class EBTNodeResult : uint8_t
     InProgress                                                                       = 3
 };
 
-/// Enum /Script/AIModule.ETextKeyOperation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.ETextKeyOperation -  1 (1 bytes)
 enum class ETextKeyOperation : uint8_t
 {
     Equal                                                                            = 0,
@@ -176,8 +383,7 @@ enum class ETextKeyOperation : uint8_t
     NotContain                                                                       = 3
 };
 
-/// Enum /Script/AIModule.EArithmeticKeyOperation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EArithmeticKeyOperation -  1 (1 bytes)
 enum class EArithmeticKeyOperation : uint8_t
 {
     Equal                                                                            = 0,
@@ -188,24 +394,21 @@ enum class EArithmeticKeyOperation : uint8_t
     GreaterOrEqual                                                                   = 5
 };
 
-/// Enum /Script/AIModule.EBasicKeyOperation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EBasicKeyOperation -  1 (1 bytes)
 enum class EBasicKeyOperation : uint8_t
 {
     Set                                                                              = 0,
     NotSet                                                                           = 1
 };
 
-/// Enum /Script/AIModule.EBTParallelMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EBTParallelMode -  1 (1 bytes)
 enum class EBTParallelMode : uint8_t
 {
     AbortBackground                                                                  = 0,
     WaitForBackground                                                                = 1
 };
 
-/// Enum /Script/AIModule.EBTDecoratorLogic
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EBTDecoratorLogic -  1 (1 bytes)
 enum class EBTDecoratorLogic : uint8_t
 {
     Invalid                                                                          = 0,
@@ -215,32 +418,28 @@ enum class EBTDecoratorLogic : uint8_t
     Not                                                                              = 4
 };
 
-/// Enum /Script/AIModule.EBTChildIndex
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EBTChildIndex -  1 (1 bytes)
 enum class EBTChildIndex : uint8_t
 {
     FirstNode                                                                        = 0,
     TaskNode                                                                         = 1
 };
 
-/// Enum /Script/AIModule.EBTBlackboardRestart
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EBTBlackboardRestart -  1 (1 bytes)
 enum class EBTBlackboardRestart : uint8_t
 {
     ValueChange                                                                      = 0,
     ResultChange                                                                     = 1
 };
 
-/// Enum /Script/AIModule.EBlackBoardEntryComparison
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EBlackBoardEntryComparison -  1 (1 bytes)
 enum class EBlackBoardEntryComparison : uint8_t
 {
     Equal                                                                            = 0,
     NotEqual                                                                         = 1
 };
 
-/// Enum /Script/AIModule.EPathExistanceQueryType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPathExistanceQueryType -  1 (1 bytes)
 enum class EPathExistanceQueryType : uint8_t
 {
     NavmeshRaycast2D                                                                 = 0,
@@ -248,24 +447,21 @@ enum class EPathExistanceQueryType : uint8_t
     RegularPathFinding                                                               = 2
 };
 
-/// Enum /Script/AIModule.EPointOnCircleSpacingMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPointOnCircleSpacingMethod -  1 (1 bytes)
 enum class EPointOnCircleSpacingMethod : uint8_t
 {
     BySpaceBetween                                                                   = 0,
     ByNumberOfPoints                                                                 = 1
 };
 
-/// Enum /Script/AIModule.EEQSNormalizationType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEQSNormalizationType -  1 (1 bytes)
 enum class EEQSNormalizationType : uint8_t
 {
     Absolute                                                                         = 0,
     RelativeToScores                                                                 = 1
 };
 
-/// Enum /Script/AIModule.EEnvTestDistance
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestDistance -  1 (1 bytes)
 enum class EEnvTestDistance : uint8_t
 {
     Distance3D                                                                       = 0,
@@ -274,16 +470,14 @@ enum class EEnvTestDistance : uint8_t
     DistanceAbsoluteZ                                                                = 3
 };
 
-/// Enum /Script/AIModule.EEnvTestDot
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestDot -  1 (1 bytes)
 enum class EEnvTestDot : uint8_t
 {
     Dot3D                                                                            = 0,
     Dot2D                                                                            = 1
 };
 
-/// Enum /Script/AIModule.EEnvTestPathfinding
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestPathfinding -  1 (1 bytes)
 enum class EEnvTestPathfinding : uint8_t
 {
     PathExist                                                                        = 0,
@@ -291,8 +485,7 @@ enum class EEnvTestPathfinding : uint8_t
     PathLength                                                                       = 2
 };
 
-/// Enum /Script/AIModule.EEnvQueryTestClamping
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvQueryTestClamping -  1 (1 bytes)
 enum class EEnvQueryTestClamping : uint8_t
 {
     None                                                                             = 0,
@@ -300,16 +493,14 @@ enum class EEnvQueryTestClamping : uint8_t
     FilterThreshold                                                                  = 2
 };
 
-/// Enum /Script/AIModule.EEnvDirection
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvDirection -  1 (1 bytes)
 enum class EEnvDirection : uint8_t
 {
     TwoPoints                                                                        = 0,
     Rotation                                                                         = 1
 };
 
-/// Enum /Script/AIModule.EEnvOverlapShape
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvOverlapShape -  1 (1 bytes)
 enum class EEnvOverlapShape : uint8_t
 {
     Box                                                                              = 0,
@@ -317,8 +508,7 @@ enum class EEnvOverlapShape : uint8_t
     Capsule                                                                          = 2
 };
 
-/// Enum /Script/AIModule.EEnvTraceShape
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTraceShape -  1 (1 bytes)
 enum class EEnvTraceShape : uint8_t
 {
     Line                                                                             = 0,
@@ -327,8 +517,7 @@ enum class EEnvTraceShape : uint8_t
     Capsule                                                                          = 3
 };
 
-/// Enum /Script/AIModule.EEnvQueryTrace
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvQueryTrace -  1 (1 bytes)
 enum class EEnvQueryTrace : uint8_t
 {
     None                                                                             = 0,
@@ -337,8 +526,7 @@ enum class EEnvQueryTrace : uint8_t
     NavigationOverLedges                                                             = 3
 };
 
-/// Enum /Script/AIModule.EAIParamType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EAIParamType -  1 (1 bytes)
 enum class EAIParamType : uint8_t
 {
     Float                                                                            = 0,
@@ -346,8 +534,7 @@ enum class EAIParamType : uint8_t
     Bool                                                                             = 2
 };
 
-/// Enum /Script/AIModule.EEnvQueryParam
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvQueryParam -  1 (1 bytes)
 enum class EEnvQueryParam : uint8_t
 {
     Float                                                                            = 0,
@@ -355,8 +542,7 @@ enum class EEnvQueryParam : uint8_t
     Bool                                                                             = 2
 };
 
-/// Enum /Script/AIModule.EEnvQueryRunMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvQueryRunMode -  1 (1 bytes)
 enum class EEnvQueryRunMode : uint8_t
 {
     SingleResult                                                                     = 0,
@@ -365,8 +551,7 @@ enum class EEnvQueryRunMode : uint8_t
     AllMatching                                                                      = 3
 };
 
-/// Enum /Script/AIModule.EEnvTestScoreOperator
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestScoreOperator -  1 (1 bytes)
 enum class EEnvTestScoreOperator : uint8_t
 {
     AverageScore                                                                     = 0,
@@ -375,16 +560,14 @@ enum class EEnvTestScoreOperator : uint8_t
     Multiply                                                                         = 3
 };
 
-/// Enum /Script/AIModule.EEnvTestFilterOperator
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestFilterOperator -  1 (1 bytes)
 enum class EEnvTestFilterOperator : uint8_t
 {
     AllPass                                                                          = 0,
     AnyPass                                                                          = 1
 };
 
-/// Enum /Script/AIModule.EEnvTestCost
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestCost -  1 (1 bytes)
 enum class EEnvTestCost : uint8_t
 {
     Low                                                                              = 0,
@@ -392,8 +575,7 @@ enum class EEnvTestCost : uint8_t
     High                                                                             = 2
 };
 
-/// Enum /Script/AIModule.EEnvTestWeight
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestWeight -  1 (1 bytes)
 enum class EEnvTestWeight : uint8_t
 {
     None                                                                             = 0,
@@ -404,8 +586,7 @@ enum class EEnvTestWeight : uint8_t
     Skip                                                                             = 5
 };
 
-/// Enum /Script/AIModule.EEnvTestScoreEquation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestScoreEquation -  1 (1 bytes)
 enum class EEnvTestScoreEquation : uint8_t
 {
     Linear                                                                           = 0,
@@ -415,8 +596,7 @@ enum class EEnvTestScoreEquation : uint8_t
     Constant                                                                         = 4
 };
 
-/// Enum /Script/AIModule.EEnvTestFilterType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestFilterType -  1 (1 bytes)
 enum class EEnvTestFilterType : uint8_t
 {
     Minimum                                                                          = 0,
@@ -425,8 +605,7 @@ enum class EEnvTestFilterType : uint8_t
     Match                                                                            = 3
 };
 
-/// Enum /Script/AIModule.EEnvTestPurpose
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvTestPurpose -  1 (1 bytes)
 enum class EEnvTestPurpose : uint8_t
 {
     Filter                                                                           = 0,
@@ -434,8 +613,7 @@ enum class EEnvTestPurpose : uint8_t
     FilterAndScore                                                                   = 2
 };
 
-/// Enum /Script/AIModule.EEnvQueryHightlightMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EEnvQueryHightlightMode -  1 (1 bytes)
 enum class EEnvQueryHightlightMode : uint8_t
 {
     All                                                                              = 0,
@@ -443,8 +621,7 @@ enum class EEnvQueryHightlightMode : uint8_t
     Best25Pct                                                                        = 2
 };
 
-/// Enum /Script/AIModule.ETeamAttitude
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.ETeamAttitude -  1 (1 bytes)
 enum class ETeamAttitude : uint8_t
 {
     Friendly                                                                         = 0,
@@ -452,8 +629,7 @@ enum class ETeamAttitude : uint8_t
     Hostile                                                                          = 2
 };
 
-/// Enum /Script/AIModule.EPathFollowingRequestResult
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPathFollowingRequestResult -  1 (1 bytes)
 enum class EPathFollowingRequestResult : uint8_t
 {
     Failed                                                                           = 0,
@@ -461,8 +637,7 @@ enum class EPathFollowingRequestResult : uint8_t
     RequestSuccessful                                                                = 2
 };
 
-/// Enum /Script/AIModule.EPathFollowingAction
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPathFollowingAction -  1 (1 bytes)
 enum class EPathFollowingAction : uint8_t
 {
     Error                                                                            = 0,
@@ -472,8 +647,7 @@ enum class EPathFollowingAction : uint8_t
     PathToGoal                                                                       = 4
 };
 
-/// Enum /Script/AIModule.EPathFollowingStatus
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPathFollowingStatus -  1 (1 bytes)
 enum class EPathFollowingStatus : uint8_t
 {
     Idle                                                                             = 0,
@@ -482,24 +656,21 @@ enum class EPathFollowingStatus : uint8_t
     Moving                                                                           = 3
 };
 
-/// Enum /Script/AIModule.EPawnActionFailHandling
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPawnActionFailHandling -  1 (1 bytes)
 enum class EPawnActionFailHandling : uint8_t
 {
     RequireSuccess                                                                   = 0,
     IgnoreFailure                                                                    = 1
 };
 
-/// Enum /Script/AIModule.EPawnSubActionTriggeringPolicy
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPawnSubActionTriggeringPolicy -  1 (1 bytes)
 enum class EPawnSubActionTriggeringPolicy : uint8_t
 {
     CopyBeforeTriggering                                                             = 0,
     ReuseInstances                                                                   = 1
 };
 
-/// Enum /Script/AIModule.EPawnActionMoveMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AIModule.EPawnActionMoveMode -  1 (1 bytes)
 enum class EPawnActionMoveMode : uint8_t
 {
     UsePathfinding                                                                   = 0,
@@ -507,28 +678,43 @@ enum class EPawnActionMoveMode : uint8_t
 };
 
 /// Class /Script/AIModule.AIController
-/// Size: 0x03D0 (976 bytes) (0x000340 - 0x0003D0) align 8 MaxSize: 0x03D0
+/// Size: 0x03D0 (976 bytes) (0x000340 - 0x0003D0) align n/a MaxSize: 0x03D0
 class AAIController : public AController
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x38];                                      // 0x0340   (0x0038) MISSED
-    bool                                               bStartAILogicOnPossess : 1;                                 // 0x0378:0 (0x0001)
-    bool                                               bStopAILogicOnUnposses : 1;                                 // 0x0378:1 (0x0001)
-    bool                                               bLOSflag : 1;                                               // 0x0378:2 (0x0001)
-    bool                                               bSkipExtraLOSChecks : 1;                                    // 0x0378:3 (0x0001)
-    bool                                               bAllowStrafe : 1;                                           // 0x0378:4 (0x0001)
-    bool                                               bWantsPlayerState : 1;                                      // 0x0378:5 (0x0001)
-    bool                                               bSetControlRotationFromPawnOrientation : 1;                 // 0x0378:6 (0x0001)
-    unsigned char                                      UnknownData01_5[0x7];                                       // 0x0379   (0x0007) MISSED
-    class UPathFollowingComponent*                     PathFollowingComponent;                                     // 0x0380   (0x0008)
-    class UBrainComponent*                             BrainComponent;                                             // 0x0388   (0x0008)
-    class UAIPerceptionComponent*                      PerceptionComponent;                                        // 0x0390   (0x0008)
-    class UPawnActionsComponent*                       ActionsComp;                                                // 0x0398   (0x0008)
-    class UBlackboardComponent*                        Blackboard;                                                 // 0x03A0   (0x0008)
-    class UGameplayTasksComponent*                     CachedGameplayTasksComponent;                               // 0x03A8   (0x0008)
-    class UClass*                                      DefaultNavigationFilterClass;                               // 0x03B0   (0x0008)
-    FMulticastInlineDelegate                           ReceiveMoveCompleted;                                       // 0x03B8   (0x0010)
-    unsigned char                                      UnknownData02_7[0x8];                                       // 0x03C8   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData03_8[0x38];                                      // 0x0340   (0x0038) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bStartAILogicOnPossess : 1;                                 // 0x0378:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bStopAILogicOnUnposses : 1;                                 // 0x0378:1 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLOSflag : 1;                                               // 0x0378:2 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSkipExtraLOSChecks : 1;                                    // 0x0378:3 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowStrafe : 1;                                           // 0x0378:4 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bWantsPlayerState : 1;                                      // 0x0378:5 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSetControlRotationFromPawnOrientation : 1;                 // 0x0378:6 (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_5[0x7];                                       // 0x0379   (0x0007) MISSED
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPathFollowingComponent*                     PathFollowingComponent;                                     // 0x0380   (0x0008)
+    UPROPERTY(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBrainComponent*                             BrainComponent;                                             // 0x0388   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAIPerceptionComponent*                      PerceptionComponent;                                        // 0x0390   (0x0008)
+    UPROPERTY(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPawnActionsComponent*                       ActionsComp;                                                // 0x0398   (0x0008)
+    UPROPERTY(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBlackboardComponent*                        Blackboard;                                                 // 0x03A0   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UGameplayTasksComponent*                     CachedGameplayTasksComponent;                               // 0x03A8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      DefaultNavigationFilterClass;                               // 0x03B0   (0x0008)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           ReceiveMoveCompleted;                                       // 0x03B8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x8];                                       // 0x03C8   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AIModule.AIController.UseBlackboard
@@ -606,14 +792,16 @@ public:
 };
 
 /// Class /Script/AIModule.BrainComponent
-/// Size: 0x0118 (280 bytes) (0x0000C0 - 0x000118) align 8 MaxSize: 0x0118
+/// Size: 0x0118 (280 bytes) (0x0000C0 - 0x000118) align n/a MaxSize: 0x0118
 class UBrainComponent : public UActorComponent
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x00C0   (0x0008) MISSED
-    class UBlackboardComponent*                        BlackboardComp;                                             // 0x00C8   (0x0008)
-    class AAIController*                               AIOwner;                                                    // 0x00D0   (0x0008)
-    unsigned char                                      UnknownData01_7[0x40];                                      // 0x00D8   (0x0040) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x8];                                       // 0x00C0   (0x0008) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBlackboardComponent*                        BlackboardComp;                                             // 0x00C8   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AAIController*                               AIOwner;                                                    // 0x00D0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x40];                                      // 0x00D8   (0x0040) MISSED
 
     /// Functions
     // Function /Script/AIModule.BrainComponent.StopLogic
@@ -630,15 +818,17 @@ public:
 };
 
 /// Class /Script/AIModule.BehaviorTreeComponent
-/// Size: 0x02A8 (680 bytes) (0x000118 - 0x0002A8) align 8 MaxSize: 0x02A8
+/// Size: 0x02A8 (680 bytes) (0x000118 - 0x0002A8) align n/a MaxSize: 0x02A8
 class UBehaviorTreeComponent : public UBrainComponent
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x20];                                      // 0x0118   (0x0020) MISSED
-    TArray<class UBTNode*>                             NodeInstances;                                              // 0x0138   (0x0010)
-    unsigned char                                      UnknownData01_6[0x140];                                     // 0x0148   (0x0140) MISSED
-    class UBehaviorTree*                               DefaultBehaviorTreeAsset;                                   // 0x0288   (0x0008)
-    unsigned char                                      UnknownData02_7[0x18];                                      // 0x0290   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData03_8[0x20];                                      // 0x0118   (0x0020) MISSED
+    UPROPERTY(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UBTNode*>                             NodeInstances;                                              // 0x0138   (0x0010)
+    /* public    */ unsigned char                                      UnknownData04_6[0x140];                                     // 0x0148   (0x0140) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBehaviorTree*                               DefaultBehaviorTreeAsset;                                   // 0x0288   (0x0008)
+    /* public    */ unsigned char                                      UnknownData05_7[0x18];                                      // 0x0290   (0x0018) MISSED
 
     /// Functions
     // Function /Script/AIModule.BehaviorTreeComponent.SetDynamicSubtree
@@ -656,54 +846,63 @@ public:
 };
 
 /// Class /Script/AIModule.BTNode
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 class UBTNode : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008) MISSED
-    FString                                            NodeName;                                                   // 0x0030   (0x0010)
-    class UBehaviorTree*                               TreeAsset;                                                  // 0x0040   (0x0008)
-    class UBTCompositeNode*                            ParentNode;                                                 // 0x0048   (0x0008)
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0050   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    UPROPERTY(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            NodeName;                                                   // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UBehaviorTree*                               TreeAsset;                                                  // 0x0040   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UBTCompositeNode*                            ParentNode;                                                 // 0x0048   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x8];                                       // 0x0050   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BTAuxiliaryNode
-/// Size: 0x0060 (96 bytes) (0x000058 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000058 - 0x000060) align n/a MaxSize: 0x0060
 class UBTAuxiliaryNode : public UBTNode
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0058   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0058   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator
-/// Size: 0x0068 (104 bytes) (0x000060 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000060 - 0x000068) align n/a MaxSize: 0x0068
 class UBTDecorator : public UBTAuxiliaryNode
 { 
 public:
-    bool                                               bInverseCondition : 1;                                      // 0x0060:7 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0061   (0x0003) MISSED
-    TEnumAsByte<EBTFlowAbortMode>                      FlowAbortMode;                                              // 0x0064   (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0065   (0x0003) MISSED
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bInverseCondition : 1;                                      // 0x0060:7 (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_5[0x3];                                       // 0x0061   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<EBTFlowAbortMode>                      FlowAbortMode;                                              // 0x0064   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x0065   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTTaskNode
-/// Size: 0x0070 (112 bytes) (0x000058 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000058 - 0x000070) align n/a MaxSize: 0x0070
 class UBTTaskNode : public UBTNode
 { 
 public:
-    TArray<class UBTService*>                          Services;                                                   // 0x0058   (0x0010)
-    bool                                               bIgnoreRestartSelf : 1;                                     // 0x0068:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0069   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UBTService*>                          Services;                                                   // 0x0058   (0x0010)
+    UPROPERTY(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bIgnoreRestartSelf : 1;                                     // 0x0068:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0069   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.AIAsyncTaskBlueprintProxy
-/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align n/a MaxSize: 0x0068
 class UAIAsyncTaskBlueprintProxy : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFail;                                                     // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x20];                                      // 0x0048   (0x0020) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFail;                                                     // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020) MISSED
 
     /// Functions
     // Function /Script/AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
@@ -713,7 +912,7 @@ public:
 };
 
 /// Class /Script/AIModule.AIBlueprintHelperLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAIBlueprintHelperLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -790,55 +989,68 @@ public:
 };
 
 /// Class /Script/AIModule.AIDataProvider
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAIDataProvider : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIDataProvider_QueryParams
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class UAIDataProvider_QueryParams : public UAIDataProvider
 { 
 public:
-    FName                                              ParamName;                                                  // 0x0028   (0x0008)
-    float                                              FloatValue;                                                 // 0x0030   (0x0004)
-    int32_t                                            IntValue;                                                   // 0x0034   (0x0004)
-    bool                                               BoolValue;                                                  // 0x0038   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0039   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ParamName;                                                  // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FloatValue;                                                 // 0x0030   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            IntValue;                                                   // 0x0034   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               BoolValue;                                                  // 0x0038   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0039   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.AIDataProvider_Random
-/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align n/a MaxSize: 0x0050
 class UAIDataProvider_Random : public UAIDataProvider_QueryParams
 { 
 public:
-    float                                              Min;                                                        // 0x0040   (0x0004)
-    float                                              Max;                                                        // 0x0044   (0x0004)
-    bool                                               bInteger : 1;                                               // 0x0048:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              Min;                                                        // 0x0040   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              Max;                                                        // 0x0044   (0x0004)
+    UPROPERTY(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bInteger : 1;                                               // 0x0048:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.AIHotSpotManager
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAIHotSpotManager : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIPerceptionComponent
-/// Size: 0x01A0 (416 bytes) (0x0000C0 - 0x0001A0) align 8 MaxSize: 0x01A0
+/// Size: 0x01A0 (416 bytes) (0x0000C0 - 0x0001A0) align n/a MaxSize: 0x01A0
 class UAIPerceptionComponent : public UActorComponent
 { 
 public:
-    TArray<class UAISenseConfig*>                      SensesConfig;                                               // 0x00C0   (0x0010)
-    class UClass*                                      DominantSense;                                              // 0x00D0   (0x0008)
-    unsigned char                                      UnknownData00_6[0x10];                                      // 0x00D8   (0x0010) MISSED
-    class AAIController*                               AIOwner;                                                    // 0x00E8   (0x0008)
-    unsigned char                                      UnknownData01_6[0x80];                                      // 0x00F0   (0x0080) MISSED
-    FMulticastInlineDelegate                           OnPerceptionUpdated;                                        // 0x0170   (0x0010)
-    FMulticastInlineDelegate                           OnTargetPerceptionUpdated;                                  // 0x0180   (0x0010)
-    FMulticastInlineDelegate                           OnTargetPerceptionInfoUpdated;                              // 0x0190   (0x0010)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UAISenseConfig*>                      SensesConfig;                                               // 0x00C0   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      DominantSense;                                              // 0x00D0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData02_6[0x10];                                      // 0x00D8   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AAIController*                               AIOwner;                                                    // 0x00E8   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_6[0x80];                                      // 0x00F0   (0x0080) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnPerceptionUpdated;                                        // 0x0170   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnTargetPerceptionUpdated;                                  // 0x0180   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnTargetPerceptionInfoUpdated;                              // 0x0190   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AIPerceptionComponent.SetSenseEnabled
@@ -879,20 +1091,22 @@ public:
 };
 
 /// Class /Script/AIModule.AIPerceptionListenerInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAIPerceptionListenerInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIPerceptionStimuliSourceComponent
-/// Size: 0x00D8 (216 bytes) (0x0000C0 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x0000C0 - 0x0000D8) align n/a MaxSize: 0x00D8
 class UAIPerceptionStimuliSourceComponent : public UActorComponent
 { 
 public:
-    bool                                               bAutoRegisterAsSource : 1;                                  // 0x00C0:0 (0x0001)
-    unsigned char                                      UnknownData00_5[0x7];                                       // 0x00C1   (0x0007) MISSED
-    TArray<class UClass*>                              RegisterAsSourceForSenses;                                  // 0x00C8   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, Config, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bAutoRegisterAsSource : 1;                                  // 0x00C0:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_5[0x7];                                       // 0x00C1   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UClass*>                              RegisterAsSourceForSenses;                                  // 0x00C8   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense
@@ -908,23 +1122,26 @@ public:
 };
 
 /// Class /Script/AIModule.AISubsystem
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class UAISubsystem : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008) MISSED
-    class UAISystem*                                   AISystem;                                                   // 0x0030   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UAISystem*                                   AISystem;                                                   // 0x0030   (0x0008)
 };
 
 /// Class /Script/AIModule.AIPerceptionSystem
-/// Size: 0x0130 (304 bytes) (0x000038 - 0x000130) align 8 MaxSize: 0x0130
+/// Size: 0x0130 (304 bytes) (0x000038 - 0x000130) align n/a MaxSize: 0x0130
 class UAIPerceptionSystem : public UAISubsystem
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x50];                                      // 0x0038   (0x0050) MISSED
-    TArray<class UAISense*>                            Senses;                                                     // 0x0088   (0x0010)
-    float                                              PerceptionAgingRate;                                        // 0x0098   (0x0004)
-    unsigned char                                      UnknownData01_7[0x94];                                      // 0x009C   (0x0094) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x50];                                      // 0x0038   (0x0050) MISSED
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UAISense*>                            Senses;                                                     // 0x0088   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              PerceptionAgingRate;                                        // 0x0098   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x94];                                      // 0x009C   (0x0094) MISSED
 
     /// Functions
     // Function /Script/AIModule.AIPerceptionSystem.ReportPerceptionEvent
@@ -950,49 +1167,57 @@ public:
 };
 
 /// Class /Script/AIModule.AIResourceInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAIResourceInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIResource_Movement
-/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align n/a MaxSize: 0x0038
 class UAIResource_Movement : public UGameplayTaskResource
 { 
 public:
 };
 
 /// Class /Script/AIModule.AIResource_Logic
-/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000038 - 0x000038) align n/a MaxSize: 0x0038
 class UAIResource_Logic : public UGameplayTaskResource
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISense
-/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align n/a MaxSize: 0x0080
 class UAISense : public UObject
 { 
 public:
-    float                                              DefaultExpirationAge;                                       // 0x0028   (0x0004)
-    EAISenseNotifyType                                 NotifyType;                                                 // 0x002C   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x002D   (0x0003) MISSED
-    bool                                               bWantsNewPawnNotification : 1;                              // 0x0030:0 (0x0001)
-    bool                                               bAutoRegisterAllPawnsAsSources : 1;                         // 0x0030:1 (0x0001)
-    unsigned char                                      UnknownData01_5[0x7];                                       // 0x0031   (0x0007) MISSED
-    class UAIPerceptionSystem*                         PerceptionSystemInstance;                                   // 0x0038   (0x0008)
-    unsigned char                                      UnknownData02_7[0x40];                                      // 0x0040   (0x0040) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              DefaultExpirationAge;                                       // 0x0028   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EAISenseNotifyType                                 NotifyType;                                                 // 0x002C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x002D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bWantsNewPawnNotification : 1;                              // 0x0030:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bAutoRegisterAllPawnsAsSources : 1;                         // 0x0030:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_5[0x7];                                       // 0x0031   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UAIPerceptionSystem*                         PerceptionSystemInstance;                                   // 0x0038   (0x0008)
+    /* public    */ unsigned char                                      UnknownData05_7[0x40];                                      // 0x0040   (0x0040) MISSED
 };
 
 /// Class /Script/AIModule.AISense_Blueprint
-/// Size: 0x00A8 (168 bytes) (0x000080 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000080 - 0x0000A8) align n/a MaxSize: 0x00A8
 class UAISense_Blueprint : public UAISense
 { 
 public:
-    class UClass*                                      ListenerDataType;                                           // 0x0080   (0x0008)
-    TArray<class UAIPerceptionComponent*>              ListenerContainer;                                          // 0x0088   (0x0010)
-    TArray<class UAISenseEvent*>                       UnprocessedEvents;                                          // 0x0098   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      ListenerDataType;                                           // 0x0080   (0x0008)
+    UPROPERTY(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UAIPerceptionComponent*>              ListenerContainer;                                          // 0x0088   (0x0010)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UAISenseEvent*>                       UnprocessedEvents;                                          // 0x0098   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AISense_Blueprint.OnUpdate
@@ -1022,23 +1247,29 @@ public:
 };
 
 /// Struct /Script/AIModule.AIDamageEvent
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FAIDamageEvent
 { 
-    float                                              Amount;                                                     // 0x0000   (0x0004)
-    FVector                                            Location;                                                   // 0x0004   (0x000C)
-    FVector                                            HitLocation;                                                // 0x0010   (0x000C)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x001C   (0x0004) MISSED
-    class AActor*                                      DamagedActor;                                               // 0x0020   (0x0008)
-    class AActor*                                      Instigator;                                                 // 0x0028   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Amount;                                                     // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Location;                                                   // 0x0004   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            HitLocation;                                                // 0x0010   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x001C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      DamagedActor;                                               // 0x0020   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      Instigator;                                                 // 0x0028   (0x0008)
 };
 
 /// Class /Script/AIModule.AISense_Damage
-/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align n/a MaxSize: 0x0090
 class UAISense_Damage : public UAISense
 { 
 public:
-    TArray<FAIDamageEvent>                             RegisteredEvents;                                           // 0x0080   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAIDamageEvent>                             RegisteredEvents;                                           // 0x0080   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AISense_Damage.ReportDamageEvent
@@ -1052,26 +1283,33 @@ public:
 };
 
 /// Struct /Script/AIModule.AINoiseEvent
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FAINoiseEvent
 { 
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0000   (0x0004) MISSED
-    FVector                                            NoiseLocation;                                              // 0x0004   (0x000C)
-    float                                              Loudness;                                                   // 0x0010   (0x0004)
-    float                                              MaxRange;                                                   // 0x0014   (0x0004)
-    class AActor*                                      Instigator;                                                 // 0x0018   (0x0008)
-    FName                                              Tag;                                                        // 0x0020   (0x0008)
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0028   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData02_7[0x4];                                       // 0x0000   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            NoiseLocation;                                              // 0x0004   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Loudness;                                                   // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaxRange;                                                   // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      Instigator;                                                 // 0x0018   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              Tag;                                                        // 0x0020   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.AISense_Hearing
-/// Size: 0x00E8 (232 bytes) (0x000080 - 0x0000E8) align 8 MaxSize: 0x00E8
+/// Size: 0x00E8 (232 bytes) (0x000080 - 0x0000E8) align n/a MaxSize: 0x00E8
 class UAISense_Hearing : public UAISense
 { 
 public:
-    TArray<FAINoiseEvent>                              NoiseEvents;                                                // 0x0080   (0x0010)
-    float                                              SpeedOfSoundSq;                                             // 0x0090   (0x0004)
-    unsigned char                                      UnknownData00_7[0x54];                                      // 0x0094   (0x0054) MISSED
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FAINoiseEvent>                              NoiseEvents;                                                // 0x0080   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              SpeedOfSoundSq;                                             // 0x0090   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x54];                                      // 0x0094   (0x0054) MISSED
 
     /// Functions
     // Function /Script/AIModule.AISense_Hearing.ReportNoiseEvent
@@ -1085,20 +1323,23 @@ public:
 };
 
 /// Struct /Script/AIModule.AIPredictionEvent
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FAIPredictionEvent
 { 
-    class AActor*                                      Requestor;                                                  // 0x0000   (0x0008)
-    class AActor*                                      PredictedActor;                                             // 0x0008   (0x0008)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0010   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      Requestor;                                                  // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      PredictedActor;                                             // 0x0008   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0010   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.AISense_Prediction
-/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align n/a MaxSize: 0x0090
 class UAISense_Prediction : public UAISense
 { 
 public:
-    TArray<FAIPredictionEvent>                         RegisteredEvents;                                           // 0x0080   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAIPredictionEvent>                         RegisteredEvents;                                           // 0x0080   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.AISense_Prediction.RequestPawnPredictionEvent
@@ -1114,206 +1355,261 @@ public:
 };
 
 /// Class /Script/AIModule.AISense_Sight
-/// Size: 0x0170 (368 bytes) (0x000080 - 0x000170) align 8 MaxSize: 0x0170
+/// Size: 0x0170 (368 bytes) (0x000080 - 0x000170) align n/a MaxSize: 0x0170
 class UAISense_Sight : public UAISense
 { 
 public:
-    unsigned char                                      UnknownData00_8[0xC8];                                      // 0x0080   (0x00C8) MISSED
-    int32_t                                            MaxTracesPerTick;                                           // 0x0148   (0x0004)
-    int32_t                                            MinQueriesPerTimeSliceCheck;                                // 0x014C   (0x0004)
-    double                                             MaxTimeSlicePerTick;                                        // 0x0150   (0x0008)
-    float                                              HighImportanceQueryDistanceThreshold;                       // 0x0158   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x015C   (0x0004) MISSED
-    float                                              MaxQueryImportance;                                         // 0x0160   (0x0004)
-    float                                              SightLimitQueryImportance;                                  // 0x0164   (0x0004)
-    unsigned char                                      UnknownData02_7[0x8];                                       // 0x0168   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData03_8[0xC8];                                      // 0x0080   (0x00C8) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MaxTracesPerTick;                                           // 0x0148   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MinQueriesPerTimeSliceCheck;                                // 0x014C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ double                                             MaxTimeSlicePerTick;                                        // 0x0150   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              HighImportanceQueryDistanceThreshold;                       // 0x0158   (0x0004)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x015C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              MaxQueryImportance;                                         // 0x0160   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              SightLimitQueryImportance;                                  // 0x0164   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_7[0x8];                                       // 0x0168   (0x0008) MISSED
 };
 
 /// Struct /Script/AIModule.AITeamStimulusEvent
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FAITeamStimulusEvent
 { 
-    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0000   (0x0028) MISSED
-    class AActor*                                      Broadcaster;                                                // 0x0028   (0x0008)
-    class AActor*                                      Enemy;                                                      // 0x0030   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x28];                                      // 0x0000   (0x0028) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class AActor*                                      Broadcaster;                                                // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      Enemy;                                                      // 0x0030   (0x0008)
 };
 
 /// Class /Script/AIModule.AISense_Team
-/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align n/a MaxSize: 0x0090
 class UAISense_Team : public UAISense
 { 
 public:
-    TArray<FAITeamStimulusEvent>                       RegisteredEvents;                                           // 0x0080   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAITeamStimulusEvent>                       RegisteredEvents;                                           // 0x0080   (0x0010)
 };
 
 /// Struct /Script/AIModule.AITouchEvent
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FAITouchEvent
 { 
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    class AActor*                                      TouchReceiver;                                              // 0x0010   (0x0008)
-    class AActor*                                      OtherActor;                                                 // 0x0018   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      TouchReceiver;                                              // 0x0010   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      OtherActor;                                                 // 0x0018   (0x0008)
 };
 
 /// Class /Script/AIModule.AISense_Touch
-/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000080 - 0x000090) align n/a MaxSize: 0x0090
 class UAISense_Touch : public UAISense
 { 
 public:
-    TArray<FAITouchEvent>                              RegisteredEvents;                                           // 0x0080   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAITouchEvent>                              RegisteredEvents;                                           // 0x0080   (0x0010)
 };
 
 /// Class /Script/AIModule.AISenseBlueprintListener
-/// Size: 0x0108 (264 bytes) (0x000108 - 0x000108) align 8 MaxSize: 0x0108
+/// Size: 0x0108 (264 bytes) (0x000108 - 0x000108) align n/a MaxSize: 0x0108
 class UAISenseBlueprintListener : public UUserDefinedStruct
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseConfig
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
 class UAISenseConfig : public UObject
 { 
 public:
-    FColor                                             DebugColor;                                                 // 0x0028   (0x0004)
-    float                                              MaxAge;                                                     // 0x002C   (0x0004)
-    bool                                               bStartsEnabled : 1;                                         // 0x0030:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x17];                                      // 0x0031   (0x0017) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FColor                                             DebugColor;                                                 // 0x0028   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              MaxAge;                                                     // 0x002C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bStartsEnabled : 1;                                         // 0x0030:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x17];                                      // 0x0031   (0x0017) MISSED
 };
 
 /// Class /Script/AIModule.AISenseConfig_Blueprint
-/// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align n/a MaxSize: 0x0050
 class UAISenseConfig_Blueprint : public UAISenseConfig
 { 
 public:
-    class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
 };
 
 /// Class /Script/AIModule.AISenseConfig_Damage
-/// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000048 - 0x000050) align n/a MaxSize: 0x0050
 class UAISenseConfig_Damage : public UAISenseConfig
 { 
 public:
-    class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
 };
 
 /// Struct /Script/AIModule.AISenseAffiliationFilter
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FAISenseAffiliationFilter
 { 
-    bool                                               bDetectEnemies : 1;                                         // 0x0000:0 (0x0001)
-    bool                                               bDetectNeutrals : 1;                                        // 0x0000:1 (0x0001)
-    bool                                               bDetectFriendlies : 1;                                      // 0x0000:2 (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDetectEnemies : 1;                                         // 0x0000:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDetectNeutrals : 1;                                        // 0x0000:1 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDetectFriendlies : 1;                                      // 0x0000:2 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x0001   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.AISenseConfig_Hearing
-/// Size: 0x0060 (96 bytes) (0x000048 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000048 - 0x000060) align n/a MaxSize: 0x0060
 class UAISenseConfig_Hearing : public UAISenseConfig
 { 
 public:
-    class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
-    float                                              HearingRange;                                               // 0x0050   (0x0004)
-    float                                              LoSHearingRange;                                            // 0x0054   (0x0004)
-    bool                                               bUseLoSHearing : 1;                                         // 0x0058:0 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0059   (0x0003) MISSED
-    FAISenseAffiliationFilter                          DetectionByAffiliation;                                     // 0x005C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HearingRange;                                               // 0x0050   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LoSHearingRange;                                            // 0x0054   (0x0004)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseLoSHearing : 1;                                         // 0x0058:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_5[0x3];                                       // 0x0059   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FAISenseAffiliationFilter                          DetectionByAffiliation;                                     // 0x005C   (0x0004)
 };
 
 /// Class /Script/AIModule.AISenseConfig_Prediction
-/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align n/a MaxSize: 0x0048
 class UAISenseConfig_Prediction : public UAISenseConfig
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseConfig_Sight
-/// Size: 0x0070 (112 bytes) (0x000048 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000048 - 0x000070) align n/a MaxSize: 0x0070
 class UAISenseConfig_Sight : public UAISenseConfig
 { 
 public:
-    class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
-    float                                              SightRadius;                                                // 0x0050   (0x0004)
-    float                                              LoseSightRadius;                                            // 0x0054   (0x0004)
-    float                                              PeripheralVisionAngleDegrees;                               // 0x0058   (0x0004)
-    FAISenseAffiliationFilter                          DetectionByAffiliation;                                     // 0x005C   (0x0004)
-    float                                              AutoSuccessRangeFromLastSeenLocation;                       // 0x0060   (0x0004)
-    float                                              PointOfViewBackwardOffset;                                  // 0x0064   (0x0004)
-    float                                              NearClippingRadius;                                         // 0x0068   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Implementation;                                             // 0x0048   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SightRadius;                                                // 0x0050   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LoseSightRadius;                                            // 0x0054   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PeripheralVisionAngleDegrees;                               // 0x0058   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FAISenseAffiliationFilter                          DetectionByAffiliation;                                     // 0x005C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AutoSuccessRangeFromLastSeenLocation;                       // 0x0060   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PointOfViewBackwardOffset;                                  // 0x0064   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              NearClippingRadius;                                         // 0x0068   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x006C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.AISenseConfig_Team
-/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align n/a MaxSize: 0x0048
 class UAISenseConfig_Team : public UAISenseConfig
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseConfig_Touch
-/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align n/a MaxSize: 0x0048
 class UAISenseConfig_Touch : public UAISenseConfig
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseEvent
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAISenseEvent : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISenseEvent_Damage
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 class UAISenseEvent_Damage : public UAISenseEvent
 { 
 public:
-    FAIDamageEvent                                     Event;                                                      // 0x0028   (0x0030)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FAIDamageEvent                                     Event;                                                      // 0x0028   (0x0030)
 };
 
 /// Class /Script/AIModule.AISenseEvent_Hearing
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 class UAISenseEvent_Hearing : public UAISenseEvent
 { 
 public:
-    FAINoiseEvent                                      Event;                                                      // 0x0028   (0x0030)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FAINoiseEvent                                      Event;                                                      // 0x0028   (0x0030)
 };
 
 /// Class /Script/AIModule.AISightTargetInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAISightTargetInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.AISystem
-/// Size: 0x0130 (304 bytes) (0x000058 - 0x000130) align 8 MaxSize: 0x0130
+/// Size: 0x0130 (304 bytes) (0x000058 - 0x000130) align n/a MaxSize: 0x0130
 class UAISystem : public UAISystemBase
 { 
 public:
-    FSoftClassPath                                     PerceptionSystemClassName;                                  // 0x0058   (0x0018)
-    FSoftClassPath                                     HotSpotManagerClassName;                                    // 0x0070   (0x0018)
-    float                                              AcceptanceRadius;                                           // 0x0088   (0x0004)
-    float                                              PathfollowingRegularPathPointAcceptanceRadius;              // 0x008C   (0x0004)
-    float                                              PathfollowingNavLinkAcceptanceRadius;                       // 0x0090   (0x0004)
-    bool                                               bFinishMoveOnGoalOverlap;                                   // 0x0094   (0x0001)
-    bool                                               bAcceptPartialPaths;                                        // 0x0095   (0x0001)
-    bool                                               bAllowStrafing;                                             // 0x0096   (0x0001)
-    bool                                               bEnableBTAITasks;                                           // 0x0097   (0x0001)
-    bool                                               bAllowControllersAsEQSQuerier;                              // 0x0098   (0x0001)
-    bool                                               bEnableDebuggerPlugin;                                      // 0x0099   (0x0001)
-    bool                                               bForgetStaleActors;                                         // 0x009A   (0x0001)
-    bool                                               bAddBlackboardSelfKey;                                      // 0x009B   (0x0001)
-    TEnumAsByte<ECollisionChannel>                     DefaultSightCollisionChannel;                               // 0x009C   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x009D   (0x0003) MISSED
-    class UBehaviorTreeManager*                        BehaviorTreeManager;                                        // 0x00A0   (0x0008)
-    class UEnvQueryManager*                            EnvironmentQueryManager;                                    // 0x00A8   (0x0008)
-    class UAIPerceptionSystem*                         PerceptionSystem;                                           // 0x00B0   (0x0008)
-    TArray<class UAIAsyncTaskBlueprintProxy*>          AllProxyObjects;                                            // 0x00B8   (0x0010)
-    class UAIHotSpotManager*                           HotSpotManager;                                             // 0x00C8   (0x0008)
-    class UNavLocalGridManager*                        NavLocalGrids;                                              // 0x00D0   (0x0008)
-    unsigned char                                      UnknownData01_7[0x58];                                      // 0x00D8   (0x0058) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FSoftClassPath                                     PerceptionSystemClassName;                                  // 0x0058   (0x0018)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FSoftClassPath                                     HotSpotManagerClassName;                                    // 0x0070   (0x0018)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AcceptanceRadius;                                           // 0x0088   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PathfollowingRegularPathPointAcceptanceRadius;              // 0x008C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PathfollowingNavLinkAcceptanceRadius;                       // 0x0090   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFinishMoveOnGoalOverlap;                                   // 0x0094   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAcceptPartialPaths;                                        // 0x0095   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowStrafing;                                             // 0x0096   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableBTAITasks;                                           // 0x0097   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowControllersAsEQSQuerier;                              // 0x0098   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableDebuggerPlugin;                                      // 0x0099   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bForgetStaleActors;                                         // 0x009A   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAddBlackboardSelfKey;                                      // 0x009B   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ECollisionChannel>                     DefaultSightCollisionChannel;                               // 0x009C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x009D   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBehaviorTreeManager*                        BehaviorTreeManager;                                        // 0x00A0   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UEnvQueryManager*                            EnvironmentQueryManager;                                    // 0x00A8   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UAIPerceptionSystem*                         PerceptionSystem;                                           // 0x00B0   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UAIAsyncTaskBlueprintProxy*>          AllProxyObjects;                                            // 0x00B8   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UAIHotSpotManager*                           HotSpotManager;                                             // 0x00C8   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UNavLocalGridManager*                        NavLocalGrids;                                              // 0x00D0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x58];                                      // 0x00D8   (0x0058) MISSED
 
     /// Functions
     // Function /Script/AIModule.AISystem.AILoggingVerbose
@@ -1323,37 +1619,42 @@ public:
 };
 
 /// Class /Script/AIModule.AITask
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
 class UAITask : public UGameplayTask
 { 
 public:
-    class AAIController*                               OwnerController;                                            // 0x0068   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AAIController*                               OwnerController;                                            // 0x0068   (0x0008)
 };
 
 /// Class /Script/AIModule.AITask_LockLogic
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
 class UAITask_LockLogic : public UAITask
 { 
 public:
 };
 
 /// Struct /Script/AIModule.AIMoveRequest
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FAIMoveRequest
 { 
-    class AActor*                                      GoalActor;                                                  // 0x0000   (0x0008)
-    unsigned char                                      UnknownData00_7[0x40];                                      // 0x0008   (0x0040) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AActor*                                      GoalActor;                                                  // 0x0000   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x40];                                      // 0x0008   (0x0040) MISSED
 };
 
 /// Class /Script/AIModule.AITask_MoveTo
-/// Size: 0x0118 (280 bytes) (0x000070 - 0x000118) align 8 MaxSize: 0x0118
+/// Size: 0x0118 (280 bytes) (0x000070 - 0x000118) align n/a MaxSize: 0x0118
 class UAITask_MoveTo : public UAITask
 { 
 public:
-    FMulticastInlineDelegate                           OnRequestFailed;                                            // 0x0070   (0x0010)
-    FMulticastInlineDelegate                           OnMoveFinished;                                             // 0x0080   (0x0010)
-    FAIMoveRequest                                     MoveRequest;                                                // 0x0090   (0x0048)
-    unsigned char                                      UnknownData00_7[0x40];                                      // 0x00D8   (0x0040) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FMulticastInlineDelegate                           OnRequestFailed;                                            // 0x0070   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FMulticastInlineDelegate                           OnMoveFinished;                                             // 0x0080   (0x0010)
+    UPROPERTY(Protected, NativeAccessSpecifierProtected)
+    /* protected */ FAIMoveRequest                                     MoveRequest;                                                // 0x0090   (0x0048)
+    /* public    */ unsigned char                                      UnknownData01_7[0x40];                                      // 0x00D8   (0x0040) MISSED
 
     /// Functions
     // Function /Script/AIModule.AITask_MoveTo.AIMoveTo
@@ -1371,11 +1672,11 @@ public:
 };
 
 /// Class /Script/AIModule.AITask_RunEQS
-/// Size: 0x00E8 (232 bytes) (0x000070 - 0x0000E8) align 8 MaxSize: 0x00E8
+/// Size: 0x00E8 (232 bytes) (0x000070 - 0x0000E8) align n/a MaxSize: 0x00E8
 class UAITask_RunEQS : public UAITask
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x78];                                      // 0x0070   (0x0078) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x78];                                      // 0x0070   (0x0078) MISSED
 
     /// Functions
     // Function /Script/AIModule.AITask_RunEQS.RunEQS
@@ -1385,56 +1686,67 @@ public:
 };
 
 /// Struct /Script/AIModule.BTDecoratorLogic
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 2 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FBTDecoratorLogic
 { 
-    TEnumAsByte<EBTDecoratorLogic>                     Operation;                                                  // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x1];                                       // 0x0001   (0x0001) MISSED
-    uint16_t                                           Number;                                                     // 0x0002   (0x0002)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EBTDecoratorLogic>                     Operation;                                                  // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x1];                                       // 0x0001   (0x0001) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ uint16_t                                           Number;                                                     // 0x0002   (0x0002)
 };
 
 /// Class /Script/AIModule.BehaviorTree
-/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align n/a MaxSize: 0x0068
 class UBehaviorTree : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008) MISSED
-    class UBTCompositeNode*                            RootNode;                                                   // 0x0030   (0x0008)
-    class UBlackboardData*                             BlackboardAsset;                                            // 0x0038   (0x0008)
-    TArray<class UBTDecorator*>                        RootDecorators;                                             // 0x0040   (0x0010)
-    TArray<FBTDecoratorLogic>                          RootDecoratorOps;                                           // 0x0050   (0x0010)
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x0060   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBTCompositeNode*                            RootNode;                                                   // 0x0030   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBlackboardData*                             BlackboardAsset;                                            // 0x0038   (0x0008)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UBTDecorator*>                        RootDecorators;                                             // 0x0040   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FBTDecoratorLogic>                          RootDecoratorOps;                                           // 0x0050   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0x8];                                       // 0x0060   (0x0008) MISSED
 };
 
 /// Struct /Script/AIModule.BehaviorTreeTemplateInfo
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FBehaviorTreeTemplateInfo
 { 
-    class UBehaviorTree*                               Asset;                                                      // 0x0000   (0x0008)
-    class UBTCompositeNode*                            Template;                                                   // 0x0008   (0x0008)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0010   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBehaviorTree*                               Asset;                                                      // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBTCompositeNode*                            Template;                                                   // 0x0008   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0010   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BehaviorTreeManager
-/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align n/a MaxSize: 0x0050
 class UBehaviorTreeManager : public UObject
 { 
 public:
-    int32_t                                            MaxDebuggerSteps;                                           // 0x0028   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x002C   (0x0004) MISSED
-    TArray<FBehaviorTreeTemplateInfo>                  LoadedTemplates;                                            // 0x0030   (0x0010)
-    TArray<class UBehaviorTreeComponent*>              ActiveComponents;                                           // 0x0040   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxDebuggerSteps;                                           // 0x0028   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x002C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FBehaviorTreeTemplateInfo>                  LoadedTemplates;                                            // 0x0030   (0x0010)
+    UPROPERTY(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UBehaviorTreeComponent*>              ActiveComponents;                                           // 0x0040   (0x0010)
 };
 
 /// Class /Script/AIModule.BehaviorTreeTypes
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UBehaviorTreeTypes : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardAssetProvider
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UBlackboardAssetProvider : public UInterface
 { 
 public:
@@ -1445,16 +1757,20 @@ public:
 };
 
 /// Class /Script/AIModule.BlackboardComponent
-/// Size: 0x01C8 (456 bytes) (0x0000C0 - 0x0001C8) align 8 MaxSize: 0x01C8
+/// Size: 0x01C8 (456 bytes) (0x0000C0 - 0x0001C8) align n/a MaxSize: 0x01C8
 class UBlackboardComponent : public UActorComponent
 { 
 public:
-    class UBrainComponent*                             BrainComp;                                                  // 0x00C0   (0x0008)
-    class UBlackboardData*                             DefaultBlackboardAsset;                                     // 0x00C8   (0x0008)
-    class UBlackboardData*                             BlackboardAsset;                                            // 0x00D0   (0x0008)
-    unsigned char                                      UnknownData00_6[0x20];                                      // 0x00D8   (0x0020) MISSED
-    TArray<class UBlackboardKeyType*>                  KeyInstances;                                               // 0x00F8   (0x0010)
-    unsigned char                                      UnknownData01_7[0xC0];                                      // 0x0108   (0x00C0) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBrainComponent*                             BrainComp;                                                  // 0x00C0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBlackboardData*                             DefaultBlackboardAsset;                                     // 0x00C8   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBlackboardData*                             BlackboardAsset;                                            // 0x00D0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData02_6[0x20];                                      // 0x00D8   (0x0020) MISSED
+    UPROPERTY(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UBlackboardKeyType*>                  KeyInstances;                                               // 0x00F8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0xC0];                                      // 0x0108   (0x00C0) MISSED
 
     /// Functions
     // Function /Script/AIModule.BlackboardComponent.SetValueAsVector
@@ -1544,213 +1860,253 @@ public:
 };
 
 /// Struct /Script/AIModule.BlackboardEntry
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FBlackboardEntry
 { 
-    FName                                              EntryName;                                                  // 0x0000   (0x0008)
-    class UBlackboardKeyType*                          KeyType;                                                    // 0x0008   (0x0008)
-    bool                                               bInstanceSynced : 1;                                        // 0x0010:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0011   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              EntryName;                                                  // 0x0000   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBlackboardKeyType*                          KeyType;                                                    // 0x0008   (0x0008)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bInstanceSynced : 1;                                        // 0x0010:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BlackboardData
-/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align n/a MaxSize: 0x0050
 class UBlackboardData : public UDataAsset
 { 
 public:
-    class UBlackboardData*                             Parent;                                                     // 0x0030   (0x0008)
-    TArray<FBlackboardEntry>                           Keys;                                                       // 0x0038   (0x0010)
-    bool                                               bHasSynchronizedKeys : 1;                                   // 0x0048:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBlackboardData*                             Parent;                                                     // 0x0030   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FBlackboardEntry>                           Keys;                                                       // 0x0038   (0x0010)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bHasSynchronizedKeys : 1;                                   // 0x0048:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BlackboardKeyType
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class UBlackboardKeyType : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Bool
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UBlackboardKeyType_Bool : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Class
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
 class UBlackboardKeyType_Class : public UBlackboardKeyType
 { 
 public:
-    class UClass*                                      BaseClass;                                                  // 0x0030   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      BaseClass;                                                  // 0x0030   (0x0008)
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Enum
-/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align n/a MaxSize: 0x0050
 class UBlackboardKeyType_Enum : public UBlackboardKeyType
 { 
 public:
-    class UEnum*                                       EnumType;                                                   // 0x0030   (0x0008)
-    FString                                            EnumName;                                                   // 0x0038   (0x0010)
-    bool                                               bIsEnumNameValid : 1;                                       // 0x0048:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UEnum*                                       EnumType;                                                   // 0x0030   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            EnumName;                                                   // 0x0038   (0x0010)
+    UPROPERTY(Edit, DisableEditOnInstance, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsEnumNameValid : 1;                                       // 0x0048:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Float
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UBlackboardKeyType_Float : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Int
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UBlackboardKeyType_Int : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Name
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UBlackboardKeyType_Name : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_NativeEnum
-/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align n/a MaxSize: 0x0048
 class UBlackboardKeyType_NativeEnum : public UBlackboardKeyType
 { 
 public:
-    FString                                            EnumName;                                                   // 0x0030   (0x0010)
-    class UEnum*                                       EnumType;                                                   // 0x0040   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            EnumName;                                                   // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UEnum*                                       EnumType;                                                   // 0x0040   (0x0008)
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Object
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
 class UBlackboardKeyType_Object : public UBlackboardKeyType
 { 
 public:
-    class UClass*                                      BaseClass;                                                  // 0x0030   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      BaseClass;                                                  // 0x0030   (0x0008)
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Rotator
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UBlackboardKeyType_Rotator : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_String
-/// Size: 0x0040 (64 bytes) (0x000030 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000030 - 0x000040) align n/a MaxSize: 0x0040
 class UBlackboardKeyType_String : public UBlackboardKeyType
 { 
 public:
-    FString                                            StringValue;                                                // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            StringValue;                                                // 0x0030   (0x0010)
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Vector
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UBlackboardKeyType_Vector : public UBlackboardKeyType
 { 
 public:
 };
 
 /// Struct /Script/AIModule.BTCompositeChild
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FBTCompositeChild
 { 
-    class UBTCompositeNode*                            ChildComposite;                                             // 0x0000   (0x0008)
-    class UBTTaskNode*                                 ChildTask;                                                  // 0x0008   (0x0008)
-    TArray<class UBTDecorator*>                        Decorators;                                                 // 0x0010   (0x0010)
-    TArray<FBTDecoratorLogic>                          DecoratorOps;                                               // 0x0020   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBTCompositeNode*                            ChildComposite;                                             // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBTTaskNode*                                 ChildTask;                                                  // 0x0008   (0x0008)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UBTDecorator*>                        Decorators;                                                 // 0x0010   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FBTDecoratorLogic>                          DecoratorOps;                                               // 0x0020   (0x0010)
 };
 
 /// Class /Script/AIModule.BTCompositeNode
-/// Size: 0x0090 (144 bytes) (0x000058 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000058 - 0x000090) align n/a MaxSize: 0x0090
 class UBTCompositeNode : public UBTNode
 { 
 public:
-    TArray<FBTCompositeChild>                          Children;                                                   // 0x0058   (0x0010)
-    TArray<class UBTService*>                          Services;                                                   // 0x0068   (0x0010)
-    unsigned char                                      UnknownData00_6[0x10];                                      // 0x0078   (0x0010) MISSED
-    bool                                               bApplyDecoratorScope : 1;                                   // 0x0088:0 (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0089   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FBTCompositeChild>                          Children;                                                   // 0x0058   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UBTService*>                          Services;                                                   // 0x0068   (0x0010)
+    /* public    */ unsigned char                                      UnknownData02_6[0x10];                                      // 0x0078   (0x0010) MISSED
+    UPROPERTY(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bApplyDecoratorScope : 1;                                   // 0x0088:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x0089   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTComposite_Selector
-/// Size: 0x0090 (144 bytes) (0x000090 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000090 - 0x000090) align n/a MaxSize: 0x0090
 class UBTComposite_Selector : public UBTCompositeNode
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTComposite_Sequence
-/// Size: 0x0090 (144 bytes) (0x000090 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000090 - 0x000090) align n/a MaxSize: 0x0090
 class UBTComposite_Sequence : public UBTCompositeNode
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTComposite_SimpleParallel
-/// Size: 0x0098 (152 bytes) (0x000090 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000090 - 0x000098) align n/a MaxSize: 0x0098
 class UBTComposite_SimpleParallel : public UBTCompositeNode
 { 
 public:
-    TEnumAsByte<EBTParallelMode>                       FinishMode;                                                 // 0x0090   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0091   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EBTParallelMode>                       FinishMode;                                                 // 0x0090   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0091   (0x0007) MISSED
 };
 
 /// Struct /Script/AIModule.BlackboardKeySelector
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FBlackboardKeySelector
 { 
-    TArray<class UBlackboardKeyType*>                  AllowedTypes;                                               // 0x0000   (0x0010)
-    FName                                              SelectedKeyName;                                            // 0x0010   (0x0008)
-    class UClass*                                      SelectedKeyType;                                            // 0x0018   (0x0008)
-    char                                               SelectedKeyID;                                              // 0x0020   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0021   (0x0003) MISSED
-    bool                                               bNoneIsAllowedValue : 1;                                    // 0x0024:0 (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0025   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UBlackboardKeyType*>                  AllowedTypes;                                               // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              SelectedKeyName;                                            // 0x0010   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      SelectedKeyType;                                            // 0x0018   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ char                                               SelectedKeyID;                                              // 0x0020   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0021   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bNoneIsAllowedValue : 1;                                    // 0x0024:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x0025   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_BlackboardBase
-/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000068 - 0x000090) align n/a MaxSize: 0x0090
 class UBTDecorator_BlackboardBase : public UBTDecorator
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0068   (0x0028)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             BlackboardKey;                                              // 0x0068   (0x0028)
 };
 
 /// Class /Script/AIModule.BTDecorator_Blackboard
-/// Size: 0x00C0 (192 bytes) (0x000090 - 0x0000C0) align 8 MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000090 - 0x0000C0) align n/a MaxSize: 0x00C0
 class UBTDecorator_Blackboard : public UBTDecorator_BlackboardBase
 { 
 public:
-    int32_t                                            IntValue;                                                   // 0x0090   (0x0004)
-    float                                              FloatValue;                                                 // 0x0094   (0x0004)
-    FString                                            StringValue;                                                // 0x0098   (0x0010)
-    FString                                            CachedDescription;                                          // 0x00A8   (0x0010)
-    char                                               OperationType;                                              // 0x00B8   (0x0001)
-    TEnumAsByte<EBTBlackboardRestart>                  NotifyObserver;                                             // 0x00B9   (0x0001)
-    unsigned char                                      UnknownData00_7[0x6];                                       // 0x00BA   (0x0006) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            IntValue;                                                   // 0x0090   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              FloatValue;                                                 // 0x0094   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            StringValue;                                                // 0x0098   (0x0010)
+    UPROPERTY(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            CachedDescription;                                          // 0x00A8   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ char                                               OperationType;                                              // 0x00B8   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<EBTBlackboardRestart>                  NotifyObserver;                                             // 0x00B9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x6];                                       // 0x00BA   (0x0006) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_BlueprintBase
-/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align n/a MaxSize: 0x00A0
 class UBTDecorator_BlueprintBase : public UBTDecorator
 { 
 public:
-    class AAIController*                               AIOwner;                                                    // 0x0068   (0x0008)
-    class AActor*                                      ActorOwner;                                                 // 0x0070   (0x0008)
-    TArray<FName>                                      ObservedKeyNames;                                           // 0x0078   (0x0010)
-    unsigned char                                      UnknownData00_6[0x10];                                      // 0x0088   (0x0010) MISSED
-    bool                                               bShowPropertyDetails : 1;                                   // 0x0098:0 (0x0001)
-    bool                                               bCheckConditionOnlyBlackBoardChanges : 1;                   // 0x0098:1 (0x0001)
-    bool                                               bIsObservingBB : 1;                                         // 0x0098:2 (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0099   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AAIController*                               AIOwner;                                                    // 0x0068   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AActor*                                      ActorOwner;                                                 // 0x0070   (0x0008)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FName>                                      ObservedKeyNames;                                           // 0x0078   (0x0010)
+    /* public    */ unsigned char                                      UnknownData02_6[0x10];                                      // 0x0088   (0x0010) MISSED
+    UPROPERTY(Edit, DisableEditOnTemplate, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bShowPropertyDetails : 1;                                   // 0x0098:0 (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bCheckConditionOnlyBlackBoardChanges : 1;                   // 0x0098:1 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bIsObservingBB : 1;                                         // 0x0098:2 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x0099   (0x0007) MISSED
 
     /// Functions
     // Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
@@ -1806,194 +2162,238 @@ public:
 };
 
 /// Class /Script/AIModule.BTDecorator_CheckGameplayTagsOnActor
-/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align 8 MaxSize: 0x00C8
+/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align n/a MaxSize: 0x00C8
 class UBTDecorator_CheckGameplayTagsOnActor : public UBTDecorator
 { 
 public:
-    FBlackboardKeySelector                             ActorToCheck;                                               // 0x0068   (0x0028)
-    EGameplayContainerMatchType                        TagsToMatch;                                                // 0x0090   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0091   (0x0007) MISSED
-    FGameplayTagContainer                              GameplayTags;                                               // 0x0098   (0x0020)
-    FString                                            CachedDescription;                                          // 0x00B8   (0x0010)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             ActorToCheck;                                               // 0x0068   (0x0028)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EGameplayContainerMatchType                        TagsToMatch;                                                // 0x0090   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0091   (0x0007) MISSED
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FGameplayTagContainer                              GameplayTags;                                               // 0x0098   (0x0020)
+    UPROPERTY(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            CachedDescription;                                          // 0x00B8   (0x0010)
 };
 
 /// Class /Script/AIModule.BTDecorator_CompareBBEntries
-/// Size: 0x00C0 (192 bytes) (0x000068 - 0x0000C0) align 8 MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000068 - 0x0000C0) align n/a MaxSize: 0x00C0
 class UBTDecorator_CompareBBEntries : public UBTDecorator
 { 
 public:
-    TEnumAsByte<EBlackBoardEntryComparison>            Operator;                                                   // 0x0068   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0069   (0x0007) MISSED
-    FBlackboardKeySelector                             BlackboardKeyA;                                             // 0x0070   (0x0028)
-    FBlackboardKeySelector                             BlackboardKeyB;                                             // 0x0098   (0x0028)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<EBlackBoardEntryComparison>            Operator;                                                   // 0x0068   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0069   (0x0007) MISSED
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             BlackboardKeyA;                                             // 0x0070   (0x0028)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             BlackboardKeyB;                                             // 0x0098   (0x0028)
 };
 
 /// Class /Script/AIModule.BTDecorator_ConditionalLoop
-/// Size: 0x00C0 (192 bytes) (0x0000C0 - 0x0000C0) align 8 MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x0000C0 - 0x0000C0) align n/a MaxSize: 0x00C0
 class UBTDecorator_ConditionalLoop : public UBTDecorator_Blackboard
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTDecorator_ConeCheck
-/// Size: 0x00F0 (240 bytes) (0x000068 - 0x0000F0) align 8 MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000068 - 0x0000F0) align n/a MaxSize: 0x00F0
 class UBTDecorator_ConeCheck : public UBTDecorator
 { 
 public:
-    float                                              ConeHalfAngle;                                              // 0x0068   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x006C   (0x0004) MISSED
-    FBlackboardKeySelector                             ConeOrigin;                                                 // 0x0070   (0x0028)
-    FBlackboardKeySelector                             ConeDirection;                                              // 0x0098   (0x0028)
-    FBlackboardKeySelector                             Observed;                                                   // 0x00C0   (0x0028)
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x00E8   (0x0008) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ConeHalfAngle;                                              // 0x0068   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FBlackboardKeySelector                             ConeOrigin;                                                 // 0x0070   (0x0028)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FBlackboardKeySelector                             ConeDirection;                                              // 0x0098   (0x0028)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FBlackboardKeySelector                             Observed;                                                   // 0x00C0   (0x0028)
+    /* public    */ unsigned char                                      UnknownData03_7[0x8];                                       // 0x00E8   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_Cooldown
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
 class UBTDecorator_Cooldown : public UBTDecorator
 { 
 public:
-    float                                              CoolDownTime;                                               // 0x0068   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CoolDownTime;                                               // 0x0068   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x006C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_DoesPathExist
-/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align 8 MaxSize: 0x00C8
+/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align n/a MaxSize: 0x00C8
 class UBTDecorator_DoesPathExist : public UBTDecorator
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKeyA;                                             // 0x0068   (0x0028)
-    FBlackboardKeySelector                             BlackboardKeyB;                                             // 0x0090   (0x0028)
-    bool                                               bUseSelf : 1;                                               // 0x00B8:0 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x00B9   (0x0003) MISSED
-    TEnumAsByte<EPathExistanceQueryType>               PathQueryType;                                              // 0x00BC   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00BD   (0x0003) MISSED
-    class UClass*                                      FilterClass;                                                // 0x00C0   (0x0008)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             BlackboardKeyA;                                             // 0x0068   (0x0028)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             BlackboardKeyB;                                             // 0x0090   (0x0028)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseSelf : 1;                                               // 0x00B8:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_5[0x3];                                       // 0x00B9   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EPathExistanceQueryType>               PathQueryType;                                              // 0x00BC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x00BD   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      FilterClass;                                                // 0x00C0   (0x0008)
 };
 
 /// Class /Script/AIModule.BTDecorator_ForceSuccess
-/// Size: 0x0068 (104 bytes) (0x000068 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000068 - 0x000068) align n/a MaxSize: 0x0068
 class UBTDecorator_ForceSuccess : public UBTDecorator
 { 
 public:
 };
 
 /// Struct /Script/AIModule.AIDataProviderValue
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FAIDataProviderValue
 { 
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    class UAIDataProvider*                             DataBinding;                                                // 0x0010   (0x0008)
-    FName                                              DataField;                                                  // 0x0018   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAIDataProvider*                             DataBinding;                                                // 0x0010   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              DataField;                                                  // 0x0018   (0x0008)
 };
 
 /// Struct /Script/AIModule.AIDataProviderTypedValue
-/// Size: 0x0030 (48 bytes) (0x000020 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000020 - 0x000030) align n/a MaxSize: 0x0030
 struct FAIDataProviderTypedValue : FAIDataProviderValue
 { 
-    class UClass*                                      PropertyType;                                               // 0x0020   (0x0008)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0028   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      PropertyType;                                               // 0x0020   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Struct /Script/AIModule.AIDataProviderFloatValue
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
 struct FAIDataProviderFloatValue : FAIDataProviderTypedValue
 { 
-    float                                              DefaultValue;                                               // 0x0030   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DefaultValue;                                               // 0x0030   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_IsAtLocation
-/// Size: 0x00D8 (216 bytes) (0x000090 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x000090 - 0x0000D8) align n/a MaxSize: 0x00D8
 class UBTDecorator_IsAtLocation : public UBTDecorator_BlackboardBase
 { 
 public:
-    float                                              AcceptableRadius;                                           // 0x0090   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0094   (0x0004) MISSED
-    FAIDataProviderFloatValue                          ParametrizedAcceptableRadius;                               // 0x0098   (0x0038)
-    FAIDistanceType                                    GeometricDistanceType;                                      // 0x00D0   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00D1   (0x0003) MISSED
-    bool                                               bUseParametrizedRadius : 1;                                 // 0x00D4:0 (0x0001)
-    bool                                               bUseNavAgentGoalLocation : 1;                               // 0x00D4:1 (0x0001)
-    bool                                               bPathFindingBasedTest : 1;                                  // 0x00D4:2 (0x0001)
-    unsigned char                                      UnknownData02_7[0x3];                                       // 0x00D5   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AcceptableRadius;                                           // 0x0090   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x0094   (0x0004) MISSED
+    UPROPERTY(Edit, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ParametrizedAcceptableRadius;                               // 0x0098   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FAIDistanceType                                    GeometricDistanceType;                                      // 0x00D0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x00D1   (0x0003) MISSED
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseParametrizedRadius : 1;                                 // 0x00D4:0 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseNavAgentGoalLocation : 1;                               // 0x00D4:1 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bPathFindingBasedTest : 1;                                  // 0x00D4:2 (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x3];                                       // 0x00D5   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_IsBBEntryOfClass
-/// Size: 0x0098 (152 bytes) (0x000090 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000090 - 0x000098) align n/a MaxSize: 0x0098
 class UBTDecorator_IsBBEntryOfClass : public UBTDecorator_BlackboardBase
 { 
 public:
-    class UClass*                                      TestClass;                                                  // 0x0090   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      TestClass;                                                  // 0x0090   (0x0008)
 };
 
 /// Class /Script/AIModule.BTDecorator_KeepInCone
-/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align 8 MaxSize: 0x00C8
+/// Size: 0x00C8 (200 bytes) (0x000068 - 0x0000C8) align n/a MaxSize: 0x00C8
 class UBTDecorator_KeepInCone : public UBTDecorator
 { 
 public:
-    float                                              ConeHalfAngle;                                              // 0x0068   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x006C   (0x0004) MISSED
-    FBlackboardKeySelector                             ConeOrigin;                                                 // 0x0070   (0x0028)
-    FBlackboardKeySelector                             Observed;                                                   // 0x0098   (0x0028)
-    bool                                               bUseSelfAsOrigin : 1;                                       // 0x00C0:0 (0x0001)
-    bool                                               bUseSelfAsObserved : 1;                                     // 0x00C0:1 (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x00C1   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ConeHalfAngle;                                              // 0x0068   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FBlackboardKeySelector                             ConeOrigin;                                                 // 0x0070   (0x0028)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FBlackboardKeySelector                             Observed;                                                   // 0x0098   (0x0028)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseSelfAsOrigin : 1;                                       // 0x00C0:0 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseSelfAsObserved : 1;                                     // 0x00C0:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x00C1   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_Loop
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
 class UBTDecorator_Loop : public UBTDecorator
 { 
 public:
-    int32_t                                            NumLoops;                                                   // 0x0068   (0x0004)
-    bool                                               bInfiniteLoop;                                              // 0x006C   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x006D   (0x0003) MISSED
-    float                                              InfiniteLoopTimeoutTime;                                    // 0x0070   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0074   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            NumLoops;                                                   // 0x0068   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bInfiniteLoop;                                              // 0x006C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x006D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              InfiniteLoopTimeoutTime;                                    // 0x0070   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x0074   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_ReachedMoveGoal
-/// Size: 0x0068 (104 bytes) (0x000068 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000068 - 0x000068) align n/a MaxSize: 0x0068
 class UBTDecorator_ReachedMoveGoal : public UBTDecorator
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTDecorator_SetTagCooldown
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
 class UBTDecorator_SetTagCooldown : public UBTDecorator
 { 
 public:
-    FGameplayTag                                       CooldownTag;                                                // 0x0068   (0x0008)
-    float                                              CooldownDuration;                                           // 0x0070   (0x0004)
-    bool                                               bAddToExistingDuration;                                     // 0x0074   (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0075   (0x0003) MISSED
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGameplayTag                                       CooldownTag;                                                // 0x0068   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CooldownDuration;                                           // 0x0070   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAddToExistingDuration;                                     // 0x0074   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x0075   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_TagCooldown
-/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000068 - 0x000078) align n/a MaxSize: 0x0078
 class UBTDecorator_TagCooldown : public UBTDecorator
 { 
 public:
-    FGameplayTag                                       CooldownTag;                                                // 0x0068   (0x0008)
-    float                                              CooldownDuration;                                           // 0x0070   (0x0004)
-    bool                                               bAddToExistingDuration;                                     // 0x0074   (0x0001)
-    bool                                               bActivatesCooldown;                                         // 0x0075   (0x0001)
-    unsigned char                                      UnknownData00_7[0x2];                                       // 0x0076   (0x0002) MISSED
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGameplayTag                                       CooldownTag;                                                // 0x0068   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CooldownDuration;                                           // 0x0070   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAddToExistingDuration;                                     // 0x0074   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bActivatesCooldown;                                         // 0x0075   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x2];                                       // 0x0076   (0x0002) MISSED
 };
 
 /// Class /Script/AIModule.BTDecorator_TimeLimit
-/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000068 - 0x000070) align n/a MaxSize: 0x0070
 class UBTDecorator_TimeLimit : public UBTDecorator
 { 
 public:
-    float                                              TimeLimit;                                                  // 0x0068   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TimeLimit;                                                  // 0x0068   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x006C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UBTFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -2117,36 +2517,45 @@ public:
 };
 
 /// Class /Script/AIModule.BTService
-/// Size: 0x0070 (112 bytes) (0x000060 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000060 - 0x000070) align n/a MaxSize: 0x0070
 class UBTService : public UBTAuxiliaryNode
 { 
 public:
-    float                                              Interval;                                                   // 0x0060   (0x0004)
-    float                                              RandomDeviation;                                            // 0x0064   (0x0004)
-    bool                                               bCallTickOnSearchStart : 1;                                 // 0x0068:0 (0x0001)
-    bool                                               bRestartTimerOnEachActivation : 1;                          // 0x0068:1 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0069   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              Interval;                                                   // 0x0060   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              RandomDeviation;                                            // 0x0064   (0x0004)
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bCallTickOnSearchStart : 1;                                 // 0x0068:0 (0x0001)
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bRestartTimerOnEachActivation : 1;                          // 0x0068:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0069   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTService_BlackboardBase
-/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align n/a MaxSize: 0x0098
 class UBTService_BlackboardBase : public UBTService
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0070   (0x0028)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             BlackboardKey;                                              // 0x0070   (0x0028)
 };
 
 /// Class /Script/AIModule.BTService_BlueprintBase
-/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align n/a MaxSize: 0x0098
 class UBTService_BlueprintBase : public UBTService
 { 
 public:
-    class AAIController*                               AIOwner;                                                    // 0x0070   (0x0008)
-    class AActor*                                      ActorOwner;                                                 // 0x0078   (0x0008)
-    unsigned char                                      UnknownData00_6[0x10];                                      // 0x0080   (0x0010) MISSED
-    bool                                               bShowPropertyDetails : 1;                                   // 0x0090:0 (0x0001)
-    bool                                               bShowEventDetails : 1;                                      // 0x0090:1 (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0091   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AAIController*                               AIOwner;                                                    // 0x0070   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AActor*                                      ActorOwner;                                                 // 0x0078   (0x0008)
+    /* public    */ unsigned char                                      UnknownData02_6[0x10];                                      // 0x0080   (0x0010) MISSED
+    UPROPERTY(Edit, DisableEditOnTemplate, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bShowPropertyDetails : 1;                                   // 0x0090:0 (0x0001)
+    UPROPERTY(Edit, DisableEditOnTemplate, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bShowEventDetails : 1;                                      // 0x0090:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x0091   (0x0007) MISSED
 
     /// Functions
     // Function /Script/AIModule.BTService_BlueprintBase.ReceiveTickAI
@@ -2184,74 +2593,91 @@ public:
 };
 
 /// Class /Script/AIModule.BTService_DefaultFocus
-/// Size: 0x00A0 (160 bytes) (0x000098 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000098 - 0x0000A0) align n/a MaxSize: 0x00A0
 class UBTService_DefaultFocus : public UBTService_BlackboardBase
 { 
 public:
-    char                                               FocusPriority;                                              // 0x0098   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0099   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ char                                               FocusPriority;                                              // 0x0098   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0099   (0x0007) MISSED
 };
 
 /// Struct /Script/AIModule.AIDynamicParam
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FAIDynamicParam
 { 
-    FName                                              ParamName;                                                  // 0x0000   (0x0008)
-    EAIParamType                                       ParamType;                                                  // 0x0008   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0009   (0x0003) MISSED
-    float                                              Value;                                                      // 0x000C   (0x0004)
-    FBlackboardKeySelector                             BBKey;                                                      // 0x0010   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ParamName;                                                  // 0x0000   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EAIParamType                                       ParamType;                                                  // 0x0008   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0009   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Value;                                                      // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FBlackboardKeySelector                             BBKey;                                                      // 0x0010   (0x0028)
 };
 
 /// Struct /Script/AIModule.EQSParametrizedQueryExecutionRequest
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FEQSParametrizedQueryExecutionRequest
 { 
-    class UEnvQuery*                                   QueryTemplate;                                              // 0x0000   (0x0008)
-    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x0008   (0x0010)
-    FBlackboardKeySelector                             EQSQueryBlackboardKey;                                      // 0x0018   (0x0028)
-    TEnumAsByte<EEnvQueryRunMode>                      RunMode;                                                    // 0x0040   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0041   (0x0003) MISSED
-    bool                                               bUseBBKeyForQueryTemplate : 1;                              // 0x0044:0 (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0045   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UEnvQuery*                                   QueryTemplate;                                              // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x0008   (0x0010)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FBlackboardKeySelector                             EQSQueryBlackboardKey;                                      // 0x0018   (0x0028)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvQueryRunMode>                      RunMode;                                                    // 0x0040   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0041   (0x0003) MISSED
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseBBKeyForQueryTemplate : 1;                              // 0x0044:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x0045   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.BTService_RunEQS
-/// Size: 0x00F0 (240 bytes) (0x000098 - 0x0000F0) align 8 MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000098 - 0x0000F0) align n/a MaxSize: 0x00F0
 class UBTService_RunEQS : public UBTService_BlackboardBase
 { 
 public:
-    FEQSParametrizedQueryExecutionRequest              EQSRequest;                                                 // 0x0098   (0x0048)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x00E0   (0x0010) MISSED
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FEQSParametrizedQueryExecutionRequest              EQSRequest;                                                 // 0x0098   (0x0048)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x00E0   (0x0010) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_BlackboardBase
-/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000070 - 0x000098) align n/a MaxSize: 0x0098
 class UBTTask_BlackboardBase : public UBTTaskNode
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0070   (0x0028)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             BlackboardKey;                                              // 0x0070   (0x0028)
 };
 
 /// Struct /Script/AIModule.IntervalCountdown
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FIntervalCountdown
 { 
-    float                                              Interval;                                                   // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Interval;                                                   // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0004   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_BlueprintBase
-/// Size: 0x00A8 (168 bytes) (0x000070 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000070 - 0x0000A8) align n/a MaxSize: 0x00A8
 class UBTTask_BlueprintBase : public UBTTaskNode
 { 
 public:
-    class AAIController*                               AIOwner;                                                    // 0x0070   (0x0008)
-    class AActor*                                      ActorOwner;                                                 // 0x0078   (0x0008)
-    FIntervalCountdown                                 TickInterval;                                               // 0x0080   (0x0008)
-    unsigned char                                      UnknownData00_6[0x18];                                      // 0x0088   (0x0018) MISSED
-    bool                                               bShowPropertyDetails : 1;                                   // 0x00A0:0 (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x00A1   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AAIController*                               AIOwner;                                                    // 0x0070   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AActor*                                      ActorOwner;                                                 // 0x0078   (0x0008)
+    UPROPERTY(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FIntervalCountdown                                 TickInterval;                                               // 0x0080   (0x0008)
+    /* public    */ unsigned char                                      UnknownData02_6[0x18];                                      // 0x0088   (0x0018) MISSED
+    UPROPERTY(Edit, DisableEditOnTemplate, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bShowPropertyDetails : 1;                                   // 0x00A0:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x00A1   (0x0007) MISSED
 
     /// Functions
     // Function /Script/AIModule.BTTask_BlueprintBase.SetFinishOnMessageWithId
@@ -2296,200 +2722,248 @@ public:
 };
 
 /// Class /Script/AIModule.BTTask_FinishWithResult
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
 class UBTTask_FinishWithResult : public UBTTaskNode
 { 
 public:
-    TEnumAsByte<EBTNodeResult>                         Result;                                                     // 0x0070   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0071   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<EBTNodeResult>                         Result;                                                     // 0x0070   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0071   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_GameplayTaskBase
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
 class UBTTask_GameplayTaskBase : public UBTTaskNode
 { 
 public:
-    bool                                               bWaitForGameplayTask : 1;                                   // 0x0070:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0071   (0x0007) MISSED
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bWaitForGameplayTask : 1;                                   // 0x0070:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0071   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_MakeNoise
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
 class UBTTask_MakeNoise : public UBTTaskNode
 { 
 public:
-    float                                              Loudnes;                                                    // 0x0070   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0074   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Loudnes;                                                    // 0x0070   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0074   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_MoveTo
-/// Size: 0x00B0 (176 bytes) (0x000098 - 0x0000B0) align 8 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000098 - 0x0000B0) align n/a MaxSize: 0x00B0
 class UBTTask_MoveTo : public UBTTask_BlackboardBase
 { 
 public:
-    float                                              AcceptableRadius;                                           // 0x0098   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x009C   (0x0004) MISSED
-    class UClass*                                      FilterClass;                                                // 0x00A0   (0x0008)
-    float                                              ObservedBlackboardValueTolerance;                           // 0x00A8   (0x0004)
-    bool                                               bObserveBlackboardValue : 1;                                // 0x00AC:0 (0x0001)
-    bool                                               bAllowStrafe : 1;                                           // 0x00AC:1 (0x0001)
-    bool                                               bAllowPartialPath : 1;                                      // 0x00AC:2 (0x0001)
-    bool                                               bTrackMovingGoal : 1;                                       // 0x00AC:3 (0x0001)
-    bool                                               bProjectGoalLocation : 1;                                   // 0x00AC:4 (0x0001)
-    bool                                               bReachTestIncludesAgentRadius : 1;                          // 0x00AC:5 (0x0001)
-    bool                                               bReachTestIncludesGoalRadius : 1;                           // 0x00AC:6 (0x0001)
-    bool                                               bStopOnOverlap : 1;                                         // 0x00AC:7 (0x0001)
-    bool                                               bStopOnOverlapNeedsUpdate : 1;                              // 0x00AD:0 (0x0001)
-    unsigned char                                      UnknownData01_7[0x2];                                       // 0x00AE   (0x0002) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AcceptableRadius;                                           // 0x0098   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x009C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      FilterClass;                                                // 0x00A0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ObservedBlackboardValueTolerance;                           // 0x00A8   (0x0004)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bObserveBlackboardValue : 1;                                // 0x00AC:0 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowStrafe : 1;                                           // 0x00AC:1 (0x0001)
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowPartialPath : 1;                                      // 0x00AC:2 (0x0001)
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bTrackMovingGoal : 1;                                       // 0x00AC:3 (0x0001)
+    UPROPERTY(Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bProjectGoalLocation : 1;                                   // 0x00AC:4 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bReachTestIncludesAgentRadius : 1;                          // 0x00AC:5 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bReachTestIncludesGoalRadius : 1;                           // 0x00AC:6 (0x0001)
+    UPROPERTY(Edit, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bStopOnOverlap : 1;                                         // 0x00AC:7 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bStopOnOverlapNeedsUpdate : 1;                              // 0x00AD:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x2];                                       // 0x00AE   (0x0002) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_MoveDirectlyToward
-/// Size: 0x00B8 (184 bytes) (0x0000B0 - 0x0000B8) align 8 MaxSize: 0x00B8
+/// Size: 0x00B8 (184 bytes) (0x0000B0 - 0x0000B8) align n/a MaxSize: 0x00B8
 class UBTTask_MoveDirectlyToward : public UBTTask_MoveTo
 { 
 public:
-    bool                                               bDisablePathUpdateOnGoalLocationChange : 1;                 // 0x00B0:0 (0x0001)
-    bool                                               bProjectVectorGoalToNavigation : 1;                         // 0x00B0:1 (0x0001)
-    bool                                               bUpdatedDeprecatedProperties : 1;                           // 0x00B0:2 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x00B1   (0x0007) MISSED
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDisablePathUpdateOnGoalLocationChange : 1;                 // 0x00B0:0 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bProjectVectorGoalToNavigation : 1;                         // 0x00B0:1 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bUpdatedDeprecatedProperties : 1;                           // 0x00B0:2 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x00B1   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_PawnActionBase
-/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000070 - 0x000070) align n/a MaxSize: 0x0070
 class UBTTask_PawnActionBase : public UBTTaskNode
 { 
 public:
 };
 
 /// Class /Script/AIModule.BTTask_PlayAnimation
-/// Size: 0x00B0 (176 bytes) (0x000070 - 0x0000B0) align 8 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000070 - 0x0000B0) align n/a MaxSize: 0x00B0
 class UBTTask_PlayAnimation : public UBTTaskNode
 { 
 public:
-    class UAnimationAsset*                             AnimationToPlay;                                            // 0x0070   (0x0008)
-    bool                                               bLooping : 1;                                               // 0x0078:0 (0x0001)
-    bool                                               bNonBlocking : 1;                                           // 0x0078:1 (0x0001)
-    unsigned char                                      UnknownData00_5[0x7];                                       // 0x0079   (0x0007) MISSED
-    class UBehaviorTreeComponent*                      MyOwnerComp;                                                // 0x0080   (0x0008)
-    class USkeletalMeshComponent*                      CachedSkelMesh;                                             // 0x0088   (0x0008)
-    unsigned char                                      UnknownData01_7[0x20];                                      // 0x0090   (0x0020) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAnimationAsset*                             AnimationToPlay;                                            // 0x0070   (0x0008)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLooping : 1;                                               // 0x0078:0 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bNonBlocking : 1;                                           // 0x0078:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_5[0x7];                                       // 0x0079   (0x0007) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBehaviorTreeComponent*                      MyOwnerComp;                                                // 0x0080   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USkeletalMeshComponent*                      CachedSkelMesh;                                             // 0x0088   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x20];                                      // 0x0090   (0x0020) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_PlaySound
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
 class UBTTask_PlaySound : public UBTTaskNode
 { 
 public:
-    class USoundCue*                                   SoundToPlay;                                                // 0x0070   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USoundCue*                                   SoundToPlay;                                                // 0x0070   (0x0008)
 };
 
 /// Class /Script/AIModule.BTTask_PushPawnAction
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
 class UBTTask_PushPawnAction : public UBTTask_PawnActionBase
 { 
 public:
-    class UPawnAction*                                 Action;                                                     // 0x0070   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UPawnAction*                                 Action;                                                     // 0x0070   (0x0008)
 };
 
 /// Class /Script/AIModule.BTTask_RotateToFaceBBEntry
-/// Size: 0x00A0 (160 bytes) (0x000098 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000098 - 0x0000A0) align n/a MaxSize: 0x00A0
 class UBTTask_RotateToFaceBBEntry : public UBTTask_BlackboardBase
 { 
 public:
-    float                                              Precision;                                                  // 0x0098   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x009C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              Precision;                                                  // 0x0098   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x009C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_RunBehavior
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
 class UBTTask_RunBehavior : public UBTTaskNode
 { 
 public:
-    class UBehaviorTree*                               BehaviorAsset;                                              // 0x0070   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBehaviorTree*                               BehaviorAsset;                                              // 0x0070   (0x0008)
 };
 
 /// Class /Script/AIModule.BTTask_RunBehaviorDynamic
-/// Size: 0x0088 (136 bytes) (0x000070 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000070 - 0x000088) align n/a MaxSize: 0x0088
 class UBTTask_RunBehaviorDynamic : public UBTTaskNode
 { 
 public:
-    FGameplayTag                                       InjectionTag;                                               // 0x0070   (0x0008)
-    class UBehaviorTree*                               DefaultBehaviorAsset;                                       // 0x0078   (0x0008)
-    class UBehaviorTree*                               BehaviorAsset;                                              // 0x0080   (0x0008)
+    UPROPERTY(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FGameplayTag                                       InjectionTag;                                               // 0x0070   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBehaviorTree*                               DefaultBehaviorAsset;                                       // 0x0078   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBehaviorTree*                               BehaviorAsset;                                              // 0x0080   (0x0008)
 };
 
 /// Struct /Script/AIModule.EnvNamedValue
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FEnvNamedValue
 { 
-    FName                                              ParamName;                                                  // 0x0000   (0x0008)
-    EAIParamType                                       ParamType;                                                  // 0x0008   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0009   (0x0003) MISSED
-    float                                              Value;                                                      // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ParamName;                                                  // 0x0000   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EAIParamType                                       ParamType;                                                  // 0x0008   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0009   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Value;                                                      // 0x000C   (0x0004)
 };
 
 /// Class /Script/AIModule.BTTask_RunEQSQuery
-/// Size: 0x0150 (336 bytes) (0x000098 - 0x000150) align 8 MaxSize: 0x0150
+/// Size: 0x0150 (336 bytes) (0x000098 - 0x000150) align n/a MaxSize: 0x0150
 class UBTTask_RunEQSQuery : public UBTTask_BlackboardBase
 { 
 public:
-    class UEnvQuery*                                   QueryTemplate;                                              // 0x0098   (0x0008)
-    TArray<FEnvNamedValue>                             QueryParams;                                                // 0x00A0   (0x0010)
-    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x00B0   (0x0010)
-    TEnumAsByte<EEnvQueryRunMode>                      RunMode;                                                    // 0x00C0   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x00C1   (0x0007) MISSED
-    FBlackboardKeySelector                             EQSQueryBlackboardKey;                                      // 0x00C8   (0x0028)
-    bool                                               bUseBBKey;                                                  // 0x00F0   (0x0001)
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x00F1   (0x0007) MISSED
-    FEQSParametrizedQueryExecutionRequest              EQSRequest;                                                 // 0x00F8   (0x0048)
-    unsigned char                                      UnknownData02_7[0x10];                                      // 0x0140   (0x0010) MISSED
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UEnvQuery*                                   QueryTemplate;                                              // 0x0098   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FEnvNamedValue>                             QueryParams;                                                // 0x00A0   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x00B0   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvQueryRunMode>                      RunMode;                                                    // 0x00C0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x7];                                       // 0x00C1   (0x0007) MISSED
+    UPROPERTY(Edit, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ FBlackboardKeySelector                             EQSQueryBlackboardKey;                                      // 0x00C8   (0x0028)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseBBKey;                                                  // 0x00F0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x7];                                       // 0x00F1   (0x0007) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FEQSParametrizedQueryExecutionRequest              EQSRequest;                                                 // 0x00F8   (0x0048)
+    /* public    */ unsigned char                                      UnknownData05_7[0x10];                                      // 0x0140   (0x0010) MISSED
 };
 
 /// Class /Script/AIModule.BTTask_SetTagCooldown
-/// Size: 0x0080 (128 bytes) (0x000070 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000070 - 0x000080) align n/a MaxSize: 0x0080
 class UBTTask_SetTagCooldown : public UBTTaskNode
 { 
 public:
-    FGameplayTag                                       CooldownTag;                                                // 0x0070   (0x0008)
-    bool                                               bAddToExistingDuration;                                     // 0x0078   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0079   (0x0003) MISSED
-    float                                              CooldownDuration;                                           // 0x007C   (0x0004)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGameplayTag                                       CooldownTag;                                                // 0x0070   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAddToExistingDuration;                                     // 0x0078   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0079   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CooldownDuration;                                           // 0x007C   (0x0004)
 };
 
 /// Class /Script/AIModule.BTTask_Wait
-/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000070 - 0x000078) align n/a MaxSize: 0x0078
 class UBTTask_Wait : public UBTTaskNode
 { 
 public:
-    float                                              WaitTime;                                                   // 0x0070   (0x0004)
-    float                                              RandomDeviation;                                            // 0x0074   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WaitTime;                                                   // 0x0070   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RandomDeviation;                                            // 0x0074   (0x0004)
 };
 
 /// Class /Script/AIModule.BTTask_WaitBlackboardTime
-/// Size: 0x00A0 (160 bytes) (0x000078 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000078 - 0x0000A0) align n/a MaxSize: 0x00A0
 class UBTTask_WaitBlackboardTime : public UBTTask_Wait
 { 
 public:
-    FBlackboardKeySelector                             BlackboardKey;                                              // 0x0078   (0x0028)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FBlackboardKeySelector                             BlackboardKey;                                              // 0x0078   (0x0028)
 };
 
 /// Class /Script/AIModule.CrowdAgentInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UCrowdAgentInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.PathFollowingComponent
-/// Size: 0x0260 (608 bytes) (0x0000C0 - 0x000260) align 8 MaxSize: 0x0260
+/// Size: 0x0260 (608 bytes) (0x0000C0 - 0x000260) align n/a MaxSize: 0x0260
 class UPathFollowingComponent : public UActorComponent
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x38];                                      // 0x00C0   (0x0038) MISSED
-    class UNavMovementComponent*                       MovementComp;                                               // 0x00F8   (0x0008)
-    unsigned char                                      UnknownData01_6[0x8];                                       // 0x0100   (0x0008) MISSED
-    class ANavigationData*                             MyNavData;                                                  // 0x0108   (0x0008)
-    unsigned char                                      UnknownData02_7[0x150];                                     // 0x0110   (0x0150) MISSED
+    /* public    */ unsigned char                                      UnknownData03_8[0x38];                                      // 0x00C0   (0x0038) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UNavMovementComponent*                       MovementComp;                                               // 0x00F8   (0x0008)
+    /* public    */ unsigned char                                      UnknownData04_6[0x8];                                       // 0x0100   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class ANavigationData*                             MyNavData;                                                  // 0x0108   (0x0008)
+    /* public    */ unsigned char                                      UnknownData05_7[0x150];                                     // 0x0110   (0x0150) MISSED
 
     /// Functions
     // Function /Script/AIModule.PathFollowingComponent.OnNavDataRegistered
@@ -2508,18 +2982,23 @@ public:
 };
 
 /// Class /Script/AIModule.CrowdFollowingComponent
-/// Size: 0x02C0 (704 bytes) (0x000260 - 0x0002C0) align 8 MaxSize: 0x02C0
+/// Size: 0x02C0 (704 bytes) (0x000260 - 0x0002C0) align n/a MaxSize: 0x02C0
 class UCrowdFollowingComponent : public UPathFollowingComponent
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x18];                                      // 0x0260   (0x0018) MISSED
-    FVector                                            CrowdAgentMoveDirection;                                    // 0x0278   (0x000C)
-    unsigned char                                      UnknownData01_6[0x20];                                      // 0x0284   (0x0020) MISSED
-    FVector                                            PrevVelocity;                                               // 0x02A4   (0x000C)
-    float                                              VelocityLerpPower;                                          // 0x02B0   (0x0004)
-    float                                              VelocityNearLerpPower;                                      // 0x02B4   (0x0004)
-    float                                              VelocityLerpAngle;                                          // 0x02B8   (0x0004)
-    unsigned char                                      UnknownData02_7[0x4];                                       // 0x02BC   (0x0004) MISSED
+    /* public    */ unsigned char                                      UnknownData03_8[0x18];                                      // 0x0260   (0x0018) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            CrowdAgentMoveDirection;                                    // 0x0278   (0x000C)
+    /* public    */ unsigned char                                      UnknownData04_6[0x20];                                      // 0x0284   (0x0020) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FVector                                            PrevVelocity;                                               // 0x02A4   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              VelocityLerpPower;                                          // 0x02B0   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              VelocityNearLerpPower;                                      // 0x02B4   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              VelocityLerpAngle;                                          // 0x02B8   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_7[0x4];                                       // 0x02BC   (0x0004) MISSED
 
     /// Functions
     // Function /Script/AIModule.CrowdFollowingComponent.SuspendCrowdSteering
@@ -2528,82 +3007,108 @@ public:
 };
 
 /// Struct /Script/AIModule.CrowdAvoidanceConfig
-/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align 4 MaxSize: 0x001C
+/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
 struct FCrowdAvoidanceConfig
 { 
-    float                                              VelocityBias;                                               // 0x0000   (0x0004)
-    float                                              DesiredVelocityWeight;                                      // 0x0004   (0x0004)
-    float                                              CurrentVelocityWeight;                                      // 0x0008   (0x0004)
-    float                                              SideBiasWeight;                                             // 0x000C   (0x0004)
-    float                                              ImpactTimeWeight;                                           // 0x0010   (0x0004)
-    float                                              ImpactTimeRange;                                            // 0x0014   (0x0004)
-    char                                               CustomPatternIdx;                                           // 0x0018   (0x0001)
-    char                                               AdaptiveDivisions;                                          // 0x0019   (0x0001)
-    char                                               AdaptiveRings;                                              // 0x001A   (0x0001)
-    char                                               AdaptiveDepth;                                              // 0x001B   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              VelocityBias;                                               // 0x0000   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DesiredVelocityWeight;                                      // 0x0004   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentVelocityWeight;                                      // 0x0008   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SideBiasWeight;                                             // 0x000C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ImpactTimeWeight;                                           // 0x0010   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ImpactTimeRange;                                            // 0x0014   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               CustomPatternIdx;                                           // 0x0018   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               AdaptiveDivisions;                                          // 0x0019   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               AdaptiveRings;                                              // 0x001A   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               AdaptiveDepth;                                              // 0x001B   (0x0001)
 };
 
 /// Struct /Script/AIModule.CrowdAvoidanceSamplingPattern
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FCrowdAvoidanceSamplingPattern
 { 
-    TArray<float>                                      Angles;                                                     // 0x0000   (0x0010)
-    TArray<float>                                      Radii;                                                      // 0x0010   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      Angles;                                                     // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      Radii;                                                      // 0x0010   (0x0010)
 };
 
 /// Class /Script/AIModule.CrowdManager
-/// Size: 0x00F0 (240 bytes) (0x000028 - 0x0000F0) align 8 MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000028 - 0x0000F0) align n/a MaxSize: 0x00F0
 class UCrowdManager : public UCrowdManagerBase
 { 
 public:
-    class ANavigationData*                             MyNavData;                                                  // 0x0028   (0x0008)
-    TArray<FCrowdAvoidanceConfig>                      AvoidanceConfig;                                            // 0x0030   (0x0010)
-    TArray<FCrowdAvoidanceSamplingPattern>             SamplingPatterns;                                           // 0x0040   (0x0010)
-    int32_t                                            MaxAgents;                                                  // 0x0050   (0x0004)
-    float                                              MaxAgentRadius;                                             // 0x0054   (0x0004)
-    int32_t                                            MaxAvoidedAgents;                                           // 0x0058   (0x0004)
-    int32_t                                            MaxAvoidedWalls;                                            // 0x005C   (0x0004)
-    float                                              NavmeshCheckInterval;                                       // 0x0060   (0x0004)
-    float                                              PathOptimizationInterval;                                   // 0x0064   (0x0004)
-    float                                              SeparationDirClamp;                                         // 0x0068   (0x0004)
-    float                                              PathOffsetRadiusMultiplier;                                 // 0x006C   (0x0004)
-    unsigned char                                      UnknownBit00 : 1;                                           // 0x0070:0 (0x0001) MISSED
-    unsigned char                                      UnknownBit01 : 1;                                           // 0x0070:1 (0x0001) MISSED
-    unsigned char                                      UnknownBit02 : 1;                                           // 0x0070:2 (0x0001) MISSED
-    unsigned char                                      UnknownBit03 : 1;                                           // 0x0070:3 (0x0001) MISSED
-    bool                                               bResolveCollisions : 1;                                     // 0x0070:4 (0x0001)
-    unsigned char                                      UnknownData04_7[0x7F];                                      // 0x0071   (0x007F) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class ANavigationData*                             MyNavData;                                                  // 0x0028   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FCrowdAvoidanceConfig>                      AvoidanceConfig;                                            // 0x0030   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FCrowdAvoidanceSamplingPattern>             SamplingPatterns;                                           // 0x0040   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MaxAgents;                                                  // 0x0050   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              MaxAgentRadius;                                             // 0x0054   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MaxAvoidedAgents;                                           // 0x0058   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MaxAvoidedWalls;                                            // 0x005C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              NavmeshCheckInterval;                                       // 0x0060   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              PathOptimizationInterval;                                   // 0x0064   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              SeparationDirClamp;                                         // 0x0068   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              PathOffsetRadiusMultiplier;                                 // 0x006C   (0x0004)
+    /* public    */ unsigned char                                      UnknownBit05 : 1;                                           // 0x0070:0 (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownBit06 : 1;                                           // 0x0070:1 (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownBit07 : 1;                                           // 0x0070:2 (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownBit08 : 1;                                           // 0x0070:3 (0x0001) MISSED
+    UPROPERTY(Edit, Config, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bResolveCollisions : 1;                                     // 0x0070:4 (0x0001)
+    /* public    */ unsigned char                                      UnknownData09_7[0x7F];                                      // 0x0071   (0x007F) MISSED
 };
 
 /// Class /Script/AIModule.DetourCrowdAIController
-/// Size: 0x03D0 (976 bytes) (0x0003D0 - 0x0003D0) align 8 MaxSize: 0x03D0
+/// Size: 0x03D0 (976 bytes) (0x0003D0 - 0x0003D0) align n/a MaxSize: 0x03D0
 class ADetourCrowdAIController : public AAIController
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQuery
-/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000030 - 0x000048) align n/a MaxSize: 0x0048
 class UEnvQuery : public UDataAsset
 { 
 public:
-    FName                                              QueryName;                                                  // 0x0030   (0x0008)
-    TArray<class UEnvQueryOption*>                     OPTIONS;                                                    // 0x0038   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FName                                              QueryName;                                                  // 0x0030   (0x0008)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UEnvQueryOption*>                     OPTIONS;                                                    // 0x0038   (0x0010)
 };
 
 /// Class /Script/AIModule.EnvQueryContext
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEnvQueryContext : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryContext_BlueprintBase
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class UEnvQueryContext_BlueprintBase : public UEnvQueryContext
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
@@ -2629,74 +3134,86 @@ public:
 };
 
 /// Class /Script/AIModule.EnvQueryContext_Item
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEnvQueryContext_Item : public UEnvQueryContext
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryContext_Querier
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEnvQueryContext_Querier : public UEnvQueryContext
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryDebugHelpers
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEnvQueryDebugHelpers : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryNode
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class UEnvQueryNode : public UObject
 { 
 public:
-    int32_t                                            VerNum;                                                     // 0x0028   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x002C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            VerNum;                                                     // 0x0028   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x002C   (0x0004) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator
-/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align n/a MaxSize: 0x0050
 class UEnvQueryGenerator : public UEnvQueryNode
 { 
 public:
-    FString                                            OptionName;                                                 // 0x0030   (0x0010)
-    class UClass*                                      ItemType;                                                   // 0x0040   (0x0008)
-    bool                                               bAutoSortTests : 1;                                         // 0x0048:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            OptionName;                                                 // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      ItemType;                                                   // 0x0040   (0x0008)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAutoSortTests : 1;                                         // 0x0048:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Struct /Script/AIModule.AIDataProviderBoolValue
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
 struct FAIDataProviderBoolValue : FAIDataProviderTypedValue
 { 
-    bool                                               DefaultValue;                                               // 0x0030   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0031   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               DefaultValue;                                               // 0x0030   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0031   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_ActorsOfClass
-/// Size: 0x00D0 (208 bytes) (0x000050 - 0x0000D0) align 8 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000050 - 0x0000D0) align n/a MaxSize: 0x00D0
 class UEnvQueryGenerator_ActorsOfClass : public UEnvQueryGenerator
 { 
 public:
-    class UClass*                                      SearchedActorClass;                                         // 0x0050   (0x0008)
-    FAIDataProviderBoolValue                           GenerateOnlyActorsInRadius;                                 // 0x0058   (0x0038)
-    FAIDataProviderFloatValue                          SearchRadius;                                               // 0x0090   (0x0038)
-    class UClass*                                      SearchCenter;                                               // 0x00C8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      SearchedActorClass;                                         // 0x0050   (0x0008)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderBoolValue                           GenerateOnlyActorsInRadius;                                 // 0x0058   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          SearchRadius;                                               // 0x0090   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      SearchCenter;                                               // 0x00C8   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_BlueprintBase
-/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align n/a MaxSize: 0x0080
 class UEnvQueryGenerator_BlueprintBase : public UEnvQueryGenerator
 { 
 public:
-    FText                                              GeneratorsActionDescription;                                // 0x0050   (0x0018)
-    class UClass*                                      Context;                                                    // 0x0068   (0x0008)
-    class UClass*                                      GeneratedItemType;                                          // 0x0070   (0x0008)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0078   (0x0008) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              GeneratorsActionDescription;                                // 0x0050   (0x0018)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Context;                                                    // 0x0068   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      GeneratedItemType;                                          // 0x0070   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0078   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier
@@ -2713,165 +3230,231 @@ public:
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Composite
-/// Size: 0x0070 (112 bytes) (0x000050 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000050 - 0x000070) align n/a MaxSize: 0x0070
 class UEnvQueryGenerator_Composite : public UEnvQueryGenerator
 { 
 public:
-    TArray<class UEnvQueryGenerator*>                  Generators;                                                 // 0x0050   (0x0010)
-    bool                                               bAllowDifferentItemTypes : 1;                               // 0x0060:0 (0x0001)
-    bool                                               bHasMatchingItemType : 1;                                   // 0x0060:1 (0x0001)
-    unsigned char                                      UnknownData00_5[0x7];                                       // 0x0061   (0x0007) MISSED
-    class UClass*                                      ForcedItemType;                                             // 0x0068   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UEnvQueryGenerator*>                  Generators;                                                 // 0x0050   (0x0010)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowDifferentItemTypes : 1;                               // 0x0060:0 (0x0001)
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bHasMatchingItemType : 1;                                   // 0x0060:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_5[0x7];                                       // 0x0061   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      ForcedItemType;                                             // 0x0068   (0x0008)
 };
 
 /// Struct /Script/AIModule.EnvTraceData
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FEnvTraceData
 { 
-    int32_t                                            VersionNum;                                                 // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    class UClass*                                      NavigationFilter;                                           // 0x0008   (0x0008)
-    float                                              ProjectDown;                                                // 0x0010   (0x0004)
-    float                                              ProjectUp;                                                  // 0x0014   (0x0004)
-    float                                              ExtentX;                                                    // 0x0018   (0x0004)
-    float                                              ExtentY;                                                    // 0x001C   (0x0004)
-    float                                              ExtentZ;                                                    // 0x0020   (0x0004)
-    float                                              PostProjectionVerticalOffset;                               // 0x0024   (0x0004)
-    TEnumAsByte<ETraceTypeQuery>                       TraceChannel;                                               // 0x0028   (0x0001)
-    TEnumAsByte<ECollisionChannel>                     SerializedChannel;                                          // 0x0029   (0x0001)
-    TEnumAsByte<EEnvTraceShape>                        TraceShape;                                                 // 0x002A   (0x0001)
-    TEnumAsByte<EEnvQueryTrace>                        TraceMode;                                                  // 0x002B   (0x0001)
-    bool                                               bTraceComplex : 1;                                          // 0x002C:0 (0x0001)
-    bool                                               bOnlyBlockingHits : 1;                                      // 0x002C:1 (0x0001)
-    bool                                               bCanTraceOnNavMesh : 1;                                     // 0x002C:2 (0x0001)
-    bool                                               bCanTraceOnGeometry : 1;                                    // 0x002C:3 (0x0001)
-    bool                                               bCanDisableTrace : 1;                                       // 0x002C:4 (0x0001)
-    bool                                               bCanProjectDown : 1;                                        // 0x002C:5 (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x002D   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            VersionNum;                                                 // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      NavigationFilter;                                           // 0x0008   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ProjectDown;                                                // 0x0010   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ProjectUp;                                                  // 0x0014   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExtentX;                                                    // 0x0018   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExtentY;                                                    // 0x001C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExtentZ;                                                    // 0x0020   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PostProjectionVerticalOffset;                               // 0x0024   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ETraceTypeQuery>                       TraceChannel;                                               // 0x0028   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ECollisionChannel>                     SerializedChannel;                                          // 0x0029   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvTraceShape>                        TraceShape;                                                 // 0x002A   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvQueryTrace>                        TraceMode;                                                  // 0x002B   (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bTraceComplex : 1;                                          // 0x002C:0 (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bOnlyBlockingHits : 1;                                      // 0x002C:1 (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCanTraceOnNavMesh : 1;                                     // 0x002C:2 (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCanTraceOnGeometry : 1;                                    // 0x002C:3 (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCanDisableTrace : 1;                                       // 0x002C:4 (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCanProjectDown : 1;                                        // 0x002C:5 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x002D   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_ProjectedPoints
-/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align n/a MaxSize: 0x0080
 class UEnvQueryGenerator_ProjectedPoints : public UEnvQueryGenerator
 { 
 public:
-    FEnvTraceData                                      ProjectionData;                                             // 0x0050   (0x0030)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FEnvTraceData                                      ProjectionData;                                             // 0x0050   (0x0030)
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Cone
-/// Size: 0x0170 (368 bytes) (0x000080 - 0x000170) align 8 MaxSize: 0x0170
+/// Size: 0x0170 (368 bytes) (0x000080 - 0x000170) align n/a MaxSize: 0x0170
 class UEnvQueryGenerator_Cone : public UEnvQueryGenerator_ProjectedPoints
 { 
 public:
-    FAIDataProviderFloatValue                          AlignedPointsDistance;                                      // 0x0080   (0x0038)
-    FAIDataProviderFloatValue                          ConeDegrees;                                                // 0x00B8   (0x0038)
-    FAIDataProviderFloatValue                          AngleStep;                                                  // 0x00F0   (0x0038)
-    FAIDataProviderFloatValue                          Range;                                                      // 0x0128   (0x0038)
-    class UClass*                                      CenterActor;                                                // 0x0160   (0x0008)
-    bool                                               bIncludeContextLocation : 1;                                // 0x0168:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0169   (0x0007) MISSED
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FAIDataProviderFloatValue                          AlignedPointsDistance;                                      // 0x0080   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FAIDataProviderFloatValue                          ConeDegrees;                                                // 0x00B8   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FAIDataProviderFloatValue                          AngleStep;                                                  // 0x00F0   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FAIDataProviderFloatValue                          Range;                                                      // 0x0128   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      CenterActor;                                                // 0x0160   (0x0008)
+    UPROPERTY(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bIncludeContextLocation : 1;                                // 0x0168:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0169   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_CurrentLocation
-/// Size: 0x0058 (88 bytes) (0x000050 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000050 - 0x000058) align n/a MaxSize: 0x0058
 class UEnvQueryGenerator_CurrentLocation : public UEnvQueryGenerator
 { 
 public:
-    class UClass*                                      QueryContext;                                               // 0x0050   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      QueryContext;                                               // 0x0050   (0x0008)
 };
 
 /// Struct /Script/AIModule.AIDataProviderIntValue
-/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000030 - 0x000038) align n/a MaxSize: 0x0038
 struct FAIDataProviderIntValue : FAIDataProviderTypedValue
 { 
-    int32_t                                            DefaultValue;                                               // 0x0030   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            DefaultValue;                                               // 0x0030   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
 };
 
 /// Struct /Script/AIModule.EnvDirection
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FEnvDirection
 { 
-    class UClass*                                      LineFrom;                                                   // 0x0000   (0x0008)
-    class UClass*                                      LineTo;                                                     // 0x0008   (0x0008)
-    class UClass*                                      Rotation;                                                   // 0x0010   (0x0008)
-    TEnumAsByte<EEnvDirection>                         DirMode;                                                    // 0x0018   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0019   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      LineFrom;                                                   // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      LineTo;                                                     // 0x0008   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Rotation;                                                   // 0x0010   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvDirection>                         DirMode;                                                    // 0x0018   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0019   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Donut
-/// Size: 0x01D0 (464 bytes) (0x000080 - 0x0001D0) align 8 MaxSize: 0x01D0
+/// Size: 0x01D0 (464 bytes) (0x000080 - 0x0001D0) align n/a MaxSize: 0x01D0
 class UEnvQueryGenerator_Donut : public UEnvQueryGenerator_ProjectedPoints
 { 
 public:
-    FAIDataProviderFloatValue                          InnerRadius;                                                // 0x0080   (0x0038)
-    FAIDataProviderFloatValue                          OuterRadius;                                                // 0x00B8   (0x0038)
-    FAIDataProviderIntValue                            NumberOfRings;                                              // 0x00F0   (0x0038)
-    FAIDataProviderIntValue                            PointsPerRing;                                              // 0x0128   (0x0038)
-    FEnvDirection                                      ArcDirection;                                               // 0x0160   (0x0020)
-    FAIDataProviderFloatValue                          ArcAngle;                                                   // 0x0180   (0x0038)
-    bool                                               bUseSpiralPattern;                                          // 0x01B8   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x01B9   (0x0007) MISSED
-    class UClass*                                      Center;                                                     // 0x01C0   (0x0008)
-    bool                                               bDefineArc : 1;                                             // 0x01C8:0 (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x01C9   (0x0007) MISSED
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          InnerRadius;                                                // 0x0080   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          OuterRadius;                                                // 0x00B8   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderIntValue                            NumberOfRings;                                              // 0x00F0   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderIntValue                            PointsPerRing;                                              // 0x0128   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FEnvDirection                                      ArcDirection;                                               // 0x0160   (0x0020)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ArcAngle;                                                   // 0x0180   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseSpiralPattern;                                          // 0x01B8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x7];                                       // 0x01B9   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Center;                                                     // 0x01C0   (0x0008)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDefineArc : 1;                                             // 0x01C8:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x01C9   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_OnCircle
-/// Size: 0x0210 (528 bytes) (0x000080 - 0x000210) align 8 MaxSize: 0x0210
+/// Size: 0x0210 (528 bytes) (0x000080 - 0x000210) align n/a MaxSize: 0x0210
 class UEnvQueryGenerator_OnCircle : public UEnvQueryGenerator_ProjectedPoints
 { 
 public:
-    FAIDataProviderFloatValue                          CircleRadius;                                               // 0x0080   (0x0038)
-    FAIDataProviderFloatValue                          SpaceBetween;                                               // 0x00B8   (0x0038)
-    FAIDataProviderIntValue                            NumberOfPoints;                                             // 0x00F0   (0x0038)
-    EPointOnCircleSpacingMethod                        PointOnCircleSpacingMethod;                                 // 0x0128   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0129   (0x0007) MISSED
-    FEnvDirection                                      ArcDirection;                                               // 0x0130   (0x0020)
-    FAIDataProviderFloatValue                          ArcAngle;                                                   // 0x0150   (0x0038)
-    float                                              AngleRadians;                                               // 0x0188   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x018C   (0x0004) MISSED
-    class UClass*                                      CircleCenter;                                               // 0x0190   (0x0008)
-    bool                                               bIgnoreAnyContextActorsWhenGeneratingCircle;                // 0x0198   (0x0001)
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0199   (0x0007) MISSED
-    FAIDataProviderFloatValue                          CircleCenterZOffset;                                        // 0x01A0   (0x0038)
-    FEnvTraceData                                      TraceData;                                                  // 0x01D8   (0x0030)
-    bool                                               bDefineArc : 1;                                             // 0x0208:0 (0x0001)
-    unsigned char                                      UnknownData03_7[0x7];                                       // 0x0209   (0x0007) MISSED
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          CircleRadius;                                               // 0x0080   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          SpaceBetween;                                               // 0x00B8   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderIntValue                            NumberOfPoints;                                             // 0x00F0   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EPointOnCircleSpacingMethod                        PointOnCircleSpacingMethod;                                 // 0x0128   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x7];                                       // 0x0129   (0x0007) MISSED
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FEnvDirection                                      ArcDirection;                                               // 0x0130   (0x0020)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ArcAngle;                                                   // 0x0150   (0x0038)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AngleRadians;                                               // 0x0188   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_6[0x4];                                       // 0x018C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      CircleCenter;                                               // 0x0190   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIgnoreAnyContextActorsWhenGeneratingCircle;                // 0x0198   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x7];                                       // 0x0199   (0x0007) MISSED
+    UPROPERTY(Edit, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          CircleCenterZOffset;                                        // 0x01A0   (0x0038)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FEnvTraceData                                      TraceData;                                                  // 0x01D8   (0x0030)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDefineArc : 1;                                             // 0x0208:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_7[0x7];                                       // 0x0209   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_SimpleGrid
-/// Size: 0x00F8 (248 bytes) (0x000080 - 0x0000F8) align 8 MaxSize: 0x00F8
+/// Size: 0x00F8 (248 bytes) (0x000080 - 0x0000F8) align n/a MaxSize: 0x00F8
 class UEnvQueryGenerator_SimpleGrid : public UEnvQueryGenerator_ProjectedPoints
 { 
 public:
-    FAIDataProviderFloatValue                          GridSize;                                                   // 0x0080   (0x0038)
-    FAIDataProviderFloatValue                          SpaceBetween;                                               // 0x00B8   (0x0038)
-    class UClass*                                      GenerateAround;                                             // 0x00F0   (0x0008)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          GridSize;                                                   // 0x0080   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          SpaceBetween;                                               // 0x00B8   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      GenerateAround;                                             // 0x00F0   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_PathingGrid
-/// Size: 0x0170 (368 bytes) (0x0000F8 - 0x000170) align 8 MaxSize: 0x0170
+/// Size: 0x0170 (368 bytes) (0x0000F8 - 0x000170) align n/a MaxSize: 0x0170
 class UEnvQueryGenerator_PathingGrid : public UEnvQueryGenerator_SimpleGrid
 { 
 public:
-    FAIDataProviderBoolValue                           PathToItem;                                                 // 0x00F8   (0x0038)
-    class UClass*                                      NavigationFilter;                                           // 0x0130   (0x0008)
-    FAIDataProviderFloatValue                          ScanRangeMultiplier;                                        // 0x0138   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderBoolValue                           PathToItem;                                                 // 0x00F8   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      NavigationFilter;                                           // 0x0130   (0x0008)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ScanRangeMultiplier;                                        // 0x0138   (0x0038)
 };
 
 /// Class /Script/AIModule.EnvQueryInstanceBlueprintWrapper
-/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align n/a MaxSize: 0x0078
 class UEnvQueryInstanceBlueprintWrapper : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008) MISSED
-    int32_t                                            QueryID;                                                    // 0x0030   (0x0004)
-    unsigned char                                      UnknownData01_6[0x24];                                      // 0x0034   (0x0024) MISSED
-    class UClass*                                      ItemType;                                                   // 0x0058   (0x0008)
-    int32_t                                            OptionIndex;                                                // 0x0060   (0x0004)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0064   (0x0004) MISSED
-    FMulticastInlineDelegate                           OnQueryFinishedEvent;                                       // 0x0068   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_8[0x8];                                       // 0x0028   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            QueryID;                                                    // 0x0030   (0x0004)
+    /* public    */ unsigned char                                      UnknownData04_6[0x24];                                      // 0x0034   (0x0024) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      ItemType;                                                   // 0x0058   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            OptionIndex;                                                // 0x0060   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_6[0x4];                                       // 0x0064   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FMulticastInlineDelegate                           OnQueryFinishedEvent;                                       // 0x0068   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.SetNamedParam
@@ -2898,71 +3481,79 @@ public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class UEnvQueryItemType : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0028   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0028   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_VectorBase
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UEnvQueryItemType_VectorBase : public UEnvQueryItemType
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_ActorBase
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UEnvQueryItemType_ActorBase : public UEnvQueryItemType_VectorBase
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_Actor
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UEnvQueryItemType_Actor : public UEnvQueryItemType_ActorBase
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_Direction
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UEnvQueryItemType_Direction : public UEnvQueryItemType_VectorBase
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryItemType_Point
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UEnvQueryItemType_Point : public UEnvQueryItemType_VectorBase
 { 
 public:
 };
 
 /// Struct /Script/AIModule.EnvQueryInstanceCache
-/// Size: 0x0178 (376 bytes) (0x000000 - 0x000178) align 8 MaxSize: 0x0178
+/// Size: 0x0178 (376 bytes) (0x000000 - 0x000178) align n/a MaxSize: 0x0178
 struct FEnvQueryInstanceCache
 { 
-    class UEnvQuery*                                   Template;                                                   // 0x0000   (0x0008)
-    unsigned char                                      UnknownData00_7[0x170];                                     // 0x0008   (0x0170) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UEnvQuery*                                   Template;                                                   // 0x0000   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x170];                                     // 0x0008   (0x0170) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryManager
-/// Size: 0x0140 (320 bytes) (0x000038 - 0x000140) align 8 MaxSize: 0x0140
+/// Size: 0x0140 (320 bytes) (0x000038 - 0x000140) align n/a MaxSize: 0x0140
 class UEnvQueryManager : public UAISubsystem
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x70];                                      // 0x0038   (0x0070) MISSED
-    TArray<FEnvQueryInstanceCache>                     InstanceCache;                                              // 0x00A8   (0x0010)
-    TArray<class UEnvQueryContext*>                    LocalContexts;                                              // 0x00B8   (0x0010)
-    TArray<class UEnvQueryInstanceBlueprintWrapper*>   GCShieldedWrappers;                                         // 0x00C8   (0x0010)
-    unsigned char                                      UnknownData01_6[0x54];                                      // 0x00D8   (0x0054) MISSED
-    float                                              MaxAllowedTestingTime;                                      // 0x012C   (0x0004)
-    bool                                               bTestQueriesUsingBreadth;                                   // 0x0130   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0131   (0x0003) MISSED
-    int32_t                                            QueryCountWarningThreshold;                                 // 0x0134   (0x0004)
-    double                                             QueryCountWarningInterval;                                  // 0x0138   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_8[0x70];                                      // 0x0038   (0x0070) MISSED
+    UPROPERTY(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FEnvQueryInstanceCache>                     InstanceCache;                                              // 0x00A8   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UEnvQueryContext*>                    LocalContexts;                                              // 0x00B8   (0x0010)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UEnvQueryInstanceBlueprintWrapper*>   GCShieldedWrappers;                                         // 0x00C8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData04_6[0x54];                                      // 0x00D8   (0x0054) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              MaxAllowedTestingTime;                                      // 0x012C   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bTestQueriesUsingBreadth;                                   // 0x0130   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x3];                                       // 0x0131   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            QueryCountWarningThreshold;                                 // 0x0134   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ double                                             QueryCountWarningInterval;                                  // 0x0138   (0x0008)
 
     /// Functions
     // Function /Script/AIModule.EnvQueryManager.RunEQSQuery
@@ -2975,253 +3566,328 @@ public:
 };
 
 /// Class /Script/AIModule.EnvQueryOption
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class UEnvQueryOption : public UObject
 { 
 public:
-    class UEnvQueryGenerator*                          Generator;                                                  // 0x0028   (0x0008)
-    TArray<class UEnvQueryTest*>                       Tests;                                                      // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UEnvQueryGenerator*                          Generator;                                                  // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UEnvQueryTest*>                       Tests;                                                      // 0x0030   (0x0010)
 };
 
 /// Class /Script/AIModule.EnvQueryTest
-/// Size: 0x01F8 (504 bytes) (0x000030 - 0x0001F8) align 8 MaxSize: 0x01F8
+/// Size: 0x01F8 (504 bytes) (0x000030 - 0x0001F8) align n/a MaxSize: 0x01F8
 class UEnvQueryTest : public UEnvQueryNode
 { 
 public:
-    int32_t                                            TestOrder;                                                  // 0x0030   (0x0004)
-    TEnumAsByte<EEnvTestPurpose>                       TestPurpose;                                                // 0x0034   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0035   (0x0003) MISSED
-    FString                                            TestComment;                                                // 0x0038   (0x0010)
-    TEnumAsByte<EEnvTestFilterOperator>                MultipleContextFilterOp;                                    // 0x0048   (0x0001)
-    TEnumAsByte<EEnvTestScoreOperator>                 MultipleContextScoreOp;                                     // 0x0049   (0x0001)
-    TEnumAsByte<EEnvTestFilterType>                    FilterType;                                                 // 0x004A   (0x0001)
-    unsigned char                                      UnknownData01_6[0x5];                                       // 0x004B   (0x0005) MISSED
-    FAIDataProviderBoolValue                           BoolValue;                                                  // 0x0050   (0x0038)
-    FAIDataProviderFloatValue                          FloatValueMin;                                              // 0x0088   (0x0038)
-    FAIDataProviderFloatValue                          FloatValueMax;                                              // 0x00C0   (0x0038)
-    unsigned char                                      UnknownData02_6[0x1];                                       // 0x00F8   (0x0001) MISSED
-    TEnumAsByte<EEnvTestScoreEquation>                 ScoringEquation;                                            // 0x00F9   (0x0001)
-    TEnumAsByte<EEnvQueryTestClamping>                 ClampMinType;                                               // 0x00FA   (0x0001)
-    TEnumAsByte<EEnvQueryTestClamping>                 ClampMaxType;                                               // 0x00FB   (0x0001)
-    EEQSNormalizationType                              NormalizationType;                                          // 0x00FC   (0x0001)
-    unsigned char                                      UnknownData03_6[0x3];                                       // 0x00FD   (0x0003) MISSED
-    FAIDataProviderFloatValue                          ScoreClampMin;                                              // 0x0100   (0x0038)
-    FAIDataProviderFloatValue                          ScoreClampMax;                                              // 0x0138   (0x0038)
-    FAIDataProviderFloatValue                          ScoringFactor;                                              // 0x0170   (0x0038)
-    FAIDataProviderFloatValue                          ReferenceValue;                                             // 0x01A8   (0x0038)
-    bool                                               bDefineReferenceValue;                                      // 0x01E0   (0x0001)
-    unsigned char                                      UnknownData04_6[0xF];                                       // 0x01E1   (0x000F) MISSED
-    bool                                               bWorkOnFloatValues : 1;                                     // 0x01F0:0 (0x0001)
-    unsigned char                                      UnknownData05_7[0x7];                                       // 0x01F1   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            TestOrder;                                                  // 0x0030   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvTestPurpose>                       TestPurpose;                                                // 0x0034   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x3];                                       // 0x0035   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            TestComment;                                                // 0x0038   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvTestFilterOperator>                MultipleContextFilterOp;                                    // 0x0048   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvTestScoreOperator>                 MultipleContextScoreOp;                                     // 0x0049   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvTestFilterType>                    FilterType;                                                 // 0x004A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x5];                                       // 0x004B   (0x0005) MISSED
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderBoolValue                           BoolValue;                                                  // 0x0050   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          FloatValueMin;                                              // 0x0088   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          FloatValueMax;                                              // 0x00C0   (0x0038)
+    /* public    */ unsigned char                                      UnknownData08_6[0x1];                                       // 0x00F8   (0x0001) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvTestScoreEquation>                 ScoringEquation;                                            // 0x00F9   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvQueryTestClamping>                 ClampMinType;                                               // 0x00FA   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvQueryTestClamping>                 ClampMaxType;                                               // 0x00FB   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EEQSNormalizationType                              NormalizationType;                                          // 0x00FC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData09_6[0x3];                                       // 0x00FD   (0x0003) MISSED
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ScoreClampMin;                                              // 0x0100   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ScoreClampMax;                                              // 0x0138   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ScoringFactor;                                              // 0x0170   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ReferenceValue;                                             // 0x01A8   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDefineReferenceValue;                                      // 0x01E0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData10_6[0xF];                                       // 0x01E1   (0x000F) MISSED
+    UPROPERTY(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bWorkOnFloatValues : 1;                                     // 0x01F0:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData11_7[0x7];                                       // 0x01F1   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Distance
-/// Size: 0x0208 (520 bytes) (0x0001F8 - 0x000208) align 8 MaxSize: 0x0208
+/// Size: 0x0208 (520 bytes) (0x0001F8 - 0x000208) align n/a MaxSize: 0x0208
 class UEnvQueryTest_Distance : public UEnvQueryTest
 { 
 public:
-    TEnumAsByte<EEnvTestDistance>                      TestMode;                                                   // 0x01F8   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x01F9   (0x0007) MISSED
-    class UClass*                                      DistanceTo;                                                 // 0x0200   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvTestDistance>                      TestMode;                                                   // 0x01F8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x01F9   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      DistanceTo;                                                 // 0x0200   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Dot
-/// Size: 0x0240 (576 bytes) (0x0001F8 - 0x000240) align 8 MaxSize: 0x0240
+/// Size: 0x0240 (576 bytes) (0x0001F8 - 0x000240) align n/a MaxSize: 0x0240
 class UEnvQueryTest_Dot : public UEnvQueryTest
 { 
 public:
-    FEnvDirection                                      LineA;                                                      // 0x01F8   (0x0020)
-    FEnvDirection                                      LineB;                                                      // 0x0218   (0x0020)
-    EEnvTestDot                                        TestMode;                                                   // 0x0238   (0x0001)
-    bool                                               bAbsoluteValue;                                             // 0x0239   (0x0001)
-    unsigned char                                      UnknownData00_7[0x6];                                       // 0x023A   (0x0006) MISSED
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FEnvDirection                                      LineA;                                                      // 0x01F8   (0x0020)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FEnvDirection                                      LineB;                                                      // 0x0218   (0x0020)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EEnvTestDot                                        TestMode;                                                   // 0x0238   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bAbsoluteValue;                                             // 0x0239   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x6];                                       // 0x023A   (0x0006) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryTest_GameplayTags
-/// Size: 0x0268 (616 bytes) (0x0001F8 - 0x000268) align 8 MaxSize: 0x0268
+/// Size: 0x0268 (616 bytes) (0x0001F8 - 0x000268) align n/a MaxSize: 0x0268
 class UEnvQueryTest_GameplayTags : public UEnvQueryTest
 { 
 public:
-    FGameplayTagQuery                                  TagQueryToMatch;                                            // 0x01F8   (0x0048)
-    bool                                               bUpdatedToUseQuery;                                         // 0x0240   (0x0001)
-    EGameplayContainerMatchType                        TagsToMatch;                                                // 0x0241   (0x0001)
-    unsigned char                                      UnknownData00_6[0x6];                                       // 0x0242   (0x0006) MISSED
-    FGameplayTagContainer                              GameplayTags;                                               // 0x0248   (0x0020)
+    UPROPERTY(Edit, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FGameplayTagQuery                                  TagQueryToMatch;                                            // 0x01F8   (0x0048)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bUpdatedToUseQuery;                                         // 0x0240   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EGameplayContainerMatchType                        TagsToMatch;                                                // 0x0241   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x6];                                       // 0x0242   (0x0006) MISSED
+    UPROPERTY(Protected, NativeAccessSpecifierProtected)
+    /* protected */ FGameplayTagContainer                              GameplayTags;                                               // 0x0248   (0x0020)
 };
 
 /// Struct /Script/AIModule.EnvOverlapData
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 4 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FEnvOverlapData
 { 
-    float                                              ExtentX;                                                    // 0x0000   (0x0004)
-    float                                              ExtentY;                                                    // 0x0004   (0x0004)
-    float                                              ExtentZ;                                                    // 0x0008   (0x0004)
-    FVector                                            ShapeOffset;                                                // 0x000C   (0x000C)
-    TEnumAsByte<ECollisionChannel>                     OverlapChannel;                                             // 0x0018   (0x0001)
-    TEnumAsByte<EEnvOverlapShape>                      OverlapShape;                                               // 0x0019   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x001A   (0x0002) MISSED
-    bool                                               bOnlyBlockingHits : 1;                                      // 0x001C:0 (0x0001)
-    bool                                               bOverlapComplex : 1;                                        // 0x001C:1 (0x0001)
-    bool                                               bSkipOverlapQuerier : 1;                                    // 0x001C:2 (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x001D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExtentX;                                                    // 0x0000   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExtentY;                                                    // 0x0004   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExtentZ;                                                    // 0x0008   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            ShapeOffset;                                                // 0x000C   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ECollisionChannel>                     OverlapChannel;                                             // 0x0018   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvOverlapShape>                      OverlapShape;                                               // 0x0019   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x2];                                       // 0x001A   (0x0002) MISSED
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bOnlyBlockingHits : 1;                                      // 0x001C:0 (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bOverlapComplex : 1;                                        // 0x001C:1 (0x0001)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSkipOverlapQuerier : 1;                                    // 0x001C:2 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x001D   (0x0003) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Overlap
-/// Size: 0x0218 (536 bytes) (0x0001F8 - 0x000218) align 8 MaxSize: 0x0218
+/// Size: 0x0218 (536 bytes) (0x0001F8 - 0x000218) align n/a MaxSize: 0x0218
 class UEnvQueryTest_Overlap : public UEnvQueryTest
 { 
 public:
-    FEnvOverlapData                                    OverlapData;                                                // 0x01F8   (0x0020)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FEnvOverlapData                                    OverlapData;                                                // 0x01F8   (0x0020)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Pathfinding
-/// Size: 0x0280 (640 bytes) (0x0001F8 - 0x000280) align 8 MaxSize: 0x0280
+/// Size: 0x0280 (640 bytes) (0x0001F8 - 0x000280) align n/a MaxSize: 0x0280
 class UEnvQueryTest_Pathfinding : public UEnvQueryTest
 { 
 public:
-    TEnumAsByte<EEnvTestPathfinding>                   TestMode;                                                   // 0x01F8   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x01F9   (0x0007) MISSED
-    class UClass*                                      Context;                                                    // 0x0200   (0x0008)
-    FAIDataProviderBoolValue                           PathFromContext;                                            // 0x0208   (0x0038)
-    FAIDataProviderBoolValue                           SkipUnreachable;                                            // 0x0240   (0x0038)
-    class UClass*                                      FilterClass;                                                // 0x0278   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvTestPathfinding>                   TestMode;                                                   // 0x01F8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x01F9   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Context;                                                    // 0x0200   (0x0008)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderBoolValue                           PathFromContext;                                            // 0x0208   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderBoolValue                           SkipUnreachable;                                            // 0x0240   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      FilterClass;                                                // 0x0278   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_PathfindingBatch
-/// Size: 0x02B8 (696 bytes) (0x000280 - 0x0002B8) align 8 MaxSize: 0x02B8
+/// Size: 0x02B8 (696 bytes) (0x000280 - 0x0002B8) align n/a MaxSize: 0x02B8
 class UEnvQueryTest_PathfindingBatch : public UEnvQueryTest_Pathfinding
 { 
 public:
-    FAIDataProviderFloatValue                          ScanRangeMultiplier;                                        // 0x0280   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ScanRangeMultiplier;                                        // 0x0280   (0x0038)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Project
-/// Size: 0x0228 (552 bytes) (0x0001F8 - 0x000228) align 8 MaxSize: 0x0228
+/// Size: 0x0228 (552 bytes) (0x0001F8 - 0x000228) align n/a MaxSize: 0x0228
 class UEnvQueryTest_Project : public UEnvQueryTest
 { 
 public:
-    FEnvTraceData                                      ProjectionData;                                             // 0x01F8   (0x0030)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FEnvTraceData                                      ProjectionData;                                             // 0x01F8   (0x0030)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Random
-/// Size: 0x01F8 (504 bytes) (0x0001F8 - 0x0001F8) align 8 MaxSize: 0x01F8
+/// Size: 0x01F8 (504 bytes) (0x0001F8 - 0x0001F8) align n/a MaxSize: 0x01F8
 class UEnvQueryTest_Random : public UEnvQueryTest
 { 
 public:
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Trace
-/// Size: 0x02D8 (728 bytes) (0x0001F8 - 0x0002D8) align 8 MaxSize: 0x02D8
+/// Size: 0x02D8 (728 bytes) (0x0001F8 - 0x0002D8) align n/a MaxSize: 0x02D8
 class UEnvQueryTest_Trace : public UEnvQueryTest
 { 
 public:
-    FEnvTraceData                                      TraceData;                                                  // 0x01F8   (0x0030)
-    FAIDataProviderBoolValue                           TraceFromContext;                                           // 0x0228   (0x0038)
-    FAIDataProviderFloatValue                          ItemHeightOffset;                                           // 0x0260   (0x0038)
-    FAIDataProviderFloatValue                          ContextHeightOffset;                                        // 0x0298   (0x0038)
-    class UClass*                                      Context;                                                    // 0x02D0   (0x0008)
+    UPROPERTY(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FEnvTraceData                                      TraceData;                                                  // 0x01F8   (0x0030)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderBoolValue                           TraceFromContext;                                           // 0x0228   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ItemHeightOffset;                                           // 0x0260   (0x0038)
+    UPROPERTY(Edit, DisableEditOnInstance, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
+    /* public    */ FAIDataProviderFloatValue                          ContextHeightOffset;                                        // 0x0298   (0x0038)
+    UPROPERTY(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Context;                                                    // 0x02D0   (0x0008)
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Volume
-/// Size: 0x0210 (528 bytes) (0x0001F8 - 0x000210) align 8 MaxSize: 0x0210
+/// Size: 0x0210 (528 bytes) (0x0001F8 - 0x000210) align n/a MaxSize: 0x0210
 class UEnvQueryTest_Volume : public UEnvQueryTest
 { 
 public:
-    class UClass*                                      VolumeContext;                                              // 0x01F8   (0x0008)
-    class UClass*                                      VolumeClass;                                                // 0x0200   (0x0008)
-    bool                                               bDoComplexVolumeTest : 1;                                   // 0x0208:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0209   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UClass*                                      VolumeContext;                                              // 0x01F8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UClass*                                      VolumeClass;                                                // 0x0200   (0x0008)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bDoComplexVolumeTest : 1;                                   // 0x0208:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0209   (0x0007) MISSED
 };
 
 /// Class /Script/AIModule.EnvQueryTypes
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEnvQueryTypes : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.EQSQueryResultSourceInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UEQSQueryResultSourceInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.EQSRenderingComponent
-/// Size: 0x0570 (1392 bytes) (0x000538 - 0x000570) align 16 MaxSize: 0x0570
+/// Size: 0x0570 (1392 bytes) (0x000538 - 0x000570) align n/a MaxSize: 0x0570
 class UEQSRenderingComponent : public UPrimitiveComponent
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x38];                                      // 0x0538   (0x0038) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x38];                                      // 0x0538   (0x0038) MISSED
 };
 
 /// Class /Script/AIModule.EQSTestingPawn
-/// Size: 0x05F0 (1520 bytes) (0x000558 - 0x0005F0) align 16 MaxSize: 0x05F0
+/// Size: 0x05F0 (1520 bytes) (0x000558 - 0x0005F0) align n/a MaxSize: 0x05F0
 class AEQSTestingPawn : public ACharacter
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0558   (0x0008) MISSED
-    class UEnvQuery*                                   QueryTemplate;                                              // 0x0560   (0x0008)
-    TArray<FEnvNamedValue>                             QueryParams;                                                // 0x0568   (0x0010)
-    TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x0578   (0x0010)
-    float                                              TimeLimitPerStep;                                           // 0x0588   (0x0004)
-    int32_t                                            StepToDebugDraw;                                            // 0x058C   (0x0004)
-    EEnvQueryHightlightMode                            HighlightMode;                                              // 0x0590   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0591   (0x0003) MISSED
-    bool                                               bDrawLabels : 1;                                            // 0x0594:0 (0x0001)
-    bool                                               bDrawFailedItems : 1;                                       // 0x0594:1 (0x0001)
-    bool                                               bReRunQueryOnlyOnFinishedMove : 1;                          // 0x0594:2 (0x0001)
-    bool                                               bShouldBeVisibleInGame : 1;                                 // 0x0594:3 (0x0001)
-    bool                                               bTickDuringGame : 1;                                        // 0x0594:4 (0x0001)
-    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0595   (0x0003) MISSED
-    TEnumAsByte<EEnvQueryRunMode>                      QueryingMode;                                               // 0x0598   (0x0001)
-    unsigned char                                      UnknownData03_6[0x7];                                       // 0x0599   (0x0007) MISSED
-    FNavAgentProperties                                NavAgentProperties;                                         // 0x05A0   (0x0030)
-    unsigned char                                      UnknownData04_7[0x20];                                      // 0x05D0   (0x0020) MISSED
+    /* public    */ unsigned char                                      UnknownData05_8[0x8];                                       // 0x0558   (0x0008) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UEnvQuery*                                   QueryTemplate;                                              // 0x0560   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FEnvNamedValue>                             QueryParams;                                                // 0x0568   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAIDynamicParam>                            QueryConfig;                                                // 0x0578   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TimeLimitPerStep;                                           // 0x0588   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            StepToDebugDraw;                                            // 0x058C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EEnvQueryHightlightMode                            HighlightMode;                                              // 0x0590   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x3];                                       // 0x0591   (0x0003) MISSED
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDrawLabels : 1;                                            // 0x0594:0 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDrawFailedItems : 1;                                       // 0x0594:1 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bReRunQueryOnlyOnFinishedMove : 1;                          // 0x0594:2 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bShouldBeVisibleInGame : 1;                                 // 0x0594:3 (0x0001)
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bTickDuringGame : 1;                                        // 0x0594:4 (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_5[0x3];                                       // 0x0595   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EEnvQueryRunMode>                      QueryingMode;                                               // 0x0598   (0x0001)
+    /* public    */ unsigned char                                      UnknownData08_6[0x7];                                       // 0x0599   (0x0007) MISSED
+    UPROPERTY(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FNavAgentProperties                                NavAgentProperties;                                         // 0x05A0   (0x0030)
+    /* public    */ unsigned char                                      UnknownData09_7[0x20];                                      // 0x05D0   (0x0020) MISSED
 };
 
 /// Class /Script/AIModule.GenericTeamAgentInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UGenericTeamAgentInterface : public UInterface
 { 
 public:
 };
 
 /// Class /Script/AIModule.GridPathAIController
-/// Size: 0x03D0 (976 bytes) (0x0003D0 - 0x0003D0) align 8 MaxSize: 0x03D0
+/// Size: 0x03D0 (976 bytes) (0x0003D0 - 0x0003D0) align n/a MaxSize: 0x03D0
 class AGridPathAIController : public AAIController
 { 
 public:
 };
 
 /// Class /Script/AIModule.GridPathFollowingComponent
-/// Size: 0x0290 (656 bytes) (0x000260 - 0x000290) align 8 MaxSize: 0x0290
+/// Size: 0x0290 (656 bytes) (0x000260 - 0x000290) align n/a MaxSize: 0x0290
 class UGridPathFollowingComponent : public UPathFollowingComponent
 { 
 public:
-    class UNavLocalGridManager*                        GridManager;                                                // 0x0260   (0x0008)
-    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0268   (0x0028) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UNavLocalGridManager*                        GridManager;                                                // 0x0260   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x28];                                      // 0x0268   (0x0028) MISSED
 };
 
 /// Class /Script/AIModule.NavFilter_AIControllerDefault
-/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000048 - 0x000048) align n/a MaxSize: 0x0048
 class UNavFilter_AIControllerDefault : public UNavigationQueryFilter
 { 
 public:
 };
 
 /// Class /Script/AIModule.NavLinkProxy
-/// Size: 0x0318 (792 bytes) (0x0002C8 - 0x000318) align 8 MaxSize: 0x0318
+/// Size: 0x0318 (792 bytes) (0x0002C8 - 0x000318) align n/a MaxSize: 0x0318
 class ANavLinkProxy : public AActor
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x10];                                      // 0x02C8   (0x0010) MISSED
-    TArray<FNavigationLink>                            PointLinks;                                                 // 0x02D8   (0x0010)
-    TArray<FNavigationSegmentLink>                     SegmentLinks;                                               // 0x02E8   (0x0010)
-    class UNavLinkCustomComponent*                     SmartLinkComp;                                              // 0x02F8   (0x0008)
-    bool                                               bSmartLinkIsRelevant;                                       // 0x0300   (0x0001)
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0301   (0x0007) MISSED
-    FMulticastInlineDelegate                           OnSmartLinkReached;                                         // 0x0308   (0x0010)
+    /* public    */ unsigned char                                      UnknownData02_8[0x10];                                      // 0x02C8   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FNavigationLink>                            PointLinks;                                                 // 0x02D8   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FNavigationSegmentLink>                     SegmentLinks;                                               // 0x02E8   (0x0010)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UNavLinkCustomComponent*                     SmartLinkComp;                                              // 0x02F8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSmartLinkIsRelevant;                                       // 0x0300   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x7];                                       // 0x0301   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FMulticastInlineDelegate                           OnSmartLinkReached;                                         // 0x0308   (0x0010)
 
     /// Functions
     // Function /Script/AIModule.NavLinkProxy.SetSmartLinkEnabled
@@ -3241,11 +3907,11 @@ public:
 };
 
 /// Class /Script/AIModule.NavLocalGridManager
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 class UNavLocalGridManager : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x30];                                      // 0x0028   (0x0030) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x30];                                      // 0x0028   (0x0030) MISSED
 
     /// Functions
     // Function /Script/AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
@@ -3298,28 +3964,37 @@ public:
 };
 
 /// Class /Script/AIModule.PathFollowingManager
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UPathFollowingManager : public UObject
 { 
 public:
 };
 
 /// Class /Script/AIModule.PawnAction
-/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align n/a MaxSize: 0x0098
 class UPawnAction : public UObject
 { 
 public:
-    class UPawnAction*                                 ChildAction;                                                // 0x0028   (0x0008)
-    class UPawnAction*                                 ParentAction;                                               // 0x0030   (0x0008)
-    class UPawnActionsComponent*                       OwnerComponent;                                             // 0x0038   (0x0008)
-    class UObject*                                     Instigator;                                                 // 0x0040   (0x0008)
-    class UBrainComponent*                             BrainComp;                                                  // 0x0048   (0x0008)
-    unsigned char                                      UnknownData00_6[0x30];                                      // 0x0050   (0x0030) MISSED
-    bool                                               bAllowNewSameClassInstance : 1;                             // 0x0080:0 (0x0001)
-    bool                                               bReplaceActiveSameClassInstance : 1;                        // 0x0080:1 (0x0001)
-    bool                                               bShouldPauseMovement : 1;                                   // 0x0080:2 (0x0001)
-    bool                                               bAlwaysNotifyOnFinished : 1;                                // 0x0080:3 (0x0001)
-    unsigned char                                      UnknownData01_7[0x17];                                      // 0x0081   (0x0017) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPawnAction*                                 ChildAction;                                                // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPawnAction*                                 ParentAction;                                               // 0x0030   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPawnActionsComponent*                       OwnerComponent;                                             // 0x0038   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UObject*                                     Instigator;                                                 // 0x0040   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UBrainComponent*                             BrainComp;                                                  // 0x0048   (0x0008)
+    /* public    */ unsigned char                                      UnknownData02_6[0x30];                                      // 0x0050   (0x0030) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bAllowNewSameClassInstance : 1;                             // 0x0080:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bReplaceActiveSameClassInstance : 1;                        // 0x0080:1 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bShouldPauseMovement : 1;                                   // 0x0080:2 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bAlwaysNotifyOnFinished : 1;                                // 0x0080:3 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x17];                                      // 0x0081   (0x0017) MISSED
 
     /// Functions
     // Function /Script/AIModule.PawnAction.GetActionPriority
@@ -3334,7 +4009,7 @@ public:
 };
 
 /// Class /Script/AIModule.PawnAction_BlueprintBase
-/// Size: 0x0098 (152 bytes) (0x000098 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000098 - 0x000098) align n/a MaxSize: 0x0098
 class UPawnAction_BlueprintBase : public UPawnAction
 { 
 public:
@@ -3360,81 +4035,105 @@ public:
 };
 
 /// Class /Script/AIModule.PawnAction_Move
-/// Size: 0x00E8 (232 bytes) (0x000098 - 0x0000E8) align 8 MaxSize: 0x00E8
+/// Size: 0x00E8 (232 bytes) (0x000098 - 0x0000E8) align n/a MaxSize: 0x00E8
 class UPawnAction_Move : public UPawnAction
 { 
 public:
-    class AActor*                                      GoalActor;                                                  // 0x0098   (0x0008)
-    FVector                                            GoalLocation;                                               // 0x00A0   (0x000C)
-    float                                              AcceptableRadius;                                           // 0x00AC   (0x0004)
-    class UClass*                                      FilterClass;                                                // 0x00B0   (0x0008)
-    bool                                               bAllowStrafe : 1;                                           // 0x00B8:0 (0x0001)
-    bool                                               bFinishOnOverlap : 1;                                       // 0x00B8:1 (0x0001)
-    bool                                               bUsePathfinding : 1;                                        // 0x00B8:2 (0x0001)
-    bool                                               bAllowPartialPath : 1;                                      // 0x00B8:3 (0x0001)
-    bool                                               bProjectGoalToNavigation : 1;                               // 0x00B8:4 (0x0001)
-    bool                                               bUpdatePathToGoal : 1;                                      // 0x00B8:5 (0x0001)
-    bool                                               bAbortChildActionOnPathChange : 1;                          // 0x00B8:6 (0x0001)
-    unsigned char                                      UnknownData00_7[0x2F];                                      // 0x00B9   (0x002F) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AActor*                                      GoalActor;                                                  // 0x0098   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FVector                                            GoalLocation;                                               // 0x00A0   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              AcceptableRadius;                                           // 0x00AC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      FilterClass;                                                // 0x00B0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bAllowStrafe : 1;                                           // 0x00B8:0 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bFinishOnOverlap : 1;                                       // 0x00B8:1 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bUsePathfinding : 1;                                        // 0x00B8:2 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bAllowPartialPath : 1;                                      // 0x00B8:3 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bProjectGoalToNavigation : 1;                               // 0x00B8:4 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bUpdatePathToGoal : 1;                                      // 0x00B8:5 (0x0001)
+    UPROPERTY(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bAbortChildActionOnPathChange : 1;                          // 0x00B8:6 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x2F];                                      // 0x00B9   (0x002F) MISSED
 };
 
 /// Class /Script/AIModule.PawnAction_Repeat
-/// Size: 0x00B8 (184 bytes) (0x000098 - 0x0000B8) align 8 MaxSize: 0x00B8
+/// Size: 0x00B8 (184 bytes) (0x000098 - 0x0000B8) align n/a MaxSize: 0x00B8
 class UPawnAction_Repeat : public UPawnAction
 { 
 public:
-    class UPawnAction*                                 ActionToRepeat;                                             // 0x0098   (0x0008)
-    class UPawnAction*                                 RecentActionCopy;                                           // 0x00A0   (0x0008)
-    TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                   // 0x00A8   (0x0001)
-    unsigned char                                      UnknownData00_7[0xF];                                       // 0x00A9   (0x000F) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPawnAction*                                 ActionToRepeat;                                             // 0x0098   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPawnAction*                                 RecentActionCopy;                                           // 0x00A0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                   // 0x00A8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0xF];                                       // 0x00A9   (0x000F) MISSED
 };
 
 /// Class /Script/AIModule.PawnAction_Sequence
-/// Size: 0x00C0 (192 bytes) (0x000098 - 0x0000C0) align 8 MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000098 - 0x0000C0) align n/a MaxSize: 0x00C0
 class UPawnAction_Sequence : public UPawnAction
 { 
 public:
-    TArray<class UPawnAction*>                         ActionSequence;                                             // 0x0098   (0x0010)
-    TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                   // 0x00A8   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x00A9   (0x0007) MISSED
-    class UPawnAction*                                 RecentActionCopy;                                           // 0x00B0   (0x0008)
-    unsigned char                                      UnknownData01_7[0x8];                                       // 0x00B8   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UPawnAction*>                         ActionSequence;                                             // 0x0098   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                   // 0x00A8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x7];                                       // 0x00A9   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPawnAction*                                 RecentActionCopy;                                           // 0x00B0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x8];                                       // 0x00B8   (0x0008) MISSED
 };
 
 /// Class /Script/AIModule.PawnAction_Wait
-/// Size: 0x00A8 (168 bytes) (0x000098 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000098 - 0x0000A8) align n/a MaxSize: 0x00A8
 class UPawnAction_Wait : public UPawnAction
 { 
 public:
-    float                                              TimeToWait;                                                 // 0x0098   (0x0004)
-    unsigned char                                      UnknownData00_7[0xC];                                       // 0x009C   (0x000C) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TimeToWait;                                                 // 0x0098   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0xC];                                       // 0x009C   (0x000C) MISSED
 };
 
 /// Struct /Script/AIModule.PawnActionStack
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 8 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FPawnActionStack
 { 
-    class UPawnAction*                                 TopAction;                                                  // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPawnAction*                                 TopAction;                                                  // 0x0000   (0x0008)
 };
 
 /// Struct /Script/AIModule.PawnActionEvent
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FPawnActionEvent
 { 
-    class UPawnAction*                                 Action;                                                     // 0x0000   (0x0008)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0008   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPawnAction*                                 Action;                                                     // 0x0000   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0008   (0x0010) MISSED
 };
 
 /// Class /Script/AIModule.PawnActionsComponent
-/// Size: 0x00F8 (248 bytes) (0x0000C0 - 0x0000F8) align 8 MaxSize: 0x00F8
+/// Size: 0x00F8 (248 bytes) (0x0000C0 - 0x0000F8) align n/a MaxSize: 0x00F8
 class UPawnActionsComponent : public UActorComponent
 { 
 public:
-    class APawn*                                       ControlledPawn;                                             // 0x00C0   (0x0008)
-    TArray<FPawnActionStack>                           ActionStacks;                                               // 0x00C8   (0x0010)
-    TArray<FPawnActionEvent>                           ActionEvents;                                               // 0x00D8   (0x0010)
-    class UPawnAction*                                 CurrentAction;                                              // 0x00E8   (0x0008)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x00F0   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class APawn*                                       ControlledPawn;                                             // 0x00C0   (0x0008)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FPawnActionStack>                           ActionStacks;                                               // 0x00C8   (0x0010)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FPawnActionEvent>                           ActionEvents;                                               // 0x00D8   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UPawnAction*                                 CurrentAction;                                              // 0x00E8   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x00F0   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AIModule.PawnActionsComponent.K2_PushAction
@@ -3456,24 +4155,37 @@ public:
 };
 
 /// Class /Script/AIModule.PawnSensingComponent
-/// Size: 0x0108 (264 bytes) (0x0000C0 - 0x000108) align 8 MaxSize: 0x0108
+/// Size: 0x0108 (264 bytes) (0x0000C0 - 0x000108) align n/a MaxSize: 0x0108
 class UPawnSensingComponent : public UActorComponent
 { 
 public:
-    float                                              HearingThreshold;                                           // 0x00C0   (0x0004)
-    float                                              LOSHearingThreshold;                                        // 0x00C4   (0x0004)
-    float                                              SightRadius;                                                // 0x00C8   (0x0004)
-    float                                              SensingInterval;                                            // 0x00CC   (0x0004)
-    float                                              HearingMaxSoundAge;                                         // 0x00D0   (0x0004)
-    bool                                               bEnableSensingUpdates : 1;                                  // 0x00D4:0 (0x0001)
-    bool                                               bOnlySensePlayers : 1;                                      // 0x00D4:1 (0x0001)
-    bool                                               bSeePawns : 1;                                              // 0x00D4:2 (0x0001)
-    bool                                               bHearNoises : 1;                                            // 0x00D4:3 (0x0001)
-    unsigned char                                      UnknownData00_5[0xB];                                       // 0x00D5   (0x000B) MISSED
-    FMulticastInlineDelegate                           OnSeePawn;                                                  // 0x00E0   (0x0010)
-    FMulticastInlineDelegate                           OnHearNoise;                                                // 0x00F0   (0x0010)
-    float                                              PeripheralVisionAngle;                                      // 0x0100   (0x0004)
-    float                                              PeripheralVisionCosine;                                     // 0x0104   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HearingThreshold;                                           // 0x00C0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LOSHearingThreshold;                                        // 0x00C4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SightRadius;                                                // 0x00C8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SensingInterval;                                            // 0x00CC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HearingMaxSoundAge;                                         // 0x00D0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableSensingUpdates : 1;                                  // 0x00D4:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bOnlySensePlayers : 1;                                      // 0x00D4:1 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSeePawns : 1;                                              // 0x00D4:2 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bHearNoises : 1;                                            // 0x00D4:3 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_5[0xB];                                       // 0x00D5   (0x000B) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSeePawn;                                                  // 0x00E0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnHearNoise;                                                // 0x00F0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              PeripheralVisionAngle;                                      // 0x0100   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              PeripheralVisionCosine;                                     // 0x0104   (0x0004)
 
     /// Functions
     // Function /Script/AIModule.PawnSensingComponent.SetSensingUpdatesEnabled
@@ -3500,102 +4212,126 @@ public:
 };
 
 /// Class /Script/AIModule.VisualLoggerExtension
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UVisualLoggerExtension : public UObject
 { 
 public:
 };
 
 /// Struct /Script/AIModule.AIRequestID
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FAIRequestID
 { 
-    uint32_t                                           RequestID;                                                  // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ uint32_t                                           RequestID;                                                  // 0x0000   (0x0004)
 };
 
 /// Struct /Script/AIModule.AIStimulus
-/// Size: 0x003C (60 bytes) (0x000000 - 0x00003C) align 4 MaxSize: 0x003C
+/// Size: 0x003C (60 bytes) (0x000000 - 0x00003C) align n/a MaxSize: 0x003C
 struct FAIStimulus
 { 
-    float                                              Age;                                                        // 0x0000   (0x0004)
-    float                                              ExpirationAge;                                              // 0x0004   (0x0004)
-    float                                              Strength;                                                   // 0x0008   (0x0004)
-    FVector                                            StimulusLocation;                                           // 0x000C   (0x000C)
-    FVector                                            ReceiverLocation;                                           // 0x0018   (0x000C)
-    FName                                              Tag;                                                        // 0x0024   (0x0008)
-    unsigned char                                      UnknownData00_6[0xC];                                       // 0x002C   (0x000C) MISSED
-    unsigned char                                      UnknownBit01 : 1;                                           // 0x0038:0 (0x0001) MISSED
-    bool                                               bSuccessfullySensed : 1;                                    // 0x0038:1 (0x0001)
-    unsigned char                                      UnknownData02_7[0x3];                                       // 0x0039   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              Age;                                                        // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              ExpirationAge;                                              // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Strength;                                                   // 0x0008   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            StimulusLocation;                                           // 0x000C   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            ReceiverLocation;                                           // 0x0018   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              Tag;                                                        // 0x0024   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_6[0xC];                                       // 0x002C   (0x000C) MISSED
+    /* public    */ unsigned char                                      UnknownBit04 : 1;                                           // 0x0038:0 (0x0001) MISSED
+    UPROPERTY(BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bSuccessfullySensed : 1;                                    // 0x0038:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x3];                                       // 0x0039   (0x0003) MISSED
 };
 
 /// Struct /Script/AIModule.ActorPerceptionUpdateInfo
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 4 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FActorPerceptionUpdateInfo
 { 
-    int32_t                                            TargetId;                                                   // 0x0000   (0x0004)
-    TWeakObjectPtr<class AActor*>                      Target;                                                     // 0x0004   (0x0008)
-    FAIStimulus                                        Stimulus;                                                   // 0x000C   (0x003C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            TargetId;                                                   // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class AActor*>                      Target;                                                     // 0x0004   (0x0008)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FAIStimulus                                        Stimulus;                                                   // 0x000C   (0x003C)
 };
 
 /// Struct /Script/AIModule.AIDataProviderStructValue
-/// Size: 0x0030 (48 bytes) (0x000020 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000020 - 0x000030) align n/a MaxSize: 0x0030
 struct FAIDataProviderStructValue : FAIDataProviderValue
 { 
-    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0020   (0x0010) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x10];                                      // 0x0020   (0x0010) MISSED
 };
 
 /// Struct /Script/AIModule.ActorPerceptionBlueprintInfo
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FActorPerceptionBlueprintInfo
 { 
-    class AActor*                                      Target;                                                     // 0x0000   (0x0008)
-    TArray<FAIStimulus>                                LastSensedStimuli;                                          // 0x0008   (0x0010)
-    bool                                               bIsHostile : 1;                                             // 0x0018:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0019   (0x0007) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      Target;                                                     // 0x0000   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FAIStimulus>                                LastSensedStimuli;                                          // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsHostile : 1;                                             // 0x0018:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0019   (0x0007) MISSED
 };
 
 /// Struct /Script/AIModule.AISightEvent
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FAISightEvent
 { 
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0000   (0x0008) MISSED
-    class AActor*                                      SeenActor;                                                  // 0x0008   (0x0008)
-    class AActor*                                      Observer;                                                   // 0x0010   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0000   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      SeenActor;                                                  // 0x0008   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AActor*                                      Observer;                                                   // 0x0010   (0x0008)
 };
 
 /// Struct /Script/AIModule.EnvQueryRequest
-/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align n/a MaxSize: 0x0068
 struct FEnvQueryRequest
 { 
-    class UEnvQuery*                                   QueryTemplate;                                              // 0x0000   (0x0008)
-    class UObject*                                     Owner;                                                      // 0x0008   (0x0008)
-    class UWorld*                                      World;                                                      // 0x0010   (0x0008)
-    unsigned char                                      UnknownData00_7[0x50];                                      // 0x0018   (0x0050) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UEnvQuery*                                   QueryTemplate;                                              // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UObject*                                     Owner;                                                      // 0x0008   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UWorld*                                      World;                                                      // 0x0010   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x50];                                      // 0x0018   (0x0050) MISSED
 };
 
 /// Struct /Script/AIModule.EnvQueryResult
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FEnvQueryResult
 { 
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    class UClass*                                      ItemType;                                                   // 0x0010   (0x0008)
-    unsigned char                                      UnknownData01_6[0x14];                                      // 0x0018   (0x0014) MISSED
-    int32_t                                            OptionIndex;                                                // 0x002C   (0x0004)
-    int32_t                                            QueryID;                                                    // 0x0030   (0x0004)
-    unsigned char                                      UnknownData02_7[0xC];                                       // 0x0034   (0x000C) MISSED
+    /* public    */ unsigned char                                      UnknownData03_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      ItemType;                                                   // 0x0010   (0x0008)
+    /* public    */ unsigned char                                      UnknownData04_6[0x14];                                      // 0x0018   (0x0014) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            OptionIndex;                                                // 0x002C   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            QueryID;                                                    // 0x0030   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_7[0xC];                                       // 0x0034   (0x000C) MISSED
 };
 
 /// Struct /Script/AIModule.GenericTeamId
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FGenericTeamId
 { 
-    char                                               TeamID;                                                     // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ char                                               TeamID;                                                     // 0x0000   (0x0001)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(AAIController) == 0x03D0); // 976 bytes (0x000340 - 0x0003D0)
 static_assert(sizeof(UBrainComponent) == 0x0118); // 280 bytes (0x0000C0 - 0x000118)
 static_assert(sizeof(UBehaviorTreeComponent) == 0x02A8); // 680 bytes (0x000118 - 0x0002A8)
@@ -4128,3 +4864,4 @@ static_assert(offsetof(FEnvQueryRequest, QueryTemplate) == 0x0000);
 static_assert(offsetof(FEnvQueryRequest, Owner) == 0x0008);
 static_assert(offsetof(FEnvQueryRequest, World) == 0x0010);
 static_assert(offsetof(FEnvQueryResult, ItemType) == 0x0010);
+#endif

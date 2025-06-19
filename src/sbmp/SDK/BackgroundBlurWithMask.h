@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -16,16 +25,18 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/BackgroundBlurWithMask.EMaskMaterialRedrawMethod
-/// Size: 0x01 (1 bytes)
+class UBackgroundBlurWithMask;
+class UBackgroundBlurWithMaskSlot;
+struct FMaskMaterialSetting;
+
+/// Enum /Script/BackgroundBlurWithMask.EMaskMaterialRedrawMethod -  1 (1 bytes)
 enum class EMaskMaterialRedrawMethod : uint8_t
 {
     RedrawEveryFrame                                                                 = 0,
     RedrawBlueprint                                                                  = 1
 };
 
-/// Enum /Script/BackgroundBlurWithMask.EMaskTextureChannel
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/BackgroundBlurWithMask.EMaskTextureChannel -  1 (1 bytes)
 enum class EMaskTextureChannel : uint8_t
 {
     R                                                                                = 0,
@@ -35,38 +46,54 @@ enum class EMaskTextureChannel : uint8_t
 };
 
 /// Struct /Script/BackgroundBlurWithMask.MaskMaterialSetting
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FMaskMaterialSetting
 { 
-    class UMaterialInterface*                          MaskMaterial;                                               // 0x0000   (0x0008)
-    FIntPoint                                          ToTextureSize;                                              // 0x0008   (0x0008)
-    TEnumAsByte<EMaskMaterialRedrawMethod>             RedrawMethod;                                               // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0011   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          MaskMaterial;                                               // 0x0000   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FIntPoint                                          ToTextureSize;                                              // 0x0008   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EMaskMaterialRedrawMethod>             RedrawMethod;                                               // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 /// Class /Script/BackgroundBlurWithMask.BackgroundBlurWithMask
-/// Size: 0x0218 (536 bytes) (0x000120 - 0x000218) align 8 MaxSize: 0x0218
+/// Size: 0x0218 (536 bytes) (0x000120 - 0x000218) align n/a MaxSize: 0x0218
 class UBackgroundBlurWithMask : public UContentWidget
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x0120   (0x0008) MISSED
-    FMargin                                            Padding;                                                    // 0x0128   (0x0010)
-    TEnumAsByte<EHorizontalAlignment>                  HorizontalAlignment;                                        // 0x0138   (0x0001)
-    TEnumAsByte<EVerticalAlignment>                    VerticalAlignment;                                          // 0x0139   (0x0001)
-    bool                                               bApplyAlphaToBlur;                                          // 0x013A   (0x0001)
-    unsigned char                                      UnknownData01_6[0x1];                                       // 0x013B   (0x0001) MISSED
-    float                                              BlurStrength;                                               // 0x013C   (0x0004)
-    bool                                               bUseMaskMaterial;                                           // 0x0140   (0x0001)
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0141   (0x0007) MISSED
-    class UTexture2D*                                  MaskTexture;                                                // 0x0148   (0x0008)
-    FMaskMaterialSetting                               MaskMaterialSetting;                                        // 0x0150   (0x0018)
-    TEnumAsByte<EMaskTextureChannel>                   MaskTextureChannel;                                         // 0x0168   (0x0001)
-    bool                                               bOverrideAutoRadiusCalculation;                             // 0x0169   (0x0001)
-    unsigned char                                      UnknownData03_6[0x2];                                       // 0x016A   (0x0002) MISSED
-    int32_t                                            BlurRadius;                                                 // 0x016C   (0x0004)
-    FSlateBrush                                        LowQualityFallbackBrush;                                    // 0x0170   (0x0090)
-    unsigned char                                      UnknownData04_6[0x10];                                      // 0x0200   (0x0010) MISSED
-    class UTextureRenderTarget2D*                      MaskMaterialRenderTarget;                                   // 0x0210   (0x0008)
+    /* public    */ unsigned char                                      UnknownData05_8[0x8];                                       // 0x0120   (0x0008) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMargin                                            Padding;                                                    // 0x0128   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EHorizontalAlignment>                  HorizontalAlignment;                                        // 0x0138   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EVerticalAlignment>                    VerticalAlignment;                                          // 0x0139   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bApplyAlphaToBlur;                                          // 0x013A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x1];                                       // 0x013B   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BlurStrength;                                               // 0x013C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseMaskMaterial;                                           // 0x0140   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x7];                                       // 0x0141   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture2D*                                  MaskTexture;                                                // 0x0148   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMaskMaterialSetting                               MaskMaterialSetting;                                        // 0x0150   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EMaskTextureChannel>                   MaskTextureChannel;                                         // 0x0168   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bOverrideAutoRadiusCalculation;                             // 0x0169   (0x0001)
+    /* public    */ unsigned char                                      UnknownData08_6[0x2];                                       // 0x016A   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            BlurRadius;                                                 // 0x016C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        LowQualityFallbackBrush;                                    // 0x0170   (0x0090)
+    /* public    */ unsigned char                                      UnknownData09_6[0x10];                                      // 0x0200   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UTextureRenderTarget2D*                      MaskMaterialRenderTarget;                                   // 0x0210   (0x0008)
 
     /// Functions
     // Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMask.SetVerticalAlignment
@@ -109,14 +136,17 @@ public:
 };
 
 /// Class /Script/BackgroundBlurWithMask.BackgroundBlurWithMaskSlot
-/// Size: 0x0060 (96 bytes) (0x000038 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000038 - 0x000060) align n/a MaxSize: 0x0060
 class UBackgroundBlurWithMaskSlot : public UPanelSlot
 { 
 public:
-    FMargin                                            Padding;                                                    // 0x0038   (0x0010)
-    TEnumAsByte<EHorizontalAlignment>                  HorizontalAlignment;                                        // 0x0048   (0x0001)
-    TEnumAsByte<EVerticalAlignment>                    VerticalAlignment;                                          // 0x0049   (0x0001)
-    unsigned char                                      UnknownData00_7[0x16];                                      // 0x004A   (0x0016) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FMargin                                            Padding;                                                    // 0x0038   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<EHorizontalAlignment>                  HorizontalAlignment;                                        // 0x0048   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ TEnumAsByte<EVerticalAlignment>                    VerticalAlignment;                                          // 0x0049   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x16];                                      // 0x004A   (0x0016) MISSED
 
     /// Functions
     // Function /Script/BackgroundBlurWithMask.BackgroundBlurWithMaskSlot.SetVerticalAlignment
@@ -133,6 +163,7 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FMaskMaterialSetting) == 0x0018); // 24 bytes (0x000000 - 0x000018)
 static_assert(sizeof(UBackgroundBlurWithMask) == 0x0218); // 536 bytes (0x000120 - 0x000218)
 static_assert(sizeof(UBackgroundBlurWithMaskSlot) == 0x0060); // 96 bytes (0x000038 - 0x000060)
@@ -150,3 +181,4 @@ static_assert(offsetof(UBackgroundBlurWithMask, MaskMaterialRenderTarget) == 0x0
 static_assert(offsetof(UBackgroundBlurWithMaskSlot, Padding) == 0x0038);
 static_assert(offsetof(UBackgroundBlurWithMaskSlot, HorizontalAlignment) == 0x0048);
 static_assert(offsetof(UBackgroundBlurWithMaskSlot, VerticalAlignment) == 0x0049);
+#endif

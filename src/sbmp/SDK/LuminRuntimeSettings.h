@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,14 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/LuminRuntimeSettings.ELuminPrivilege
-/// Size: 0x01 (1 bytes)
+class ULuminRuntimeSettings;
+struct FLocalizedAppName;
+struct FLocalizedIconInfo;
+struct FLocalizedIconInfos;
+struct FLuminComponentElement;
+struct FLuminComponentSubElement;
+
+/// Enum /Script/LuminRuntimeSettings.ELuminPrivilege -  1 (1 bytes)
 enum class ELuminPrivilege : uint8_t
 {
     Invalid                                                                          = 0,
@@ -63,8 +78,7 @@ enum class ELuminPrivilege : uint8_t
     BluetoothGattWrite                                                               = 41
 };
 
-/// Enum /Script/LuminRuntimeSettings.ELuminFrameTimingHint
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LuminRuntimeSettings.ELuminFrameTimingHint -  1 (1 bytes)
 enum class ELuminFrameTimingHint : uint8_t
 {
     Unspecified                                                                      = 0,
@@ -73,8 +87,7 @@ enum class ELuminFrameTimingHint : uint8_t
     FPS4                                                                             = 3
 };
 
-/// Enum /Script/LuminRuntimeSettings.ELuminComponentType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LuminRuntimeSettings.ELuminComponentType -  1 (1 bytes)
 enum class ELuminComponentType : uint8_t
 {
     Universe                                                                         = 0,
@@ -85,8 +98,7 @@ enum class ELuminComponentType : uint8_t
     SystemUI                                                                         = 5
 };
 
-/// Enum /Script/LuminRuntimeSettings.ELuminComponentSubElementType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LuminRuntimeSettings.ELuminComponentSubElementType -  1 (1 bytes)
 enum class ELuminComponentSubElementType : uint8_t
 {
     FileExtension                                                                    = 0,
@@ -97,88 +109,126 @@ enum class ELuminComponentSubElementType : uint8_t
 };
 
 /// Struct /Script/LuminRuntimeSettings.LocalizedIconInfo
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FLocalizedIconInfo
 { 
-    FString                                            LanguageCode;                                               // 0x0000   (0x0010)
-    FDirectoryPath                                     IconModelPath;                                              // 0x0010   (0x0010)
-    FDirectoryPath                                     IconPortalPath;                                             // 0x0020   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            LanguageCode;                                               // 0x0000   (0x0010)
+    UPROPERTY(Edit, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ FDirectoryPath                                     IconModelPath;                                              // 0x0010   (0x0010)
+    UPROPERTY(Edit, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ FDirectoryPath                                     IconPortalPath;                                             // 0x0020   (0x0010)
 };
 
 /// Struct /Script/LuminRuntimeSettings.LocalizedIconInfos
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FLocalizedIconInfos
 { 
-    TArray<FLocalizedIconInfo>                         IconData;                                                   // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLocalizedIconInfo>                         IconData;                                                   // 0x0000   (0x0010)
 };
 
 /// Struct /Script/LuminRuntimeSettings.LuminComponentSubElement
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FLuminComponentSubElement
 { 
-    ELuminComponentSubElementType                      ElementType;                                                // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007) MISSED
-    FString                                            Value;                                                      // 0x0008   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ELuminComponentSubElementType                      ElementType;                                                // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Value;                                                      // 0x0008   (0x0010)
 };
 
 /// Struct /Script/LuminRuntimeSettings.LuminComponentElement
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FLuminComponentElement
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010)
-    FString                                            VisibleName;                                                // 0x0010   (0x0010)
-    FString                                            ExecutableName;                                             // 0x0020   (0x0010)
-    ELuminComponentType                                ComponentType;                                              // 0x0030   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0031   (0x0007) MISSED
-    TArray<FLuminComponentSubElement>                  ExtraComponentSubElements;                                  // 0x0038   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Name;                                                       // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            VisibleName;                                                // 0x0010   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ExecutableName;                                             // 0x0020   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ELuminComponentType                                ComponentType;                                              // 0x0030   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0031   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLuminComponentSubElement>                  ExtraComponentSubElements;                                  // 0x0038   (0x0010)
 };
 
 /// Struct /Script/LuminRuntimeSettings.LocalizedAppName
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FLocalizedAppName
 { 
-    FString                                            LanguageCode;                                               // 0x0000   (0x0010)
-    FString                                            AppName;                                                    // 0x0010   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            LanguageCode;                                               // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            AppName;                                                    // 0x0010   (0x0010)
 };
 
 /// Class /Script/LuminRuntimeSettings.LuminRuntimeSettings
-/// Size: 0x0148 (328 bytes) (0x000028 - 0x000148) align 8 MaxSize: 0x0148
+/// Size: 0x0148 (328 bytes) (0x000028 - 0x000148) align n/a MaxSize: 0x0148
 class ULuminRuntimeSettings : public UObject
 { 
 public:
-    FString                                            PackageName;                                                // 0x0028   (0x0010)
-    FString                                            ApplicationDisplayName;                                     // 0x0038   (0x0010)
-    ELuminFrameTimingHint                              FrameTimingHint;                                            // 0x0048   (0x0001)
-    bool                                               bProtectedContent;                                          // 0x0049   (0x0001)
-    bool                                               bManualCallToAppReady;                                      // 0x004A   (0x0001)
-    bool                                               bUseMobileRendering;                                        // 0x004B   (0x0001)
-    bool                                               bUseVulkan;                                                 // 0x004C   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x004D   (0x0003) MISSED
-    FFilePath                                          Certificate;                                                // 0x0050   (0x0010)
-    FDirectoryPath                                     IconModelPath;                                              // 0x0060   (0x0010)
-    FDirectoryPath                                     IconPortalPath;                                             // 0x0070   (0x0010)
-    FLocalizedIconInfos                                LocalizedIconInfos;                                         // 0x0080   (0x0010)
-    int32_t                                            VersionCode;                                                // 0x0090   (0x0004)
-    int32_t                                            MinimumAPILevel;                                            // 0x0094   (0x0004)
-    TArray<ELuminPrivilege>                            AppPrivileges;                                              // 0x0098   (0x0010)
-    TArray<FLuminComponentSubElement>                  ExtraComponentSubElements;                                  // 0x00A8   (0x0010)
-    TArray<FLuminComponentElement>                     ExtraComponentElements;                                     // 0x00B8   (0x0010)
-    FString                                            SpatializationPlugin;                                       // 0x00C8   (0x0010)
-    FString                                            ReverbPlugin;                                               // 0x00D8   (0x0010)
-    FString                                            OcclusionPlugin;                                            // 0x00E8   (0x0010)
-    int32_t                                            SoundCueCookQualityIndex;                                   // 0x00F8   (0x0004)
-    bool                                               bRemoveDebugInfo;                                           // 0x00FC   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00FD   (0x0003) MISSED
-    FDirectoryPath                                     VulkanValidationLayerLibs;                                  // 0x0100   (0x0010)
-    bool                                               bFrameVignette;                                             // 0x0110   (0x0001)
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0111   (0x0007) MISSED
-    TArray<FLocalizedAppName>                          LocalizedAppNames;                                          // 0x0118   (0x0010)
-    unsigned char                                      UnknownData03_7[0x20];                                      // 0x0128   (0x0020) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            PackageName;                                                // 0x0028   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ApplicationDisplayName;                                     // 0x0038   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ELuminFrameTimingHint                              FrameTimingHint;                                            // 0x0048   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bProtectedContent;                                          // 0x0049   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bManualCallToAppReady;                                      // 0x004A   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseMobileRendering;                                        // 0x004B   (0x0001)
+    UPROPERTY(ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseVulkan;                                                 // 0x004C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x004D   (0x0003) MISSED
+    UPROPERTY(Edit, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ FFilePath                                          Certificate;                                                // 0x0050   (0x0010)
+    UPROPERTY(Edit, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ FDirectoryPath                                     IconModelPath;                                              // 0x0060   (0x0010)
+    UPROPERTY(Edit, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ FDirectoryPath                                     IconPortalPath;                                             // 0x0070   (0x0010)
+    UPROPERTY(Edit, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ FLocalizedIconInfos                                LocalizedIconInfos;                                         // 0x0080   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            VersionCode;                                                // 0x0090   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MinimumAPILevel;                                            // 0x0094   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ TArray<ELuminPrivilege>                            AppPrivileges;                                              // 0x0098   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLuminComponentSubElement>                  ExtraComponentSubElements;                                  // 0x00A8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLuminComponentElement>                     ExtraComponentElements;                                     // 0x00B8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            SpatializationPlugin;                                       // 0x00C8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ReverbPlugin;                                               // 0x00D8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            OcclusionPlugin;                                            // 0x00E8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SoundCueCookQualityIndex;                                   // 0x00F8   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bRemoveDebugInfo;                                           // 0x00FC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x3];                                       // 0x00FD   (0x0003) MISSED
+    UPROPERTY(Edit, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ FDirectoryPath                                     VulkanValidationLayerLibs;                                  // 0x0100   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFrameVignette;                                             // 0x0110   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x7];                                       // 0x0111   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLocalizedAppName>                          LocalizedAppNames;                                          // 0x0118   (0x0010)
+    /* public    */ unsigned char                                      UnknownData07_7[0x20];                                      // 0x0128   (0x0020) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FLocalizedIconInfo) == 0x0030); // 48 bytes (0x000000 - 0x000030)
 static_assert(sizeof(FLocalizedIconInfos) == 0x0010); // 16 bytes (0x000000 - 0x000010)
 static_assert(sizeof(FLuminComponentSubElement) == 0x0018); // 24 bytes (0x000000 - 0x000018)
@@ -213,3 +263,4 @@ static_assert(offsetof(ULuminRuntimeSettings, ReverbPlugin) == 0x00D8);
 static_assert(offsetof(ULuminRuntimeSettings, OcclusionPlugin) == 0x00E8);
 static_assert(offsetof(ULuminRuntimeSettings, VulkanValidationLayerLibs) == 0x0100);
 static_assert(offsetof(ULuminRuntimeSettings, LocalizedAppNames) == 0x0118);
+#endif

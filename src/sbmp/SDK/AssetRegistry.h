@@ -2,27 +2,42 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
+class UAssetRegistry;
+class UAssetRegistryHelpers;
+class UAssetRegistryImpl;
+struct FAssetRegistryDependencyOptions;
+struct FTagAndValue;
+
 /// Class /Script/AssetRegistry.AssetRegistryImpl
-/// Size: 0x07B8 (1976 bytes) (0x000028 - 0x0007B8) align 8 MaxSize: 0x07B8
+/// Size: 0x07B8 (1976 bytes) (0x000028 - 0x0007B8) align n/a MaxSize: 0x07B8
 class UAssetRegistryImpl : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x790];                                     // 0x0028   (0x0790) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x790];                                     // 0x0028   (0x0790) MISSED
 };
 
 /// Class /Script/AssetRegistry.AssetRegistryHelpers
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAssetRegistryHelpers : public UObject
 { 
 public:
@@ -73,7 +88,7 @@ public:
 };
 
 /// Class /Script/AssetRegistry.AssetRegistry
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAssetRegistry : public UInterface
 { 
 public:
@@ -161,27 +176,35 @@ public:
 };
 
 /// Struct /Script/AssetRegistry.TagAndValue
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FTagAndValue
 { 
-    FName                                              Tag;                                                        // 0x0000   (0x0008)
-    FString                                            Value;                                                      // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              Tag;                                                        // 0x0000   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Value;                                                      // 0x0008   (0x0010)
 };
 
 /// Struct /Script/AssetRegistry.AssetRegistryDependencyOptions
-/// Size: 0x0005 (5 bytes) (0x000000 - 0x000005) align 1 MaxSize: 0x0005
+/// Size: 0x0005 (5 bytes) (0x000000 - 0x000005) align n/a MaxSize: 0x0005
 struct FAssetRegistryDependencyOptions
 { 
-    bool                                               bIncludeSoftPackageReferences;                              // 0x0000   (0x0001)
-    bool                                               bIncludeHardPackageReferences;                              // 0x0001   (0x0001)
-    bool                                               bIncludeSearchableNames;                                    // 0x0002   (0x0001)
-    bool                                               bIncludeSoftManagementReferences;                           // 0x0003   (0x0001)
-    bool                                               bIncludeHardManagementReferences;                           // 0x0004   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIncludeSoftPackageReferences;                              // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIncludeHardPackageReferences;                              // 0x0001   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIncludeSearchableNames;                                    // 0x0002   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIncludeSoftManagementReferences;                           // 0x0003   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIncludeHardManagementReferences;                           // 0x0004   (0x0001)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UAssetRegistryImpl) == 0x07B8); // 1976 bytes (0x000028 - 0x0007B8)
 static_assert(sizeof(UAssetRegistryHelpers) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UAssetRegistry) == 0x0028); // 40 bytes (0x000028 - 0x000028)
@@ -189,3 +212,4 @@ static_assert(sizeof(FTagAndValue) == 0x0018); // 24 bytes (0x000000 - 0x000018)
 static_assert(sizeof(FAssetRegistryDependencyOptions) == 0x0005); // 5 bytes (0x000000 - 0x000005)
 static_assert(offsetof(FTagAndValue, Tag) == 0x0000);
 static_assert(offsetof(FTagAndValue, Value) == 0x0008);
+#endif

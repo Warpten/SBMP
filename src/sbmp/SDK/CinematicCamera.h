@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,19 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/CinematicCamera.ECameraFocusMethod
-/// Size: 0x01 (1 bytes)
+class ACameraRig_Crane;
+class ACameraRig_Rail;
+class ACineCameraActor;
+class UCineCameraComponent;
+struct FCameraFilmbackSettings;
+struct FCameraFocusSettings;
+struct FCameraLensSettings;
+struct FCameraLookatTrackingSettings;
+struct FCameraTrackingFocusSettings;
+struct FNamedFilmbackPreset;
+struct FNamedLensPreset;
+
+/// Enum /Script/CinematicCamera.ECameraFocusMethod -  1 (1 bytes)
 enum class ECameraFocusMethod : uint8_t
 {
     DoNotOverride                                                                    = 0,
@@ -25,96 +45,137 @@ enum class ECameraFocusMethod : uint8_t
 };
 
 /// Struct /Script/CinematicCamera.CameraFilmbackSettings
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FCameraFilmbackSettings
 { 
-    float                                              SensorWidth;                                                // 0x0000   (0x0004)
-    float                                              SensorHeight;                                               // 0x0004   (0x0004)
-    float                                              SensorAspectRatio;                                          // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SensorWidth;                                                // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SensorHeight;                                               // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SensorAspectRatio;                                          // 0x0008   (0x0004)
 };
 
 /// Struct /Script/CinematicCamera.CameraLensSettings
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 4 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FCameraLensSettings
 { 
-    float                                              MinFocalLength;                                             // 0x0000   (0x0004)
-    float                                              MaxFocalLength;                                             // 0x0004   (0x0004)
-    float                                              MinFStop;                                                   // 0x0008   (0x0004)
-    float                                              MaxFStop;                                                   // 0x000C   (0x0004)
-    float                                              MinimumFocusDistance;                                       // 0x0010   (0x0004)
-    int32_t                                            DiaphragmBladeCount;                                        // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinFocalLength;                                             // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaxFocalLength;                                             // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinFStop;                                                   // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaxFStop;                                                   // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinimumFocusDistance;                                       // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            DiaphragmBladeCount;                                        // 0x0014   (0x0004)
 };
 
 /// Struct /Script/CinematicCamera.CameraTrackingFocusSettings
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FCameraTrackingFocusSettings
 { 
-    TWeakObjectPtr<class AActor*>                      ActorToTrack;                                               // 0x0000   (0x0008)
-    unsigned char                                      UnknownData00_6[0x20];                                      // 0x0008   (0x0020) MISSED
-    FVector                                            RelativeOffset;                                             // 0x0028   (0x000C)
-    bool                                               bDrawDebugTrackingFocusPoint : 1;                           // 0x0034:0 (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0035   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, Interp, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class AActor*>                      ActorToTrack;                                               // 0x0000   (0x0008)
+    /* public    */ unsigned char                                      UnknownData02_6[0x20];                                      // 0x0008   (0x0020) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            RelativeOffset;                                             // 0x0028   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDrawDebugTrackingFocusPoint : 1;                           // 0x0034:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x0035   (0x0003) MISSED
 };
 
 /// Struct /Script/CinematicCamera.CameraFocusSettings
-/// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000000 - 0x000058) align n/a MaxSize: 0x0058
 struct FCameraFocusSettings
 { 
-    ECameraFocusMethod                                 FocusMethod;                                                // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    float                                              ManualFocusDistance;                                        // 0x0004   (0x0004)
-    FCameraTrackingFocusSettings                       TrackingFocusSettings;                                      // 0x0008   (0x0038)
-    bool                                               bDrawDebugFocusPlane : 1;                                   // 0x0040:0 (0x0001)
-    unsigned char                                      UnknownData01_5[0x3];                                       // 0x0041   (0x0003) MISSED
-    FColor                                             DebugFocusPlaneColor;                                       // 0x0044   (0x0004)
-    bool                                               bSmoothFocusChanges : 1;                                    // 0x0048:0 (0x0001)
-    unsigned char                                      UnknownData02_5[0x3];                                       // 0x0049   (0x0003) MISSED
-    float                                              FocusSmoothingInterpSpeed;                                  // 0x004C   (0x0004)
-    float                                              FocusOffset;                                                // 0x0050   (0x0004)
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x0054   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ECameraFocusMethod                                 FocusMethod;                                                // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ManualFocusDistance;                                        // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FCameraTrackingFocusSettings                       TrackingFocusSettings;                                      // 0x0008   (0x0038)
+    UPROPERTY(Edit, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDrawDebugFocusPlane : 1;                                   // 0x0040:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_5[0x3];                                       // 0x0041   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FColor                                             DebugFocusPlaneColor;                                       // 0x0044   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSmoothFocusChanges : 1;                                    // 0x0048:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_5[0x3];                                       // 0x0049   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FocusSmoothingInterpSpeed;                                  // 0x004C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FocusOffset;                                                // 0x0050   (0x0004)
+    /* public    */ unsigned char                                      UnknownData07_7[0x4];                                       // 0x0054   (0x0004) MISSED
 };
 
 /// Struct /Script/CinematicCamera.NamedFilmbackPreset
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FNamedFilmbackPreset
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010)
-    FCameraFilmbackSettings                            FilmbackSettings;                                           // 0x0010   (0x000C)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x001C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Name;                                                       // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FCameraFilmbackSettings                            FilmbackSettings;                                           // 0x0010   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x001C   (0x0004) MISSED
 };
 
 /// Struct /Script/CinematicCamera.NamedLensPreset
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FNamedLensPreset
 { 
-    FString                                            Name;                                                       // 0x0000   (0x0010)
-    FCameraLensSettings                                LensSettings;                                               // 0x0010   (0x0018)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Name;                                                       // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FCameraLensSettings                                LensSettings;                                               // 0x0010   (0x0018)
 };
 
 /// Class /Script/CinematicCamera.CineCameraComponent
-/// Size: 0x09D0 (2512 bytes) (0x0008C0 - 0x0009D0) align 16 MaxSize: 0x09C8
+/// Size: 0x09D0 (2512 bytes) (0x0008C0 - 0x0009D0) align n/a MaxSize: 0x09C8
 class UCineCameraComponent : public UCameraComponent
 { 
 public:
-    FCameraFilmbackSettings                            FilmbackSettings;                                           // 0x08C0   (0x000C)
-    FCameraFilmbackSettings                            Filmback;                                                   // 0x08CC   (0x000C)
-    FCameraLensSettings                                LensSettings;                                               // 0x08D8   (0x0018)
-    FCameraFocusSettings                               FocusSettings;                                              // 0x08F0   (0x0058)
-    float                                              CurrentFocalLength;                                         // 0x0948   (0x0004)
-    float                                              AdditiveFocalLength;                                        // 0x094C   (0x0004)
-    float                                              CurrentAperture;                                            // 0x0950   (0x0004)
-    float                                              CurrentFocusDistance;                                       // 0x0954   (0x0004)
-    bool                                               bUseBlendViewDOF;                                           // 0x0958   (0x0001)
-    unsigned char                                      UnknownData00_6[0xF];                                       // 0x0959   (0x000F) MISSED
-    TArray<FNamedFilmbackPreset>                       FilmbackPresets;                                            // 0x0968   (0x0010)
-    TArray<FNamedLensPreset>                           LensPresets;                                                // 0x0978   (0x0010)
-    FString                                            DefaultFilmbackPresetName;                                  // 0x0988   (0x0010)
-    FString                                            DefaultFilmbackPreset;                                      // 0x0998   (0x0010)
-    FString                                            DefaultLensPresetName;                                      // 0x09A8   (0x0010)
-    float                                              DefaultLensFocalLength;                                     // 0x09B8   (0x0004)
-    float                                              DefaultLensFStop;                                           // 0x09BC   (0x0004)
-    float                                              Override_FilmSensorAspect;                                  // 0x09C0   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x09C4   (0x0004) MISSED
+    UPROPERTY(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FCameraFilmbackSettings                            FilmbackSettings;                                           // 0x08C0   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FCameraFilmbackSettings                            Filmback;                                                   // 0x08CC   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FCameraLensSettings                                LensSettings;                                               // 0x08D8   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FCameraFocusSettings                               FocusSettings;                                              // 0x08F0   (0x0058)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentFocalLength;                                         // 0x0948   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AdditiveFocalLength;                                        // 0x094C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentAperture;                                            // 0x0950   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentFocusDistance;                                       // 0x0954   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseBlendViewDOF;                                           // 0x0958   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0xF];                                       // 0x0959   (0x000F) MISSED
+    UPROPERTY(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FNamedFilmbackPreset>                       FilmbackPresets;                                            // 0x0968   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FNamedLensPreset>                           LensPresets;                                                // 0x0978   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, Deprecated, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            DefaultFilmbackPresetName;                                  // 0x0988   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            DefaultFilmbackPreset;                                      // 0x0998   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            DefaultLensPresetName;                                      // 0x09A8   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              DefaultLensFocalLength;                                     // 0x09B8   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              DefaultLensFStop;                                           // 0x09BC   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              Override_FilmSensorAspect;                                  // 0x09C0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x09C4   (0x0004) MISSED
 
     /// Functions
     // Function /Script/CinematicCamera.CineCameraComponent.SetOverrideFilmbackSensorAspect
@@ -153,28 +214,35 @@ public:
 };
 
 /// Struct /Script/CinematicCamera.CameraLookatTrackingSettings
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FCameraLookatTrackingSettings
 { 
-    bool                                               bEnableLookAtTracking : 1;                                  // 0x0000:0 (0x0001)
-    bool                                               bDrawDebugLookAtTrackingPosition : 1;                       // 0x0000:1 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0001   (0x0003) MISSED
-    float                                              LookAtTrackingInterpSpeed;                                  // 0x0004   (0x0004)
-    unsigned char                                      UnknownData01_6[0x10];                                      // 0x0008   (0x0010) MISSED
-    TWeakObjectPtr<class AActor*>                      ActorToTrack;                                               // 0x0018   (0x0008)
-    unsigned char                                      UnknownData02_6[0x20];                                      // 0x0020   (0x0020) MISSED
-    FVector                                            RelativeOffset;                                             // 0x0040   (0x000C)
-    bool                                               bAllowRoll : 1;                                             // 0x004C:0 (0x0001)
-    unsigned char                                      UnknownData03_7[0x3];                                       // 0x004D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableLookAtTracking : 1;                                  // 0x0000:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDrawDebugLookAtTrackingPosition : 1;                       // 0x0000:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_5[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LookAtTrackingInterpSpeed;                                  // 0x0004   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_6[0x10];                                      // 0x0008   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, Interp, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class AActor*>                      ActorToTrack;                                               // 0x0018   (0x0008)
+    /* public    */ unsigned char                                      UnknownData06_6[0x20];                                      // 0x0020   (0x0020) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            RelativeOffset;                                             // 0x0040   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowRoll : 1;                                             // 0x004C:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_7[0x3];                                       // 0x004D   (0x0003) MISSED
 };
 
 /// Class /Script/CinematicCamera.CineCameraActor
-/// Size: 0x0900 (2304 bytes) (0x0008A0 - 0x000900) align 16 MaxSize: 0x0900
+/// Size: 0x0900 (2304 bytes) (0x0008A0 - 0x000900) align n/a MaxSize: 0x0900
 class ACineCameraActor : public ACameraActor
 { 
 public:
-    FCameraLookatTrackingSettings                      LookatTrackingSettings;                                     // 0x08A0   (0x0050)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x08F0   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FCameraLookatTrackingSettings                      LookatTrackingSettings;                                     // 0x08A0   (0x0050)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x08F0   (0x0010) MISSED
 
     /// Functions
     // Function /Script/CinematicCamera.CineCameraActor.GetCineCameraComponent
@@ -182,33 +250,47 @@ public:
 };
 
 /// Class /Script/CinematicCamera.CameraRig_Crane
-/// Size: 0x02F8 (760 bytes) (0x0002C8 - 0x0002F8) align 8 MaxSize: 0x02F8
+/// Size: 0x02F8 (760 bytes) (0x0002C8 - 0x0002F8) align n/a MaxSize: 0x02F8
 class ACameraRig_Crane : public AActor
 { 
 public:
-    float                                              CranePitch;                                                 // 0x02C8   (0x0004)
-    float                                              CraneYaw;                                                   // 0x02CC   (0x0004)
-    float                                              CraneArmLength;                                             // 0x02D0   (0x0004)
-    bool                                               bLockMountPitch;                                            // 0x02D4   (0x0001)
-    bool                                               bLockMountYaw;                                              // 0x02D5   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x02D6   (0x0002) MISSED
-    class USceneComponent*                             TransformComponent;                                         // 0x02D8   (0x0008)
-    class USceneComponent*                             CraneYawControl;                                            // 0x02E0   (0x0008)
-    class USceneComponent*                             CranePitchControl;                                          // 0x02E8   (0x0008)
-    class USceneComponent*                             CraneCameraMount;                                           // 0x02F0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CranePitch;                                                 // 0x02C8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CraneYaw;                                                   // 0x02CC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CraneArmLength;                                             // 0x02D0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLockMountPitch;                                            // 0x02D4   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLockMountYaw;                                              // 0x02D5   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x2];                                       // 0x02D6   (0x0002) MISSED
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             TransformComponent;                                         // 0x02D8   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             CraneYawControl;                                            // 0x02E0   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             CranePitchControl;                                          // 0x02E8   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             CraneCameraMount;                                           // 0x02F0   (0x0008)
 };
 
 /// Class /Script/CinematicCamera.CameraRig_Rail
-/// Size: 0x02E8 (744 bytes) (0x0002C8 - 0x0002E8) align 8 MaxSize: 0x02E8
+/// Size: 0x02E8 (744 bytes) (0x0002C8 - 0x0002E8) align n/a MaxSize: 0x02E8
 class ACameraRig_Rail : public AActor
 { 
 public:
-    float                                              CurrentPositionOnRail;                                      // 0x02C8   (0x0004)
-    bool                                               bLockOrientationToRail;                                     // 0x02CC   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x02CD   (0x0003) MISSED
-    class USceneComponent*                             TransformComponent;                                         // 0x02D0   (0x0008)
-    class USplineComponent*                            RailSplineComponent;                                        // 0x02D8   (0x0008)
-    class USceneComponent*                             RailCameraMount;                                            // 0x02E0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentPositionOnRail;                                      // 0x02C8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLockOrientationToRail;                                     // 0x02CC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x02CD   (0x0003) MISSED
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             TransformComponent;                                         // 0x02D0   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USplineComponent*                            RailSplineComponent;                                        // 0x02D8   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             RailCameraMount;                                            // 0x02E0   (0x0008)
 
     /// Functions
     // Function /Script/CinematicCamera.CameraRig_Rail.GetRailSplineComponent
@@ -218,6 +300,7 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FCameraFilmbackSettings) == 0x000C); // 12 bytes (0x000000 - 0x00000C)
 static_assert(sizeof(FCameraLensSettings) == 0x0018); // 24 bytes (0x000000 - 0x000018)
 static_assert(sizeof(FCameraTrackingFocusSettings) == 0x0038); // 56 bytes (0x000000 - 0x000038)
@@ -257,3 +340,4 @@ static_assert(offsetof(ACameraRig_Crane, CraneCameraMount) == 0x02F0);
 static_assert(offsetof(ACameraRig_Rail, TransformComponent) == 0x02D0);
 static_assert(offsetof(ACameraRig_Rail, RailSplineComponent) == 0x02D8);
 static_assert(offsetof(ACameraRig_Rail, RailCameraMount) == 0x02E0);
+#endif

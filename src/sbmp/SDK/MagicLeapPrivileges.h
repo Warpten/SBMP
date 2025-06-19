@@ -2,19 +2,29 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "CoreUObject.h"
 #include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MagicLeapPrivileges.EMagicLeapPrivilege
-/// Size: 0x01 (1 bytes)
+class UMagicLeapPrivilegesFunctionLibrary;
+
+/// Enum /Script/MagicLeapPrivileges.EMagicLeapPrivilege -  1 (1 bytes)
 enum class EMagicLeapPrivilege : uint8_t
 {
     Invalid                                                                          = 0,
@@ -59,7 +69,7 @@ enum class EMagicLeapPrivilege : uint8_t
 };
 
 /// Class /Script/MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMagicLeapPrivilegesFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -80,4 +90,6 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMagicLeapPrivilegesFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
+#endif

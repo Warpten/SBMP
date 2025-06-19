@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,23 +24,36 @@
 
 #pragma pack(push, 0x1)
 
+class AMagicLeapSharedWorldGameMode;
+class AMagicLeapSharedWorldGameState;
+class AMagicLeapSharedWorldPlayerController;
+struct FMagicLeapSharedWorldAlignmentTransforms;
+struct FMagicLeapSharedWorldLocalData;
+struct FMagicLeapSharedWorldPinData;
+struct FMagicLeapSharedWorldSharedData;
+
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldSharedData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FMagicLeapSharedWorldSharedData
 { 
-    TArray<FGuid>                                      PinIDs;                                                     // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FGuid>                                      PinIDs;                                                     // 0x0000   (0x0010)
 };
 
 /// Class /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode
-/// Size: 0x0480 (1152 bytes) (0x0003B0 - 0x000480) align 8 MaxSize: 0x0480
+/// Size: 0x0480 (1152 bytes) (0x0003B0 - 0x000480) align n/a MaxSize: 0x0480
 class AMagicLeapSharedWorldGameMode : public AGameMode
 { 
 public:
-    FMagicLeapSharedWorldSharedData                    SharedWorldData;                                            // 0x03B0   (0x0010)
-    FMulticastInlineDelegate                           OnNewLocalDataFromClients;                                  // 0x03C0   (0x0010)
-    float                                              PinSelectionConfidenceThreshold;                            // 0x03D0   (0x0004)
-    unsigned char                                      UnknownData00_6[0xA4];                                      // 0x03D4   (0x00A4) MISSED
-    class AMagicLeapSharedWorldPlayerController*       ChosenOne;                                                  // 0x0478   (0x0008)
+    UPROPERTY(BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMagicLeapSharedWorldSharedData                    SharedWorldData;                                            // 0x03B0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnNewLocalDataFromClients;                                  // 0x03C0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PinSelectionConfidenceThreshold;                            // 0x03D0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0xA4];                                      // 0x03D4   (0x00A4) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AMagicLeapSharedWorldPlayerController*       ChosenOne;                                                  // 0x0478   (0x0008)
 
     /// Functions
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SendSharedWorldDataToClients
@@ -46,21 +68,26 @@ public:
 };
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldAlignmentTransforms
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FMagicLeapSharedWorldAlignmentTransforms
 { 
-    TArray<FTransform>                                 AlignmentTransforms;                                        // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FTransform>                                 AlignmentTransforms;                                        // 0x0000   (0x0010)
 };
 
 /// Class /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState
-/// Size: 0x0378 (888 bytes) (0x000338 - 0x000378) align 8 MaxSize: 0x0378
+/// Size: 0x0378 (888 bytes) (0x000338 - 0x000378) align n/a MaxSize: 0x0378
 class AMagicLeapSharedWorldGameState : public AGameState
 { 
 public:
-    FMagicLeapSharedWorldSharedData                    SharedWorldData;                                            // 0x0338   (0x0010)
-    FMagicLeapSharedWorldAlignmentTransforms           AlignmentTransforms;                                        // 0x0348   (0x0010)
-    FMulticastInlineDelegate                           OnSharedWorldDataUpdated;                                   // 0x0358   (0x0010)
-    FMulticastInlineDelegate                           OnAlignmentTransformsUpdated;                               // 0x0368   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, NativeAccessSpecifierPublic)
+    /* public    */ FMagicLeapSharedWorldSharedData                    SharedWorldData;                                            // 0x0338   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, NativeAccessSpecifierPublic)
+    /* public    */ FMagicLeapSharedWorldAlignmentTransforms           AlignmentTransforms;                                        // 0x0348   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSharedWorldDataUpdated;                                   // 0x0358   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnAlignmentTransformsUpdated;                               // 0x0368   (0x0010)
 
     /// Functions
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_SharedWorldData
@@ -74,11 +101,11 @@ public:
 };
 
 /// Class /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController
-/// Size: 0x0680 (1664 bytes) (0x000668 - 0x000680) align 8 MaxSize: 0x0680
+/// Size: 0x0680 (1664 bytes) (0x000668 - 0x000680) align n/a MaxSize: 0x0680
 class AMagicLeapSharedWorldPlayerController : public APlayerController
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x18];                                      // 0x0668   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x18];                                      // 0x0668   (0x0018) MISSED
 
     /// Functions
     // Function /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetLocalWorldData
@@ -99,23 +126,27 @@ public:
 };
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldPinData
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FMagicLeapSharedWorldPinData
 { 
-    FGuid                                              PinId;                                                      // 0x0000   (0x0010)
-    FMagicLeapARPinState                               PinState;                                                   // 0x0010   (0x0014)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              PinId;                                                      // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMagicLeapARPinState                               PinState;                                                   // 0x0010   (0x0014)
 };
 
 /// Struct /Script/MagicLeapSharedWorld.MagicLeapSharedWorldLocalData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FMagicLeapSharedWorldLocalData
 { 
-    TArray<FMagicLeapSharedWorldPinData>               LocalPins;                                                  // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FMagicLeapSharedWorldPinData>               LocalPins;                                                  // 0x0000   (0x0010)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FMagicLeapSharedWorldSharedData) == 0x0010); // 16 bytes (0x000000 - 0x000010)
 static_assert(sizeof(AMagicLeapSharedWorldGameMode) == 0x0480); // 1152 bytes (0x0003B0 - 0x000480)
 static_assert(sizeof(FMagicLeapSharedWorldAlignmentTransforms) == 0x0010); // 16 bytes (0x000000 - 0x000010)
@@ -132,3 +163,4 @@ static_assert(offsetof(AMagicLeapSharedWorldGameState, AlignmentTransforms) == 0
 static_assert(offsetof(FMagicLeapSharedWorldPinData, PinId) == 0x0000);
 static_assert(offsetof(FMagicLeapSharedWorldPinData, PinState) == 0x0010);
 static_assert(offsetof(FMagicLeapSharedWorldLocalData, LocalPins) == 0x0000);
+#endif

@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -16,8 +25,36 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/LiveLink.ELiveLinkAxis
-/// Size: 0x01 (1 bytes)
+class ULiveLinkAnimationAxisSwitchPreProcessor;
+class ULiveLinkAnimationFrameInterpolationProcessor;
+class ULiveLinkAnimationRoleToTransform;
+class ULiveLinkAnimationVirtualSubject;
+class ULiveLinkBasicFrameInterpolationProcessor;
+class ULiveLinkBlueprintLibrary;
+class ULiveLinkBlueprintVirtualSubject;
+class ULiveLinkComponent;
+class ULiveLinkDrivenComponent;
+class ULiveLinkInstance;
+class ULiveLinkMessageBusFinder;
+class ULiveLinkMessageBusSourceFactory;
+class ULiveLinkMessageBusSourceSettings;
+class ULiveLinkPreset;
+class ULiveLinkRemapAsset;
+class ULiveLinkRetargetAsset;
+class ULiveLinkSettings;
+class ULiveLinkTimeSynchronizationSource;
+class ULiveLinkTimecodeProvider;
+class ULiveLinkTransformAxisSwitchPreProcessor;
+class ULiveLinkVirtualSubjectSourceSettings;
+struct FAnimNode_LiveLinkPose;
+struct FLiveLinkInstanceProxy;
+struct FLiveLinkRetargetAssetReference;
+struct FLiveLinkRoleProjectSetting;
+struct FProviderPollResult;
+struct FSBRemapElements;
+struct FSBRemapInfos;
+
+/// Enum /Script/LiveLink.ELiveLinkAxis -  1 (1 bytes)
 enum class ELiveLinkAxis : uint8_t
 {
     X                                                                                = 0,
@@ -28,8 +65,7 @@ enum class ELiveLinkAxis : uint8_t
     ZNeg                                                                             = 5
 };
 
-/// Enum /Script/LiveLink.ELiveLinkTimecodeProviderEvaluationType
-/// Size: 0x04 (4 bytes)
+/// Enum /Script/LiveLink.ELiveLinkTimecodeProviderEvaluationType -  4 (4 bytes)
 enum class ELiveLinkTimecodeProviderEvaluationType : uint32_t
 {
     Lerp                                                                             = 0,
@@ -38,71 +74,80 @@ enum class ELiveLinkTimecodeProviderEvaluationType : uint32_t
 };
 
 /// Class /Script/LiveLink.LiveLinkRetargetAsset
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULiveLinkRetargetAsset : public UObject
 { 
 public:
 };
 
 /// Class /Script/LiveLink.LiveLinkBasicFrameInterpolationProcessor
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class ULiveLinkBasicFrameInterpolationProcessor : public ULiveLinkFrameInterpolationProcessor
 { 
 public:
-    bool                                               bInterpolatePropertyValues;                                 // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_7[0x17];                                      // 0x0029   (0x0017) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bInterpolatePropertyValues;                                 // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x17];                                      // 0x0029   (0x0017) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkAnimationFrameInterpolationProcessor
-/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align n/a MaxSize: 0x0050
 class ULiveLinkAnimationFrameInterpolationProcessor : public ULiveLinkBasicFrameInterpolationProcessor
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0040   (0x0010) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x10];                                      // 0x0040   (0x0010) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkAnimationRoleToTransform
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class ULiveLinkAnimationRoleToTransform : public ULiveLinkFrameTranslator
 { 
 public:
-    FName                                              BoneName;                                                   // 0x0028   (0x0008)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0030   (0x0010) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FName                                              BoneName;                                                   // 0x0028   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0030   (0x0010) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkAnimationVirtualSubject
-/// Size: 0x00E0 (224 bytes) (0x0000D8 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000D8 - 0x0000E0) align n/a MaxSize: 0x00E0
 class ULiveLinkAnimationVirtualSubject : public ULiveLinkVirtualSubject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x1];                                       // 0x00D8   (0x0001) MISSED
-    bool                                               bAppendSubjectNameToBones;                                  // 0x00D9   (0x0001)
-    unsigned char                                      UnknownData01_7[0x6];                                       // 0x00DA   (0x0006) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x1];                                       // 0x00D8   (0x0001) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAppendSubjectNameToBones;                                  // 0x00D9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x6];                                       // 0x00DA   (0x0006) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkTransformAxisSwitchPreProcessor
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class ULiveLinkTransformAxisSwitchPreProcessor : public ULiveLinkFramePreProcessor
 { 
 public:
-    ELiveLinkAxis                                      OrientationAxisX;                                           // 0x0028   (0x0001)
-    ELiveLinkAxis                                      OrientationAxisY;                                           // 0x0029   (0x0001)
-    ELiveLinkAxis                                      OrientationAxisZ;                                           // 0x002A   (0x0001)
-    ELiveLinkAxis                                      TranslationAxisX;                                           // 0x002B   (0x0001)
-    ELiveLinkAxis                                      TranslationAxisY;                                           // 0x002C   (0x0001)
-    ELiveLinkAxis                                      TranslationAxisZ;                                           // 0x002D   (0x0001)
-    unsigned char                                      UnknownData00_7[0x12];                                      // 0x002E   (0x0012) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ ELiveLinkAxis                                      OrientationAxisX;                                           // 0x0028   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ ELiveLinkAxis                                      OrientationAxisY;                                           // 0x0029   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ ELiveLinkAxis                                      OrientationAxisZ;                                           // 0x002A   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ ELiveLinkAxis                                      TranslationAxisX;                                           // 0x002B   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ ELiveLinkAxis                                      TranslationAxisY;                                           // 0x002C   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ ELiveLinkAxis                                      TranslationAxisZ;                                           // 0x002D   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x12];                                      // 0x002E   (0x0012) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkAnimationAxisSwitchPreProcessor
-/// Size: 0x0040 (64 bytes) (0x000040 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000040 - 0x000040) align n/a MaxSize: 0x0040
 class ULiveLinkAnimationAxisSwitchPreProcessor : public ULiveLinkTransformAxisSwitchPreProcessor
 { 
 public:
 };
 
 /// Class /Script/LiveLink.LiveLinkBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULiveLinkBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -235,11 +280,11 @@ public:
 };
 
 /// Class /Script/LiveLink.LiveLinkBlueprintVirtualSubject
-/// Size: 0x0100 (256 bytes) (0x0000D8 - 0x000100) align 8 MaxSize: 0x0100
+/// Size: 0x0100 (256 bytes) (0x0000D8 - 0x000100) align n/a MaxSize: 0x0100
 class ULiveLinkBlueprintVirtualSubject : public ULiveLinkVirtualSubject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x28];                                      // 0x00D8   (0x0028) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x28];                                      // 0x00D8   (0x0028) MISSED
 
     /// Functions
     // Function /Script/LiveLink.LiveLinkBlueprintVirtualSubject.UpdateVirtualSubjectStaticData_Internal
@@ -255,12 +300,13 @@ public:
 };
 
 /// Class /Script/LiveLink.LiveLinkComponent
-/// Size: 0x00E0 (224 bytes) (0x0000C0 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000C0 - 0x0000E0) align n/a MaxSize: 0x00E0
 class ULiveLinkComponent : public UActorComponent
 { 
 public:
-    FMulticastInlineDelegate                           OnLiveLinkUpdated;                                          // 0x00C0   (0x0010)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x00D0   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnLiveLinkUpdated;                                          // 0x00C0   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x00D0   (0x0010) MISSED
 
     /// Functions
     // Function /Script/LiveLink.LiveLinkComponent.GetSubjectDataAtWorldTime
@@ -286,23 +332,28 @@ public:
 };
 
 /// Class /Script/LiveLink.LiveLinkDrivenComponent
-/// Size: 0x00D8 (216 bytes) (0x0000C0 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x0000C0 - 0x0000D8) align n/a MaxSize: 0x00D8
 class ULiveLinkDrivenComponent : public UActorComponent
 { 
 public:
-    FLiveLinkSubjectName                               SubjectName;                                                // 0x00C0   (0x0008)
-    FName                                              ActorTransformBone;                                         // 0x00C8   (0x0008)
-    bool                                               bModifyActorTransform;                                      // 0x00D0   (0x0001)
-    bool                                               bSetRelativeLocation;                                       // 0x00D1   (0x0001)
-    unsigned char                                      UnknownData00_7[0x6];                                       // 0x00D2   (0x0006) MISSED
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLiveLinkSubjectName                               SubjectName;                                                // 0x00C0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ActorTransformBone;                                         // 0x00C8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bModifyActorTransform;                                      // 0x00D0   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSetRelativeLocation;                                       // 0x00D1   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x6];                                       // 0x00D2   (0x0006) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkInstance
-/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align 16 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x0002C8 - 0x0002D0) align n/a MaxSize: 0x02D0
 class ULiveLinkInstance : public UAnimInstance
 { 
 public:
-    class ULiveLinkRetargetAsset*                      CurrentRetargetAsset;                                       // 0x02C8   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class ULiveLinkRetargetAsset*                      CurrentRetargetAsset;                                       // 0x02C8   (0x0008)
 
     /// Functions
     // Function /Script/LiveLink.LiveLinkInstance.SetSubject
@@ -314,11 +365,11 @@ public:
 };
 
 /// Class /Script/LiveLink.LiveLinkMessageBusFinder
-/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align n/a MaxSize: 0x0080
 class ULiveLinkMessageBusFinder : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x58];                                      // 0x0028   (0x0058) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x58];                                      // 0x0028   (0x0058) MISSED
 
     /// Functions
     // Function /Script/LiveLink.LiveLinkMessageBusFinder.GetAvailableProviders
@@ -336,26 +387,28 @@ public:
 };
 
 /// Class /Script/LiveLink.LiveLinkMessageBusSourceFactory
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULiveLinkMessageBusSourceFactory : public ULiveLinkSourceFactory
 { 
 public:
 };
 
 /// Class /Script/LiveLink.LiveLinkMessageBusSourceSettings
-/// Size: 0x00A0 (160 bytes) (0x0000A0 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x0000A0 - 0x0000A0) align n/a MaxSize: 0x00A0
 class ULiveLinkMessageBusSourceSettings : public ULiveLinkSourceSettings
 { 
 public:
 };
 
 /// Class /Script/LiveLink.LiveLinkPreset
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
 class ULiveLinkPreset : public UObject
 { 
 public:
-    TArray<FLiveLinkSourcePreset>                      Sources;                                                    // 0x0028   (0x0010)
-    TArray<FLiveLinkSubjectPreset>                     Subjects;                                                   // 0x0038   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FLiveLinkSourcePreset>                      Sources;                                                    // 0x0028   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FLiveLinkSubjectPreset>                     Subjects;                                                   // 0x0038   (0x0010)
 
     /// Functions
     // Function /Script/LiveLink.LiveLinkPreset.BuildFromClient
@@ -368,31 +421,39 @@ public:
 };
 
 /// Struct /Script/LiveLink.SBRemapElements
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 4 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FSBRemapElements
 { 
-    FName                                              TargetName;                                                 // 0x0000   (0x0008)
-    float                                              SourceCurveClampMin;                                        // 0x0008   (0x0004)
-    float                                              SourceCurveClampMax;                                        // 0x000C   (0x0004)
-    float                                              MultiplyValueAfterClamp;                                    // 0x0010   (0x0004)
-    float                                              AddValueBeforeClamp;                                        // 0x0014   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              TargetName;                                                 // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SourceCurveClampMin;                                        // 0x0008   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SourceCurveClampMax;                                        // 0x000C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MultiplyValueAfterClamp;                                    // 0x0010   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AddValueBeforeClamp;                                        // 0x0014   (0x0004)
 };
 
 /// Struct /Script/LiveLink.SBRemapInfos
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSBRemapInfos
 { 
-    TArray<FSBRemapElements>                           Elements;                                                   // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBRemapElements>                           Elements;                                                   // 0x0000   (0x0010)
 };
 
 /// Class /Script/LiveLink.LiveLinkRemapAsset
-/// Size: 0x0120 (288 bytes) (0x000028 - 0x000120) align 8 MaxSize: 0x0120
+/// Size: 0x0120 (288 bytes) (0x000028 - 0x000120) align n/a MaxSize: 0x0120
 class ULiveLinkRemapAsset : public ULiveLinkRetargetAsset
 { 
 public:
-    TMap<FName, FSBRemapInfos>                         RemappingTable;                                             // 0x0028   (0x0050)
-    class USBCurveRemapData*                           RemapData;                                                  // 0x0078   (0x0008)
-    unsigned char                                      UnknownData00_7[0xA0];                                      // 0x0080   (0x00A0) MISSED
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FName, FSBRemapInfos>                         RemappingTable;                                             // 0x0028   (0x0050)
+    UPROPERTY(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USBCurveRemapData*                           RemapData;                                                  // 0x0078   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0xA0];                                      // 0x0080   (0x00A0) MISSED
 
     /// Functions
     // Function /Script/LiveLink.LiveLinkRemapAsset.RemapCurveElements
@@ -407,109 +468,144 @@ public:
 };
 
 /// Struct /Script/LiveLink.LiveLinkRoleProjectSetting
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FLiveLinkRoleProjectSetting
 { 
-    class UClass*                                      Role;                                                       // 0x0000   (0x0008)
-    class UClass*                                      SettingClass;                                               // 0x0008   (0x0008)
-    class UClass*                                      FrameInterpolationProcessor;                                // 0x0010   (0x0008)
-    TArray<class UClass*>                              FramePreProcessors;                                         // 0x0018   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      Role;                                                       // 0x0000   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      SettingClass;                                               // 0x0008   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      FrameInterpolationProcessor;                                // 0x0010   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, UObjectWrapper, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UClass*>                              FramePreProcessors;                                         // 0x0018   (0x0010)
 };
 
 /// Class /Script/LiveLink.LiveLinkSettings
-/// Size: 0x00D0 (208 bytes) (0x000028 - 0x0000D0) align 8 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000028 - 0x0000D0) align n/a MaxSize: 0x00D0
 class ULiveLinkSettings : public UObject
 { 
 public:
-    TArray<FLiveLinkRoleProjectSetting>                DefaultRoleSettings;                                        // 0x0028   (0x0010)
-    class UClass*                                      FrameInterpolationProcessor;                                // 0x0038   (0x0008)
-    TWeakObjectPtr<class ULiveLinkPreset*>             DefaultLiveLinkPreset;                                      // 0x0040   (0x0008)
-    unsigned char                                      UnknownData00_6[0x20];                                      // 0x0048   (0x0020) MISSED
-    FDirectoryPath                                     PresetSaveDir;                                              // 0x0068   (0x0010)
-    float                                              ClockOffsetCorrectionStep;                                  // 0x0078   (0x0004)
-    ELiveLinkSourceMode                                DefaultMessageBusSourceMode;                                // 0x007C   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x007D   (0x0003) MISSED
-    double                                             MessageBusPingRequestFrequency;                             // 0x0080   (0x0008)
-    double                                             MessageBusHeartbeatFrequency;                               // 0x0088   (0x0008)
-    double                                             MessageBusHeartbeatTimeout;                                 // 0x0090   (0x0008)
-    double                                             MessageBusTimeBeforeRemovingInactiveSource;                 // 0x0098   (0x0008)
-    double                                             TimeWithoutFrameToBeConsiderAsInvalid;                      // 0x00A0   (0x0008)
-    FLinearColor                                       ValidColor;                                                 // 0x00A8   (0x0010)
-    FLinearColor                                       InvalidColor;                                               // 0x00B8   (0x0010)
-    char                                               TextSizeSource;                                             // 0x00C8   (0x0001)
-    char                                               TextSizeSubject;                                            // 0x00C9   (0x0001)
-    unsigned char                                      UnknownData02_7[0x6];                                       // 0x00CA   (0x0006) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FLiveLinkRoleProjectSetting>                DefaultRoleSettings;                                        // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      FrameInterpolationProcessor;                                // 0x0038   (0x0008)
+    UPROPERTY(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TWeakObjectPtr<class ULiveLinkPreset*>             DefaultLiveLinkPreset;                                      // 0x0040   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_6[0x20];                                      // 0x0048   (0x0020) MISSED
+    UPROPERTY(Edit, Config, NativeAccessSpecifierPublic)
+    /* public    */ FDirectoryPath                                     PresetSaveDir;                                              // 0x0068   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ClockOffsetCorrectionStep;                                  // 0x0078   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ELiveLinkSourceMode                                DefaultMessageBusSourceMode;                                // 0x007C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x007D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ double                                             MessageBusPingRequestFrequency;                             // 0x0080   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ double                                             MessageBusHeartbeatFrequency;                               // 0x0088   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ double                                             MessageBusHeartbeatTimeout;                                 // 0x0090   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ double                                             MessageBusTimeBeforeRemovingInactiveSource;                 // 0x0098   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ double                                             TimeWithoutFrameToBeConsiderAsInvalid;                      // 0x00A0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       ValidColor;                                                 // 0x00A8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       InvalidColor;                                               // 0x00B8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               TextSizeSource;                                             // 0x00C8   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               TextSizeSubject;                                            // 0x00C9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x6];                                       // 0x00CA   (0x0006) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkTimecodeProvider
-/// Size: 0x00C0 (192 bytes) (0x000030 - 0x0000C0) align 8 MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000030 - 0x0000C0) align n/a MaxSize: 0x00C0
 class ULiveLinkTimecodeProvider : public UTimecodeProvider
 { 
 public:
-    FLiveLinkSubjectKey                                SubjectKey;                                                 // 0x0030   (0x0018)
-    ELiveLinkTimecodeProviderEvaluationType            Evaluation;                                                 // 0x0048   (0x0004)
-    bool                                               bOverrideFrameRate;                                         // 0x004C   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x004D   (0x0003) MISSED
-    FFrameRate                                         OverrideFrameRate;                                          // 0x0050   (0x0008)
-    int32_t                                            BufferSize;                                                 // 0x0058   (0x0004)
-    unsigned char                                      UnknownData01_7[0x64];                                      // 0x005C   (0x0064) MISSED
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FLiveLinkSubjectKey                                SubjectKey;                                                 // 0x0030   (0x0018)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ ELiveLinkTimecodeProviderEvaluationType            Evaluation;                                                 // 0x0048   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bOverrideFrameRate;                                         // 0x004C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x004D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FFrameRate                                         OverrideFrameRate;                                          // 0x0050   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            BufferSize;                                                 // 0x0058   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x64];                                      // 0x005C   (0x0064) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkTimeSynchronizationSource
-/// Size: 0x0080 (128 bytes) (0x000030 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000030 - 0x000080) align n/a MaxSize: 0x0080
 class ULiveLinkTimeSynchronizationSource : public UTimeSynchronizationSource
 { 
 public:
-    FLiveLinkSubjectName                               SubjectName;                                                // 0x0030   (0x0008)
-    unsigned char                                      UnknownData00_7[0x48];                                      // 0x0038   (0x0048) MISSED
+    UPROPERTY(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLiveLinkSubjectName                               SubjectName;                                                // 0x0030   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x48];                                      // 0x0038   (0x0048) MISSED
 };
 
 /// Class /Script/LiveLink.LiveLinkVirtualSubjectSourceSettings
-/// Size: 0x00A8 (168 bytes) (0x0000A0 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x0000A0 - 0x0000A8) align n/a MaxSize: 0x00A8
 class ULiveLinkVirtualSubjectSourceSettings : public ULiveLinkSourceSettings
 { 
 public:
-    FName                                              SourceName;                                                 // 0x00A0   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              SourceName;                                                 // 0x00A0   (0x0008)
 };
 
 /// Struct /Script/LiveLink.AnimNode_LiveLinkPose
-/// Size: 0x0050 (80 bytes) (0x000010 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000010 - 0x000050) align n/a MaxSize: 0x0050
 struct FAnimNode_LiveLinkPose : FAnimNode_Base
 { 
-    FPoseLink                                          InputPose;                                                  // 0x0010   (0x0010)
-    FLiveLinkSubjectName                               LiveLinkSubjectName;                                        // 0x0020   (0x0008)
-    class UClass*                                      RetargetAsset;                                              // 0x0028   (0x0008)
-    class ULiveLinkRetargetAsset*                      CurrentRetargetAsset;                                       // 0x0030   (0x0008)
-    unsigned char                                      UnknownData00_7[0x18];                                      // 0x0038   (0x0018) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FPoseLink                                          InputPose;                                                  // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLiveLinkSubjectName                               LiveLinkSubjectName;                                        // 0x0020   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      RetargetAsset;                                              // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULiveLinkRetargetAsset*                      CurrentRetargetAsset;                                       // 0x0030   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x18];                                      // 0x0038   (0x0018) MISSED
 };
 
 /// Struct /Script/LiveLink.LiveLinkInstanceProxy
-/// Size: 0x07C0 (1984 bytes) (0x000770 - 0x0007C0) align 16 MaxSize: 0x07C0
+/// Size: 0x07C0 (1984 bytes) (0x000770 - 0x0007C0) align n/a MaxSize: 0x07C0
 struct FLiveLinkInstanceProxy : FAnimInstanceProxy
 { 
-    FAnimNode_LiveLinkPose                             PoseNode;                                                   // 0x0770   (0x0050)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FAnimNode_LiveLinkPose                             PoseNode;                                                   // 0x0770   (0x0050)
 };
 
 /// Struct /Script/LiveLink.ProviderPollResult
-/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000000 - 0x000038) align n/a MaxSize: 0x0038
 struct FProviderPollResult
 { 
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0000   (0x0010) MISSED
-    FString                                            Name;                                                       // 0x0010   (0x0010)
-    FString                                            MachineName;                                                // 0x0020   (0x0010)
-    double                                             MachineTimeOffset;                                          // 0x0030   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0000   (0x0010) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Name;                                                       // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            MachineName;                                                // 0x0020   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ double                                             MachineTimeOffset;                                          // 0x0030   (0x0008)
 };
 
 /// Struct /Script/LiveLink.LiveLinkRetargetAssetReference
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FLiveLinkRetargetAssetReference
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(ULiveLinkRetargetAsset) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(ULiveLinkBasicFrameInterpolationProcessor) == 0x0040); // 64 bytes (0x000028 - 0x000040)
 static_assert(sizeof(ULiveLinkAnimationFrameInterpolationProcessor) == 0x0050); // 80 bytes (0x000040 - 0x000050)
@@ -577,3 +673,4 @@ static_assert(offsetof(FAnimNode_LiveLinkPose, CurrentRetargetAsset) == 0x0030);
 static_assert(offsetof(FLiveLinkInstanceProxy, PoseNode) == 0x0770);
 static_assert(offsetof(FProviderPollResult, Name) == 0x0010);
 static_assert(offsetof(FProviderPollResult, MachineName) == 0x0020);
+#endif

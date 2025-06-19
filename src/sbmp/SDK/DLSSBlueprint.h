@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,9 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/DLSSBlueprint.UDLSSMode
-/// Size: 0x01 (1 bytes)
+class UDLSSLibrary;
+
+/// Enum /Script/DLSSBlueprint.UDLSSMode -  1 (1 bytes)
 enum class UDLSSMode : uint8_t
 {
     Off                                                                              = 0,
@@ -28,8 +38,7 @@ enum class UDLSSMode : uint8_t
     UltraPerformance                                                                 = 7
 };
 
-/// Enum /Script/DLSSBlueprint.UDLSSSupport
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/DLSSBlueprint.UDLSSSupport -  1 (1 bytes)
 enum class UDLSSSupport : uint8_t
 {
     Supported                                                                        = 0,
@@ -42,7 +51,7 @@ enum class UDLSSSupport : uint8_t
 };
 
 /// Class /Script/DLSSBlueprint.DLSSLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UDLSSLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -118,4 +127,6 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UDLSSLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
+#endif

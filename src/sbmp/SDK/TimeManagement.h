@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,15 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/TimeManagement.EFrameNumberDisplayFormats
-/// Size: 0x01 (1 bytes)
+class UFixedFrameRateCustomTimeStep;
+class UGenlockedCustomTimeStep;
+class UGenlockedTimecodeProvider;
+class UTimeManagementBlueprintLibrary;
+class UTimeSynchronizationSource;
+struct FTimedDataChannelSampleTime;
+struct FTimedDataInputEvaluationData;
+
+/// Enum /Script/TimeManagement.EFrameNumberDisplayFormats -  1 (1 bytes)
 enum class EFrameNumberDisplayFormats : uint8_t
 {
     NonDropFrameTimecode                                                             = 0,
@@ -25,8 +41,7 @@ enum class EFrameNumberDisplayFormats : uint8_t
     MAX_Count                                                                        = 4
 };
 
-/// Enum /Script/TimeManagement.ETimedDataInputState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/TimeManagement.ETimedDataInputState -  1 (1 bytes)
 enum class ETimedDataInputState : uint8_t
 {
     Connected                                                                        = 0,
@@ -34,8 +49,7 @@ enum class ETimedDataInputState : uint8_t
     Disconnected                                                                     = 2
 };
 
-/// Enum /Script/TimeManagement.ETimedDataInputEvaluationType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/TimeManagement.ETimedDataInputEvaluationType -  1 (1 bytes)
 enum class ETimedDataInputEvaluationType : uint8_t
 {
     None                                                                             = 0,
@@ -44,41 +58,45 @@ enum class ETimedDataInputEvaluationType : uint8_t
 };
 
 /// Class /Script/TimeManagement.TimeSynchronizationSource
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class UTimeSynchronizationSource : public UObject
 { 
 public:
-    bool                                               bUseForSynchronization;                                     // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0029   (0x0003) MISSED
-    int32_t                                            FrameOffset;                                                // 0x002C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseForSynchronization;                                     // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            FrameOffset;                                                // 0x002C   (0x0004)
 };
 
 /// Class /Script/TimeManagement.FixedFrameRateCustomTimeStep
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class UFixedFrameRateCustomTimeStep : public UEngineCustomTimeStep
 { 
 public:
-    FFrameRate                                         FixedFrameRate;                                             // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FFrameRate                                         FixedFrameRate;                                             // 0x0028   (0x0008)
 };
 
 /// Class /Script/TimeManagement.GenlockedCustomTimeStep
-/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000030 - 0x000030) align n/a MaxSize: 0x0030
 class UGenlockedCustomTimeStep : public UFixedFrameRateCustomTimeStep
 { 
 public:
 };
 
 /// Class /Script/TimeManagement.GenlockedTimecodeProvider
-/// Size: 0x0058 (88 bytes) (0x000030 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000030 - 0x000058) align n/a MaxSize: 0x0058
 class UGenlockedTimecodeProvider : public UTimecodeProvider
 { 
 public:
-    bool                                               bUseGenlockToCount;                                         // 0x0030   (0x0001)
-    unsigned char                                      UnknownData00_7[0x27];                                      // 0x0031   (0x0027) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseGenlockToCount;                                         // 0x0030   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x27];                                      // 0x0031   (0x0027) MISSED
 };
 
 /// Class /Script/TimeManagement.TimeManagementBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UTimeManagementBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -149,23 +167,26 @@ public:
 };
 
 /// Struct /Script/TimeManagement.TimedDataInputEvaluationData
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FTimedDataInputEvaluationData
 { 
-    float                                              DistanceToNewestSampleSeconds;                              // 0x0000   (0x0004)
-    float                                              DistanceToOldestSampleSeconds;                              // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DistanceToNewestSampleSeconds;                              // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DistanceToOldestSampleSeconds;                              // 0x0004   (0x0004)
 };
 
 /// Struct /Script/TimeManagement.TimedDataChannelSampleTime
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FTimedDataChannelSampleTime
 { 
-    unsigned char                                      UnknownData00_2[0x18];                                      // 0x0000   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x18];                                      // 0x0000   (0x0018) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UTimeSynchronizationSource) == 0x0030); // 48 bytes (0x000028 - 0x000030)
 static_assert(sizeof(UFixedFrameRateCustomTimeStep) == 0x0030); // 48 bytes (0x000028 - 0x000030)
 static_assert(sizeof(UGenlockedCustomTimeStep) == 0x0030); // 48 bytes (0x000030 - 0x000030)
@@ -174,3 +195,4 @@ static_assert(sizeof(UTimeManagementBlueprintLibrary) == 0x0028); // 40 bytes (0
 static_assert(sizeof(FTimedDataInputEvaluationData) == 0x0008); // 8 bytes (0x000000 - 0x000008)
 static_assert(sizeof(FTimedDataChannelSampleTime) == 0x0018); // 24 bytes (0x000000 - 0x000018)
 static_assert(offsetof(UFixedFrameRateCustomTimeStep, FixedFrameRate) == 0x0028);
+#endif

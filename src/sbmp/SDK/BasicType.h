@@ -1,26 +1,51 @@
 #pragma once
-#include <cstdint>
-#include <locale>
+#if defined(IDACLANG)
+using int16_t = short;
+using uint16_t = unsigned short;
+
+using int32_t = int;
+using uint32_t = unsigned int;
+
+using int64_t = long long;
+using uint64_t = unsigned long long;
+
+using uint8_t = unsigned char;
+using int8_t = char;
+#else
+# include <cstdint>
+# include <locale>
+#endif
 
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
-/// This file contains all definitions of structs that werent defined automatically.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
 
 
+///
+/// This file contains all definitions of structs that were not defined automatically.
+///
 
-
+//> Small constexpr wrapper that provides access to functions through direct pointers or indirect vtable calls.
 template <typename T, typename R, typename... Args>
 struct FunctionPointer final {
     constexpr FunctionPointer(size_t offset, size_t vtableIndex)
         : _offset(offset), _vtableIndex(vtableIndex)
     { }
 
+#if !defined(IDACLANG)
     std::function<R(Args...)> Bind(T* instance) {
         return [=, idx = _offset](Args&&... args) {
             auto callable = reinterpret_cast<R(*)(T*, Args...)>(_offset);
@@ -43,66 +68,42 @@ struct FunctionPointer final {
 
         return callable(self, std::forward<Args&&>(args)...);
     }
+#endif
 
 private:
     size_t _offset;
     size_t _vtableIndex;
 };
-    ///
-/// THERE ARE MISSING STRUCTS!! This will result in members having the SDK_UNDEFINED pragma!!!
-///
 
-//TODO: Define FMulticastInlineDelegate!
-
-
-//TODO: Define TSet!
-
-
-//TODO: Define FDelegateProperty!
-
-
-//TODO: Define FMulticastSparseDelegate!
-
-
+#if defined(IDACLANG)
+template <typename T> struct TSet { char _[0x50]; };
+struct FDelegateProperty { char _[0x10]; };
+struct FMulticastInlineDelegate { char _[0x10]; };
+struct FMulticastSparseDelegate { char _; };
+#endif
+#if !defined(IDACLANG)
+#  error Missing definition for FMulticastInlineDelegate
+#  error Missing definition for TSet
+#  error Missing definition for FDelegateProperty
+#  error Missing definition for FMulticastSparseDelegate
+#endif
 /// Definition for TArray
 
 template <class T = char>
 struct TArray
 {
+#if !defined(IDACLANG)
     friend struct FString;
 
+    inline int Num() const { return Count; }
 
-public:
-    inline TArray()
-    {
-        Data = nullptr;
-        Count = Max = 0;
-    };
+    inline T& operator[](int i) { return Data[i]; }
 
-    inline int Num() const
-    {
-        return Count;
-    };
+    inline const T& operator[](int i) const { return Data[i]; }
 
-    inline T& operator[](int i)
-    {
-        return Data[i];
-    };
+    inline bool IsValidIndex(int i) const { return i < Num(); }
 
-    inline const T& operator[](int i) const
-    {
-        return Data[i];
-    };
-
-    inline bool IsValidIndex(int i) const
-    {
-        return i < Num();
-    }
-
-    inline int Slack() const
-    {
-        return Max - Count;
-    }
+    inline int Slack() const { return Max - Count; }
 
     __forceinline bool RemoveSingle(const int Index)
     {
@@ -126,18 +127,18 @@ public:
                 break;
         }
     }
+#endif
 
-public:
-    T* Data;
-    int32_t Count;
-    int32_t Max;
+    T* Data = 0;
+    int32_t Count = 0;
+    int32_t Max = 0;
 };
-
 
 /// Definition for FString
 
 struct FString : public TArray<wchar_t>
 {
+#if !defined(IDACLANG)
     inline FString() {};
 
     FString(const wchar_t* other)
@@ -152,7 +153,7 @@ struct FString : public TArray<wchar_t>
 
     inline bool IsValid() const
     {
-        return Data != nullptr;
+        return Data != NULL;
     }
 
     inline const wchar_t* c_str() const
@@ -170,11 +171,10 @@ struct FString : public TArray<wchar_t>
 
         return str;
     }
+#endif
 };
 
-
 /// Definition for FName
-
 typedef uint32_t FNameEntryId;
 
 struct FName
@@ -186,7 +186,6 @@ struct FName
 	int32_t Number = 0;
 
 };
-
 
 /// Definition for FScriptInterface
 
@@ -209,10 +208,9 @@ public:
 
     inline void* GetInterface() const
     {
-        return ObjectPointer != nullptr ? InterfacePointer : nullptr;
+        return ObjectPointer != 0 ? InterfacePointer : 0;
     }
 };
-
 
 /// Definition for TScriptInterface
 
@@ -232,10 +230,9 @@ public:
 
     inline operator bool() const
     {
-        return GetInterface() != nullptr;
+        return GetInterface() != 0;
     }
 };
-
 
 /// Definition for TEnumAsByte
 
@@ -276,7 +273,6 @@ private:
     uint8_t value;
 };
 
-
 /// Definition for FWeakObjectPtr
 
 class FWeakObjectPtr
@@ -286,7 +282,6 @@ public:
 	int32_t ObjectSerialNumber;
 };
 
-
 /// Definition for TWeakObjectPtr
 
 template<typename UEType>
@@ -294,7 +289,6 @@ class TWeakObjectPtr : public FWeakObjectPtr
 {
 public:
 };
-
 
 /// Definition for TPersistentObjectPtr
 
@@ -307,7 +301,6 @@ public:
 	TObjectID ObjectID;
 };
 
-
 /// Definition for FUniqueObjectGuid
 
 class FUniqueObjectGuid final
@@ -319,7 +312,6 @@ public:
 	uint32_t D;
 };
 
-
 /// Definition for TLazyObjectPtr
 
 template<typename UEType>
@@ -327,7 +319,6 @@ class TLazyObjectPtr : public TPersistentObjectPtr<FUniqueObjectGuid>
 {
 public:
 };
-
 
 /// Definition for FSoftObjectPath_
 
@@ -338,13 +329,11 @@ public:
 	FString SubPathString;
 };
 
-
 /// Definition for FSoftObjectPtr
 
 class FSoftObjectPtr : public TPersistentObjectPtr<FSoftObjectPath_>
 {
 };
-
 
 /// Definition for TSoftObjectPtr
 
@@ -354,7 +343,6 @@ class TSoftObjectPtr : public FSoftObjectPtr
 public:
 };
 
-
 /// Definition for TSoftClassPtr
 
 template<typename UEType>
@@ -362,7 +350,6 @@ class TSoftClassPtr : public FSoftObjectPtr
 {
 public:
 };
-
 
 /// Definition for TPair
 
@@ -374,16 +361,14 @@ public:
     ValueType Second;
 };
 
-
 /// Definition for TUniquePtr
 
 template <typename PtrType>
 class TUniquePtr
 {
 public:
-	PtrType* Ptr = nullptr;
+	PtrType* Ptr = 0;
 };
-
 
 /// Definition for FScriptMulticastDelegate
 
@@ -392,7 +377,6 @@ struct FScriptMulticastDelegate
     char UnknownData[16];
     char b : 1;
 };
-
 
 /// Definition for FTextData
 
@@ -404,7 +388,6 @@ public:
 
 };
 
-
 /// Definition for FText
 
 struct FText
@@ -412,7 +395,6 @@ struct FText
     FTextData* Data;
     char UnknownData[0x10];
 };
-
 
 /// Definition for TSetElement
 
@@ -424,7 +406,6 @@ public:
     int32_t                                                    HashNextId;                                              // 0x0000(0x0000)
     int32_t                                                    HashIndex;                                               // 0x0000(0x0000)
 };
-
 
 /// Definition for TMap
 
@@ -446,7 +427,6 @@ private:
 	uint8_t                                                    UnknownData_MayBeSize02[0x04];                           // 0x0000(0x0000)
 	uint8_t                                                    UnknownData08[0x04];                                     // 0x0000(0x0000)
 };
-
 
 /// Definition for EObjectFlags
 
@@ -493,5 +473,4 @@ enum class EObjectFlags : uint32_t
 	RF_Dynamic = 0x04000000, // Field Only. Dynamic field - doesn't get constructed during static initialization, can be constructed multiple times
 	RF_WillBeLoaded = 0x08000000, // This object was constructed during load and will be loaded shortly
 };
-
 

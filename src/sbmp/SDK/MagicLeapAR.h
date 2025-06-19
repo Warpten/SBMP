@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "AugmentedReality.h"
@@ -18,8 +27,15 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MagicLeapAR.ELuminARLineTraceChannel
-/// Size: 0x01 (1 bytes)
+class ALuminAROrigin;
+class ULuminARCandidateImage;
+class ULuminARFrameFunctionLibrary;
+class ULuminARImageTrackingFunctionLibrary;
+class ULuminARLightEstimate;
+class ULuminARSessionConfig;
+class ULuminARSessionFunctionLibrary;
+
+/// Enum /Script/MagicLeapAR.ELuminARLineTraceChannel -  1 (1 bytes)
 enum class ELuminARLineTraceChannel : uint8_t
 {
     None                                                                             = 0,
@@ -30,8 +46,7 @@ enum class ELuminARLineTraceChannel : uint8_t
     FeaturePointWithSurfaceNormal                                                    = 16
 };
 
-/// Enum /Script/MagicLeapAR.ELuminARTrackingState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapAR.ELuminARTrackingState -  1 (1 bytes)
 enum class ELuminARTrackingState : uint8_t
 {
     Tracking                                                                         = 0,
@@ -40,7 +55,7 @@ enum class ELuminARTrackingState : uint8_t
 };
 
 /// Class /Script/MagicLeapAR.LuminARSessionFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULuminARSessionFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -54,7 +69,7 @@ public:
 };
 
 /// Class /Script/MagicLeapAR.LuminARFrameFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULuminARFrameFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -71,7 +86,7 @@ public:
 };
 
 /// Class /Script/MagicLeapAR.LuminARImageTrackingFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULuminARImageTrackingFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -97,39 +112,51 @@ public:
 };
 
 /// Class /Script/MagicLeapAR.LuminAROrigin
-/// Size: 0x0388 (904 bytes) (0x0002C8 - 0x000388) align 8 MaxSize: 0x0388
+/// Size: 0x0388 (904 bytes) (0x0002C8 - 0x000388) align n/a MaxSize: 0x0388
 class ALuminAROrigin : public AAROriginActor
 { 
 public:
-    class UMRMeshComponent*                            MRMeshComponent;                                            // 0x02C8   (0x0008)
-    class UMaterialInterface*                          PlaneSurfaceMaterial;                                       // 0x02D0   (0x0008)
-    class UMaterialInterface*                          WireframeMaterial;                                          // 0x02D8   (0x0008)
-    unsigned char                                      UnknownData00_7[0xA8];                                      // 0x02E0   (0x00A8) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMRMeshComponent*                            MRMeshComponent;                                            // 0x02C8   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMaterialInterface*                          PlaneSurfaceMaterial;                                       // 0x02D0   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMaterialInterface*                          WireframeMaterial;                                          // 0x02D8   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0xA8];                                      // 0x02E0   (0x00A8) MISSED
 };
 
 /// Class /Script/MagicLeapAR.LuminARSessionConfig
-/// Size: 0x01A0 (416 bytes) (0x000110 - 0x0001A0) align 16 MaxSize: 0x01A0
+/// Size: 0x01A0 (416 bytes) (0x000110 - 0x0001A0) align n/a MaxSize: 0x01A0
 class ULuminARSessionConfig : public UARSessionConfig
 { 
 public:
-    FMagicLeapPlanesQuery                              PlanesQuery;                                                // 0x0110   (0x0060)
-    int32_t                                            MaxPlaneQueryResults;                                       // 0x0170   (0x0004)
-    int32_t                                            MinPlaneArea;                                               // 0x0174   (0x0004)
-    bool                                               bArbitraryOrientationPlaneDetection;                        // 0x0178   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0179   (0x0003) MISSED
-    FVector                                            PlaneSearchExtents;                                         // 0x017C   (0x000C)
-    TArray<EMagicLeapPlaneQueryFlags>                  PlaneQueryFlags;                                            // 0x0188   (0x0010)
-    bool                                               bDiscardZeroExtentPlanes;                                   // 0x0198   (0x0001)
-    bool                                               bDefaultUseUnreliablePose;                                  // 0x0199   (0x0001)
-    unsigned char                                      UnknownData01_7[0x6];                                       // 0x019A   (0x0006) MISSED
+    UPROPERTY(Edit, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ FMagicLeapPlanesQuery                              PlanesQuery;                                                // 0x0110   (0x0060)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxPlaneQueryResults;                                       // 0x0170   (0x0004)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MinPlaneArea;                                               // 0x0174   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bArbitraryOrientationPlaneDetection;                        // 0x0178   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0179   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            PlaneSearchExtents;                                         // 0x017C   (0x000C)
+    UPROPERTY(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+    /* public    */ TArray<EMagicLeapPlaneQueryFlags>                  PlaneQueryFlags;                                            // 0x0188   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDiscardZeroExtentPlanes;                                   // 0x0198   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDefaultUseUnreliablePose;                                  // 0x0199   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x6];                                       // 0x019A   (0x0006) MISSED
 };
 
 /// Class /Script/MagicLeapAR.LuminARLightEstimate
-/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000040 - 0x000050) align n/a MaxSize: 0x0050
 class ULuminARLightEstimate : public UARBasicLightEstimate
 { 
 public:
-    TArray<float>                                      AmbientIntensityNits;                                       // 0x0040   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<float>                                      AmbientIntensityNits;                                       // 0x0040   (0x0010)
 
     /// Functions
     // Function /Script/MagicLeapAR.LuminARLightEstimate.GetAmbientIntensityNits
@@ -137,14 +164,17 @@ public:
 };
 
 /// Class /Script/MagicLeapAR.LuminARCandidateImage
-/// Size: 0x0060 (96 bytes) (0x000058 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000058 - 0x000060) align n/a MaxSize: 0x0060
 class ULuminARCandidateImage : public UARCandidateImage
 { 
 public:
-    bool                                               bUseUnreliablePose;                                         // 0x0058   (0x0001)
-    bool                                               bImageIsStationary;                                         // 0x0059   (0x0001)
-    EMagicLeapImageTargetOrientation                   AxisOrientation;                                            // 0x005A   (0x0001)
-    unsigned char                                      UnknownData00_7[0x5];                                       // 0x005B   (0x0005) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bUseUnreliablePose;                                         // 0x0058   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ bool                                               bImageIsStationary;                                         // 0x0059   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ EMagicLeapImageTargetOrientation                   AxisOrientation;                                            // 0x005A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x5];                                       // 0x005B   (0x0005) MISSED
 
     /// Functions
     // Function /Script/MagicLeapAR.LuminARCandidateImage.GetUseUnreliablePose
@@ -158,6 +188,7 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(ULuminARSessionFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(ULuminARFrameFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(ULuminARImageTrackingFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
@@ -173,3 +204,4 @@ static_assert(offsetof(ULuminARSessionConfig, PlaneSearchExtents) == 0x017C);
 static_assert(offsetof(ULuminARSessionConfig, PlaneQueryFlags) == 0x0188);
 static_assert(offsetof(ULuminARLightEstimate, AmbientIntensityNits) == 0x0040);
 static_assert(offsetof(ULuminARCandidateImage, AxisOrientation) == 0x005A);
+#endif

@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
@@ -17,8 +26,61 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/OnlineSubsystemUtils.EInAppPurchaseStatus
-/// Size: 0x01 (1 bytes)
+class AOnlineBeacon;
+class AOnlineBeaconClient;
+class AOnlineBeaconHost;
+class AOnlineBeaconHostObject;
+class APartyBeaconClient;
+class APartyBeaconHost;
+class ASpectatorBeaconClient;
+class ASpectatorBeaconHost;
+class ATestBeaconClient;
+class ATestBeaconHost;
+class UAchievementBlueprintLibrary;
+class UAchievementQueryCallbackProxy;
+class UAchievementWriteCallbackProxy;
+class UConnectionCallbackProxy;
+class UCreateSessionCallbackProxy;
+class UDestroySessionCallbackProxy;
+class UEndMatchCallbackProxy;
+class UEndTurnCallbackProxy;
+class UFindSessionsCallbackProxy;
+class UFindTurnBasedMatchCallbackProxy;
+class UInAppPurchaseCallbackProxy;
+class UInAppPurchaseCallbackProxy2;
+class UInAppPurchaseQueryCallbackProxy;
+class UInAppPurchaseQueryCallbackProxy2;
+class UInAppPurchaseRestoreCallbackProxy;
+class UInAppPurchaseRestoreCallbackProxy2;
+class UIpConnection;
+class UIpNetDriver;
+class UJoinSessionCallbackProxy;
+class ULeaderboardBlueprintLibrary;
+class ULeaderboardFlushCallbackProxy;
+class ULeaderboardQueryCallbackProxy;
+class ULogoutCallbackProxy;
+class UOnlineEngineInterfaceImpl;
+class UOnlinePIESettings;
+class UOnlineSessionClient;
+class UPartyBeaconState;
+class UQuitMatchCallbackProxy;
+class UShowLoginUICallbackProxy;
+class USpectatorBeaconState;
+class UTurnBasedBlueprintLibrary;
+class UVoipListenerSynthComponent;
+struct FBlueprintSessionResult;
+struct FInAppPurchaseProductInfo2;
+struct FInAppPurchaseProductRequest2;
+struct FInAppPurchaseReceiptInfo;
+struct FInAppPurchaseReceiptInfo2;
+struct FInAppPurchaseRestoreInfo2;
+struct FOnlineProxyStoreOffer;
+struct FPIELoginSettingsInternal;
+struct FPartyReservation;
+struct FPlayerReservation;
+struct FSpectatorReservation;
+
+/// Enum /Script/OnlineSubsystemUtils.EInAppPurchaseStatus -  1 (1 bytes)
 enum class EInAppPurchaseStatus : uint8_t
 {
     Invalid                                                                          = 0,
@@ -29,8 +91,7 @@ enum class EInAppPurchaseStatus : uint8_t
     Restored                                                                         = 5
 };
 
-/// Enum /Script/OnlineSubsystemUtils.EOnlineProxyStoreOfferDiscountType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/OnlineSubsystemUtils.EOnlineProxyStoreOfferDiscountType -  1 (1 bytes)
 enum class EOnlineProxyStoreOfferDiscountType : uint8_t
 {
     NotOnSale                                                                        = 0,
@@ -39,8 +100,7 @@ enum class EOnlineProxyStoreOfferDiscountType : uint8_t
     PayAmount                                                                        = 3
 };
 
-/// Enum /Script/OnlineSubsystemUtils.EBeaconConnectionState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/OnlineSubsystemUtils.EBeaconConnectionState -  1 (1 bytes)
 enum class EBeaconConnectionState : uint8_t
 {
     Invalid                                                                          = 0,
@@ -49,8 +109,7 @@ enum class EBeaconConnectionState : uint8_t
     Open                                                                             = 3
 };
 
-/// Enum /Script/OnlineSubsystemUtils.EClientRequestType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/OnlineSubsystemUtils.EClientRequestType -  1 (1 bytes)
 enum class EClientRequestType : uint8_t
 {
     NonePending                                                                      = 0,
@@ -62,8 +121,7 @@ enum class EClientRequestType : uint8_t
     ReservationRemoveMembers                                                         = 6
 };
 
-/// Enum /Script/OnlineSubsystemUtils.EPartyReservationResult
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/OnlineSubsystemUtils.EPartyReservationResult -  1 (1 bytes)
 enum class EPartyReservationResult : uint8_t
 {
     NoResult                                                                         = 0,
@@ -84,8 +142,7 @@ enum class EPartyReservationResult : uint8_t
     ReservationDenied_ContainsExistingPlayers                                        = 15
 };
 
-/// Enum /Script/OnlineSubsystemUtils.ESpectatorClientRequestType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/OnlineSubsystemUtils.ESpectatorClientRequestType -  1 (1 bytes)
 enum class ESpectatorClientRequestType : uint8_t
 {
     NonePending                                                                      = 0,
@@ -96,8 +153,7 @@ enum class ESpectatorClientRequestType : uint8_t
     Abandon                                                                          = 5
 };
 
-/// Enum /Script/OnlineSubsystemUtils.ESpectatorReservationResult
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/OnlineSubsystemUtils.ESpectatorReservationResult -  1 (1 bytes)
 enum class ESpectatorReservationResult : uint8_t
 {
     NoResult                                                                         = 0,
@@ -119,7 +175,7 @@ enum class ESpectatorReservationResult : uint8_t
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UAchievementBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -145,13 +201,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy
-/// Size: 0x0068 (104 bytes) (0x000030 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000030 - 0x000068) align n/a MaxSize: 0x0068
 class UAchievementQueryCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x18];                                      // 0x0050   (0x0018) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x18];                                      // 0x0050   (0x0018) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
@@ -165,13 +223,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy
-/// Size: 0x0080 (128 bytes) (0x000030 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000030 - 0x000080) align n/a MaxSize: 0x0080
 class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x30];                                      // 0x0050   (0x0030) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x30];                                      // 0x0050   (0x0030) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
@@ -184,13 +244,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.ConnectionCallbackProxy
-/// Size: 0x0078 (120 bytes) (0x000030 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000030 - 0x000078) align n/a MaxSize: 0x0078
 class UConnectionCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0050   (0x0028) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
@@ -200,13 +262,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy
-/// Size: 0x0098 (152 bytes) (0x000030 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000030 - 0x000098) align n/a MaxSize: 0x0098
 class UCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x48];                                      // 0x0050   (0x0048) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x48];                                      // 0x0050   (0x0048) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession
@@ -218,13 +282,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy
-/// Size: 0x0078 (120 bytes) (0x000030 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000030 - 0x000078) align n/a MaxSize: 0x0078
 class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0050   (0x0028) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
@@ -234,13 +300,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.EndMatchCallbackProxy
-/// Size: 0x0080 (128 bytes) (0x000030 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000030 - 0x000080) align n/a MaxSize: 0x0080
 class UEndMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x30];                                      // 0x0050   (0x0030) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x30];                                      // 0x0050   (0x0030) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch
@@ -254,13 +322,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.EndTurnCallbackProxy
-/// Size: 0x0078 (120 bytes) (0x000030 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000030 - 0x000078) align n/a MaxSize: 0x0078
 class UEndTurnCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0050   (0x0028) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
@@ -272,13 +342,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy
-/// Size: 0x0090 (144 bytes) (0x000030 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000030 - 0x000090) align n/a MaxSize: 0x0090
 class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x40];                                      // 0x0050   (0x0040) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x40];                                      // 0x0050   (0x0040) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName
@@ -302,13 +374,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
-/// Size: 0x0088 (136 bytes) (0x000030 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000030 - 0x000088) align n/a MaxSize: 0x0088
 class UFindTurnBasedMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x38];                                      // 0x0050   (0x0038) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x38];                                      // 0x0050   (0x0038) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
@@ -323,13 +397,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy
-/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align n/a MaxSize: 0x0080
 class UInAppPurchaseCallbackProxy : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x38];                                      // 0x0048   (0x0038) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x38];                                      // 0x0048   (0x0038) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase
@@ -339,13 +415,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2
-/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align n/a MaxSize: 0x00A8
 class UInAppPurchaseCallbackProxy2 : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x60];                                      // 0x0048   (0x0060) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x60];                                      // 0x0048   (0x0060) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases
@@ -361,13 +439,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy
-/// Size: 0x0090 (144 bytes) (0x000028 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000028 - 0x000090) align n/a MaxSize: 0x0090
 class UInAppPurchaseQueryCallbackProxy : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x48];                                      // 0x0048   (0x0048) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x48];                                      // 0x0048   (0x0048) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
@@ -377,13 +457,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2
-/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align n/a MaxSize: 0x0068
 class UInAppPurchaseQueryCallbackProxy2 : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x20];                                      // 0x0048   (0x0020) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
@@ -393,13 +475,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy
-/// Size: 0x0090 (144 bytes) (0x000028 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000028 - 0x000090) align n/a MaxSize: 0x0090
 class UInAppPurchaseRestoreCallbackProxy : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x48];                                      // 0x0048   (0x0048) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x48];                                      // 0x0048   (0x0048) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore
@@ -409,13 +493,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2
-/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000028 - 0x0000A8) align n/a MaxSize: 0x00A8
 class UInAppPurchaseRestoreCallbackProxy2 : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x60];                                      // 0x0048   (0x0060) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x60];                                      // 0x0048   (0x0060) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore
@@ -425,44 +511,57 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.IpConnection
-/// Size: 0x1B90 (7056 bytes) (0x001AF0 - 0x001B90) align 8 MaxSize: 0x1B90
+/// Size: 0x1B90 (7056 bytes) (0x001AF0 - 0x001B90) align n/a MaxSize: 0x1B90
 class UIpConnection : public UNetConnection
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x50];                                      // 0x1AF0   (0x0050) MISSED
-    float                                              SocketErrorDisconnectDelay;                                 // 0x1B40   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4C];                                      // 0x1B44   (0x004C) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x50];                                      // 0x1AF0   (0x0050) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ float                                              SocketErrorDisconnectDelay;                                 // 0x1B40   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4C];                                      // 0x1B44   (0x004C) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.IpNetDriver
-/// Size: 0x07B8 (1976 bytes) (0x000748 - 0x0007B8) align 8 MaxSize: 0x07B8
+/// Size: 0x07B8 (1976 bytes) (0x000748 - 0x0007B8) align n/a MaxSize: 0x07B8
 class UIpNetDriver : public UNetDriver
 { 
 public:
-    bool                                               LogPortUnreach : 1;                                         // 0x0748:0 (0x0001)
-    bool                                               AllowPlayerPortUnreach : 1;                                 // 0x0748:1 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0749   (0x0003) MISSED
-    uint32_t                                           MaxPortCountToTry;                                          // 0x074C   (0x0004)
-    unsigned char                                      UnknownData01_6[0xC];                                       // 0x0750   (0x000C) MISSED
-    uint32_t                                           ServerDesiredSocketReceiveBufferBytes;                      // 0x075C   (0x0004)
-    uint32_t                                           ServerDesiredSocketSendBufferBytes;                         // 0x0760   (0x0004)
-    uint32_t                                           ClientDesiredSocketReceiveBufferBytes;                      // 0x0764   (0x0004)
-    uint32_t                                           ClientDesiredSocketSendBufferBytes;                         // 0x0768   (0x0004)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x076C   (0x0004) MISSED
-    double                                             MaxSecondsInReceive;                                        // 0x0770   (0x0008)
-    int32_t                                            NbPacketsBetweenReceiveTimeTest;                            // 0x0778   (0x0004)
-    float                                              ResolutionConnectionTimeout;                                // 0x077C   (0x0004)
-    unsigned char                                      UnknownData03_7[0x38];                                      // 0x0780   (0x0038) MISSED
+    UPROPERTY(Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               LogPortUnreach : 1;                                         // 0x0748:0 (0x0001)
+    UPROPERTY(Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               AllowPlayerPortUnreach : 1;                                 // 0x0748:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_5[0x3];                                       // 0x0749   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ uint32_t                                           MaxPortCountToTry;                                          // 0x074C   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_6[0xC];                                       // 0x0750   (0x000C) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ uint32_t                                           ServerDesiredSocketReceiveBufferBytes;                      // 0x075C   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ uint32_t                                           ServerDesiredSocketSendBufferBytes;                         // 0x0760   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ uint32_t                                           ClientDesiredSocketReceiveBufferBytes;                      // 0x0764   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ uint32_t                                           ClientDesiredSocketSendBufferBytes;                         // 0x0768   (0x0004)
+    /* public    */ unsigned char                                      UnknownData06_6[0x4];                                       // 0x076C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ double                                             MaxSecondsInReceive;                                        // 0x0770   (0x0008)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            NbPacketsBetweenReceiveTimeTest;                            // 0x0778   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ float                                              ResolutionConnectionTimeout;                                // 0x077C   (0x0004)
+    /* public    */ unsigned char                                      UnknownData07_7[0x38];                                      // 0x0780   (0x0038) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.JoinSessionCallbackProxy
-/// Size: 0x0180 (384 bytes) (0x000030 - 0x000180) align 8 MaxSize: 0x0180
+/// Size: 0x0180 (384 bytes) (0x000030 - 0x000180) align n/a MaxSize: 0x0180
 class UJoinSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x130];                                     // 0x0050   (0x0130) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x130];                                     // 0x0050   (0x0130) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
@@ -473,7 +572,7 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULeaderboardBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -487,13 +586,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy
-/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000028 - 0x000068) align n/a MaxSize: 0x0068
 class ULeaderboardFlushCallbackProxy : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x20];                                      // 0x0048   (0x0020) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x20];                                      // 0x0048   (0x0020) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
@@ -503,13 +604,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
-/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000028 - 0x000098) align n/a MaxSize: 0x0098
 class ULeaderboardQueryCallbackProxy : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x50];                                      // 0x0048   (0x0050) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x50];                                      // 0x0048   (0x0050) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
@@ -519,13 +622,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.LogoutCallbackProxy
-/// Size: 0x0068 (104 bytes) (0x000030 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000030 - 0x000068) align n/a MaxSize: 0x0068
 class ULogoutCallbackProxy : public UBlueprintAsyncActionBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x18];                                      // 0x0050   (0x0018) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x18];                                      // 0x0050   (0x0018) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.LogoutCallbackProxy.Logout
@@ -535,26 +640,32 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeacon
-/// Size: 0x02F8 (760 bytes) (0x0002C8 - 0x0002F8) align 8 MaxSize: 0x02F8
+/// Size: 0x02F8 (760 bytes) (0x0002C8 - 0x0002F8) align n/a MaxSize: 0x02F8
 class AOnlineBeacon : public AActor
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x02C8   (0x0008) MISSED
-    float                                              BeaconConnectionInitialTimeout;                             // 0x02D0   (0x0004)
-    float                                              BeaconConnectionTimeout;                                    // 0x02D4   (0x0004)
-    class UNetDriver*                                  NetDriver;                                                  // 0x02D8   (0x0008)
-    unsigned char                                      UnknownData01_7[0x18];                                      // 0x02E0   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x8];                                       // 0x02C8   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              BeaconConnectionInitialTimeout;                             // 0x02D0   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              BeaconConnectionTimeout;                                    // 0x02D4   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UNetDriver*                                  NetDriver;                                                  // 0x02D8   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x18];                                      // 0x02E0   (0x0018) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconClient
-/// Size: 0x0358 (856 bytes) (0x0002F8 - 0x000358) align 8 MaxSize: 0x0358
+/// Size: 0x0358 (856 bytes) (0x0002F8 - 0x000358) align n/a MaxSize: 0x0358
 class AOnlineBeaconClient : public AOnlineBeacon
 { 
 public:
-    class AOnlineBeaconHostObject*                     BeaconOwner;                                                // 0x02F8   (0x0008)
-    class UNetConnection*                              BeaconConnection;                                           // 0x0300   (0x0008)
-    EBeaconConnectionState                             ConnectionState;                                            // 0x0308   (0x0001)
-    unsigned char                                      UnknownData00_7[0x4F];                                      // 0x0309   (0x004F) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class AOnlineBeaconHostObject*                     BeaconOwner;                                                // 0x02F8   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UNetConnection*                              BeaconConnection;                                           // 0x0300   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EBeaconConnectionState                             ConnectionState;                                            // 0x0308   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4F];                                      // 0x0309   (0x004F) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
@@ -562,103 +673,133 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconHost
-/// Size: 0x03B0 (944 bytes) (0x0002F8 - 0x0003B0) align 8 MaxSize: 0x03B0
+/// Size: 0x03B0 (944 bytes) (0x0002F8 - 0x0003B0) align n/a MaxSize: 0x03B0
 class AOnlineBeaconHost : public AOnlineBeacon
 { 
 public:
-    int32_t                                            ListenPort;                                                 // 0x02F8   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x02FC   (0x0004) MISSED
-    TArray<class AOnlineBeaconClient*>                 ClientActors;                                               // 0x0300   (0x0010)
-    unsigned char                                      UnknownData01_7[0xA0];                                      // 0x0310   (0x00A0) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ListenPort;                                                 // 0x02F8   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x02FC   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<class AOnlineBeaconClient*>                 ClientActors;                                               // 0x0300   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0xA0];                                      // 0x0310   (0x00A0) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconHostObject
-/// Size: 0x02F0 (752 bytes) (0x0002C8 - 0x0002F0) align 8 MaxSize: 0x02F0
+/// Size: 0x02F0 (752 bytes) (0x0002C8 - 0x0002F0) align n/a MaxSize: 0x02F0
 class AOnlineBeaconHostObject : public AActor
 { 
 public:
-    FString                                            BeaconTypeName;                                             // 0x02C8   (0x0010)
-    class UClass*                                      ClientBeaconActorClass;                                     // 0x02D8   (0x0008)
-    TArray<class AOnlineBeaconClient*>                 ClientActors;                                               // 0x02E0   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            BeaconTypeName;                                             // 0x02C8   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      ClientBeaconActorClass;                                     // 0x02D8   (0x0008)
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class AOnlineBeaconClient*>                 ClientActors;                                               // 0x02E0   (0x0010)
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineEngineInterfaceImpl
-/// Size: 0x0188 (392 bytes) (0x000028 - 0x000188) align 8 MaxSize: 0x0188
+/// Size: 0x0188 (392 bytes) (0x000028 - 0x000188) align n/a MaxSize: 0x0188
 class UOnlineEngineInterfaceImpl : public UOnlineEngineInterface
 { 
 public:
-    TMap<FName, FName>                                 MappedUniqueNetIdTypes;                                     // 0x0028   (0x0050)
-    TArray<FName>                                      CompatibleUniqueNetIdTypes;                                 // 0x0078   (0x0010)
-    FName                                              VoiceSubsystemNameOverride;                                 // 0x0088   (0x0008)
-    unsigned char                                      UnknownData00_7[0xF8];                                      // 0x0090   (0x00F8) MISSED
+    UPROPERTY(Config, NativeAccessSpecifierPrivate)
+    /* private   */ TMap<FName, FName>                                 MappedUniqueNetIdTypes;                                     // 0x0028   (0x0050)
+    UPROPERTY(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FName>                                      CompatibleUniqueNetIdTypes;                                 // 0x0078   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FName                                              VoiceSubsystemNameOverride;                                 // 0x0088   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0xF8];                                      // 0x0090   (0x00F8) MISSED
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PIELoginSettingsInternal
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FPIELoginSettingsInternal
 { 
-    FString                                            ID;                                                         // 0x0000   (0x0010)
-    FString                                            Token;                                                      // 0x0010   (0x0010)
-    FString                                            Type;                                                       // 0x0020   (0x0010)
-    TArray<char>                                       TokenBytes;                                                 // 0x0030   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ID;                                                         // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Token;                                                      // 0x0010   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Type;                                                       // 0x0020   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       TokenBytes;                                                 // 0x0030   (0x0010)
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlinePIESettings
-/// Size: 0x0050 (80 bytes) (0x000038 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000038 - 0x000050) align n/a MaxSize: 0x0050
 class UOnlinePIESettings : public UDeveloperSettings
 { 
 public:
-    bool                                               bOnlinePIEEnabled;                                          // 0x0038   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0039   (0x0007) MISSED
-    TArray<FPIELoginSettingsInternal>                  Logins;                                                     // 0x0040   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bOnlinePIEEnabled;                                          // 0x0038   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0039   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FPIELoginSettingsInternal>                  Logins;                                                     // 0x0040   (0x0010)
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineSessionClient
-/// Size: 0x01E0 (480 bytes) (0x000028 - 0x0001E0) align 8 MaxSize: 0x01E0
+/// Size: 0x01E0 (480 bytes) (0x000028 - 0x0001E0) align n/a MaxSize: 0x01E0
 class UOnlineSessionClient : public UOnlineSession
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x1B0];                                     // 0x0028   (0x01B0) MISSED
-    bool                                               bIsFromInvite;                                              // 0x01D8   (0x0001)
-    bool                                               bHandlingDisconnect;                                        // 0x01D9   (0x0001)
-    unsigned char                                      UnknownData01_7[0x6];                                       // 0x01DA   (0x0006) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x1B0];                                     // 0x0028   (0x01B0) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bIsFromInvite;                                              // 0x01D8   (0x0001)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bHandlingDisconnect;                                        // 0x01D9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x6];                                       // 0x01DA   (0x0006) MISSED
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PlayerReservation
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FPlayerReservation
 { 
-    FUniqueNetIdRepl                                   UniqueId;                                                   // 0x0000   (0x0028)
-    FString                                            ValidationStr;                                              // 0x0028   (0x0010)
-    FString                                            Platform;                                                   // 0x0038   (0x0010)
-    bool                                               bAllowCrossplay;                                            // 0x0048   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0049   (0x0003) MISSED
-    float                                              ElapsedTime;                                                // 0x004C   (0x0004)
+    UPROPERTY(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FUniqueNetIdRepl                                   UniqueId;                                                   // 0x0000   (0x0028)
+    UPROPERTY(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ValidationStr;                                              // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Platform;                                                   // 0x0038   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowCrossplay;                                            // 0x0048   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0049   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ElapsedTime;                                                // 0x004C   (0x0004)
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PartyReservation
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FPartyReservation
 { 
-    int32_t                                            TeamNum;                                                    // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    FUniqueNetIdRepl                                   PartyLeader;                                                // 0x0008   (0x0028)
-    TArray<FPlayerReservation>                         PartyMembers;                                               // 0x0030   (0x0010)
-    TArray<FPlayerReservation>                         RemovedPartyMembers;                                        // 0x0040   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            TeamNum;                                                    // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FUniqueNetIdRepl                                   PartyLeader;                                                // 0x0008   (0x0028)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FPlayerReservation>                         PartyMembers;                                               // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FPlayerReservation>                         RemovedPartyMembers;                                        // 0x0040   (0x0010)
 };
 
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconClient
-/// Size: 0x0418 (1048 bytes) (0x000358 - 0x000418) align 8 MaxSize: 0x0418
+/// Size: 0x0418 (1048 bytes) (0x000358 - 0x000418) align n/a MaxSize: 0x0418
 class APartyBeaconClient : public AOnlineBeaconClient
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x30];                                      // 0x0358   (0x0030) MISSED
-    FString                                            DestSessionId;                                              // 0x0388   (0x0010)
-    FPartyReservation                                  PendingReservation;                                         // 0x0398   (0x0050)
-    EClientRequestType                                 RequestType;                                                // 0x03E8   (0x0001)
-    bool                                               bPendingReservationSent;                                    // 0x03E9   (0x0001)
-    bool                                               bCancelReservation;                                         // 0x03EA   (0x0001)
-    unsigned char                                      UnknownData01_7[0x2D];                                      // 0x03EB   (0x002D) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x30];                                      // 0x0358   (0x0030) MISSED
+    UPROPERTY(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            DestSessionId;                                              // 0x0388   (0x0010)
+    UPROPERTY(Protected, NativeAccessSpecifierProtected)
+    /* protected */ FPartyReservation                                  PendingReservation;                                         // 0x0398   (0x0050)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EClientRequestType                                 RequestType;                                                // 0x03E8   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bPendingReservationSent;                                    // 0x03E9   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bCancelReservation;                                         // 0x03EA   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x2D];                                      // 0x03EB   (0x002D) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
@@ -690,47 +831,64 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconHost
-/// Size: 0x0368 (872 bytes) (0x0002F0 - 0x000368) align 8 MaxSize: 0x0368
+/// Size: 0x0368 (872 bytes) (0x0002F0 - 0x000368) align n/a MaxSize: 0x0368
 class APartyBeaconHost : public AOnlineBeaconHostObject
 { 
 public:
-    class UPartyBeaconState*                           State;                                                      // 0x02F0   (0x0008)
-    unsigned char                                      UnknownData00_6[0x60];                                      // 0x02F8   (0x0060) MISSED
-    bool                                               bLogoutOnSessionTimeout;                                    // 0x0358   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0359   (0x0003) MISSED
-    float                                              SessionTimeoutSecs;                                         // 0x035C   (0x0004)
-    float                                              TravelSessionTimeoutSecs;                                   // 0x0360   (0x0004)
-    unsigned char                                      UnknownData02_7[0x4];                                       // 0x0364   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UPartyBeaconState*                           State;                                                      // 0x02F0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_6[0x60];                                      // 0x02F8   (0x0060) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bLogoutOnSessionTimeout;                                    // 0x0358   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x0359   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              SessionTimeoutSecs;                                         // 0x035C   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              TravelSessionTimeoutSecs;                                   // 0x0360   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_7[0x4];                                       // 0x0364   (0x0004) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconState
-/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align n/a MaxSize: 0x0078
 class UPartyBeaconState : public UObject
 { 
 public:
-    FName                                              SessionName;                                                // 0x0028   (0x0008)
-    int32_t                                            NumConsumedReservations;                                    // 0x0030   (0x0004)
-    int32_t                                            MaxReservations;                                            // 0x0034   (0x0004)
-    int32_t                                            NumTeams;                                                   // 0x0038   (0x0004)
-    int32_t                                            NumPlayersPerTeam;                                          // 0x003C   (0x0004)
-    FName                                              TeamAssignmentMethod;                                       // 0x0040   (0x0008)
-    int32_t                                            ReservedHostTeamNum;                                        // 0x0048   (0x0004)
-    int32_t                                            ForceTeamNum;                                               // 0x004C   (0x0004)
-    bool                                               bRestrictCrossConsole;                                      // 0x0050   (0x0001)
-    bool                                               bEnableRemovalRequests;                                     // 0x0051   (0x0001)
-    unsigned char                                      UnknownData00_6[0x6];                                       // 0x0052   (0x0006) MISSED
-    TArray<FPartyReservation>                          Reservations;                                               // 0x0058   (0x0010)
-    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0068   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FName                                              SessionName;                                                // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            NumConsumedReservations;                                    // 0x0030   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MaxReservations;                                            // 0x0034   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            NumTeams;                                                   // 0x0038   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            NumPlayersPerTeam;                                          // 0x003C   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FName                                              TeamAssignmentMethod;                                       // 0x0040   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            ReservedHostTeamNum;                                        // 0x0048   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            ForceTeamNum;                                               // 0x004C   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bRestrictCrossConsole;                                      // 0x0050   (0x0001)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bEnableRemovalRequests;                                     // 0x0051   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x6];                                       // 0x0052   (0x0006) MISSED
+    UPROPERTY(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FPartyReservation>                          Reservations;                                               // 0x0058   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0x10];                                      // 0x0068   (0x0010) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.QuitMatchCallbackProxy
-/// Size: 0x0078 (120 bytes) (0x000030 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000030 - 0x000078) align n/a MaxSize: 0x0078
 class UQuitMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0050   (0x0028) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x28];                                      // 0x0050   (0x0028) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
@@ -743,13 +901,15 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy
-/// Size: 0x0060 (96 bytes) (0x000030 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000030 - 0x000060) align n/a MaxSize: 0x0060
 class UShowLoginUICallbackProxy : public UBlueprintAsyncActionBase
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0050   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailure;                                                  // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0050   (0x0010) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
@@ -759,25 +919,32 @@ public:
 };
 
 /// Struct /Script/OnlineSubsystemUtils.SpectatorReservation
-/// Size: 0x0078 (120 bytes) (0x000000 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000000 - 0x000078) align n/a MaxSize: 0x0078
 struct FSpectatorReservation
 { 
-    FUniqueNetIdRepl                                   SpectatorId;                                                // 0x0000   (0x0028)
-    FPlayerReservation                                 Spectator;                                                  // 0x0028   (0x0050)
+    UPROPERTY(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FUniqueNetIdRepl                                   SpectatorId;                                                // 0x0000   (0x0028)
+    UPROPERTY(Transient, NativeAccessSpecifierPublic)
+    /* public    */ FPlayerReservation                                 Spectator;                                                  // 0x0028   (0x0050)
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconClient
-/// Size: 0x0440 (1088 bytes) (0x000358 - 0x000440) align 8 MaxSize: 0x0440
+/// Size: 0x0440 (1088 bytes) (0x000358 - 0x000440) align n/a MaxSize: 0x0440
 class ASpectatorBeaconClient : public AOnlineBeaconClient
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x30];                                      // 0x0358   (0x0030) MISSED
-    FString                                            DestSessionId;                                              // 0x0388   (0x0010)
-    FSpectatorReservation                              PendingReservation;                                         // 0x0398   (0x0078)
-    ESpectatorClientRequestType                        RequestType;                                                // 0x0410   (0x0001)
-    bool                                               bPendingReservationSent;                                    // 0x0411   (0x0001)
-    bool                                               bCancelReservation;                                         // 0x0412   (0x0001)
-    unsigned char                                      UnknownData01_7[0x2D];                                      // 0x0413   (0x002D) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x30];                                      // 0x0358   (0x0030) MISSED
+    UPROPERTY(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            DestSessionId;                                              // 0x0388   (0x0010)
+    UPROPERTY(Protected, NativeAccessSpecifierProtected)
+    /* protected */ FSpectatorReservation                              PendingReservation;                                         // 0x0398   (0x0078)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ ESpectatorClientRequestType                        RequestType;                                                // 0x0410   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bPendingReservationSent;                                    // 0x0411   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bCancelReservation;                                         // 0x0412   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x2D];                                      // 0x0413   (0x002D) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest
@@ -801,35 +968,44 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconHost
-/// Size: 0x0368 (872 bytes) (0x0002F0 - 0x000368) align 8 MaxSize: 0x0368
+/// Size: 0x0368 (872 bytes) (0x0002F0 - 0x000368) align n/a MaxSize: 0x0368
 class ASpectatorBeaconHost : public AOnlineBeaconHostObject
 { 
 public:
-    class USpectatorBeaconState*                       State;                                                      // 0x02F0   (0x0008)
-    unsigned char                                      UnknownData00_6[0x60];                                      // 0x02F8   (0x0060) MISSED
-    bool                                               bLogoutOnSessionTimeout;                                    // 0x0358   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0359   (0x0003) MISSED
-    float                                              SessionTimeoutSecs;                                         // 0x035C   (0x0004)
-    float                                              TravelSessionTimeoutSecs;                                   // 0x0360   (0x0004)
-    unsigned char                                      UnknownData02_7[0x4];                                       // 0x0364   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class USpectatorBeaconState*                       State;                                                      // 0x02F0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_6[0x60];                                      // 0x02F8   (0x0060) MISSED
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bLogoutOnSessionTimeout;                                    // 0x0358   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x0359   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              SessionTimeoutSecs;                                         // 0x035C   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              TravelSessionTimeoutSecs;                                   // 0x0360   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_7[0x4];                                       // 0x0364   (0x0004) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconState
-/// Size: 0x0060 (96 bytes) (0x000028 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000028 - 0x000060) align n/a MaxSize: 0x0060
 class USpectatorBeaconState : public UObject
 { 
 public:
-    FName                                              SessionName;                                                // 0x0028   (0x0008)
-    int32_t                                            NumConsumedReservations;                                    // 0x0030   (0x0004)
-    int32_t                                            MaxReservations;                                            // 0x0034   (0x0004)
-    bool                                               bRestrictCrossConsole;                                      // 0x0038   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0039   (0x0007) MISSED
-    TArray<FSpectatorReservation>                      Reservations;                                               // 0x0040   (0x0010)
-    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0050   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FName                                              SessionName;                                                // 0x0028   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            NumConsumedReservations;                                    // 0x0030   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MaxReservations;                                            // 0x0034   (0x0004)
+    UPROPERTY(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bRestrictCrossConsole;                                      // 0x0038   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x7];                                       // 0x0039   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<FSpectatorReservation>                      Reservations;                                               // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0x10];                                      // 0x0050   (0x0010) MISSED
 };
 
 /// Class /Script/OnlineSubsystemUtils.TestBeaconClient
-/// Size: 0x0358 (856 bytes) (0x000358 - 0x000358) align 8 MaxSize: 0x0358
+/// Size: 0x0358 (856 bytes) (0x000358 - 0x000358) align n/a MaxSize: 0x0358
 class ATestBeaconClient : public AOnlineBeaconClient
 { 
 public:
@@ -842,14 +1018,14 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.TestBeaconHost
-/// Size: 0x02F0 (752 bytes) (0x0002F0 - 0x0002F0) align 8 MaxSize: 0x02F0
+/// Size: 0x02F0 (752 bytes) (0x0002F0 - 0x0002F0) align n/a MaxSize: 0x02F0
 class ATestBeaconHost : public AOnlineBeaconHostObject
 { 
 public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.TurnBasedBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UTurnBasedBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -882,11 +1058,11 @@ public:
 };
 
 /// Class /Script/OnlineSubsystemUtils.VoipListenerSynthComponent
-/// Size: 0x0790 (1936 bytes) (0x000730 - 0x000790) align 16 MaxSize: 0x0790
+/// Size: 0x0790 (1936 bytes) (0x000730 - 0x000790) align n/a MaxSize: 0x0790
 class UVoipListenerSynthComponent : public USynthComponent
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x60];                                      // 0x0730   (0x0060) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x60];                                      // 0x0730   (0x0060) MISSED
 
     /// Functions
     // Function /Script/OnlineSubsystemUtils.VoipListenerSynthComponent.IsIdling
@@ -894,92 +1070,129 @@ public:
 };
 
 /// Struct /Script/OnlineSubsystemUtils.BlueprintSessionResult
-/// Size: 0x0108 (264 bytes) (0x000000 - 0x000108) align 8 MaxSize: 0x0108
+/// Size: 0x0108 (264 bytes) (0x000000 - 0x000108) align n/a MaxSize: 0x0108
 struct FBlueprintSessionResult
 { 
-    unsigned char                                      UnknownData00_2[0x108];                                     // 0x0000   (0x0108) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x108];                                     // 0x0000   (0x0108) MISSED
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseReceiptInfo2
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FInAppPurchaseReceiptInfo2
 { 
-    FString                                            ItemName;                                                   // 0x0000   (0x0010)
-    FString                                            ItemId;                                                     // 0x0010   (0x0010)
-    FString                                            ValidationInfo;                                             // 0x0020   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ItemName;                                                   // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ItemId;                                                     // 0x0010   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ValidationInfo;                                             // 0x0020   (0x0010)
 };
 
 /// Struct /Script/OnlineSubsystemUtils.OnlineProxyStoreOffer
-/// Size: 0x0110 (272 bytes) (0x000000 - 0x000110) align 8 MaxSize: 0x0110
+/// Size: 0x0110 (272 bytes) (0x000000 - 0x000110) align n/a MaxSize: 0x0110
 struct FOnlineProxyStoreOffer
 { 
-    FString                                            OfferId;                                                    // 0x0000   (0x0010)
-    FText                                              title;                                                      // 0x0010   (0x0018)
-    FText                                              Description;                                                // 0x0028   (0x0018)
-    FText                                              LongDescription;                                            // 0x0040   (0x0018)
-    FText                                              RegularPriceText;                                           // 0x0058   (0x0018)
-    int32_t                                            RegularPrice;                                               // 0x0070   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0074   (0x0004) MISSED
-    FText                                              PriceText;                                                  // 0x0078   (0x0018)
-    int32_t                                            NumericPrice;                                               // 0x0090   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0094   (0x0004) MISSED
-    FString                                            CurrencyCode;                                               // 0x0098   (0x0010)
-    FDateTime                                          ReleaseDate;                                                // 0x00A8   (0x0008)
-    FDateTime                                          ExpirationDate;                                             // 0x00B0   (0x0008)
-    EOnlineProxyStoreOfferDiscountType                 DiscountType;                                               // 0x00B8   (0x0001)
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x00B9   (0x0007) MISSED
-    TMap<FString, FString>                             DynamicFields;                                              // 0x00C0   (0x0050)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            OfferId;                                                    // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              title;                                                      // 0x0010   (0x0018)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              Description;                                                // 0x0028   (0x0018)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              LongDescription;                                            // 0x0040   (0x0018)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              RegularPriceText;                                           // 0x0058   (0x0018)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            RegularPrice;                                               // 0x0070   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x0074   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              PriceText;                                                  // 0x0078   (0x0018)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            NumericPrice;                                               // 0x0090   (0x0004)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x0094   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            CurrencyCode;                                               // 0x0098   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FDateTime                                          ReleaseDate;                                                // 0x00A8   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FDateTime                                          ExpirationDate;                                             // 0x00B0   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EOnlineProxyStoreOfferDiscountType                 DiscountType;                                               // 0x00B8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x7];                                       // 0x00B9   (0x0007) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FString, FString>                             DynamicFields;                                              // 0x00C0   (0x0050)
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseRestoreInfo2
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FInAppPurchaseRestoreInfo2
 { 
-    FString                                            ItemName;                                                   // 0x0000   (0x0010)
-    FString                                            ItemId;                                                     // 0x0010   (0x0010)
-    FString                                            ValidationInfo;                                             // 0x0020   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ItemName;                                                   // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ItemId;                                                     // 0x0010   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ValidationInfo;                                             // 0x0020   (0x0010)
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseReceiptInfo
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FInAppPurchaseReceiptInfo
 { 
-    FString                                            ItemName;                                                   // 0x0000   (0x0010)
-    FString                                            ItemId;                                                     // 0x0010   (0x0010)
-    FString                                            ValidationInfo;                                             // 0x0020   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ItemName;                                                   // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ItemId;                                                     // 0x0010   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ValidationInfo;                                             // 0x0020   (0x0010)
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseProductInfo2
-/// Size: 0x00F8 (248 bytes) (0x000000 - 0x0000F8) align 8 MaxSize: 0x00F8
+/// Size: 0x00F8 (248 bytes) (0x000000 - 0x0000F8) align n/a MaxSize: 0x00F8
 struct FInAppPurchaseProductInfo2
 { 
-    FString                                            Identifier;                                                 // 0x0000   (0x0010)
-    FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010)
-    FString                                            DisplayName;                                                // 0x0020   (0x0010)
-    FString                                            DisplayDescription;                                         // 0x0030   (0x0010)
-    FString                                            DisplayPrice;                                               // 0x0040   (0x0010)
-    float                                              RawPrice;                                                   // 0x0050   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0054   (0x0004) MISSED
-    FString                                            CurrencyCode;                                               // 0x0058   (0x0010)
-    FString                                            CurrencySymbol;                                             // 0x0068   (0x0010)
-    FString                                            DecimalSeparator;                                           // 0x0078   (0x0010)
-    FString                                            GroupingSeparator;                                          // 0x0088   (0x0010)
-    FString                                            ReceiptData;                                                // 0x0098   (0x0010)
-    TMap<FString, FString>                             DynamicFields;                                              // 0x00A8   (0x0050)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Identifier;                                                 // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            DisplayName;                                                // 0x0020   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            DisplayDescription;                                         // 0x0030   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            DisplayPrice;                                               // 0x0040   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RawPrice;                                                   // 0x0050   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0054   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            CurrencyCode;                                               // 0x0058   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            CurrencySymbol;                                             // 0x0068   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            DecimalSeparator;                                           // 0x0078   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            GroupingSeparator;                                          // 0x0088   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ReceiptData;                                                // 0x0098   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FString, FString>                             DynamicFields;                                              // 0x00A8   (0x0050)
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseProductRequest2
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInAppPurchaseProductRequest2
 { 
-    FString                                            ProductIdentifier;                                          // 0x0000   (0x0010)
-    bool                                               bIsConsumable;                                              // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0011   (0x0007) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ProductIdentifier;                                          // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsConsumable;                                              // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UAchievementBlueprintLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UAchievementQueryCallbackProxy) == 0x0068); // 104 bytes (0x000030 - 0x000068)
 static_assert(sizeof(UAchievementWriteCallbackProxy) == 0x0080); // 128 bytes (0x000030 - 0x000080)
@@ -1102,3 +1315,4 @@ static_assert(offsetof(FInAppPurchaseProductInfo2, GroupingSeparator) == 0x0088)
 static_assert(offsetof(FInAppPurchaseProductInfo2, ReceiptData) == 0x0098);
 static_assert(offsetof(FInAppPurchaseProductInfo2, DynamicFields) == 0x00A8);
 static_assert(offsetof(FInAppPurchaseProductRequest2, ProductIdentifier) == 0x0000);
+#endif

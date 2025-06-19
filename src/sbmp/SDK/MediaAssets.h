@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "merged_AudioMixer_Engine_UMG_MovieScene_MovieSceneTracks.h"
@@ -16,8 +25,23 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MediaAssets.EMediaWebcamCaptureDeviceFilter
-/// Size: 0x01 (1 bytes)
+class UBaseMediaSource;
+class UFileMediaSource;
+class UMediaBlueprintFunctionLibrary;
+class UMediaComponent;
+class UMediaPlayer;
+class UMediaPlaylist;
+class UMediaSoundComponent;
+class UMediaSource;
+class UMediaTexture;
+class UMediaTimeStampInfo;
+class UPlatformMediaSource;
+class UStreamMediaSource;
+class UTimeSynchronizableMediaSource;
+struct FMediaCaptureDevice;
+struct FMediaSoundComponentSpectralData;
+
+/// Enum /Script/MediaAssets.EMediaWebcamCaptureDeviceFilter -  1 (1 bytes)
 enum class EMediaWebcamCaptureDeviceFilter : uint8_t
 {
     None                                                                             = 0,
@@ -27,8 +51,7 @@ enum class EMediaWebcamCaptureDeviceFilter : uint8_t
     Unknown                                                                          = 8
 };
 
-/// Enum /Script/MediaAssets.EMediaVideoCaptureDeviceFilter
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MediaAssets.EMediaVideoCaptureDeviceFilter -  1 (1 bytes)
 enum class EMediaVideoCaptureDeviceFilter : uint8_t
 {
     None                                                                             = 0,
@@ -38,8 +61,7 @@ enum class EMediaVideoCaptureDeviceFilter : uint8_t
     Webcam                                                                           = 8
 };
 
-/// Enum /Script/MediaAssets.EMediaAudioCaptureDeviceFilter
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MediaAssets.EMediaAudioCaptureDeviceFilter -  1 (1 bytes)
 enum class EMediaAudioCaptureDeviceFilter : uint8_t
 {
     None                                                                             = 0,
@@ -49,8 +71,7 @@ enum class EMediaAudioCaptureDeviceFilter : uint8_t
     Unknown                                                                          = 8
 };
 
-/// Enum /Script/MediaAssets.EMediaPlayerTrack
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MediaAssets.EMediaPlayerTrack -  1 (1 bytes)
 enum class EMediaPlayerTrack : uint8_t
 {
     Audio                                                                            = 0,
@@ -62,8 +83,7 @@ enum class EMediaPlayerTrack : uint8_t
     Video                                                                            = 6
 };
 
-/// Enum /Script/MediaAssets.EMediaSoundComponentFFTSize
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MediaAssets.EMediaSoundComponentFFTSize -  1 (1 bytes)
 enum class EMediaSoundComponentFFTSize : uint8_t
 {
     Min                                                                              = 0,
@@ -72,8 +92,7 @@ enum class EMediaSoundComponentFFTSize : uint8_t
     Large                                                                            = 3
 };
 
-/// Enum /Script/MediaAssets.EMediaSoundChannels
-/// Size: 0x04 (4 bytes)
+/// Enum /Script/MediaAssets.EMediaSoundChannels -  4 (4 bytes)
 enum class EMediaSoundChannels : uint32_t
 {
     Mono                                                                             = 0,
@@ -81,8 +100,7 @@ enum class EMediaSoundChannels : uint32_t
     Surround                                                                         = 2
 };
 
-/// Enum /Script/MediaAssets.MediaTextureOrientation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MediaAssets.MediaTextureOrientation -  1 (1 bytes)
 enum class MediaTextureOrientation : uint8_t
 {
     MTORI_Original                                                                   = 0,
@@ -91,8 +109,7 @@ enum class MediaTextureOrientation : uint8_t
     MTORI_CW270                                                                      = 3
 };
 
-/// Enum /Script/MediaAssets.MediaTextureOutputFormat
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MediaAssets.MediaTextureOutputFormat -  1 (1 bytes)
 enum class MediaTextureOutputFormat : uint8_t
 {
     MTOF_Default                                                                     = 0,
@@ -100,11 +117,11 @@ enum class MediaTextureOutputFormat : uint8_t
 };
 
 /// Class /Script/MediaAssets.MediaSource
-/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000028 - 0x000080) align n/a MaxSize: 0x0080
 class UMediaSource : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x58];                                      // 0x0028   (0x0058) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x58];                                      // 0x0028   (0x0058) MISSED
 
     /// Functions
     // Function /Script/MediaAssets.MediaSource.Validate
@@ -130,21 +147,24 @@ public:
 };
 
 /// Class /Script/MediaAssets.BaseMediaSource
-/// Size: 0x0088 (136 bytes) (0x000080 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000080 - 0x000088) align n/a MaxSize: 0x0088
 class UBaseMediaSource : public UMediaSource
 { 
 public:
-    FName                                              PlayerName;                                                 // 0x0080   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FName                                              PlayerName;                                                 // 0x0080   (0x0008)
 };
 
 /// Class /Script/MediaAssets.FileMediaSource
-/// Size: 0x00B0 (176 bytes) (0x000088 - 0x0000B0) align 8 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000088 - 0x0000B0) align n/a MaxSize: 0x00B0
 class UFileMediaSource : public UBaseMediaSource
 { 
 public:
-    FString                                            FilePath;                                                   // 0x0088   (0x0010)
-    bool                                               PrecacheFile;                                               // 0x0098   (0x0001)
-    unsigned char                                      UnknownData00_7[0x17];                                      // 0x0099   (0x0017) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            FilePath;                                                   // 0x0088   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               PrecacheFile;                                               // 0x0098   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x17];                                      // 0x0099   (0x0017) MISSED
 
     /// Functions
     // Function /Script/MediaAssets.FileMediaSource.SetFilePath
@@ -153,7 +173,7 @@ public:
 };
 
 /// Class /Script/MediaAssets.MediaBlueprintFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMediaBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -174,12 +194,14 @@ public:
 };
 
 /// Class /Script/MediaAssets.MediaComponent
-/// Size: 0x00D0 (208 bytes) (0x0000C0 - 0x0000D0) align 8 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x0000C0 - 0x0000D0) align n/a MaxSize: 0x00D0
 class UMediaComponent : public UActorComponent
 { 
 public:
-    class UMediaTexture*                               MediaTexture;                                               // 0x00C0   (0x0008)
-    class UMediaPlayer*                                MediaPlayer;                                                // 0x00C8   (0x0008)
+    UPROPERTY(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMediaTexture*                               MediaTexture;                                               // 0x00C0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, Interp, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMediaPlayer*                                MediaPlayer;                                                // 0x00C8   (0x0008)
 
     /// Functions
     // Function /Script/MediaAssets.MediaComponent.GetMediaTexture
@@ -189,46 +211,70 @@ public:
 };
 
 /// Class /Script/MediaAssets.MediaTimeStampInfo
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class UMediaTimeStampInfo : public UObject
 { 
 public:
-    FTimespan                                          Time;                                                       // 0x0028   (0x0008)
-    int64_t                                            SequenceIndex;                                              // 0x0030   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FTimespan                                          Time;                                                       // 0x0028   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int64_t                                            SequenceIndex;                                              // 0x0030   (0x0008)
 };
 
 /// Class /Script/MediaAssets.MediaPlayer
-/// Size: 0x0138 (312 bytes) (0x000028 - 0x000138) align 8 MaxSize: 0x0138
+/// Size: 0x0138 (312 bytes) (0x000028 - 0x000138) align n/a MaxSize: 0x0138
 class UMediaPlayer : public UObject
 { 
 public:
-    FMulticastInlineDelegate                           OnEndReached;                                               // 0x0028   (0x0010)
-    FMulticastInlineDelegate                           OnMediaClosed;                                              // 0x0038   (0x0010)
-    FMulticastInlineDelegate                           OnMediaOpened;                                              // 0x0048   (0x0010)
-    FMulticastInlineDelegate                           OnMediaOpenFailed;                                          // 0x0058   (0x0010)
-    FMulticastInlineDelegate                           OnPlaybackResumed;                                          // 0x0068   (0x0010)
-    FMulticastInlineDelegate                           OnPlaybackSuspended;                                        // 0x0078   (0x0010)
-    FMulticastInlineDelegate                           OnSeekCompleted;                                            // 0x0088   (0x0010)
-    FMulticastInlineDelegate                           OnTracksChanged;                                            // 0x0098   (0x0010)
-    FTimespan                                          CacheAhead;                                                 // 0x00A8   (0x0008)
-    FTimespan                                          CacheBehind;                                                // 0x00B0   (0x0008)
-    FTimespan                                          CacheBehindGame;                                            // 0x00B8   (0x0008)
-    bool                                               NativeAudioOut;                                             // 0x00C0   (0x0001)
-    bool                                               PlayOnOpen;                                                 // 0x00C1   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x00C2   (0x0002) MISSED
-    bool                                               Shuffle : 1;                                                // 0x00C4:0 (0x0001)
-    bool                                               Loop : 1;                                                   // 0x00C4:1 (0x0001)
-    unsigned char                                      UnknownData01_5[0x3];                                       // 0x00C5   (0x0003) MISSED
-    class UMediaPlaylist*                              Playlist;                                                   // 0x00C8   (0x0008)
-    int32_t                                            PlaylistIndex;                                              // 0x00D0   (0x0004)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x00D4   (0x0004) MISSED
-    FTimespan                                          TimeDelay;                                                  // 0x00D8   (0x0008)
-    float                                              HorizontalFieldOfView;                                      // 0x00E0   (0x0004)
-    float                                              VerticalFieldOfView;                                        // 0x00E4   (0x0004)
-    FRotator                                           ViewRotation;                                               // 0x00E8   (0x000C)
-    unsigned char                                      UnknownData03_6[0x2C];                                      // 0x00F4   (0x002C) MISSED
-    FGuid                                              PlayerGuid;                                                 // 0x0120   (0x0010)
-    unsigned char                                      UnknownData04_7[0x8];                                       // 0x0130   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnEndReached;                                               // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMediaClosed;                                              // 0x0038   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMediaOpened;                                              // 0x0048   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMediaOpenFailed;                                          // 0x0058   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnPlaybackResumed;                                          // 0x0068   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnPlaybackSuspended;                                        // 0x0078   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSeekCompleted;                                            // 0x0088   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnTracksChanged;                                            // 0x0098   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FTimespan                                          CacheAhead;                                                 // 0x00A8   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FTimespan                                          CacheBehind;                                                // 0x00B0   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FTimespan                                          CacheBehindGame;                                            // 0x00B8   (0x0008)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               NativeAudioOut;                                             // 0x00C0   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               PlayOnOpen;                                                 // 0x00C1   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x2];                                       // 0x00C2   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Shuffle : 1;                                                // 0x00C4:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               Loop : 1;                                                   // 0x00C4:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_5[0x3];                                       // 0x00C5   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMediaPlaylist*                              Playlist;                                                   // 0x00C8   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            PlaylistIndex;                                              // 0x00D0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData07_6[0x4];                                       // 0x00D4   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FTimespan                                          TimeDelay;                                                  // 0x00D8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              HorizontalFieldOfView;                                      // 0x00E0   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              VerticalFieldOfView;                                        // 0x00E4   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FRotator                                           ViewRotation;                                               // 0x00E8   (0x000C)
+    /* public    */ unsigned char                                      UnknownData08_6[0x2C];                                      // 0x00F4   (0x002C) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FGuid                                              PlayerGuid;                                                 // 0x0120   (0x0010)
+    /* public    */ unsigned char                                      UnknownData09_7[0x8];                                       // 0x0130   (0x0008) MISSED
 
     /// Functions
     // Function /Script/MediaAssets.MediaPlayer.SupportsSeeking
@@ -444,11 +490,12 @@ public:
 };
 
 /// Class /Script/MediaAssets.MediaPlaylist
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class UMediaPlaylist : public UObject
 { 
 public:
-    TArray<class UMediaSource*>                        Items;                                                      // 0x0028   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UMediaSource*>                        Items;                                                      // 0x0028   (0x0010)
 
     /// Functions
     // Function /Script/MediaAssets.MediaPlaylist.Replace
@@ -491,18 +538,23 @@ public:
 };
 
 /// Class /Script/MediaAssets.MediaSoundComponent
-/// Size: 0x0950 (2384 bytes) (0x000730 - 0x000950) align 16 MaxSize: 0x0950
+/// Size: 0x0950 (2384 bytes) (0x000730 - 0x000950) align n/a MaxSize: 0x0950
 class UMediaSoundComponent : public USynthComponent
 { 
 public:
-    EMediaSoundChannels                                Channels;                                                   // 0x0730   (0x0004)
-    bool                                               DynamicRateAdjustment;                                      // 0x0734   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0735   (0x0003) MISSED
-    float                                              RateAdjustmentFactor;                                       // 0x0738   (0x0004)
-    FFloatRange                                        RateAdjustmentRange;                                        // 0x073C   (0x0010)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x074C   (0x0004) MISSED
-    class UMediaPlayer*                                MediaPlayer;                                                // 0x0750   (0x0008)
-    unsigned char                                      UnknownData02_7[0x1F8];                                     // 0x0758   (0x01F8) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMediaSoundChannels                                Channels;                                                   // 0x0730   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               DynamicRateAdjustment;                                      // 0x0734   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x0735   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RateAdjustmentFactor;                                       // 0x0738   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFloatRange                                        RateAdjustmentRange;                                        // 0x073C   (0x0010)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x074C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMediaPlayer*                                MediaPlayer;                                                // 0x0750   (0x0008)
+    /* public    */ unsigned char                                      UnknownData05_7[0x1F8];                                     // 0x0758   (0x01F8) MISSED
 
     /// Functions
     // Function /Script/MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings
@@ -536,24 +588,35 @@ public:
 };
 
 /// Class /Script/MediaAssets.MediaTexture
-/// Size: 0x01B8 (440 bytes) (0x0000E0 - 0x0001B8) align 8 MaxSize: 0x01B8
+/// Size: 0x01B8 (440 bytes) (0x0000E0 - 0x0001B8) align n/a MaxSize: 0x01B8
 class UMediaTexture : public UTexture
 { 
 public:
-    TEnumAsByte<TextureAddress>                        AddressX;                                                   // 0x00E0   (0x0001)
-    TEnumAsByte<TextureAddress>                        AddressY;                                                   // 0x00E1   (0x0001)
-    bool                                               AutoClear;                                                  // 0x00E2   (0x0001)
-    unsigned char                                      UnknownData00_6[0x1];                                       // 0x00E3   (0x0001) MISSED
-    FLinearColor                                       ClearColor;                                                 // 0x00E4   (0x0010)
-    bool                                               EnableGenMips;                                              // 0x00F4   (0x0001)
-    char                                               NumMips;                                                    // 0x00F5   (0x0001)
-    bool                                               NewStyleOutput;                                             // 0x00F6   (0x0001)
-    TEnumAsByte<MediaTextureOutputFormat>              OutputFormat;                                               // 0x00F7   (0x0001)
-    float                                              CurrentAspectRatio;                                         // 0x00F8   (0x0004)
-    TEnumAsByte<MediaTextureOrientation>               CurrentOrientation;                                         // 0x00FC   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00FD   (0x0003) MISSED
-    class UMediaPlayer*                                MediaPlayer;                                                // 0x0100   (0x0008)
-    unsigned char                                      UnknownData02_7[0xB0];                                      // 0x0108   (0x00B0) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<TextureAddress>                        AddressX;                                                   // 0x00E0   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<TextureAddress>                        AddressY;                                                   // 0x00E1   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               AutoClear;                                                  // 0x00E2   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x1];                                       // 0x00E3   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       ClearColor;                                                 // 0x00E4   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               EnableGenMips;                                              // 0x00F4   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               NumMips;                                                    // 0x00F5   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               NewStyleOutput;                                             // 0x00F6   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<MediaTextureOutputFormat>              OutputFormat;                                               // 0x00F7   (0x0001)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic, SkipSerialization)
+    /* public    */ float                                              CurrentAspectRatio;                                         // 0x00F8   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic, SkipSerialization)
+    /* public    */ TEnumAsByte<MediaTextureOrientation>               CurrentOrientation;                                         // 0x00FC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x00FD   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMediaPlayer*                                MediaPlayer;                                                // 0x0100   (0x0008)
+    /* public    */ unsigned char                                      UnknownData05_7[0xB0];                                      // 0x0108   (0x00B0) MISSED
 
     /// Functions
     // Function /Script/MediaAssets.MediaTexture.SetMediaPlayer
@@ -570,51 +633,61 @@ public:
 };
 
 /// Class /Script/MediaAssets.PlatformMediaSource
-/// Size: 0x0088 (136 bytes) (0x000080 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000080 - 0x000088) align n/a MaxSize: 0x0088
 class UPlatformMediaSource : public UMediaSource
 { 
 public:
-    class UMediaSource*                                MediaSource;                                                // 0x0080   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMediaSource*                                MediaSource;                                                // 0x0080   (0x0008)
 };
 
 /// Class /Script/MediaAssets.StreamMediaSource
-/// Size: 0x0098 (152 bytes) (0x000088 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000088 - 0x000098) align n/a MaxSize: 0x0098
 class UStreamMediaSource : public UBaseMediaSource
 { 
 public:
-    FString                                            StreamUrl;                                                  // 0x0088   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            StreamUrl;                                                  // 0x0088   (0x0010)
 };
 
 /// Class /Script/MediaAssets.TimeSynchronizableMediaSource
-/// Size: 0x0098 (152 bytes) (0x000088 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000088 - 0x000098) align n/a MaxSize: 0x0098
 class UTimeSynchronizableMediaSource : public UBaseMediaSource
 { 
 public:
-    bool                                               bUseTimeSynchronization;                                    // 0x0088   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0089   (0x0003) MISSED
-    int32_t                                            FrameDelay;                                                 // 0x008C   (0x0004)
-    double                                             TimeDelay;                                                  // 0x0090   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseTimeSynchronization;                                    // 0x0088   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0089   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            FrameDelay;                                                 // 0x008C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ double                                             TimeDelay;                                                  // 0x0090   (0x0008)
 };
 
 /// Struct /Script/MediaAssets.MediaCaptureDevice
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FMediaCaptureDevice
 { 
-    FText                                              DisplayName;                                                // 0x0000   (0x0018)
-    FString                                            URL;                                                        // 0x0018   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              DisplayName;                                                // 0x0000   (0x0018)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            URL;                                                        // 0x0018   (0x0010)
 };
 
 /// Struct /Script/MediaAssets.MediaSoundComponentSpectralData
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FMediaSoundComponentSpectralData
 { 
-    float                                              FrequencyHz;                                                // 0x0000   (0x0004)
-    float                                              Magnitude;                                                  // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrequencyHz;                                                // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Magnitude;                                                  // 0x0004   (0x0004)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMediaSource) == 0x0080); // 128 bytes (0x000028 - 0x000080)
 static_assert(sizeof(UBaseMediaSource) == 0x0088); // 136 bytes (0x000080 - 0x000088)
 static_assert(sizeof(UFileMediaSource) == 0x00B0); // 176 bytes (0x000088 - 0x0000B0)
@@ -656,3 +729,4 @@ static_assert(offsetof(UPlatformMediaSource, MediaSource) == 0x0080);
 static_assert(offsetof(UStreamMediaSource, StreamUrl) == 0x0088);
 static_assert(offsetof(FMediaCaptureDevice, DisplayName) == 0x0000);
 static_assert(offsetof(FMediaCaptureDevice, URL) == 0x0018);
+#endif

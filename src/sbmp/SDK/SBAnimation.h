@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "AnimationCore.h"
@@ -17,8 +26,41 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/SBAnimation.FSBAnimNode_GroundCollisionBoneAxis
-/// Size: 0x01 (1 bytes)
+class USBMotionDB;
+struct FCacheHitBoneInfo;
+struct FMotionBoneTackID;
+struct FPreMotionSampleData;
+struct FPrevBlendSpaceSampleData;
+struct FPrevSeqSampleData;
+struct FSBAnimNode_EventMoveIK;
+struct FSBAnimNode_EventMoveTwoBoneIK;
+struct FSBAnimNode_GroundCollision;
+struct FSBAnimNode_GroundCollisionBoneData;
+struct FSBAnimNode_HitBones;
+struct FSBAnimNode_InverseRotControl;
+struct FSBAnimNode_LookAtIK;
+struct FSBAnimNode_MovementBone;
+struct FSBAnimNode_SBBlendSpacePlayer;
+struct FSBAnimNode_SBCustomBlendSpacePlayer;
+struct FSBAnimNode_SBOverriddenBlendSpacePlayer;
+struct FSBAnimNode_SBSMotionPlayer;
+struct FSBAnimNode_SBSequencePlayer;
+struct FSBAnimNode_SequenceBlendedPlayer;
+struct FSBAnimNode_TargetTracking;
+struct FSBAnimNode_TargetTrackingData;
+struct FSBEventMoveIKData;
+struct FSBLookAtIKCachedBoneData;
+struct FSBLookAtIKControlData;
+struct FSBMotionBoneInfo;
+struct FSBMotionFutureData;
+struct FSBMotionFutureMoveMatchingData;
+struct FSBMotionFutureStepData;
+struct FSBMotionKeyData;
+struct FSBMotionMisc;
+struct FSBMovementBoneData;
+struct FSubSequences;
+
+/// Enum /Script/SBAnimation.FSBAnimNode_GroundCollisionBoneAxis -  1 (1 bytes)
 enum class FSBAnimNode_GroundCollisionBoneAxis : uint8_t
 {
     XYZ                                                                              = 0,
@@ -26,16 +68,14 @@ enum class FSBAnimNode_GroundCollisionBoneAxis : uint8_t
     YZX                                                                              = 2
 };
 
-/// Enum /Script/SBAnimation.ESBBoneHitShakeMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBBoneHitShakeMode -  1 (1 bytes)
 enum class ESBBoneHitShakeMode : uint8_t
 {
     SBBoneHitShake_MulOffset                                                         = 0,
     SBBoneHitShake_AddOffset                                                         = 1
 };
 
-/// Enum /Script/SBAnimation.ESBLookAtIKType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBLookAtIKType -  1 (1 bytes)
 enum class ESBLookAtIKType : uint8_t
 {
     SBLookAtIKType_Head                                                              = 0,
@@ -45,8 +85,7 @@ enum class ESBLookAtIKType : uint8_t
     SBLookAtIKType_Num                                                               = 4
 };
 
-/// Enum /Script/SBAnimation.ESBLookAtIKBacksideType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBLookAtIKBacksideType -  1 (1 bytes)
 enum class ESBLookAtIKBacksideType : uint8_t
 {
     LookAtIKBacksideType_None                                                        = 0,
@@ -54,23 +93,20 @@ enum class ESBLookAtIKBacksideType : uint8_t
     LookAtIKBacksideType_Right                                                       = 2
 };
 
-/// Enum /Script/SBAnimation.ESBMovementBoneCurveType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBMovementBoneCurveType -  1 (1 bytes)
 enum class ESBMovementBoneCurveType : uint8_t
 {
     Linear                                                                           = 0,
     Spline                                                                           = 1
 };
 
-/// Enum /Script/SBAnimation.ESBMovementBoneInterpType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBMovementBoneInterpType -  1 (1 bytes)
 enum class ESBMovementBoneInterpType : uint8_t
 {
     Linear                                                                           = 0
 };
 
-/// Enum /Script/SBAnimation.ESBAnimIKTraceDirection
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBAnimIKTraceDirection -  1 (1 bytes)
 enum class ESBAnimIKTraceDirection : uint8_t
 {
     ESBAnimTraceDir_Forward                                                          = 0,
@@ -81,8 +117,7 @@ enum class ESBAnimIKTraceDirection : uint8_t
     ESBAnimTraceDir_InverseUp                                                        = 5
 };
 
-/// Enum /Script/SBAnimation.ESBCollisionShapeType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBCollisionShapeType -  1 (1 bytes)
 enum class ESBCollisionShapeType : uint8_t
 {
     None                                                                             = 0,
@@ -92,8 +127,7 @@ enum class ESBCollisionShapeType : uint8_t
     Capsule                                                                          = 4
 };
 
-/// Enum /Script/SBAnimation.ESBCharacterCustomAnim
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBCharacterCustomAnim -  1 (1 bytes)
 enum class ESBCharacterCustomAnim : uint8_t
 {
     None                                                                             = -1,
@@ -150,8 +184,7 @@ enum class ESBCharacterCustomAnim : uint8_t
     Num                                                                              = 50
 };
 
-/// Enum /Script/SBAnimation.ESBCharacterTransitAnim
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBCharacterTransitAnim -  1 (1 bytes)
 enum class ESBCharacterTransitAnim : uint8_t
 {
     ESBCharTransitAnim_RunToIdle_L                                                   = 0,
@@ -361,8 +394,7 @@ enum class ESBCharacterTransitAnim : uint8_t
     ESBCharTransitAnim_Num                                                           = 204
 };
 
-/// Enum /Script/SBAnimation.ESBAnimNodeBlendSpaceSlot
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBAnimNodeBlendSpaceSlot -  1 (1 bytes)
 enum class ESBAnimNodeBlendSpaceSlot : uint8_t
 {
     BlendSpaceSlot_Run                                                               = 0,
@@ -383,8 +415,7 @@ enum class ESBAnimNodeBlendSpaceSlot : uint8_t
     BlendSpaceSlot_None                                                              = 15
 };
 
-/// Enum /Script/SBAnimation.ESBCustomBlendSpaceParamType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBCustomBlendSpaceParamType -  1 (1 bytes)
 enum class ESBCustomBlendSpaceParamType : uint8_t
 {
     ESBCustomBS_None                                                                 = 0,
@@ -394,8 +425,7 @@ enum class ESBCustomBlendSpaceParamType : uint8_t
     ESBCustomBS_VelocityYAxis                                                        = 4
 };
 
-/// Enum /Script/SBAnimation.ESBAnimNodeCustomPlayType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBAnimNodeCustomPlayType -  1 (1 bytes)
 enum class ESBAnimNodeCustomPlayType : uint8_t
 {
     ESBCustomAnimType_AnimSequence                                                   = 0,
@@ -403,8 +433,7 @@ enum class ESBAnimNodeCustomPlayType : uint8_t
     ESBCustomAnimType_MeshSlot                                                       = 2
 };
 
-/// Enum /Script/SBAnimation.ESBAnimNodeSequenceSlot
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SBAnimation.ESBAnimNodeSequenceSlot -  1 (1 bytes)
 enum class ESBAnimNodeSequenceSlot : uint8_t
 {
     AnimSlot_Fall                                                                    = 0,
@@ -415,514 +444,765 @@ enum class ESBAnimNodeSequenceSlot : uint8_t
 };
 
 /// Struct /Script/SBAnimation.SBMotionBoneInfo
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 4 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FSBMotionBoneInfo
 { 
-    FName                                              BoneName;                                                   // 0x0000   (0x0008)
-    FVector                                            PositionInCS;                                               // 0x0008   (0x000C)
-    FVector                                            VelocityInCS;                                               // 0x0014   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              BoneName;                                                   // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            PositionInCS;                                               // 0x0008   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            VelocityInCS;                                               // 0x0014   (0x000C)
 };
 
 /// Struct /Script/SBAnimation.SBMotionFutureStepData
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 16 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FSBMotionFutureStepData
 { 
-    float                                              DelayTime;                                                  // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0xC];                                       // 0x0004   (0x000C) MISSED
-    FTransform                                         MotionTM;                                                   // 0x0010   (0x0030)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DelayTime;                                                  // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0xC];                                       // 0x0004   (0x000C) MISSED
+    UPROPERTY(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         MotionTM;                                                   // 0x0010   (0x0030)
 };
 
 /// Struct /Script/SBAnimation.SBMotionFutureMoveMatchingData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSBMotionFutureMoveMatchingData
 { 
-    TArray<FVector>                                    NormalizedPositions;                                        // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector>                                    NormalizedPositions;                                        // 0x0000   (0x0010)
 };
 
 /// Struct /Script/SBAnimation.SBMotionFutureData
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FSBMotionFutureData
 { 
-    TArray<FSBMotionFutureStepData>                    Steps;                                                      // 0x0000   (0x0010)
-    FVector                                            EndVelocityInCS;                                            // 0x0010   (0x000C)
-    FVector                                            EndDirection;                                               // 0x001C   (0x000C)
-    float                                              EndVelocitySize;                                            // 0x0028   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x002C   (0x0004) MISSED
-    FSBMotionFutureMoveMatchingData                    MoveMatchingData;                                           // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBMotionFutureStepData>                    Steps;                                                      // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            EndVelocityInCS;                                            // 0x0010   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            EndDirection;                                               // 0x001C   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              EndVelocitySize;                                            // 0x0028   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x002C   (0x0004) MISSED
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ FSBMotionFutureMoveMatchingData                    MoveMatchingData;                                           // 0x0030   (0x0010)
 };
 
 /// Struct /Script/SBAnimation.SBMotionKeyData
-/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align n/a MaxSize: 0x0068
 struct FSBMotionKeyData
 { 
-    float                                              StartTime;                                                  // 0x0000   (0x0004)
-    int32_t                                            AnimSeqIndex;                                               // 0x0004   (0x0004)
-    TArray<FSBMotionBoneInfo>                          BoneInfos;                                                  // 0x0008   (0x0010)
-    FVector                                            VelocityInCS;                                               // 0x0018   (0x000C)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0024   (0x0004) MISSED
-    FSBMotionFutureData                                FutureData;                                                 // 0x0028   (0x0040)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StartTime;                                                  // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            AnimSeqIndex;                                               // 0x0004   (0x0004)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBMotionBoneInfo>                          BoneInfos;                                                  // 0x0008   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            VelocityInCS;                                               // 0x0018   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0024   (0x0004) MISSED
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ FSBMotionFutureData                                FutureData;                                                 // 0x0028   (0x0040)
 };
 
 /// Class /Script/SBAnimation.SBMotionDB
-/// Size: 0x0088 (136 bytes) (0x000030 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000030 - 0x000088) align n/a MaxSize: 0x0088
 class USBMotionDB : public UDataAsset
 { 
 public:
-    float                                              MotionStepTime;                                             // 0x0030   (0x0004)
-    float                                              MotionFutureCheckRangeTime;                                 // 0x0034   (0x0004)
-    class USkeleton*                                   SelectedSkeleton;                                           // 0x0038   (0x0008)
-    TArray<FName>                                      RefBones;                                                   // 0x0040   (0x0010)
-    TArray<int32_t>                                    RefBonesIndex;                                              // 0x0050   (0x0010)
-    TArray<class UAnimSequence*>                       AnimLists;                                                  // 0x0060   (0x0010)
-    int32_t                                            SelectMotionIndex;                                          // 0x0070   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0074   (0x0004) MISSED
-    TArray<FSBMotionKeyData>                           MotionDatas;                                                // 0x0078   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MotionStepTime;                                             // 0x0030   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MotionFutureCheckRangeTime;                                 // 0x0034   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USkeleton*                                   SelectedSkeleton;                                           // 0x0038   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      RefBones;                                                   // 0x0040   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int32_t>                                    RefBonesIndex;                                              // 0x0050   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UAnimSequence*>                       AnimLists;                                                  // 0x0060   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SelectMotionIndex;                                          // 0x0070   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0074   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBMotionKeyData>                           MotionDatas;                                                // 0x0078   (0x0010)
 };
 
 /// Struct /Script/SBAnimation.SBEventMoveIKData
-/// Size: 0x0190 (400 bytes) (0x000000 - 0x000190) align 8 MaxSize: 0x0190
+/// Size: 0x0190 (400 bytes) (0x000000 - 0x000190) align n/a MaxSize: 0x0190
 struct FSBEventMoveIKData
 { 
-    bool                                               bOverrideData;                                              // 0x0000   (0x0001)
-    bool                                               bUseCached;                                                 // 0x0001   (0x0001)
-    bool                                               bEnable;                                                    // 0x0002   (0x0001)
-    unsigned char                                      UnknownData00_6[0x1];                                       // 0x0003   (0x0001) MISSED
-    float                                              ForwardTraceLength;                                         // 0x0004   (0x0004)
-    float                                              BackTraceLength;                                            // 0x0008   (0x0004)
-    FVector                                            TraceExtent;                                                // 0x000C   (0x000C)
-    FVector                                            AdditiveExtent;                                             // 0x0018   (0x000C)
-    TEnumAsByte<ESBAnimIKTraceDirection>               TraceDirectionType;                                         // 0x0024   (0x0001)
-    TEnumAsByte<ECollisionChannel>                     CollisionChannel;                                           // 0x0025   (0x0001)
-    unsigned char                                      UnknownData01_6[0x2];                                       // 0x0026   (0x0002) MISSED
-    TArray<TEnumAsByte<ECollisionChannel>>             AddCollisionChannel;                                        // 0x0028   (0x0010)
-    TEnumAsByte<ESBCollisionShapeType>                 TraceType;                                                  // 0x0038   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0039   (0x0003) MISSED
-    float                                              OffsetBlendTime;                                            // 0x003C   (0x0004)
-    FName                                              ModifyBoneName;                                             // 0x0040   (0x0008)
-    FName                                              TraceBoneName;                                              // 0x0048   (0x0008)
-    FVector                                            OffsetScale;                                                // 0x0050   (0x000C)
-    float                                              UpdateDistance;                                             // 0x005C   (0x0004)
-    FRuntimeFloatCurve                                 IKOffsetBlendCurve;                                         // 0x0060   (0x0088)
-    FRuntimeFloatCurve                                 DetachBlendCurve;                                           // 0x00E8   (0x0088)
-    TArray<FName>                                      OverrideAdjustBoneList;                                     // 0x0170   (0x0010)
-    float                                              FreezeDuration;                                             // 0x0180   (0x0004)
-    bool                                               bApplyFreeze;                                               // 0x0184   (0x0001)
-    unsigned char                                      UnknownData03_6[0x3];                                       // 0x0185   (0x0003) MISSED
-    float                                              ApplyDuration;                                              // 0x0188   (0x0004)
-    unsigned char                                      UnknownData04_7[0x4];                                       // 0x018C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bOverrideData;                                              // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseCached;                                                 // 0x0001   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnable;                                                    // 0x0002   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x1];                                       // 0x0003   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ForwardTraceLength;                                         // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BackTraceLength;                                            // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            TraceExtent;                                                // 0x000C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            AdditiveExtent;                                             // 0x0018   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBAnimIKTraceDirection>               TraceDirectionType;                                         // 0x0024   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ECollisionChannel>                     CollisionChannel;                                           // 0x0025   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x2];                                       // 0x0026   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<TEnumAsByte<ECollisionChannel>>             AddCollisionChannel;                                        // 0x0028   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBCollisionShapeType>                 TraceType;                                                  // 0x0038   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x3];                                       // 0x0039   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              OffsetBlendTime;                                            // 0x003C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ModifyBoneName;                                             // 0x0040   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              TraceBoneName;                                              // 0x0048   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            OffsetScale;                                                // 0x0050   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              UpdateDistance;                                             // 0x005C   (0x0004)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FRuntimeFloatCurve                                 IKOffsetBlendCurve;                                         // 0x0060   (0x0088)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FRuntimeFloatCurve                                 DetachBlendCurve;                                           // 0x00E8   (0x0088)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      OverrideAdjustBoneList;                                     // 0x0170   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FreezeDuration;                                             // 0x0180   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bApplyFreeze;                                               // 0x0184   (0x0001)
+    /* public    */ unsigned char                                      UnknownData08_6[0x3];                                       // 0x0185   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ApplyDuration;                                              // 0x0188   (0x0004)
+    /* public    */ unsigned char                                      UnknownData09_7[0x4];                                       // 0x018C   (0x0004) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_EventMoveIK
-/// Size: 0x04E0 (1248 bytes) (0x0000C8 - 0x0004E0) align 16 MaxSize: 0x04E0
+/// Size: 0x04E0 (1248 bytes) (0x0000C8 - 0x0004E0) align n/a MaxSize: 0x04E0
 struct FSBAnimNode_EventMoveIK : FAnimNode_SkeletalControlBase
 { 
-    unsigned char                                      UnknownData00_8[0x8];                                       // 0x00C8   (0x0008) MISSED
-    FBoneSocketTarget                                  RootBoneToModify;                                           // 0x00D0   (0x0070)
-    TArray<FBoneSocketTarget>                          AdjustBoneList;                                             // 0x0140   (0x0010)
-    FSBEventMoveIKData                                 EventMoveIKData;                                            // 0x0150   (0x0190)
-    bool                                               bDebugDrawView;                                             // 0x02E0   (0x0001)
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x02E1   (0x0007) MISSED
-    FSBEventMoveIKData                                 CacheEventMoveIKData;                                       // 0x02E8   (0x0190)
-    FVector                                            BlendStartEffectorOffset;                                   // 0x0478   (0x000C)
-    FVector                                            BlendTargetEffectorOffset;                                  // 0x0484   (0x000C)
-    FVector                                            CurrentEffectorOffset;                                      // 0x0490   (0x000C)
-    float                                              CurrentEffectorBlendTime;                                   // 0x049C   (0x0004)
-    FVector                                            LastHitImpactPoint;                                         // 0x04A0   (0x000C)
-    FVector                                            FinalAdjustOffset;                                          // 0x04AC   (0x000C)
-    unsigned char                                      UnknownData02_7[0x28];                                      // 0x04B8   (0x0028) MISSED
+    /* public    */ unsigned char                                      UnknownData03_8[0x8];                                       // 0x00C8   (0x0008) MISSED
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneSocketTarget                                  RootBoneToModify;                                           // 0x00D0   (0x0070)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FBoneSocketTarget>                          AdjustBoneList;                                             // 0x0140   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSBEventMoveIKData                                 EventMoveIKData;                                            // 0x0150   (0x0190)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDebugDrawView;                                             // 0x02E0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x7];                                       // 0x02E1   (0x0007) MISSED
+    UPROPERTY(Transient, NativeAccessSpecifierPublic)
+    /* public    */ FSBEventMoveIKData                                 CacheEventMoveIKData;                                       // 0x02E8   (0x0190)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            BlendStartEffectorOffset;                                   // 0x0478   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            BlendTargetEffectorOffset;                                  // 0x0484   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            CurrentEffectorOffset;                                      // 0x0490   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentEffectorBlendTime;                                   // 0x049C   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LastHitImpactPoint;                                         // 0x04A0   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            FinalAdjustOffset;                                          // 0x04AC   (0x000C)
+    /* public    */ unsigned char                                      UnknownData05_7[0x28];                                      // 0x04B8   (0x0028) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_EventMoveTwoBoneIK
-/// Size: 0x0620 (1568 bytes) (0x0001F8 - 0x000620) align 16 MaxSize: 0x0620
+/// Size: 0x0620 (1568 bytes) (0x0001F8 - 0x000620) align n/a MaxSize: 0x0620
 struct FSBAnimNode_EventMoveTwoBoneIK : FAnimNode_TwoBoneIK
 { 
-    FSBEventMoveIKData                                 EventMoveIKData;                                            // 0x01F8   (0x0190)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0388   (0x0008) MISSED
-    FBoneSocketTarget                                  AdjustBoneTarget;                                           // 0x0390   (0x0070)
-    TArray<FBoneSocketTarget>                          FixedWithFreezeBone;                                        // 0x0400   (0x0010)
-    FSBEventMoveIKData                                 CacheEventMoveIKData;                                       // 0x0410   (0x0190)
-    FVector                                            BlendStartEffectorOffset;                                   // 0x05A0   (0x000C)
-    FVector                                            BlendTargetEffectorOffset;                                  // 0x05AC   (0x000C)
-    FVector                                            CurrentEffectorOffset;                                      // 0x05B8   (0x000C)
-    float                                              CurrentEffectorBlendTime;                                   // 0x05C4   (0x0004)
-    FVector                                            LastHitImpactPoint;                                         // 0x05C8   (0x000C)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x05D4   (0x0004) MISSED
-    class UPhysicalMaterial*                           LastHitPhysMaterial;                                        // 0x05D8   (0x0008)
-    bool                                               bDebugDrawView;                                             // 0x05E0   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x05E1   (0x0003) MISSED
-    FVector                                            FinalOffsetLocal;                                           // 0x05E4   (0x000C)
-    bool                                               bFreezeEffector;                                            // 0x05F0   (0x0001)
-    unsigned char                                      UnknownData03_6[0x3];                                       // 0x05F1   (0x0003) MISSED
-    float                                              CurrentFreezeTime;                                          // 0x05F4   (0x0004)
-    float                                              FreezeDuration;                                             // 0x05F8   (0x0004)
-    FVector                                            FreezeLocationWS;                                           // 0x05FC   (0x000C)
-    unsigned char                                      UnknownData04_7[0x18];                                      // 0x0608   (0x0018) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSBEventMoveIKData                                 EventMoveIKData;                                            // 0x01F8   (0x0190)
+    /* public    */ unsigned char                                      UnknownData05_6[0x8];                                       // 0x0388   (0x0008) MISSED
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneSocketTarget                                  AdjustBoneTarget;                                           // 0x0390   (0x0070)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FBoneSocketTarget>                          FixedWithFreezeBone;                                        // 0x0400   (0x0010)
+    UPROPERTY(Transient, NativeAccessSpecifierPublic)
+    /* public    */ FSBEventMoveIKData                                 CacheEventMoveIKData;                                       // 0x0410   (0x0190)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            BlendStartEffectorOffset;                                   // 0x05A0   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            BlendTargetEffectorOffset;                                  // 0x05AC   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            CurrentEffectorOffset;                                      // 0x05B8   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentEffectorBlendTime;                                   // 0x05C4   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LastHitImpactPoint;                                         // 0x05C8   (0x000C)
+    /* public    */ unsigned char                                      UnknownData06_6[0x4];                                       // 0x05D4   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPhysicalMaterial*                           LastHitPhysMaterial;                                        // 0x05D8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDebugDrawView;                                             // 0x05E0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x3];                                       // 0x05E1   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            FinalOffsetLocal;                                           // 0x05E4   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFreezeEffector;                                            // 0x05F0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData08_6[0x3];                                       // 0x05F1   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentFreezeTime;                                          // 0x05F4   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FreezeDuration;                                             // 0x05F8   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            FreezeLocationWS;                                           // 0x05FC   (0x000C)
+    /* public    */ unsigned char                                      UnknownData09_7[0x18];                                      // 0x0608   (0x0018) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_GroundCollisionBoneData
-/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align 4 MaxSize: 0x001C
+/// Size: 0x001C (28 bytes) (0x000000 - 0x00001C) align n/a MaxSize: 0x001C
 struct FSBAnimNode_GroundCollisionBoneData
 { 
-    FBoneReference                                     Bone;                                                       // 0x0000   (0x0010)
-    TEnumAsByte<FSBAnimNode_GroundCollisionBoneAxis>   AxisType;                                                   // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0011   (0x0003) MISSED
-    float                                              CapsuleRadius;                                              // 0x0014   (0x0004)
-    float                                              CapsuleHalfHeight;                                          // 0x0018   (0x0004)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     Bone;                                                       // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<FSBAnimNode_GroundCollisionBoneAxis>   AxisType;                                                   // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0011   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CapsuleRadius;                                              // 0x0014   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CapsuleHalfHeight;                                          // 0x0018   (0x0004)
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_GroundCollision
-/// Size: 0x0198 (408 bytes) (0x0000C8 - 0x000198) align 8 MaxSize: 0x0198
+/// Size: 0x0198 (408 bytes) (0x0000C8 - 0x000198) align n/a MaxSize: 0x0198
 struct FSBAnimNode_GroundCollision : FAnimNode_SkeletalControlBase
 { 
-    FBoneReference                                     StartBone;                                                  // 0x00C8   (0x0010)
-    FBoneReference                                     EndBone;                                                    // 0x00D8   (0x0010)
-    TArray<FSBAnimNode_GroundCollisionBoneData>        CollisionCheckBoneArray;                                    // 0x00E8   (0x0010)
-    unsigned char                                      UnknownData00_7[0xA0];                                      // 0x00F8   (0x00A0) MISSED
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     StartBone;                                                  // 0x00C8   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     EndBone;                                                    // 0x00D8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBAnimNode_GroundCollisionBoneData>        CollisionCheckBoneArray;                                    // 0x00E8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0xA0];                                      // 0x00F8   (0x00A0) MISSED
 };
 
 /// Struct /Script/SBAnimation.CacheHitBoneInfo
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FCacheHitBoneInfo
 { 
-    int32_t                                            BoneIndex;                                                  // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<int32_t>                                    SideIndex;                                                  // 0x0008   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            BoneIndex;                                                  // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int32_t>                                    SideIndex;                                                  // 0x0008   (0x0010)
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_HitBones
-/// Size: 0x0258 (600 bytes) (0x0000C8 - 0x000258) align 8 MaxSize: 0x0258
+/// Size: 0x0258 (600 bytes) (0x0000C8 - 0x000258) align n/a MaxSize: 0x0258
 struct FSBAnimNode_HitBones : FAnimNode_SkeletalControlBase
 { 
-    float                                              HitForceFallOffValue;                                       // 0x00C8   (0x0004)
-    bool                                               bUseHitForceFallOffCurve;                                   // 0x00CC   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x00CD   (0x0003) MISSED
-    class UCurveFloat*                                 HitForceFallOffCurve;                                       // 0x00D0   (0x0008)
-    unsigned char                                      UnknownData01_6[0x28];                                      // 0x00D8   (0x0028) MISSED
-    FFOscillator                                       ShakeNoise;                                                 // 0x0100   (0x000C)
-    bool                                               bUseShakeNoise;                                             // 0x010C   (0x0001)
-    TEnumAsByte<ESBBoneHitShakeMode>                   ShakeNoiseMode;                                             // 0x010D   (0x0001)
-    unsigned char                                      UnknownData02_6[0x2];                                       // 0x010E   (0x0002) MISSED
-    float                                              HitTranslationScale;                                        // 0x0110   (0x0004)
-    float                                              HitRotationScale;                                           // 0x0114   (0x0004)
-    TArray<FName>                                      ExclusiveHitBones;                                          // 0x0118   (0x0010)
-    TArray<FName>                                      FollowParentBones;                                          // 0x0128   (0x0010)
-    TArray<FName>                                      MakedFollowParentAllChildBones;                             // 0x0138   (0x0010)
-    FName                                              AddFollowParentAllChildBones;                               // 0x0148   (0x0008)
-    TMap<FName, int32_t>                               ExclusiveHitBonesMap;                                       // 0x0150   (0x0050)
-    TMap<FName, int32_t>                               FollowParentBonesMap;                                       // 0x01A0   (0x0050)
-    TMap<FName, int32_t>                               MakedFollowParentAllChildBonesMap;                          // 0x01F0   (0x0050)
-    TArray<FCacheHitBoneInfo>                          CacheHitBones;                                              // 0x0240   (0x0010)
-    class USkeleton*                                   CacheSkeleton;                                              // 0x0250   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HitForceFallOffValue;                                       // 0x00C8   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseHitForceFallOffCurve;                                   // 0x00CC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x00CD   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UCurveFloat*                                 HitForceFallOffCurve;                                       // 0x00D0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData04_6[0x28];                                      // 0x00D8   (0x0028) MISSED
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FFOscillator                                       ShakeNoise;                                                 // 0x0100   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseShakeNoise;                                             // 0x010C   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBBoneHitShakeMode>                   ShakeNoiseMode;                                             // 0x010D   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x2];                                       // 0x010E   (0x0002) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HitTranslationScale;                                        // 0x0110   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HitRotationScale;                                           // 0x0114   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      ExclusiveHitBones;                                          // 0x0118   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      FollowParentBones;                                          // 0x0128   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      MakedFollowParentAllChildBones;                             // 0x0138   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              AddFollowParentAllChildBones;                               // 0x0148   (0x0008)
+    UPROPERTY(Edit, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FName, int32_t>                               ExclusiveHitBonesMap;                                       // 0x0150   (0x0050)
+    UPROPERTY(Edit, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FName, int32_t>                               FollowParentBonesMap;                                       // 0x01A0   (0x0050)
+    UPROPERTY(Edit, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FName, int32_t>                               MakedFollowParentAllChildBonesMap;                          // 0x01F0   (0x0050)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FCacheHitBoneInfo>                          CacheHitBones;                                              // 0x0240   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USkeleton*                                   CacheSkeleton;                                              // 0x0250   (0x0008)
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_InverseRotControl
-/// Size: 0x01F0 (496 bytes) (0x0000C8 - 0x0001F0) align 16 MaxSize: 0x01F0
+/// Size: 0x01F0 (496 bytes) (0x0000C8 - 0x0001F0) align n/a MaxSize: 0x01F0
 struct FSBAnimNode_InverseRotControl : FAnimNode_SkeletalControlBase
 { 
-    FBoneReference                                     TargetBone;                                                 // 0x00C8   (0x0010)
-    FName                                              BaseBoneName;                                               // 0x00D8   (0x0008)
-    float                                              AttenuationFromBaseBoneRotScale;                            // 0x00E0   (0x0004)
-    float                                              DeaccellationRotPerSec;                                     // 0x00E4   (0x0004)
-    float                                              ThreshHoldRotValue;                                         // 0x00E8   (0x0004)
-    float                                              MaxTotalRotValue;                                           // 0x00EC   (0x0004)
-    float                                              MaxDeltaRotValue;                                           // 0x00F0   (0x0004)
-    bool                                               bUseLocationControl;                                        // 0x00F4   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x00F5   (0x0003) MISSED
-    float                                              AttenuationFromBaseBoneLocScale;                            // 0x00F8   (0x0004)
-    float                                              DeaccellationLocPerSec;                                     // 0x00FC   (0x0004)
-    FVector                                            ThreshHoldLocValue;                                         // 0x0100   (0x000C)
-    FVector                                            MaxTotalLocValue;                                           // 0x010C   (0x000C)
-    FVector                                            MaxDeltaLocValue;                                           // 0x0118   (0x000C)
-    FVector                                            AccumulateLocSensitivity;                                   // 0x0124   (0x000C)
-    bool                                               bDynamicDisableLocControl;                                  // 0x0130   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0131   (0x0003) MISSED
-    float                                              DynamicDisableLocBlendSpeed;                                // 0x0134   (0x0004)
-    float                                              DynamicDisableLocMinAlpha;                                  // 0x0138   (0x0004)
-    float                                              DynamicDisableLocAlpha;                                     // 0x013C   (0x0004)
-    float                                              BeforeAlpha;                                                // 0x0140   (0x0004)
-    unsigned char                                      UnknownData02_6[0xC];                                       // 0x0144   (0x000C) MISSED
-    FTransform                                         BoneWorldLastTM;                                            // 0x0150   (0x0030)
-    FTransform                                         BaseBoneWorldLastTM;                                        // 0x0180   (0x0030)
-    FRotator                                           AccumulateRotDelta;                                         // 0x01B0   (0x000C)
-    FVector                                            AccumulateLocDelta;                                         // 0x01BC   (0x000C)
-    FRotator                                           ActualAccumulateRotDelta;                                   // 0x01C8   (0x000C)
-    FVector                                            ActualAccumulateLocDelta;                                   // 0x01D4   (0x000C)
-    float                                              AccumulateSpeed;                                            // 0x01E0   (0x0004)
-    float                                              AlphaBlendSpeed;                                            // 0x01E4   (0x0004)
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x01E8   (0x0008) MISSED
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     TargetBone;                                                 // 0x00C8   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              BaseBoneName;                                               // 0x00D8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AttenuationFromBaseBoneRotScale;                            // 0x00E0   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DeaccellationRotPerSec;                                     // 0x00E4   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ThreshHoldRotValue;                                         // 0x00E8   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaxTotalRotValue;                                           // 0x00EC   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaxDeltaRotValue;                                           // 0x00F0   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseLocationControl;                                        // 0x00F4   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x00F5   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AttenuationFromBaseBoneLocScale;                            // 0x00F8   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DeaccellationLocPerSec;                                     // 0x00FC   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            ThreshHoldLocValue;                                         // 0x0100   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            MaxTotalLocValue;                                           // 0x010C   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            MaxDeltaLocValue;                                           // 0x0118   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            AccumulateLocSensitivity;                                   // 0x0124   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDynamicDisableLocControl;                                  // 0x0130   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x3];                                       // 0x0131   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DynamicDisableLocBlendSpeed;                                // 0x0134   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DynamicDisableLocMinAlpha;                                  // 0x0138   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DynamicDisableLocAlpha;                                     // 0x013C   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BeforeAlpha;                                                // 0x0140   (0x0004)
+    /* public    */ unsigned char                                      UnknownData06_6[0xC];                                       // 0x0144   (0x000C) MISSED
+    UPROPERTY(Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         BoneWorldLastTM;                                            // 0x0150   (0x0030)
+    UPROPERTY(Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         BaseBoneWorldLastTM;                                        // 0x0180   (0x0030)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FRotator                                           AccumulateRotDelta;                                         // 0x01B0   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            AccumulateLocDelta;                                         // 0x01BC   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FRotator                                           ActualAccumulateRotDelta;                                   // 0x01C8   (0x000C)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            ActualAccumulateLocDelta;                                   // 0x01D4   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AccumulateSpeed;                                            // 0x01E0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AlphaBlendSpeed;                                            // 0x01E4   (0x0004)
+    /* public    */ unsigned char                                      UnknownData07_7[0x8];                                       // 0x01E8   (0x0008) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBLookAtIKControlData
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 4 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FSBLookAtIKControlData
 { 
-    FBoneReference                                     Bone;                                                       // 0x0000   (0x0010)
-    float                                              Weight;                                                     // 0x0010   (0x0004)
-    float                                              StartYawValue;                                              // 0x0014   (0x0004)
-    float                                              StartPitchValue;                                            // 0x0018   (0x0004)
-    float                                              LookAtClampYaw;                                             // 0x001C   (0x0004)
-    float                                              LookAtClampPitchUp;                                         // 0x0020   (0x0004)
-    float                                              LookAtClampPitchDown;                                       // 0x0024   (0x0004)
-    float                                              StopPitchWhenGreaterYaw;                                    // 0x0028   (0x0004)
-    float                                              StopLookAtWhenGreaterYaw;                                   // 0x002C   (0x0004)
+    UPROPERTY(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     Bone;                                                       // 0x0000   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Weight;                                                     // 0x0010   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StartYawValue;                                              // 0x0014   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StartPitchValue;                                            // 0x0018   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LookAtClampYaw;                                             // 0x001C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LookAtClampPitchUp;                                         // 0x0020   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LookAtClampPitchDown;                                       // 0x0024   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StopPitchWhenGreaterYaw;                                    // 0x0028   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StopLookAtWhenGreaterYaw;                                   // 0x002C   (0x0004)
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_LookAtIK
-/// Size: 0x01A0 (416 bytes) (0x0000C8 - 0x0001A0) align 16 MaxSize: 0x01A0
+/// Size: 0x01A0 (416 bytes) (0x0000C8 - 0x0001A0) align n/a MaxSize: 0x01A0
 struct FSBAnimNode_LookAtIK : FAnimNode_SkeletalControlBase
 { 
-    TEnumAsByte<ESBLookAtIKType>                       LookAtIKType;                                               // 0x00C8   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x00C9   (0x0003) MISSED
-    FBoneReference                                     StartBone;                                                  // 0x00CC   (0x0010)
-    FBoneReference                                     EndBone;                                                    // 0x00DC   (0x0010)
-    bool                                               bUseRelativeLocation;                                       // 0x00EC   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00ED   (0x0003) MISSED
-    TArray<FSBLookAtIKControlData>                     LookAtIKControlDatas;                                       // 0x00F0   (0x0010)
-    TArray<FSBLookAtIKControlData>                     AdditiveLookAtIKControlDatas;                               // 0x0100   (0x0010)
-    float                                              RotationSpeed;                                              // 0x0110   (0x0004)
-    float                                              OverrideRotationSpeed;                                      // 0x0114   (0x0004)
-    float                                              OverrideAlpha;                                              // 0x0118   (0x0004)
-    float                                              RotationEndSpeed;                                           // 0x011C   (0x0004)
-    float                                              BacksideChangeYawOverAngle;                                 // 0x0120   (0x0004)
-    bool                                               bUseNode;                                                   // 0x0124   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0125   (0x0003) MISSED
-    FVector                                            LookAtWorldLocation;                                        // 0x0128   (0x000C)
-    FAxis                                              LookAt_Axis;                                                // 0x0134   (0x0010)
-    TEnumAsByte<ESBLookAtIKBacksideType>               LookAtIKBacksideType;                                       // 0x0144   (0x0001)
-    unsigned char                                      UnknownData03_6[0x3];                                       // 0x0145   (0x0003) MISSED
-    float                                              CurrentRotationDegreePerFrame;                              // 0x0148   (0x0004)
-    float                                              PrevChangeYawAngle;                                         // 0x014C   (0x0004)
-    float                                              PrevChangePitchAngle;                                       // 0x0150   (0x0004)
-    float                                              DeltaTime;                                                  // 0x0154   (0x0004)
-    bool                                               bValidLocation;                                             // 0x0158   (0x0001)
-    bool                                               bEnable;                                                    // 0x0159   (0x0001)
-    bool                                               bControlByCode;                                             // 0x015A   (0x0001)
-    unsigned char                                      UnknownData04_6[0x1];                                       // 0x015B   (0x0001) MISSED
-    float                                              CurrentAlpha;                                               // 0x015C   (0x0004)
-    unsigned char                                      UnknownData05_7[0x40];                                      // 0x0160   (0x0040) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBLookAtIKType>                       LookAtIKType;                                               // 0x00C8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x3];                                       // 0x00C9   (0x0003) MISSED
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     StartBone;                                                  // 0x00CC   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     EndBone;                                                    // 0x00DC   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseRelativeLocation;                                       // 0x00EC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x3];                                       // 0x00ED   (0x0003) MISSED
+    UPROPERTY(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBLookAtIKControlData>                     LookAtIKControlDatas;                                       // 0x00F0   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBLookAtIKControlData>                     AdditiveLookAtIKControlDatas;                               // 0x0100   (0x0010)
+    UPROPERTY(Edit, EditFixedSize, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RotationSpeed;                                              // 0x0110   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              OverrideRotationSpeed;                                      // 0x0114   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              OverrideAlpha;                                              // 0x0118   (0x0004)
+    UPROPERTY(Edit, EditFixedSize, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RotationEndSpeed;                                           // 0x011C   (0x0004)
+    UPROPERTY(Edit, EditFixedSize, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BacksideChangeYawOverAngle;                                 // 0x0120   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseNode;                                                   // 0x0124   (0x0001)
+    /* public    */ unsigned char                                      UnknownData08_6[0x3];                                       // 0x0125   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LookAtWorldLocation;                                        // 0x0128   (0x000C)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FAxis                                              LookAt_Axis;                                                // 0x0134   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBLookAtIKBacksideType>               LookAtIKBacksideType;                                       // 0x0144   (0x0001)
+    /* public    */ unsigned char                                      UnknownData09_6[0x3];                                       // 0x0145   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentRotationDegreePerFrame;                              // 0x0148   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevChangeYawAngle;                                         // 0x014C   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevChangePitchAngle;                                       // 0x0150   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DeltaTime;                                                  // 0x0154   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bValidLocation;                                             // 0x0158   (0x0001)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnable;                                                    // 0x0159   (0x0001)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bControlByCode;                                             // 0x015A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData10_6[0x1];                                       // 0x015B   (0x0001) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentAlpha;                                               // 0x015C   (0x0004)
+    /* public    */ unsigned char                                      UnknownData11_7[0x40];                                      // 0x0160   (0x0040) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBLookAtIKCachedBoneData
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 16 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FSBLookAtIKCachedBoneData
 { 
-    FBoneReference                                     Bone;                                                       // 0x0000   (0x0010)
-    int32_t                                            RefSkeletonIndex;                                           // 0x0010   (0x0004)
-    unsigned char                                      UnknownData00_6[0xC];                                       // 0x0014   (0x000C) MISSED
-    FTransform                                         BoneTransform;                                              // 0x0020   (0x0030)
+    UPROPERTY(NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     Bone;                                                       // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            RefSkeletonIndex;                                           // 0x0010   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0xC];                                       // 0x0014   (0x000C) MISSED
+    UPROPERTY(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         BoneTransform;                                              // 0x0020   (0x0030)
 };
 
 /// Struct /Script/SBAnimation.SBMovementBoneData
-/// Size: 0x0090 (144 bytes) (0x000000 - 0x000090) align 16 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000000 - 0x000090) align n/a MaxSize: 0x0090
 struct FSBMovementBoneData
 { 
-    FName                                              ModifyBoneName;                                             // 0x0000   (0x0008)
-    FName                                              TargetBoneName;                                             // 0x0008   (0x0008)
-    TEnumAsByte<ESBMovementBoneInterpType>             InterpType;                                                 // 0x0010   (0x0001)
-    TEnumAsByte<ESBMovementBoneCurveType>              CurveType;                                                  // 0x0011   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0012   (0x0002) MISSED
-    int32_t                                            ModifyBoneIndex;                                            // 0x0014   (0x0004)
-    float                                              InterpolationTime;                                          // 0x0018   (0x0004)
-    float                                              CurrentInterpTime;                                          // 0x001C   (0x0004)
-    float                                              KeepDuration;                                               // 0x0020   (0x0004)
-    unsigned char                                      UnknownData01_6[0xC];                                       // 0x0024   (0x000C) MISSED
-    FTransform                                         StartWoldTM;                                                // 0x0030   (0x0030)
-    FVector                                            CurrentTargetLocation;                                      // 0x0060   (0x000C)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x006C   (0x0004) MISSED
-    class USkeletalMeshComponent*                      pTargetComponent;                                           // 0x0070   (0x0008)
-    FName                                              RestoreAttachBoneName;                                      // 0x0078   (0x0008)
-    class USceneComponent*                             RestoreAttachComponent;                                     // 0x0080   (0x0008)
-    unsigned char                                      UnknownData03_7[0x8];                                       // 0x0088   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              ModifyBoneName;                                             // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              TargetBoneName;                                             // 0x0008   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBMovementBoneInterpType>             InterpType;                                                 // 0x0010   (0x0001)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBMovementBoneCurveType>              CurveType;                                                  // 0x0011   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x2];                                       // 0x0012   (0x0002) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ModifyBoneIndex;                                            // 0x0014   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              InterpolationTime;                                          // 0x0018   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentInterpTime;                                          // 0x001C   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              KeepDuration;                                               // 0x0020   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_6[0xC];                                       // 0x0024   (0x000C) MISSED
+    UPROPERTY(Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         StartWoldTM;                                                // 0x0030   (0x0030)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            CurrentTargetLocation;                                      // 0x0060   (0x000C)
+    /* public    */ unsigned char                                      UnknownData06_6[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USkeletalMeshComponent*                      pTargetComponent;                                           // 0x0070   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              RestoreAttachBoneName;                                      // 0x0078   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USceneComponent*                             RestoreAttachComponent;                                     // 0x0080   (0x0008)
+    /* public    */ unsigned char                                      UnknownData07_7[0x8];                                       // 0x0088   (0x0008) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_MovementBone
-/// Size: 0x00D8 (216 bytes) (0x0000C8 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x0000C8 - 0x0000D8) align n/a MaxSize: 0x00D8
 struct FSBAnimNode_MovementBone : FAnimNode_SkeletalControlBase
 { 
-    TArray<FSBMovementBoneData>                        MovementBoneList;                                           // 0x00C8   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBMovementBoneData>                        MovementBoneList;                                           // 0x00C8   (0x0010)
 };
 
 /// Struct /Script/SBAnimation.PrevBlendSpaceSampleData
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FPrevBlendSpaceSampleData
 { 
-    class UBlendSpaceBase*                             BlendSpace;                                                 // 0x0000   (0x0008)
-    TArray<FBlendSampleData>                           SampleData;                                                 // 0x0008   (0x0010)
-    float                                              PrevBlendWeight;                                            // 0x0018   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x001C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBlendSpaceBase*                             BlendSpace;                                                 // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FBlendSampleData>                           SampleData;                                                 // 0x0008   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevBlendWeight;                                            // 0x0018   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x001C   (0x0004) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_SBBlendSpacePlayer
-/// Size: 0x0158 (344 bytes) (0x0000F0 - 0x000158) align 8 MaxSize: 0x0158
+/// Size: 0x0158 (344 bytes) (0x0000F0 - 0x000158) align n/a MaxSize: 0x0158
 struct FSBAnimNode_SBBlendSpacePlayer : FAnimNode_BlendSpacePlayer
 { 
-    bool                                               bUseBlendSpaceSlot;                                         // 0x00F0   (0x0001)
-    TEnumAsByte<ESBAnimNodeBlendSpaceSlot>             BlendSpaceType;                                             // 0x00F1   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x00F2   (0x0002) MISSED
-    float                                              PrevSampleBlendingTime;                                     // 0x00F4   (0x0004)
-    float                                              RotateRootX;                                                // 0x00F8   (0x0004)
-    float                                              RotateRootY;                                                // 0x00FC   (0x0004)
-    bool                                               bRotateRootBone;                                            // 0x0100   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0101   (0x0003) MISSED
-    FName                                              RotateRootBooneName;                                        // 0x0104   (0x0008)
-    FVector                                            RotateRootTarget;                                           // 0x010C   (0x000C)
-    FVector                                            CurrentRotateRoot;                                          // 0x0118   (0x000C)
-    float                                              RotateRootRotDelta;                                         // 0x0124   (0x0004)
-    bool                                               bUseRotateRootRotDeltaCurve;                                // 0x0128   (0x0001)
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0129   (0x0007) MISSED
-    class UCurveFloat*                                 RotateRootRotDeltaCurve;                                    // 0x0130   (0x0008)
-    float                                              CurrentRotDeltaCurveTime;                                   // 0x0138   (0x0004)
-    unsigned char                                      UnknownData03_6[0x4];                                       // 0x013C   (0x0004) MISSED
-    TArray<FPrevBlendSpaceSampleData>                  PrevSampleData;                                             // 0x0140   (0x0010)
-    float                                              PrevBlendTotalWeight;                                       // 0x0150   (0x0004)
-    unsigned char                                      UnknownData04_7[0x4];                                       // 0x0154   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseBlendSpaceSlot;                                         // 0x00F0   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBAnimNodeBlendSpaceSlot>             BlendSpaceType;                                             // 0x00F1   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x2];                                       // 0x00F2   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevSampleBlendingTime;                                     // 0x00F4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RotateRootX;                                                // 0x00F8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RotateRootY;                                                // 0x00FC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bRotateRootBone;                                            // 0x0100   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x3];                                       // 0x0101   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              RotateRootBooneName;                                        // 0x0104   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            RotateRootTarget;                                           // 0x010C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            CurrentRotateRoot;                                          // 0x0118   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RotateRootRotDelta;                                         // 0x0124   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseRotateRootRotDeltaCurve;                                // 0x0128   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x7];                                       // 0x0129   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UCurveFloat*                                 RotateRootRotDeltaCurve;                                    // 0x0130   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentRotDeltaCurveTime;                                   // 0x0138   (0x0004)
+    /* public    */ unsigned char                                      UnknownData08_6[0x4];                                       // 0x013C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FPrevBlendSpaceSampleData>                  PrevSampleData;                                             // 0x0140   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevBlendTotalWeight;                                       // 0x0150   (0x0004)
+    /* public    */ unsigned char                                      UnknownData09_7[0x4];                                       // 0x0154   (0x0004) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_SBCustomBlendSpacePlayer
-/// Size: 0x0100 (256 bytes) (0x0000F0 - 0x000100) align 8 MaxSize: 0x0100
+/// Size: 0x0100 (256 bytes) (0x0000F0 - 0x000100) align n/a MaxSize: 0x0100
 struct FSBAnimNode_SBCustomBlendSpacePlayer : FAnimNode_BlendSpacePlayer
 { 
-    FName                                              SBNodeName;                                                 // 0x00F0   (0x0008)
-    TEnumAsByte<ESBCustomBlendSpaceParamType>          InputParamType1;                                            // 0x00F8   (0x0001)
-    TEnumAsByte<ESBCustomBlendSpaceParamType>          InputParamType2;                                            // 0x00F9   (0x0001)
-    unsigned char                                      UnknownData00_7[0x6];                                       // 0x00FA   (0x0006) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              SBNodeName;                                                 // 0x00F0   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBCustomBlendSpaceParamType>          InputParamType1;                                            // 0x00F8   (0x0001)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBCustomBlendSpaceParamType>          InputParamType2;                                            // 0x00F9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x6];                                       // 0x00FA   (0x0006) MISSED
 };
 
 /// Struct /Script/SBAnimation.PreMotionSampleData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FPreMotionSampleData
 { 
-    class UAnimSequenceBase*                           AnimSequence;                                               // 0x0000   (0x0008)
-    float                                              Time;                                                       // 0x0008   (0x0004)
-    float                                              PrevBlendWeight;                                            // 0x000C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAnimSequenceBase*                           AnimSequence;                                               // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Time;                                                       // 0x0008   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevBlendWeight;                                            // 0x000C   (0x0004)
 };
 
 /// Struct /Script/SBAnimation.MotionBoneTackID
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FMotionBoneTackID
 { 
-    class UAnimSequence*                               Sequence;                                                   // 0x0000   (0x0008)
-    int32_t                                            RefBoneIndex;                                               // 0x0008   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x000C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAnimSequence*                               Sequence;                                                   // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            RefBoneIndex;                                               // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x000C   (0x0004) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_SBSMotionPlayer
-/// Size: 0x01E0 (480 bytes) (0x000088 - 0x0001E0) align 16 MaxSize: 0x01E0
+/// Size: 0x01E0 (480 bytes) (0x000088 - 0x0001E0) align n/a MaxSize: 0x01E0
 struct FSBAnimNode_SBSMotionPlayer : FAnimNode_SequencePlayer
 { 
-    class USBMotionDB*                                 MotionDB;                                                   // 0x0088   (0x0008)
-    float                                              MatchPowerMoveInput;                                        // 0x0090   (0x0004)
-    float                                              MatchPowerMoveDir;                                          // 0x0094   (0x0004)
-    float                                              MatchPowerVelocity;                                         // 0x0098   (0x0004)
-    float                                              MatchPowerBone;                                             // 0x009C   (0x0004)
-    float                                              PrevSampleBlendingTime;                                     // 0x00A0   (0x0004)
-    float                                              TimeForUpdate;                                              // 0x00A4   (0x0004)
-    int32_t                                            IgnoreBoneBlendIndex;                                       // 0x00A8   (0x0004)
-    float                                              MoveAnimIndexTimeInterval;                                  // 0x00AC   (0x0004)
-    int32_t                                            ComputeMotionCount;                                         // 0x00B0   (0x0004)
-    FName                                              NodeIDName;                                                 // 0x00B4   (0x0008)
-    float                                              UpdateTime;                                                 // 0x00BC   (0x0004)
-    int32_t                                            ComputeCount;                                               // 0x00C0   (0x0004)
-    int32_t                                            CurrentMotionIndex;                                         // 0x00C4   (0x0004)
-    TArray<FPreMotionSampleData>                       PrevSampleData;                                             // 0x00C8   (0x0010)
-    float                                              PrevBlendTotalWeight;                                       // 0x00D8   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x00DC   (0x0004) MISSED
-    TArray<FSBMotionBoneInfo>                          CurrentMotionBoneData;                                      // 0x00E0   (0x0010)
-    TArray<FVector>                                    CurrentMotionBonePos;                                       // 0x00F0   (0x0010)
-    TMap<FMotionBoneTackID, int32_t>                   CachedBoneToTrackMap;                                       // 0x0100   (0x0050)
-    FVector                                            CurrentLocalVelocity;                                       // 0x0150   (0x000C)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x015C   (0x0004) MISSED
-    FSBMotionFutureData                                CurrentFutureData;                                          // 0x0160   (0x0040)
-    FTransform                                         CurrentTM;                                                  // 0x01A0   (0x0030)
-    float                                              CurrentTMDeltaTime;                                         // 0x01D0   (0x0004)
-    int32_t                                            CurrentMarkerIndex;                                         // 0x01D4   (0x0004)
-    unsigned char                                      UnknownData02_7[0x8];                                       // 0x01D8   (0x0008) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USBMotionDB*                                 MotionDB;                                                   // 0x0088   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MatchPowerMoveInput;                                        // 0x0090   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MatchPowerMoveDir;                                          // 0x0094   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MatchPowerVelocity;                                         // 0x0098   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MatchPowerBone;                                             // 0x009C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevSampleBlendingTime;                                     // 0x00A0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TimeForUpdate;                                              // 0x00A4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            IgnoreBoneBlendIndex;                                       // 0x00A8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoveAnimIndexTimeInterval;                                  // 0x00AC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ComputeMotionCount;                                         // 0x00B0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              NodeIDName;                                                 // 0x00B4   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              UpdateTime;                                                 // 0x00BC   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ComputeCount;                                               // 0x00C0   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CurrentMotionIndex;                                         // 0x00C4   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FPreMotionSampleData>                       PrevSampleData;                                             // 0x00C8   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevBlendTotalWeight;                                       // 0x00D8   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x00DC   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSBMotionBoneInfo>                          CurrentMotionBoneData;                                      // 0x00E0   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector>                                    CurrentMotionBonePos;                                       // 0x00F0   (0x0010)
+    UPROPERTY(Transient, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FMotionBoneTackID, int32_t>                   CachedBoneToTrackMap;                                       // 0x0100   (0x0050)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            CurrentLocalVelocity;                                       // 0x0150   (0x000C)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x015C   (0x0004) MISSED
+    UPROPERTY(Transient, NativeAccessSpecifierPublic)
+    /* public    */ FSBMotionFutureData                                CurrentFutureData;                                          // 0x0160   (0x0040)
+    UPROPERTY(Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         CurrentTM;                                                  // 0x01A0   (0x0030)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentTMDeltaTime;                                         // 0x01D0   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CurrentMarkerIndex;                                         // 0x01D4   (0x0004)
+    /* public    */ unsigned char                                      UnknownData05_7[0x8];                                       // 0x01D8   (0x0008) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_SBOverriddenBlendSpacePlayer
-/// Size: 0x00F8 (248 bytes) (0x0000F0 - 0x0000F8) align 8 MaxSize: 0x00F8
+/// Size: 0x00F8 (248 bytes) (0x0000F0 - 0x0000F8) align n/a MaxSize: 0x00F8
 struct FSBAnimNode_SBOverriddenBlendSpacePlayer : FAnimNode_BlendSpacePlayer
 { 
-    TEnumAsByte<ESBAnimNodeBlendSpaceSlot>             BlendSpaceType;                                             // 0x00F0   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x00F1   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBAnimNodeBlendSpaceSlot>             BlendSpaceType;                                             // 0x00F0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x00F1   (0x0007) MISSED
 };
 
 /// Struct /Script/SBAnimation.PrevSeqSampleData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FPrevSeqSampleData
 { 
-    class UAnimSequenceBase*                           AnimSequence;                                               // 0x0000   (0x0008)
-    float                                              Time;                                                       // 0x0008   (0x0004)
-    float                                              PrevBlendWeight;                                            // 0x000C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAnimSequenceBase*                           AnimSequence;                                               // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Time;                                                       // 0x0008   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevBlendWeight;                                            // 0x000C   (0x0004)
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_SBSequencePlayer
-/// Size: 0x00C0 (192 bytes) (0x000088 - 0x0000C0) align 8 MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000088 - 0x0000C0) align n/a MaxSize: 0x00C0
 struct FSBAnimNode_SBSequencePlayer : FAnimNode_SequencePlayer
 { 
-    class UAnimSequenceBase*                           PrevSequence;                                               // 0x0088   (0x0008)
-    TEnumAsByte<ESBAnimNodeSequenceSlot>               AnimSlotType;                                               // 0x0090   (0x0001)
-    bool                                               bUseAnimSlotNameSequenceOverrride;                          // 0x0091   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0092   (0x0002) MISSED
-    float                                              PrevSampleBlendingTime;                                     // 0x0094   (0x0004)
-    TArray<FPrevSeqSampleData>                         PrevSampleData;                                             // 0x0098   (0x0010)
-    float                                              PrevBlendTotalWeight;                                       // 0x00A8   (0x0004)
-    float                                              RotateRootX;                                                // 0x00AC   (0x0004)
-    float                                              RotateRootY;                                                // 0x00B0   (0x0004)
-    bool                                               bRotateRootBone;                                            // 0x00B4   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x00B5   (0x0003) MISSED
-    FName                                              RotateRootBooneName;                                        // 0x00B8   (0x0008)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAnimSequenceBase*                           PrevSequence;                                               // 0x0088   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESBAnimNodeSequenceSlot>               AnimSlotType;                                               // 0x0090   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseAnimSlotNameSequenceOverrride;                          // 0x0091   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x2];                                       // 0x0092   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevSampleBlendingTime;                                     // 0x0094   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FPrevSeqSampleData>                         PrevSampleData;                                             // 0x0098   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrevBlendTotalWeight;                                       // 0x00A8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RotateRootX;                                                // 0x00AC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RotateRootY;                                                // 0x00B0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bRotateRootBone;                                            // 0x00B4   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x00B5   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              RotateRootBooneName;                                        // 0x00B8   (0x0008)
 };
 
 /// Struct /Script/SBAnimation.SubSequences
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSubSequences
 { 
-    TArray<class UAnimSequence*>                       SubSequences;                                               // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UAnimSequence*>                       SubSequences;                                               // 0x0000   (0x0010)
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_SequenceBlendedPlayer
-/// Size: 0x00A8 (168 bytes) (0x000040 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000040 - 0x0000A8) align n/a MaxSize: 0x00A8
 struct FSBAnimNode_SequenceBlendedPlayer : FAnimNode_AssetPlayerBase
 { 
-    FName                                              SBNodeName;                                                 // 0x0040   (0x0008)
-    float                                              BlendTimeWithSequences;                                     // 0x0048   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x004C   (0x0004) MISSED
-    TArray<FName>                                      SkipTransformBoneArray;                                     // 0x0050   (0x0010)
-    TArray<class UAnimSequence*>                       PlaySequences;                                              // 0x0060   (0x0010)
-    TArray<FSubSequences>                              PlaySubSequences;                                           // 0x0070   (0x0010)
-    unsigned char                                      UnknownData01_6[0x10];                                      // 0x0080   (0x0010) MISSED
-    TArray<float>                                      DynamicMoveWeight;                                          // 0x0090   (0x0010)
-    unsigned char                                      UnknownData02_7[0x8];                                       // 0x00A0   (0x0008) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              SBNodeName;                                                 // 0x0040   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BlendTimeWithSequences;                                     // 0x0048   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x004C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      SkipTransformBoneArray;                                     // 0x0050   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UAnimSequence*>                       PlaySequences;                                              // 0x0060   (0x0010)
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSubSequences>                              PlaySubSequences;                                           // 0x0070   (0x0010)
+    /* public    */ unsigned char                                      UnknownData04_6[0x10];                                      // 0x0080   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      DynamicMoveWeight;                                          // 0x0090   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x8];                                       // 0x00A0   (0x0008) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_TargetTracking
-/// Size: 0x0140 (320 bytes) (0x0000C8 - 0x000140) align 8 MaxSize: 0x0140
+/// Size: 0x0140 (320 bytes) (0x0000C8 - 0x000140) align n/a MaxSize: 0x0140
 struct FSBAnimNode_TargetTracking : FAnimNode_SkeletalControlBase
 { 
-    FBoneReference                                     StartBone;                                                  // 0x00C8   (0x0010)
-    FBoneReference                                     EndBone;                                                    // 0x00D8   (0x0010)
-    FBoneReference                                     BaseTargetBone;                                             // 0x00E8   (0x0010)
-    unsigned char                                      UnknownData00_7[0x48];                                      // 0x00F8   (0x0048) MISSED
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     StartBone;                                                  // 0x00C8   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     EndBone;                                                    // 0x00D8   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     BaseTargetBone;                                             // 0x00E8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x48];                                      // 0x00F8   (0x0048) MISSED
 };
 
 /// Struct /Script/SBAnimation.SBAnimNode_TargetTrackingData
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSBAnimNode_TargetTrackingData
 { 
-    FBoneReference                                     Bone;                                                       // 0x0000   (0x0010)
+    UPROPERTY(Edit, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FBoneReference                                     Bone;                                                       // 0x0000   (0x0010)
 };
 
 /// Struct /Script/SBAnimation.SBMotionMisc
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FSBMotionMisc
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FSBMotionBoneInfo) == 0x0020); // 32 bytes (0x000000 - 0x000020)
 static_assert(sizeof(FSBMotionFutureStepData) == 0x0040); // 64 bytes (0x000000 - 0x000040)
 static_assert(sizeof(FSBMotionFutureMoveMatchingData) == 0x0010); // 16 bytes (0x000000 - 0x000010)
@@ -1093,3 +1373,4 @@ static_assert(offsetof(FSBAnimNode_TargetTracking, StartBone) == 0x00C8);
 static_assert(offsetof(FSBAnimNode_TargetTracking, EndBone) == 0x00D8);
 static_assert(offsetof(FSBAnimNode_TargetTracking, BaseTargetBone) == 0x00E8);
 static_assert(offsetof(FSBAnimNode_TargetTrackingData, Bone) == 0x0000);
+#endif

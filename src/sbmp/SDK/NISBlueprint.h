@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,9 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/NISBlueprint.UNISMode
-/// Size: 0x01 (1 bytes)
+class UNISLibrary;
+
+/// Enum /Script/NISBlueprint.UNISMode -  1 (1 bytes)
 enum class UNISMode : uint8_t
 {
     Off                                                                              = 0,
@@ -26,8 +36,7 @@ enum class UNISMode : uint8_t
     Custom                                                                           = 5
 };
 
-/// Enum /Script/NISBlueprint.UNISSupport
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/NISBlueprint.UNISSupport -  1 (1 bytes)
 enum class UNISSupport : uint8_t
 {
     Supported                                                                        = 0,
@@ -35,7 +44,7 @@ enum class UNISSupport : uint8_t
 };
 
 /// Class /Script/NISBlueprint.NISLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UNISLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -71,4 +80,6 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UNISLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
+#endif

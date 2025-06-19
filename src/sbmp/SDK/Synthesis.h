@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "AudioExtensions.h"
@@ -18,8 +27,77 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/Synthesis.ESynth1PatchDestination
-/// Size: 0x01 (1 bytes)
+class UAudioImpulseResponse;
+class UEnvelopeFollowerListener;
+class UGranularSynth;
+class UModularSynthComponent;
+class UModularSynthLibrary;
+class UModularSynthPresetBank;
+class UMonoWaveTableSynthPreset;
+class USourceEffectBitCrusherPreset;
+class USourceEffectChorusPreset;
+class USourceEffectDynamicsProcessorPreset;
+class USourceEffectEQPreset;
+class USourceEffectEnvelopeFollowerPreset;
+class USourceEffectFilterPreset;
+class USourceEffectFoldbackDistortionPreset;
+class USourceEffectMidSideSpreaderPreset;
+class USourceEffectPannerPreset;
+class USourceEffectPhaserPreset;
+class USourceEffectRingModulationPreset;
+class USourceEffectSimpleDelayPreset;
+class USourceEffectStereoDelayPreset;
+class USourceEffectWaveShaperPreset;
+class USubmixEffectConvolutionReverbPreset;
+class USubmixEffectDelayPreset;
+class USubmixEffectFilterPreset;
+class USubmixEffectFlexiverbPreset;
+class USubmixEffectMultibandCompressorPreset;
+class USubmixEffectStereoDelayPreset;
+class USubmixEffectTapDelayPreset;
+class USynth2DSlider;
+class USynthComponentMonoWaveTable;
+class USynthComponentToneGenerator;
+class USynthKnob;
+class USynthSamplePlayer;
+class USynthesisUtilitiesBlueprintFunctionLibrary;
+struct FDynamicsBandSettings;
+struct FEpicSynth1Patch;
+struct FModularSynthPreset;
+struct FModularSynthPresetBankEntry;
+struct FPatchId;
+struct FSourceEffectBitCrusherBaseSettings;
+struct FSourceEffectBitCrusherSettings;
+struct FSourceEffectChorusBaseSettings;
+struct FSourceEffectChorusSettings;
+struct FSourceEffectDynamicsProcessorSettings;
+struct FSourceEffectEQBand;
+struct FSourceEffectEQSettings;
+struct FSourceEffectEnvelopeFollowerSettings;
+struct FSourceEffectFilterAudioBusModulationSettings;
+struct FSourceEffectFilterSettings;
+struct FSourceEffectFoldbackDistortionSettings;
+struct FSourceEffectMidSideSpreaderSettings;
+struct FSourceEffectPannerSettings;
+struct FSourceEffectPhaserSettings;
+struct FSourceEffectRingModulationSettings;
+struct FSourceEffectSimpleDelaySettings;
+struct FSourceEffectStereoDelaySettings;
+struct FSourceEffectWaveShaperSettings;
+struct FSubmixEffectConvolutionReverbSettings;
+struct FSubmixEffectDelaySettings;
+struct FSubmixEffectFilterSettings;
+struct FSubmixEffectFlexiverbSettings;
+struct FSubmixEffectMultibandCompressorSettings;
+struct FSubmixEffectStereoDelaySettings;
+struct FSubmixEffectTapDelaySettings;
+struct FSynth1PatchCable;
+struct FSynth2DSliderStyle;
+struct FSynthKnobStyle;
+struct FSynthSlateStyle;
+struct FTapDelayInfo;
+
+/// Enum /Script/Synthesis.ESynth1PatchDestination -  1 (1 bytes)
 enum class ESynth1PatchDestination : uint8_t
 {
     Osc1Gain                                                                         = 0,
@@ -39,8 +117,7 @@ enum class ESynth1PatchDestination : uint8_t
     Count                                                                            = 14
 };
 
-/// Enum /Script/Synthesis.ESynth1PatchSource
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynth1PatchSource -  1 (1 bytes)
 enum class ESynth1PatchSource : uint8_t
 {
     LFO1                                                                             = 0,
@@ -50,8 +127,7 @@ enum class ESynth1PatchSource : uint8_t
     Count                                                                            = 4
 };
 
-/// Enum /Script/Synthesis.ESynthStereoDelayMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthStereoDelayMode -  1 (1 bytes)
 enum class ESynthStereoDelayMode : uint8_t
 {
     Normal                                                                           = 0,
@@ -60,8 +136,7 @@ enum class ESynthStereoDelayMode : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.ESynthFilterAlgorithm
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthFilterAlgorithm -  1 (1 bytes)
 enum class ESynthFilterAlgorithm : uint8_t
 {
     OnePole                                                                          = 0,
@@ -70,8 +145,7 @@ enum class ESynthFilterAlgorithm : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.ESynthFilterType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthFilterType -  1 (1 bytes)
 enum class ESynthFilterType : uint8_t
 {
     LowPass                                                                          = 0,
@@ -81,8 +155,7 @@ enum class ESynthFilterType : uint8_t
     Count                                                                            = 4
 };
 
-/// Enum /Script/Synthesis.ESynthModEnvBiasPatch
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthModEnvBiasPatch -  1 (1 bytes)
 enum class ESynthModEnvBiasPatch : uint8_t
 {
     PatchToNone                                                                      = 0,
@@ -96,8 +169,7 @@ enum class ESynthModEnvBiasPatch : uint8_t
     Count                                                                            = 8
 };
 
-/// Enum /Script/Synthesis.ESynthModEnvPatch
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthModEnvPatch -  1 (1 bytes)
 enum class ESynthModEnvPatch : uint8_t
 {
     PatchToNone                                                                      = 0,
@@ -111,8 +183,7 @@ enum class ESynthModEnvPatch : uint8_t
     Count                                                                            = 8
 };
 
-/// Enum /Script/Synthesis.ESynthLFOPatchType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthLFOPatchType -  1 (1 bytes)
 enum class ESynthLFOPatchType : uint8_t
 {
     PatchToNone                                                                      = 0,
@@ -127,8 +198,7 @@ enum class ESynthLFOPatchType : uint8_t
     Count                                                                            = 9
 };
 
-/// Enum /Script/Synthesis.ESynthLFOMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthLFOMode -  1 (1 bytes)
 enum class ESynthLFOMode : uint8_t
 {
     Sync                                                                             = 0,
@@ -137,8 +207,7 @@ enum class ESynthLFOMode : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.ESynthLFOType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthLFOType -  1 (1 bytes)
 enum class ESynthLFOType : uint8_t
 {
     Sine                                                                             = 0,
@@ -151,8 +220,7 @@ enum class ESynthLFOType : uint8_t
     Count                                                                            = 7
 };
 
-/// Enum /Script/Synthesis.ESynth1OscType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynth1OscType -  1 (1 bytes)
 enum class ESynth1OscType : uint8_t
 {
     Sine                                                                             = 0,
@@ -163,8 +231,7 @@ enum class ESynth1OscType : uint8_t
     Count                                                                            = 5
 };
 
-/// Enum /Script/Synthesis.ESourceEffectDynamicsPeakMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESourceEffectDynamicsPeakMode -  1 (1 bytes)
 enum class ESourceEffectDynamicsPeakMode : uint8_t
 {
     MeanSquared                                                                      = 0,
@@ -173,8 +240,7 @@ enum class ESourceEffectDynamicsPeakMode : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.ESourceEffectDynamicsProcessorType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESourceEffectDynamicsProcessorType -  1 (1 bytes)
 enum class ESourceEffectDynamicsProcessorType : uint8_t
 {
     Compressor                                                                       = 0,
@@ -184,8 +250,7 @@ enum class ESourceEffectDynamicsProcessorType : uint8_t
     Count                                                                            = 4
 };
 
-/// Enum /Script/Synthesis.EEnvelopeFollowerPeakMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.EEnvelopeFollowerPeakMode -  1 (1 bytes)
 enum class EEnvelopeFollowerPeakMode : uint8_t
 {
     MeanSquared                                                                      = 0,
@@ -194,8 +259,7 @@ enum class EEnvelopeFollowerPeakMode : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.ESourceEffectFilterParam
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESourceEffectFilterParam -  1 (1 bytes)
 enum class ESourceEffectFilterParam : uint8_t
 {
     FilterFrequency                                                                  = 0,
@@ -203,8 +267,7 @@ enum class ESourceEffectFilterParam : uint8_t
     Count                                                                            = 2
 };
 
-/// Enum /Script/Synthesis.ESourceEffectFilterType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESourceEffectFilterType -  1 (1 bytes)
 enum class ESourceEffectFilterType : uint8_t
 {
     LowPass                                                                          = 0,
@@ -214,8 +277,7 @@ enum class ESourceEffectFilterType : uint8_t
     Count                                                                            = 4
 };
 
-/// Enum /Script/Synthesis.ESourceEffectFilterCircuit
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESourceEffectFilterCircuit -  1 (1 bytes)
 enum class ESourceEffectFilterCircuit : uint8_t
 {
     OnePole                                                                          = 0,
@@ -224,8 +286,7 @@ enum class ESourceEffectFilterCircuit : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.EStereoChannelMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.EStereoChannelMode -  1 (1 bytes)
 enum class EStereoChannelMode : uint8_t
 {
     MidSide                                                                          = 0,
@@ -233,8 +294,7 @@ enum class EStereoChannelMode : uint8_t
     count                                                                            = 2
 };
 
-/// Enum /Script/Synthesis.EPhaserLFOType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.EPhaserLFOType -  1 (1 bytes)
 enum class EPhaserLFOType : uint8_t
 {
     Sine                                                                             = 0,
@@ -247,8 +307,7 @@ enum class EPhaserLFOType : uint8_t
     Count                                                                            = 7
 };
 
-/// Enum /Script/Synthesis.ERingModulatorTypeSourceEffect
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ERingModulatorTypeSourceEffect -  1 (1 bytes)
 enum class ERingModulatorTypeSourceEffect : uint8_t
 {
     Sine                                                                             = 0,
@@ -258,8 +317,7 @@ enum class ERingModulatorTypeSourceEffect : uint8_t
     Count                                                                            = 4
 };
 
-/// Enum /Script/Synthesis.EStereoDelayFiltertype
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.EStereoDelayFiltertype -  1 (1 bytes)
 enum class EStereoDelayFiltertype : uint8_t
 {
     Lowpass                                                                          = 0,
@@ -269,8 +327,7 @@ enum class EStereoDelayFiltertype : uint8_t
     Count                                                                            = 4
 };
 
-/// Enum /Script/Synthesis.EStereoDelaySourceEffect
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.EStereoDelaySourceEffect -  1 (1 bytes)
 enum class EStereoDelaySourceEffect : uint8_t
 {
     Normal                                                                           = 0,
@@ -279,8 +336,7 @@ enum class EStereoDelaySourceEffect : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.ESubmixEffectConvolutionReverbBlockSize
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESubmixEffectConvolutionReverbBlockSize -  1 (1 bytes)
 enum class ESubmixEffectConvolutionReverbBlockSize : uint8_t
 {
     BlockSize256                                                                     = 0,
@@ -288,8 +344,7 @@ enum class ESubmixEffectConvolutionReverbBlockSize : uint8_t
     BlockSize1024                                                                    = 2
 };
 
-/// Enum /Script/Synthesis.ESubmixFilterAlgorithm
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESubmixFilterAlgorithm -  1 (1 bytes)
 enum class ESubmixFilterAlgorithm : uint8_t
 {
     OnePole                                                                          = 0,
@@ -298,8 +353,7 @@ enum class ESubmixFilterAlgorithm : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.ESubmixFilterType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESubmixFilterType -  1 (1 bytes)
 enum class ESubmixFilterType : uint8_t
 {
     LowPass                                                                          = 0,
@@ -309,8 +363,7 @@ enum class ESubmixFilterType : uint8_t
     Count                                                                            = 4
 };
 
-/// Enum /Script/Synthesis.ETapLineMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ETapLineMode -  1 (1 bytes)
 enum class ETapLineMode : uint8_t
 {
     SendToChannel                                                                    = 0,
@@ -318,8 +371,7 @@ enum class ETapLineMode : uint8_t
     Disabled                                                                         = 2
 };
 
-/// Enum /Script/Synthesis.EGranularSynthSeekType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.EGranularSynthSeekType -  1 (1 bytes)
 enum class EGranularSynthSeekType : uint8_t
 {
     FromBeginning                                                                    = 0,
@@ -327,8 +379,7 @@ enum class EGranularSynthSeekType : uint8_t
     Count                                                                            = 2
 };
 
-/// Enum /Script/Synthesis.EGranularSynthEnvelopeType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.EGranularSynthEnvelopeType -  1 (1 bytes)
 enum class EGranularSynthEnvelopeType : uint8_t
 {
     Rectangular                                                                      = 0,
@@ -348,8 +399,7 @@ enum class EGranularSynthEnvelopeType : uint8_t
     Count                                                                            = 14
 };
 
-/// Enum /Script/Synthesis.CurveInterpolationType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.CurveInterpolationType -  1 (1 bytes)
 enum class CurveInterpolationType : uint8_t
 {
     AUTOINTERP                                                                       = 0,
@@ -357,8 +407,7 @@ enum class CurveInterpolationType : uint8_t
     CONSTANT                                                                         = 2
 };
 
-/// Enum /Script/Synthesis.ESamplePlayerSeekType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESamplePlayerSeekType -  1 (1 bytes)
 enum class ESamplePlayerSeekType : uint8_t
 {
     FromBeginning                                                                    = 0,
@@ -367,8 +416,7 @@ enum class ESamplePlayerSeekType : uint8_t
     Count                                                                            = 3
 };
 
-/// Enum /Script/Synthesis.ESynthKnobSize
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthKnobSize -  1 (1 bytes)
 enum class ESynthKnobSize : uint8_t
 {
     Medium                                                                           = 0,
@@ -376,8 +424,7 @@ enum class ESynthKnobSize : uint8_t
     Count                                                                            = 2
 };
 
-/// Enum /Script/Synthesis.ESynthSlateColorStyle
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthSlateColorStyle -  1 (1 bytes)
 enum class ESynthSlateColorStyle : uint8_t
 {
     Light                                                                            = 0,
@@ -385,8 +432,7 @@ enum class ESynthSlateColorStyle : uint8_t
     Count                                                                            = 2
 };
 
-/// Enum /Script/Synthesis.ESynthSlateSizeType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Synthesis.ESynthSlateSizeType -  1 (1 bytes)
 enum class ESynthSlateSizeType : uint8_t
 {
     Small                                                                            = 0,
@@ -396,120 +442,186 @@ enum class ESynthSlateSizeType : uint8_t
 };
 
 /// Struct /Script/Synthesis.Synth1PatchCable
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FSynth1PatchCable
 { 
-    float                                              Depth;                                                      // 0x0000   (0x0004)
-    ESynth1PatchDestination                            Destination;                                                // 0x0004   (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0005   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Depth;                                                      // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynth1PatchDestination                            Destination;                                                // 0x0004   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x0005   (0x0003) MISSED
 };
 
 /// Struct /Script/Synthesis.EpicSynth1Patch
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FEpicSynth1Patch
 { 
-    ESynth1PatchSource                                 PatchSource;                                                // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007) MISSED
-    TArray<FSynth1PatchCable>                          PatchCables;                                                // 0x0008   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynth1PatchSource                                 PatchSource;                                                // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x7];                                       // 0x0001   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSynth1PatchCable>                          PatchCables;                                                // 0x0008   (0x0010)
 };
 
 /// Struct /Script/Synthesis.ModularSynthPreset
-/// Size: 0x00E0 (224 bytes) (0x000008 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x000008 - 0x0000E0) align n/a MaxSize: 0x00E0
 struct FModularSynthPreset : FTableRowBase
 { 
-    bool                                               bEnablePolyphony : 1;                                       // 0x0008:0 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0009   (0x0003) MISSED
-    ESynth1OscType                                     Osc1Type;                                                   // 0x000C   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x000D   (0x0003) MISSED
-    float                                              Osc1Gain;                                                   // 0x0010   (0x0004)
-    float                                              Osc1Octave;                                                 // 0x0014   (0x0004)
-    float                                              Osc1Semitones;                                              // 0x0018   (0x0004)
-    float                                              Osc1Cents;                                                  // 0x001C   (0x0004)
-    float                                              Osc1PulseWidth;                                             // 0x0020   (0x0004)
-    ESynth1OscType                                     Osc2Type;                                                   // 0x0024   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0025   (0x0003) MISSED
-    float                                              Osc2Gain;                                                   // 0x0028   (0x0004)
-    float                                              Osc2Octave;                                                 // 0x002C   (0x0004)
-    float                                              Osc2Semitones;                                              // 0x0030   (0x0004)
-    float                                              Osc2Cents;                                                  // 0x0034   (0x0004)
-    float                                              Osc2PulseWidth;                                             // 0x0038   (0x0004)
-    float                                              Portamento;                                                 // 0x003C   (0x0004)
-    bool                                               bEnableUnison : 1;                                          // 0x0040:0 (0x0001)
-    bool                                               bEnableOscillatorSync : 1;                                  // 0x0040:1 (0x0001)
-    unsigned char                                      UnknownData03_5[0x3];                                       // 0x0041   (0x0003) MISSED
-    float                                              Spread;                                                     // 0x0044   (0x0004)
-    float                                              Pan;                                                        // 0x0048   (0x0004)
-    float                                              LFO1Frequency;                                              // 0x004C   (0x0004)
-    float                                              LFO1Gain;                                                   // 0x0050   (0x0004)
-    ESynthLFOType                                      LFO1Type;                                                   // 0x0054   (0x0001)
-    ESynthLFOMode                                      LFO1Mode;                                                   // 0x0055   (0x0001)
-    ESynthLFOPatchType                                 LFO1PatchType;                                              // 0x0056   (0x0001)
-    unsigned char                                      UnknownData04_6[0x1];                                       // 0x0057   (0x0001) MISSED
-    float                                              LFO2Frequency;                                              // 0x0058   (0x0004)
-    float                                              LFO2Gain;                                                   // 0x005C   (0x0004)
-    ESynthLFOType                                      LFO2Type;                                                   // 0x0060   (0x0001)
-    ESynthLFOMode                                      LFO2Mode;                                                   // 0x0061   (0x0001)
-    ESynthLFOPatchType                                 LFO2PatchType;                                              // 0x0062   (0x0001)
-    unsigned char                                      UnknownData05_6[0x1];                                       // 0x0063   (0x0001) MISSED
-    float                                              GainDb;                                                     // 0x0064   (0x0004)
-    float                                              AttackTime;                                                 // 0x0068   (0x0004)
-    float                                              DecayTime;                                                  // 0x006C   (0x0004)
-    float                                              SustainGain;                                                // 0x0070   (0x0004)
-    float                                              ReleaseTime;                                                // 0x0074   (0x0004)
-    ESynthModEnvPatch                                  ModEnvPatchType;                                            // 0x0078   (0x0001)
-    ESynthModEnvBiasPatch                              ModEnvBiasPatchType;                                        // 0x0079   (0x0001)
-    unsigned char                                      UnknownData06_6[0x2];                                       // 0x007A   (0x0002) MISSED
-    bool                                               bInvertModulationEnvelope : 1;                              // 0x007C:0 (0x0001)
-    bool                                               bInvertModulationEnvelopeBias : 1;                          // 0x007C:1 (0x0001)
-    unsigned char                                      UnknownData07_5[0x3];                                       // 0x007D   (0x0003) MISSED
-    float                                              ModulationEnvelopeDepth;                                    // 0x0080   (0x0004)
-    float                                              ModulationEnvelopeAttackTime;                               // 0x0084   (0x0004)
-    float                                              ModulationEnvelopeDecayTime;                                // 0x0088   (0x0004)
-    float                                              ModulationEnvelopeSustainGain;                              // 0x008C   (0x0004)
-    float                                              ModulationEnvelopeReleaseTime;                              // 0x0090   (0x0004)
-    bool                                               bLegato : 1;                                                // 0x0094:0 (0x0001)
-    bool                                               bRetrigger : 1;                                             // 0x0094:1 (0x0001)
-    unsigned char                                      UnknownData08_5[0x3];                                       // 0x0095   (0x0003) MISSED
-    float                                              FilterFrequency;                                            // 0x0098   (0x0004)
-    float                                              FilterQ;                                                    // 0x009C   (0x0004)
-    ESynthFilterType                                   FilterType;                                                 // 0x00A0   (0x0001)
-    ESynthFilterAlgorithm                              FilterAlgorithm;                                            // 0x00A1   (0x0001)
-    unsigned char                                      UnknownData09_6[0x2];                                       // 0x00A2   (0x0002) MISSED
-    bool                                               bStereoDelayEnabled : 1;                                    // 0x00A4:0 (0x0001)
-    unsigned char                                      UnknownData10_5[0x3];                                       // 0x00A5   (0x0003) MISSED
-    ESynthStereoDelayMode                              StereoDelayMode;                                            // 0x00A8   (0x0001)
-    unsigned char                                      UnknownData11_6[0x3];                                       // 0x00A9   (0x0003) MISSED
-    float                                              StereoDelayTime;                                            // 0x00AC   (0x0004)
-    float                                              StereoDelayFeedback;                                        // 0x00B0   (0x0004)
-    float                                              StereoDelayWetlevel;                                        // 0x00B4   (0x0004)
-    float                                              StereoDelayRatio;                                           // 0x00B8   (0x0004)
-    bool                                               bChorusEnabled : 1;                                         // 0x00BC:0 (0x0001)
-    unsigned char                                      UnknownData12_5[0x3];                                       // 0x00BD   (0x0003) MISSED
-    float                                              ChorusDepth;                                                // 0x00C0   (0x0004)
-    float                                              ChorusFeedback;                                             // 0x00C4   (0x0004)
-    float                                              ChorusFrequency;                                            // 0x00C8   (0x0004)
-    unsigned char                                      UnknownData13_6[0x4];                                       // 0x00CC   (0x0004) MISSED
-    TArray<FEpicSynth1Patch>                           Patches;                                                    // 0x00D0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnablePolyphony : 1;                                       // 0x0008:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData14_5[0x3];                                       // 0x0009   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynth1OscType                                     Osc1Type;                                                   // 0x000C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData15_6[0x3];                                       // 0x000D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc1Gain;                                                   // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc1Octave;                                                 // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc1Semitones;                                              // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc1Cents;                                                  // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc1PulseWidth;                                             // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynth1OscType                                     Osc2Type;                                                   // 0x0024   (0x0001)
+    /* public    */ unsigned char                                      UnknownData16_6[0x3];                                       // 0x0025   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc2Gain;                                                   // 0x0028   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc2Octave;                                                 // 0x002C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc2Semitones;                                              // 0x0030   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc2Cents;                                                  // 0x0034   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Osc2PulseWidth;                                             // 0x0038   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Portamento;                                                 // 0x003C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableUnison : 1;                                          // 0x0040:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableOscillatorSync : 1;                                  // 0x0040:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData17_5[0x3];                                       // 0x0041   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Spread;                                                     // 0x0044   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Pan;                                                        // 0x0048   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LFO1Frequency;                                              // 0x004C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LFO1Gain;                                                   // 0x0050   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthLFOType                                      LFO1Type;                                                   // 0x0054   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthLFOMode                                      LFO1Mode;                                                   // 0x0055   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthLFOPatchType                                 LFO1PatchType;                                              // 0x0056   (0x0001)
+    /* public    */ unsigned char                                      UnknownData18_6[0x1];                                       // 0x0057   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LFO2Frequency;                                              // 0x0058   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LFO2Gain;                                                   // 0x005C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthLFOType                                      LFO2Type;                                                   // 0x0060   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthLFOMode                                      LFO2Mode;                                                   // 0x0061   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthLFOPatchType                                 LFO2PatchType;                                              // 0x0062   (0x0001)
+    /* public    */ unsigned char                                      UnknownData19_6[0x1];                                       // 0x0063   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              GainDb;                                                     // 0x0064   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AttackTime;                                                 // 0x0068   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DecayTime;                                                  // 0x006C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SustainGain;                                                // 0x0070   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ReleaseTime;                                                // 0x0074   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthModEnvPatch                                  ModEnvPatchType;                                            // 0x0078   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthModEnvBiasPatch                              ModEnvBiasPatchType;                                        // 0x0079   (0x0001)
+    /* public    */ unsigned char                                      UnknownData20_6[0x2];                                       // 0x007A   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bInvertModulationEnvelope : 1;                              // 0x007C:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bInvertModulationEnvelopeBias : 1;                          // 0x007C:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData21_5[0x3];                                       // 0x007D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ModulationEnvelopeDepth;                                    // 0x0080   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ModulationEnvelopeAttackTime;                               // 0x0084   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ModulationEnvelopeDecayTime;                                // 0x0088   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ModulationEnvelopeSustainGain;                              // 0x008C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ModulationEnvelopeReleaseTime;                              // 0x0090   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLegato : 1;                                                // 0x0094:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bRetrigger : 1;                                             // 0x0094:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData22_5[0x3];                                       // 0x0095   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterFrequency;                                            // 0x0098   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterQ;                                                    // 0x009C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthFilterType                                   FilterType;                                                 // 0x00A0   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthFilterAlgorithm                              FilterAlgorithm;                                            // 0x00A1   (0x0001)
+    /* public    */ unsigned char                                      UnknownData23_6[0x2];                                       // 0x00A2   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bStereoDelayEnabled : 1;                                    // 0x00A4:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData24_5[0x3];                                       // 0x00A5   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthStereoDelayMode                              StereoDelayMode;                                            // 0x00A8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData25_6[0x3];                                       // 0x00A9   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StereoDelayTime;                                            // 0x00AC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StereoDelayFeedback;                                        // 0x00B0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StereoDelayWetlevel;                                        // 0x00B4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StereoDelayRatio;                                           // 0x00B8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bChorusEnabled : 1;                                         // 0x00BC:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData26_5[0x3];                                       // 0x00BD   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ChorusDepth;                                                // 0x00C0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ChorusFeedback;                                             // 0x00C4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ChorusFrequency;                                            // 0x00C8   (0x0004)
+    /* public    */ unsigned char                                      UnknownData27_6[0x4];                                       // 0x00CC   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FEpicSynth1Patch>                           Patches;                                                    // 0x00D0   (0x0010)
 };
 
 /// Struct /Script/Synthesis.ModularSynthPresetBankEntry
-/// Size: 0x00F0 (240 bytes) (0x000000 - 0x0000F0) align 8 MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000000 - 0x0000F0) align n/a MaxSize: 0x00F0
 struct FModularSynthPresetBankEntry
 { 
-    FString                                            PresetName;                                                 // 0x0000   (0x0010)
-    FModularSynthPreset                                Preset;                                                     // 0x0010   (0x00E0)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            PresetName;                                                 // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FModularSynthPreset                                Preset;                                                     // 0x0010   (0x00E0)
 };
 
 /// Class /Script/Synthesis.ModularSynthPresetBank
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class UModularSynthPresetBank : public UObject
 { 
 public:
-    TArray<FModularSynthPresetBankEntry>               Presets;                                                    // 0x0028   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FModularSynthPresetBankEntry>               Presets;                                                    // 0x0028   (0x0010)
 };
 
 /// Class /Script/Synthesis.ModularSynthLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UModularSynthLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -523,12 +635,13 @@ public:
 };
 
 /// Class /Script/Synthesis.ModularSynthComponent
-/// Size: 0x0DF0 (3568 bytes) (0x000730 - 0x000DF0) align 16 MaxSize: 0x0DF0
+/// Size: 0x0DF0 (3568 bytes) (0x000730 - 0x000DF0) align n/a MaxSize: 0x0DF0
 class UModularSynthComponent : public USynthComponent
 { 
 public:
-    int32_t                                            VoiceCount;                                                 // 0x0730   (0x0004)
-    unsigned char                                      UnknownData00_7[0x6BC];                                     // 0x0734   (0x06BC) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            VoiceCount;                                                 // 0x0730   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x6BC];                                     // 0x0734   (0x06BC) MISSED
 
     /// Functions
     // Function /Script/Synthesis.ModularSynthComponent.SetSynthPreset
@@ -733,24 +846,29 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectBitCrusherSettings
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FSourceEffectBitCrusherSettings
 { 
-    float                                              CrushedSampleRate;                                          // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    FSoundModulationDestinationSettings                SampleRateModulation;                                       // 0x0008   (0x0010)
-    float                                              CrushedBits;                                                // 0x0018   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x001C   (0x0004) MISSED
-    FSoundModulationDestinationSettings                BitModulation;                                              // 0x0020   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CrushedSampleRate;                                          // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData02_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSoundModulationDestinationSettings                SampleRateModulation;                                       // 0x0008   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CrushedBits;                                                // 0x0018   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x001C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSoundModulationDestinationSettings                BitModulation;                                              // 0x0020   (0x0010)
 };
 
 /// Class /Script/Synthesis.SourceEffectBitCrusherPreset
-/// Size: 0x00F0 (240 bytes) (0x000068 - 0x0000F0) align 8 MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000068 - 0x0000F0) align n/a MaxSize: 0x00F0
 class USourceEffectBitCrusherPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x58];                                      // 0x0068   (0x0058) MISSED
-    FSourceEffectBitCrusherSettings                    Settings;                                                   // 0x00C0   (0x0030)
+    /* public    */ unsigned char                                      UnknownData01_8[0x58];                                      // 0x0068   (0x0058) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectBitCrusherSettings                    Settings;                                                   // 0x00C0   (0x0030)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectBitCrusherPreset.SetSettings
@@ -774,30 +892,43 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectChorusSettings
-/// Size: 0x0078 (120 bytes) (0x000000 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000000 - 0x000078) align n/a MaxSize: 0x0078
 struct FSourceEffectChorusSettings
 { 
-    float                                              Depth;                                                      // 0x0000   (0x0004)
-    float                                              Frequency;                                                  // 0x0004   (0x0004)
-    float                                              Feedback;                                                   // 0x0008   (0x0004)
-    float                                              WetLevel;                                                   // 0x000C   (0x0004)
-    float                                              DryLevel;                                                   // 0x0010   (0x0004)
-    float                                              Spread;                                                     // 0x0014   (0x0004)
-    FSoundModulationDestinationSettings                DepthModulation;                                            // 0x0018   (0x0010)
-    FSoundModulationDestinationSettings                FrequencyModulation;                                        // 0x0028   (0x0010)
-    FSoundModulationDestinationSettings                FeedbackModulation;                                         // 0x0038   (0x0010)
-    FSoundModulationDestinationSettings                WetModulation;                                              // 0x0048   (0x0010)
-    FSoundModulationDestinationSettings                DryModulation;                                              // 0x0058   (0x0010)
-    FSoundModulationDestinationSettings                SpreadModulation;                                           // 0x0068   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Depth;                                                      // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Frequency;                                                  // 0x0004   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Feedback;                                                   // 0x0008   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WetLevel;                                                   // 0x000C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DryLevel;                                                   // 0x0010   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Spread;                                                     // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSoundModulationDestinationSettings                DepthModulation;                                            // 0x0018   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSoundModulationDestinationSettings                FrequencyModulation;                                        // 0x0028   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSoundModulationDestinationSettings                FeedbackModulation;                                         // 0x0038   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSoundModulationDestinationSettings                WetModulation;                                              // 0x0048   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSoundModulationDestinationSettings                DryModulation;                                              // 0x0058   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSoundModulationDestinationSettings                SpreadModulation;                                           // 0x0068   (0x0010)
 };
 
 /// Class /Script/Synthesis.SourceEffectChorusPreset
-/// Size: 0x0180 (384 bytes) (0x000068 - 0x000180) align 8 MaxSize: 0x0180
+/// Size: 0x0180 (384 bytes) (0x000068 - 0x000180) align n/a MaxSize: 0x0180
 class USourceEffectChorusPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0xA0];                                      // 0x0068   (0x00A0) MISSED
-    FSourceEffectChorusSettings                        Settings;                                                   // 0x0108   (0x0078)
+    /* public    */ unsigned char                                      UnknownData01_8[0xA0];                                      // 0x0068   (0x00A0) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectChorusSettings                        Settings;                                                   // 0x0108   (0x0078)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectChorusPreset.SetWetModulator
@@ -845,32 +976,45 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectDynamicsProcessorSettings
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 4 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FSourceEffectDynamicsProcessorSettings
 { 
-    ESourceEffectDynamicsProcessorType                 DynamicsProcessorType;                                      // 0x0000   (0x0001)
-    ESourceEffectDynamicsPeakMode                      PeakMode;                                                   // 0x0001   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0002   (0x0002) MISSED
-    float                                              LookAheadMsec;                                              // 0x0004   (0x0004)
-    float                                              AttackTimeMsec;                                             // 0x0008   (0x0004)
-    float                                              ReleaseTimeMsec;                                            // 0x000C   (0x0004)
-    float                                              ThresholdDb;                                                // 0x0010   (0x0004)
-    float                                              Ratio;                                                      // 0x0014   (0x0004)
-    float                                              KneeBandwidthDb;                                            // 0x0018   (0x0004)
-    float                                              InputGainDb;                                                // 0x001C   (0x0004)
-    float                                              OutputGainDb;                                               // 0x0020   (0x0004)
-    bool                                               bStereoLinked : 1;                                          // 0x0024:0 (0x0001)
-    bool                                               bAnalogMode : 1;                                            // 0x0024:1 (0x0001)
-    unsigned char                                      UnknownData01_7[0x3];                                       // 0x0025   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESourceEffectDynamicsProcessorType                 DynamicsProcessorType;                                      // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESourceEffectDynamicsPeakMode                      PeakMode;                                                   // 0x0001   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x2];                                       // 0x0002   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LookAheadMsec;                                              // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AttackTimeMsec;                                             // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ReleaseTimeMsec;                                            // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ThresholdDb;                                                // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Ratio;                                                      // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              KneeBandwidthDb;                                            // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              InputGainDb;                                                // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              OutputGainDb;                                               // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bStereoLinked : 1;                                          // 0x0024:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAnalogMode : 1;                                            // 0x0024:1 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x3];                                       // 0x0025   (0x0003) MISSED
 };
 
 /// Class /Script/Synthesis.SourceEffectDynamicsProcessorPreset
-/// Size: 0x00E0 (224 bytes) (0x000068 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x000068 - 0x0000E0) align n/a MaxSize: 0x00E0
 class USourceEffectDynamicsProcessorPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x50];                                      // 0x0068   (0x0050) MISSED
-    FSourceEffectDynamicsProcessorSettings             Settings;                                                   // 0x00B8   (0x0028)
+    /* public    */ unsigned char                                      UnknownData01_8[0x50];                                      // 0x0068   (0x0050) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectDynamicsProcessorSettings             Settings;                                                   // 0x00B8   (0x0028)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
@@ -879,32 +1023,38 @@ public:
 };
 
 /// Class /Script/Synthesis.EnvelopeFollowerListener
-/// Size: 0x00E0 (224 bytes) (0x0000C0 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000C0 - 0x0000E0) align n/a MaxSize: 0x00E0
 class UEnvelopeFollowerListener : public UActorComponent
 { 
 public:
-    FMulticastInlineDelegate                           OnEnvelopeFollowerUpdate;                                   // 0x00C0   (0x0010)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x00D0   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnEnvelopeFollowerUpdate;                                   // 0x00C0   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x00D0   (0x0010) MISSED
 };
 
 /// Struct /Script/Synthesis.SourceEffectEnvelopeFollowerSettings
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FSourceEffectEnvelopeFollowerSettings
 { 
-    float                                              AttackTime;                                                 // 0x0000   (0x0004)
-    float                                              ReleaseTime;                                                // 0x0004   (0x0004)
-    EEnvelopeFollowerPeakMode                          PeakMode;                                                   // 0x0008   (0x0001)
-    bool                                               bIsAnalogMode;                                              // 0x0009   (0x0001)
-    unsigned char                                      UnknownData00_7[0x2];                                       // 0x000A   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AttackTime;                                                 // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ReleaseTime;                                                // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EEnvelopeFollowerPeakMode                          PeakMode;                                                   // 0x0008   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsAnalogMode;                                              // 0x0009   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x2];                                       // 0x000A   (0x0002) MISSED
 };
 
 /// Class /Script/Synthesis.SourceEffectEnvelopeFollowerPreset
-/// Size: 0x00A8 (168 bytes) (0x000068 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000068 - 0x0000A8) align n/a MaxSize: 0x00A8
 class USourceEffectEnvelopeFollowerPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x34];                                      // 0x0068   (0x0034) MISSED
-    FSourceEffectEnvelopeFollowerSettings              Settings;                                                   // 0x009C   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_8[0x34];                                      // 0x0068   (0x0034) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectEnvelopeFollowerSettings              Settings;                                                   // 0x009C   (0x000C)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener
@@ -919,30 +1069,36 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectEQBand
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSourceEffectEQBand
 { 
-    float                                              Frequency;                                                  // 0x0000   (0x0004)
-    float                                              Bandwidth;                                                  // 0x0004   (0x0004)
-    float                                              GainDb;                                                     // 0x0008   (0x0004)
-    bool                                               bEnabled : 1;                                               // 0x000C:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x000D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Frequency;                                                  // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Bandwidth;                                                  // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              GainDb;                                                     // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnabled : 1;                                               // 0x000C:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x000D   (0x0003) MISSED
 };
 
 /// Struct /Script/Synthesis.SourceEffectEQSettings
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSourceEffectEQSettings
 { 
-    TArray<FSourceEffectEQBand>                        EQBands;                                                    // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSourceEffectEQBand>                        EQBands;                                                    // 0x0000   (0x0010)
 };
 
 /// Class /Script/Synthesis.SourceEffectEQPreset
-/// Size: 0x00B0 (176 bytes) (0x000068 - 0x0000B0) align 8 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000068 - 0x0000B0) align n/a MaxSize: 0x00B0
 class USourceEffectEQPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x38];                                      // 0x0068   (0x0038) MISSED
-    FSourceEffectEQSettings                            Settings;                                                   // 0x00A0   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_8[0x38];                                      // 0x0068   (0x0038) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectEQSettings                            Settings;                                                   // 0x00A0   (0x0010)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectEQPreset.SetSettings
@@ -951,41 +1107,56 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectFilterAudioBusModulationSettings
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FSourceEffectFilterAudioBusModulationSettings
 { 
-    class UAudioBus*                                   AudioBus;                                                   // 0x0000   (0x0008)
-    int32_t                                            EnvelopeFollowerAttackTimeMsec;                             // 0x0008   (0x0004)
-    int32_t                                            EnvelopeFollowerReleaseTimeMsec;                            // 0x000C   (0x0004)
-    float                                              EnvelopeGainMultiplier;                                     // 0x0010   (0x0004)
-    ESourceEffectFilterParam                           FilterParam;                                                // 0x0014   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0015   (0x0003) MISSED
-    float                                              MinFrequencyModulation;                                     // 0x0018   (0x0004)
-    float                                              MaxFrequencyModulation;                                     // 0x001C   (0x0004)
-    float                                              MinResonanceModulation;                                     // 0x0020   (0x0004)
-    float                                              MaxResonanceModulation;                                     // 0x0024   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAudioBus*                                   AudioBus;                                                   // 0x0000   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            EnvelopeFollowerAttackTimeMsec;                             // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            EnvelopeFollowerReleaseTimeMsec;                            // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              EnvelopeGainMultiplier;                                     // 0x0010   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESourceEffectFilterParam                           FilterParam;                                                // 0x0014   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0015   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinFrequencyModulation;                                     // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaxFrequencyModulation;                                     // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinResonanceModulation;                                     // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaxResonanceModulation;                                     // 0x0024   (0x0004)
 };
 
 /// Struct /Script/Synthesis.SourceEffectFilterSettings
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FSourceEffectFilterSettings
 { 
-    ESourceEffectFilterCircuit                         FilterCircuit;                                              // 0x0000   (0x0001)
-    ESourceEffectFilterType                            FilterType;                                                 // 0x0001   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0002   (0x0002) MISSED
-    float                                              CutoffFrequency;                                            // 0x0004   (0x0004)
-    float                                              FilterQ;                                                    // 0x0008   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004) MISSED
-    TArray<FSourceEffectFilterAudioBusModulationSettings> AudioBusModulation;                                      // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESourceEffectFilterCircuit                         FilterCircuit;                                              // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESourceEffectFilterType                            FilterType;                                                 // 0x0001   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x2];                                       // 0x0002   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CutoffFrequency;                                            // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterQ;                                                    // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FSourceEffectFilterAudioBusModulationSettings> AudioBusModulation;                                      // 0x0010   (0x0010)
 };
 
 /// Class /Script/Synthesis.SourceEffectFilterPreset
-/// Size: 0x00D0 (208 bytes) (0x000068 - 0x0000D0) align 8 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000068 - 0x0000D0) align n/a MaxSize: 0x00D0
 class USourceEffectFilterPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x48];                                      // 0x0068   (0x0048) MISSED
-    FSourceEffectFilterSettings                        Settings;                                                   // 0x00B0   (0x0020)
+    /* public    */ unsigned char                                      UnknownData01_8[0x48];                                      // 0x0068   (0x0048) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectFilterSettings                        Settings;                                                   // 0x00B0   (0x0020)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectFilterPreset.SetSettings
@@ -994,21 +1165,25 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectFoldbackDistortionSettings
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FSourceEffectFoldbackDistortionSettings
 { 
-    float                                              InputGainDb;                                                // 0x0000   (0x0004)
-    float                                              ThresholdDb;                                                // 0x0004   (0x0004)
-    float                                              OutputGainDb;                                               // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              InputGainDb;                                                // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ThresholdDb;                                                // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              OutputGainDb;                                               // 0x0008   (0x0004)
 };
 
 /// Class /Script/Synthesis.SourceEffectFoldbackDistortionPreset
-/// Size: 0x00A8 (168 bytes) (0x000068 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000068 - 0x0000A8) align n/a MaxSize: 0x00A8
 class USourceEffectFoldbackDistortionPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x34];                                      // 0x0068   (0x0034) MISSED
-    FSourceEffectFoldbackDistortionSettings            Settings;                                                   // 0x009C   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_8[0x34];                                      // 0x0068   (0x0034) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectFoldbackDistortionSettings            Settings;                                                   // 0x009C   (0x000C)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectFoldbackDistortionPreset.SetSettings
@@ -1017,23 +1192,28 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectMidSideSpreaderSettings
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FSourceEffectMidSideSpreaderSettings
 { 
-    float                                              SpreadAmount;                                               // 0x0000   (0x0004)
-    EStereoChannelMode                                 InputMode;                                                  // 0x0004   (0x0001)
-    EStereoChannelMode                                 OutputMode;                                                 // 0x0005   (0x0001)
-    bool                                               bEqualPower;                                                // 0x0006   (0x0001)
-    unsigned char                                      UnknownData00_7[0x1];                                       // 0x0007   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SpreadAmount;                                               // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EStereoChannelMode                                 InputMode;                                                  // 0x0004   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EStereoChannelMode                                 OutputMode;                                                 // 0x0005   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEqualPower;                                                // 0x0006   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x1];                                       // 0x0007   (0x0001) MISSED
 };
 
 /// Class /Script/Synthesis.SourceEffectMidSideSpreaderPreset
-/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align n/a MaxSize: 0x00A0
 class USourceEffectMidSideSpreaderPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x30];                                      // 0x0068   (0x0030) MISSED
-    FSourceEffectMidSideSpreaderSettings               Settings;                                                   // 0x0098   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_8[0x30];                                      // 0x0068   (0x0030) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectMidSideSpreaderSettings               Settings;                                                   // 0x0098   (0x0008)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectMidSideSpreaderPreset.SetSettings
@@ -1042,20 +1222,23 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectPannerSettings
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FSourceEffectPannerSettings
 { 
-    float                                              Spread;                                                     // 0x0000   (0x0004)
-    float                                              Pan;                                                        // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Spread;                                                     // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Pan;                                                        // 0x0004   (0x0004)
 };
 
 /// Class /Script/Synthesis.SourceEffectPannerPreset
-/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align n/a MaxSize: 0x00A0
 class USourceEffectPannerPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x30];                                      // 0x0068   (0x0030) MISSED
-    FSourceEffectPannerSettings                        Settings;                                                   // 0x0098   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_8[0x30];                                      // 0x0068   (0x0030) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectPannerSettings                        Settings;                                                   // 0x0098   (0x0008)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectPannerPreset.SetSettings
@@ -1064,24 +1247,30 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectPhaserSettings
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSourceEffectPhaserSettings
 { 
-    float                                              WetLevel;                                                   // 0x0000   (0x0004)
-    float                                              Frequency;                                                  // 0x0004   (0x0004)
-    float                                              Feedback;                                                   // 0x0008   (0x0004)
-    EPhaserLFOType                                     LFOType;                                                    // 0x000C   (0x0001)
-    bool                                               UseQuadraturePhase;                                         // 0x000D   (0x0001)
-    unsigned char                                      UnknownData00_7[0x2];                                       // 0x000E   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WetLevel;                                                   // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Frequency;                                                  // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Feedback;                                                   // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EPhaserLFOType                                     LFOType;                                                    // 0x000C   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               UseQuadraturePhase;                                         // 0x000D   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x2];                                       // 0x000E   (0x0002) MISSED
 };
 
 /// Class /Script/Synthesis.SourceEffectPhaserPreset
-/// Size: 0x00B0 (176 bytes) (0x000068 - 0x0000B0) align 8 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000068 - 0x0000B0) align n/a MaxSize: 0x00B0
 class USourceEffectPhaserPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x38];                                      // 0x0068   (0x0038) MISSED
-    FSourceEffectPhaserSettings                        Settings;                                                   // 0x00A0   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_8[0x38];                                      // 0x0068   (0x0038) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectPhaserSettings                        Settings;                                                   // 0x00A0   (0x0010)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectPhaserPreset.SetSettings
@@ -1090,26 +1279,33 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectRingModulationSettings
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FSourceEffectRingModulationSettings
 { 
-    ERingModulatorTypeSourceEffect                     ModulatorType;                                              // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    float                                              Frequency;                                                  // 0x0004   (0x0004)
-    float                                              Depth;                                                      // 0x0008   (0x0004)
-    float                                              DryLevel;                                                   // 0x000C   (0x0004)
-    float                                              WetLevel;                                                   // 0x0010   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0014   (0x0004) MISSED
-    class UAudioBus*                                   AudioBusModulator;                                          // 0x0018   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ERingModulatorTypeSourceEffect                     ModulatorType;                                              // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Frequency;                                                  // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Depth;                                                      // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DryLevel;                                                   // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WetLevel;                                                   // 0x0010   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x0014   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAudioBus*                                   AudioBusModulator;                                          // 0x0018   (0x0008)
 };
 
 /// Class /Script/Synthesis.SourceEffectRingModulationPreset
-/// Size: 0x00D0 (208 bytes) (0x000068 - 0x0000D0) align 8 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000068 - 0x0000D0) align n/a MaxSize: 0x00D0
 class USourceEffectRingModulationPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x48];                                      // 0x0068   (0x0048) MISSED
-    FSourceEffectRingModulationSettings                Settings;                                                   // 0x00B0   (0x0020)
+    /* public    */ unsigned char                                      UnknownData01_8[0x48];                                      // 0x0068   (0x0048) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectRingModulationSettings                Settings;                                                   // 0x00B0   (0x0020)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectRingModulationPreset.SetSettings
@@ -1118,25 +1314,32 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectSimpleDelaySettings
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 4 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FSourceEffectSimpleDelaySettings
 { 
-    float                                              SpeedOfSound;                                               // 0x0000   (0x0004)
-    float                                              DelayAmount;                                                // 0x0004   (0x0004)
-    float                                              DryAmount;                                                  // 0x0008   (0x0004)
-    float                                              WetAmount;                                                  // 0x000C   (0x0004)
-    float                                              Feedback;                                                   // 0x0010   (0x0004)
-    bool                                               bDelayBasedOnDistance : 1;                                  // 0x0014:0 (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0015   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SpeedOfSound;                                               // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DelayAmount;                                                // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DryAmount;                                                  // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WetAmount;                                                  // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Feedback;                                                   // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDelayBasedOnDistance : 1;                                  // 0x0014:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x0015   (0x0003) MISSED
 };
 
 /// Class /Script/Synthesis.SourceEffectSimpleDelayPreset
-/// Size: 0x00C0 (192 bytes) (0x000068 - 0x0000C0) align 8 MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000068 - 0x0000C0) align n/a MaxSize: 0x00C0
 class USourceEffectSimpleDelayPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x40];                                      // 0x0068   (0x0040) MISSED
-    FSourceEffectSimpleDelaySettings                   Settings;                                                   // 0x00A8   (0x0018)
+    /* public    */ unsigned char                                      UnknownData01_8[0x40];                                      // 0x0068   (0x0040) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectSimpleDelaySettings                   Settings;                                                   // 0x00A8   (0x0018)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectSimpleDelayPreset.SetSettings
@@ -1145,30 +1348,41 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectStereoDelaySettings
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FSourceEffectStereoDelaySettings
 { 
-    EStereoDelaySourceEffect                           DelayMode;                                                  // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    float                                              DelayTimeMsec;                                              // 0x0004   (0x0004)
-    float                                              Feedback;                                                   // 0x0008   (0x0004)
-    float                                              DelayRatio;                                                 // 0x000C   (0x0004)
-    float                                              WetLevel;                                                   // 0x0010   (0x0004)
-    float                                              DryLevel;                                                   // 0x0014   (0x0004)
-    bool                                               bFilterEnabled;                                             // 0x0018   (0x0001)
-    EStereoDelayFiltertype                             FilterType;                                                 // 0x0019   (0x0001)
-    unsigned char                                      UnknownData01_6[0x2];                                       // 0x001A   (0x0002) MISSED
-    float                                              FilterFrequency;                                            // 0x001C   (0x0004)
-    float                                              FilterQ;                                                    // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EStereoDelaySourceEffect                           DelayMode;                                                  // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DelayTimeMsec;                                              // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Feedback;                                                   // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DelayRatio;                                                 // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WetLevel;                                                   // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DryLevel;                                                   // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFilterEnabled;                                             // 0x0018   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EStereoDelayFiltertype                             FilterType;                                                 // 0x0019   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x2];                                       // 0x001A   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterFrequency;                                            // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterQ;                                                    // 0x0020   (0x0004)
 };
 
 /// Class /Script/Synthesis.SourceEffectStereoDelayPreset
-/// Size: 0x00D8 (216 bytes) (0x000068 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x000068 - 0x0000D8) align n/a MaxSize: 0x00D8
 class USourceEffectStereoDelayPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x4C];                                      // 0x0068   (0x004C) MISSED
-    FSourceEffectStereoDelaySettings                   Settings;                                                   // 0x00B4   (0x0024)
+    /* public    */ unsigned char                                      UnknownData01_8[0x4C];                                      // 0x0068   (0x004C) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectStereoDelaySettings                   Settings;                                                   // 0x00B4   (0x0024)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectStereoDelayPreset.SetSettings
@@ -1177,20 +1391,23 @@ public:
 };
 
 /// Struct /Script/Synthesis.SourceEffectWaveShaperSettings
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FSourceEffectWaveShaperSettings
 { 
-    float                                              Amount;                                                     // 0x0000   (0x0004)
-    float                                              OutputGainDb;                                               // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Amount;                                                     // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              OutputGainDb;                                               // 0x0004   (0x0004)
 };
 
 /// Class /Script/Synthesis.SourceEffectWaveShaperPreset
-/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000068 - 0x0000A0) align n/a MaxSize: 0x00A0
 class USourceEffectWaveShaperPreset : public USoundEffectSourcePreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x30];                                      // 0x0068   (0x0030) MISSED
-    FSourceEffectWaveShaperSettings                    Settings;                                                   // 0x0098   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_8[0x30];                                      // 0x0068   (0x0030) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSourceEffectWaveShaperSettings                    Settings;                                                   // 0x0098   (0x0008)
 
     /// Functions
     // Function /Script/Synthesis.SourceEffectWaveShaperPreset.SetSettings
@@ -1199,49 +1416,69 @@ public:
 };
 
 /// Class /Script/Synthesis.AudioImpulseResponse
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 class UAudioImpulseResponse : public UObject
 { 
 public:
-    TArray<float>                                      ImpulseResponse;                                            // 0x0028   (0x0010)
-    int32_t                                            NumChannels;                                                // 0x0038   (0x0004)
-    int32_t                                            SampleRate;                                                 // 0x003C   (0x0004)
-    float                                              NormalizationVolumeDb;                                      // 0x0040   (0x0004)
-    bool                                               bTrueStereo;                                                // 0x0044   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0045   (0x0003) MISSED
-    TArray<float>                                      IRData;                                                     // 0x0048   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      ImpulseResponse;                                            // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            NumChannels;                                                // 0x0038   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            SampleRate;                                                 // 0x003C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              NormalizationVolumeDb;                                      // 0x0040   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bTrueStereo;                                                // 0x0044   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0045   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      IRData;                                                     // 0x0048   (0x0010)
 };
 
 /// Struct /Script/Synthesis.SubmixEffectConvolutionReverbSettings
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FSubmixEffectConvolutionReverbSettings
 { 
-    float                                              NormalizationVolumeDb;                                      // 0x0000   (0x0004)
-    bool                                               bBypass;                                                    // 0x0004   (0x0001)
-    bool                                               bMixInputChannelFormatToImpulseResponseFormat;              // 0x0005   (0x0001)
-    bool                                               bMixReverbOutputToOutputChannelFormat;                      // 0x0006   (0x0001)
-    unsigned char                                      UnknownData00_6[0x1];                                       // 0x0007   (0x0001) MISSED
-    float                                              SurroundRearChannelBleedDb;                                 // 0x0008   (0x0004)
-    bool                                               bInvertRearChannelBleedPhase;                               // 0x000C   (0x0001)
-    bool                                               bSurroundRearChannelFlip;                                   // 0x000D   (0x0001)
-    unsigned char                                      UnknownData01_6[0x2];                                       // 0x000E   (0x0002) MISSED
-    float                                              SurroundRearChannelBleedAmount;                             // 0x0010   (0x0004)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x0014   (0x0004) MISSED
-    class UAudioImpulseResponse*                       ImpulseResponse;                                            // 0x0018   (0x0008)
-    bool                                               AllowHArdwareAcceleration;                                  // 0x0020   (0x0001)
-    unsigned char                                      UnknownData03_7[0x7];                                       // 0x0021   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              NormalizationVolumeDb;                                      // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bBypass;                                                    // 0x0004   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bMixInputChannelFormatToImpulseResponseFormat;              // 0x0005   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bMixReverbOutputToOutputChannelFormat;                      // 0x0006   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x1];                                       // 0x0007   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SurroundRearChannelBleedDb;                                 // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bInvertRearChannelBleedPhase;                               // 0x000C   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSurroundRearChannelFlip;                                   // 0x000D   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x2];                                       // 0x000E   (0x0002) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SurroundRearChannelBleedAmount;                             // 0x0010   (0x0004)
+    /* public    */ unsigned char                                      UnknownData06_6[0x4];                                       // 0x0014   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAudioImpulseResponse*                       ImpulseResponse;                                            // 0x0018   (0x0008)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               AllowHArdwareAcceleration;                                  // 0x0020   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_7[0x7];                                       // 0x0021   (0x0007) MISSED
 };
 
 /// Class /Script/Synthesis.SubmixEffectConvolutionReverbPreset
-/// Size: 0x00F0 (240 bytes) (0x000068 - 0x0000F0) align 8 MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000068 - 0x0000F0) align n/a MaxSize: 0x00F0
 class USubmixEffectConvolutionReverbPreset : public USoundEffectSubmixPreset
 { 
 public:
-    class UAudioImpulseResponse*                       ImpulseResponse;                                            // 0x0068   (0x0008)
-    FSubmixEffectConvolutionReverbSettings             Settings;                                                   // 0x0070   (0x0028)
-    ESubmixEffectConvolutionReverbBlockSize            BlockSize;                                                  // 0x0098   (0x0001)
-    bool                                               bEnableHardwareAcceleration;                                // 0x0099   (0x0001)
-    unsigned char                                      UnknownData00_7[0x56];                                      // 0x009A   (0x0056) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UAudioImpulseResponse*                       ImpulseResponse;                                            // 0x0068   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubmixEffectConvolutionReverbSettings             Settings;                                                   // 0x0070   (0x0028)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESubmixEffectConvolutionReverbBlockSize            BlockSize;                                                  // 0x0098   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableHardwareAcceleration;                                // 0x0099   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x56];                                      // 0x009A   (0x0056) MISSED
 
     /// Functions
     // Function /Script/Synthesis.SubmixEffectConvolutionReverbPreset.SetSettings
@@ -1253,23 +1490,28 @@ public:
 };
 
 /// Struct /Script/Synthesis.SubmixEffectDelaySettings
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FSubmixEffectDelaySettings
 { 
-    float                                              MaximumDelayLength;                                         // 0x0000   (0x0004)
-    float                                              InterpolationTime;                                          // 0x0004   (0x0004)
-    float                                              DelayLength;                                                // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaximumDelayLength;                                         // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              InterpolationTime;                                          // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DelayLength;                                                // 0x0008   (0x0004)
 };
 
 /// Class /Script/Synthesis.SubmixEffectDelayPreset
-/// Size: 0x00B8 (184 bytes) (0x000068 - 0x0000B8) align 8 MaxSize: 0x00B8
+/// Size: 0x00B8 (184 bytes) (0x000068 - 0x0000B8) align n/a MaxSize: 0x00B8
 class USubmixEffectDelayPreset : public USoundEffectSubmixPreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x34];                                      // 0x0068   (0x0034) MISSED
-    FSubmixEffectDelaySettings                         Settings;                                                   // 0x009C   (0x000C)
-    FSubmixEffectDelaySettings                         DynamicSettings;                                            // 0x00A8   (0x000C)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x00B4   (0x0004) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x34];                                      // 0x0068   (0x0034) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubmixEffectDelaySettings                         Settings;                                                   // 0x009C   (0x000C)
+    UPROPERTY(Transient, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubmixEffectDelaySettings                         DynamicSettings;                                            // 0x00A8   (0x000C)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x00B4   (0x0004) MISSED
 
     /// Functions
     // Function /Script/Synthesis.SubmixEffectDelayPreset.SetSettings
@@ -1286,23 +1528,28 @@ public:
 };
 
 /// Struct /Script/Synthesis.SubmixEffectFilterSettings
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FSubmixEffectFilterSettings
 { 
-    ESubmixFilterType                                  FilterType;                                                 // 0x0000   (0x0001)
-    ESubmixFilterAlgorithm                             FilterAlgorithm;                                            // 0x0001   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0002   (0x0002) MISSED
-    float                                              FilterFrequency;                                            // 0x0004   (0x0004)
-    float                                              FilterQ;                                                    // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESubmixFilterType                                  FilterType;                                                 // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESubmixFilterAlgorithm                             FilterAlgorithm;                                            // 0x0001   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x2];                                       // 0x0002   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterFrequency;                                            // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterQ;                                                    // 0x0008   (0x0004)
 };
 
 /// Class /Script/Synthesis.SubmixEffectFilterPreset
-/// Size: 0x00A8 (168 bytes) (0x000068 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000068 - 0x0000A8) align n/a MaxSize: 0x00A8
 class USubmixEffectFilterPreset : public USoundEffectSubmixPreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x34];                                      // 0x0068   (0x0034) MISSED
-    FSubmixEffectFilterSettings                        Settings;                                                   // 0x009C   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_8[0x34];                                      // 0x0068   (0x0034) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubmixEffectFilterSettings                        Settings;                                                   // 0x009C   (0x000C)
 
     /// Functions
     // Function /Script/Synthesis.SubmixEffectFilterPreset.SetSettings
@@ -1329,22 +1576,27 @@ public:
 };
 
 /// Struct /Script/Synthesis.SubmixEffectFlexiverbSettings
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FSubmixEffectFlexiverbSettings
 { 
-    float                                              PreDelay;                                                   // 0x0000   (0x0004)
-    float                                              DecayTime;                                                  // 0x0004   (0x0004)
-    float                                              RoomDampening;                                              // 0x0008   (0x0004)
-    int32_t                                            Complexity;                                                 // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PreDelay;                                                   // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DecayTime;                                                  // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RoomDampening;                                              // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Complexity;                                                 // 0x000C   (0x0004)
 };
 
 /// Class /Script/Synthesis.SubmixEffectFlexiverbPreset
-/// Size: 0x00B0 (176 bytes) (0x000068 - 0x0000B0) align 8 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000068 - 0x0000B0) align n/a MaxSize: 0x00B0
 class USubmixEffectFlexiverbPreset : public USoundEffectSubmixPreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x38];                                      // 0x0068   (0x0038) MISSED
-    FSubmixEffectFlexiverbSettings                     Settings;                                                   // 0x00A0   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_8[0x38];                                      // 0x0068   (0x0038) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubmixEffectFlexiverbSettings                     Settings;                                                   // 0x00A0   (0x0010)
 
     /// Functions
     // Function /Script/Synthesis.SubmixEffectFlexiverbPreset.SetSettings
@@ -1353,41 +1605,57 @@ public:
 };
 
 /// Struct /Script/Synthesis.DynamicsBandSettings
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 4 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FDynamicsBandSettings
 { 
-    float                                              CrossoverTopFrequency;                                      // 0x0000   (0x0004)
-    float                                              AttackTimeMsec;                                             // 0x0004   (0x0004)
-    float                                              ReleaseTimeMsec;                                            // 0x0008   (0x0004)
-    float                                              ThresholdDb;                                                // 0x000C   (0x0004)
-    float                                              Ratio;                                                      // 0x0010   (0x0004)
-    float                                              KneeBandwidthDb;                                            // 0x0014   (0x0004)
-    float                                              InputGainDb;                                                // 0x0018   (0x0004)
-    float                                              OutputGainDb;                                               // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CrossoverTopFrequency;                                      // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AttackTimeMsec;                                             // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ReleaseTimeMsec;                                            // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ThresholdDb;                                                // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Ratio;                                                      // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              KneeBandwidthDb;                                            // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              InputGainDb;                                                // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              OutputGainDb;                                               // 0x001C   (0x0004)
 };
 
 /// Struct /Script/Synthesis.SubmixEffectMultibandCompressorSettings
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FSubmixEffectMultibandCompressorSettings
 { 
-    ESubmixEffectDynamicsProcessorType                 DynamicsProcessorType;                                      // 0x0000   (0x0001)
-    ESubmixEffectDynamicsPeakMode                      PeakMode;                                                   // 0x0001   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0002   (0x0002) MISSED
-    float                                              LookAheadMsec;                                              // 0x0004   (0x0004)
-    bool                                               bLinkChannels;                                              // 0x0008   (0x0001)
-    bool                                               bAnalogMode;                                                // 0x0009   (0x0001)
-    bool                                               bFourPole;                                                  // 0x000A   (0x0001)
-    unsigned char                                      UnknownData01_6[0x5];                                       // 0x000B   (0x0005) MISSED
-    TArray<FDynamicsBandSettings>                      Bands;                                                      // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESubmixEffectDynamicsProcessorType                 DynamicsProcessorType;                                      // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESubmixEffectDynamicsPeakMode                      PeakMode;                                                   // 0x0001   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x2];                                       // 0x0002   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LookAheadMsec;                                              // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLinkChannels;                                              // 0x0008   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAnalogMode;                                                // 0x0009   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFourPole;                                                  // 0x000A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x5];                                       // 0x000B   (0x0005) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FDynamicsBandSettings>                      Bands;                                                      // 0x0010   (0x0010)
 };
 
 /// Class /Script/Synthesis.SubmixEffectMultibandCompressorPreset
-/// Size: 0x00D0 (208 bytes) (0x000068 - 0x0000D0) align 8 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000068 - 0x0000D0) align n/a MaxSize: 0x00D0
 class USubmixEffectMultibandCompressorPreset : public USoundEffectSubmixPreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x48];                                      // 0x0068   (0x0048) MISSED
-    FSubmixEffectMultibandCompressorSettings           Settings;                                                   // 0x00B0   (0x0020)
+    /* public    */ unsigned char                                      UnknownData01_8[0x48];                                      // 0x0068   (0x0048) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSubmixEffectMultibandCompressorSettings           Settings;                                                   // 0x00B0   (0x0020)
 
     /// Functions
     // Function /Script/Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings
@@ -1396,30 +1664,41 @@ public:
 };
 
 /// Struct /Script/Synthesis.SubmixEffectStereoDelaySettings
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FSubmixEffectStereoDelaySettings
 { 
-    EStereoDelaySourceEffect                           DelayMode;                                                  // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    float                                              DelayTimeMsec;                                              // 0x0004   (0x0004)
-    float                                              Feedback;                                                   // 0x0008   (0x0004)
-    float                                              DelayRatio;                                                 // 0x000C   (0x0004)
-    float                                              WetLevel;                                                   // 0x0010   (0x0004)
-    float                                              DryLevel;                                                   // 0x0014   (0x0004)
-    bool                                               bFilterEnabled;                                             // 0x0018   (0x0001)
-    EStereoDelayFiltertype                             FilterType;                                                 // 0x0019   (0x0001)
-    unsigned char                                      UnknownData01_6[0x2];                                       // 0x001A   (0x0002) MISSED
-    float                                              FilterFrequency;                                            // 0x001C   (0x0004)
-    float                                              FilterQ;                                                    // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EStereoDelaySourceEffect                           DelayMode;                                                  // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DelayTimeMsec;                                              // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Feedback;                                                   // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DelayRatio;                                                 // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WetLevel;                                                   // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DryLevel;                                                   // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bFilterEnabled;                                             // 0x0018   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EStereoDelayFiltertype                             FilterType;                                                 // 0x0019   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x2];                                       // 0x001A   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterFrequency;                                            // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FilterQ;                                                    // 0x0020   (0x0004)
 };
 
 /// Class /Script/Synthesis.SubmixEffectStereoDelayPreset
-/// Size: 0x00D8 (216 bytes) (0x000068 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x000068 - 0x0000D8) align n/a MaxSize: 0x00D8
 class USubmixEffectStereoDelayPreset : public USoundEffectSubmixPreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x4C];                                      // 0x0068   (0x004C) MISSED
-    FSubmixEffectStereoDelaySettings                   Settings;                                                   // 0x00B4   (0x0024)
+    /* public    */ unsigned char                                      UnknownData01_8[0x4C];                                      // 0x0068   (0x004C) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSubmixEffectStereoDelaySettings                   Settings;                                                   // 0x00B4   (0x0024)
 
     /// Functions
     // Function /Script/Synthesis.SubmixEffectStereoDelayPreset.SetSettings
@@ -1428,35 +1707,45 @@ public:
 };
 
 /// Struct /Script/Synthesis.TapDelayInfo
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 4 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FTapDelayInfo
 { 
-    ETapLineMode                                       TapLineMode;                                                // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    float                                              DelayLength;                                                // 0x0004   (0x0004)
-    float                                              Gain;                                                       // 0x0008   (0x0004)
-    int32_t                                            OutputChannel;                                              // 0x000C   (0x0004)
-    float                                              PanInDegrees;                                               // 0x0010   (0x0004)
-    int32_t                                            TapId;                                                      // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ETapLineMode                                       TapLineMode;                                                // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DelayLength;                                                // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Gain;                                                       // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            OutputChannel;                                              // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PanInDegrees;                                               // 0x0010   (0x0004)
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            TapId;                                                      // 0x0014   (0x0004)
 };
 
 /// Struct /Script/Synthesis.SubmixEffectTapDelaySettings
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FSubmixEffectTapDelaySettings
 { 
-    float                                              MaximumDelayLength;                                         // 0x0000   (0x0004)
-    float                                              InterpolationTime;                                          // 0x0004   (0x0004)
-    TArray<FTapDelayInfo>                              Taps;                                                       // 0x0008   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaximumDelayLength;                                         // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              InterpolationTime;                                          // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FTapDelayInfo>                              Taps;                                                       // 0x0008   (0x0010)
 };
 
 /// Class /Script/Synthesis.SubmixEffectTapDelayPreset
-/// Size: 0x00D8 (216 bytes) (0x000068 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x000068 - 0x0000D8) align n/a MaxSize: 0x00D8
 class USubmixEffectTapDelayPreset : public USoundEffectSubmixPreset
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x40];                                      // 0x0068   (0x0040) MISSED
-    FSubmixEffectTapDelaySettings                      Settings;                                                   // 0x00A8   (0x0018)
-    unsigned char                                      UnknownData01_7[0x18];                                      // 0x00C0   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x40];                                      // 0x0068   (0x0040) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSubmixEffectTapDelaySettings                      Settings;                                                   // 0x00A8   (0x0018)
+    /* public    */ unsigned char                                      UnknownData03_7[0x18];                                      // 0x00C0   (0x0018) MISSED
 
     /// Functions
     // Function /Script/Synthesis.SubmixEffectTapDelayPreset.SetTap
@@ -1487,42 +1776,64 @@ public:
 };
 
 /// Struct /Script/Synthesis.Synth2DSliderStyle
-/// Size: 0x02E0 (736 bytes) (0x000008 - 0x0002E0) align 8 MaxSize: 0x02E0
+/// Size: 0x02E0 (736 bytes) (0x000008 - 0x0002E0) align n/a MaxSize: 0x02E0
 struct FSynth2DSliderStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        NormalThumbImage;                                           // 0x0008   (0x0090)
-    FSlateBrush                                        DisabledThumbImage;                                         // 0x0098   (0x0090)
-    FSlateBrush                                        NormalBarImage;                                             // 0x0128   (0x0090)
-    FSlateBrush                                        DisabledBarImage;                                           // 0x01B8   (0x0090)
-    FSlateBrush                                        BackgroundImage;                                            // 0x0248   (0x0090)
-    float                                              BarThickness;                                               // 0x02D8   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x02DC   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        NormalThumbImage;                                           // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DisabledThumbImage;                                         // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        NormalBarImage;                                             // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        DisabledBarImage;                                           // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        BackgroundImage;                                            // 0x0248   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BarThickness;                                               // 0x02D8   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x02DC   (0x0004) MISSED
 };
 
 /// Class /Script/Synthesis.Synth2DSlider
-/// Size: 0x04A0 (1184 bytes) (0x000108 - 0x0004A0) align 8 MaxSize: 0x04A0
+/// Size: 0x04A0 (1184 bytes) (0x000108 - 0x0004A0) align n/a MaxSize: 0x04A0
 class USynth2DSlider : public UWidget
 { 
 public:
-    float                                              ValueX;                                                     // 0x0108   (0x0004)
-    float                                              ValueY;                                                     // 0x010C   (0x0004)
-    FDelegateProperty                                  ValueXDelegate;                                             // 0x0110   (0x0010)
-    FDelegateProperty                                  ValueYDelegate;                                             // 0x0120   (0x0010)
-    FSynth2DSliderStyle                                WidgetStyle;                                                // 0x0130   (0x02E0)
-    FLinearColor                                       SliderHandleColor;                                          // 0x0410   (0x0010)
-    bool                                               IndentHandle;                                               // 0x0420   (0x0001)
-    bool                                               Locked;                                                     // 0x0421   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0422   (0x0002) MISSED
-    float                                              StepSize;                                                   // 0x0424   (0x0004)
-    bool                                               IsFocusable;                                                // 0x0428   (0x0001)
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0429   (0x0007) MISSED
-    FMulticastInlineDelegate                           OnMouseCaptureBegin;                                        // 0x0430   (0x0010)
-    FMulticastInlineDelegate                           OnMouseCaptureEnd;                                          // 0x0440   (0x0010)
-    FMulticastInlineDelegate                           OnControllerCaptureBegin;                                   // 0x0450   (0x0010)
-    FMulticastInlineDelegate                           OnControllerCaptureEnd;                                     // 0x0460   (0x0010)
-    FMulticastInlineDelegate                           OnValueChangedX;                                            // 0x0470   (0x0010)
-    FMulticastInlineDelegate                           OnValueChangedY;                                            // 0x0480   (0x0010)
-    unsigned char                                      UnknownData02_7[0x10];                                      // 0x0490   (0x0010) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ValueX;                                                     // 0x0108   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ValueY;                                                     // 0x010C   (0x0004)
+    UPROPERTY(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FDelegateProperty                                  ValueXDelegate;                                             // 0x0110   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FDelegateProperty                                  ValueYDelegate;                                             // 0x0120   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSynth2DSliderStyle                                WidgetStyle;                                                // 0x0130   (0x02E0)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       SliderHandleColor;                                          // 0x0410   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               IndentHandle;                                               // 0x0420   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Locked;                                                     // 0x0421   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x2];                                       // 0x0422   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StepSize;                                                   // 0x0424   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               IsFocusable;                                                // 0x0428   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x7];                                       // 0x0429   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMouseCaptureBegin;                                        // 0x0430   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMouseCaptureEnd;                                          // 0x0440   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnControllerCaptureBegin;                                   // 0x0450   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnControllerCaptureEnd;                                     // 0x0460   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnValueChangedX;                                            // 0x0470   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnValueChangedY;                                            // 0x0480   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x10];                                      // 0x0490   (0x0010) MISSED
 
     /// Functions
     // Function /Script/Synthesis.Synth2DSlider.SetValue
@@ -1545,12 +1856,13 @@ public:
 };
 
 /// Class /Script/Synthesis.GranularSynth
-/// Size: 0x0AF0 (2800 bytes) (0x000730 - 0x000AF0) align 16 MaxSize: 0x0AF0
+/// Size: 0x0AF0 (2800 bytes) (0x000730 - 0x000AF0) align n/a MaxSize: 0x0AF0
 class UGranularSynth : public USynthComponent
 { 
 public:
-    class USoundWave*                                  GranulatedSoundWave;                                        // 0x0730   (0x0008)
-    unsigned char                                      UnknownData00_7[0x3B8];                                     // 0x0738   (0x03B8) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class USoundWave*                                  GranulatedSoundWave;                                        // 0x0730   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3B8];                                     // 0x0738   (0x03B8) MISSED
 
     /// Functions
     // Function /Script/Synthesis.GranularSynth.SetSustainGain
@@ -1622,30 +1934,39 @@ public:
 };
 
 /// Class /Script/Synthesis.MonoWaveTableSynthPreset
-/// Size: 0x0170 (368 bytes) (0x000028 - 0x000170) align 8 MaxSize: 0x0170
+/// Size: 0x0170 (368 bytes) (0x000028 - 0x000170) align n/a MaxSize: 0x0170
 class UMonoWaveTableSynthPreset : public UObject
 { 
 public:
-    FString                                            PresetName;                                                 // 0x0028   (0x0010)
-    bool                                               bLockKeyframesToGridBool : 1;                               // 0x0038:0 (0x0001)
-    unsigned char                                      UnknownData00_5[0x3];                                       // 0x0039   (0x0003) MISSED
-    int32_t                                            LockKeyframesToGrid;                                        // 0x003C   (0x0004)
-    int32_t                                            WaveTableResolution;                                        // 0x0040   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0044   (0x0004) MISSED
-    TArray<FRuntimeFloatCurve>                         WaveTable;                                                  // 0x0048   (0x0010)
-    bool                                               bNormalizeWaveTables : 1;                                   // 0x0058:0 (0x0001)
-    unsigned char                                      UnknownData02_7[0x117];                                     // 0x0059   (0x0117) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            PresetName;                                                 // 0x0028   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLockKeyframesToGridBool : 1;                               // 0x0038:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_5[0x3];                                       // 0x0039   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            LockKeyframesToGrid;                                        // 0x003C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            WaveTableResolution;                                        // 0x0040   (0x0004)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x0044   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NonTransactional, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FRuntimeFloatCurve>                         WaveTable;                                                  // 0x0048   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bNormalizeWaveTables : 1;                                   // 0x0058:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_7[0x117];                                     // 0x0059   (0x0117) MISSED
 };
 
 /// Class /Script/Synthesis.SynthComponentMonoWaveTable
-/// Size: 0x0E70 (3696 bytes) (0x000730 - 0x000E70) align 16 MaxSize: 0x0E70
+/// Size: 0x0E70 (3696 bytes) (0x000730 - 0x000E70) align n/a MaxSize: 0x0E70
 class USynthComponentMonoWaveTable : public USynthComponent
 { 
 public:
-    FMulticastInlineDelegate                           OnTableAltered;                                             // 0x0730   (0x0010)
-    FMulticastInlineDelegate                           OnNumTablesChanged;                                         // 0x0740   (0x0010)
-    class UMonoWaveTableSynthPreset*                   CurrentPreset;                                              // 0x0750   (0x0008)
-    unsigned char                                      UnknownData00_7[0x718];                                     // 0x0758   (0x0718) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnTableAltered;                                             // 0x0730   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnNumTablesChanged;                                         // 0x0740   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMonoWaveTableSynthPreset*                   CurrentPreset;                                              // 0x0750   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x718];                                     // 0x0758   (0x0718) MISSED
 
     /// Functions
     // Function /Script/Synthesis.SynthComponentMonoWaveTable.SetWaveTablePosition
@@ -1785,13 +2106,15 @@ public:
 };
 
 /// Class /Script/Synthesis.SynthComponentToneGenerator
-/// Size: 0x0750 (1872 bytes) (0x000730 - 0x000750) align 16 MaxSize: 0x0750
+/// Size: 0x0750 (1872 bytes) (0x000730 - 0x000750) align n/a MaxSize: 0x0750
 class USynthComponentToneGenerator : public USynthComponent
 { 
 public:
-    float                                              Frequency;                                                  // 0x0730   (0x0004)
-    float                                              Volume;                                                     // 0x0734   (0x0004)
-    unsigned char                                      UnknownData00_7[0x18];                                      // 0x0738   (0x0018) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Frequency;                                                  // 0x0730   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Volume;                                                     // 0x0734   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x18];                                      // 0x0738   (0x0018) MISSED
 
     /// Functions
     // Function /Script/Synthesis.SynthComponentToneGenerator.SetVolume
@@ -1803,14 +2126,17 @@ public:
 };
 
 /// Class /Script/Synthesis.SynthSamplePlayer
-/// Size: 0x0860 (2144 bytes) (0x000730 - 0x000860) align 16 MaxSize: 0x0860
+/// Size: 0x0860 (2144 bytes) (0x000730 - 0x000860) align n/a MaxSize: 0x0860
 class USynthSamplePlayer : public USynthComponent
 { 
 public:
-    class USoundWave*                                  SoundWave;                                                  // 0x0730   (0x0008)
-    FMulticastInlineDelegate                           OnSampleLoaded;                                             // 0x0738   (0x0010)
-    FMulticastInlineDelegate                           OnSamplePlaybackProgress;                                   // 0x0748   (0x0010)
-    unsigned char                                      UnknownData00_7[0x108];                                     // 0x0758   (0x0108) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USoundWave*                                  SoundWave;                                                  // 0x0730   (0x0008)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSampleLoaded;                                             // 0x0738   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSamplePlaybackProgress;                                   // 0x0748   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x108];                                     // 0x0758   (0x0108) MISSED
 
     /// Functions
     // Function /Script/Synthesis.SynthSamplePlayer.SetSoundWave
@@ -1842,7 +2168,7 @@ public:
 };
 
 /// Class /Script/Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class USynthesisUtilitiesBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -1865,43 +2191,66 @@ public:
 };
 
 /// Struct /Script/Synthesis.SynthKnobStyle
-/// Size: 0x0258 (600 bytes) (0x000008 - 0x000258) align 8 MaxSize: 0x0258
+/// Size: 0x0258 (600 bytes) (0x000008 - 0x000258) align n/a MaxSize: 0x0258
 struct FSynthKnobStyle : FSlateWidgetStyle
 { 
-    FSlateBrush                                        LargeKnob;                                                  // 0x0008   (0x0090)
-    FSlateBrush                                        LargeKnobOverlay;                                           // 0x0098   (0x0090)
-    FSlateBrush                                        MediumKnob;                                                 // 0x0128   (0x0090)
-    FSlateBrush                                        MediumKnobOverlay;                                          // 0x01B8   (0x0090)
-    float                                              MinValueAngle;                                              // 0x0248   (0x0004)
-    float                                              MaxValueAngle;                                              // 0x024C   (0x0004)
-    ESynthKnobSize                                     KnobSize;                                                   // 0x0250   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0251   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        LargeKnob;                                                  // 0x0008   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        LargeKnobOverlay;                                           // 0x0098   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MediumKnob;                                                 // 0x0128   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSlateBrush                                        MediumKnobOverlay;                                          // 0x01B8   (0x0090)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinValueAngle;                                              // 0x0248   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MaxValueAngle;                                              // 0x024C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthKnobSize                                     KnobSize;                                                   // 0x0250   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0251   (0x0007) MISSED
 };
 
 /// Class /Script/Synthesis.SynthKnob
-/// Size: 0x0420 (1056 bytes) (0x000108 - 0x000420) align 8 MaxSize: 0x0420
+/// Size: 0x0420 (1056 bytes) (0x000108 - 0x000420) align n/a MaxSize: 0x0420
 class USynthKnob : public UWidget
 { 
 public:
-    float                                              Value;                                                      // 0x0108   (0x0004)
-    float                                              StepSize;                                                   // 0x010C   (0x0004)
-    float                                              MouseSpeed;                                                 // 0x0110   (0x0004)
-    float                                              MouseFineTuneSpeed;                                         // 0x0114   (0x0004)
-    bool                                               ShowTooltipInfo : 1;                                        // 0x0118:0 (0x0001)
-    unsigned char                                      UnknownData00_5[0x7];                                       // 0x0119   (0x0007) MISSED
-    FText                                              ParameterName;                                              // 0x0120   (0x0018)
-    FText                                              ParameterUnits;                                             // 0x0138   (0x0018)
-    FDelegateProperty                                  ValueDelegate;                                              // 0x0150   (0x0010)
-    FSynthKnobStyle                                    WidgetStyle;                                                // 0x0160   (0x0258)
-    bool                                               Locked;                                                     // 0x03B8   (0x0001)
-    bool                                               IsFocusable;                                                // 0x03B9   (0x0001)
-    unsigned char                                      UnknownData01_6[0x6];                                       // 0x03BA   (0x0006) MISSED
-    FMulticastInlineDelegate                           OnMouseCaptureBegin;                                        // 0x03C0   (0x0010)
-    FMulticastInlineDelegate                           OnMouseCaptureEnd;                                          // 0x03D0   (0x0010)
-    FMulticastInlineDelegate                           OnControllerCaptureBegin;                                   // 0x03E0   (0x0010)
-    FMulticastInlineDelegate                           OnControllerCaptureEnd;                                     // 0x03F0   (0x0010)
-    FMulticastInlineDelegate                           OnValueChanged;                                             // 0x0400   (0x0010)
-    unsigned char                                      UnknownData02_7[0x10];                                      // 0x0410   (0x0010) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Value;                                                      // 0x0108   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StepSize;                                                   // 0x010C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MouseSpeed;                                                 // 0x0110   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MouseFineTuneSpeed;                                         // 0x0114   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               ShowTooltipInfo : 1;                                        // 0x0118:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_5[0x7];                                       // 0x0119   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              ParameterName;                                              // 0x0120   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              ParameterUnits;                                             // 0x0138   (0x0018)
+    UPROPERTY(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FDelegateProperty                                  ValueDelegate;                                              // 0x0150   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FSynthKnobStyle                                    WidgetStyle;                                                // 0x0160   (0x0258)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Locked;                                                     // 0x03B8   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               IsFocusable;                                                // 0x03B9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x6];                                       // 0x03BA   (0x0006) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMouseCaptureBegin;                                        // 0x03C0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnMouseCaptureEnd;                                          // 0x03D0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnControllerCaptureBegin;                                   // 0x03E0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnControllerCaptureEnd;                                     // 0x03F0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnValueChanged;                                             // 0x0400   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x10];                                      // 0x0410   (0x0010) MISSED
 
     /// Functions
     // Function /Script/Synthesis.SynthKnob.SetValue
@@ -1918,44 +2267,56 @@ public:
 };
 
 /// Struct /Script/Synthesis.PatchId
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FPatchId
 { 
-    int32_t                                            ID;                                                         // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ID;                                                         // 0x0000   (0x0004)
 };
 
 /// Struct /Script/Synthesis.SourceEffectBitCrusherBaseSettings
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FSourceEffectBitCrusherBaseSettings
 { 
-    float                                              SampleRate;                                                 // 0x0000   (0x0004)
-    float                                              BitDepth;                                                   // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SampleRate;                                                 // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BitDepth;                                                   // 0x0004   (0x0004)
 };
 
 /// Struct /Script/Synthesis.SourceEffectChorusBaseSettings
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 4 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FSourceEffectChorusBaseSettings
 { 
-    float                                              Depth;                                                      // 0x0000   (0x0004)
-    float                                              Frequency;                                                  // 0x0004   (0x0004)
-    float                                              Feedback;                                                   // 0x0008   (0x0004)
-    float                                              WetLevel;                                                   // 0x000C   (0x0004)
-    float                                              DryLevel;                                                   // 0x0010   (0x0004)
-    float                                              Spread;                                                     // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Depth;                                                      // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Frequency;                                                  // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Feedback;                                                   // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WetLevel;                                                   // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DryLevel;                                                   // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Spread;                                                     // 0x0014   (0x0004)
 };
 
 /// Struct /Script/Synthesis.SynthSlateStyle
-/// Size: 0x0010 (16 bytes) (0x000008 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000008 - 0x000010) align n/a MaxSize: 0x0010
 struct FSynthSlateStyle : FSlateWidgetStyle
 { 
-    ESynthSlateSizeType                                SizeType;                                                   // 0x0008   (0x0001)
-    ESynthSlateColorStyle                              ColorStyle;                                                 // 0x0009   (0x0001)
-    unsigned char                                      UnknownData00_7[0x6];                                       // 0x000A   (0x0006) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthSlateSizeType                                SizeType;                                                   // 0x0008   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESynthSlateColorStyle                              ColorStyle;                                                 // 0x0009   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x6];                                       // 0x000A   (0x0006) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FSynth1PatchCable) == 0x0008); // 8 bytes (0x000000 - 0x000008)
 static_assert(sizeof(FEpicSynth1Patch) == 0x0018); // 24 bytes (0x000000 - 0x000018)
 static_assert(sizeof(FModularSynthPreset) == 0x00E0); // 224 bytes (0x000008 - 0x0000E0)
@@ -2127,3 +2488,4 @@ static_assert(offsetof(USynthKnob, ParameterUnits) == 0x0138);
 static_assert(offsetof(USynthKnob, WidgetStyle) == 0x0160);
 static_assert(offsetof(FSynthSlateStyle, SizeType) == 0x0008);
 static_assert(offsetof(FSynthSlateStyle, ColorStyle) == 0x0009);
+#endif

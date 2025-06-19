@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,8 +24,23 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/SkyCreatorPlugin.ESkyCreatorStarMapRotationType
-/// Size: 0x01 (1 bytes)
+class ASkyCreator;
+class USkyCreatorWeatherPreset;
+struct FSkyCreatorExponentialHeightFogSettings;
+struct FSkyCreatorExposureSettings;
+struct FSkyCreatorMoonLightSettings;
+struct FSkyCreatorSkyAtmosphereSettings;
+struct FSkyCreatorSkyLightSettings;
+struct FSkyCreatorStarMapSettings;
+struct FSkyCreatorSunLightSettings;
+struct FSkyCreatorVolumetricCloudMaterials;
+struct FSkyCreatorVolumetricCloudSettings;
+struct FSkyCreatorWeatherFXSettings;
+struct FSkyCreatorWeatherMaterialFXSettings;
+struct FSkyCreatorWeatherSettings;
+struct FSkyCreatorWindSettings;
+
+/// Enum /Script/SkyCreatorPlugin.ESkyCreatorStarMapRotationType -  1 (1 bytes)
 enum class ESkyCreatorStarMapRotationType : uint8_t
 {
     StarMapRotationType_NoRotation                                                   = 0,
@@ -24,24 +48,21 @@ enum class ESkyCreatorStarMapRotationType : uint8_t
     StarMapRotationType_FollowMoon                                                   = 2
 };
 
-/// Enum /Script/SkyCreatorPlugin.ESkyCreatorMoonOrbitType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SkyCreatorPlugin.ESkyCreatorMoonOrbitType -  1 (1 bytes)
 enum class ESkyCreatorMoonOrbitType : uint8_t
 {
     MoonOrbitType_SimplifiedCycle                                                    = 0,
     MoonOrbitType_FixedElevation                                                     = 1
 };
 
-/// Enum /Script/SkyCreatorPlugin.ESkyCreatorSunOrbitType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SkyCreatorPlugin.ESkyCreatorSunOrbitType -  1 (1 bytes)
 enum class ESkyCreatorSunOrbitType : uint8_t
 {
     SunOrbitType_SimplifiedCycle                                                     = 0,
     SunOrbitType_Simulated                                                           = 1
 };
 
-/// Enum /Script/SkyCreatorPlugin.ESkyCreatorEditorWeatherType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/SkyCreatorPlugin.ESkyCreatorEditorWeatherType -  1 (1 bytes)
 enum class ESkyCreatorEditorWeatherType : uint8_t
 {
     EditorWeather_WeatherPreset                                                      = 0,
@@ -49,376 +70,650 @@ enum class ESkyCreatorEditorWeatherType : uint8_t
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorSkyAtmosphereSettings
-/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align 4 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align n/a MaxSize: 0x0070
 struct FSkyCreatorSkyAtmosphereSettings
 { 
-    float                                              RayleighScatteringScale;                                    // 0x0000   (0x0004)
-    FLinearColor                                       RayleighScattering;                                         // 0x0004   (0x0010)
-    float                                              RayleighExponentialDistribution;                            // 0x0014   (0x0004)
-    float                                              MieScatteringScale;                                         // 0x0018   (0x0004)
-    FLinearColor                                       MieScattering;                                              // 0x001C   (0x0010)
-    float                                              MieAbsorptionScale;                                         // 0x002C   (0x0004)
-    FLinearColor                                       MieAbsorption;                                              // 0x0030   (0x0010)
-    float                                              MieAnisotropy;                                              // 0x0040   (0x0004)
-    float                                              MieExponentialDistribution;                                 // 0x0044   (0x0004)
-    float                                              AbsorptionScale;                                            // 0x0048   (0x0004)
-    FLinearColor                                       Absorption;                                                 // 0x004C   (0x0010)
-    FLinearColor                                       SkyLuminanceFactor;                                         // 0x005C   (0x0010)
-    float                                              HeightFogContribution;                                      // 0x006C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RayleighScatteringScale;                                    // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       RayleighScattering;                                         // 0x0004   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RayleighExponentialDistribution;                            // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MieScatteringScale;                                         // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       MieScattering;                                              // 0x001C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MieAbsorptionScale;                                         // 0x002C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       MieAbsorption;                                              // 0x0030   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MieAnisotropy;                                              // 0x0040   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MieExponentialDistribution;                                 // 0x0044   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AbsorptionScale;                                            // 0x0048   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       Absorption;                                                 // 0x004C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       SkyLuminanceFactor;                                         // 0x005C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HeightFogContribution;                                      // 0x006C   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorVolumetricCloudSettings
-/// Size: 0x008C (140 bytes) (0x000000 - 0x00008C) align 4 MaxSize: 0x008C
+/// Size: 0x008C (140 bytes) (0x000000 - 0x00008C) align n/a MaxSize: 0x008C
 struct FSkyCreatorVolumetricCloudSettings
 { 
-    float                                              LowCloudCoverage;                                           // 0x0000   (0x0004)
-    float                                              LowCloudDensity;                                            // 0x0004   (0x0004)
-    float                                              LowCloudAltitude;                                           // 0x0008   (0x0004)
-    float                                              LowCloudHeight;                                             // 0x000C   (0x0004)
-    float                                              LowCloudHeightVariation;                                    // 0x0010   (0x0004)
-    float                                              LowCloudSecondaryCoverage;                                  // 0x0014   (0x0004)
-    float                                              LowCloudSecondaryAltitude;                                  // 0x0018   (0x0004)
-    float                                              LowCloudSecondaryHeight;                                    // 0x001C   (0x0004)
-    float                                              HighCloudCoverage;                                          // 0x0020   (0x0004)
-    float                                              HighCloudDensity;                                           // 0x0024   (0x0004)
-    float                                              HighCloudHeight;                                            // 0x0028   (0x0004)
-    float                                              HighCloudAmountTypeA;                                       // 0x002C   (0x0004)
-    float                                              HighCloudAmountTypeB;                                       // 0x0030   (0x0004)
-    float                                              HighCloudAmountTypeC;                                       // 0x0034   (0x0004)
-    FLinearColor                                       Albedo;                                                     // 0x0038   (0x0010)
-    FLinearColor                                       AlbedoBottom;                                               // 0x0048   (0x0010)
-    float                                              BottomDarkening;                                            // 0x0058   (0x0004)
-    FLinearColor                                       NightEmissive;                                              // 0x005C   (0x0010)
-    float                                              PhaseG;                                                     // 0x006C   (0x0004)
-    float                                              PhaseG2;                                                    // 0x0070   (0x0004)
-    float                                              PhaseBlend;                                                 // 0x0074   (0x0004)
-    float                                              MultiScatteringContribution;                                // 0x0078   (0x0004)
-    float                                              MultiScatteringOcclusion;                                   // 0x007C   (0x0004)
-    float                                              MultiScatteringEccentricity;                                // 0x0080   (0x0004)
-    float                                              ShapeNoiseErosion;                                          // 0x0084   (0x0004)
-    float                                              DetailNoiseErosion;                                         // 0x0088   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudCoverage;                                           // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudDensity;                                            // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudAltitude;                                           // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudHeight;                                             // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudHeightVariation;                                    // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudSecondaryCoverage;                                  // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudSecondaryAltitude;                                  // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudSecondaryHeight;                                    // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudCoverage;                                          // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudDensity;                                           // 0x0024   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudHeight;                                            // 0x0028   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudAmountTypeA;                                       // 0x002C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudAmountTypeB;                                       // 0x0030   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudAmountTypeC;                                       // 0x0034   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       Albedo;                                                     // 0x0038   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       AlbedoBottom;                                               // 0x0048   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              BottomDarkening;                                            // 0x0058   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       NightEmissive;                                              // 0x005C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PhaseG;                                                     // 0x006C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PhaseG2;                                                    // 0x0070   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PhaseBlend;                                                 // 0x0074   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MultiScatteringContribution;                                // 0x0078   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MultiScatteringOcclusion;                                   // 0x007C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MultiScatteringEccentricity;                                // 0x0080   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ShapeNoiseErosion;                                          // 0x0084   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DetailNoiseErosion;                                         // 0x0088   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorSkyLightSettings
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FSkyCreatorSkyLightSettings
 { 
-    float                                              Intensity;                                                  // 0x0000   (0x0004)
-    FLinearColor                                       LightColor;                                                 // 0x0004   (0x0010)
-    FLinearColor                                       LowerHemisphereColor;                                       // 0x0014   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Intensity;                                                  // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       LightColor;                                                 // 0x0004   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       LowerHemisphereColor;                                       // 0x0014   (0x0010)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorSunLightSettings
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 4 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FSkyCreatorSunLightSettings
 { 
-    float                                              Intensity;                                                  // 0x0000   (0x0004)
-    FLinearColor                                       LightColor;                                                 // 0x0004   (0x0010)
-    float                                              Temperature;                                                // 0x0014   (0x0004)
-    float                                              VolumetricScatteringIntensity;                              // 0x0018   (0x0004)
-    FLinearColor                                       AtmosphereDiskColorScale;                                   // 0x001C   (0x0010)
-    FLinearColor                                       CloudScatteredLuminanceScale;                               // 0x002C   (0x0010)
-    float                                              CloudShadowStrength;                                        // 0x003C   (0x0004)
-    float                                              CloudShadowOnAtmosphereStrength;                            // 0x0040   (0x0004)
-    float                                              CloudShadowOnSurfaceStrength;                               // 0x0044   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Intensity;                                                  // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       LightColor;                                                 // 0x0004   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Temperature;                                                // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              VolumetricScatteringIntensity;                              // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       AtmosphereDiskColorScale;                                   // 0x001C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       CloudScatteredLuminanceScale;                               // 0x002C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudShadowStrength;                                        // 0x003C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudShadowOnAtmosphereStrength;                            // 0x0040   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudShadowOnSurfaceStrength;                               // 0x0044   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorMoonLightSettings
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 4 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FSkyCreatorMoonLightSettings
 { 
-    float                                              Intensity;                                                  // 0x0000   (0x0004)
-    FLinearColor                                       LightColor;                                                 // 0x0004   (0x0010)
-    float                                              Temperature;                                                // 0x0014   (0x0004)
-    float                                              VolumetricScatteringIntensity;                              // 0x0018   (0x0004)
-    FLinearColor                                       AtmosphereDiskColorScale;                                   // 0x001C   (0x0010)
-    FLinearColor                                       CloudScatteredLuminanceScale;                               // 0x002C   (0x0010)
-    float                                              CloudShadowStrength;                                        // 0x003C   (0x0004)
-    float                                              CloudShadowOnAtmosphereStrength;                            // 0x0040   (0x0004)
-    float                                              CloudShadowOnSurfaceStrength;                               // 0x0044   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Intensity;                                                  // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       LightColor;                                                 // 0x0004   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Temperature;                                                // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              VolumetricScatteringIntensity;                              // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       AtmosphereDiskColorScale;                                   // 0x001C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       CloudScatteredLuminanceScale;                               // 0x002C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudShadowStrength;                                        // 0x003C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudShadowOnAtmosphereStrength;                            // 0x0040   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudShadowOnSurfaceStrength;                               // 0x0044   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorExponentialHeightFogSettings
-/// Size: 0x0064 (100 bytes) (0x000000 - 0x000064) align 4 MaxSize: 0x0064
+/// Size: 0x0064 (100 bytes) (0x000000 - 0x000064) align n/a MaxSize: 0x0064
 struct FSkyCreatorExponentialHeightFogSettings
 { 
-    float                                              FogDensity;                                                 // 0x0000   (0x0004)
-    float                                              FogHeightFalloff;                                           // 0x0004   (0x0004)
-    FLinearColor                                       FogInscatteringColor;                                       // 0x0008   (0x0010)
-    float                                              FogStartDistance;                                           // 0x0018   (0x0004)
-    float                                              SecondFogDensity;                                           // 0x001C   (0x0004)
-    float                                              SecondFogHeightFalloff;                                     // 0x0020   (0x0004)
-    float                                              DirectionalInscatteringExponent;                            // 0x0024   (0x0004)
-    float                                              DirectionalInscatteringStartDistance;                       // 0x0028   (0x0004)
-    FLinearColor                                       DirectionalInscatteringColor;                               // 0x002C   (0x0010)
-    float                                              VolumetricFogScatteringDistribution;                        // 0x003C   (0x0004)
-    FLinearColor                                       VolumetricFogAlbedo;                                        // 0x0040   (0x0010)
-    FLinearColor                                       VolumetricFogEmissive;                                      // 0x0050   (0x0010)
-    float                                              VolumetricFogExtinctionScale;                               // 0x0060   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FogDensity;                                                 // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FogHeightFalloff;                                           // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       FogInscatteringColor;                                       // 0x0008   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FogStartDistance;                                           // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SecondFogDensity;                                           // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SecondFogHeightFalloff;                                     // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DirectionalInscatteringExponent;                            // 0x0024   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DirectionalInscatteringStartDistance;                       // 0x0028   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       DirectionalInscatteringColor;                               // 0x002C   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              VolumetricFogScatteringDistribution;                        // 0x003C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       VolumetricFogAlbedo;                                        // 0x0040   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       VolumetricFogEmissive;                                      // 0x0050   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              VolumetricFogExtinctionScale;                               // 0x0060   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorStarMapSettings
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 4 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FSkyCreatorStarMapSettings
 { 
-    float                                              StarMapBrightness;                                          // 0x0000   (0x0004)
-    FLinearColor                                       StarMapColorTint;                                           // 0x0004   (0x0010)
-    float                                              StarMapTwinkleIntensity;                                    // 0x0014   (0x0004)
-    float                                              StarMapTwinkleSaturation;                                   // 0x0018   (0x0004)
-    float                                              StarMapTwinkleSpeed;                                        // 0x001C   (0x0004)
-    float                                              StarMapHorizonThreshold;                                    // 0x0020   (0x0004)
-    float                                              StarMapAtmosphereThreshold;                                 // 0x0024   (0x0004)
-    FLinearColor                                       NightHorizonColor;                                          // 0x0028   (0x0010)
-    FLinearColor                                       NightZenithColor;                                           // 0x0038   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StarMapBrightness;                                          // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       StarMapColorTint;                                           // 0x0004   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StarMapTwinkleIntensity;                                    // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StarMapTwinkleSaturation;                                   // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StarMapTwinkleSpeed;                                        // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StarMapHorizonThreshold;                                    // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              StarMapAtmosphereThreshold;                                 // 0x0024   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       NightHorizonColor;                                          // 0x0028   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       NightZenithColor;                                           // 0x0038   (0x0010)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorWeatherFXSettings
-/// Size: 0x0074 (116 bytes) (0x000000 - 0x000074) align 4 MaxSize: 0x0074
+/// Size: 0x0074 (116 bytes) (0x000000 - 0x000074) align n/a MaxSize: 0x0074
 struct FSkyCreatorWeatherFXSettings
 { 
-    float                                              RainAmount;                                                 // 0x0000   (0x0004)
-    FLinearColor                                       RainColor;                                                  // 0x0004   (0x0010)
-    float                                              RainGravityMin;                                             // 0x0014   (0x0004)
-    float                                              RainGravityMax;                                             // 0x0018   (0x0004)
-    float                                              RainLifetimeMin;                                            // 0x001C   (0x0004)
-    float                                              RainLifetimeMax;                                            // 0x0020   (0x0004)
-    float                                              RainSizeMin;                                                // 0x0024   (0x0004)
-    float                                              RainSizeMax;                                                // 0x0028   (0x0004)
-    float                                              RainLengthMin;                                              // 0x002C   (0x0004)
-    float                                              RainLengthMax;                                              // 0x0030   (0x0004)
-    FVector2D                                          RainSplashSizeMin;                                          // 0x0034   (0x0008)
-    FVector2D                                          RainSplashSizeMax;                                          // 0x003C   (0x0008)
-    float                                              SnowAmount;                                                 // 0x0044   (0x0004)
-    FLinearColor                                       SnowColor;                                                  // 0x0048   (0x0010)
-    float                                              SnowGravityMin;                                             // 0x0058   (0x0004)
-    float                                              SnowGravityMax;                                             // 0x005C   (0x0004)
-    float                                              SnowTurbulence;                                             // 0x0060   (0x0004)
-    float                                              SnowLifetimeMin;                                            // 0x0064   (0x0004)
-    float                                              SnowLifetimeMax;                                            // 0x0068   (0x0004)
-    float                                              SnowSizeMin;                                                // 0x006C   (0x0004)
-    float                                              SnowSizeMax;                                                // 0x0070   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainAmount;                                                 // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       RainColor;                                                  // 0x0004   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainGravityMin;                                             // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainGravityMax;                                             // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainLifetimeMin;                                            // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainLifetimeMax;                                            // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainSizeMin;                                                // 0x0024   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainSizeMax;                                                // 0x0028   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainLengthMin;                                              // 0x002C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainLengthMax;                                              // 0x0030   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          RainSplashSizeMin;                                          // 0x0034   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          RainSplashSizeMax;                                          // 0x003C   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowAmount;                                                 // 0x0044   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       SnowColor;                                                  // 0x0048   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowGravityMin;                                             // 0x0058   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowGravityMax;                                             // 0x005C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowTurbulence;                                             // 0x0060   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowLifetimeMin;                                            // 0x0064   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowLifetimeMax;                                            // 0x0068   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowSizeMin;                                                // 0x006C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowSizeMax;                                                // 0x0070   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorWindSettings
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FSkyCreatorWindSettings
 { 
-    float                                              LowCloudWindDirection;                                      // 0x0000   (0x0004)
-    float                                              LowCloudWindSpeed;                                          // 0x0004   (0x0004)
-    float                                              HighCloudWindDirection;                                     // 0x0008   (0x0004)
-    float                                              HighCloudWindSpeed;                                         // 0x000C   (0x0004)
-    float                                              CloudNoiseWindDirection;                                    // 0x0010   (0x0004)
-    float                                              CloudNoiseWindSpeedHorizontal;                              // 0x0014   (0x0004)
-    float                                              CloudNoiseWindSpeedVertical;                                // 0x0018   (0x0004)
-    float                                              PrecipitationWindDirection;                                 // 0x001C   (0x0004)
-    float                                              PrecipitationWindSpeed;                                     // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudWindDirection;                                      // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudWindSpeed;                                          // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudWindDirection;                                     // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudWindSpeed;                                         // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudNoiseWindDirection;                                    // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudNoiseWindSpeedHorizontal;                              // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudNoiseWindSpeedVertical;                                // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrecipitationWindDirection;                                 // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrecipitationWindSpeed;                                     // 0x0020   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorExposureSettings
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FSkyCreatorExposureSettings
 { 
-    float                                              ExposureCompensation;                                       // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureCompensation;                                       // 0x0000   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorWeatherSettings
-/// Size: 0x02F8 (760 bytes) (0x000000 - 0x0002F8) align 4 MaxSize: 0x02F8
+/// Size: 0x02F8 (760 bytes) (0x000000 - 0x0002F8) align n/a MaxSize: 0x02F8
 struct FSkyCreatorWeatherSettings
 { 
-    FSkyCreatorSkyAtmosphereSettings                   SkyAtmosphereSettings;                                      // 0x0000   (0x0070)
-    FSkyCreatorVolumetricCloudSettings                 VolumetricCloudSettings;                                    // 0x0070   (0x008C)
-    FSkyCreatorSkyLightSettings                        SkyLightSettings;                                           // 0x00FC   (0x0024)
-    FSkyCreatorSunLightSettings                        SunLightSettings;                                           // 0x0120   (0x0048)
-    FSkyCreatorMoonLightSettings                       MoonLightSettings;                                          // 0x0168   (0x0048)
-    FSkyCreatorExponentialHeightFogSettings            ExponentialHeightFogSettings;                               // 0x01B0   (0x0064)
-    FSkyCreatorStarMapSettings                         StarMapSettings;                                            // 0x0214   (0x0048)
-    FSkyCreatorWeatherFXSettings                       WeatherFXSettings;                                          // 0x025C   (0x0074)
-    FSkyCreatorWindSettings                            WindSettings;                                               // 0x02D0   (0x0024)
-    FSkyCreatorExposureSettings                        ExposureSettings;                                           // 0x02F4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorSkyAtmosphereSettings                   SkyAtmosphereSettings;                                      // 0x0000   (0x0070)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorVolumetricCloudSettings                 VolumetricCloudSettings;                                    // 0x0070   (0x008C)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorSkyLightSettings                        SkyLightSettings;                                           // 0x00FC   (0x0024)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorSunLightSettings                        SunLightSettings;                                           // 0x0120   (0x0048)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorMoonLightSettings                       MoonLightSettings;                                          // 0x0168   (0x0048)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorExponentialHeightFogSettings            ExponentialHeightFogSettings;                               // 0x01B0   (0x0064)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorStarMapSettings                         StarMapSettings;                                            // 0x0214   (0x0048)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorWeatherFXSettings                       WeatherFXSettings;                                          // 0x025C   (0x0074)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorWindSettings                            WindSettings;                                               // 0x02D0   (0x0024)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorExposureSettings                        ExposureSettings;                                           // 0x02F4   (0x0004)
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorVolumetricCloudMaterials
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FSkyCreatorVolumetricCloudMaterials
 { 
-    class UMaterialInterface*                          VolumetricCloudMaterial_GC0_MSAOC0;                         // 0x0000   (0x0008)
-    class UMaterialInterface*                          VolumetricCloudMaterial_GC0_MSAOC1;                         // 0x0008   (0x0008)
-    class UMaterialInterface*                          VolumetricCloudMaterial_GC0_MSAOC2;                         // 0x0010   (0x0008)
-    class UMaterialInterface*                          VolumetricCloudMaterial_GC1_MSAOC0;                         // 0x0018   (0x0008)
-    class UMaterialInterface*                          VolumetricCloudMaterial_GC1_MSAOC1;                         // 0x0020   (0x0008)
-    class UMaterialInterface*                          VolumetricCloudMaterial_GC1_MSAOC2;                         // 0x0028   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          VolumetricCloudMaterial_GC0_MSAOC0;                         // 0x0000   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          VolumetricCloudMaterial_GC0_MSAOC1;                         // 0x0008   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          VolumetricCloudMaterial_GC0_MSAOC2;                         // 0x0010   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          VolumetricCloudMaterial_GC1_MSAOC0;                         // 0x0018   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          VolumetricCloudMaterial_GC1_MSAOC1;                         // 0x0020   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          VolumetricCloudMaterial_GC1_MSAOC2;                         // 0x0028   (0x0008)
 };
 
 /// Class /Script/SkyCreatorPlugin.SkyCreator
-/// Size: 0x0BB0 (2992 bytes) (0x0002C8 - 0x000BB0) align 8 MaxSize: 0x0BB0
+/// Size: 0x0BB0 (2992 bytes) (0x0002C8 - 0x000BB0) align n/a MaxSize: 0x0BB0
 class ASkyCreator : public AActor
 { 
 public:
-    class USceneComponent*                             Root;                                                       // 0x02C8   (0x0008)
-    class UBillboardComponent*                         Billboard;                                                  // 0x02D0   (0x0008)
-    class UStaticMeshComponent*                        Compass;                                                    // 0x02D8   (0x0008)
-    class USkyAtmosphereComponent*                     SkyAtmosphere;                                              // 0x02E0   (0x0008)
-    class UVolumetricCloudComponent*                   VolumetricCloud;                                            // 0x02E8   (0x0008)
-    class USkyLightComponent*                          SkyLight;                                                   // 0x02F0   (0x0008)
-    class UDirectionalLightComponent*                  SunLight;                                                   // 0x02F8   (0x0008)
-    class UDirectionalLightComponent*                  MoonLight;                                                  // 0x0300   (0x0008)
-    class UExponentialHeightFogComponent*              ExponentialHeightFog;                                       // 0x0308   (0x0008)
-    class UPostProcessComponent*                       Exposure;                                                   // 0x0310   (0x0008)
-    class UStaticMeshComponent*                        StarMap;                                                    // 0x0318   (0x0008)
-    class UStaticMeshComponent*                        SunSphere;                                                  // 0x0320   (0x0008)
-    class UStaticMeshComponent*                        MoonSphere;                                                 // 0x0328   (0x0008)
-    class UNiagaraComponent*                           WeatherFX;                                                  // 0x0330   (0x0008)
-    class UStaticMeshComponent*                        SkySphere;                                                  // 0x0338   (0x0008)
-    class UMaterialInterface*                          SkySphereMaterial;                                          // 0x0340   (0x0008)
-    class UMaterialInstanceDynamic*                    SkySphereMID;                                               // 0x0348   (0x0008)
-    bool                                               bUseEditorTimeOfDay;                                        // 0x0350   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0351   (0x0003) MISSED
-    float                                              EditorTimeOfDay;                                            // 0x0354   (0x0004)
-    bool                                               bUseEditorWeatherSettings;                                  // 0x0358   (0x0001)
-    TEnumAsByte<ESkyCreatorEditorWeatherType>          EditorWeatherType;                                          // 0x0359   (0x0001)
-    unsigned char                                      UnknownData01_6[0x6];                                       // 0x035A   (0x0006) MISSED
-    class USkyCreatorWeatherPreset*                    EditorWeatherPreset;                                        // 0x0360   (0x0008)
-    FSkyCreatorWeatherSettings                         EditorWeatherSettings;                                      // 0x0368   (0x02F8)
-    bool                                               bIsEditorTickEnabled;                                       // 0x0660   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x0661   (0x0003) MISSED
-    float                                              SkySphereRadius;                                            // 0x0664   (0x0004)
-    bool                                               bLightOptimization;                                         // 0x0668   (0x0001)
-    TEnumAsByte<EComponentMobility>                    SkyAtmosphereMobility;                                      // 0x0669   (0x0001)
-    ESkyAtmosphereTransformMode                        TransformMode;                                              // 0x066A   (0x0001)
-    unsigned char                                      UnknownData03_6[0x1];                                       // 0x066B   (0x0001) MISSED
-    float                                              PlanetRadius;                                               // 0x066C   (0x0004)
-    float                                              AtmosphereHeight;                                           // 0x0670   (0x0004)
-    float                                              TraceSampleCountScale;                                      // 0x0674   (0x0004)
-    float                                              LayerBottomAltitude;                                        // 0x0678   (0x0004)
-    float                                              LayerHeight;                                                // 0x067C   (0x0004)
-    float                                              TracingStartMaxDistance;                                    // 0x0680   (0x0004)
-    float                                              TracingMaxDistance;                                         // 0x0684   (0x0004)
-    bool                                               bPerSampleAtmosphericLightTransmittance;                    // 0x0688   (0x0001)
-    bool                                               bGroundContribution;                                        // 0x0689   (0x0001)
-    unsigned char                                      UnknownData04_6[0x2];                                       // 0x068A   (0x0002) MISSED
-    int32_t                                            MultiScatteringApproximationOctaveCount;                    // 0x068C   (0x0004)
-    float                                              ViewSampleCountScale;                                       // 0x0690   (0x0004)
-    float                                              ReflectionSampleCountScale;                                 // 0x0694   (0x0004)
-    float                                              ShadowViewSampleCountScale;                                 // 0x0698   (0x0004)
-    float                                              ShadowReflectionSampleCountScale;                           // 0x069C   (0x0004)
-    float                                              ShadowTracingDistance;                                      // 0x06A0   (0x0004)
-    float                                              LowCloudMapScale;                                           // 0x06A4   (0x0004)
-    FVector2D                                          LowCloudMapOffset;                                          // 0x06A8   (0x0008)
-    float                                              HighCloudMapScale;                                          // 0x06B0   (0x0004)
-    FVector2D                                          HighCloudMapOffset;                                         // 0x06B4   (0x0008)
-    float                                              HighCloudHorizonFadeHardness;                               // 0x06BC   (0x0004)
-    bool                                               bAutoScale;                                                 // 0x06C0   (0x0001)
-    unsigned char                                      UnknownData05_6[0x3];                                       // 0x06C1   (0x0003) MISSED
-    float                                              ShapeNoiseScale;                                            // 0x06C4   (0x0004)
-    float                                              DetailNoiseScale;                                           // 0x06C8   (0x0004)
-    TEnumAsByte<EComponentMobility>                    SkyLightMobility;                                           // 0x06CC   (0x0001)
-    bool                                               bRealTimeCapture;                                           // 0x06CD   (0x0001)
-    bool                                               bLowerHemisphereIsSolidColor;                               // 0x06CE   (0x0001)
-    TEnumAsByte<EComponentMobility>                    SunLightMobility;                                           // 0x06CF   (0x0001)
-    bool                                               bControlSunDirection;                                       // 0x06D0   (0x0001)
-    bool                                               bSunUseTemperature;                                         // 0x06D1   (0x0001)
-    unsigned char                                      UnknownData06_6[0x2];                                       // 0x06D2   (0x0002) MISSED
-    float                                              SunAngularDiameter;                                         // 0x06D4   (0x0004)
-    bool                                               bSunConstantAtmosphereDiskColorScale;                       // 0x06D8   (0x0001)
-    unsigned char                                      UnknownData07_6[0x3];                                       // 0x06D9   (0x0003) MISSED
-    FLinearColor                                       SunAtmosphereDiskColorScale;                                // 0x06DC   (0x0010)
-    TEnumAsByte<ESkyCreatorSunOrbitType>               SunOrbitType;                                               // 0x06EC   (0x0001)
-    unsigned char                                      UnknownData08_6[0x3];                                       // 0x06ED   (0x0003) MISSED
-    float                                              SunriseTime;                                                // 0x06F0   (0x0004)
-    float                                              SunsetTime;                                                 // 0x06F4   (0x0004)
-    float                                              SunDawnOffsetTime;                                          // 0x06F8   (0x0004)
-    float                                              SunDuskOffsetTime;                                          // 0x06FC   (0x0004)
-    float                                              SunDawnTime;                                                // 0x0700   (0x0004)
-    float                                              SunDuskTime;                                                // 0x0704   (0x0004)
-    float                                              SunElevation;                                               // 0x0708   (0x0004)
-    float                                              SunAzimuth;                                                 // 0x070C   (0x0004)
-    float                                              SunMinAngleAtDawnDusk;                                      // 0x0710   (0x0004)
-    float                                              SunFadeInOutTime;                                           // 0x0714   (0x0004)
-    TEnumAsByte<EComponentMobility>                    MoonLightMobility;                                          // 0x0718   (0x0001)
-    bool                                               bControlMoonDirection;                                      // 0x0719   (0x0001)
-    bool                                               bMoonUseTemperature;                                        // 0x071A   (0x0001)
-    unsigned char                                      UnknownData09_6[0x1];                                       // 0x071B   (0x0001) MISSED
-    float                                              MoonAngularDiameter;                                        // 0x071C   (0x0004)
-    bool                                               bMoonConstantAtmosphereDiskColorScale;                      // 0x0720   (0x0001)
-    unsigned char                                      UnknownData10_6[0x3];                                       // 0x0721   (0x0003) MISSED
-    FLinearColor                                       MoonAtmosphereDiskColorScale;                               // 0x0724   (0x0010)
-    float                                              MoonPhase;                                                  // 0x0734   (0x0004)
-    float                                              MoonRotation;                                               // 0x0738   (0x0004)
-    TEnumAsByte<ESkyCreatorMoonOrbitType>              MoonOrbitType;                                              // 0x073C   (0x0001)
-    unsigned char                                      UnknownData11_6[0x3];                                       // 0x073D   (0x0003) MISSED
-    float                                              MoonriseTime;                                               // 0x0740   (0x0004)
-    float                                              MoonsetTime;                                                // 0x0744   (0x0004)
-    float                                              MoonElevation;                                              // 0x0748   (0x0004)
-    float                                              MoonAzimuth;                                                // 0x074C   (0x0004)
-    float                                              MoonFadeInOutTime;                                          // 0x0750   (0x0004)
-    TEnumAsByte<EComponentMobility>                    ExponentialHeightFogMobility;                               // 0x0754   (0x0001)
-    bool                                               bEnableExponentialHeightFog;                                // 0x0755   (0x0001)
-    bool                                               bVolumetricFog;                                             // 0x0756   (0x0001)
-    unsigned char                                      UnknownData12_6[0x1];                                       // 0x0757   (0x0001) MISSED
-    float                                              FogHeightOffset;                                            // 0x0758   (0x0004)
-    float                                              SecondFogHeightOffset;                                      // 0x075C   (0x0004)
-    class UTexture2D*                                  StarMapTexture;                                             // 0x0760   (0x0008)
-    TEnumAsByte<ESkyCreatorStarMapRotationType>        StarMapRotationType;                                        // 0x0768   (0x0001)
-    unsigned char                                      UnknownData13_6[0x3];                                       // 0x0769   (0x0003) MISSED
-    FRotator                                           StarMapAdditionalRotation;                                  // 0x076C   (0x000C)
-    float                                              PrecipitationSpawnRadius;                                   // 0x0778   (0x0004)
-    bool                                               bEnableDistantPrecipitation;                                // 0x077C   (0x0001)
-    unsigned char                                      UnknownData14_6[0x3];                                       // 0x077D   (0x0003) MISSED
-    float                                              DistantPrecipitationSpawnRadius;                            // 0x0780   (0x0004)
-    float                                              PrecipitationMaxViewDistance;                               // 0x0784   (0x0004)
-    float                                              PrecipitationVerticalCheckDistance;                         // 0x0788   (0x0004)
-    TEnumAsByte<ECollisionChannel>                     PrecipitationCollisionChannel;                              // 0x078C   (0x0001)
-    unsigned char                                      UnknownData15_6[0x3];                                       // 0x078D   (0x0003) MISSED
-    float                                              PrecipitationDepthFadeDistance;                             // 0x0790   (0x0004)
-    float                                              PrecipitationCameraFadeDistance;                            // 0x0794   (0x0004)
-    float                                              PrecipitationCameraFadeOffset;                              // 0x0798   (0x0004)
-    float                                              RainSpawnRateMax;                                           // 0x079C   (0x0004)
-    float                                              RainDistantSpawnRateMax;                                    // 0x07A0   (0x0004)
-    float                                              RainDistanceScaleFactor;                                    // 0x07A4   (0x0004)
-    float                                              RainIndexOfRefraction;                                      // 0x07A8   (0x0004)
-    float                                              RainSplashSpawnRateMax;                                     // 0x07AC   (0x0004)
-    float                                              SnowSpawnRateMax;                                           // 0x07B0   (0x0004)
-    float                                              SnowDistantSpawnRateMax;                                    // 0x07B4   (0x0004)
-    float                                              SnowDistanceScaleFactor;                                    // 0x07B8   (0x0004)
-    float                                              SnowMaskHardness;                                           // 0x07BC   (0x0004)
-    bool                                               bEnableWind;                                                // 0x07C0   (0x0001)
-    bool                                               bIndependentWindControl;                                    // 0x07C1   (0x0001)
-    unsigned char                                      UnknownData16_6[0x2];                                       // 0x07C2   (0x0002) MISSED
-    FSkyCreatorWindSettings                            EditorIndependentWindSettings;                              // 0x07C4   (0x0024)
-    float                                              CloudWindSkewAmount;                                        // 0x07E8   (0x0004)
-    bool                                               bUseExposureSettings;                                       // 0x07EC   (0x0001)
-    TEnumAsByte<EAutoExposureMethod>                   ExposureMethod;                                             // 0x07ED   (0x0001)
-    unsigned char                                      UnknownData17_6[0x2];                                       // 0x07EE   (0x0002) MISSED
-    class UCurveFloat*                                 ExposureBiasCurve;                                          // 0x07F0   (0x0008)
-    class UTexture*                                    ExposureMeterMask;                                          // 0x07F8   (0x0008)
-    float                                              ExposureMinBrightness;                                      // 0x0800   (0x0004)
-    float                                              ExposureMaxBrightness;                                      // 0x0804   (0x0004)
-    float                                              ExposureMinEV100;                                           // 0x0808   (0x0004)
-    float                                              ExposureMaxEV100;                                           // 0x080C   (0x0004)
-    float                                              ExposureSpeedUp;                                            // 0x0810   (0x0004)
-    float                                              ExposureSpeedDown;                                          // 0x0814   (0x0004)
-    float                                              ExposureLowPercent;                                         // 0x0818   (0x0004)
-    float                                              ExposureHighPercent;                                        // 0x081C   (0x0004)
-    float                                              ExposureHistogramLogMin;                                    // 0x0820   (0x0004)
-    float                                              ExposureHistogramLogMax;                                    // 0x0824   (0x0004)
-    float                                              ExposureHistogramMinEV100;                                  // 0x0828   (0x0004)
-    float                                              ExposureHistogramMaxEV100;                                  // 0x082C   (0x0004)
-    bool                                               bShowDebugVariables;                                        // 0x0830   (0x0001)
-    unsigned char                                      UnknownData18_6[0x3];                                       // 0x0831   (0x0003) MISSED
-    float                                              TimeOfDay;                                                  // 0x0834   (0x0004)
-    FSkyCreatorWeatherSettings                         WeatherSettings;                                            // 0x0838   (0x02F8)
-    FSkyCreatorVolumetricCloudMaterials                VolumetricCloudMaterials;                                   // 0x0B30   (0x0030)
-    class UMaterialInterface*                          CurrentVolumetricCloudMaterial;                             // 0x0B60   (0x0008)
-    class UMaterialInstanceDynamic*                    VolumetricCloudMID;                                         // 0x0B68   (0x0008)
-    float                                              CurrentShapeNoiseScale;                                     // 0x0B70   (0x0004)
-    float                                              CurrentDetailNoiseScale;                                    // 0x0B74   (0x0004)
-    FVector                                            LowCloudWindOffset;                                         // 0x0B78   (0x000C)
-    FVector                                            LowCloudWindSkewDirection;                                  // 0x0B84   (0x000C)
-    float                                              LowCloudWindSkewForce;                                      // 0x0B90   (0x0004)
-    FVector                                            HighCloudWindOffset;                                        // 0x0B94   (0x000C)
-    FVector                                            CloudNoiseWindOffset;                                       // 0x0BA0   (0x000C)
-    bool                                               bExtendDefaultLuminanceRange;                               // 0x0BAC   (0x0001)
-    unsigned char                                      UnknownData19_7[0x3];                                       // 0x0BAD   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USceneComponent*                             Root;                                                       // 0x02C8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBillboardComponent*                         Billboard;                                                  // 0x02D0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMeshComponent*                        Compass;                                                    // 0x02D8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USkyAtmosphereComponent*                     SkyAtmosphere;                                              // 0x02E0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UVolumetricCloudComponent*                   VolumetricCloud;                                            // 0x02E8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USkyLightComponent*                          SkyLight;                                                   // 0x02F0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UDirectionalLightComponent*                  SunLight;                                                   // 0x02F8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UDirectionalLightComponent*                  MoonLight;                                                  // 0x0300   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UExponentialHeightFogComponent*              ExponentialHeightFog;                                       // 0x0308   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UPostProcessComponent*                       Exposure;                                                   // 0x0310   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMeshComponent*                        StarMap;                                                    // 0x0318   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMeshComponent*                        SunSphere;                                                  // 0x0320   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMeshComponent*                        MoonSphere;                                                 // 0x0328   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UNiagaraComponent*                           WeatherFX;                                                  // 0x0330   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMeshComponent*                        SkySphere;                                                  // 0x0338   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          SkySphereMaterial;                                          // 0x0340   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInstanceDynamic*                    SkySphereMID;                                               // 0x0348   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseEditorTimeOfDay;                                        // 0x0350   (0x0001)
+    /* public    */ unsigned char                                      UnknownData20_6[0x3];                                       // 0x0351   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              EditorTimeOfDay;                                            // 0x0354   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseEditorWeatherSettings;                                  // 0x0358   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESkyCreatorEditorWeatherType>          EditorWeatherType;                                          // 0x0359   (0x0001)
+    /* public    */ unsigned char                                      UnknownData21_6[0x6];                                       // 0x035A   (0x0006) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USkyCreatorWeatherPreset*                    EditorWeatherPreset;                                        // 0x0360   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorWeatherSettings                         EditorWeatherSettings;                                      // 0x0368   (0x02F8)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsEditorTickEnabled;                                       // 0x0660   (0x0001)
+    /* public    */ unsigned char                                      UnknownData22_6[0x3];                                       // 0x0661   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SkySphereRadius;                                            // 0x0664   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLightOptimization;                                         // 0x0668   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EComponentMobility>                    SkyAtmosphereMobility;                                      // 0x0669   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESkyAtmosphereTransformMode                        TransformMode;                                              // 0x066A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData23_6[0x1];                                       // 0x066B   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PlanetRadius;                                               // 0x066C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AtmosphereHeight;                                           // 0x0670   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TraceSampleCountScale;                                      // 0x0674   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LayerBottomAltitude;                                        // 0x0678   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LayerHeight;                                                // 0x067C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TracingStartMaxDistance;                                    // 0x0680   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TracingMaxDistance;                                         // 0x0684   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bPerSampleAtmosphericLightTransmittance;                    // 0x0688   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bGroundContribution;                                        // 0x0689   (0x0001)
+    /* public    */ unsigned char                                      UnknownData24_6[0x2];                                       // 0x068A   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MultiScatteringApproximationOctaveCount;                    // 0x068C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ViewSampleCountScale;                                       // 0x0690   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ReflectionSampleCountScale;                                 // 0x0694   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ShadowViewSampleCountScale;                                 // 0x0698   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ShadowReflectionSampleCountScale;                           // 0x069C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ShadowTracingDistance;                                      // 0x06A0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudMapScale;                                           // 0x06A4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          LowCloudMapOffset;                                          // 0x06A8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudMapScale;                                          // 0x06B0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          HighCloudMapOffset;                                         // 0x06B4   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              HighCloudHorizonFadeHardness;                               // 0x06BC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAutoScale;                                                 // 0x06C0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData25_6[0x3];                                       // 0x06C1   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ShapeNoiseScale;                                            // 0x06C4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DetailNoiseScale;                                           // 0x06C8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EComponentMobility>                    SkyLightMobility;                                           // 0x06CC   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bRealTimeCapture;                                           // 0x06CD   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bLowerHemisphereIsSolidColor;                               // 0x06CE   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EComponentMobility>                    SunLightMobility;                                           // 0x06CF   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bControlSunDirection;                                       // 0x06D0   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSunUseTemperature;                                         // 0x06D1   (0x0001)
+    /* public    */ unsigned char                                      UnknownData26_6[0x2];                                       // 0x06D2   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunAngularDiameter;                                         // 0x06D4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSunConstantAtmosphereDiskColorScale;                       // 0x06D8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData27_6[0x3];                                       // 0x06D9   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       SunAtmosphereDiskColorScale;                                // 0x06DC   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESkyCreatorSunOrbitType>               SunOrbitType;                                               // 0x06EC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData28_6[0x3];                                       // 0x06ED   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunriseTime;                                                // 0x06F0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunsetTime;                                                 // 0x06F4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunDawnOffsetTime;                                          // 0x06F8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunDuskOffsetTime;                                          // 0x06FC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunDawnTime;                                                // 0x0700   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunDuskTime;                                                // 0x0704   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunElevation;                                               // 0x0708   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunAzimuth;                                                 // 0x070C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunMinAngleAtDawnDusk;                                      // 0x0710   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SunFadeInOutTime;                                           // 0x0714   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EComponentMobility>                    MoonLightMobility;                                          // 0x0718   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bControlMoonDirection;                                      // 0x0719   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bMoonUseTemperature;                                        // 0x071A   (0x0001)
+    /* public    */ unsigned char                                      UnknownData29_6[0x1];                                       // 0x071B   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoonAngularDiameter;                                        // 0x071C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bMoonConstantAtmosphereDiskColorScale;                      // 0x0720   (0x0001)
+    /* public    */ unsigned char                                      UnknownData30_6[0x3];                                       // 0x0721   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FLinearColor                                       MoonAtmosphereDiskColorScale;                               // 0x0724   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoonPhase;                                                  // 0x0734   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoonRotation;                                               // 0x0738   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESkyCreatorMoonOrbitType>              MoonOrbitType;                                              // 0x073C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData31_6[0x3];                                       // 0x073D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoonriseTime;                                               // 0x0740   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoonsetTime;                                                // 0x0744   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoonElevation;                                              // 0x0748   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoonAzimuth;                                                // 0x074C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MoonFadeInOutTime;                                          // 0x0750   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EComponentMobility>                    ExponentialHeightFogMobility;                               // 0x0754   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableExponentialHeightFog;                                // 0x0755   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bVolumetricFog;                                             // 0x0756   (0x0001)
+    /* public    */ unsigned char                                      UnknownData32_6[0x1];                                       // 0x0757   (0x0001) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FogHeightOffset;                                            // 0x0758   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SecondFogHeightOffset;                                      // 0x075C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture2D*                                  StarMapTexture;                                             // 0x0760   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ESkyCreatorStarMapRotationType>        StarMapRotationType;                                        // 0x0768   (0x0001)
+    /* public    */ unsigned char                                      UnknownData33_6[0x3];                                       // 0x0769   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FRotator                                           StarMapAdditionalRotation;                                  // 0x076C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrecipitationSpawnRadius;                                   // 0x0778   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableDistantPrecipitation;                                // 0x077C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData34_6[0x3];                                       // 0x077D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              DistantPrecipitationSpawnRadius;                            // 0x0780   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrecipitationMaxViewDistance;                               // 0x0784   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrecipitationVerticalCheckDistance;                         // 0x0788   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<ECollisionChannel>                     PrecipitationCollisionChannel;                              // 0x078C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData35_6[0x3];                                       // 0x078D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrecipitationDepthFadeDistance;                             // 0x0790   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrecipitationCameraFadeDistance;                            // 0x0794   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              PrecipitationCameraFadeOffset;                              // 0x0798   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainSpawnRateMax;                                           // 0x079C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainDistantSpawnRateMax;                                    // 0x07A0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainDistanceScaleFactor;                                    // 0x07A4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainIndexOfRefraction;                                      // 0x07A8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainSplashSpawnRateMax;                                     // 0x07AC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowSpawnRateMax;                                           // 0x07B0   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowDistantSpawnRateMax;                                    // 0x07B4   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowDistanceScaleFactor;                                    // 0x07B8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowMaskHardness;                                           // 0x07BC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableWind;                                                // 0x07C0   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIndependentWindControl;                                    // 0x07C1   (0x0001)
+    /* public    */ unsigned char                                      UnknownData36_6[0x2];                                       // 0x07C2   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorWindSettings                            EditorIndependentWindSettings;                              // 0x07C4   (0x0024)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CloudWindSkewAmount;                                        // 0x07E8   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseExposureSettings;                                       // 0x07EC   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EAutoExposureMethod>                   ExposureMethod;                                             // 0x07ED   (0x0001)
+    /* public    */ unsigned char                                      UnknownData37_6[0x2];                                       // 0x07EE   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UCurveFloat*                                 ExposureBiasCurve;                                          // 0x07F0   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UTexture*                                    ExposureMeterMask;                                          // 0x07F8   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureMinBrightness;                                      // 0x0800   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureMaxBrightness;                                      // 0x0804   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureMinEV100;                                           // 0x0808   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureMaxEV100;                                           // 0x080C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureSpeedUp;                                            // 0x0810   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureSpeedDown;                                          // 0x0814   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureLowPercent;                                         // 0x0818   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureHighPercent;                                        // 0x081C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureHistogramLogMin;                                    // 0x0820   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureHistogramLogMax;                                    // 0x0824   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureHistogramMinEV100;                                  // 0x0828   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ExposureHistogramMaxEV100;                                  // 0x082C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bShowDebugVariables;                                        // 0x0830   (0x0001)
+    /* public    */ unsigned char                                      UnknownData38_6[0x3];                                       // 0x0831   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TimeOfDay;                                                  // 0x0834   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, Net, EditConst, RepNotify, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorWeatherSettings                         WeatherSettings;                                            // 0x0838   (0x02F8)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorVolumetricCloudMaterials                VolumetricCloudMaterials;                                   // 0x0B30   (0x0030)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          CurrentVolumetricCloudMaterial;                             // 0x0B60   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInstanceDynamic*                    VolumetricCloudMID;                                         // 0x0B68   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentShapeNoiseScale;                                     // 0x0B70   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CurrentDetailNoiseScale;                                    // 0x0B74   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LowCloudWindOffset;                                         // 0x0B78   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LowCloudWindSkewDirection;                                  // 0x0B84   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              LowCloudWindSkewForce;                                      // 0x0B90   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            HighCloudWindOffset;                                        // 0x0B94   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            CloudNoiseWindOffset;                                       // 0x0BA0   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bExtendDefaultLuminanceRange;                               // 0x0BAC   (0x0001)
+    /* public    */ unsigned char                                      UnknownData39_7[0x3];                                       // 0x0BAD   (0x0003) MISSED
 
     /// Functions
     // Function /Script/SkyCreatorPlugin.SkyCreator.UpdateSunMoonIntensity
@@ -590,21 +885,32 @@ public:
 };
 
 /// Class /Script/SkyCreatorPlugin.SkyCreatorWeatherPreset
-/// Size: 0x0340 (832 bytes) (0x000030 - 0x000340) align 8 MaxSize: 0x0340
+/// Size: 0x0340 (832 bytes) (0x000030 - 0x000340) align n/a MaxSize: 0x0340
 class USkyCreatorWeatherPreset : public UDataAsset
 { 
 public:
-    FText                                              Description;                                                // 0x0030   (0x0018)
-    FSkyCreatorSkyAtmosphereSettings                   SkyAtmosphereSettings;                                      // 0x0048   (0x0070)
-    FSkyCreatorVolumetricCloudSettings                 VolumetricCloudSettings;                                    // 0x00B8   (0x008C)
-    FSkyCreatorSkyLightSettings                        SkyLightSettings;                                           // 0x0144   (0x0024)
-    FSkyCreatorSunLightSettings                        SunLightSettings;                                           // 0x0168   (0x0048)
-    FSkyCreatorMoonLightSettings                       MoonLightSettings;                                          // 0x01B0   (0x0048)
-    FSkyCreatorExponentialHeightFogSettings            ExponentialHeightFogSettings;                               // 0x01F8   (0x0064)
-    FSkyCreatorStarMapSettings                         StarMapSettings;                                            // 0x025C   (0x0048)
-    FSkyCreatorWeatherFXSettings                       WeatherFXSettings;                                          // 0x02A4   (0x0074)
-    FSkyCreatorWindSettings                            WindSettings;                                               // 0x0318   (0x0024)
-    FSkyCreatorExposureSettings                        ExposureSettings;                                           // 0x033C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FText                                              Description;                                                // 0x0030   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorSkyAtmosphereSettings                   SkyAtmosphereSettings;                                      // 0x0048   (0x0070)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorVolumetricCloudSettings                 VolumetricCloudSettings;                                    // 0x00B8   (0x008C)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorSkyLightSettings                        SkyLightSettings;                                           // 0x0144   (0x0024)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorSunLightSettings                        SunLightSettings;                                           // 0x0168   (0x0048)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorMoonLightSettings                       MoonLightSettings;                                          // 0x01B0   (0x0048)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorExponentialHeightFogSettings            ExponentialHeightFogSettings;                               // 0x01F8   (0x0064)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorStarMapSettings                         StarMapSettings;                                            // 0x025C   (0x0048)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorWeatherFXSettings                       WeatherFXSettings;                                          // 0x02A4   (0x0074)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorWindSettings                            WindSettings;                                               // 0x0318   (0x0024)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FSkyCreatorExposureSettings                        ExposureSettings;                                           // 0x033C   (0x0004)
 
     /// Functions
     // Function /Script/SkyCreatorPlugin.SkyCreatorWeatherPreset.GetWeatherPresetSettings
@@ -612,23 +918,33 @@ public:
 };
 
 /// Struct /Script/SkyCreatorPlugin.SkyCreatorWeatherMaterialFXSettings
-/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align 4 MaxSize: 0x0024
+/// Size: 0x0024 (36 bytes) (0x000000 - 0x000024) align n/a MaxSize: 0x0024
 struct FSkyCreatorWeatherMaterialFXSettings
 { 
-    float                                              WetnessAmount;                                              // 0x0000   (0x0004)
-    float                                              RainPuddlesAmount;                                          // 0x0004   (0x0004)
-    float                                              RainPuddlesWindIntensity;                                   // 0x0008   (0x0004)
-    float                                              RainPuddlesWindSpeed;                                       // 0x000C   (0x0004)
-    float                                              RainRipplesAmount;                                          // 0x0010   (0x0004)
-    float                                              RainRipplesIntensity;                                       // 0x0014   (0x0004)
-    float                                              RainRipplesSpeed;                                           // 0x0018   (0x0004)
-    float                                              RainRipplesFadingFactor;                                    // 0x001C   (0x0004)
-    float                                              SnowAmount;                                                 // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              WetnessAmount;                                              // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainPuddlesAmount;                                          // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainPuddlesWindIntensity;                                   // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainPuddlesWindSpeed;                                       // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainRipplesAmount;                                          // 0x0010   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainRipplesIntensity;                                       // 0x0014   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainRipplesSpeed;                                           // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RainRipplesFadingFactor;                                    // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SnowAmount;                                                 // 0x0020   (0x0004)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FSkyCreatorSkyAtmosphereSettings) == 0x0070); // 112 bytes (0x000000 - 0x000070)
 static_assert(sizeof(FSkyCreatorVolumetricCloudSettings) == 0x008C); // 140 bytes (0x000000 - 0x00008C)
 static_assert(sizeof(FSkyCreatorSkyLightSettings) == 0x0024); // 36 bytes (0x000000 - 0x000024)
@@ -746,3 +1062,4 @@ static_assert(offsetof(USkyCreatorWeatherPreset, StarMapSettings) == 0x025C);
 static_assert(offsetof(USkyCreatorWeatherPreset, WeatherFXSettings) == 0x02A4);
 static_assert(offsetof(USkyCreatorWeatherPreset, WindSettings) == 0x0318);
 static_assert(offsetof(USkyCreatorWeatherPreset, ExposureSettings) == 0x033C);
+#endif

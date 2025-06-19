@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,8 +24,28 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/Slate.ETextJustify
-/// Size: 0x01 (1 bytes)
+class UButtonWidgetStyle;
+class UCheckBoxWidgetStyle;
+class UComboBoxWidgetStyle;
+class UComboButtonWidgetStyle;
+class UEditableTextBoxWidgetStyle;
+class UEditableTextWidgetStyle;
+class UProgressWidgetStyle;
+class UScrollBarWidgetStyle;
+class UScrollBoxWidgetStyle;
+class USlateSettings;
+class USpinBoxWidgetStyle;
+class UTextBlockWidgetStyle;
+class UToolMenuBase;
+struct FAnchors;
+struct FCustomizedToolMenu;
+struct FCustomizedToolMenuEntry;
+struct FCustomizedToolMenuNameArray;
+struct FCustomizedToolMenuSection;
+struct FInputChord;
+struct FVirtualKeyboardOptions;
+
+/// Enum /Script/Slate.ETextJustify -  1 (1 bytes)
 enum class ETextJustify : uint8_t
 {
     Left                                                                             = 0,
@@ -24,8 +53,7 @@ enum class ETextJustify : uint8_t
     Right                                                                            = 2
 };
 
-/// Enum /Script/Slate.ETextFlowDirection
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.ETextFlowDirection -  1 (1 bytes)
 enum class ETextFlowDirection : uint8_t
 {
     Auto                                                                             = 0,
@@ -33,8 +61,7 @@ enum class ETextFlowDirection : uint8_t
     RightToLeft                                                                      = 2
 };
 
-/// Enum /Script/Slate.EVirtualKeyboardDismissAction
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EVirtualKeyboardDismissAction -  1 (1 bytes)
 enum class EVirtualKeyboardDismissAction : uint8_t
 {
     TextChangeOnDismiss                                                              = 0,
@@ -42,24 +69,21 @@ enum class EVirtualKeyboardDismissAction : uint8_t
     TextCommitOnDismiss                                                              = 2
 };
 
-/// Enum /Script/Slate.EVirtualKeyboardTrigger
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EVirtualKeyboardTrigger -  1 (1 bytes)
 enum class EVirtualKeyboardTrigger : uint8_t
 {
     OnFocusByPointer                                                                 = 0,
     OnAllFocusEvents                                                                 = 1
 };
 
-/// Enum /Script/Slate.ETextWrappingPolicy
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.ETextWrappingPolicy -  1 (1 bytes)
 enum class ETextWrappingPolicy : uint8_t
 {
     DefaultWrapping                                                                  = 0,
     AllowPerCharacterWrapping                                                        = 1
 };
 
-/// Enum /Script/Slate.ETableViewMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.ETableViewMode -  1 (1 bytes)
 enum class ETableViewMode : uint8_t
 {
     List                                                                             = 0,
@@ -67,8 +91,7 @@ enum class ETableViewMode : uint8_t
     Tree                                                                             = 2
 };
 
-/// Enum /Script/Slate.ESelectionMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.ESelectionMode -  1 (1 bytes)
 enum class ESelectionMode : uint8_t
 {
     None                                                                             = 0,
@@ -77,8 +100,7 @@ enum class ESelectionMode : uint8_t
     Multi                                                                            = 3
 };
 
-/// Enum /Script/Slate.EMultiBlockType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EMultiBlockType -  1 (1 bytes)
 enum class EMultiBlockType : uint8_t
 {
     None                                                                             = 0,
@@ -92,8 +114,7 @@ enum class EMultiBlockType : uint8_t
     Widget                                                                           = 8
 };
 
-/// Enum /Script/Slate.EMultiBoxType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EMultiBoxType -  1 (1 bytes)
 enum class EMultiBoxType : uint8_t
 {
     MenuBar                                                                          = 0,
@@ -104,8 +125,7 @@ enum class EMultiBoxType : uint8_t
     ButtonRow                                                                        = 5
 };
 
-/// Enum /Script/Slate.EProgressBarFillType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EProgressBarFillType -  1 (1 bytes)
 enum class EProgressBarFillType : uint8_t
 {
     LeftToRight                                                                      = 0,
@@ -115,8 +135,7 @@ enum class EProgressBarFillType : uint8_t
     BottomToTop                                                                      = 4
 };
 
-/// Enum /Script/Slate.EStretch
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EStretch -  1 (1 bytes)
 enum class EStretch : uint8_t
 {
     None                                                                             = 0,
@@ -129,8 +148,7 @@ enum class EStretch : uint8_t
     UserSpecified                                                                    = 7
 };
 
-/// Enum /Script/Slate.EStretchDirection
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EStretchDirection -  1 (1 bytes)
 enum class EStretchDirection : uint8_t
 {
     Both                                                                             = 0,
@@ -138,8 +156,7 @@ enum class EStretchDirection : uint8_t
     UpOnly                                                                           = 2
 };
 
-/// Enum /Script/Slate.EScrollWhenFocusChanges
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EScrollWhenFocusChanges -  1 (1 bytes)
 enum class EScrollWhenFocusChanges : uint8_t
 {
     NoScroll                                                                         = 0,
@@ -147,8 +164,7 @@ enum class EScrollWhenFocusChanges : uint8_t
     AnimatedScroll                                                                   = 2
 };
 
-/// Enum /Script/Slate.EDescendantScrollDestination
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EDescendantScrollDestination -  1 (1 bytes)
 enum class EDescendantScrollDestination : uint8_t
 {
     IntoView                                                                         = 0,
@@ -156,8 +172,7 @@ enum class EDescendantScrollDestination : uint8_t
     Center                                                                           = 2
 };
 
-/// Enum /Script/Slate.EListItemAlignment
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EListItemAlignment -  1 (1 bytes)
 enum class EListItemAlignment : uint8_t
 {
     EvenlyDistributed                                                                = 0,
@@ -169,8 +184,7 @@ enum class EListItemAlignment : uint8_t
     Fill                                                                             = 6
 };
 
-/// Enum /Script/Slate.ETextTransformPolicy
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.ETextTransformPolicy -  1 (1 bytes)
 enum class ETextTransformPolicy : uint8_t
 {
     None                                                                             = 0,
@@ -178,8 +192,7 @@ enum class ETextTransformPolicy : uint8_t
     ToUpper                                                                          = 2
 };
 
-/// Enum /Script/Slate.ETextVerticalJustify
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.ETextVerticalJustify -  1 (1 bytes)
 enum class ETextVerticalJustify : uint8_t
 {
     Bottom                                                                           = 0,
@@ -187,8 +200,7 @@ enum class ETextVerticalJustify : uint8_t
     Top                                                                              = 2
 };
 
-/// Enum /Script/Slate.ECustomizedToolMenuVisibility
-/// Size: 0x04 (4 bytes)
+/// Enum /Script/Slate.ECustomizedToolMenuVisibility -  4 (4 bytes)
 enum class ECustomizedToolMenuVisibility : uint32_t
 {
     None                                                                             = 0,
@@ -196,8 +208,7 @@ enum class ECustomizedToolMenuVisibility : uint32_t
     Hidden                                                                           = 2
 };
 
-/// Enum /Script/Slate.EMultipleKeyBindingIndex
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EMultipleKeyBindingIndex -  1 (1 bytes)
 enum class EMultipleKeyBindingIndex : uint8_t
 {
     Primary                                                                          = 0,
@@ -205,8 +216,7 @@ enum class EMultipleKeyBindingIndex : uint8_t
     NumChords                                                                        = 2
 };
 
-/// Enum /Script/Slate.EUserInterfaceActionType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/Slate.EUserInterfaceActionType -  1 (1 bytes)
 enum class EUserInterfaceActionType : uint8_t
 {
     None                                                                             = 0,
@@ -218,172 +228,201 @@ enum class EUserInterfaceActionType : uint8_t
 };
 
 /// Class /Script/Slate.ButtonWidgetStyle
-/// Size: 0x02C8 (712 bytes) (0x000030 - 0x0002C8) align 8 MaxSize: 0x02C8
+/// Size: 0x02C8 (712 bytes) (0x000030 - 0x0002C8) align n/a MaxSize: 0x02C8
 class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FButtonStyle                                       ButtonStyle;                                                // 0x0030   (0x0298)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FButtonStyle                                       ButtonStyle;                                                // 0x0030   (0x0298)
 };
 
 /// Class /Script/Slate.CheckBoxWidgetStyle
-/// Size: 0x05F8 (1528 bytes) (0x000030 - 0x0005F8) align 8 MaxSize: 0x05F8
+/// Size: 0x05F8 (1528 bytes) (0x000030 - 0x0005F8) align n/a MaxSize: 0x05F8
 class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FCheckBoxStyle                                     CheckBoxStyle;                                              // 0x0030   (0x05C8)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FCheckBoxStyle                                     CheckBoxStyle;                                              // 0x0030   (0x05C8)
 };
 
 /// Class /Script/Slate.ComboBoxWidgetStyle
-/// Size: 0x0450 (1104 bytes) (0x000030 - 0x000450) align 8 MaxSize: 0x0450
+/// Size: 0x0450 (1104 bytes) (0x000030 - 0x000450) align n/a MaxSize: 0x0450
 class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FComboBoxStyle                                     ComboBoxStyle;                                              // 0x0030   (0x0420)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FComboBoxStyle                                     ComboBoxStyle;                                              // 0x0030   (0x0420)
 };
 
 /// Class /Script/Slate.ComboButtonWidgetStyle
-/// Size: 0x0418 (1048 bytes) (0x000030 - 0x000418) align 8 MaxSize: 0x0418
+/// Size: 0x0418 (1048 bytes) (0x000030 - 0x000418) align n/a MaxSize: 0x0418
 class UComboButtonWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FComboButtonStyle                                  ComboButtonStyle;                                           // 0x0030   (0x03E8)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FComboButtonStyle                                  ComboButtonStyle;                                           // 0x0030   (0x03E8)
 };
 
 /// Class /Script/Slate.EditableTextBoxWidgetStyle
-/// Size: 0x0898 (2200 bytes) (0x000030 - 0x000898) align 8 MaxSize: 0x0898
+/// Size: 0x0898 (2200 bytes) (0x000030 - 0x000898) align n/a MaxSize: 0x0898
 class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FEditableTextBoxStyle                              EditableTextBoxStyle;                                       // 0x0030   (0x0868)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FEditableTextBoxStyle                              EditableTextBoxStyle;                                       // 0x0030   (0x0868)
 };
 
 /// Class /Script/Slate.EditableTextWidgetStyle
-/// Size: 0x0270 (624 bytes) (0x000030 - 0x000270) align 8 MaxSize: 0x0270
+/// Size: 0x0270 (624 bytes) (0x000030 - 0x000270) align n/a MaxSize: 0x0270
 class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FEditableTextStyle                                 EditableTextStyle;                                          // 0x0030   (0x0240)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FEditableTextStyle                                 EditableTextStyle;                                          // 0x0030   (0x0240)
 };
 
 /// Class /Script/Slate.ProgressWidgetStyle
-/// Size: 0x01E8 (488 bytes) (0x000030 - 0x0001E8) align 8 MaxSize: 0x01E8
+/// Size: 0x01E8 (488 bytes) (0x000030 - 0x0001E8) align n/a MaxSize: 0x01E8
 class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FProgressBarStyle                                  ProgressBarStyle;                                           // 0x0030   (0x01B8)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FProgressBarStyle                                  ProgressBarStyle;                                           // 0x0030   (0x01B8)
 };
 
 /// Class /Script/Slate.ScrollBarWidgetStyle
-/// Size: 0x0548 (1352 bytes) (0x000030 - 0x000548) align 8 MaxSize: 0x0548
+/// Size: 0x0548 (1352 bytes) (0x000030 - 0x000548) align n/a MaxSize: 0x0548
 class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FScrollBarStyle                                    ScrollBarStyle;                                             // 0x0030   (0x0518)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FScrollBarStyle                                    ScrollBarStyle;                                             // 0x0030   (0x0518)
 };
 
 /// Class /Script/Slate.ScrollBoxWidgetStyle
-/// Size: 0x0278 (632 bytes) (0x000030 - 0x000278) align 8 MaxSize: 0x0278
+/// Size: 0x0278 (632 bytes) (0x000030 - 0x000278) align n/a MaxSize: 0x0278
 class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FScrollBoxStyle                                    ScrollBoxStyle;                                             // 0x0030   (0x0248)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FScrollBoxStyle                                    ScrollBoxStyle;                                             // 0x0030   (0x0248)
 };
 
 /// Class /Script/Slate.SlateSettings
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class USlateSettings : public UObject
 { 
 public:
-    bool                                               bExplicitCanvasChildZOrder;                                 // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0029   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bExplicitCanvasChildZOrder;                                 // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0029   (0x0007) MISSED
 };
 
 /// Class /Script/Slate.SpinBoxWidgetStyle
-/// Size: 0x0340 (832 bytes) (0x000030 - 0x000340) align 8 MaxSize: 0x0340
+/// Size: 0x0340 (832 bytes) (0x000030 - 0x000340) align n/a MaxSize: 0x0340
 class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FSpinBoxStyle                                      SpinBoxStyle;                                               // 0x0030   (0x0310)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FSpinBoxStyle                                      SpinBoxStyle;                                               // 0x0030   (0x0310)
 };
 
 /// Class /Script/Slate.TextBlockWidgetStyle
-/// Size: 0x02C0 (704 bytes) (0x000030 - 0x0002C0) align 8 MaxSize: 0x02C0
+/// Size: 0x02C0 (704 bytes) (0x000030 - 0x0002C0) align n/a MaxSize: 0x02C0
 class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
 { 
 public:
-    FTextBlockStyle                                    TextBlockStyle;                                             // 0x0030   (0x0290)
+    UPROPERTY(Edit, NativeAccessSpecifierPublic)
+    /* public    */ FTextBlockStyle                                    TextBlockStyle;                                             // 0x0030   (0x0290)
 };
 
 /// Class /Script/Slate.ToolMenuBase
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UToolMenuBase : public UObject
 { 
 public:
 };
 
 /// Struct /Script/Slate.VirtualKeyboardOptions
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FVirtualKeyboardOptions
 { 
-    bool                                               bEnableAutocorrect;                                         // 0x0000   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableAutocorrect;                                         // 0x0000   (0x0001)
 };
 
 /// Struct /Script/Slate.InputChord
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FInputChord
 { 
-    FKey                                               Key;                                                        // 0x0000   (0x0018)
-    bool                                               bShift : 1;                                                 // 0x0018:0 (0x0001)
-    bool                                               bCtrl : 1;                                                  // 0x0018:1 (0x0001)
-    bool                                               bAlt : 1;                                                   // 0x0018:2 (0x0001)
-    bool                                               bCmd : 1;                                                   // 0x0018:3 (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0019   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FKey                                               Key;                                                        // 0x0000   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bShift : 1;                                                 // 0x0018:0 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCtrl : 1;                                                  // 0x0018:1 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAlt : 1;                                                   // 0x0018:2 (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCmd : 1;                                                   // 0x0018:3 (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0019   (0x0007) MISSED
 };
 
 /// Struct /Script/Slate.Anchors
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FAnchors
 { 
-    FVector2D                                          Minimum;                                                    // 0x0000   (0x0008)
-    FVector2D                                          Maximum;                                                    // 0x0008   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          Minimum;                                                    // 0x0000   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          Maximum;                                                    // 0x0008   (0x0008)
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuEntry
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FCustomizedToolMenuEntry
 { 
-    ECustomizedToolMenuVisibility                      Visibility;                                                 // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ECustomizedToolMenuVisibility                      Visibility;                                                 // 0x0000   (0x0004)
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuSection
-/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align 4 MaxSize: 0x0004
+/// Size: 0x0004 (4 bytes) (0x000000 - 0x000004) align n/a MaxSize: 0x0004
 struct FCustomizedToolMenuSection
 { 
-    ECustomizedToolMenuVisibility                      Visibility;                                                 // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ECustomizedToolMenuVisibility                      Visibility;                                                 // 0x0000   (0x0004)
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuNameArray
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FCustomizedToolMenuNameArray
 { 
-    TArray<FName>                                      Names;                                                      // 0x0000   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      Names;                                                      // 0x0000   (0x0010)
 };
 
 /// Struct /Script/Slate.CustomizedToolMenu
-/// Size: 0x01E8 (488 bytes) (0x000000 - 0x0001E8) align 8 MaxSize: 0x01E8
+/// Size: 0x01E8 (488 bytes) (0x000000 - 0x0001E8) align n/a MaxSize: 0x01E8
 struct FCustomizedToolMenu
 { 
-    FName                                              Name;                                                       // 0x0000   (0x0008)
-    TMap<FName, FCustomizedToolMenuEntry>              Entries;                                                    // 0x0008   (0x0050)
-    TMap<FName, FCustomizedToolMenuSection>            Sections;                                                   // 0x0058   (0x0050)
-    TMap<FName, FCustomizedToolMenuNameArray>          EntryOrder;                                                 // 0x00A8   (0x0050)
-    TArray<FName>                                      SectionOrder;                                               // 0x00F8   (0x0010)
-    unsigned char                                      UnknownData00_7[0xE0];                                      // 0x0108   (0x00E0) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              Name;                                                       // 0x0000   (0x0008)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ TMap<FName, FCustomizedToolMenuEntry>              Entries;                                                    // 0x0008   (0x0050)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ TMap<FName, FCustomizedToolMenuSection>            Sections;                                                   // 0x0058   (0x0050)
+    UPROPERTY(NativeAccessSpecifierPublic)
+    /* public    */ TMap<FName, FCustomizedToolMenuNameArray>          EntryOrder;                                                 // 0x00A8   (0x0050)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      SectionOrder;                                               // 0x00F8   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0xE0];                                      // 0x0108   (0x00E0) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UButtonWidgetStyle) == 0x02C8); // 712 bytes (0x000030 - 0x0002C8)
 static_assert(sizeof(UCheckBoxWidgetStyle) == 0x05F8); // 1528 bytes (0x000030 - 0x0005F8)
 static_assert(sizeof(UComboBoxWidgetStyle) == 0x0450); // 1104 bytes (0x000030 - 0x000450)
@@ -426,3 +465,4 @@ static_assert(offsetof(FCustomizedToolMenu, Entries) == 0x0008);
 static_assert(offsetof(FCustomizedToolMenu, Sections) == 0x0058);
 static_assert(offsetof(FCustomizedToolMenu, EntryOrder) == 0x00A8);
 static_assert(offsetof(FCustomizedToolMenu, SectionOrder) == 0x00F8);
+#endif

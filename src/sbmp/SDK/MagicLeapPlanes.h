@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,15 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MagicLeapPlanes.EMagicLeapPlaneQueryFlags
-/// Size: 0x01 (1 bytes)
+class UMagicLeapPlanesComponent;
+class UMagicLeapPlanesFunctionLibrary;
+struct FMagicLeapPlaneBoundaries;
+struct FMagicLeapPlaneBoundary;
+struct FMagicLeapPlaneResult;
+struct FMagicLeapPlanesQuery;
+struct FMagicLeapPolygon;
+
+/// Enum /Script/MagicLeapPlanes.EMagicLeapPlaneQueryFlags -  1 (1 bytes)
 enum class EMagicLeapPlaneQueryFlags : uint8_t
 {
     Vertical                                                                         = 0,
@@ -29,8 +45,7 @@ enum class EMagicLeapPlaneQueryFlags : uint8_t
     Polygons                                                                         = 8
 };
 
-/// Enum /Script/MagicLeapPlanes.EMagicLeapPlaneQueryType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapPlanes.EMagicLeapPlaneQueryType -  1 (1 bytes)
 enum class EMagicLeapPlaneQueryType : uint8_t
 {
     Bulk                                                                             = 0,
@@ -38,22 +53,31 @@ enum class EMagicLeapPlaneQueryType : uint8_t
 };
 
 /// Class /Script/MagicLeapPlanes.MagicLeapPlanesComponent
-/// Size: 0x02D0 (720 bytes) (0x000260 - 0x0002D0) align 16 MaxSize: 0x02D0
+/// Size: 0x02D0 (720 bytes) (0x000260 - 0x0002D0) align n/a MaxSize: 0x02D0
 class UMagicLeapPlanesComponent : public USceneComponent
 { 
 public:
-    TArray<EMagicLeapPlaneQueryFlags>                  QueryFlags;                                                 // 0x0260   (0x0010)
-    class UBoxComponent*                               SearchVolume;                                               // 0x0270   (0x0008)
-    int32_t                                            MaxResults;                                                 // 0x0278   (0x0004)
-    float                                              MinHolePerimeter;                                           // 0x027C   (0x0004)
-    float                                              MinPlaneArea;                                               // 0x0280   (0x0004)
-    EMagicLeapPlaneQueryType                           QueryType;                                                  // 0x0284   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0285   (0x0003) MISSED
-    float                                              SimilarityThreshold;                                        // 0x0288   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x028C   (0x0004) MISSED
-    FMulticastInlineDelegate                           OnPlanesQueryResult;                                        // 0x0290   (0x0010)
-    FMulticastInlineDelegate                           OnPersistentPlanesQueryResult;                              // 0x02A0   (0x0010)
-    unsigned char                                      UnknownData02_7[0x20];                                      // 0x02B0   (0x0020) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<EMagicLeapPlaneQueryFlags>                  QueryFlags;                                                 // 0x0260   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBoxComponent*                               SearchVolume;                                               // 0x0270   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxResults;                                                 // 0x0278   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinHolePerimeter;                                           // 0x027C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinPlaneArea;                                               // 0x0280   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapPlaneQueryType                           QueryType;                                                  // 0x0284   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x0285   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SimilarityThreshold;                                        // 0x0288   (0x0004)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x028C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+    /* private   */ FMulticastInlineDelegate                           OnPlanesQueryResult;                                        // 0x0290   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+    /* private   */ FMulticastInlineDelegate                           OnPersistentPlanesQueryResult;                              // 0x02A0   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x20];                                      // 0x02B0   (0x0020) MISSED
 
     /// Functions
     // Function /Script/MagicLeapPlanes.MagicLeapPlanesComponent.RequestPlanesAsync
@@ -61,7 +85,7 @@ public:
 };
 
 /// Class /Script/MagicLeapPlanes.MagicLeapPlanesFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMagicLeapPlanesFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -105,63 +129,87 @@ public:
 };
 
 /// Struct /Script/MagicLeapPlanes.MagicLeapPolygon
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FMagicLeapPolygon
 { 
-    TArray<FVector>                                    Vertices;                                                   // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector>                                    Vertices;                                                   // 0x0000   (0x0010)
 };
 
 /// Struct /Script/MagicLeapPlanes.MagicLeapPlaneBoundary
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FMagicLeapPlaneBoundary
 { 
-    FMagicLeapPolygon                                  Polygon;                                                    // 0x0000   (0x0010)
-    TArray<FMagicLeapPolygon>                          Holes;                                                      // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ FMagicLeapPolygon                                  Polygon;                                                    // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FMagicLeapPolygon>                          Holes;                                                      // 0x0010   (0x0010)
 };
 
 /// Struct /Script/MagicLeapPlanes.MagicLeapPlaneBoundaries
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FMagicLeapPlaneBoundaries
 { 
-    FGuid                                              ID;                                                         // 0x0000   (0x0010)
-    TArray<FMagicLeapPlaneBoundary>                    Boundaries;                                                 // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ID;                                                         // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FMagicLeapPlaneBoundary>                    Boundaries;                                                 // 0x0010   (0x0010)
 };
 
 /// Struct /Script/MagicLeapPlanes.MagicLeapPlaneResult
-/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FMagicLeapPlaneResult
 { 
-    FVector                                            PlanePosition;                                              // 0x0000   (0x000C)
-    FRotator                                           PlaneOrientation;                                           // 0x000C   (0x000C)
-    FRotator                                           ContentOrientation;                                         // 0x0018   (0x000C)
-    FVector2D                                          PlaneDimensions;                                            // 0x0024   (0x0008)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x002C   (0x0004) MISSED
-    TArray<EMagicLeapPlaneQueryFlags>                  PlaneFlags;                                                 // 0x0030   (0x0010)
-    FGuid                                              ID;                                                         // 0x0040   (0x0010)
-    FGuid                                              InnerID;                                                    // 0x0050   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            PlanePosition;                                              // 0x0000   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FRotator                                           PlaneOrientation;                                           // 0x000C   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FRotator                                           ContentOrientation;                                         // 0x0018   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          PlaneDimensions;                                            // 0x0024   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x002C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<EMagicLeapPlaneQueryFlags>                  PlaneFlags;                                                 // 0x0030   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ID;                                                         // 0x0040   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              InnerID;                                                    // 0x0050   (0x0010)
 };
 
 /// Struct /Script/MagicLeapPlanes.MagicLeapPlanesQuery
-/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align 16 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FMagicLeapPlanesQuery
 { 
-    TArray<EMagicLeapPlaneQueryFlags>                  Flags;                                                      // 0x0000   (0x0010)
-    class UBoxComponent*                               SearchVolume;                                               // 0x0010   (0x0008)
-    int32_t                                            MaxResults;                                                 // 0x0018   (0x0004)
-    float                                              MinHoleLength;                                              // 0x001C   (0x0004)
-    float                                              MinPlaneArea;                                               // 0x0020   (0x0004)
-    FVector                                            SearchVolumePosition;                                       // 0x0024   (0x000C)
-    FQuat                                              SearchVolumeOrientation;                                    // 0x0030   (0x0010)
-    FVector                                            SearchVolumeExtents;                                        // 0x0040   (0x000C)
-    float                                              SimilarityThreshold;                                        // 0x004C   (0x0004)
-    bool                                               bSearchVolumeTrackingSpace;                                 // 0x0050   (0x0001)
-    bool                                               bResultTrackingSpace;                                       // 0x0051   (0x0001)
-    unsigned char                                      UnknownData00_7[0xE];                                       // 0x0052   (0x000E) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<EMagicLeapPlaneQueryFlags>                  Flags;                                                      // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UBoxComponent*                               SearchVolume;                                               // 0x0010   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxResults;                                                 // 0x0018   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinHoleLength;                                              // 0x001C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              MinPlaneArea;                                               // 0x0020   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            SearchVolumePosition;                                       // 0x0024   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FQuat                                              SearchVolumeOrientation;                                    // 0x0030   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            SearchVolumeExtents;                                        // 0x0040   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              SimilarityThreshold;                                        // 0x004C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSearchVolumeTrackingSpace;                                 // 0x0050   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bResultTrackingSpace;                                       // 0x0051   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0xE];                                       // 0x0052   (0x000E) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMagicLeapPlanesComponent) == 0x02D0); // 720 bytes (0x000260 - 0x0002D0)
 static_assert(sizeof(UMagicLeapPlanesFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(FMagicLeapPolygon) == 0x0010); // 16 bytes (0x000000 - 0x000010)
@@ -189,3 +237,4 @@ static_assert(offsetof(FMagicLeapPlanesQuery, SearchVolume) == 0x0010);
 static_assert(offsetof(FMagicLeapPlanesQuery, SearchVolumePosition) == 0x0024);
 static_assert(offsetof(FMagicLeapPlanesQuery, SearchVolumeOrientation) == 0x0030);
 static_assert(offsetof(FMagicLeapPlanesQuery, SearchVolumeExtents) == 0x0040);
+#endif

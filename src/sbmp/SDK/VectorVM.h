@@ -2,17 +2,26 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/VectorVM.EVectorVMOp
-/// Size: 0x01 (1 bytes)
+
+/// Enum /Script/VectorVM.EVectorVMOp -  1 (1 bytes)
 enum class EVectorVMOp : uint8_t
 {
     done                                                                             = 0,
@@ -113,8 +122,7 @@ enum class EVectorVMOp : uint8_t
     NumOpcodes                                                                       = 95
 };
 
-/// Enum /Script/VectorVM.EVectorVMOperandLocation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/VectorVM.EVectorVMOperandLocation -  1 (1 bytes)
 enum class EVectorVMOperandLocation : uint8_t
 {
     Register                                                                         = 0,
@@ -122,8 +130,7 @@ enum class EVectorVMOperandLocation : uint8_t
     Num                                                                              = 2
 };
 
-/// Enum /Script/VectorVM.EVectorVMBaseTypes
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/VectorVM.EVectorVMBaseTypes -  1 (1 bytes)
 enum class EVectorVMBaseTypes : uint8_t
 {
     Float                                                                            = 0,
@@ -135,3 +142,5 @@ enum class EVectorVMBaseTypes : uint8_t
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
+#endif

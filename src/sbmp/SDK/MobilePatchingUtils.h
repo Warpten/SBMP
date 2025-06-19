@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,12 +23,16 @@
 
 #pragma pack(push, 0x1)
 
+class UMobileInstalledContent;
+class UMobilePatchingLibrary;
+class UMobilePendingContent;
+
 /// Class /Script/MobilePatchingUtils.MobileInstalledContent
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
 class UMobileInstalledContent : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x20];                                      // 0x0028   (0x0020) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x20];                                      // 0x0028   (0x0020) MISSED
 
     /// Functions
     // Function /Script/MobilePatchingUtils.MobileInstalledContent.Mount
@@ -33,11 +46,11 @@ public:
 };
 
 /// Class /Script/MobilePatchingUtils.MobilePendingContent
-/// Size: 0x0088 (136 bytes) (0x000048 - 0x000088) align 8 MaxSize: 0x0088
+/// Size: 0x0088 (136 bytes) (0x000048 - 0x000088) align n/a MaxSize: 0x0088
 class UMobilePendingContent : public UMobileInstalledContent
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x40];                                      // 0x0048   (0x0040) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x40];                                      // 0x0048   (0x0040) MISSED
 
     /// Functions
     // Function /Script/MobilePatchingUtils.MobilePendingContent.StartInstall
@@ -59,7 +72,7 @@ public:
 };
 
 /// Class /Script/MobilePatchingUtils.MobilePatchingLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMobilePatchingLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -86,6 +99,8 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMobileInstalledContent) == 0x0048); // 72 bytes (0x000028 - 0x000048)
 static_assert(sizeof(UMobilePendingContent) == 0x0088); // 136 bytes (0x000048 - 0x000088)
 static_assert(sizeof(UMobilePatchingLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
+#endif

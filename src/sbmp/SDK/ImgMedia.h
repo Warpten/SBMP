@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,14 +24,19 @@
 
 #pragma pack(push, 0x1)
 
+class UImgMediaSource;
+
 /// Class /Script/ImgMedia.ImgMediaSource
-/// Size: 0x00B0 (176 bytes) (0x000088 - 0x0000B0) align 8 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000088 - 0x0000B0) align n/a MaxSize: 0x00B0
 class UImgMediaSource : public UBaseMediaSource
 { 
 public:
-    FFrameRate                                         FrameRateOverride;                                          // 0x0088   (0x0008)
-    FString                                            ProxyOverride;                                              // 0x0090   (0x0010)
-    FDirectoryPath                                     SequencePath;                                               // 0x00A0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFrameRate                                         FrameRateOverride;                                          // 0x0088   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ProxyOverride;                                              // 0x0090   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FDirectoryPath                                     SequencePath;                                               // 0x00A0   (0x0010)
 
     /// Functions
     // Function /Script/ImgMedia.ImgMediaSource.SetSequencePath
@@ -38,7 +52,9 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UImgMediaSource) == 0x00B0); // 176 bytes (0x000088 - 0x0000B0)
 static_assert(offsetof(UImgMediaSource, FrameRateOverride) == 0x0088);
 static_assert(offsetof(UImgMediaSource, ProxyOverride) == 0x0090);
 static_assert(offsetof(UImgMediaSource, SequencePath) == 0x00A0);
+#endif

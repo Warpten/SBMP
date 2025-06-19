@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -16,8 +25,28 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryBatteryState
-/// Size: 0x01 (1 bytes)
+class ULowEntryBitDataEntry;
+class ULowEntryBitDataReader;
+class ULowEntryBitDataWriter;
+class ULowEntryByteArray;
+class ULowEntryByteDataEntry;
+class ULowEntryByteDataReader;
+class ULowEntryByteDataWriter;
+class ULowEntryDouble;
+class ULowEntryExecutionQueue;
+class ULowEntryExtendedStandardLibrary;
+class ULowEntryLatentActionBoolean;
+class ULowEntryLatentActionFloat;
+class ULowEntryLatentActionInteger;
+class ULowEntryLatentActionNone;
+class ULowEntryLatentActionObject;
+class ULowEntryLatentActionString;
+class ULowEntryLong;
+class ULowEntryParsedHashcash;
+struct FLowEntryRegexCaptureGroup;
+struct FLowEntryRegexMatch;
+
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryBatteryState -  1 (1 bytes)
 enum class ELowEntryBatteryState : uint8_t
 {
     Charging                                                                         = 0,
@@ -27,49 +56,45 @@ enum class ELowEntryBatteryState : uint8_t
     Unknown                                                                          = 4
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibrary0to9
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibrary0to9 -  1 (1 bytes)
 enum class ELowEntryExtendedStandardLibrary0to9 : uint8_t
 {
-    0_                                                                               = 0,
-    1_                                                                               = 1,
-    2_                                                                               = 2,
-    3_                                                                               = 3,
-    4_                                                                               = 4,
-    5_                                                                               = 5,
-    6_                                                                               = 6,
-    7_                                                                               = 7,
-    8_                                                                               = 8,
-    9_                                                                               = 9
+    _0_                                                                               = 0,
+    _1_                                                                               = 1,
+    _2_                                                                               = 2,
+    _3_                                                                               = 3,
+    _4_                                                                               = 4,
+    _5_                                                                               = 5,
+    _6_                                                                               = 6,
+    _7_                                                                               = 7,
+    _8_                                                                               = 8,
+    _9_                                                                               = 9
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibrary1to10other
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibrary1to10other -  1 (1 bytes)
 enum class ELowEntryExtendedStandardLibrary1to10other : uint8_t
 {
-    1_                                                                               = 1,
-    2_                                                                               = 2,
-    3_                                                                               = 3,
-    4_                                                                               = 4,
-    5_                                                                               = 5,
-    6_                                                                               = 6,
-    7_                                                                               = 7,
-    8_                                                                               = 8,
-    9_                                                                               = 9,
-    10_                                                                              = 10,
+    _1_                                                                               = 1,
+    _2_                                                                               = 2,
+    _3_                                                                               = 3,
+    _4_                                                                               = 4,
+    _5_                                                                               = 5,
+    _6_                                                                               = 6,
+    _7_                                                                               = 7,
+    _8_                                                                               = 8,
+    _9_                                                                               = 9,
+    _10_                                                                              = 10,
     Other                                                                            = 0
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibraryTrueOrFalse
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryExtendedStandardLibraryTrueOrFalse -  1 (1 bytes)
 enum class ELowEntryExtendedStandardLibraryTrueOrFalse : uint8_t
 {
     True_                                                                            = 0,
     False_                                                                           = 1
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryHmacAlgorithm
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryHmacAlgorithm -  1 (1 bytes)
 enum class ELowEntryHmacAlgorithm : uint8_t
 {
     MD5                                                                              = 0,
@@ -78,8 +103,7 @@ enum class ELowEntryHmacAlgorithm : uint8_t
     SHA512                                                                           = 3
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryImageFormat
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryImageFormat -  1 (1 bytes)
 enum class ELowEntryImageFormat : uint8_t
 {
     Invalid                                                                          = 0,
@@ -92,8 +116,7 @@ enum class ELowEntryImageFormat : uint8_t
     ICNS                                                                             = 7
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryRGBFormat
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntryRGBFormat -  1 (1 bytes)
 enum class ELowEntryRGBFormat : uint8_t
 {
     Invalid                                                                          = 0,
@@ -102,8 +125,7 @@ enum class ELowEntryRGBFormat : uint8_t
     Gray                                                                             = 3
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenType -  1 (1 bytes)
 enum class ELowEntrySplitScreenType : uint8_t
 {
     None                                                                             = 0,
@@ -116,16 +138,14 @@ enum class ELowEntrySplitScreenType : uint8_t
     FourPlayer_Vertical                                                              = 7
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenTypeThreePlayers
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenTypeThreePlayers -  1 (1 bytes)
 enum class ELowEntrySplitScreenTypeThreePlayers : uint8_t
 {
     FavorTop                                                                         = 0,
     FavorBottom                                                                      = 1
 };
 
-/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenTypeTwoPlayers
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/LowEntryExtendedStandardLibrary.ELowEntrySplitScreenTypeTwoPlayers -  1 (1 bytes)
 enum class ELowEntrySplitScreenTypeTwoPlayers : uint8_t
 {
     Horizontal                                                                       = 0,
@@ -133,41 +153,60 @@ enum class ELowEntrySplitScreenTypeTwoPlayers : uint8_t
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryBitDataEntry
-/// Size: 0x00D0 (208 bytes) (0x000028 - 0x0000D0) align 8 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000028 - 0x0000D0) align n/a MaxSize: 0x00D0
 class ULowEntryBitDataEntry : public UObject
 { 
 public:
-    char                                               Type;                                                       // 0x0028   (0x0001)
-    char                                               ByteValue;                                                  // 0x0029   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x002A   (0x0002) MISSED
-    int32_t                                            IntegerValue;                                               // 0x002C   (0x0004)
-    class ULowEntryLong*                               LongBytesValue;                                             // 0x0030   (0x0008)
-    float                                              FloatValue;                                                 // 0x0038   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x003C   (0x0004) MISSED
-    class ULowEntryDouble*                             DoubleBytesValue;                                           // 0x0040   (0x0008)
-    bool                                               BooleanValue;                                               // 0x0048   (0x0001)
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0049   (0x0007) MISSED
-    FString                                            StringUtf8Value;                                            // 0x0050   (0x0010)
-    TArray<char>                                       ByteArrayValue;                                             // 0x0060   (0x0010)
-    TArray<int32_t>                                    IntegerArrayValue;                                          // 0x0070   (0x0010)
-    TArray<class ULowEntryLong*>                       LongBytesArrayValue;                                        // 0x0080   (0x0010)
-    TArray<float>                                      FloatArrayValue;                                            // 0x0090   (0x0010)
-    TArray<class ULowEntryDouble*>                     DoubleBytesArrayValue;                                      // 0x00A0   (0x0010)
-    TArray<bool>                                       BooleanArrayValue;                                          // 0x00B0   (0x0010)
-    TArray<FString>                                    StringUtf8ArrayValue;                                       // 0x00C0   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               Type;                                                       // 0x0028   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               ByteValue;                                                  // 0x0029   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x2];                                       // 0x002A   (0x0002) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            IntegerValue;                                               // 0x002C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULowEntryLong*                               LongBytesValue;                                             // 0x0030   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FloatValue;                                                 // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x003C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULowEntryDouble*                             DoubleBytesValue;                                           // 0x0040   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               BooleanValue;                                               // 0x0048   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x7];                                       // 0x0049   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            StringUtf8Value;                                            // 0x0050   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       ByteArrayValue;                                             // 0x0060   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int32_t>                                    IntegerArrayValue;                                          // 0x0070   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ULowEntryLong*>                       LongBytesArrayValue;                                        // 0x0080   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      FloatArrayValue;                                            // 0x0090   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ULowEntryDouble*>                     DoubleBytesArrayValue;                                      // 0x00A0   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<bool>                                       BooleanArrayValue;                                          // 0x00B0   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FString>                                    StringUtf8ArrayValue;                                       // 0x00C0   (0x0010)
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryBitDataReader
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
 class ULowEntryBitDataReader : public UObject
 { 
 public:
-    TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
-    int32_t                                            position;                                                   // 0x0038   (0x0004)
-    char                                               CurrentByte;                                                // 0x003C   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x003D   (0x0003) MISSED
-    int32_t                                            CurrentBytePosition;                                        // 0x0040   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0044   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            position;                                                   // 0x0038   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               CurrentByte;                                                // 0x003C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x003D   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CurrentBytePosition;                                        // 0x0040   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x0044   (0x0004) MISSED
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryBitDataReader.SetPosition
@@ -254,14 +293,17 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryBitDataWriter
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class ULowEntryBitDataWriter : public UObject
 { 
 public:
-    TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
-    char                                               CurrentByte;                                                // 0x0038   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0039   (0x0003) MISSED
-    int32_t                                            CurrentBytePosition;                                        // 0x003C   (0x0004)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               CurrentByte;                                                // 0x0038   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0039   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CurrentBytePosition;                                        // 0x003C   (0x0004)
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryBitDataWriter.AddStringUtf8Array
@@ -365,46 +407,64 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryByteArray
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class ULowEntryByteArray : public UObject
 { 
 public:
-    TArray<char>                                       ByteArray;                                                  // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       ByteArray;                                                  // 0x0028   (0x0010)
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryByteDataEntry
-/// Size: 0x00D0 (208 bytes) (0x000028 - 0x0000D0) align 8 MaxSize: 0x00D0
+/// Size: 0x00D0 (208 bytes) (0x000028 - 0x0000D0) align n/a MaxSize: 0x00D0
 class ULowEntryByteDataEntry : public UObject
 { 
 public:
-    char                                               Type;                                                       // 0x0028   (0x0001)
-    char                                               ByteValue;                                                  // 0x0029   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x002A   (0x0002) MISSED
-    int32_t                                            IntegerValue;                                               // 0x002C   (0x0004)
-    class ULowEntryLong*                               LongBytesValue;                                             // 0x0030   (0x0008)
-    float                                              FloatValue;                                                 // 0x0038   (0x0004)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x003C   (0x0004) MISSED
-    class ULowEntryDouble*                             DoubleBytesValue;                                           // 0x0040   (0x0008)
-    bool                                               BooleanValue;                                               // 0x0048   (0x0001)
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0049   (0x0007) MISSED
-    FString                                            StringUtf8Value;                                            // 0x0050   (0x0010)
-    TArray<char>                                       ByteArrayValue;                                             // 0x0060   (0x0010)
-    TArray<int32_t>                                    IntegerArrayValue;                                          // 0x0070   (0x0010)
-    TArray<class ULowEntryLong*>                       LongBytesArrayValue;                                        // 0x0080   (0x0010)
-    TArray<float>                                      FloatArrayValue;                                            // 0x0090   (0x0010)
-    TArray<class ULowEntryDouble*>                     DoubleBytesArrayValue;                                      // 0x00A0   (0x0010)
-    TArray<bool>                                       BooleanArrayValue;                                          // 0x00B0   (0x0010)
-    TArray<FString>                                    StringUtf8ArrayValue;                                       // 0x00C0   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               Type;                                                       // 0x0028   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               ByteValue;                                                  // 0x0029   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x2];                                       // 0x002A   (0x0002) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            IntegerValue;                                               // 0x002C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULowEntryLong*                               LongBytesValue;                                             // 0x0030   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FloatValue;                                                 // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData04_6[0x4];                                       // 0x003C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class ULowEntryDouble*                             DoubleBytesValue;                                           // 0x0040   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               BooleanValue;                                               // 0x0048   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x7];                                       // 0x0049   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            StringUtf8Value;                                            // 0x0050   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       ByteArrayValue;                                             // 0x0060   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int32_t>                                    IntegerArrayValue;                                          // 0x0070   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ULowEntryLong*>                       LongBytesArrayValue;                                        // 0x0080   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      FloatArrayValue;                                            // 0x0090   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class ULowEntryDouble*>                     DoubleBytesArrayValue;                                      // 0x00A0   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<bool>                                       BooleanArrayValue;                                          // 0x00B0   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FString>                                    StringUtf8ArrayValue;                                       // 0x00C0   (0x0010)
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryByteDataReader
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class ULowEntryByteDataReader : public UObject
 { 
 public:
-    TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
-    int32_t                                            position;                                                   // 0x0038   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x003C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            position;                                                   // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x003C   (0x0004) MISSED
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryByteDataReader.SetPosition
@@ -463,11 +523,12 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryByteDataWriter
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class ULowEntryByteDataWriter : public UObject
 { 
 public:
-    TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryByteDataWriter.AddStringUtf8Array
@@ -533,11 +594,12 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryDouble
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class ULowEntryDouble : public UObject
 { 
 public:
-    TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryDouble.SetBytes
@@ -599,17 +661,19 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryExecutionQueue
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class ULowEntryExecutionQueue : public UObject
 { 
 public:
-    int32_t                                            Count;                                                      // 0x0028   (0x0004)
-    bool                                               Next;                                                       // 0x002C   (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x002D   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Count;                                                      // 0x0028   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Next;                                                       // 0x002C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x002D   (0x0003) MISSED
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryExtendedStandardLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULowEntryExtendedStandardLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -1893,14 +1957,17 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionBoolean
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class ULowEntryLatentActionBoolean : public UObject
 { 
 public:
-    bool                                               Finished;                                                   // 0x0028   (0x0001)
-    bool                                               Result;                                                     // 0x0029   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x002A   (0x0002) MISSED
-    int32_t                                            KeepAliveCount;                                             // 0x002C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Finished;                                                   // 0x0028   (0x0001)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Result;                                                     // 0x0029   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x2];                                       // 0x002A   (0x0002) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            KeepAliveCount;                                             // 0x002C   (0x0004)
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionBoolean.WaitTillDone
@@ -1919,15 +1986,18 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionFloat
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class ULowEntryLatentActionFloat : public UObject
 { 
 public:
-    bool                                               Finished;                                                   // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0029   (0x0003) MISSED
-    float                                              Result;                                                     // 0x002C   (0x0004)
-    int32_t                                            KeepAliveCount;                                             // 0x0030   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Finished;                                                   // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Result;                                                     // 0x002C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            KeepAliveCount;                                             // 0x0030   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x0034   (0x0004) MISSED
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionFloat.WaitTillDone
@@ -1946,15 +2016,18 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionInteger
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class ULowEntryLatentActionInteger : public UObject
 { 
 public:
-    bool                                               Finished;                                                   // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0029   (0x0003) MISSED
-    int32_t                                            Result;                                                     // 0x002C   (0x0004)
-    int32_t                                            KeepAliveCount;                                             // 0x0030   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0034   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Finished;                                                   // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Result;                                                     // 0x002C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            KeepAliveCount;                                             // 0x0030   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x0034   (0x0004) MISSED
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionInteger.WaitTillDone
@@ -1973,13 +2046,15 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionNone
-/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000028 - 0x000030) align n/a MaxSize: 0x0030
 class ULowEntryLatentActionNone : public UObject
 { 
 public:
-    bool                                               Finished;                                                   // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0029   (0x0003) MISSED
-    int32_t                                            KeepAliveCount;                                             // 0x002C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Finished;                                                   // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0029   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            KeepAliveCount;                                             // 0x002C   (0x0004)
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionNone.WaitTillDone
@@ -1993,15 +2068,18 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionObject
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class ULowEntryLatentActionObject : public UObject
 { 
 public:
-    bool                                               Finished;                                                   // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0029   (0x0007) MISSED
-    class UObject*                                     Result;                                                     // 0x0030   (0x0008)
-    int32_t                                            KeepAliveCount;                                             // 0x0038   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x003C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Finished;                                                   // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x7];                                       // 0x0029   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UObject*                                     Result;                                                     // 0x0030   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            KeepAliveCount;                                             // 0x0038   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x003C   (0x0004) MISSED
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionObject.WaitTillDone
@@ -2020,15 +2098,18 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionString
-/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000028 - 0x000048) align n/a MaxSize: 0x0048
 class ULowEntryLatentActionString : public UObject
 { 
 public:
-    bool                                               Finished;                                                   // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0029   (0x0007) MISSED
-    FString                                            Result;                                                     // 0x0030   (0x0010)
-    int32_t                                            KeepAliveCount;                                             // 0x0040   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x0044   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Finished;                                                   // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x7];                                       // 0x0029   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Result;                                                     // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            KeepAliveCount;                                             // 0x0040   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x0044   (0x0004) MISSED
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryLatentActionString.WaitTillDone
@@ -2047,11 +2128,12 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryLong
-/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align 8 MaxSize: 0x0038
+/// Size: 0x0038 (56 bytes) (0x000028 - 0x000038) align n/a MaxSize: 0x0038
 class ULowEntryLong : public UObject
 { 
 public:
-    TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       Bytes;                                                      // 0x0028   (0x0010)
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryLong.SetBytes
@@ -2112,16 +2194,20 @@ public:
 };
 
 /// Class /Script/LowEntryExtendedStandardLibrary.LowEntryParsedHashcash
-/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000028 - 0x000050) align n/a MaxSize: 0x0050
 class ULowEntryParsedHashcash : public UObject
 { 
 public:
-    bool                                               Valid;                                                      // 0x0028   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x0029   (0x0007) MISSED
-    FString                                            Resource;                                                   // 0x0030   (0x0010)
-    FDateTime                                          Date;                                                       // 0x0040   (0x0008)
-    int32_t                                            Bits;                                                       // 0x0048   (0x0004)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x004C   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               Valid;                                                      // 0x0028   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x7];                                       // 0x0029   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Resource;                                                   // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FDateTime                                          Date;                                                       // 0x0040   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Bits;                                                       // 0x0048   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x004C   (0x0004) MISSED
 
     /// Functions
     // Function /Script/LowEntryExtendedStandardLibrary.LowEntryParsedHashcash.ToString
@@ -2135,31 +2221,41 @@ public:
 };
 
 /// Struct /Script/LowEntryExtendedStandardLibrary.LowEntryRegexCaptureGroup
-/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align 8 MaxSize: 0x0020
+/// Size: 0x0020 (32 bytes) (0x000000 - 0x000020) align n/a MaxSize: 0x0020
 struct FLowEntryRegexCaptureGroup
 { 
-    int32_t                                            CaptureGroupNumber;                                         // 0x0000   (0x0004)
-    int32_t                                            BeginIndex;                                                 // 0x0004   (0x0004)
-    int32_t                                            EndIndex;                                                   // 0x0008   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x000C   (0x0004) MISSED
-    FString                                            Match;                                                      // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CaptureGroupNumber;                                         // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            BeginIndex;                                                 // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            EndIndex;                                                   // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Match;                                                      // 0x0010   (0x0010)
 };
 
 /// Struct /Script/LowEntryExtendedStandardLibrary.LowEntryRegexMatch
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FLowEntryRegexMatch
 { 
-    int32_t                                            MatchNumber;                                                // 0x0000   (0x0004)
-    int32_t                                            BeginIndex;                                                 // 0x0004   (0x0004)
-    int32_t                                            EndIndex;                                                   // 0x0008   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x000C   (0x0004) MISSED
-    FString                                            Match;                                                      // 0x0010   (0x0010)
-    TArray<FLowEntryRegexCaptureGroup>                 CaptureGroups;                                              // 0x0020   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MatchNumber;                                                // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            BeginIndex;                                                 // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            EndIndex;                                                   // 0x0008   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x000C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Match;                                                      // 0x0010   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FLowEntryRegexCaptureGroup>                 CaptureGroups;                                              // 0x0020   (0x0010)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(ULowEntryBitDataEntry) == 0x00D0); // 208 bytes (0x000028 - 0x0000D0)
 static_assert(sizeof(ULowEntryBitDataReader) == 0x0048); // 72 bytes (0x000028 - 0x000048)
 static_assert(sizeof(ULowEntryBitDataWriter) == 0x0040); // 64 bytes (0x000028 - 0x000040)
@@ -2214,3 +2310,4 @@ static_assert(offsetof(ULowEntryParsedHashcash, Date) == 0x0040);
 static_assert(offsetof(FLowEntryRegexCaptureGroup, Match) == 0x0010);
 static_assert(offsetof(FLowEntryRegexMatch, Match) == 0x0010);
 static_assert(offsetof(FLowEntryRegexMatch, CaptureGroups) == 0x0020);
+#endif

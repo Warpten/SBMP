@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -16,8 +25,10 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MagicLeapHandTracking.EMagicLeapGestureTransformSpace
-/// Size: 0x01 (1 bytes)
+class ULiveLinkMagicLeapHandTrackingSourceFactory;
+class UMagicLeapHandTrackingFunctionLibrary;
+
+/// Enum /Script/MagicLeapHandTracking.EMagicLeapGestureTransformSpace -  1 (1 bytes)
 enum class EMagicLeapGestureTransformSpace : uint8_t
 {
     World                                                                            = 0,
@@ -25,8 +36,7 @@ enum class EMagicLeapGestureTransformSpace : uint8_t
     Tracking                                                                         = 2
 };
 
-/// Enum /Script/MagicLeapHandTracking.EMagicLeapHandTrackingGestureFilterLevel
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapHandTracking.EMagicLeapHandTrackingGestureFilterLevel -  1 (1 bytes)
 enum class EMagicLeapHandTrackingGestureFilterLevel : uint8_t
 {
     NoFilter                                                                         = 0,
@@ -34,8 +44,7 @@ enum class EMagicLeapHandTrackingGestureFilterLevel : uint8_t
     MoreRobustnessToFlicker                                                          = 2
 };
 
-/// Enum /Script/MagicLeapHandTracking.EMagicLeapHandTrackingKeypointFilterLevel
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapHandTracking.EMagicLeapHandTrackingKeypointFilterLevel -  1 (1 bytes)
 enum class EMagicLeapHandTrackingKeypointFilterLevel : uint8_t
 {
     NoFilter                                                                         = 0,
@@ -43,8 +52,7 @@ enum class EMagicLeapHandTrackingKeypointFilterLevel : uint8_t
     PredictiveSmoothing                                                              = 2
 };
 
-/// Enum /Script/MagicLeapHandTracking.EMagicLeapHandTrackingGesture
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapHandTracking.EMagicLeapHandTrackingGesture -  1 (1 bytes)
 enum class EMagicLeapHandTrackingGesture : uint8_t
 {
     Finger                                                                           = 0,
@@ -60,8 +68,7 @@ enum class EMagicLeapHandTrackingGesture : uint8_t
     NoHand                                                                           = 9
 };
 
-/// Enum /Script/MagicLeapHandTracking.EMagicLeapHandTrackingKeypoint
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapHandTracking.EMagicLeapHandTrackingKeypoint -  1 (1 bytes)
 enum class EMagicLeapHandTrackingKeypoint : uint8_t
 {
     Thumb_Tip                                                                        = 0,
@@ -91,14 +98,14 @@ enum class EMagicLeapHandTrackingKeypoint : uint8_t
 };
 
 /// Class /Script/MagicLeapHandTracking.LiveLinkMagicLeapHandTrackingSourceFactory
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class ULiveLinkMagicLeapHandTrackingSourceFactory : public ULiveLinkSourceFactory
 { 
 public:
 };
 
 /// Class /Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMagicLeapHandTrackingFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -179,5 +186,7 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(ULiveLinkMagicLeapHandTrackingSourceFactory) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UMagicLeapHandTrackingFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
+#endif

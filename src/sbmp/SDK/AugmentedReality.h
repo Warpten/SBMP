@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,8 +24,79 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/AugmentedReality.EARTrackingState
-/// Size: 0x01 (1 bytes)
+class AARActor;
+class AAROriginActor;
+class AARSharedWorldGameMode;
+class AARSharedWorldGameState;
+class AARSharedWorldPlayerController;
+class AARSkyLight;
+class UARBaseAsyncTaskBlueprintProxy;
+class UARBasicLightEstimate;
+class UARBlueprintLibrary;
+class UARCandidateImage;
+class UARCandidateObject;
+class UARComponent;
+class UARDependencyHandler;
+class UAREnvironmentCaptureProbe;
+class UAREnvironmentCaptureProbeTexture;
+class UAREnvironmentProbeComponent;
+class UARFaceComponent;
+class UARFaceGeometry;
+class UARGeoAnchor;
+class UARGeoAnchorComponent;
+class UARGeoTrackingSupport;
+class UARGetCandidateObjectAsyncTaskBlueprintProxy;
+class UARImageComponent;
+class UARLifeCycleComponent;
+class UARLightEstimate;
+class UARMeshComponent;
+class UARMeshGeometry;
+class UARObjectComponent;
+class UARPin;
+class UARPlaneComponent;
+class UARPlaneGeometry;
+class UARPointComponent;
+class UARPoseComponent;
+class UARQRCodeComponent;
+class UARSaveWorldAsyncTaskBlueprintProxy;
+class UARSessionConfig;
+class UARTexture;
+class UARTextureCameraDepth;
+class UARTextureCameraImage;
+class UARTraceResultDummy;
+class UARTraceResultLibrary;
+class UARTrackableNotifyComponent;
+class UARTrackedGeometry;
+class UARTrackedImage;
+class UARTrackedObject;
+class UARTrackedPoint;
+class UARTrackedPose;
+class UARTrackedQRCode;
+class UARTypesDummyClass;
+class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy;
+class UGetGeoLocationAsyncTaskBlueprintProxy;
+struct FARCameraIntrinsics;
+struct FAREnvironmentProbeUpdatePayload;
+struct FARFaceUpdatePayload;
+struct FARGeoAnchorUpdatePayload;
+struct FARImageUpdatePayload;
+struct FARMeshUpdatePayload;
+struct FARObjectUpdatePayload;
+struct FARPlaneUpdatePayload;
+struct FARPointUpdatePayload;
+struct FARPose2D;
+struct FARPose3D;
+struct FARPoseUpdatePayload;
+struct FARQRCodeUpdatePayload;
+struct FARSessionPayload;
+struct FARSessionStatus;
+struct FARSharedWorldReplicationState;
+struct FARSkeletonDefinition;
+struct FARTraceResult;
+struct FARVideoFormat;
+struct FTrackedGeometryGroup;
+
+/// Enum /Script/AugmentedReality.EARTrackingState -  1 (1 bytes)
 enum class EARTrackingState : uint8_t
 {
     Unknown                                                                          = 0,
@@ -25,40 +105,35 @@ enum class EARTrackingState : uint8_t
     StoppedTracking                                                                  = 3
 };
 
-/// Enum /Script/AugmentedReality.EGeoAnchorComponentDebugMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EGeoAnchorComponentDebugMode -  1 (1 bytes)
 enum class EGeoAnchorComponentDebugMode : uint8_t
 {
     None                                                                             = 0,
     ShowGeoData                                                                      = 1
 };
 
-/// Enum /Script/AugmentedReality.EPoseComponentDebugMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EPoseComponentDebugMode -  1 (1 bytes)
 enum class EPoseComponentDebugMode : uint8_t
 {
     None                                                                             = 0,
     ShowSkeleton                                                                     = 1
 };
 
-/// Enum /Script/AugmentedReality.EQRCodeComponentDebugMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EQRCodeComponentDebugMode -  1 (1 bytes)
 enum class EQRCodeComponentDebugMode : uint8_t
 {
     None                                                                             = 0,
     ShowQRCode                                                                       = 1
 };
 
-/// Enum /Script/AugmentedReality.EImageComponentDebugMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EImageComponentDebugMode -  1 (1 bytes)
 enum class EImageComponentDebugMode : uint8_t
 {
     None                                                                             = 0,
     ShowDetectedImage                                                                = 1
 };
 
-/// Enum /Script/AugmentedReality.EARFaceTransformMixing
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARFaceTransformMixing -  1 (1 bytes)
 enum class EARFaceTransformMixing : uint8_t
 {
     ComponentOnly                                                                    = 0,
@@ -67,8 +142,7 @@ enum class EARFaceTransformMixing : uint8_t
     TrackingOnly                                                                     = 3
 };
 
-/// Enum /Script/AugmentedReality.EFaceComponentDebugMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EFaceComponentDebugMode -  1 (1 bytes)
 enum class EFaceComponentDebugMode : uint8_t
 {
     None                                                                             = 0,
@@ -76,8 +150,7 @@ enum class EFaceComponentDebugMode : uint8_t
     ShowFaceMesh                                                                     = 2
 };
 
-/// Enum /Script/AugmentedReality.EPlaneComponentDebugMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EPlaneComponentDebugMode -  1 (1 bytes)
 enum class EPlaneComponentDebugMode : uint8_t
 {
     None                                                                             = 0,
@@ -85,8 +158,7 @@ enum class EPlaneComponentDebugMode : uint8_t
     ShowClassification                                                               = 2
 };
 
-/// Enum /Script/AugmentedReality.EARSessionConfigFlags
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARSessionConfigFlags -  1 (1 bytes)
 enum class EARSessionConfigFlags : uint8_t
 {
     None                                                                             = 0,
@@ -97,16 +169,14 @@ enum class EARSessionConfigFlags : uint8_t
     UseMeshDataForOcclusion                                                          = 16
 };
 
-/// Enum /Script/AugmentedReality.EARServicePermissionRequestResult
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARServicePermissionRequestResult -  1 (1 bytes)
 enum class EARServicePermissionRequestResult : uint8_t
 {
     Granted                                                                          = 0,
     Denied                                                                           = 1
 };
 
-/// Enum /Script/AugmentedReality.EARServiceInstallRequestResult
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARServiceInstallRequestResult -  1 (1 bytes)
 enum class EARServiceInstallRequestResult : uint8_t
 {
     Installed                                                                        = 0,
@@ -115,8 +185,7 @@ enum class EARServiceInstallRequestResult : uint8_t
     FatalError                                                                       = 3
 };
 
-/// Enum /Script/AugmentedReality.EARServiceAvailability
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARServiceAvailability -  1 (1 bytes)
 enum class EARServiceAvailability : uint8_t
 {
     UnknownError                                                                     = 0,
@@ -128,8 +197,7 @@ enum class EARServiceAvailability : uint8_t
     SupportedInstalled                                                               = 6
 };
 
-/// Enum /Script/AugmentedReality.EARGeoTrackingAccuracy
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARGeoTrackingAccuracy -  1 (1 bytes)
 enum class EARGeoTrackingAccuracy : uint8_t
 {
     Undetermined                                                                     = 0,
@@ -138,8 +206,7 @@ enum class EARGeoTrackingAccuracy : uint8_t
     High                                                                             = 3
 };
 
-/// Enum /Script/AugmentedReality.EARGeoTrackingStateReason
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARGeoTrackingStateReason -  1 (1 bytes)
 enum class EARGeoTrackingStateReason : uint8_t
 {
     None                                                                             = 0,
@@ -153,8 +220,7 @@ enum class EARGeoTrackingStateReason : uint8_t
     WaitingForAvailabilityCheck                                                      = 8
 };
 
-/// Enum /Script/AugmentedReality.EARGeoTrackingState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARGeoTrackingState -  1 (1 bytes)
 enum class EARGeoTrackingState : uint8_t
 {
     Initializing                                                                     = 0,
@@ -163,8 +229,7 @@ enum class EARGeoTrackingState : uint8_t
     NotAvailable                                                                     = 3
 };
 
-/// Enum /Script/AugmentedReality.EARSceneReconstruction
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARSceneReconstruction -  1 (1 bytes)
 enum class EARSceneReconstruction : uint8_t
 {
     None                                                                             = 0,
@@ -172,8 +237,7 @@ enum class EARSceneReconstruction : uint8_t
     MeshWithClassification                                                           = 2
 };
 
-/// Enum /Script/AugmentedReality.EARSessionTrackingFeature
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARSessionTrackingFeature -  1 (1 bytes)
 enum class EARSessionTrackingFeature : uint8_t
 {
     None                                                                             = 0,
@@ -184,16 +248,14 @@ enum class EARSessionTrackingFeature : uint8_t
     SmoothedSceneDepth                                                               = 5
 };
 
-/// Enum /Script/AugmentedReality.EARFaceTrackingUpdate
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARFaceTrackingUpdate -  1 (1 bytes)
 enum class EARFaceTrackingUpdate : uint8_t
 {
     CurvesAndGeo                                                                     = 0,
     CurvesOnly                                                                       = 1
 };
 
-/// Enum /Script/AugmentedReality.EAREnvironmentCaptureProbeType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EAREnvironmentCaptureProbeType -  1 (1 bytes)
 enum class EAREnvironmentCaptureProbeType : uint8_t
 {
     None                                                                             = 0,
@@ -201,16 +263,14 @@ enum class EAREnvironmentCaptureProbeType : uint8_t
     Automatic                                                                        = 2
 };
 
-/// Enum /Script/AugmentedReality.EARFrameSyncMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARFrameSyncMode -  1 (1 bytes)
 enum class EARFrameSyncMode : uint8_t
 {
     SyncTickWithCameraImage                                                          = 0,
     SyncTickWithoutCameraImage                                                       = 1
 };
 
-/// Enum /Script/AugmentedReality.EARLightEstimationMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARLightEstimationMode -  1 (1 bytes)
 enum class EARLightEstimationMode : uint8_t
 {
     None                                                                             = 0,
@@ -218,8 +278,7 @@ enum class EARLightEstimationMode : uint8_t
     DirectionalLightEstimate                                                         = 2
 };
 
-/// Enum /Script/AugmentedReality.EARPlaneDetectionMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARPlaneDetectionMode -  1 (1 bytes)
 enum class EARPlaneDetectionMode : uint8_t
 {
     None                                                                             = 0,
@@ -227,8 +286,7 @@ enum class EARPlaneDetectionMode : uint8_t
     VerticalPlaneDetection                                                           = 2
 };
 
-/// Enum /Script/AugmentedReality.EARSessionType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARSessionType -  1 (1 bytes)
 enum class EARSessionType : uint8_t
 {
     None                                                                             = 0,
@@ -241,8 +299,7 @@ enum class EARSessionType : uint8_t
     GeoTracking                                                                      = 7
 };
 
-/// Enum /Script/AugmentedReality.EARWorldAlignment
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARWorldAlignment -  1 (1 bytes)
 enum class EARWorldAlignment : uint8_t
 {
     Gravity                                                                          = 0,
@@ -250,8 +307,7 @@ enum class EARWorldAlignment : uint8_t
     Camera                                                                           = 2
 };
 
-/// Enum /Script/AugmentedReality.EARDepthAccuracy
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARDepthAccuracy -  1 (1 bytes)
 enum class EARDepthAccuracy : uint8_t
 {
     Unkown                                                                           = 0,
@@ -259,8 +315,7 @@ enum class EARDepthAccuracy : uint8_t
     Accurate                                                                         = 2
 };
 
-/// Enum /Script/AugmentedReality.EARDepthQuality
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARDepthQuality -  1 (1 bytes)
 enum class EARDepthQuality : uint8_t
 {
     Unkown                                                                           = 0,
@@ -268,8 +323,7 @@ enum class EARDepthQuality : uint8_t
     High                                                                             = 2
 };
 
-/// Enum /Script/AugmentedReality.EARTextureType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARTextureType -  1 (1 bytes)
 enum class EARTextureType : uint8_t
 {
     Unknown                                                                          = 0,
@@ -282,16 +336,14 @@ enum class EARTextureType : uint8_t
     SceneDepthConfidenceMap                                                          = 7
 };
 
-/// Enum /Script/AugmentedReality.EAREye
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EAREye -  1 (1 bytes)
 enum class EAREye : uint8_t
 {
     LeftEye                                                                          = 0,
     RightEye                                                                         = 1
 };
 
-/// Enum /Script/AugmentedReality.EARFaceBlendShape
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARFaceBlendShape -  1 (1 bytes)
 enum class EARFaceBlendShape : uint8_t
 {
     EyeBlinkLeft                                                                     = 0,
@@ -357,24 +409,21 @@ enum class EARFaceBlendShape : uint8_t
     RightEyeRoll                                                                     = 60
 };
 
-/// Enum /Script/AugmentedReality.EARFaceTrackingDirection
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARFaceTrackingDirection -  1 (1 bytes)
 enum class EARFaceTrackingDirection : uint8_t
 {
     FaceRelative                                                                     = 0,
     FaceMirrored                                                                     = 1
 };
 
-/// Enum /Script/AugmentedReality.EARCandidateImageOrientation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARCandidateImageOrientation -  1 (1 bytes)
 enum class EARCandidateImageOrientation : uint8_t
 {
     Landscape                                                                        = 0,
     Portrait                                                                         = 1
 };
 
-/// Enum /Script/AugmentedReality.EARAltitudeSource
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARAltitudeSource -  1 (1 bytes)
 enum class EARAltitudeSource : uint8_t
 {
     Precise                                                                          = 0,
@@ -383,16 +432,14 @@ enum class EARAltitudeSource : uint8_t
     Unknown                                                                          = 3
 };
 
-/// Enum /Script/AugmentedReality.EARJointTransformSpace
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARJointTransformSpace -  1 (1 bytes)
 enum class EARJointTransformSpace : uint8_t
 {
     Model                                                                            = 0,
     ParentJoint                                                                      = 1
 };
 
-/// Enum /Script/AugmentedReality.EARObjectClassification
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARObjectClassification -  1 (1 bytes)
 enum class EARObjectClassification : uint8_t
 {
     NotApplicable                                                                    = 0,
@@ -411,8 +458,7 @@ enum class EARObjectClassification : uint8_t
     Window                                                                           = 13
 };
 
-/// Enum /Script/AugmentedReality.EARPlaneOrientation
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARPlaneOrientation -  1 (1 bytes)
 enum class EARPlaneOrientation : uint8_t
 {
     Horizontal                                                                       = 0,
@@ -420,8 +466,7 @@ enum class EARPlaneOrientation : uint8_t
     Diagonal                                                                         = 2
 };
 
-/// Enum /Script/AugmentedReality.EARWorldMappingState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARWorldMappingState -  1 (1 bytes)
 enum class EARWorldMappingState : uint8_t
 {
     NotAvailable                                                                     = 0,
@@ -430,8 +475,7 @@ enum class EARWorldMappingState : uint8_t
     Mapped                                                                           = 3
 };
 
-/// Enum /Script/AugmentedReality.EARSessionStatus
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARSessionStatus -  1 (1 bytes)
 enum class EARSessionStatus : uint8_t
 {
     NotStarted                                                                       = 0,
@@ -443,8 +487,7 @@ enum class EARSessionStatus : uint8_t
     Other                                                                            = 6
 };
 
-/// Enum /Script/AugmentedReality.EARTrackingQualityReason
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARTrackingQualityReason -  1 (1 bytes)
 enum class EARTrackingQualityReason : uint8_t
 {
     None                                                                             = 0,
@@ -456,8 +499,7 @@ enum class EARTrackingQualityReason : uint8_t
     BadState                                                                         = 6
 };
 
-/// Enum /Script/AugmentedReality.EARTrackingQuality
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARTrackingQuality -  1 (1 bytes)
 enum class EARTrackingQuality : uint8_t
 {
     NotTracking                                                                      = 0,
@@ -465,8 +507,7 @@ enum class EARTrackingQuality : uint8_t
     OrientationAndPosition                                                           = 2
 };
 
-/// Enum /Script/AugmentedReality.EARLineTraceChannels
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARLineTraceChannels -  1 (1 bytes)
 enum class EARLineTraceChannels : uint8_t
 {
     None                                                                             = 0,
@@ -476,8 +517,7 @@ enum class EARLineTraceChannels : uint8_t
     PlaneUsingBoundaryPolygon                                                        = 8
 };
 
-/// Enum /Script/AugmentedReality.EARCaptureType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/AugmentedReality.EARCaptureType -  1 (1 bytes)
 enum class EARCaptureType : uint8_t
 {
     Camera                                                                           = 0,
@@ -487,78 +527,128 @@ enum class EARCaptureType : uint8_t
 };
 
 /// Class /Script/AugmentedReality.AROriginActor
-/// Size: 0x02C8 (712 bytes) (0x0002C8 - 0x0002C8) align 8 MaxSize: 0x02C8
+/// Size: 0x02C8 (712 bytes) (0x0002C8 - 0x0002C8) align n/a MaxSize: 0x02C8
 class AAROriginActor : public AActor
 { 
 public:
 };
 
 /// Struct /Script/AugmentedReality.ARVideoFormat
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FARVideoFormat
 { 
-    int32_t                                            FPS;                                                        // 0x0000   (0x0004)
-    int32_t                                            Width;                                                      // 0x0004   (0x0004)
-    int32_t                                            Height;                                                     // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            FPS;                                                        // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Width;                                                      // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Height;                                                     // 0x0008   (0x0004)
 };
 
 /// Class /Script/AugmentedReality.ARSessionConfig
-/// Size: 0x0110 (272 bytes) (0x000030 - 0x000110) align 8 MaxSize: 0x0110
+/// Size: 0x0110 (272 bytes) (0x000030 - 0x000110) align n/a MaxSize: 0x0110
 class UARSessionConfig : public UDataAsset
 { 
 public:
-    bool                                               bGenerateMeshDataFromTrackedGeometry;                       // 0x0030   (0x0001)
-    bool                                               bGenerateCollisionForMeshData;                              // 0x0031   (0x0001)
-    bool                                               bGenerateNavMeshForMeshData;                                // 0x0032   (0x0001)
-    bool                                               bUseMeshDataForOcclusion;                                   // 0x0033   (0x0001)
-    bool                                               bRenderMeshDataInWireframe;                                 // 0x0034   (0x0001)
-    bool                                               bTrackSceneObjects;                                         // 0x0035   (0x0001)
-    bool                                               bUsePersonSegmentationForOcclusion;                         // 0x0036   (0x0001)
-    bool                                               bUseSceneDepthForOcclusion;                                 // 0x0037   (0x0001)
-    bool                                               bUseAutomaticImageScaleEstimation;                          // 0x0038   (0x0001)
-    bool                                               bUseStandardOnboardingUX;                                   // 0x0039   (0x0001)
-    EARWorldAlignment                                  WorldAlignment;                                             // 0x003A   (0x0001)
-    EARSessionType                                     SessionType;                                                // 0x003B   (0x0001)
-    EARPlaneDetectionMode                              PlaneDetectionMode;                                         // 0x003C   (0x0001)
-    bool                                               bHorizontalPlaneDetection;                                  // 0x003D   (0x0001)
-    bool                                               bVerticalPlaneDetection;                                    // 0x003E   (0x0001)
-    bool                                               bEnableAutoFocus;                                           // 0x003F   (0x0001)
-    EARLightEstimationMode                             LightEstimationMode;                                        // 0x0040   (0x0001)
-    EARFrameSyncMode                                   FrameSyncMode;                                              // 0x0041   (0x0001)
-    bool                                               bEnableAutomaticCameraOverlay;                              // 0x0042   (0x0001)
-    bool                                               bEnableAutomaticCameraTracking;                             // 0x0043   (0x0001)
-    bool                                               bResetCameraTracking;                                       // 0x0044   (0x0001)
-    bool                                               bResetTrackedObjects;                                       // 0x0045   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0046   (0x0002) MISSED
-    TArray<class UARCandidateImage*>                   CandidateImages;                                            // 0x0048   (0x0010)
-    int32_t                                            MaxNumSimultaneousImagesTracked;                            // 0x0058   (0x0004)
-    EAREnvironmentCaptureProbeType                     EnvironmentCaptureProbeType;                                // 0x005C   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x005D   (0x0003) MISSED
-    TArray<char>                                       WorldMapData;                                               // 0x0060   (0x0010)
-    TArray<class UARCandidateObject*>                  CandidateObjects;                                           // 0x0070   (0x0010)
-    FARVideoFormat                                     DesiredVideoFormat;                                         // 0x0080   (0x000C)
-    bool                                               bUseOptimalVideoFormat;                                     // 0x008C   (0x0001)
-    EARFaceTrackingDirection                           FaceTrackingDirection;                                      // 0x008D   (0x0001)
-    EARFaceTrackingUpdate                              FaceTrackingUpdate;                                         // 0x008E   (0x0001)
-    unsigned char                                      UnknownData02_6[0x1];                                       // 0x008F   (0x0001) MISSED
-    int32_t                                            MaxNumberOfTrackedFaces;                                    // 0x0090   (0x0004)
-    unsigned char                                      UnknownData03_6[0x4];                                       // 0x0094   (0x0004) MISSED
-    TArray<char>                                       SerializedARCandidateImageDatabase;                         // 0x0098   (0x0010)
-    EARSessionTrackingFeature                          EnabledSessionTrackingFeature;                              // 0x00A8   (0x0001)
-    EARSceneReconstruction                             SceneReconstructionMethod;                                  // 0x00A9   (0x0001)
-    unsigned char                                      UnknownData04_6[0x6];                                       // 0x00AA   (0x0006) MISSED
-    class UClass*                                      PlaneComponentClass;                                        // 0x00B0   (0x0008)
-    class UClass*                                      PointComponentClass;                                        // 0x00B8   (0x0008)
-    class UClass*                                      FaceComponentClass;                                         // 0x00C0   (0x0008)
-    class UClass*                                      ImageComponentClass;                                        // 0x00C8   (0x0008)
-    class UClass*                                      QRCodeComponentClass;                                       // 0x00D0   (0x0008)
-    class UClass*                                      PoseComponentClass;                                         // 0x00D8   (0x0008)
-    class UClass*                                      EnvironmentProbeComponentClass;                             // 0x00E0   (0x0008)
-    class UClass*                                      ObjectComponentClass;                                       // 0x00E8   (0x0008)
-    class UClass*                                      MeshComponentClass;                                         // 0x00F0   (0x0008)
-    class UClass*                                      GeoAnchorComponentClass;                                    // 0x00F8   (0x0008)
-    class UMaterialInterface*                          DefaultMeshMaterial;                                        // 0x0100   (0x0008)
-    class UMaterialInterface*                          DefaultWireframeMeshMaterial;                               // 0x0108   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bGenerateMeshDataFromTrackedGeometry;                       // 0x0030   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bGenerateCollisionForMeshData;                              // 0x0031   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bGenerateNavMeshForMeshData;                                // 0x0032   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseMeshDataForOcclusion;                                   // 0x0033   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bRenderMeshDataInWireframe;                                 // 0x0034   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bTrackSceneObjects;                                         // 0x0035   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUsePersonSegmentationForOcclusion;                         // 0x0036   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseSceneDepthForOcclusion;                                 // 0x0037   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseAutomaticImageScaleEstimation;                          // 0x0038   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseStandardOnboardingUX;                                   // 0x0039   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARWorldAlignment                                  WorldAlignment;                                             // 0x003A   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARSessionType                                     SessionType;                                                // 0x003B   (0x0001)
+    UPROPERTY(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARPlaneDetectionMode                              PlaneDetectionMode;                                         // 0x003C   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bHorizontalPlaneDetection;                                  // 0x003D   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bVerticalPlaneDetection;                                    // 0x003E   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bEnableAutoFocus;                                           // 0x003F   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARLightEstimationMode                             LightEstimationMode;                                        // 0x0040   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARFrameSyncMode                                   FrameSyncMode;                                              // 0x0041   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bEnableAutomaticCameraOverlay;                              // 0x0042   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bEnableAutomaticCameraTracking;                             // 0x0043   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bResetCameraTracking;                                       // 0x0044   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bResetTrackedObjects;                                       // 0x0045   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x2];                                       // 0x0046   (0x0002) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UARCandidateImage*>                   CandidateImages;                                            // 0x0048   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MaxNumSimultaneousImagesTracked;                            // 0x0058   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EAREnvironmentCaptureProbeType                     EnvironmentCaptureProbeType;                                // 0x005C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x3];                                       // 0x005D   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<char>                                       WorldMapData;                                               // 0x0060   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<class UARCandidateObject*>                  CandidateObjects;                                           // 0x0070   (0x0010)
+    UPROPERTY(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARVideoFormat                                     DesiredVideoFormat;                                         // 0x0080   (0x000C)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bUseOptimalVideoFormat;                                     // 0x008C   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARFaceTrackingDirection                           FaceTrackingDirection;                                      // 0x008D   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARFaceTrackingUpdate                              FaceTrackingUpdate;                                         // 0x008E   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x1];                                       // 0x008F   (0x0001) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ int32_t                                            MaxNumberOfTrackedFaces;                                    // 0x0090   (0x0004)
+    /* public    */ unsigned char                                      UnknownData08_6[0x4];                                       // 0x0094   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ TArray<char>                                       SerializedARCandidateImageDatabase;                         // 0x0098   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARSessionTrackingFeature                          EnabledSessionTrackingFeature;                              // 0x00A8   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARSceneReconstruction                             SceneReconstructionMethod;                                  // 0x00A9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData09_6[0x6];                                       // 0x00AA   (0x0006) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      PlaneComponentClass;                                        // 0x00B0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      PointComponentClass;                                        // 0x00B8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      FaceComponentClass;                                         // 0x00C0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      ImageComponentClass;                                        // 0x00C8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      QRCodeComponentClass;                                       // 0x00D0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      PoseComponentClass;                                         // 0x00D8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      EnvironmentProbeComponentClass;                             // 0x00E0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      ObjectComponentClass;                                       // 0x00E8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      MeshComponentClass;                                         // 0x00F0   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UClass*                                      GeoAnchorComponentClass;                                    // 0x00F8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          DefaultMeshMaterial;                                        // 0x0100   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          DefaultWireframeMeshMaterial;                               // 0x0108   (0x0008)
 
     /// Functions
     // Function /Script/AugmentedReality.ARSessionConfig.ShouldResetTrackedObjects
@@ -640,20 +730,23 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARLightEstimate
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UARLightEstimate : public UObject
 { 
 public:
 };
 
 /// Class /Script/AugmentedReality.ARBasicLightEstimate
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class UARBasicLightEstimate : public UARLightEstimate
 { 
 public:
-    float                                              AmbientIntensityLumens;                                     // 0x0028   (0x0004)
-    float                                              AmbientColorTemperatureKelvin;                              // 0x002C   (0x0004)
-    FLinearColor                                       AmbientColor;                                               // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ float                                              AmbientIntensityLumens;                                     // 0x0028   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ float                                              AmbientColorTemperatureKelvin;                              // 0x002C   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FLinearColor                                       AmbientColor;                                               // 0x0030   (0x0010)
 
     /// Functions
     // Function /Script/AugmentedReality.ARBasicLightEstimate.GetAmbientIntensityLumens
@@ -665,16 +758,21 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARCandidateImage
-/// Size: 0x0058 (88 bytes) (0x000030 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000030 - 0x000058) align n/a MaxSize: 0x0058
 class UARCandidateImage : public UDataAsset
 { 
 public:
-    class UTexture2D*                                  CandidateTexture;                                           // 0x0030   (0x0008)
-    FString                                            FriendlyName;                                               // 0x0038   (0x0010)
-    float                                              Width;                                                      // 0x0048   (0x0004)
-    float                                              Height;                                                     // 0x004C   (0x0004)
-    EARCandidateImageOrientation                       Orientation;                                                // 0x0050   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0051   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UTexture2D*                                  CandidateTexture;                                           // 0x0030   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            FriendlyName;                                               // 0x0038   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              Width;                                                      // 0x0048   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ float                                              Height;                                                     // 0x004C   (0x0004)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARCandidateImageOrientation                       Orientation;                                                // 0x0050   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0051   (0x0007) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARCandidateImage.GetPhysicalWidth
@@ -690,7 +788,7 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARActor
-/// Size: 0x02C8 (712 bytes) (0x0002C8 - 0x0002C8) align 8 MaxSize: 0x02C8
+/// Size: 0x02C8 (712 bytes) (0x0002C8 - 0x0002C8) align n/a MaxSize: 0x02C8
 class AARActor : public AActor
 { 
 public:
@@ -703,7 +801,7 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARBlueprintLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UARBlueprintLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -909,7 +1007,7 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARTraceResultLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UARTraceResultLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -936,21 +1034,23 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARBaseAsyncTaskBlueprintProxy
-/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000030 - 0x000050) align n/a MaxSize: 0x0050
 class UARBaseAsyncTaskBlueprintProxy : public UBlueprintAsyncActionBase
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x20];                                      // 0x0030   (0x0020) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x20];                                      // 0x0030   (0x0020) MISSED
 };
 
 /// Class /Script/AugmentedReality.ARSaveWorldAsyncTaskBlueprintProxy
-/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000050 - 0x000080) align n/a MaxSize: 0x0080
 class UARSaveWorldAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0050   (0x0010)
-    FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0070   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0050   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0070   (0x0010) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARSaveWorldAsyncTaskBlueprintProxy.ARSaveWorld
@@ -959,13 +1059,15 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy
-/// Size: 0x0098 (152 bytes) (0x000050 - 0x000098) align 8 MaxSize: 0x0098
+/// Size: 0x0098 (152 bytes) (0x000050 - 0x000098) align n/a MaxSize: 0x0098
 class UARGetCandidateObjectAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0050   (0x0010)
-    FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)
-    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0070   (0x0028) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0050   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x28];                                      // 0x0070   (0x0028) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy.ARGetCandidateObject
@@ -976,19 +1078,25 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARComponent
-/// Size: 0x02E0 (736 bytes) (0x000260 - 0x0002E0) align 16 MaxSize: 0x02E0
+/// Size: 0x02E0 (736 bytes) (0x000260 - 0x0002E0) align n/a MaxSize: 0x02E0
 class UARComponent : public USceneComponent
 { 
 public:
-    FGuid                                              NativeID;                                                   // 0x0260   (0x0010)
-    unsigned char                                      UnknownData00_6[0x30];                                      // 0x0270   (0x0030) MISSED
-    bool                                               bUseDefaultReplication;                                     // 0x02A0   (0x0001)
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x02A1   (0x0007) MISSED
-    class UMaterialInterface*                          DefaultMeshMaterial;                                        // 0x02A8   (0x0008)
-    class UMaterialInterface*                          DefaultWireframeMeshMaterial;                               // 0x02B0   (0x0008)
-    class UMRMeshComponent*                            MRMeshComponent;                                            // 0x02B8   (0x0008)
-    class UARTrackedGeometry*                          MyTrackedGeometry;                                          // 0x02C0   (0x0008)
-    unsigned char                                      UnknownData02_7[0x18];                                      // 0x02C8   (0x0018) MISSED
+    UPROPERTY(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              NativeID;                                                   // 0x0260   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_6[0x30];                                      // 0x0270   (0x0030) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bUseDefaultReplication;                                     // 0x02A0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x7];                                       // 0x02A1   (0x0007) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          DefaultMeshMaterial;                                        // 0x02A8   (0x0008)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMaterialInterface*                          DefaultWireframeMeshMaterial;                               // 0x02B0   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMRMeshComponent*                            MRMeshComponent;                                            // 0x02B8   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UARTrackedGeometry*                          MyTrackedGeometry;                                          // 0x02C0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData05_7[0x18];                                      // 0x02C8   (0x0018) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARComponent.UpdateVisualization
@@ -1005,35 +1113,45 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARSessionPayload
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FARSessionPayload
 { 
-    int32_t                                            ConfigFlags;                                                // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    class UMaterialInterface*                          DefaultMeshMaterial;                                        // 0x0008   (0x0008)
-    class UMaterialInterface*                          DefaultWireframeMeshMaterial;                               // 0x0010   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ConfigFlags;                                                // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          DefaultMeshMaterial;                                        // 0x0008   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMaterialInterface*                          DefaultWireframeMeshMaterial;                               // 0x0010   (0x0008)
 };
 
 /// Struct /Script/AugmentedReality.ARPlaneUpdatePayload
-/// Size: 0x0080 (128 bytes) (0x000000 - 0x000080) align 16 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000000 - 0x000080) align n/a MaxSize: 0x0080
 struct FARPlaneUpdatePayload
 { 
-    FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0018   (0x0008) MISSED
-    FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
-    FVector                                            Center;                                                     // 0x0050   (0x000C)
-    FVector                                            Extents;                                                    // 0x005C   (0x000C)
-    TArray<FVector>                                    BoundaryVertices;                                           // 0x0068   (0x0010)
-    EARObjectClassification                            ObjectClassification;                                       // 0x0078   (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0079   (0x0007) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
+    /* public    */ unsigned char                                      UnknownData02_6[0x8];                                       // 0x0018   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Center;                                                     // 0x0050   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Extents;                                                    // 0x005C   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector>                                    BoundaryVertices;                                           // 0x0068   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARObjectClassification                            ObjectClassification;                                       // 0x0078   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x0079   (0x0007) MISSED
 };
 
 /// Class /Script/AugmentedReality.ARPlaneComponent
-/// Size: 0x0360 (864 bytes) (0x0002E0 - 0x000360) align 16 MaxSize: 0x0360
+/// Size: 0x0360 (864 bytes) (0x0002E0 - 0x000360) align n/a MaxSize: 0x0360
 class UARPlaneComponent : public UARComponent
 { 
 public:
-    FARPlaneUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0080)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARPlaneUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0080)
 
     /// Functions
     // Function /Script/AugmentedReality.ARPlaneComponent.SetPlaneComponentDebugMode
@@ -1056,19 +1174,20 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARPointUpdatePayload
-/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align 1 MaxSize: 0x0001
+/// Size: 0x0001 (1 bytes) (0x000000 - 0x000001) align n/a MaxSize: 0x0001
 struct FARPointUpdatePayload
 { 
-    unsigned char                                      UnknownData00_2[0x1];                                       // 0x0000   (0x0001) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x1];                                       // 0x0000   (0x0001) MISSED
 };
 
 /// Class /Script/AugmentedReality.ARPointComponent
-/// Size: 0x02F0 (752 bytes) (0x0002E0 - 0x0002F0) align 16 MaxSize: 0x02F0
+/// Size: 0x02F0 (752 bytes) (0x0002E0 - 0x0002F0) align n/a MaxSize: 0x02F0
 class UARPointComponent : public UARComponent
 { 
 public:
-    FARPointUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0001)
-    unsigned char                                      UnknownData00_7[0xF];                                       // 0x02E1   (0x000F) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARPointUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0xF];                                       // 0x02E1   (0x000F) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARPointComponent.ServerUpdatePayload
@@ -1083,27 +1202,35 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARFaceUpdatePayload
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FARFaceUpdatePayload
 { 
-    FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
-    FVector                                            LeftEyePosition;                                            // 0x0018   (0x000C)
-    FVector                                            RightEyePosition;                                           // 0x0024   (0x000C)
-    FVector                                            LookAtTarget;                                               // 0x0030   (0x000C)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x003C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LeftEyePosition;                                            // 0x0018   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            RightEyePosition;                                           // 0x0024   (0x000C)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LookAtTarget;                                               // 0x0030   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x003C   (0x0004) MISSED
 };
 
 /// Class /Script/AugmentedReality.ARFaceComponent
-/// Size: 0x0350 (848 bytes) (0x0002E0 - 0x000350) align 16 MaxSize: 0x0350
+/// Size: 0x0350 (848 bytes) (0x0002E0 - 0x000350) align n/a MaxSize: 0x0350
 class UARFaceComponent : public UARComponent
 { 
 public:
-    EARFaceTransformMixing                             TransformSetting;                                           // 0x02E0   (0x0001)
-    bool                                               bUpdateVertexNormal;                                        // 0x02E1   (0x0001)
-    bool                                               bFaceOutOfScreen;                                           // 0x02E2   (0x0001)
-    unsigned char                                      UnknownData00_6[0x5];                                       // 0x02E3   (0x0005) MISSED
-    FARFaceUpdatePayload                               ReplicatedPayload;                                          // 0x02E8   (0x0040)
-    unsigned char                                      UnknownData01_7[0x28];                                      // 0x0328   (0x0028) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARFaceTransformMixing                             TransformSetting;                                           // 0x02E0   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bUpdateVertexNormal;                                        // 0x02E1   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ bool                                               bFaceOutOfScreen;                                           // 0x02E2   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x5];                                       // 0x02E3   (0x0005) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARFaceUpdatePayload                               ReplicatedPayload;                                          // 0x02E8   (0x0040)
+    /* public    */ unsigned char                                      UnknownData03_7[0x28];                                      // 0x0328   (0x0028) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARFaceComponent.SetFaceComponentDebugMode
@@ -1121,22 +1248,27 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARImageUpdatePayload
-/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align 16 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FARImageUpdatePayload
 { 
-    FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0018   (0x0008) MISSED
-    FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
-    class UARCandidateImage*                           DetectedImage;                                              // 0x0050   (0x0008)
-    FVector2D                                          EstimatedSize;                                              // 0x0058   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
+    /* public    */ unsigned char                                      UnknownData01_6[0x8];                                       // 0x0018   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UARCandidateImage*                           DetectedImage;                                              // 0x0050   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          EstimatedSize;                                              // 0x0058   (0x0008)
 };
 
 /// Class /Script/AugmentedReality.ARImageComponent
-/// Size: 0x0340 (832 bytes) (0x0002E0 - 0x000340) align 16 MaxSize: 0x0340
+/// Size: 0x0340 (832 bytes) (0x0002E0 - 0x000340) align n/a MaxSize: 0x0340
 class UARImageComponent : public UARComponent
 { 
 public:
-    FARImageUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0060)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARImageUpdatePayload                              ReplicatedPayload;                                          // 0x02E0   (0x0060)
 
     /// Functions
     // Function /Script/AugmentedReality.ARImageComponent.SetImageComponentDebugMode
@@ -1154,23 +1286,28 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARQRCodeUpdatePayload
-/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align 16 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align n/a MaxSize: 0x0070
 struct FARQRCodeUpdatePayload
 { 
-    FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0018   (0x0008) MISSED
-    FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
-    FVector                                            Extents;                                                    // 0x0050   (0x000C)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x005C   (0x0004) MISSED
-    FString                                            QRCode;                                                     // 0x0060   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
+    /* public    */ unsigned char                                      UnknownData02_6[0x8];                                       // 0x0018   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            Extents;                                                    // 0x0050   (0x000C)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x005C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            QRCode;                                                     // 0x0060   (0x0010)
 };
 
 /// Class /Script/AugmentedReality.ARQRCodeComponent
-/// Size: 0x0350 (848 bytes) (0x0002E0 - 0x000350) align 16 MaxSize: 0x0350
+/// Size: 0x0350 (848 bytes) (0x0002E0 - 0x000350) align n/a MaxSize: 0x0350
 class UARQRCodeComponent : public UARComponent
 { 
 public:
-    FARQRCodeUpdatePayload                             ReplicatedPayload;                                          // 0x02E0   (0x0070)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARQRCodeUpdatePayload                             ReplicatedPayload;                                          // 0x02E0   (0x0070)
 
     /// Functions
     // Function /Script/AugmentedReality.ARQRCodeComponent.SetQRCodeComponentDebugMode
@@ -1188,19 +1325,22 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARPoseUpdatePayload
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 16 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FARPoseUpdatePayload
 { 
-    FTransform                                         WorldTransform;                                             // 0x0000   (0x0030)
-    TArray<FTransform>                                 JointTransforms;                                            // 0x0030   (0x0010)
+    UPROPERTY(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         WorldTransform;                                             // 0x0000   (0x0030)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FTransform>                                 JointTransforms;                                            // 0x0030   (0x0010)
 };
 
 /// Class /Script/AugmentedReality.ARPoseComponent
-/// Size: 0x0320 (800 bytes) (0x0002E0 - 0x000320) align 16 MaxSize: 0x0320
+/// Size: 0x0320 (800 bytes) (0x0002E0 - 0x000320) align n/a MaxSize: 0x0320
 class UARPoseComponent : public UARComponent
 { 
 public:
-    FARPoseUpdatePayload                               ReplicatedPayload;                                          // 0x02E0   (0x0040)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARPoseUpdatePayload                               ReplicatedPayload;                                          // 0x02E0   (0x0040)
 
     /// Functions
     // Function /Script/AugmentedReality.ARPoseComponent.SetPoseComponentDebugMode
@@ -1218,18 +1358,20 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.AREnvironmentProbeUpdatePayload
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 16 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FAREnvironmentProbeUpdatePayload
 { 
-    FTransform                                         WorldTransform;                                             // 0x0000   (0x0030)
+    UPROPERTY(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         WorldTransform;                                             // 0x0000   (0x0030)
 };
 
 /// Class /Script/AugmentedReality.AREnvironmentProbeComponent
-/// Size: 0x0310 (784 bytes) (0x0002E0 - 0x000310) align 16 MaxSize: 0x0310
+/// Size: 0x0310 (784 bytes) (0x0002E0 - 0x000310) align n/a MaxSize: 0x0310
 class UAREnvironmentProbeComponent : public UARComponent
 { 
 public:
-    FAREnvironmentProbeUpdatePayload                   ReplicatedPayload;                                          // 0x02E0   (0x0030)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FAREnvironmentProbeUpdatePayload                   ReplicatedPayload;                                          // 0x02E0   (0x0030)
 
     /// Functions
     // Function /Script/AugmentedReality.AREnvironmentProbeComponent.ServerUpdatePayload
@@ -1244,18 +1386,20 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARObjectUpdatePayload
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 16 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FARObjectUpdatePayload
 { 
-    FTransform                                         WorldTransform;                                             // 0x0000   (0x0030)
+    UPROPERTY(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         WorldTransform;                                             // 0x0000   (0x0030)
 };
 
 /// Class /Script/AugmentedReality.ARObjectComponent
-/// Size: 0x0310 (784 bytes) (0x0002E0 - 0x000310) align 16 MaxSize: 0x0310
+/// Size: 0x0310 (784 bytes) (0x0002E0 - 0x000310) align n/a MaxSize: 0x0310
 class UARObjectComponent : public UARComponent
 { 
 public:
-    FARObjectUpdatePayload                             ReplicatedPayload;                                          // 0x02E0   (0x0030)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARObjectUpdatePayload                             ReplicatedPayload;                                          // 0x02E0   (0x0030)
 
     /// Functions
     // Function /Script/AugmentedReality.ARObjectComponent.ServerUpdatePayload
@@ -1270,22 +1414,26 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARMeshUpdatePayload
-/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align 16 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FARMeshUpdatePayload
 { 
-    FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0018   (0x0008) MISSED
-    FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
-    EARObjectClassification                            ObjectClassification;                                       // 0x0050   (0x0001)
-    unsigned char                                      UnknownData01_7[0xF];                                       // 0x0051   (0x000F) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
+    /* public    */ unsigned char                                      UnknownData02_6[0x8];                                       // 0x0018   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARObjectClassification                            ObjectClassification;                                       // 0x0050   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0xF];                                       // 0x0051   (0x000F) MISSED
 };
 
 /// Class /Script/AugmentedReality.ARMeshComponent
-/// Size: 0x0340 (832 bytes) (0x0002E0 - 0x000340) align 16 MaxSize: 0x0340
+/// Size: 0x0340 (832 bytes) (0x0002E0 - 0x000340) align n/a MaxSize: 0x0340
 class UARMeshComponent : public UARComponent
 { 
 public:
-    FARMeshUpdatePayload                               ReplicatedPayload;                                          // 0x02E0   (0x0060)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARMeshUpdatePayload                               ReplicatedPayload;                                          // 0x02E0   (0x0060)
 
     /// Functions
     // Function /Script/AugmentedReality.ARMeshComponent.ServerUpdatePayload
@@ -1300,26 +1448,34 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARGeoAnchorUpdatePayload
-/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align 16 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align n/a MaxSize: 0x0070
 struct FARGeoAnchorUpdatePayload
 { 
-    FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0018   (0x0008) MISSED
-    FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
-    float                                              Longitude;                                                  // 0x0050   (0x0004)
-    float                                              Latitude;                                                   // 0x0054   (0x0004)
-    float                                              AltitudeMeters;                                             // 0x0058   (0x0004)
-    EARAltitudeSource                                  AltitudeSource;                                             // 0x005C   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x005D   (0x0003) MISSED
-    FString                                            AnchorName;                                                 // 0x0060   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FARSessionPayload                                  SessionPayload;                                             // 0x0000   (0x0018)
+    /* public    */ unsigned char                                      UnknownData02_6[0x8];                                       // 0x0018   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         WorldTransform;                                             // 0x0020   (0x0030)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Longitude;                                                  // 0x0050   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Latitude;                                                   // 0x0054   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              AltitudeMeters;                                             // 0x0058   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARAltitudeSource                                  AltitudeSource;                                             // 0x005C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x005D   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            AnchorName;                                                 // 0x0060   (0x0010)
 };
 
 /// Class /Script/AugmentedReality.ARGeoAnchorComponent
-/// Size: 0x0350 (848 bytes) (0x0002E0 - 0x000350) align 16 MaxSize: 0x0350
+/// Size: 0x0350 (848 bytes) (0x0002E0 - 0x000350) align n/a MaxSize: 0x0350
 class UARGeoAnchorComponent : public UARComponent
 { 
 public:
-    FARGeoAnchorUpdatePayload                          ReplicatedPayload;                                          // 0x02E0   (0x0070)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FARGeoAnchorUpdatePayload                          ReplicatedPayload;                                          // 0x02E0   (0x0070)
 
     /// Functions
     // Function /Script/AugmentedReality.ARGeoAnchorComponent.SetGeoAnchorComponentDebugMode
@@ -1337,7 +1493,7 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARDependencyHandler
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UARDependencyHandler : public UObject
 { 
 public:
@@ -1369,7 +1525,7 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARGeoTrackingSupport
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UARGeoTrackingSupport : public UObject
 { 
 public:
@@ -1397,13 +1553,15 @@ public:
 };
 
 /// Class /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy
-/// Size: 0x00A0 (160 bytes) (0x000050 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000050 - 0x0000A0) align n/a MaxSize: 0x00A0
 class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0050   (0x0010)
-    FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)
-    unsigned char                                      UnknownData00_7[0x30];                                      // 0x0070   (0x0030) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0050   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x30];                                      // 0x0070   (0x0030) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.GeoTrackingAvailabilityDelegate__DelegateSignature
@@ -1421,13 +1579,15 @@ public:
 };
 
 /// Class /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy
-/// Size: 0x00A0 (160 bytes) (0x000050 - 0x0000A0) align 8 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000050 - 0x0000A0) align n/a MaxSize: 0x00A0
 class UGetGeoLocationAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy
 { 
 public:
-    FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0050   (0x0010)
-    FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)
-    unsigned char                                      UnknownData00_7[0x30];                                      // 0x0070   (0x0030) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnSuccess;                                                  // 0x0050   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnFailed;                                                   // 0x0060   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x30];                                      // 0x0070   (0x0030) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy.GetGeoLocationDelegate__DelegateSignature
@@ -1443,13 +1603,15 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARLifeCycleComponent
-/// Size: 0x0290 (656 bytes) (0x000260 - 0x000290) align 16 MaxSize: 0x0290
+/// Size: 0x0290 (656 bytes) (0x000260 - 0x000290) align n/a MaxSize: 0x0290
 class UARLifeCycleComponent : public USceneComponent
 { 
 public:
-    FMulticastInlineDelegate                           OnARActorSpawnedDelegate;                                   // 0x0260   (0x0010)
-    FMulticastInlineDelegate                           OnARActorToBeDestroyedDelegate;                             // 0x0270   (0x0010)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0280   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnARActorSpawnedDelegate;                                   // 0x0260   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnARActorToBeDestroyedDelegate;                             // 0x0270   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0280   (0x0010) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARLifeCycleComponent.ServerSpawnARActor
@@ -1470,20 +1632,27 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARPin
-/// Size: 0x00F0 (240 bytes) (0x000028 - 0x0000F0) align 16 MaxSize: 0x00F0
+/// Size: 0x00F0 (240 bytes) (0x000028 - 0x0000F0) align n/a MaxSize: 0x00F0
 class UARPin : public UObject
 { 
 public:
-    class UARTrackedGeometry*                          TrackedGeometry;                                            // 0x0028   (0x0008)
-    class USceneComponent*                             PinnedComponent;                                            // 0x0030   (0x0008)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0038   (0x0008) MISSED
-    FTransform                                         LocalToTrackingTransform;                                   // 0x0040   (0x0030)
-    FTransform                                         LocalToAlignedTrackingTransform;                            // 0x0070   (0x0030)
-    EARTrackingState                                   TrackingState;                                              // 0x00A0   (0x0001)
-    unsigned char                                      UnknownData01_6[0x1F];                                      // 0x00A1   (0x001F) MISSED
-    FMulticastInlineDelegate                           OnARTrackingStateChanged;                                   // 0x00C0   (0x0010)
-    FMulticastInlineDelegate                           OnARTransformUpdated;                                       // 0x00D0   (0x0010)
-    unsigned char                                      UnknownData02_7[0x10];                                      // 0x00E0   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UARTrackedGeometry*                          TrackedGeometry;                                            // 0x0028   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             PinnedComponent;                                            // 0x0030   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_6[0x8];                                       // 0x0038   (0x0008) MISSED
+    UPROPERTY(IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+    /* private   */ FTransform                                         LocalToTrackingTransform;                                   // 0x0040   (0x0030)
+    UPROPERTY(IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+    /* private   */ FTransform                                         LocalToAlignedTrackingTransform;                            // 0x0070   (0x0030)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ EARTrackingState                                   TrackingState;                                              // 0x00A0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x1F];                                      // 0x00A1   (0x001F) MISSED
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+    /* private   */ FMulticastInlineDelegate                           OnARTrackingStateChanged;                                   // 0x00C0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+    /* private   */ FMulticastInlineDelegate                           OnARTransformUpdated;                                       // 0x00D0   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x10];                                      // 0x00E0   (0x0010) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARPin.GetTrackingState
@@ -1507,12 +1676,13 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARSharedWorldGameMode
-/// Size: 0x0418 (1048 bytes) (0x0003B0 - 0x000418) align 8 MaxSize: 0x0418
+/// Size: 0x0418 (1048 bytes) (0x0003B0 - 0x000418) align n/a MaxSize: 0x0418
 class AARSharedWorldGameMode : public AGameMode
 { 
 public:
-    int32_t                                            BufferSizePerChunk;                                         // 0x03B0   (0x0004)
-    unsigned char                                      UnknownData00_7[0x64];                                      // 0x03B4   (0x0064) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            BufferSizePerChunk;                                         // 0x03B0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x64];                                      // 0x03B4   (0x0064) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARSharedWorldGameMode.SetPreviewImageData
@@ -1528,17 +1698,23 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARSharedWorldGameState
-/// Size: 0x0370 (880 bytes) (0x000338 - 0x000370) align 8 MaxSize: 0x0370
+/// Size: 0x0370 (880 bytes) (0x000338 - 0x000370) align n/a MaxSize: 0x0370
 class AARSharedWorldGameState : public AGameState
 { 
 public:
-    TArray<char>                                       PreviewImageData;                                           // 0x0338   (0x0010)
-    TArray<char>                                       ARWorldData;                                                // 0x0348   (0x0010)
-    int32_t                                            PreviewImageBytesTotal;                                     // 0x0358   (0x0004)
-    int32_t                                            ARWorldBytesTotal;                                          // 0x035C   (0x0004)
-    int32_t                                            PreviewImageBytesDelivered;                                 // 0x0360   (0x0004)
-    int32_t                                            ARWorldBytesDelivered;                                      // 0x0364   (0x0004)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0368   (0x0008) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       PreviewImageData;                                           // 0x0338   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<char>                                       ARWorldData;                                                // 0x0348   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PreviewImageBytesTotal;                                     // 0x0358   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ARWorldBytesTotal;                                          // 0x035C   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PreviewImageBytesDelivered;                                 // 0x0360   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ARWorldBytesDelivered;                                      // 0x0364   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0368   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARSharedWorldGameState.K2_OnARWorldMapIsReady
@@ -1546,11 +1722,11 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARSharedWorldPlayerController
-/// Size: 0x0670 (1648 bytes) (0x000668 - 0x000670) align 8 MaxSize: 0x0670
+/// Size: 0x0670 (1648 bytes) (0x000668 - 0x000670) align n/a MaxSize: 0x0670
 class AARSharedWorldPlayerController : public APlayerController
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x0668   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x0668   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARSharedWorldPlayerController.ServerMarkReadyForReceiving
@@ -1570,12 +1746,13 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARSkyLight
-/// Size: 0x02E8 (744 bytes) (0x0002D8 - 0x0002E8) align 8 MaxSize: 0x02E8
+/// Size: 0x02E8 (744 bytes) (0x0002D8 - 0x0002E8) align n/a MaxSize: 0x02E8
 class AARSkyLight : public ASkyLight
 { 
 public:
-    class UAREnvironmentCaptureProbe*                  CaptureProbe;                                               // 0x02D8   (0x0008)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x02E0   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UAREnvironmentCaptureProbe*                  CaptureProbe;                                               // 0x02D8   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x02E0   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARSkyLight.SetEnvironmentCaptureProbe
@@ -1584,72 +1761,91 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARTexture
-/// Size: 0x0100 (256 bytes) (0x0000E0 - 0x000100) align 8 MaxSize: 0x0100
+/// Size: 0x0100 (256 bytes) (0x0000E0 - 0x000100) align n/a MaxSize: 0x0100
 class UARTexture : public UTexture
 { 
 public:
-    EARTextureType                                     TextureType;                                                // 0x00E0   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x00E1   (0x0003) MISSED
-    float                                              Timestamp;                                                  // 0x00E4   (0x0004)
-    FGuid                                              ExternalTextureGuid;                                        // 0x00E8   (0x0010)
-    FVector2D                                          Size;                                                       // 0x00F8   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARTextureType                                     TextureType;                                                // 0x00E0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x00E1   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Timestamp;                                                  // 0x00E4   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ExternalTextureGuid;                                        // 0x00E8   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          Size;                                                       // 0x00F8   (0x0008)
 };
 
 /// Class /Script/AugmentedReality.ARTextureCameraImage
-/// Size: 0x0100 (256 bytes) (0x000100 - 0x000100) align 8 MaxSize: 0x0100
+/// Size: 0x0100 (256 bytes) (0x000100 - 0x000100) align n/a MaxSize: 0x0100
 class UARTextureCameraImage : public UARTexture
 { 
 public:
 };
 
 /// Class /Script/AugmentedReality.ARTextureCameraDepth
-/// Size: 0x0108 (264 bytes) (0x000100 - 0x000108) align 8 MaxSize: 0x0108
+/// Size: 0x0108 (264 bytes) (0x000100 - 0x000108) align n/a MaxSize: 0x0108
 class UARTextureCameraDepth : public UARTexture
 { 
 public:
-    EARDepthQuality                                    DepthQuality;                                               // 0x0100   (0x0001)
-    EARDepthAccuracy                                   DepthAccuracy;                                              // 0x0101   (0x0001)
-    bool                                               bIsTemporallySmoothed;                                      // 0x0102   (0x0001)
-    unsigned char                                      UnknownData00_7[0x5];                                       // 0x0103   (0x0005) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARDepthQuality                                    DepthQuality;                                               // 0x0100   (0x0001)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARDepthAccuracy                                   DepthAccuracy;                                              // 0x0101   (0x0001)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsTemporallySmoothed;                                      // 0x0102   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x5];                                       // 0x0103   (0x0005) MISSED
 };
 
 /// Class /Script/AugmentedReality.AREnvironmentCaptureProbeTexture
-/// Size: 0x0158 (344 bytes) (0x000138 - 0x000158) align 8 MaxSize: 0x0158
+/// Size: 0x0158 (344 bytes) (0x000138 - 0x000158) align n/a MaxSize: 0x0158
 class UAREnvironmentCaptureProbeTexture : public UTextureCube
 { 
 public:
-    EARTextureType                                     TextureType;                                                // 0x0138   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0139   (0x0003) MISSED
-    float                                              Timestamp;                                                  // 0x013C   (0x0004)
-    FGuid                                              ExternalTextureGuid;                                        // 0x0140   (0x0010)
-    FVector2D                                          Size;                                                       // 0x0150   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARTextureType                                     TextureType;                                                // 0x0138   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x3];                                       // 0x0139   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Timestamp;                                                  // 0x013C   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ExternalTextureGuid;                                        // 0x0140   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          Size;                                                       // 0x0150   (0x0008)
 };
 
 /// Class /Script/AugmentedReality.ARTraceResultDummy
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UARTraceResultDummy : public UObject
 { 
 public:
 };
 
 /// Class /Script/AugmentedReality.ARTrackedGeometry
-/// Size: 0x0100 (256 bytes) (0x000028 - 0x000100) align 16 MaxSize: 0x00F8
+/// Size: 0x0100 (256 bytes) (0x000028 - 0x000100) align n/a MaxSize: 0x00F8
 class UARTrackedGeometry : public UObject
 { 
 public:
-    FGuid                                              UniqueId;                                                   // 0x0028   (0x0010)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0038   (0x0008) MISSED
-    FTransform                                         LocalToTrackingTransform;                                   // 0x0040   (0x0030)
-    FTransform                                         LocalToAlignedTrackingTransform;                            // 0x0070   (0x0030)
-    EARTrackingState                                   TrackingState;                                              // 0x00A0   (0x0001)
-    unsigned char                                      UnknownData01_6[0xF];                                       // 0x00A1   (0x000F) MISSED
-    class UMRMeshComponent*                            UnderlyingMesh;                                             // 0x00B0   (0x0008)
-    EARObjectClassification                            ObjectClassification;                                       // 0x00B8   (0x0001)
-    unsigned char                                      UnknownData02_6[0x17];                                      // 0x00B9   (0x0017) MISSED
-    int32_t                                            LastUpdateFrameNumber;                                      // 0x00D0   (0x0004)
-    unsigned char                                      UnknownData03_6[0xC];                                       // 0x00D4   (0x000C) MISSED
-    FName                                              DebugName;                                                  // 0x00E0   (0x0008)
-    unsigned char                                      UnknownData04_7[0x10];                                      // 0x00E8   (0x0010) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              UniqueId;                                                   // 0x0028   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_6[0x8];                                       // 0x0038   (0x0008) MISSED
+    UPROPERTY(IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FTransform                                         LocalToTrackingTransform;                                   // 0x0040   (0x0030)
+    UPROPERTY(IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+    /* protected */ FTransform                                         LocalToAlignedTrackingTransform;                            // 0x0070   (0x0030)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARTrackingState                                   TrackingState;                                              // 0x00A0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0xF];                                       // 0x00A1   (0x000F) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UMRMeshComponent*                            UnderlyingMesh;                                             // 0x00B0   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ EARObjectClassification                            ObjectClassification;                                       // 0x00B8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x17];                                      // 0x00B9   (0x0017) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ int32_t                                            LastUpdateFrameNumber;                                      // 0x00D0   (0x0004)
+    /* public    */ unsigned char                                      UnknownData08_6[0xC];                                       // 0x00D4   (0x000C) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FName                                              DebugName;                                                  // 0x00E0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData09_7[0x10];                                      // 0x00E8   (0x0010) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARTrackedGeometry.IsTracked
@@ -1675,17 +1871,22 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARPlaneGeometry
-/// Size: 0x0130 (304 bytes) (0x0000F8 - 0x000130) align 16 MaxSize: 0x0130
+/// Size: 0x0130 (304 bytes) (0x0000F8 - 0x000130) align n/a MaxSize: 0x0130
 class UARPlaneGeometry : public UARTrackedGeometry
 { 
 public:
-    EARPlaneOrientation                                Orientation;                                                // 0x00F8   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x00F9   (0x0003) MISSED
-    FVector                                            Center;                                                     // 0x00FC   (0x000C)
-    FVector                                            Extent;                                                     // 0x0108   (0x000C)
-    unsigned char                                      UnknownData01_6[0x4];                                       // 0x0114   (0x0004) MISSED
-    TArray<FVector>                                    BoundaryPolygon;                                            // 0x0118   (0x0010)
-    class UARPlaneGeometry*                            SubsumedBy;                                                 // 0x0128   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ EARPlaneOrientation                                Orientation;                                                // 0x00F8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x00F9   (0x0003) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FVector                                            Center;                                                     // 0x00FC   (0x000C)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FVector                                            Extent;                                                     // 0x0108   (0x000C)
+    /* public    */ unsigned char                                      UnknownData03_6[0x4];                                       // 0x0114   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FVector>                                    BoundaryPolygon;                                            // 0x0118   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UARPlaneGeometry*                            SubsumedBy;                                                 // 0x0128   (0x0008)
 
     /// Functions
     // Function /Script/AugmentedReality.ARPlaneGeometry.GetSubsumedBy
@@ -1701,20 +1902,22 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARTrackedPoint
-/// Size: 0x0100 (256 bytes) (0x0000F8 - 0x000100) align 16 MaxSize: 0x0100
+/// Size: 0x0100 (256 bytes) (0x0000F8 - 0x000100) align n/a MaxSize: 0x0100
 class UARTrackedPoint : public UARTrackedGeometry
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x00F8   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x00F8   (0x0008) MISSED
 };
 
 /// Class /Script/AugmentedReality.ARTrackedImage
-/// Size: 0x0110 (272 bytes) (0x0000F8 - 0x000110) align 16 MaxSize: 0x0108
+/// Size: 0x0110 (272 bytes) (0x0000F8 - 0x000110) align n/a MaxSize: 0x0108
 class UARTrackedImage : public UARTrackedGeometry
 { 
 public:
-    class UARCandidateImage*                           DetectedImage;                                              // 0x00F8   (0x0008)
-    FVector2D                                          EstimatedSize;                                              // 0x0100   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UARCandidateImage*                           DetectedImage;                                              // 0x00F8   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FVector2D                                          EstimatedSize;                                              // 0x0100   (0x0008)
 
     /// Functions
     // Function /Script/AugmentedReality.ARTrackedImage.GetEstimateSize
@@ -1724,27 +1927,34 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARTrackedQRCode
-/// Size: 0x0120 (288 bytes) (0x000108 - 0x000120) align 16 MaxSize: 0x0120
+/// Size: 0x0120 (288 bytes) (0x000108 - 0x000120) align n/a MaxSize: 0x0120
 class UARTrackedQRCode : public UARTrackedImage
 { 
 public:
-    FString                                            QRCode;                                                     // 0x0108   (0x0010)
-    int32_t                                            Version;                                                    // 0x0118   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x011C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            QRCode;                                                     // 0x0108   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            Version;                                                    // 0x0118   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x011C   (0x0004) MISSED
 };
 
 /// Class /Script/AugmentedReality.ARFaceGeometry
-/// Size: 0x01F0 (496 bytes) (0x0000F8 - 0x0001F0) align 16 MaxSize: 0x01F0
+/// Size: 0x01F0 (496 bytes) (0x0000F8 - 0x0001F0) align n/a MaxSize: 0x01F0
 class UARFaceGeometry : public UARTrackedGeometry
 { 
 public:
-    FVector                                            LookAtTarget;                                               // 0x00F8   (0x000C)
-    bool                                               bIsTracked;                                                 // 0x0104   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0105   (0x0003) MISSED
-    TMap<EARFaceBlendShape, float>                     BlendShapes;                                                // 0x0108   (0x0050)
-    unsigned char                                      UnknownData01_6[0x38];                                      // 0x0158   (0x0038) MISSED
-    FTransform                                         LeftEyeTransform;                                           // 0x0190   (0x0030)
-    FTransform                                         RightEyeTransform;                                          // 0x01C0   (0x0030)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            LookAtTarget;                                               // 0x00F8   (0x000C)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsTracked;                                                 // 0x0104   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0105   (0x0003) MISSED
+    UPROPERTY(NativeAccessSpecifierPrivate)
+    /* private   */ TMap<EARFaceBlendShape, float>                     BlendShapes;                                                // 0x0108   (0x0050)
+    /* public    */ unsigned char                                      UnknownData03_6[0x38];                                      // 0x0158   (0x0038) MISSED
+    UPROPERTY(IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+    /* private   */ FTransform                                         LeftEyeTransform;                                           // 0x0190   (0x0030)
+    UPROPERTY(IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+    /* private   */ FTransform                                         RightEyeTransform;                                          // 0x01C0   (0x0030)
 
     /// Functions
     // Function /Script/AugmentedReality.ARFaceGeometry.GetWorldSpaceEyeTransform
@@ -1761,13 +1971,15 @@ public:
 };
 
 /// Class /Script/AugmentedReality.AREnvironmentCaptureProbe
-/// Size: 0x0110 (272 bytes) (0x0000F8 - 0x000110) align 16 MaxSize: 0x0110
+/// Size: 0x0110 (272 bytes) (0x0000F8 - 0x000110) align n/a MaxSize: 0x0110
 class UAREnvironmentCaptureProbe : public UARTrackedGeometry
 { 
 public:
-    FVector                                            Extent;                                                     // 0x00F8   (0x000C)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0104   (0x0004) MISSED
-    class UAREnvironmentCaptureProbeTexture*           EnvironmentCaptureTexture;                                  // 0x0108   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FVector                                            Extent;                                                     // 0x00F8   (0x000C)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0104   (0x0004) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UAREnvironmentCaptureProbeTexture*           EnvironmentCaptureTexture;                                  // 0x0108   (0x0008)
 
     /// Functions
     // Function /Script/AugmentedReality.AREnvironmentCaptureProbe.GetExtent
@@ -1777,11 +1989,12 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARTrackedObject
-/// Size: 0x0100 (256 bytes) (0x0000F8 - 0x000100) align 16 MaxSize: 0x0100
+/// Size: 0x0100 (256 bytes) (0x0000F8 - 0x000100) align n/a MaxSize: 0x0100
 class UARTrackedObject : public UARTrackedGeometry
 { 
 public:
-    class UARCandidateObject*                          DetectedObject;                                             // 0x00F8   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UARCandidateObject*                          DetectedObject;                                             // 0x00F8   (0x0008)
 
     /// Functions
     // Function /Script/AugmentedReality.ARTrackedObject.GetDetectedObject
@@ -1789,33 +2002,41 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.ARSkeletonDefinition
-/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000000 - 0x000028) align n/a MaxSize: 0x0028
 struct FARSkeletonDefinition
 { 
-    int32_t                                            NumJoints;                                                  // 0x0000   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0004   (0x0004) MISSED
-    TArray<FName>                                      JointNames;                                                 // 0x0008   (0x0010)
-    TArray<int32_t>                                    ParentIndices;                                              // 0x0018   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            NumJoints;                                                  // 0x0000   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0004   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FName>                                      JointNames;                                                 // 0x0008   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<int32_t>                                    ParentIndices;                                              // 0x0018   (0x0010)
 };
 
 /// Struct /Script/AugmentedReality.ARPose3D
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FARPose3D
 { 
-    FARSkeletonDefinition                              SkeletonDefinition;                                         // 0x0000   (0x0028)
-    TArray<FTransform>                                 JointTransforms;                                            // 0x0028   (0x0010)
-    TArray<bool>                                       IsJointTracked;                                             // 0x0038   (0x0010)
-    EARJointTransformSpace                             JointTransformSpace;                                        // 0x0048   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0049   (0x0007) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FARSkeletonDefinition                              SkeletonDefinition;                                         // 0x0000   (0x0028)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FTransform>                                 JointTransforms;                                            // 0x0028   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<bool>                                       IsJointTracked;                                             // 0x0038   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARJointTransformSpace                             JointTransformSpace;                                        // 0x0048   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0049   (0x0007) MISSED
 };
 
 /// Class /Script/AugmentedReality.ARTrackedPose
-/// Size: 0x0150 (336 bytes) (0x0000F8 - 0x000150) align 16 MaxSize: 0x0150
+/// Size: 0x0150 (336 bytes) (0x0000F8 - 0x000150) align n/a MaxSize: 0x0150
 class UARTrackedPose : public UARTrackedGeometry
 { 
 public:
-    FARPose3D                                          TrackedPose;                                                // 0x00F8   (0x0050)
-    unsigned char                                      UnknownData00_7[0x8];                                       // 0x0148   (0x0008) MISSED
+    UPROPERTY(NativeAccessSpecifierPrivate)
+    /* private   */ FARPose3D                                          TrackedPose;                                                // 0x00F8   (0x0050)
+    /* public    */ unsigned char                                      UnknownData01_7[0x8];                                       // 0x0148   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARTrackedPose.GetTrackedPoseData
@@ -1823,11 +2044,11 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARMeshGeometry
-/// Size: 0x0100 (256 bytes) (0x0000F8 - 0x000100) align 16 MaxSize: 0x0100
+/// Size: 0x0100 (256 bytes) (0x0000F8 - 0x000100) align n/a MaxSize: 0x0100
 class UARMeshGeometry : public UARTrackedGeometry
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x8];                                       // 0x00F8   (0x0008) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x8];                                       // 0x00F8   (0x0008) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARMeshGeometry.GetObjectClassificationAtLocation
@@ -1839,11 +2060,11 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARGeoAnchor
-/// Size: 0x0110 (272 bytes) (0x0000F8 - 0x000110) align 16 MaxSize: 0x0110
+/// Size: 0x0110 (272 bytes) (0x0000F8 - 0x000110) align n/a MaxSize: 0x0110
 class UARGeoAnchor : public UARTrackedGeometry
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x18];                                      // 0x00F8   (0x0018) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x18];                                      // 0x00F8   (0x0018) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARGeoAnchor.GetLongitude
@@ -1857,49 +2078,73 @@ public:
 };
 
 /// Class /Script/AugmentedReality.ARTrackableNotifyComponent
-/// Size: 0x0210 (528 bytes) (0x0000C0 - 0x000210) align 8 MaxSize: 0x0210
+/// Size: 0x0210 (528 bytes) (0x0000C0 - 0x000210) align n/a MaxSize: 0x0210
 class UARTrackableNotifyComponent : public UActorComponent
 { 
 public:
-    FMulticastInlineDelegate                           OnAddTrackedGeometry;                                       // 0x00C0   (0x0010)
-    FMulticastInlineDelegate                           OnUpdateTrackedGeometry;                                    // 0x00D0   (0x0010)
-    FMulticastInlineDelegate                           OnRemoveTrackedGeometry;                                    // 0x00E0   (0x0010)
-    FMulticastInlineDelegate                           OnAddTrackedPlane;                                          // 0x00F0   (0x0010)
-    FMulticastInlineDelegate                           OnUpdateTrackedPlane;                                       // 0x0100   (0x0010)
-    FMulticastInlineDelegate                           OnRemoveTrackedPlane;                                       // 0x0110   (0x0010)
-    FMulticastInlineDelegate                           OnAddTrackedPoint;                                          // 0x0120   (0x0010)
-    FMulticastInlineDelegate                           OnUpdateTrackedPoint;                                       // 0x0130   (0x0010)
-    FMulticastInlineDelegate                           OnRemoveTrackedPoint;                                       // 0x0140   (0x0010)
-    FMulticastInlineDelegate                           OnAddTrackedImage;                                          // 0x0150   (0x0010)
-    FMulticastInlineDelegate                           OnUpdateTrackedImage;                                       // 0x0160   (0x0010)
-    FMulticastInlineDelegate                           OnRemoveTrackedImage;                                       // 0x0170   (0x0010)
-    FMulticastInlineDelegate                           OnAddTrackedFace;                                           // 0x0180   (0x0010)
-    FMulticastInlineDelegate                           OnUpdateTrackedFace;                                        // 0x0190   (0x0010)
-    FMulticastInlineDelegate                           OnRemoveTrackedFace;                                        // 0x01A0   (0x0010)
-    FMulticastInlineDelegate                           OnAddTrackedEnvProbe;                                       // 0x01B0   (0x0010)
-    FMulticastInlineDelegate                           OnUpdateTrackedEnvProbe;                                    // 0x01C0   (0x0010)
-    FMulticastInlineDelegate                           OnRemoveTrackedEnvProbe;                                    // 0x01D0   (0x0010)
-    FMulticastInlineDelegate                           OnAddTrackedObject;                                         // 0x01E0   (0x0010)
-    FMulticastInlineDelegate                           OnUpdateTrackedObject;                                      // 0x01F0   (0x0010)
-    FMulticastInlineDelegate                           OnRemoveTrackedObject;                                      // 0x0200   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnAddTrackedGeometry;                                       // 0x00C0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnUpdateTrackedGeometry;                                    // 0x00D0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnRemoveTrackedGeometry;                                    // 0x00E0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnAddTrackedPlane;                                          // 0x00F0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnUpdateTrackedPlane;                                       // 0x0100   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnRemoveTrackedPlane;                                       // 0x0110   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnAddTrackedPoint;                                          // 0x0120   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnUpdateTrackedPoint;                                       // 0x0130   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnRemoveTrackedPoint;                                       // 0x0140   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnAddTrackedImage;                                          // 0x0150   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnUpdateTrackedImage;                                       // 0x0160   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnRemoveTrackedImage;                                       // 0x0170   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnAddTrackedFace;                                           // 0x0180   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnUpdateTrackedFace;                                        // 0x0190   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnRemoveTrackedFace;                                        // 0x01A0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnAddTrackedEnvProbe;                                       // 0x01B0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnUpdateTrackedEnvProbe;                                    // 0x01C0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnRemoveTrackedEnvProbe;                                    // 0x01D0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnAddTrackedObject;                                         // 0x01E0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnUpdateTrackedObject;                                      // 0x01F0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnRemoveTrackedObject;                                      // 0x0200   (0x0010)
 };
 
 /// Class /Script/AugmentedReality.ARTypesDummyClass
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UARTypesDummyClass : public UObject
 { 
 public:
 };
 
 /// Class /Script/AugmentedReality.ARCandidateObject
-/// Size: 0x0070 (112 bytes) (0x000030 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000030 - 0x000070) align n/a MaxSize: 0x0070
 class UARCandidateObject : public UDataAsset
 { 
 public:
-    TArray<char>                                       CandidateObjectData;                                        // 0x0030   (0x0010)
-    FString                                            FriendlyName;                                               // 0x0040   (0x0010)
-    FBox                                               BoundingBox;                                                // 0x0050   (0x001C)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<char>                                       CandidateObjectData;                                        // 0x0030   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FString                                            FriendlyName;                                               // 0x0040   (0x0010)
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+    /* private   */ FBox                                               BoundingBox;                                                // 0x0050   (0x001C)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x006C   (0x0004) MISSED
 
     /// Functions
     // Function /Script/AugmentedReality.ARCandidateObject.SetFriendlyName
@@ -1920,64 +2165,82 @@ public:
 };
 
 /// Struct /Script/AugmentedReality.TrackedGeometryGroup
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FTrackedGeometryGroup
 { 
-    class AARActor*                                    ARActor;                                                    // 0x0000   (0x0008)
-    class UARComponent*                                ARComponent;                                                // 0x0008   (0x0008)
-    class UARTrackedGeometry*                          TrackedGeometry;                                            // 0x0010   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class AARActor*                                    ARActor;                                                    // 0x0000   (0x0008)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UARComponent*                                ARComponent;                                                // 0x0008   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UARTrackedGeometry*                          TrackedGeometry;                                            // 0x0010   (0x0008)
 };
 
 /// Struct /Script/AugmentedReality.ARSharedWorldReplicationState
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FARSharedWorldReplicationState
 { 
-    int32_t                                            PreviewImageOffset;                                         // 0x0000   (0x0004)
-    int32_t                                            ARWorldOffset;                                              // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PreviewImageOffset;                                         // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ARWorldOffset;                                              // 0x0004   (0x0004)
 };
 
 /// Struct /Script/AugmentedReality.ARTraceResult
-/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align 16 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000000 - 0x000060) align n/a MaxSize: 0x0060
 struct FARTraceResult
 { 
-    float                                              DistanceFromCamera;                                         // 0x0000   (0x0004)
-    EARLineTraceChannels                               TraceChannel;                                               // 0x0004   (0x0001)
-    unsigned char                                      UnknownData00_6[0xB];                                       // 0x0005   (0x000B) MISSED
-    FTransform                                         LocalTransform;                                             // 0x0010   (0x0030)
-    class UARTrackedGeometry*                          TrackedGeometry;                                            // 0x0040   (0x0008)
-    unsigned char                                      UnknownData01_7[0x18];                                      // 0x0048   (0x0018) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ float                                              DistanceFromCamera;                                         // 0x0000   (0x0004)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ EARLineTraceChannels                               TraceChannel;                                               // 0x0004   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0xB];                                       // 0x0005   (0x000B) MISSED
+    UPROPERTY(IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+    /* private   */ FTransform                                         LocalTransform;                                             // 0x0010   (0x0030)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UARTrackedGeometry*                          TrackedGeometry;                                            // 0x0040   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0x18];                                      // 0x0048   (0x0018) MISSED
 };
 
 /// Struct /Script/AugmentedReality.ARCameraIntrinsics
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 4 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FARCameraIntrinsics
 { 
-    FIntPoint                                          ImageResolution;                                            // 0x0000   (0x0008)
-    FVector2D                                          FocalLength;                                                // 0x0008   (0x0008)
-    FVector2D                                          PrincipalPoint;                                             // 0x0010   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FIntPoint                                          ImageResolution;                                            // 0x0000   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          FocalLength;                                                // 0x0008   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector2D                                          PrincipalPoint;                                             // 0x0010   (0x0008)
 };
 
 /// Struct /Script/AugmentedReality.ARPose2D
-/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align 8 MaxSize: 0x0048
+/// Size: 0x0048 (72 bytes) (0x000000 - 0x000048) align n/a MaxSize: 0x0048
 struct FARPose2D
 { 
-    FARSkeletonDefinition                              SkeletonDefinition;                                         // 0x0000   (0x0028)
-    TArray<FVector2D>                                  JointLocations;                                             // 0x0028   (0x0010)
-    TArray<bool>                                       IsJointTracked;                                             // 0x0038   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+    /* public    */ FARSkeletonDefinition                              SkeletonDefinition;                                         // 0x0000   (0x0028)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector2D>                                  JointLocations;                                             // 0x0028   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<bool>                                       IsJointTracked;                                             // 0x0038   (0x0010)
 };
 
 /// Struct /Script/AugmentedReality.ARSessionStatus
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FARSessionStatus
 { 
-    FString                                            AdditionalInfo;                                             // 0x0000   (0x0010)
-    EARSessionStatus                                   Status;                                                     // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0011   (0x0007) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            AdditionalInfo;                                             // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EARSessionStatus                                   Status;                                                     // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(AAROriginActor) == 0x02C8); // 712 bytes (0x0002C8 - 0x0002C8)
 static_assert(sizeof(FARVideoFormat) == 0x000C); // 12 bytes (0x000000 - 0x00000C)
 static_assert(sizeof(UARSessionConfig) == 0x0110); // 272 bytes (0x000030 - 0x000110)
@@ -2189,3 +2452,4 @@ static_assert(offsetof(FARPose2D, JointLocations) == 0x0028);
 static_assert(offsetof(FARPose2D, IsJointTracked) == 0x0038);
 static_assert(offsetof(FARSessionStatus, AdditionalInfo) == 0x0000);
 static_assert(offsetof(FARSessionStatus, Status) == 0x0010);
+#endif

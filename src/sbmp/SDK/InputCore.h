@@ -2,19 +2,30 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/InputCore.ETouchIndex
-/// Size: 0x01 (1 bytes)
+class UInputCoreTypes;
+struct FKey;
+
+/// Enum /Script/InputCore.ETouchIndex -  1 (1 bytes)
 enum class ETouchIndex : uint8_t
 {
     Touch1                                                                           = 0,
@@ -31,8 +42,7 @@ enum class ETouchIndex : uint8_t
     MAX_TOUCHES                                                                      = 11
 };
 
-/// Enum /Script/InputCore.EControllerHand
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/InputCore.EControllerHand -  1 (1 bytes)
 enum class EControllerHand : uint8_t
 {
     Left                                                                             = 0,
@@ -55,8 +65,7 @@ enum class EControllerHand : uint8_t
     ControllerHand_Count                                                             = 17
 };
 
-/// Enum /Script/InputCore.ETouchType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/InputCore.ETouchType -  1 (1 bytes)
 enum class ETouchType : uint8_t
 {
     Began                                                                            = 0,
@@ -68,8 +77,7 @@ enum class ETouchType : uint8_t
     NumTypes                                                                         = 6
 };
 
-/// Enum /Script/InputCore.EConsoleForGamepadLabels
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/InputCore.EConsoleForGamepadLabels -  1 (1 bytes)
 enum class EConsoleForGamepadLabels : uint8_t
 {
     None                                                                             = 0,
@@ -78,23 +86,26 @@ enum class EConsoleForGamepadLabels : uint8_t
 };
 
 /// Class /Script/InputCore.InputCoreTypes
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UInputCoreTypes : public UObject
 { 
 public:
 };
 
 /// Struct /Script/InputCore.Key
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FKey
 { 
-    FName                                              KeyName;                                                    // 0x0000   (0x0008)
-    unsigned char                                      UnknownData00_7[0x10];                                      // 0x0008   (0x0010) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FName                                              KeyName;                                                    // 0x0000   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x10];                                      // 0x0008   (0x0010) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UInputCoreTypes) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(FKey) == 0x0018); // 24 bytes (0x000000 - 0x000018)
 static_assert(offsetof(FKey, KeyName) == 0x0000);
+#endif

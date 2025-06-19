@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,16 +24,26 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/HeadMountedDisplay.EXRVisualType
-/// Size: 0x01 (1 bytes)
+class UAsyncTask_LoadXRDeviceVisComponent;
+class UHeadMountedDisplayFunctionLibrary;
+class UMotionControllerComponent;
+class UMotionTrackedDeviceFunctionLibrary;
+class UVRNotificationsComponent;
+class UXRAssetFunctionLibrary;
+class UXRLoadingScreenFunctionLibrary;
+struct FXRDeviceId;
+struct FXRGestureConfig;
+struct FXRHMDData;
+struct FXRMotionControllerData;
+
+/// Enum /Script/HeadMountedDisplay.EXRVisualType -  1 (1 bytes)
 enum class EXRVisualType : uint8_t
 {
     Controller                                                                       = 0,
     Hand                                                                             = 1
 };
 
-/// Enum /Script/HeadMountedDisplay.EHandKeypoint
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.EHandKeypoint -  1 (1 bytes)
 enum class EHandKeypoint : uint8_t
 {
     Palm                                                                             = 0,
@@ -55,8 +74,7 @@ enum class EHandKeypoint : uint8_t
     LittleTip                                                                        = 25
 };
 
-/// Enum /Script/HeadMountedDisplay.EXRTrackedDeviceType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.EXRTrackedDeviceType -  1 (1 bytes)
 enum class EXRTrackedDeviceType : uint8_t
 {
     HeadMountedDisplay                                                               = 0,
@@ -67,8 +85,7 @@ enum class EXRTrackedDeviceType : uint8_t
     Any                                                                              = 255
 };
 
-/// Enum /Script/HeadMountedDisplay.ESpectatorScreenMode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.ESpectatorScreenMode -  1 (1 bytes)
 enum class ESpectatorScreenMode : uint8_t
 {
     Disabled                                                                         = 0,
@@ -81,8 +98,7 @@ enum class ESpectatorScreenMode : uint8_t
     TexturePlusEye                                                                   = 7
 };
 
-/// Enum /Script/HeadMountedDisplay.EXRSystemFlags
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.EXRSystemFlags -  1 (1 bytes)
 enum class EXRSystemFlags : uint8_t
 {
     NoFlags                                                                          = 0,
@@ -92,8 +108,7 @@ enum class EXRSystemFlags : uint8_t
     SupportsHandTracking                                                             = 8
 };
 
-/// Enum /Script/HeadMountedDisplay.EXRDeviceConnectionResult
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.EXRDeviceConnectionResult -  1 (1 bytes)
 enum class EXRDeviceConnectionResult : uint8_t
 {
     NoTrackingSystem                                                                 = 0,
@@ -103,8 +118,7 @@ enum class EXRDeviceConnectionResult : uint8_t
     Success                                                                          = 4
 };
 
-/// Enum /Script/HeadMountedDisplay.EHMDWornState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.EHMDWornState -  1 (1 bytes)
 enum class EHMDWornState : uint8_t
 {
     Unknown                                                                          = 0,
@@ -112,8 +126,7 @@ enum class EHMDWornState : uint8_t
     NotWorn                                                                          = 2
 };
 
-/// Enum /Script/HeadMountedDisplay.EHMDTrackingOrigin
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.EHMDTrackingOrigin -  1 (1 bytes)
 enum class EHMDTrackingOrigin : uint8_t
 {
     Floor                                                                            = 0,
@@ -122,8 +135,7 @@ enum class EHMDTrackingOrigin : uint8_t
     Unbounded                                                                        = 3
 };
 
-/// Enum /Script/HeadMountedDisplay.EOrientPositionSelector
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.EOrientPositionSelector -  1 (1 bytes)
 enum class EOrientPositionSelector : uint8_t
 {
     Orientation                                                                      = 0,
@@ -131,8 +143,7 @@ enum class EOrientPositionSelector : uint8_t
     OrientationAndPosition                                                           = 2
 };
 
-/// Enum /Script/HeadMountedDisplay.ETrackingStatus
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.ETrackingStatus -  1 (1 bytes)
 enum class ETrackingStatus : uint8_t
 {
     NotTracked                                                                       = 0,
@@ -140,8 +151,7 @@ enum class ETrackingStatus : uint8_t
     Tracked                                                                          = 2
 };
 
-/// Enum /Script/HeadMountedDisplay.ESpatialInputGestureAxis
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/HeadMountedDisplay.ESpatialInputGestureAxis -  1 (1 bytes)
 enum class ESpatialInputGestureAxis : uint8_t
 {
     None                                                                             = 0,
@@ -151,23 +161,32 @@ enum class ESpatialInputGestureAxis : uint8_t
 };
 
 /// Class /Script/HeadMountedDisplay.VRNotificationsComponent
-/// Size: 0x0150 (336 bytes) (0x0000C0 - 0x000150) align 8 MaxSize: 0x0150
+/// Size: 0x0150 (336 bytes) (0x0000C0 - 0x000150) align n/a MaxSize: 0x0150
 class UVRNotificationsComponent : public UActorComponent
 { 
 public:
-    FMulticastInlineDelegate                           HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate;      // 0x00C0   (0x0010)
-    FMulticastInlineDelegate                           HMDTrackingInitializedDelegate;                             // 0x00D0   (0x0010)
-    FMulticastInlineDelegate                           HMDRecenteredDelegate;                                      // 0x00E0   (0x0010)
-    FMulticastInlineDelegate                           HMDLostDelegate;                                            // 0x00F0   (0x0010)
-    FMulticastInlineDelegate                           HMDReconnectedDelegate;                                     // 0x0100   (0x0010)
-    FMulticastInlineDelegate                           HMDConnectCanceledDelegate;                                 // 0x0110   (0x0010)
-    FMulticastInlineDelegate                           HMDPutOnHeadDelegate;                                       // 0x0120   (0x0010)
-    FMulticastInlineDelegate                           HMDRemovedFromHeadDelegate;                                 // 0x0130   (0x0010)
-    FMulticastInlineDelegate                           VRControllerRecenteredDelegate;                             // 0x0140   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate;      // 0x00C0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           HMDTrackingInitializedDelegate;                             // 0x00D0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           HMDRecenteredDelegate;                                      // 0x00E0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           HMDLostDelegate;                                            // 0x00F0   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           HMDReconnectedDelegate;                                     // 0x0100   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           HMDConnectCanceledDelegate;                                 // 0x0110   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           HMDPutOnHeadDelegate;                                       // 0x0120   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           HMDRemovedFromHeadDelegate;                                 // 0x0130   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           VRControllerRecenteredDelegate;                             // 0x0140   (0x0010)
 };
 
 /// Class /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UHeadMountedDisplayFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -343,25 +362,35 @@ public:
 };
 
 /// Class /Script/HeadMountedDisplay.MotionControllerComponent
-/// Size: 0x05F0 (1520 bytes) (0x000538 - 0x0005F0) align 16 MaxSize: 0x05F0
+/// Size: 0x05F0 (1520 bytes) (0x000538 - 0x0005F0) align n/a MaxSize: 0x05F0
 class UMotionControllerComponent : public UPrimitiveComponent
 { 
 public:
-    int32_t                                            PlayerIndex;                                                // 0x0538   (0x0004)
-    EControllerHand                                    Hand;                                                       // 0x053C   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x053D   (0x0003) MISSED
-    FName                                              MotionSource;                                               // 0x0540   (0x0008)
-    bool                                               bDisableLowLatencyUpdate : 1;                               // 0x0548:0 (0x0001)
-    unsigned char                                      UnknownData01_5[0x3];                                       // 0x0549   (0x0003) MISSED
-    ETrackingStatus                                    CurrentTrackingStatus;                                      // 0x054C   (0x0001)
-    bool                                               bDisplayDeviceModel;                                        // 0x054D   (0x0001)
-    unsigned char                                      UnknownData02_6[0x2];                                       // 0x054E   (0x0002) MISSED
-    FName                                              DisplayModelSource;                                         // 0x0550   (0x0008)
-    class UStaticMesh*                                 CustomDisplayMesh;                                          // 0x0558   (0x0008)
-    TArray<class UMaterialInterface*>                  DisplayMeshMaterialOverrides;                               // 0x0560   (0x0010)
-    unsigned char                                      UnknownData03_6[0x60];                                      // 0x0570   (0x0060) MISSED
-    class UPrimitiveComponent*                         DisplayComponent;                                           // 0x05D0   (0x0008)
-    unsigned char                                      UnknownData04_7[0x18];                                      // 0x05D8   (0x0018) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PlayerIndex;                                                // 0x0538   (0x0004)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EControllerHand                                    Hand;                                                       // 0x053C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x3];                                       // 0x053D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              MotionSource;                                               // 0x0540   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDisableLowLatencyUpdate : 1;                               // 0x0548:0 (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_5[0x3];                                       // 0x0549   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ETrackingStatus                                    CurrentTrackingStatus;                                      // 0x054C   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDisplayDeviceModel;                                        // 0x054D   (0x0001)
+    /* public    */ unsigned char                                      UnknownData07_6[0x2];                                       // 0x054E   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              DisplayModelSource;                                         // 0x0550   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UStaticMesh*                                 CustomDisplayMesh;                                          // 0x0558   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<class UMaterialInterface*>                  DisplayMeshMaterialOverrides;                               // 0x0560   (0x0010)
+    /* public    */ unsigned char                                      UnknownData08_6[0x60];                                      // 0x0570   (0x0060) MISSED
+    UPROPERTY(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPrimitiveComponent*                         DisplayComponent;                                           // 0x05D0   (0x0008)
+    /* public    */ unsigned char                                      UnknownData09_7[0x18];                                      // 0x05D8   (0x0018) MISSED
 
     /// Functions
     // Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingSource
@@ -399,7 +428,7 @@ public:
 };
 
 /// Class /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMotionTrackedDeviceFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -463,7 +492,7 @@ public:
 };
 
 /// Class /Script/HeadMountedDisplay.XRAssetFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UXRAssetFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -486,14 +515,17 @@ public:
 };
 
 /// Class /Script/HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent
-/// Size: 0x0060 (96 bytes) (0x000030 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000030 - 0x000060) align n/a MaxSize: 0x0060
 class UAsyncTask_LoadXRDeviceVisComponent : public UBlueprintAsyncActionBase
 { 
 public:
-    FMulticastInlineDelegate                           OnModelLoaded;                                              // 0x0030   (0x0010)
-    FMulticastInlineDelegate                           OnLoadFailure;                                              // 0x0040   (0x0010)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0050   (0x0008) MISSED
-    class UPrimitiveComponent*                         SpawnedComponent;                                           // 0x0058   (0x0008)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnModelLoaded;                                              // 0x0030   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnLoadFailure;                                              // 0x0040   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_6[0x8];                                       // 0x0050   (0x0008) MISSED
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UPrimitiveComponent*                         SpawnedComponent;                                           // 0x0058   (0x0008)
 
     /// Functions
     // Function /Script/HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddNamedDeviceVisualizationComponentAsync
@@ -515,7 +547,7 @@ public:
 };
 
 /// Class /Script/HeadMountedDisplay.XRLoadingScreenFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UXRLoadingScreenFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -545,68 +577,97 @@ public:
 };
 
 /// Struct /Script/HeadMountedDisplay.XRMotionControllerData
-/// Size: 0x00A0 (160 bytes) (0x000000 - 0x0000A0) align 16 MaxSize: 0x00A0
+/// Size: 0x00A0 (160 bytes) (0x000000 - 0x0000A0) align n/a MaxSize: 0x00A0
 struct FXRMotionControllerData
 { 
-    bool                                               bValid;                                                     // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    FName                                              DeviceName;                                                 // 0x0004   (0x0008)
-    FGuid                                              ApplicationInstanceID;                                      // 0x000C   (0x0010)
-    EXRVisualType                                      DeviceVisualType;                                           // 0x001C   (0x0001)
-    EControllerHand                                    HandIndex;                                                  // 0x001D   (0x0001)
-    ETrackingStatus                                    TrackingStatus;                                             // 0x001E   (0x0001)
-    unsigned char                                      UnknownData01_6[0x1];                                       // 0x001F   (0x0001) MISSED
-    FVector                                            GripPosition;                                               // 0x0020   (0x000C)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x002C   (0x0004) MISSED
-    FQuat                                              GripRotation;                                               // 0x0030   (0x0010)
-    FVector                                            AimPosition;                                                // 0x0040   (0x000C)
-    unsigned char                                      UnknownData03_6[0x4];                                       // 0x004C   (0x0004) MISSED
-    FQuat                                              AimRotation;                                                // 0x0050   (0x0010)
-    TArray<FVector>                                    HandKeyPositions;                                           // 0x0060   (0x0010)
-    TArray<FQuat>                                      HandKeyRotations;                                           // 0x0070   (0x0010)
-    TArray<float>                                      HandKeyRadii;                                               // 0x0080   (0x0010)
-    bool                                               bIsGrasped;                                                 // 0x0090   (0x0001)
-    unsigned char                                      UnknownData04_7[0xF];                                       // 0x0091   (0x000F) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bValid;                                                     // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              DeviceName;                                                 // 0x0004   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ApplicationInstanceID;                                      // 0x000C   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EXRVisualType                                      DeviceVisualType;                                           // 0x001C   (0x0001)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EControllerHand                                    HandIndex;                                                  // 0x001D   (0x0001)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ETrackingStatus                                    TrackingStatus;                                             // 0x001E   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x1];                                       // 0x001F   (0x0001) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            GripPosition;                                               // 0x0020   (0x000C)
+    /* public    */ unsigned char                                      UnknownData07_6[0x4];                                       // 0x002C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FQuat                                              GripRotation;                                               // 0x0030   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            AimPosition;                                                // 0x0040   (0x000C)
+    /* public    */ unsigned char                                      UnknownData08_6[0x4];                                       // 0x004C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FQuat                                              AimRotation;                                                // 0x0050   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FVector>                                    HandKeyPositions;                                           // 0x0060   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FQuat>                                      HandKeyRotations;                                           // 0x0070   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<float>                                      HandKeyRadii;                                               // 0x0080   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsGrasped;                                                 // 0x0090   (0x0001)
+    /* public    */ unsigned char                                      UnknownData09_7[0xF];                                       // 0x0091   (0x000F) MISSED
 };
 
 /// Struct /Script/HeadMountedDisplay.XRHMDData
-/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align 16 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000000 - 0x000040) align n/a MaxSize: 0x0040
 struct FXRHMDData
 { 
-    bool                                               bValid;                                                     // 0x0000   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0001   (0x0003) MISSED
-    FName                                              DeviceName;                                                 // 0x0004   (0x0008)
-    FGuid                                              ApplicationInstanceID;                                      // 0x000C   (0x0010)
-    ETrackingStatus                                    TrackingStatus;                                             // 0x001C   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x001D   (0x0003) MISSED
-    FVector                                            position;                                                   // 0x0020   (0x000C)
-    unsigned char                                      UnknownData02_6[0x4];                                       // 0x002C   (0x0004) MISSED
-    FQuat                                              Rotation;                                                   // 0x0030   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bValid;                                                     // 0x0000   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_6[0x3];                                       // 0x0001   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              DeviceName;                                                 // 0x0004   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              ApplicationInstanceID;                                      // 0x000C   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ETrackingStatus                                    TrackingStatus;                                             // 0x001C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x001D   (0x0003) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            position;                                                   // 0x0020   (0x000C)
+    /* public    */ unsigned char                                      UnknownData05_6[0x4];                                       // 0x002C   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FQuat                                              Rotation;                                                   // 0x0030   (0x0010)
 };
 
 /// Struct /Script/HeadMountedDisplay.XRDeviceId
-/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align 4 MaxSize: 0x000C
+/// Size: 0x000C (12 bytes) (0x000000 - 0x00000C) align n/a MaxSize: 0x000C
 struct FXRDeviceId
 { 
-    FName                                              SystemName;                                                 // 0x0000   (0x0008)
-    int32_t                                            DeviceID;                                                   // 0x0008   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              SystemName;                                                 // 0x0000   (0x0008)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            DeviceID;                                                   // 0x0008   (0x0004)
 };
 
 /// Struct /Script/HeadMountedDisplay.XRGestureConfig
-/// Size: 0x0006 (6 bytes) (0x000000 - 0x000006) align 1 MaxSize: 0x0006
+/// Size: 0x0006 (6 bytes) (0x000000 - 0x000006) align n/a MaxSize: 0x0006
 struct FXRGestureConfig
 { 
-    bool                                               bTap;                                                       // 0x0000   (0x0001)
-    bool                                               bHold;                                                      // 0x0001   (0x0001)
-    ESpatialInputGestureAxis                           AxisGesture;                                                // 0x0002   (0x0001)
-    bool                                               bNavigationAxisX;                                           // 0x0003   (0x0001)
-    bool                                               bNavigationAxisY;                                           // 0x0004   (0x0001)
-    bool                                               bNavigationAxisZ;                                           // 0x0005   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bTap;                                                       // 0x0000   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bHold;                                                      // 0x0001   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ ESpatialInputGestureAxis                           AxisGesture;                                                // 0x0002   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bNavigationAxisX;                                           // 0x0003   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bNavigationAxisY;                                           // 0x0004   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bNavigationAxisZ;                                           // 0x0005   (0x0001)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UVRNotificationsComponent) == 0x0150); // 336 bytes (0x0000C0 - 0x000150)
 static_assert(sizeof(UHeadMountedDisplayFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(UMotionControllerComponent) == 0x05F0); // 1520 bytes (0x000538 - 0x0005F0)
@@ -645,3 +706,4 @@ static_assert(offsetof(FXRHMDData, position) == 0x0020);
 static_assert(offsetof(FXRHMDData, Rotation) == 0x0030);
 static_assert(offsetof(FXRDeviceId, SystemName) == 0x0000);
 static_assert(offsetof(FXRGestureConfig, AxisGesture) == 0x0002);
+#endif

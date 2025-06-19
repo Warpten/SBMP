@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -15,8 +24,34 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MovieSceneCapture.EHDRCaptureGamut
-/// Size: 0x01 (1 bytes)
+class UCompositionGraphCaptureProtocol;
+class UCompressedImageSequenceProtocol;
+class UFrameGrabberProtocol;
+class UImageSequenceProtocol;
+class UImageSequenceProtocol_BMP;
+class UImageSequenceProtocol_EXR;
+class UImageSequenceProtocol_JPG;
+class UImageSequenceProtocol_PNG;
+class ULevelCapture;
+class UMasterAudioSubmixCaptureProtocol;
+class UMovieSceneAudioCaptureProtocolBase;
+class UMovieSceneCapture;
+class UMovieSceneCaptureEnvironment;
+class UMovieSceneCaptureInterface;
+class UMovieSceneCaptureProtocolBase;
+class UMovieSceneImageCaptureProtocolBase;
+class UNullAudioCaptureProtocol;
+class UUserDefinedCaptureProtocol;
+class UUserDefinedImageCaptureProtocol;
+class UVideoCaptureProtocol;
+struct FCaptureResolution;
+struct FCapturedPixels;
+struct FCapturedPixelsID;
+struct FCompositionGraphCapturePasses;
+struct FFrameMetrics;
+struct FMovieSceneCaptureSettings;
+
+/// Enum /Script/MovieSceneCapture.EHDRCaptureGamut -  1 (1 bytes)
 enum class EHDRCaptureGamut : uint8_t
 {
     HCGM_Rec709                                                                      = 0,
@@ -27,8 +62,7 @@ enum class EHDRCaptureGamut : uint8_t
     HCGM_Linear                                                                      = 5
 };
 
-/// Enum /Script/MovieSceneCapture.EMovieSceneCaptureProtocolState
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MovieSceneCapture.EMovieSceneCaptureProtocolState -  1 (1 bytes)
 enum class EMovieSceneCaptureProtocolState : uint8_t
 {
     Idle                                                                             = 0,
@@ -38,13 +72,14 @@ enum class EMovieSceneCaptureProtocolState : uint8_t
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneCaptureProtocolBase
-/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000028 - 0x000058) align n/a MaxSize: 0x0058
 class UMovieSceneCaptureProtocolBase : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x28];                                      // 0x0028   (0x0028) MISSED
-    EMovieSceneCaptureProtocolState                    State;                                                      // 0x0050   (0x0001)
-    unsigned char                                      UnknownData01_7[0x7];                                       // 0x0051   (0x0007) MISSED
+    /* public    */ unsigned char                                      UnknownData02_8[0x28];                                      // 0x0028   (0x0028) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ EMovieSceneCaptureProtocolState                    State;                                                      // 0x0050   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0x7];                                       // 0x0051   (0x0007) MISSED
 
     /// Functions
     // Function /Script/MovieSceneCapture.MovieSceneCaptureProtocolBase.IsCapturing
@@ -54,179 +89,223 @@ public:
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneAudioCaptureProtocolBase
-/// Size: 0x0058 (88 bytes) (0x000058 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000058 - 0x000058) align n/a MaxSize: 0x0058
 class UMovieSceneAudioCaptureProtocolBase : public UMovieSceneCaptureProtocolBase
 { 
 public:
 };
 
 /// Class /Script/MovieSceneCapture.NullAudioCaptureProtocol
-/// Size: 0x0058 (88 bytes) (0x000058 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000058 - 0x000058) align n/a MaxSize: 0x0058
 class UNullAudioCaptureProtocol : public UMovieSceneAudioCaptureProtocolBase
 { 
 public:
 };
 
 /// Class /Script/MovieSceneCapture.MasterAudioSubmixCaptureProtocol
-/// Size: 0x0090 (144 bytes) (0x000058 - 0x000090) align 8 MaxSize: 0x0090
+/// Size: 0x0090 (144 bytes) (0x000058 - 0x000090) align n/a MaxSize: 0x0090
 class UMasterAudioSubmixCaptureProtocol : public UMovieSceneAudioCaptureProtocolBase
 { 
 public:
-    FString                                            Filename;                                                   // 0x0058   (0x0010)
-    unsigned char                                      UnknownData00_7[0x28];                                      // 0x0068   (0x0028) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ FString                                            Filename;                                                   // 0x0058   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x28];                                      // 0x0068   (0x0028) MISSED
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneImageCaptureProtocolBase
-/// Size: 0x0058 (88 bytes) (0x000058 - 0x000058) align 8 MaxSize: 0x0058
+/// Size: 0x0058 (88 bytes) (0x000058 - 0x000058) align n/a MaxSize: 0x0058
 class UMovieSceneImageCaptureProtocolBase : public UMovieSceneCaptureProtocolBase
 { 
 public:
 };
 
 /// Struct /Script/MovieSceneCapture.CompositionGraphCapturePasses
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FCompositionGraphCapturePasses
 { 
-    TArray<FString>                                    Value;                                                      // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+    /* public    */ TArray<FString>                                    Value;                                                      // 0x0000   (0x0010)
 };
 
 /// Class /Script/MovieSceneCapture.CompositionGraphCaptureProtocol
-/// Size: 0x00C0 (192 bytes) (0x000058 - 0x0000C0) align 8 MaxSize: 0x00C0
+/// Size: 0x00C0 (192 bytes) (0x000058 - 0x0000C0) align n/a MaxSize: 0x00C0
 class UCompositionGraphCaptureProtocol : public UMovieSceneImageCaptureProtocolBase
 { 
 public:
-    FCompositionGraphCapturePasses                     IncludeRenderPasses;                                        // 0x0058   (0x0010)
-    bool                                               bCaptureFramesInHDR;                                        // 0x0068   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0069   (0x0003) MISSED
-    int32_t                                            HDRCompressionQuality;                                      // 0x006C   (0x0004)
-    TEnumAsByte<EHDRCaptureGamut>                      CaptureGamut;                                               // 0x0070   (0x0001)
-    unsigned char                                      UnknownData01_6[0x7];                                       // 0x0071   (0x0007) MISSED
-    FSoftObjectPath                                    PostProcessingMaterial;                                     // 0x0078   (0x0018)
-    bool                                               bDisableScreenPercentage;                                   // 0x0090   (0x0001)
-    unsigned char                                      UnknownData02_6[0x7];                                       // 0x0091   (0x0007) MISSED
-    class UMaterialInterface*                          PostProcessingMaterialPtr;                                  // 0x0098   (0x0008)
-    unsigned char                                      UnknownData03_7[0x20];                                      // 0x00A0   (0x0020) MISSED
+    UPROPERTY(Edit, BlueprintVisible, Config, NativeAccessSpecifierPublic)
+    /* public    */ FCompositionGraphCapturePasses                     IncludeRenderPasses;                                        // 0x0058   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCaptureFramesInHDR;                                        // 0x0068   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x3];                                       // 0x0069   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            HDRCompressionQuality;                                      // 0x006C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EHDRCaptureGamut>                      CaptureGamut;                                               // 0x0070   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x7];                                       // 0x0071   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FSoftObjectPath                                    PostProcessingMaterial;                                     // 0x0078   (0x0018)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bDisableScreenPercentage;                                   // 0x0090   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x7];                                       // 0x0091   (0x0007) MISSED
+    UPROPERTY(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMaterialInterface*                          PostProcessingMaterialPtr;                                  // 0x0098   (0x0008)
+    /* public    */ unsigned char                                      UnknownData07_7[0x20];                                      // 0x00A0   (0x0020) MISSED
 };
 
 /// Class /Script/MovieSceneCapture.FrameGrabberProtocol
-/// Size: 0x0068 (104 bytes) (0x000058 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000058 - 0x000068) align n/a MaxSize: 0x0068
 class UFrameGrabberProtocol : public UMovieSceneImageCaptureProtocolBase
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x10];                                      // 0x0058   (0x0010) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x10];                                      // 0x0058   (0x0010) MISSED
 };
 
 /// Class /Script/MovieSceneCapture.ImageSequenceProtocol
-/// Size: 0x00D8 (216 bytes) (0x000068 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x000068 - 0x0000D8) align n/a MaxSize: 0x00D8
 class UImageSequenceProtocol : public UFrameGrabberProtocol
 { 
 public:
-    unsigned char                                      UnknownData00_1[0x70];                                      // 0x0068   (0x0070) MISSED
+    /* public    */ unsigned char                                      UnknownData01_1[0x70];                                      // 0x0068   (0x0070) MISSED
 };
 
 /// Class /Script/MovieSceneCapture.CompressedImageSequenceProtocol
-/// Size: 0x00E0 (224 bytes) (0x0000D8 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000D8 - 0x0000E0) align n/a MaxSize: 0x00E0
 class UCompressedImageSequenceProtocol : public UImageSequenceProtocol
 { 
 public:
-    int32_t                                            CompressionQuality;                                         // 0x00D8   (0x0004)
-    unsigned char                                      UnknownData00_7[0x4];                                       // 0x00DC   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CompressionQuality;                                         // 0x00D8   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_7[0x4];                                       // 0x00DC   (0x0004) MISSED
 };
 
 /// Class /Script/MovieSceneCapture.ImageSequenceProtocol_BMP
-/// Size: 0x00D8 (216 bytes) (0x0000D8 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x0000D8 - 0x0000D8) align n/a MaxSize: 0x00D8
 class UImageSequenceProtocol_BMP : public UImageSequenceProtocol
 { 
 public:
 };
 
 /// Class /Script/MovieSceneCapture.ImageSequenceProtocol_PNG
-/// Size: 0x00E0 (224 bytes) (0x0000E0 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000E0 - 0x0000E0) align n/a MaxSize: 0x00E0
 class UImageSequenceProtocol_PNG : public UCompressedImageSequenceProtocol
 { 
 public:
 };
 
 /// Class /Script/MovieSceneCapture.ImageSequenceProtocol_JPG
-/// Size: 0x00E0 (224 bytes) (0x0000E0 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000E0 - 0x0000E0) align n/a MaxSize: 0x00E0
 class UImageSequenceProtocol_JPG : public UCompressedImageSequenceProtocol
 { 
 public:
 };
 
 /// Class /Script/MovieSceneCapture.ImageSequenceProtocol_EXR
-/// Size: 0x00E8 (232 bytes) (0x0000D8 - 0x0000E8) align 8 MaxSize: 0x00E8
+/// Size: 0x00E8 (232 bytes) (0x0000D8 - 0x0000E8) align n/a MaxSize: 0x00E8
 class UImageSequenceProtocol_EXR : public UImageSequenceProtocol
 { 
 public:
-    bool                                               bCompressed;                                                // 0x00D8   (0x0001)
-    TEnumAsByte<EHDRCaptureGamut>                      CaptureGamut;                                               // 0x00D9   (0x0001)
-    unsigned char                                      UnknownData00_7[0xE];                                       // 0x00DA   (0x000E) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCompressed;                                                // 0x00D8   (0x0001)
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ TEnumAsByte<EHDRCaptureGamut>                      CaptureGamut;                                               // 0x00D9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0xE];                                       // 0x00DA   (0x000E) MISSED
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneCaptureInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMovieSceneCaptureInterface : public UInterface
 { 
 public:
 };
 
 /// Struct /Script/MovieSceneCapture.CaptureResolution
-/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align 4 MaxSize: 0x0008
+/// Size: 0x0008 (8 bytes) (0x000000 - 0x000008) align n/a MaxSize: 0x0008
 struct FCaptureResolution
 { 
-    int32_t                                            ResX;                                                       // 0x0000   (0x0004)
-    int32_t                                            ResY;                                                       // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ResX;                                                       // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            ResY;                                                       // 0x0004   (0x0004)
 };
 
 /// Struct /Script/MovieSceneCapture.MovieSceneCaptureSettings
-/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align 8 MaxSize: 0x0070
+/// Size: 0x0070 (112 bytes) (0x000000 - 0x000070) align n/a MaxSize: 0x0070
 struct FMovieSceneCaptureSettings
 { 
-    FDirectoryPath                                     OutputDirectory;                                            // 0x0000   (0x0010)
-    class UClass*                                      GameModeOverride;                                           // 0x0010   (0x0008)
-    FString                                            OutputFormat;                                               // 0x0018   (0x0010)
-    bool                                               bOverwriteExisting;                                         // 0x0028   (0x0001)
-    bool                                               bUseRelativeFrameNumbers;                                   // 0x0029   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x002A   (0x0002) MISSED
-    int32_t                                            HandleFrames;                                               // 0x002C   (0x0004)
-    FString                                            MovieExtension;                                             // 0x0030   (0x0010)
-    char                                               ZeroPadFrameNumbers;                                        // 0x0040   (0x0001)
-    unsigned char                                      UnknownData01_6[0x3];                                       // 0x0041   (0x0003) MISSED
-    FFrameRate                                         FrameRate;                                                  // 0x0044   (0x0008)
-    bool                                               bUseCustomFrameRate;                                        // 0x004C   (0x0001)
-    unsigned char                                      UnknownData02_6[0x3];                                       // 0x004D   (0x0003) MISSED
-    FFrameRate                                         CustomFrameRate;                                            // 0x0050   (0x0008)
-    FCaptureResolution                                 Resolution;                                                 // 0x0058   (0x0008)
-    bool                                               bEnableTextureStreaming;                                    // 0x0060   (0x0001)
-    bool                                               bCinematicEngineScalability;                                // 0x0061   (0x0001)
-    bool                                               bCinematicMode;                                             // 0x0062   (0x0001)
-    bool                                               bAllowMovement;                                             // 0x0063   (0x0001)
-    bool                                               bAllowTurning;                                              // 0x0064   (0x0001)
-    bool                                               bShowPlayer;                                                // 0x0065   (0x0001)
-    bool                                               bShowHUD;                                                   // 0x0066   (0x0001)
-    bool                                               bUsePathTracer;                                             // 0x0067   (0x0001)
-    int32_t                                            PathTracerSamplePerPixel;                                   // 0x0068   (0x0004)
-    unsigned char                                      UnknownData03_7[0x4];                                       // 0x006C   (0x0004) MISSED
+    UPROPERTY(Edit, BlueprintVisible, Config, NativeAccessSpecifierPublic)
+    /* public    */ FDirectoryPath                                     OutputDirectory;                                            // 0x0000   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      GameModeOverride;                                           // 0x0010   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            OutputFormat;                                               // 0x0018   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bOverwriteExisting;                                         // 0x0028   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseRelativeFrameNumbers;                                   // 0x0029   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x2];                                       // 0x002A   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            HandleFrames;                                               // 0x002C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            MovieExtension;                                             // 0x0030   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ char                                               ZeroPadFrameNumbers;                                        // 0x0040   (0x0001)
+    /* public    */ unsigned char                                      UnknownData05_6[0x3];                                       // 0x0041   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFrameRate                                         FrameRate;                                                  // 0x0044   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseCustomFrameRate;                                        // 0x004C   (0x0001)
+    /* public    */ unsigned char                                      UnknownData06_6[0x3];                                       // 0x004D   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FFrameRate                                         CustomFrameRate;                                            // 0x0050   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FCaptureResolution                                 Resolution;                                                 // 0x0058   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableTextureStreaming;                                    // 0x0060   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCinematicEngineScalability;                                // 0x0061   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCinematicMode;                                             // 0x0062   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowMovement;                                             // 0x0063   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAllowTurning;                                              // 0x0064   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bShowPlayer;                                                // 0x0065   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bShowHUD;                                                   // 0x0066   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUsePathTracer;                                             // 0x0067   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            PathTracerSamplePerPixel;                                   // 0x0068   (0x0004)
+    /* public    */ unsigned char                                      UnknownData07_7[0x4];                                       // 0x006C   (0x0004) MISSED
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneCapture
-/// Size: 0x0220 (544 bytes) (0x000028 - 0x000220) align 8 MaxSize: 0x0220
+/// Size: 0x0220 (544 bytes) (0x000028 - 0x000220) align n/a MaxSize: 0x0220
 class UMovieSceneCapture : public UObject
 { 
 public:
-    unsigned char                                      UnknownData00_8[0x10];                                      // 0x0028   (0x0010) MISSED
-    FSoftClassPath                                     ImageCaptureProtocolType;                                   // 0x0038   (0x0018)
-    FSoftClassPath                                     AudioCaptureProtocolType;                                   // 0x0050   (0x0018)
-    class UMovieSceneImageCaptureProtocolBase*         ImageCaptureProtocol;                                       // 0x0068   (0x0008)
-    class UMovieSceneAudioCaptureProtocolBase*         AudioCaptureProtocol;                                       // 0x0070   (0x0008)
-    FMovieSceneCaptureSettings                         Settings;                                                   // 0x0078   (0x0070)
-    bool                                               bUseSeparateProcess;                                        // 0x00E8   (0x0001)
-    bool                                               bCloseEditorWhenCaptureStarts;                              // 0x00E9   (0x0001)
-    unsigned char                                      UnknownData01_6[0x6];                                       // 0x00EA   (0x0006) MISSED
-    FString                                            AdditionalCommandLineArguments;                             // 0x00F0   (0x0010)
-    FString                                            InheritedCommandLineArguments;                              // 0x0100   (0x0010)
-    unsigned char                                      UnknownData02_7[0x110];                                     // 0x0110   (0x0110) MISSED
+    /* public    */ unsigned char                                      UnknownData03_8[0x10];                                      // 0x0028   (0x0010) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FSoftClassPath                                     ImageCaptureProtocolType;                                   // 0x0038   (0x0018)
+    UPROPERTY(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FSoftClassPath                                     AudioCaptureProtocolType;                                   // 0x0050   (0x0018)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMovieSceneImageCaptureProtocolBase*         ImageCaptureProtocol;                                       // 0x0068   (0x0008)
+    UPROPERTY(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UMovieSceneAudioCaptureProtocolBase*         AudioCaptureProtocol;                                       // 0x0070   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, Config, NativeAccessSpecifierPublic)
+    /* public    */ FMovieSceneCaptureSettings                         Settings;                                                   // 0x0078   (0x0070)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseSeparateProcess;                                        // 0x00E8   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bCloseEditorWhenCaptureStarts;                              // 0x00E9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData04_6[0x6];                                       // 0x00EA   (0x0006) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            AdditionalCommandLineArguments;                             // 0x00F0   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Transient, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            InheritedCommandLineArguments;                              // 0x0100   (0x0010)
+    /* public    */ unsigned char                                      UnknownData05_7[0x110];                                     // 0x0110   (0x0110) MISSED
 
     /// Functions
     // Function /Script/MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType
@@ -242,18 +321,20 @@ public:
 };
 
 /// Class /Script/MovieSceneCapture.LevelCapture
-/// Size: 0x0240 (576 bytes) (0x000220 - 0x000240) align 8 MaxSize: 0x0240
+/// Size: 0x0240 (576 bytes) (0x000220 - 0x000240) align n/a MaxSize: 0x0240
 class ULevelCapture : public UMovieSceneCapture
 { 
 public:
-    bool                                               bAutoStartCapture;                                          // 0x0220   (0x0001)
-    unsigned char                                      UnknownData00_6[0xB];                                       // 0x0221   (0x000B) MISSED
-    FGuid                                              PrerequisiteActorId;                                        // 0x022C   (0x0010)
-    unsigned char                                      UnknownData01_7[0x4];                                       // 0x023C   (0x0004) MISSED
+    UPROPERTY(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bAutoStartCapture;                                          // 0x0220   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0xB];                                       // 0x0221   (0x000B) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FGuid                                              PrerequisiteActorId;                                        // 0x022C   (0x0010)
+    /* public    */ unsigned char                                      UnknownData03_7[0x4];                                       // 0x023C   (0x0004) MISSED
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneCaptureEnvironment
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMovieSceneCaptureEnvironment : public UObject
 { 
 public:
@@ -272,12 +353,13 @@ public:
 };
 
 /// Class /Script/MovieSceneCapture.UserDefinedCaptureProtocol
-/// Size: 0x00D8 (216 bytes) (0x000058 - 0x0000D8) align 8 MaxSize: 0x00D8
+/// Size: 0x00D8 (216 bytes) (0x000058 - 0x0000D8) align n/a MaxSize: 0x00D8
 class UUserDefinedCaptureProtocol : public UMovieSceneImageCaptureProtocolBase
 { 
 public:
-    class UWorld*                                      World;                                                      // 0x0058   (0x0008)
-    unsigned char                                      UnknownData00_7[0x78];                                      // 0x0060   (0x0078) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+    /* protected */ class UWorld*                                      World;                                                      // 0x0058   (0x0008)
+    /* public    */ unsigned char                                      UnknownData01_7[0x78];                                      // 0x0060   (0x0078) MISSED
 
     /// Functions
     // Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.StopCapturingFinalPixels
@@ -322,14 +404,17 @@ public:
 };
 
 /// Class /Script/MovieSceneCapture.UserDefinedImageCaptureProtocol
-/// Size: 0x00E0 (224 bytes) (0x0000D8 - 0x0000E0) align 8 MaxSize: 0x00E0
+/// Size: 0x00E0 (224 bytes) (0x0000D8 - 0x0000E0) align n/a MaxSize: 0x00E0
 class UUserDefinedImageCaptureProtocol : public UUserDefinedCaptureProtocol
 { 
 public:
-    EDesiredImageFormat                                Format;                                                     // 0x00D8   (0x0001)
-    bool                                               bEnableCompression;                                         // 0x00D9   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x00DA   (0x0002) MISSED
-    int32_t                                            CompressionQuality;                                         // 0x00DC   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EDesiredImageFormat                                Format;                                                     // 0x00D8   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bEnableCompression;                                         // 0x00D9   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_6[0x2];                                       // 0x00DA   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            CompressionQuality;                                         // 0x00DC   (0x0004)
 
     /// Functions
     // Function /Script/MovieSceneCapture.UserDefinedImageCaptureProtocol.WriteImageToDisk
@@ -347,43 +432,51 @@ public:
 };
 
 /// Class /Script/MovieSceneCapture.VideoCaptureProtocol
-/// Size: 0x0080 (128 bytes) (0x000068 - 0x000080) align 8 MaxSize: 0x0080
+/// Size: 0x0080 (128 bytes) (0x000068 - 0x000080) align n/a MaxSize: 0x0080
 class UVideoCaptureProtocol : public UFrameGrabberProtocol
 { 
 public:
-    bool                                               bUseCompression;                                            // 0x0068   (0x0001)
-    unsigned char                                      UnknownData00_6[0x3];                                       // 0x0069   (0x0003) MISSED
-    float                                              CompressionQuality;                                         // 0x006C   (0x0004)
-    unsigned char                                      UnknownData01_7[0x10];                                      // 0x0070   (0x0010) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bUseCompression;                                            // 0x0068   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x3];                                       // 0x0069   (0x0003) MISSED
+    UPROPERTY(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              CompressionQuality;                                         // 0x006C   (0x0004)
+    /* public    */ unsigned char                                      UnknownData03_7[0x10];                                      // 0x0070   (0x0010) MISSED
 };
 
 /// Struct /Script/MovieSceneCapture.FrameMetrics
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FFrameMetrics
 { 
-    float                                              TotalElapsedTime;                                           // 0x0000   (0x0004)
-    float                                              FrameDelta;                                                 // 0x0004   (0x0004)
-    int32_t                                            FrameNumber;                                                // 0x0008   (0x0004)
-    int32_t                                            NumDroppedFrames;                                           // 0x000C   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TotalElapsedTime;                                           // 0x0000   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              FrameDelta;                                                 // 0x0004   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            FrameNumber;                                                // 0x0008   (0x0004)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            NumDroppedFrames;                                           // 0x000C   (0x0004)
 };
 
 /// Struct /Script/MovieSceneCapture.CapturedPixels
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FCapturedPixels
 { 
-    unsigned char                                      UnknownData00_2[0x10];                                      // 0x0000   (0x0010) MISSED
+    /* public    */ unsigned char                                      UnknownData01_2[0x10];                                      // 0x0000   (0x0010) MISSED
 };
 
 /// Struct /Script/MovieSceneCapture.CapturedPixelsID
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FCapturedPixelsID
 { 
-    TMap<FName, FName>                                 Identifiers;                                                // 0x0000   (0x0050)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FName, FName>                                 Identifiers;                                                // 0x0000   (0x0050)
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMovieSceneCaptureProtocolBase) == 0x0058); // 88 bytes (0x000028 - 0x000058)
 static_assert(sizeof(UMovieSceneAudioCaptureProtocolBase) == 0x0058); // 88 bytes (0x000058 - 0x000058)
 static_assert(sizeof(UNullAudioCaptureProtocol) == 0x0058); // 88 bytes (0x000058 - 0x000058)
@@ -436,3 +529,4 @@ static_assert(offsetof(ULevelCapture, PrerequisiteActorId) == 0x022C);
 static_assert(offsetof(UUserDefinedCaptureProtocol, World) == 0x0058);
 static_assert(offsetof(UUserDefinedImageCaptureProtocol, Format) == 0x00D8);
 static_assert(offsetof(FCapturedPixelsID, Identifiers) == 0x0000);
+#endif

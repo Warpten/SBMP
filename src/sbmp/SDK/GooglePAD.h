@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,9 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/GooglePAD.EGooglePADCellularDataConfirmStatus
-/// Size: 0x01 (1 bytes)
+class UGooglePADFunctionLibrary;
+
+/// Enum /Script/GooglePAD.EGooglePADCellularDataConfirmStatus -  1 (1 bytes)
 enum class EGooglePADCellularDataConfirmStatus : uint8_t
 {
     AssetPack_CONFIRM_UNKNOWN                                                        = 0,
@@ -24,8 +34,7 @@ enum class EGooglePADCellularDataConfirmStatus : uint8_t
     AssetPack_CONFIRM_USER_CANCELED                                                  = 3
 };
 
-/// Enum /Script/GooglePAD.EGooglePADStorageMethod
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/GooglePAD.EGooglePADStorageMethod -  1 (1 bytes)
 enum class EGooglePADStorageMethod : uint8_t
 {
     AssetPack_STORAGE_FILES                                                          = 0,
@@ -34,8 +43,7 @@ enum class EGooglePADStorageMethod : uint8_t
     AssetPack_STORAGE_NOT_INSTALLED                                                  = 3
 };
 
-/// Enum /Script/GooglePAD.EGooglePADDownloadStatus
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/GooglePAD.EGooglePADDownloadStatus -  1 (1 bytes)
 enum class EGooglePADDownloadStatus : uint8_t
 {
     AssetPack_UNKNOWN                                                                = 0,
@@ -53,8 +61,7 @@ enum class EGooglePADDownloadStatus : uint8_t
     AssetPack_REMOVAL_FAILED                                                         = 12
 };
 
-/// Enum /Script/GooglePAD.EGooglePADErrorCode
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/GooglePAD.EGooglePADErrorCode -  1 (1 bytes)
 enum class EGooglePADErrorCode : uint8_t
 {
     AssetPack_NO_ERROR                                                               = 0,
@@ -74,7 +81,7 @@ enum class EGooglePADErrorCode : uint8_t
 };
 
 /// Class /Script/GooglePAD.GooglePADFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UGooglePADFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -131,4 +138,6 @@ public:
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UGooglePADFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
+#endif

@@ -2,19 +2,35 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/OnlineSubsystem.EInAppPurchaseState
-/// Size: 0x01 (1 bytes)
+class UNamedInterfaces;
+class UTurnBasedMatchInterface;
+struct FInAppPurchaseProductInfo;
+struct FInAppPurchaseProductRequest;
+struct FInAppPurchaseRestoreInfo;
+struct FNamedInterface;
+struct FNamedInterfaceDef;
+
+/// Enum /Script/OnlineSubsystem.EInAppPurchaseState -  1 (1 bytes)
 enum class EInAppPurchaseState : uint8_t
 {
     Unknown                                                                          = 0,
@@ -27,8 +43,7 @@ enum class EInAppPurchaseState : uint8_t
     AlreadyOwned                                                                     = 7
 };
 
-/// Enum /Script/OnlineSubsystem.EMPMatchOutcome
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/OnlineSubsystem.EMPMatchOutcome -  1 (1 bytes)
 enum class EMPMatchOutcome : uint8_t
 {
     None                                                                             = 0,
@@ -44,33 +59,39 @@ enum class EMPMatchOutcome : uint8_t
 };
 
 /// Struct /Script/OnlineSubsystem.NamedInterface
-/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 8 MaxSize: 0x0010
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align n/a MaxSize: 0x0010
 struct FNamedInterface
 { 
-    FName                                              InterfaceName;                                              // 0x0000   (0x0008)
-    class UObject*                                     InterfaceObject;                                            // 0x0008   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              InterfaceName;                                              // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UObject*                                     InterfaceObject;                                            // 0x0008   (0x0008)
 };
 
 /// Struct /Script/OnlineSubsystem.NamedInterfaceDef
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FNamedInterfaceDef
 { 
-    FName                                              InterfaceName;                                              // 0x0000   (0x0008)
-    FString                                            InterfaceClassName;                                         // 0x0008   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FName                                              InterfaceName;                                              // 0x0000   (0x0008)
+    UPROPERTY(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            InterfaceClassName;                                         // 0x0008   (0x0010)
 };
 
 /// Class /Script/OnlineSubsystem.NamedInterfaces
-/// Size: 0x0060 (96 bytes) (0x000028 - 0x000060) align 8 MaxSize: 0x0060
+/// Size: 0x0060 (96 bytes) (0x000028 - 0x000060) align n/a MaxSize: 0x0060
 class UNamedInterfaces : public UObject
 { 
 public:
-    TArray<FNamedInterface>                            NamedInterfaces;                                            // 0x0028   (0x0010)
-    TArray<FNamedInterfaceDef>                         NamedInterfaceDefs;                                         // 0x0038   (0x0010)
-    unsigned char                                      UnknownData00_7[0x18];                                      // 0x0048   (0x0018) MISSED
+    UPROPERTY(ZeroConstructor, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FNamedInterface>                            NamedInterfaces;                                            // 0x0028   (0x0010)
+    UPROPERTY(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+    /* private   */ TArray<FNamedInterfaceDef>                         NamedInterfaceDefs;                                         // 0x0038   (0x0010)
+    /* public    */ unsigned char                                      UnknownData01_7[0x18];                                      // 0x0048   (0x0018) MISSED
 };
 
 /// Class /Script/OnlineSubsystem.TurnBasedMatchInterface
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UTurnBasedMatchInterface : public UInterface
 { 
 public:
@@ -86,44 +107,61 @@ public:
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseProductInfo
-/// Size: 0x00A8 (168 bytes) (0x000000 - 0x0000A8) align 8 MaxSize: 0x00A8
+/// Size: 0x00A8 (168 bytes) (0x000000 - 0x0000A8) align n/a MaxSize: 0x00A8
 struct FInAppPurchaseProductInfo
 { 
-    FString                                            Identifier;                                                 // 0x0000   (0x0010)
-    FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010)
-    FString                                            DisplayName;                                                // 0x0020   (0x0010)
-    FString                                            DisplayDescription;                                         // 0x0030   (0x0010)
-    FString                                            DisplayPrice;                                               // 0x0040   (0x0010)
-    float                                              RawPrice;                                                   // 0x0050   (0x0004)
-    unsigned char                                      UnknownData00_6[0x4];                                       // 0x0054   (0x0004) MISSED
-    FString                                            CurrencyCode;                                               // 0x0058   (0x0010)
-    FString                                            CurrencySymbol;                                             // 0x0068   (0x0010)
-    FString                                            DecimalSeparator;                                           // 0x0078   (0x0010)
-    FString                                            GroupingSeparator;                                          // 0x0088   (0x0010)
-    FString                                            ReceiptData;                                                // 0x0098   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Identifier;                                                 // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            TransactionIdentifier;                                      // 0x0010   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            DisplayName;                                                // 0x0020   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            DisplayDescription;                                         // 0x0030   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            DisplayPrice;                                               // 0x0040   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RawPrice;                                                   // 0x0050   (0x0004)
+    /* public    */ unsigned char                                      UnknownData01_6[0x4];                                       // 0x0054   (0x0004) MISSED
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            CurrencyCode;                                               // 0x0058   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            CurrencySymbol;                                             // 0x0068   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            DecimalSeparator;                                           // 0x0078   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            GroupingSeparator;                                          // 0x0088   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ReceiptData;                                                // 0x0098   (0x0010)
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseRestoreInfo
-/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align 8 MaxSize: 0x0030
+/// Size: 0x0030 (48 bytes) (0x000000 - 0x000030) align n/a MaxSize: 0x0030
 struct FInAppPurchaseRestoreInfo
 { 
-    FString                                            Identifier;                                                 // 0x0000   (0x0010)
-    FString                                            ReceiptData;                                                // 0x0010   (0x0010)
-    FString                                            TransactionIdentifier;                                      // 0x0020   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            Identifier;                                                 // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ReceiptData;                                                // 0x0010   (0x0010)
+    UPROPERTY(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            TransactionIdentifier;                                      // 0x0020   (0x0010)
 };
 
 /// Struct /Script/OnlineSubsystem.InAppPurchaseProductRequest
-/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align 8 MaxSize: 0x0018
+/// Size: 0x0018 (24 bytes) (0x000000 - 0x000018) align n/a MaxSize: 0x0018
 struct FInAppPurchaseProductRequest
 { 
-    FString                                            ProductIdentifier;                                          // 0x0000   (0x0010)
-    bool                                               bIsConsumable;                                              // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x0011   (0x0007) MISSED
+    UPROPERTY(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ProductIdentifier;                                          // 0x0000   (0x0010)
+    UPROPERTY(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bIsConsumable;                                              // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x0011   (0x0007) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(FNamedInterface) == 0x0010); // 16 bytes (0x000000 - 0x000010)
 static_assert(sizeof(FNamedInterfaceDef) == 0x0018); // 24 bytes (0x000000 - 0x000018)
 static_assert(sizeof(UNamedInterfaces) == 0x0060); // 96 bytes (0x000028 - 0x000060)
@@ -151,3 +189,4 @@ static_assert(offsetof(FInAppPurchaseRestoreInfo, Identifier) == 0x0000);
 static_assert(offsetof(FInAppPurchaseRestoreInfo, ReceiptData) == 0x0010);
 static_assert(offsetof(FInAppPurchaseRestoreInfo, TransactionIdentifier) == 0x0020);
 static_assert(offsetof(FInAppPurchaseProductRequest, ProductIdentifier) == 0x0000);
+#endif

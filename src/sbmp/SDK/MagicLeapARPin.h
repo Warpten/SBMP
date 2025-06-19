@@ -2,11 +2,20 @@
 /********************************************************
 *                                                       *
 *   Package generated using UEDumper by Spuckwaffel.    *
+*   Generator modified by Warpten for idaclang support. *
 *                                                       *
 ********************************************************/
 
-#define UFUNCTION(...)
-#define UPROPERTY(...)
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+/// Make sure to define IDACLANG in the command line if running this file through idaclang to
+/// generate a type library.
+/// --- IMPORTANT -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT  -- IMPORTANT ---
+
+#if defined(IDACLANG)
+# define UPROPERTY(...)
+# define UFUNCTION(...)
+#endif
+
 #pragma once
 #include "BasicType.h"
 #include "CoreUObject.h"
@@ -14,8 +23,18 @@
 
 #pragma pack(push, 0x1)
 
-/// Enum /Script/MagicLeapARPin.EMagicLeapARPinType
-/// Size: 0x01 (1 bytes)
+class AMagicLeapARPinInfoActorBase;
+class AMagicLeapARPinRenderer;
+class UMagicLeapARPinComponent;
+class UMagicLeapARPinContentBindings;
+class UMagicLeapARPinFunctionLibrary;
+class UMagicLeapARPinSaveGame;
+class UMagicLeapARPinSettings;
+struct FMagicLeapARPinObjectIdList;
+struct FMagicLeapARPinQuery;
+struct FMagicLeapARPinState;
+
+/// Enum /Script/MagicLeapARPin.EMagicLeapARPinType -  1 (1 bytes)
 enum class EMagicLeapARPinType : uint8_t
 {
     SingleUserSingleSession                                                          = 0,
@@ -23,8 +42,7 @@ enum class EMagicLeapARPinType : uint8_t
     MultiUserMultiSession                                                            = 2
 };
 
-/// Enum /Script/MagicLeapARPin.EMagicLeapAutoPinType
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapARPin.EMagicLeapAutoPinType -  1 (1 bytes)
 enum class EMagicLeapAutoPinType : uint8_t
 {
     OnlyOnDataRestoration                                                            = 0,
@@ -32,8 +50,7 @@ enum class EMagicLeapAutoPinType : uint8_t
     Never                                                                            = 2
 };
 
-/// Enum /Script/MagicLeapARPin.EMagicLeapPassableWorldError
-/// Size: 0x01 (1 bytes)
+/// Enum /Script/MagicLeapARPin.EMagicLeapPassableWorldError -  1 (1 bytes)
 enum class EMagicLeapPassableWorldError : uint8_t
 {
     None                                                                             = 0,
@@ -51,25 +68,38 @@ enum class EMagicLeapPassableWorldError : uint8_t
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinComponent
-/// Size: 0x0420 (1056 bytes) (0x000260 - 0x000420) align 16 MaxSize: 0x0420
+/// Size: 0x0420 (1056 bytes) (0x000260 - 0x000420) align n/a MaxSize: 0x0420
 class UMagicLeapARPinComponent : public USceneComponent
 { 
 public:
-    FString                                            ObjectUID;                                                  // 0x0260   (0x0010)
-    int32_t                                            UserIndex;                                                  // 0x0270   (0x0004)
-    EMagicLeapAutoPinType                              AutoPinType;                                                // 0x0274   (0x0001)
-    bool                                               bShouldPinActor;                                            // 0x0275   (0x0001)
-    unsigned char                                      UnknownData00_6[0x2];                                       // 0x0276   (0x0002) MISSED
-    class UClass*                                      PinDataClass;                                               // 0x0278   (0x0008)
-    TSet<EMagicLeapARPinType>                          SearchPinTypes;                                             // 0x0280   (0x0050)
-    class USphereComponent*                            SearchVolume;                                               // 0x02D0   (0x0008)
-    FMulticastInlineDelegate                           OnPersistentEntityPinned;                                   // 0x02D8   (0x0010)
-    FMulticastInlineDelegate                           OnPersistentEntityPinLost;                                  // 0x02E8   (0x0010)
-    FMulticastInlineDelegate                           OnPinDataLoadAttemptCompleted;                              // 0x02F8   (0x0010)
-    FGuid                                              PinnedCFUID;                                                // 0x0308   (0x0010)
-    class USceneComponent*                             PinnedSceneComponent;                                       // 0x0318   (0x0008)
-    class UMagicLeapARPinSaveGame*                     PinData;                                                    // 0x0320   (0x0008)
-    unsigned char                                      UnknownData01_7[0xF8];                                      // 0x0328   (0x00F8) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FString                                            ObjectUID;                                                  // 0x0260   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            UserIndex;                                                  // 0x0270   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapAutoPinType                              AutoPinType;                                                // 0x0274   (0x0001)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bShouldPinActor;                                            // 0x0275   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x2];                                       // 0x0276   (0x0002) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class UClass*                                      PinDataClass;                                               // 0x0278   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ TSet<EMagicLeapARPinType>                          SearchPinTypes;                                             // 0x0280   (0x0050)
+    UPROPERTY(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ class USphereComponent*                            SearchVolume;                                               // 0x02D0   (0x0008)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnPersistentEntityPinned;                                   // 0x02D8   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnPersistentEntityPinLost;                                  // 0x02E8   (0x0010)
+    UPROPERTY(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+    /* public    */ FMulticastInlineDelegate                           OnPinDataLoadAttemptCompleted;                              // 0x02F8   (0x0010)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ FGuid                                              PinnedCFUID;                                                // 0x0308   (0x0010)
+    UPROPERTY(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class USceneComponent*                             PinnedSceneComponent;                                       // 0x0318   (0x0008)
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UMagicLeapARPinSaveGame*                     PinData;                                                    // 0x0320   (0x0008)
+    /* public    */ unsigned char                                      UnknownData03_7[0xF8];                                      // 0x0328   (0x00F8) MISSED
 
     /// Functions
     // Function /Script/MagicLeapARPin.MagicLeapARPinComponent.UnPin
@@ -119,7 +149,7 @@ public:
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinFunctionLibrary
-/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align 8 MaxSize: 0x0028
+/// Size: 0x0028 (40 bytes) (0x000028 - 0x000028) align n/a MaxSize: 0x0028
 class UMagicLeapARPinFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 public:
@@ -198,13 +228,15 @@ public:
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinInfoActorBase
-/// Size: 0x02E0 (736 bytes) (0x0002C8 - 0x0002E0) align 8 MaxSize: 0x02E0
+/// Size: 0x02E0 (736 bytes) (0x0002C8 - 0x0002E0) align n/a MaxSize: 0x02E0
 class AMagicLeapARPinInfoActorBase : public AActor
 { 
 public:
-    FGuid                                              PinId;                                                      // 0x02C8   (0x0010)
-    bool                                               bVisibilityOverride;                                        // 0x02D8   (0x0001)
-    unsigned char                                      UnknownData00_7[0x7];                                       // 0x02D9   (0x0007) MISSED
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              PinId;                                                      // 0x02C8   (0x0010)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bVisibilityOverride;                                        // 0x02D8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x7];                                       // 0x02D9   (0x0007) MISSED
 
     /// Functions
     // Function /Script/MagicLeapARPin.MagicLeapARPinInfoActorBase.OnUpdateARPinState
@@ -212,15 +244,18 @@ public:
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinRenderer
-/// Size: 0x0330 (816 bytes) (0x0002C8 - 0x000330) align 8 MaxSize: 0x0330
+/// Size: 0x0330 (816 bytes) (0x0002C8 - 0x000330) align n/a MaxSize: 0x0330
 class AMagicLeapARPinRenderer : public AActor
 { 
 public:
-    bool                                               bInfoActorsVisibilityOverride;                              // 0x02C8   (0x0001)
-    unsigned char                                      UnknownData00_6[0x7];                                       // 0x02C9   (0x0007) MISSED
-    TMap<FGuid, class AMagicLeapARPinInfoActorBase*>   AllInfoActors;                                              // 0x02D0   (0x0050)
-    unsigned char                                      UnknownData01_6[0x8];                                       // 0x0320   (0x0008) MISSED
-    class UClass*                                      ClassToSpawn;                                               // 0x0328   (0x0008)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bInfoActorsVisibilityOverride;                              // 0x02C8   (0x0001)
+    /* public    */ unsigned char                                      UnknownData02_6[0x7];                                       // 0x02C9   (0x0007) MISSED
+    UPROPERTY(NativeAccessSpecifierPrivate)
+    /* private   */ TMap<FGuid, class AMagicLeapARPinInfoActorBase*>   AllInfoActors;                                              // 0x02D0   (0x0050)
+    /* public    */ unsigned char                                      UnknownData03_6[0x8];                                       // 0x0320   (0x0008) MISSED
+    UPROPERTY(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+    /* private   */ class UClass*                                      ClassToSpawn;                                               // 0x0328   (0x0008)
 
     /// Functions
     // Function /Script/MagicLeapARPin.MagicLeapARPinRenderer.SetVisibilityOverride
@@ -229,69 +264,88 @@ public:
 };
 
 /// Struct /Script/MagicLeapARPin.MagicLeapARPinState
-/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align 4 MaxSize: 0x0014
+/// Size: 0x0014 (20 bytes) (0x000000 - 0x000014) align n/a MaxSize: 0x0014
 struct FMagicLeapARPinState
 { 
-    float                                              Confidence;                                                 // 0x0000   (0x0004)
-    float                                              ValidRadius;                                                // 0x0004   (0x0004)
-    float                                              RotationError;                                              // 0x0008   (0x0004)
-    float                                              TranslationError;                                           // 0x000C   (0x0004)
-    EMagicLeapARPinType                                PinType;                                                    // 0x0010   (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0011   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Confidence;                                                 // 0x0000   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              ValidRadius;                                                // 0x0004   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              RotationError;                                              // 0x0008   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              TranslationError;                                           // 0x000C   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ EMagicLeapARPinType                                PinType;                                                    // 0x0010   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x0011   (0x0003) MISSED
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinSettings
-/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align 8 MaxSize: 0x0040
+/// Size: 0x0040 (64 bytes) (0x000028 - 0x000040) align n/a MaxSize: 0x0040
 class UMagicLeapARPinSettings : public UObject
 { 
 public:
-    float                                              UpdateCheckFrequency;                                       // 0x0028   (0x0004)
-    FMagicLeapARPinState                               OnUpdatedEventTriggerDelta;                                 // 0x002C   (0x0014)
+    UPROPERTY(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              UpdateCheckFrequency;                                       // 0x0028   (0x0004)
+    UPROPERTY(Edit, Config, GlobalConfig, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FMagicLeapARPinState                               OnUpdatedEventTriggerDelta;                                 // 0x002C   (0x0014)
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinSaveGame
-/// Size: 0x00B0 (176 bytes) (0x000028 - 0x0000B0) align 16 MaxSize: 0x00B0
+/// Size: 0x00B0 (176 bytes) (0x000028 - 0x0000B0) align n/a MaxSize: 0x00B0
 class UMagicLeapARPinSaveGame : public USaveGame
 { 
 public:
-    FGuid                                              PinnedID;                                                   // 0x0028   (0x0010)
-    unsigned char                                      UnknownData00_6[0x8];                                       // 0x0038   (0x0008) MISSED
-    FTransform                                         ComponentWorldTransform;                                    // 0x0040   (0x0030)
-    FTransform                                         PinTransform;                                               // 0x0070   (0x0030)
-    bool                                               bShouldPinActor;                                            // 0x00A0   (0x0001)
-    unsigned char                                      UnknownData01_7[0xF];                                       // 0x00A1   (0x000F) MISSED
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FGuid                                              PinnedID;                                                   // 0x0028   (0x0010)
+    /* public    */ unsigned char                                      UnknownData02_6[0x8];                                       // 0x0038   (0x0008) MISSED
+    UPROPERTY(Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         ComponentWorldTransform;                                    // 0x0040   (0x0030)
+    UPROPERTY(Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+    /* public    */ FTransform                                         PinTransform;                                               // 0x0070   (0x0030)
+    UPROPERTY(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bShouldPinActor;                                            // 0x00A0   (0x0001)
+    /* public    */ unsigned char                                      UnknownData03_7[0xF];                                       // 0x00A1   (0x000F) MISSED
 };
 
 /// Struct /Script/MagicLeapARPin.MagicLeapARPinObjectIdList
-/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align 8 MaxSize: 0x0050
+/// Size: 0x0050 (80 bytes) (0x000000 - 0x000050) align n/a MaxSize: 0x0050
 struct FMagicLeapARPinObjectIdList
 { 
-    TSet<FString>                                      ObjectIdList;                                               // 0x0000   (0x0050)
+    UPROPERTY(Edit, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TSet<FString>                                      ObjectIdList;                                               // 0x0000   (0x0050)
 };
 
 /// Class /Script/MagicLeapARPin.MagicLeapARPinContentBindings
-/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align 8 MaxSize: 0x0078
+/// Size: 0x0078 (120 bytes) (0x000028 - 0x000078) align n/a MaxSize: 0x0078
 class UMagicLeapARPinContentBindings : public USaveGame
 { 
 public:
-    TMap<FGuid, FMagicLeapARPinObjectIdList>           AllContentBindings;                                         // 0x0028   (0x0050)
+    UPROPERTY(Edit, EditConst, NativeAccessSpecifierPublic)
+    /* public    */ TMap<FGuid, FMagicLeapARPinObjectIdList>           AllContentBindings;                                         // 0x0028   (0x0050)
 };
 
 /// Struct /Script/MagicLeapARPin.MagicLeapARPinQuery
-/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align 8 MaxSize: 0x0068
+/// Size: 0x0068 (104 bytes) (0x000000 - 0x000068) align n/a MaxSize: 0x0068
 struct FMagicLeapARPinQuery
 { 
-    TSet<EMagicLeapARPinType>                          Types;                                                      // 0x0000   (0x0050)
-    int32_t                                            MaxResults;                                                 // 0x0050   (0x0004)
-    FVector                                            TargetPoint;                                                // 0x0054   (0x000C)
-    float                                              Radius;                                                     // 0x0060   (0x0004)
-    bool                                               bSorted;                                                    // 0x0064   (0x0001)
-    unsigned char                                      UnknownData00_7[0x3];                                       // 0x0065   (0x0003) MISSED
+    UPROPERTY(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+    /* public    */ TSet<EMagicLeapARPinType>                          Types;                                                      // 0x0000   (0x0050)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ int32_t                                            MaxResults;                                                 // 0x0050   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ FVector                                            TargetPoint;                                                // 0x0054   (0x000C)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ float                                              Radius;                                                     // 0x0060   (0x0004)
+    UPROPERTY(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+    /* public    */ bool                                               bSorted;                                                    // 0x0064   (0x0001)
+    /* public    */ unsigned char                                      UnknownData01_7[0x3];                                       // 0x0065   (0x0003) MISSED
 };
 
 #pragma pack(pop)
 
 
+#if !defined(IDACLANG)
 static_assert(sizeof(UMagicLeapARPinComponent) == 0x0420); // 1056 bytes (0x000260 - 0x000420)
 static_assert(sizeof(UMagicLeapARPinFunctionLibrary) == 0x0028); // 40 bytes (0x000028 - 0x000028)
 static_assert(sizeof(AMagicLeapARPinInfoActorBase) == 0x02E0); // 736 bytes (0x0002C8 - 0x0002E0)
@@ -319,3 +373,4 @@ static_assert(offsetof(UMagicLeapARPinSaveGame, ComponentWorldTransform) == 0x00
 static_assert(offsetof(UMagicLeapARPinSaveGame, PinTransform) == 0x0070);
 static_assert(offsetof(UMagicLeapARPinContentBindings, AllContentBindings) == 0x0028);
 static_assert(offsetof(FMagicLeapARPinQuery, TargetPoint) == 0x0054);
+#endif
